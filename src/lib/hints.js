@@ -40,6 +40,9 @@ function lookupEN(w) {
   return null;
 }
 const lookupPT = (w) => PT.get(clean(w)) || null;
+// Tradução sugerida para o caderno (palavra ou expressão inteira)
+export const suggestPT = (en) => lookupEN(String(en || '').replace(/[?!.]+$/, '')) || null;
+export const suggestEN = (pt) => lookupPT(pt);
 
 // Quebra o texto em pedaços; junta expressões de até 3 palavras quando existem no dicionário.
 export function hintPieces(text, lang = 'en') {

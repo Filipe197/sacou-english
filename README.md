@@ -13,7 +13,8 @@ npm run dev
 
 ## Primeira configuração (uma vez só)
 
-1. **Banco:** Supabase → SQL Editor → cole `supabase/schema.sql` → Run.
+1. **Banco:** Supabase → SQL Editor → cole `supabase/schema.sql` → Run. Depois rode também
+   `supabase/002_admin.sql` (painel) e `supabase/003_caderno.sql` (caderno digital).
 2. **Login:** Supabase → Authentication → URL Configuration → *Site URL* = endereço do site na Vercel
    e, em *Redirect URLs*, adicione `https://SEU-SITE.vercel.app/**` e `http://localhost:5173/**`.
 3. **Vercel:** importe o repositório e cadastre as variáveis `VITE_SUPABASE_URL` e

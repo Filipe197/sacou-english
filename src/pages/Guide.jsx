@@ -30,7 +30,8 @@ export default function Guide() {
             <Link to="/guia" className="link-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}><Icon name="back" size={16} />Todos os guias</Link>
             <p className="eyebrow" style={{ marginTop: 16 }}>{unit.level} · Unidade {unit.order} · {unit.title}</p>
             <h1 style={{ fontSize: 'clamp(30px,4vw,40px)', margin: '0 0 12px' }}>{unit.guide.title}</h1>
-            <p style={{ fontSize: 18, lineHeight: 1.65, margin: '0 0 24px', color: 'var(--text2)' }}>{unit.guide.intro}</p>
+            <p style={{ fontSize: 18, lineHeight: 1.65, margin: '0 0 16px', color: 'var(--text2)' }}>{unit.guide.intro}</p>
+            <Link to={`/caderno?nova=1&unidade=${unit.id}`} className="btn btn-out" style={{ marginBottom: 24 }}><Icon name="notebook" size={18} />Anotar sobre esta unidade</Link>
 
             <div className="card" style={{ marginBottom: 16, background: 'var(--violet-l)', borderColor: 'var(--violet-ring)' }}>
               <b style={{ color: 'var(--violet-dd)' }}>Ao final desta unidade:</b> <span>{unit.can_do.text}</span>

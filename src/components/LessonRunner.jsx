@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon, Anim, Bolt } from './ui.jsx';
 import { fx, speak, canSpeak } from '../lib/fx.js';
@@ -6,6 +6,8 @@ import { shuffle } from '../lib/content.js';
 import { supabase } from '../lib/supabase.js';
 import Hinted from './Hinted.jsx';
 import { getNewWords } from '../lib/hints.js';
+import { LessonCtx, SaveItemButton } from './LessonNotes.jsx';
+const NotebookDrawer = lazy(() => import('./NotebookDrawer.jsx'));
 
 const PRAISE = ['Mandou bem!', 'Isso mesmo!', 'Perfeito!', 'Sacou!', 'Muito bom!'];
 const norm = (s) => String(s).toLowerCase().replace(/[’]/g, "'").replace(/[.,!?;:"]/g, '').replace(/\s+/g, ' ').trim();
@@ -414,6 +416,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [help, setHelp] = useState(false);
   const [report, setReport] = useState(false);
   const [result, setResult] = useState(null);
+  const [notesOpen, setNotesOpen] = useState(false);
   const firstTry = useRef(new Map()); // itemId -> correct na 1ª tentativa
   const ctaRef = useRef(null);
 
@@ -464,7 +467,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   // teclado: Enter verifica/continua, 1-4 escolhem opções
   useEffect(() => {
     const onKey = (e) => {
-      if (result || e.target.tagName === 'TEXTAREA') return;
+      if (result || notesOpen || e.target.tagName === 'TEXTAREA' || e.target.closest?.('[contenteditable="true"],.nb-drawer,.nb-modal')) return;
       if (e.key === 'Enter') { e.preventDefault(); locked ? next() : check(); }
       else if (!locked && /^[1-5]$/.test(e.key) && item?.options && item.type !== 'build') {
         const btns = document.querySelectorAll('.options .option');
@@ -506,13 +509,17 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const wrongNote = status === 'wrong' && item.wrong?.[value];
   const display = item.display || (item.type === 'choice' ? item.en.replace('___', item.answer) : item.type === 'dictation' || item.type === 'speak' ? item.en : item.answer);
 
+  const noteCtx = { lessonId: cur.lessonId, unitId: cur.unit?.id || null, itemId: item.id };
   return (
+    <LessonCtx.Provider value={noteCtx}>
     <div className="lesson">
       <header className="lesson-top">
         <button type="button" className="icon-btn" aria-label="Sair da lição" onClick={() => setConfirmExit(true)}><Icon name="x" size={24} stroke={2.4} /></button>
         <div className="track" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} aria-label={title}><div className="fill" style={{ width: progress + '%' }} /></div>
         <span style={{ fontWeight: 700, color: 'var(--violet-dd)', fontSize: 15 }}>{Math.min(firstTry.current.size + (locked ? 0 : 1), total)}/{total}</span>
+        <button type="button" className={'icon-btn nb-open' + (notesOpen ? ' on' : '')} aria-label="Abrir caderno" title="Caderno: anotar sem sair da lição" aria-expanded={notesOpen} onClick={() => setNotesOpen(v => !v)}><Icon name="notebook" size={24} /></button>
       </header>
+      {notesOpen && <Suspense fallback={null}><NotebookDrawer lessonId={cur.lessonId} unit={cur.unit} onClose={() => setNotesOpen(false)} /></Suspense>}
 
       {confirmExit && (
         <div className="exit-box" role="alertdialog" aria-label="Sair da lição">
@@ -594,7 +601,10 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
                   {note && <>{note} </>}{wrongNote && <>{wrongNote} </>}<b>Por quê?</b> {item.why}
                 </p>
                 {!ok && retryWrong && item.type !== 'match' && item.type !== 'speak' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela vai aparecer de novo no fim da lição e também na sua revisão.</p>}
-                <button type="button" className="link-btn" style={{ fontSize: 13, color: 'var(--text3)' }} onClick={() => setReport(true)}><Icon name="flag" size={14} /> Reportar erro neste exercício</button>
+                <span style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+                  <SaveItemButton item={item} />
+                  <button type="button" className="link-btn" style={{ fontSize: 13, color: 'var(--text3)' }} onClick={() => setReport(true)}><Icon name="flag" size={14} /> Reportar erro neste exercício</button>
+                </span>
               </div>
             </div>
             <button ref={ctaRef} className="btn btn-3d btn-lg cta" style={{ background: ok ? 'var(--ok)' : 'var(--bad)', color: '#fff' }} onClick={next}>
@@ -604,5 +614,6 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         </div>
       </footer>
     </div>
+    </LessonCtx.Provider>
   );
 }

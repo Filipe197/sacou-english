@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { useAuth } from './lib/auth.jsx';
 import { Spinner } from './components/ui.jsx';
 import Landing from './pages/Landing.jsx';
@@ -15,6 +15,7 @@ import Guide from './pages/Guide.jsx';
 import Progress from './pages/Progress.jsx';
 import Credits from './pages/Credits.jsx';
 import Admin from './pages/Admin.jsx';
+const Notebook = lazy(() => import('./pages/Notebook.jsx'));
 
 function Private({ children, allowNotOnboarded = false }) {
   const { session, profile, loading } = useAuth();
@@ -52,6 +53,8 @@ export default function App() {
         <Route path="/praticar" element={<Private><Practice /></Private>} />
         <Route path="/guia" element={<Private><Guide /></Private>} />
         <Route path="/guia/:unitId" element={<Private><Guide /></Private>} />
+        <Route path="/caderno" element={<Private><Suspense fallback={<Spinner />}><Notebook /></Suspense></Private>} />
+        <Route path="/caderno/:id" element={<Private><Suspense fallback={<Spinner />}><Notebook /></Suspense></Private>} />
         <Route path="/progresso" element={<Private><Progress /></Private>} />
         <Route path="/admin" element={<Private><Admin /></Private>} />
         <Route path="*" element={<Navigate to="/" replace />} />
