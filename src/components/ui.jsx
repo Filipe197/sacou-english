@@ -184,6 +184,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
         <button className="nav-a nav-plain" onClick={() => setIosTip(v => !v)} aria-expanded={iosTip}><Icon name="download" />Instalar no iPhone</button>
       )}
       {iosTip && <p className="note" style={{ margin: 0, fontSize: 13 }}>No Safari, toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>}
+      <NavLink to="/perfil" className="nav-a nav-plain"><Icon name="edit" />Editar perfil</NavLink>
       <button className="nav-a nav-plain" onClick={() => updateProfile({ sound_on: !profile?.sound_on })} aria-pressed={!!profile?.sound_on}>
         <Icon name={profile?.sound_on ? 'sound' : 'mute'} />{profile?.sound_on ? 'Som ligado' : 'Som desligado'}
       </button>

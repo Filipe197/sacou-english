@@ -18,6 +18,7 @@ import Guide from './pages/Guide.jsx';
 import Progress from './pages/Progress.jsx';
 import Credits from './pages/Credits.jsx';
 import Admin from './pages/Admin.jsx';
+import Profile from './pages/Profile.jsx';
 const Notebook = lazy(() => import('./pages/Notebook.jsx'));
 const Conversation = lazy(() => import('./pages/Conversation.jsx'));
 const Headphones = lazy(() => import('./pages/Headphones.jsx'));
@@ -71,6 +72,7 @@ export default function App() {
         <Route path="/turmas/entrar/:code" element={<Private><Suspense fallback={<Spinner />}><Classes /></Suspense></Private>} />
         <Route path="/jogos/*" element={<Private><Suspense fallback={<Spinner />}><Games /></Suspense></Private>} />
         <Route path="/progresso" element={<Private><Progress /></Private>} />
+        <Route path="/perfil" element={<Private><Profile /></Private>} />
         <Route path="/admin" element={<Private><Admin /></Private>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

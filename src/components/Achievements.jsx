@@ -4,7 +4,7 @@ import { useAuth } from '../lib/auth.jsx';
 import { evaluate, seenSet, markSeen } from '../lib/achievements.js';
 import { ShareButton } from './ShareCard.jsx';
 
-const card = (a) => ({ kicker: 'CONQUISTA', big: a.icon, title: a.title, sub: a.desc });
+const card = (a) => ({ kicker: 'CONQUISTA', emoji: a.icon, big: '', title: a.title, sub: a.desc });
 
 // Grade de medalhas (Meu progresso)
 export function Achievements({ prog }) {

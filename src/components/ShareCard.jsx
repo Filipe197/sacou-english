@@ -63,9 +63,22 @@ export async function drawCard(card, name) {
 
   // número grande
   let y = 900;
-  x.font = `700 ${card.big.length > 4 ? 250 : 330}px ${head}`;
-  x.fillStyle = '#fff'; x.fillText(card.big, 80, y);
-  if (card.fire) drawFire(x, 110 + x.measureText(card.big).width, y - 230, 1.6);
+  if (card.emoji) {
+    // medalha: emoji num círculo (a fonte dos títulos não desenha emoji grande em todo celular)
+    const cx = 250, cy = 830, r = 160;
+    const g = x.createRadialGradient(cx - 40, cy - 50, 20, cx, cy, r);
+    g.addColorStop(0, '#FFF7E6'); g.addColorStop(1, '#FBD38D');
+    x.fillStyle = g; x.beginPath(); x.arc(cx, cy, r, 0, Math.PI * 2); x.fill();
+    x.lineWidth = 14; x.strokeStyle = '#D4FF3A'; x.stroke();
+    x.font = '170px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
+    x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(card.emoji, cx, cy + 8);
+    x.textAlign = 'left'; x.textBaseline = 'alphabetic';
+    y = 1100;
+  } else {
+    x.font = `700 ${card.big.length > 4 ? 250 : 330}px ${head}`;
+    x.fillStyle = '#fff'; x.fillText(card.big, 80, y);
+    if (card.fire) drawFire(x, 110 + x.measureText(card.big).width, y - 230, 1.6);
+  }
 
   // título e subtítulo
   y += 120;
@@ -80,7 +93,7 @@ export async function drawCard(card, name) {
   x.font = `600 40px ${body}`; x.fillStyle = '#C9CBE0';
   x.fillText(name ? `${name} está aprendendo inglês` : 'Aprendendo inglês', 140, 1645);
   x.font = `800 50px ${body}`; x.fillStyle = '#D4FF3A';
-  x.fillText('Inglês explicado em português', 140, 1715);
+  x.fillText('Aprenda também. É grátis!', 140, 1715);
   x.font = `600 36px ${body}`; x.fillStyle = 'rgba(255,255,255,.6)'; x.textAlign = 'center';
   x.fillText(SITE, W / 2, 1860);
 

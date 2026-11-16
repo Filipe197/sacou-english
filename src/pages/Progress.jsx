@@ -44,6 +44,7 @@ export default function Progress() {
             <h1 style={{ margin: '0 0 4px', fontSize: 32 }}>{profile?.display_name || 'Meu progresso'}</h1>
             <p style={{ margin: 0, color: 'var(--on-dark)' }}>Estudando desde {since} · Meta diária: {goal} XP</p>
           </div>
+          <Link to="/perfil" className="btn btn-out pf-edit"><Icon name="edit" size={18} />Editar perfil</Link>
           <ShareButton card={progressCard({ xp: profile?.xp_total || 0, streak: liveStreak(profile), level, lessons: lessonsDone })} name={profile?.display_name?.split(' ')[0]} label="Compartilhar progresso" className="btn btn-lime" />
         </div>
 
