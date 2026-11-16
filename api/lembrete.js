@@ -7,6 +7,9 @@ import webpush from 'web-push';
 import { createClient } from '@supabase/supabase-js';
 import { send } from './_lib.js';
 
+// mesma chave pública de src/lib/push.js (não é segredo)
+const VAPID_PUBLIC = 'BCKicE52M32o-5W3chpko560BIQrrm4FU_B_uh61OKqSOkNgmbSdrX7uS2o8yDdbp5tS_SXQg6yyW_WguNz6cts';
+
 const todayBR = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date());
 const yesterdayBR = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date(Date.now() - 864e5));
 
@@ -27,7 +30,7 @@ export default async function handler(req, res) {
   if (!process.env.CRON_SECRET || req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) return send(res, 401, { error: 'não autorizado' });
   const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  const pub = process.env.VAPID_PUBLIC_KEY || process.env.VITE_VAPID_PUBLIC_KEY;
+  const pub = process.env.VAPID_PUBLIC_KEY || process.env.VITE_VAPID_PUBLIC_KEY || VAPID_PUBLIC;
   if (!url || !key || !pub || !process.env.VAPID_PRIVATE_KEY) return send(res, 503, { error: 'lembretes não configurados' });
   webpush.setVapidDetails('https://sacou-english.vercel.app', pub, process.env.VAPID_PRIVATE_KEY);
   const sb = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });

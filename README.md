@@ -30,8 +30,8 @@ npm run dev
    Se as duas chaves existirem, `AI_PROVIDER=deepseek` ou `AI_PROVIDER=anthropic` escolhe qual usar
    (sem isso, vale a DeepSeek). Para usar no PC, coloque as mesmas variáveis no `.env`.
 
-5. **Lembretes no celular (opcional):** na Vercel, cadastre `VITE_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`
-   e `CRON_SECRET` (os valores estão no seu `.env`, gerados uma vez) e `SUPABASE_SERVICE_ROLE_KEY`
+5. **Lembretes no celular (opcional):** a chave pública já está no código. Na Vercel, cadastre os segredos
+   `VAPID_PRIVATE_KEY` e `CRON_SECRET` (valores no seu `.env`, gerados uma vez) e `SUPABASE_SERVICE_ROLE_KEY`
    (Supabase → Project Settings → API Keys → secret / service_role). A Vercel chama `api/lembrete.js`
    todo dia às 19h de Brasília (`vercel.json` → `crons`).
 

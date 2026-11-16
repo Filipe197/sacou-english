@@ -1,7 +1,9 @@
 // Lembrete diário no celular (notificações do app instalado).
 import { supabase } from './supabase.js';
 
-const KEY = import.meta.env.VITE_VAPID_PUBLIC_KEY;
+// Chave PÚBLICA dos lembretes (pode ficar no código; a privada fica só na Vercel)
+export const VAPID_PUBLIC = 'BCKicE52M32o-5W3chpko560BIQrrm4FU_B_uh61OKqSOkNgmbSdrX7uS2o8yDdbp5tS_SXQg6yyW_WguNz6cts';
+const KEY = import.meta.env.VITE_VAPID_PUBLIC_KEY || VAPID_PUBLIC;
 
 export function pushSupport() {
   if (typeof window === 'undefined') return 'no';
