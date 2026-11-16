@@ -78,6 +78,12 @@ export function Missions({ compact = false }) {
         <b><Icon name="target" size={18} />Missões da semana</b>
         <span className="muted">{done}/{list.length} · {left === 1 ? 'último dia' : `faltam ${left} dias`}</span>
       </div>
+      {compact && (
+        <div className="ms-mini">
+          <span className="track"><span className="fill" style={{ width: `${(done / list.length) * 100}%` }} /></span>
+          <Link to="/progresso" className="ms-mini-link">Ver as missões</Link>
+        </div>
+      )}
       {all && <div className="ms-perfect"><Icon name="medal" size={20} />Semana perfeita! Volte segunda para novas missões.</div>}
       <ul className="ms-list">
         {list.map(m => (

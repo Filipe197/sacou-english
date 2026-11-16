@@ -157,7 +157,15 @@ button{font-family:inherit}
   .rail::-webkit-scrollbar{display:none}
   .rail > *{flex:0 0 86%;scroll-snap-align:center;min-width:0}
   .rail > .card{padding:16px}
+  /* missões no carrossel: só o resumo (a lista completa deixava o topo alto demais) */
+  .rail .missions .ms-list,.rail .missions .ms-perfect{display:none}
+  .rail .missions .ms-mini{display:flex}
+  .rail > .card:has(.btn-block) p{display:none}
+  .rail > .card:has(.btn-block) b{margin-bottom:12px!important}
 }
+.ms-mini{display:none;align-items:center;gap:12px;margin-top:4px}
+.ms-mini .track{flex:1;height:10px}
+.ms-mini-link{font-size:14px;font-weight:700;color:var(--violet);white-space:nowrap}
 @keyframes fade-in{from{opacity:0}}
 @media (prefers-reduced-motion:reduce){.sheet,.sheet.open{transition:none}.sheet-bg{animation:none}}
 
