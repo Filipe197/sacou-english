@@ -1,4 +1,5 @@
 import VOICES from './voices.json';
+import { reportError } from './errors.js';
 // Efeitos: sons (arquivos prontos em /public/sounds) e voz em inglês.
 // Se um arquivo de som não existir, o site continua funcionando em silêncio.
 
@@ -68,19 +69,24 @@ function clipFor(text, who) {
 let player = null;
 function stopAll() {
   try { window.speechSynthesis?.cancel(); } catch { /* nada */ }
-  if (player) { player.onended = player.onerror = null; player.pause(); }
+  if (player) { player.onended = player.onerror = player.onplaying = null; try { player.pause(); player.removeAttribute('src'); player.load(); } catch { /* nada */ } player = null; }
 }
-// toca o áudio pronto; devolve uma promessa que termina quando acabar (ou false se não deu)
+// Toca o áudio pronto num player novo a cada vez (reaproveitar o mesmo player travava
+// em alguns navegadores). Termina com true ao acabar, ou false se não começar a tocar.
 function playClip(url, slow) {
   return new Promise((resolve) => {
     stopAll();
-    player ||= new Audio();
-    player.src = url;
-    player.playbackRate = slow ? 0.7 : 1;
-    try { player.preservesPitch = true; } catch { /* navegadores antigos */ }
-    player.onended = () => resolve(true);
-    player.onerror = () => resolve(false);
-    player.play().catch(() => resolve(false));
+    const a = new Audio(url);
+    player = a;
+    let started = false, done = false;
+    const finish = (ok) => { if (done) return; done = true; clearTimeout(guard); resolve(ok); };
+    a.playbackRate = slow ? 0.7 : 1;
+    try { a.preservesPitch = true; } catch { /* navegadores antigos */ }
+    a.onplaying = () => { started = true; };
+    a.onended = () => finish(true);
+    a.onerror = () => finish(false);
+    const guard = setTimeout(() => { if (!started && player === a) { stopAll(); finish(false); } }, 2500);
+    a.play().catch((e) => { if (e?.name !== 'AbortError') finish(false); });
   });
 }
 // voz do aparelho (plano B): tenta uma voz masculina para personagens homens
@@ -113,7 +119,7 @@ function ttsSpeak(text, { slow, who, onEnd }) {
 export function speak(text, { slow = false, who } = {}) {
   if (!canSpeak() || !text) return;
   const url = clipFor(text, who);
-  if (url) playClip(url, slow).then(ok => { if (!ok) ttsSpeak(text, { slow, who }); });
+  if (url) playClip(url, slow).then(ok => { if (!ok) { reportError('js', 'Áudio pronto não tocou (usou a voz do aparelho)', `${url} ${navigator.userAgent}`); ttsSpeak(text, { slow, who }); } });
   else { stopAll(); ttsSpeak(text, { slow, who }); }
 }
 
