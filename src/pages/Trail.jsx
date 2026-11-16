@@ -57,7 +57,12 @@ export default function Trail() {
   const curRef = useRef(null);
   // Leva a tela até a lição atual (onde o aluno parou)
   useEffect(() => {
-    if (!prog.loading) setTimeout(() => curRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+    if (prog.loading) return;
+    const t = setTimeout(() => {
+      const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+      curRef.current?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+    }, 400);
+    return () => clearTimeout(t);
   }, [prog.loading]);
   if (prog.loading) return <Spinner />;
   const states = lessonStates(prog.done);
@@ -84,8 +89,8 @@ export default function Trail() {
         )}
         {doneCount > 0 && (
           <p className="muted" style={{ fontSize: 13, margin: '0 0 16px', display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 14, borderRadius: 99, background: 'var(--violet)' }} />Lição feita por você</span>
-            {skippedCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 14, borderRadius: 99, background: 'var(--violet-ring)' }} />Pulada pelo teste de nível</span>}
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 14, borderRadius: 99, background: 'var(--ok)' }} />Lição concluída</span>
+            {skippedCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 14, borderRadius: 99, background: '#CDEFDD' }} />Pulada pelo teste de nível</span>}
           </p>
         )}
         {prog.error && <div className="alert" role="alert" style={{ marginBottom: 16 }}>{prog.error}</div>}
@@ -95,14 +100,22 @@ export default function Trail() {
             <h2 style={{ fontSize: 15, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--text3)', margin: '8px 0 12px', fontFamily: 'Inter, sans-serif' }}>Nível {lv} · {LEVEL_NAMES[lv]}</h2>
         {unitsOf(lv).map((u) => {
           const unitStates = u.lessons.map(l => stateOf[l.id]);
+          const unitDone = unitStates.filter(x => x === 'done').length;
+          const complete = unitDone === u.lessons.length;
           const unlocked = unitStates.some(s => s !== 'locked');
           return (
             <section key={u.id} aria-labelledby={u.id} style={{ marginBottom: 16 }}>
-              <div className={'unit-banner' + (unlocked ? '' : ' locked')}>
+              <div className={'unit-banner' + (complete ? ' complete' : unlocked ? '' : ' locked')}>
                 <div>
                   <p style={{ margin: '0 0 4px', fontSize: 13, fontWeight: 700, color: unlocked ? 'var(--lime)' : 'var(--text3)', letterSpacing: 1, textTransform: 'uppercase' }}>Nível {u.level} · Unidade {u.order}</p>
-                  <h2 id={u.id} style={{ margin: 0, fontSize: 26 }}>{u.title}</h2>
-                  <p style={{ margin: '6px 0 0', fontSize: 15, color: unlocked ? 'var(--violet-ring)' : 'var(--text2)' }}>{u.subtitle}</p>
+                  <h2 id={u.id} style={{ margin: 0, fontSize: 26, display: 'flex', alignItems: 'center', gap: 10 }}>{complete && <Icon name="check" size={26} color="var(--lime)" stroke={3} />}{u.title}</h2>
+                  <p style={{ margin: '6px 0 0', fontSize: 15, color: complete ? '#D8F5E6' : unlocked ? 'var(--violet-ring)' : 'var(--text2)' }}>{u.subtitle}</p>
+                  {unlocked && (
+                    <div className="unit-progress">
+                      <div className="track" role="progressbar" aria-valuenow={unitDone} aria-valuemin={0} aria-valuemax={u.lessons.length} aria-label={`${unitDone} de ${u.lessons.length} lições`}><div className="fill" style={{ width: (unitDone / u.lessons.length) * 100 + '%' }} /></div>
+                      <span style={{ fontSize: 14, fontWeight: 700 }}>{complete ? 'Unidade concluída!' : `${unitDone} de ${u.lessons.length} lições`}</span>
+                    </div>
+                  )}
                 </div>
                 <Link className="btn" to={`/guia/${u.id}`} style={{ background: unlocked ? '#fff' : 'var(--violet-l)', color: 'var(--violet-dd)', minHeight: 44, fontSize: 15 }}>
                   <Icon name="book" size={18} />Ler a explicação
@@ -117,7 +130,7 @@ export default function Trail() {
                   const inner = (
                     <>
                       <span className="circ">
-                        {st === 'done' && <Icon name="check" size={32} color={skipped ? 'var(--violet-dd)' : '#fff'} stroke={3} />}
+                        {st === 'done' && <Icon name="check" size={32} color={skipped ? 'var(--ok-d)' : '#fff'} stroke={3} />}
                         {st === 'current' && <svg width="34" height="34" viewBox="0 0 24 24" fill="#0B0D1A" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>}
                         {st === 'locked' && <Icon name="lock" size={28} color="#6A6E88" stroke={2.2} />}
                       </span>

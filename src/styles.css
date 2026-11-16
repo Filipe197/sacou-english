@@ -129,9 +129,15 @@ button{font-family:inherit}
 .node{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;background:none;border:0;cursor:pointer;padding:0}
 .node .circ{width:76px;height:76px;border-radius:99px;display:flex;align-items:center;justify-content:center;transition:transform .1s}
 .node:hover .circ{transform:translateY(-2px)}
-.node.done .circ{background:var(--violet);box-shadow:0 6px 0 var(--violet-dd)}
+.node.done .circ{background:var(--ok);box-shadow:0 6px 0 #0B5A40}
+.node.done .nlabel{color:var(--ok-d)}
 .node.current .circ{background:var(--lime);box-shadow:0 6px 0 #9DBF14,0 0 0 8px #EFFFC2;width:88px;height:88px;animation:pulse 2s infinite}
-.node.done.skipped .circ{background:var(--violet-ring);box-shadow:0 6px 0 #C9C0FB}
+.node.done.skipped .circ{background:#CDEFDD;box-shadow:0 6px 0 #9FD8BA}
+.node.done.skipped .nlabel{color:#3A3E5A}
+.unit-banner.complete{background:var(--ok)}
+.unit-progress{display:flex;align-items:center;gap:10px;margin-top:12px}
+.unit-progress .track{flex:1;max-width:220px;height:8px;background:rgba(255,255,255,.3)}
+.unit-progress .fill{background:var(--lime)}
 .node.locked{cursor:not-allowed}
 .node.locked .circ{background:var(--line);box-shadow:0 6px 0 #C7C9DA}
 .node .nlabel{font-size:13px;font-weight:600;color:#3A3E5A;text-align:center;max-width:150px}
