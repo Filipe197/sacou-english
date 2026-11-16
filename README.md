@@ -16,7 +16,8 @@ npm run dev
 1. **Banco:** Supabase → SQL Editor → cole `supabase/schema.sql` → Run. Depois rode também
    `supabase/002_admin.sql` (painel), `supabase/003_caderno.sql` (caderno digital) e
    `supabase/004_ia.sql` (limite diário do professor de IA) e `supabase/005_turmas_missoes.sql`
-   (missões, turmas, lembretes, treino com IA e lição feita sem internet).
+   (missões, turmas, lembretes, treino com IA e lição feita sem internet) e `supabase/006_admin_alunos.sql`
+   (lista de alunos com nome e e-mail no painel Admin; só administradores veem).
 2. **Login:** Supabase → Authentication → URL Configuration → *Site URL* = endereço do site na Vercel
    e, em *Redirect URLs*, adicione `https://SEU-SITE.vercel.app/**` e `http://localhost:5173/**`.
 3. **Vercel:** importe o repositório e cadastre as variáveis `VITE_SUPABASE_URL` e

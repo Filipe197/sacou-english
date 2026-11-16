@@ -23,6 +23,94 @@ function ItemPreview({ id }) {
   );
 }
 
+const fmtDate = (d) => d ? new Date(d).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: '2-digit' }) : '—';
+const fmtDay = (d) => d ? `${d.slice(8, 10)}/${d.slice(5, 7)}/${d.slice(2, 4)}` : 'nunca';
+const PAGE = 50;
+
+// Quem se cadastrou: nome, e-mail, quando entrou e quanto já estudou
+function Students() {
+  const [q, setQ] = useState('');
+  const [rows, setRows] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState('');
+
+  const fetchPage = useCallback(async (search, offset) => {
+    const { data, error } = await supabase.rpc('admin_users', { p_search: search, p_limit: PAGE, p_offset: offset });
+    if (error) {
+      setErr(/admin_users|schema cache|does not exist/i.test(error.message) ? 'Falta rodar o arquivo supabase/006_admin_alunos.sql no Supabase para ver a lista.' : 'Não consegui carregar a lista agora.');
+      return null;
+    }
+    setErr('');
+    return data;
+  }, []);
+
+  useEffect(() => {
+    let live = true;
+    setLoading(true);
+    const t = setTimeout(async () => {
+      const d = await fetchPage(q, 0);
+      if (!live) return;
+      setRows(d?.rows || []); setTotal(d?.total || 0); setLoading(false);
+    }, q ? 300 : 0);
+    return () => { live = false; clearTimeout(t); };
+  }, [q, fetchPage]);
+
+  async function more() {
+    setLoading(true);
+    const d = await fetchPage(q, rows.length);
+    if (d) setRows(r => [...r, ...d.rows]);
+    setLoading(false);
+  }
+
+  function csv() {
+    const head = ['Nome', 'E-mail', 'Cadastro', 'Último estudo', 'Lições', 'XP', 'Sequência', 'Nível inicial'];
+    const esc = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
+    const lines = rows.map(r => [r.name, r.email, fmtDate(r.created_at), fmtDay(r.last_active), r.lessons_done, r.xp_total, r.streak, r.start_level].map(esc).join(';'));
+    const blob = new Blob(['﻿' + [head.map(esc).join(';'), ...lines].join('\n')], { type: 'text/csv;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = 'alunos-sacou-english.csv'; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  return (
+    <div className="card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 12 }}>
+        <div>
+          <h2 style={{ fontSize: 20, margin: 0 }}>Quem se cadastrou</h2>
+          <p className="muted" style={{ fontSize: 14, margin: '4px 0 0' }}>{total} {total === 1 ? 'aluno' : 'alunos'}{q ? (total === 1 ? ' encontrado' : ' encontrados') : ''}, do mais recente para o mais antigo.</p>
+        </div>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', flex: '1 1 260px', justifyContent: 'flex-end' }}>
+          <input type="search" value={q} onChange={e => setQ(e.target.value)} placeholder="Buscar por nome ou e-mail" aria-label="Buscar aluno por nome ou e-mail"
+            style={{ flex: '1 1 200px', maxWidth: 320, minHeight: 40, padding: '0 14px', borderRadius: 12, border: '1px solid var(--line)', background: 'var(--card, #fff)', color: 'inherit', font: 'inherit' }} />
+          {rows.length > 0 && <button className="btn btn-out" style={{ minHeight: 40, padding: '0 14px', fontSize: 14 }} onClick={csv}>Baixar planilha</button>}
+        </div>
+      </div>
+      {err ? <div className="alert" role="alert">{err}</div> : rows.length === 0 && !loading ? <p className="muted">{q ? 'Ninguém encontrado com essa busca.' : 'Ainda ninguém se cadastrou.'}</p> : (
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {rows.map(r => (
+            <div key={r.id} style={{ borderTop: '1px solid var(--line)', padding: '12px 0', display: 'flex', gap: '6px 16px', justifyContent: 'space-between', flexWrap: 'wrap', alignItems: 'center' }}>
+              <div style={{ flex: '1 1 240px', minWidth: 0 }}>
+                <b style={{ display: 'block' }}>{r.name || <span className="muted" style={{ fontWeight: 500 }}>Sem nome</span>}</b>
+                <span className="muted" style={{ fontSize: 13, overflowWrap: 'anywhere' }}>{r.email || '—'}{r.provider && r.provider !== 'email' ? ` · entrou com ${r.provider[0].toUpperCase() + r.provider.slice(1)}` : ''}</span>
+              </div>
+              <div style={{ display: 'flex', gap: '4px 14px', flexWrap: 'wrap', fontSize: 13, color: 'var(--text2, inherit)' }}>
+                <span><span className="muted">Cadastro</span> <b>{fmtDate(r.created_at)}</b></span>
+                <span><span className="muted">Último estudo</span> <b>{fmtDay(r.last_active)}</b>{r.streak > 1 ? ` 🔥${r.streak}` : ''}</span>
+                <span><b>{r.lessons_done}</b> <span className="muted">{r.lessons_done === 1 ? 'lição' : 'lições'}</span></span>
+                <span><b>{r.xp_total}</b> <span className="muted">XP</span></span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+      {!err && rows.length < total && (
+        <button className="btn btn-out" style={{ marginTop: 12, minHeight: 40, fontSize: 14 }} onClick={more} disabled={loading}>{loading ? 'Carregando…' : `Mostrar mais (${total - rows.length})`}</button>
+      )}
+    </div>
+  );
+}
+
 export default function Admin() {
   const { isAdmin } = useAuth();
   const [stats, setStats] = useState(null);
@@ -67,7 +155,7 @@ export default function Admin() {
       <div style={{ maxWidth: 1000, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
         <div>
           <h1 style={{ fontSize: 34, margin: '0 0 6px' }}>Administração</h1>
-          <p className="muted" style={{ margin: 0 }}>Uso do site e erros de conteúdo reportados pelos alunos.</p>
+          <p className="muted" style={{ margin: 0 }}>Uso do site, quem se cadastrou e erros de conteúdo reportados pelos alunos.</p>
         </div>
         {err && <div className="alert" role="alert">{err}</div>}
 
@@ -76,6 +164,8 @@ export default function Admin() {
             <div key={t} className="card"><span className="muted" style={{ fontSize: 13 }}>{t}</span><b style={{ display: 'block', fontFamily: 'var(--head)', fontSize: 32, margin: '4px 0' }}>{v}</b><span className="muted" style={{ fontSize: 13 }}>{d}</span></div>
           ))}
         </div>
+
+        {!err && <Students />}
 
         {stats && (
           <div className="card">
