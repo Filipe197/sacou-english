@@ -6,12 +6,15 @@ import mysteries from './data/mysteries.json';
 import city from './data/city.json';
 import pictures from './data/pictures.json';
 import cast from './data/cast.json';
+import podcasts from './data/podcasts.json';
 
 export { cast };
 // na ordem da trilha (cada episódio libera com uma unidade)
 const unitRank = (id) => UNITS.findIndex(u => u.id === id);
 export const EPISODES = [...episodes.episodes].sort((a, b) => unitRank(a.unlock) - unitRank(b.unlock));
 export const SERIES = { title: episodes.series, about: episodes.about };
+export const PODCASTS = [...podcasts.episodes].sort((a, b) => unitRank(a.unlock) - unitRank(b.unlock));
+export const PODCAST_INFO = { title: podcasts.title, about: podcasts.about };
 export const CASES = mysteries.cases;
 export const MISSIONS = city.missions;
 export const PICTURES = pictures.words.map(([en, pt, pic]) => ({ en, pt, pic }));

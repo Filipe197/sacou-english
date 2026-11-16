@@ -14,7 +14,7 @@ const units = new Set(fs.readdirSync(path.join(root, 'src/content')).filter(d =>
   .flatMap(d => fs.readdirSync(path.join(root, 'src/content', d)).map(f => JSON.parse(fs.readFileSync(path.join(root, 'src/content', d, f), 'utf8')).id)));
 
 // nomes dos personagens e algumas palavras de cenário (lugares e moeda) liberados
-const EXTRA = new Set([...Object.values(cast).map(c => c.name.toLowerCase()), 'scotland', 'silva', 'wi', 'fi', 'ok', 'pounds', 'pound', 'goodbye']);
+const EXTRA = new Set([...Object.values(cast).map(c => c.name.toLowerCase()), 'scotland', 'silva', 'wi', 'fi', 'ok', 'pounds', 'pound', 'goodbye', 'podcast', 'podcasts', 'mum', 'rio', 'chips', 'app', 'apps', 'phrasal']);
 const errors = [];
 const err = (w, m) => errors.push(`${w}: ${m}`);
 let words = 0;
@@ -86,6 +86,17 @@ for (const m of D('city.json').missions) {
   const W = `missão ${m.id}`; base(m, W); who(m.npc, W);
   const en = checker(m.level, W);
   for (const s of m.steps) { en(s.en); if (!s.pt) err(W, 'fala sem tradução'); choice(s, W, en); }
+}
+
+// podcasts
+for (const pc of D('podcasts.json').episodes) {
+  const W = `podcast ${pc.id}`; base(pc, W);
+  const en = checker(pc.level, W);
+  if (!pc.intro) err(W, 'sem introdução');
+  if ((pc.lines || []).length < 8) err(W, 'podcast precisa de pelo menos 8 falas');
+  for (const l of pc.lines || []) { who(l.who, W); en(l.en); if (!l.pt) err(W, `fala sem tradução "${l.en}"`); }
+  if ((pc.questions || []).length < 3) err(W, 'podcast precisa de 3 perguntas');
+  for (const q of pc.questions || []) choice(q, `${W} pergunta`);
 }
 
 // figuras (Ouviu, tocou): todas no A1

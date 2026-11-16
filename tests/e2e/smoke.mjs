@@ -98,6 +98,13 @@ await test('jogos: Frase em pedaços e Ouviu, tocou', async () => {
   if ((await page.$$('.ls-card')).length !== 4) throw new Error('as 4 figuras não apareceram');
 });
 
+await test('jogos: podcast toca e mostra a transcrição', async () => {
+  await open('/jogos/podcast/pod-a1u1');
+  await click('Mostrar transcrição');
+  await expectText('Welcome to the podcast');
+  if (!(await page.$('audio'))) throw new Error('o player de áudio não apareceu');
+});
+
 await browser.close();
 await server.close();
 

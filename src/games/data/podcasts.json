@@ -1,0 +1,3238 @@
+{
+ "title": "Podcast da Ana",
+ "about": "A Ana e o Tom conversam sobre o tema de cada unidade, com convidados. Ouça primeiro sem ler, depois com a transcrição.",
+ "episodes": [
+  {
+   "id": "pod-a1u1",
+   "level": "A1",
+   "unlock": "a1-u1",
+   "title": "Como cumprimentar",
+   "intro": "No primeiro episódio, a Ana e o Tom mostram os cumprimentos do dia a dia.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Today we talk about hello and goodbye.",
+     "pt": "Hoje vamos falar de olá e tchau."
+    },
+    {
+     "who": "tom",
+     "en": "In the morning, I say good morning.",
+     "pt": "De manhã, eu digo good morning."
+    },
+    {
+     "who": "ana",
+     "en": "And in the afternoon, good afternoon.",
+     "pt": "E à tarde, good afternoon."
+    },
+    {
+     "who": "tom",
+     "en": "At night, when I go to bed, I say good night.",
+     "pt": "À noite, quando vou dormir, digo good night."
+    },
+    {
+     "who": "ana",
+     "en": "With friends, I say hi and bye.",
+     "pt": "Com amigos, eu digo hi e bye."
+    },
+    {
+     "who": "tom",
+     "en": "And when you are sorry, you say sorry!",
+     "pt": "E quando você sente muito, diz sorry!"
+    },
+    {
+     "who": "ana",
+     "en": "Thank you, Tom.",
+     "pt": "Obrigada, Tom."
+    },
+    {
+     "who": "tom",
+     "en": "You're welcome, Ana!",
+     "pt": "De nada, Ana!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom diz de manhã?",
+     "options": [
+      "Good morning",
+      "Good night",
+      "Good afternoon"
+     ],
+     "answer": "Good morning",
+     "why": "\"In the morning, I say good morning\"."
+    },
+    {
+     "q": "Quando se usa \"good night\"?",
+     "options": [
+      "Ao ir dormir",
+      "Ao chegar de manhã",
+      "Ao almoçar"
+     ],
+     "answer": "Ao ir dormir",
+     "why": "\"When I go to bed, I say good night\"."
+    },
+    {
+     "q": "O que a Ana diz com os amigos?",
+     "options": [
+      "Hi e bye",
+      "Good evening",
+      "Sorry"
+     ],
+     "answer": "Hi e bye",
+     "why": "\"With friends, I say hi and bye\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a1u2",
+   "level": "A1",
+   "unlock": "a1-u2",
+   "title": "Quem somos nós",
+   "intro": "A Ana e o Tom se apresentam: nome, país e profissão.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "I'm from Brazil. I'm a student.",
+     "pt": "Eu sou do Brasil. Sou estudante."
+    },
+    {
+     "who": "tom",
+     "en": "I'm from England. I'm a student too.",
+     "pt": "Eu sou da Inglaterra. Também sou estudante."
+    },
+    {
+     "who": "ana",
+     "en": "My mother is a teacher. And your mother, Tom?",
+     "pt": "Minha mãe é professora. E a sua mãe, Tom?"
+    },
+    {
+     "who": "tom",
+     "en": "My mother is a teacher too! And my father is a doctor.",
+     "pt": "Minha mãe também é professora! E meu pai é médico."
+    },
+    {
+     "who": "ana",
+     "en": "My father is a driver. He is very happy.",
+     "pt": "Meu pai é motorista. Ele é muito feliz."
+    },
+    {
+     "who": "tom",
+     "en": "Are you happy in England, Ana?",
+     "pt": "Você está feliz na Inglaterra, Ana?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, I am! I'm very happy here.",
+     "pt": "Estou! Estou muito feliz aqui."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "De onde o Tom é?",
+     "options": [
+      "Da Inglaterra",
+      "Do Brasil",
+      "De Portugal"
+     ],
+     "answer": "Da Inglaterra",
+     "why": "\"I'm from England\"."
+    },
+    {
+     "q": "Qual é a profissão do pai do Tom?",
+     "options": [
+      "Médico",
+      "Motorista",
+      "Professor"
+     ],
+     "answer": "Médico",
+     "why": "\"My father is a doctor\"."
+    },
+    {
+     "q": "O que o pai da Ana faz?",
+     "options": [
+      "É motorista",
+      "É médico",
+      "É estudante"
+     ],
+     "answer": "É motorista",
+     "why": "\"My father is a driver\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a1u3",
+   "level": "A1",
+   "unlock": "a1-u3",
+   "title": "Números por toda parte",
+   "intro": "Idade, telefone e o número da casa: a Ana e o Tom brincam com os números.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, how old are you?",
+     "pt": "Ana, quantos anos você tem?"
+    },
+    {
+     "who": "ana",
+     "en": "I'm twenty. And you are nineteen, right?",
+     "pt": "Tenho vinte. E você tem dezenove, certo?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes. My sister Nina is eight.",
+     "pt": "Isso. Minha irmã Nina tem oito."
+    },
+    {
+     "who": "ana",
+     "en": "In England, my house number is fifteen.",
+     "pt": "Na Inglaterra, o número da minha casa é quinze."
+    },
+    {
+     "who": "tom",
+     "en": "And in Brazil?",
+     "pt": "E no Brasil?"
+    },
+    {
+     "who": "ana",
+     "en": "In Brazil it is twelve.",
+     "pt": "No Brasil é doze."
+    },
+    {
+     "who": "tom",
+     "en": "Listen, everyone: fifteen and fifty are different!",
+     "pt": "Escutem, pessoal: fifteen e fifty são diferentes!"
+    },
+    {
+     "who": "ana",
+     "en": "Yes! Listen again: fifteen, fifty. Fifteen, fifty!",
+     "pt": "Sim! Ouçam de novo: quinze, cinquenta. Quinze, cinquenta!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quantos anos a Ana tem?",
+     "options": [
+      "Vinte",
+      "Dezenove",
+      "Oito"
+     ],
+     "answer": "Vinte",
+     "why": "Ela diz \"I'm twenty\": vinte anos."
+    },
+    {
+     "q": "Qual é o número da casa da Ana na Inglaterra?",
+     "options": [
+      "Quinze",
+      "Cinquenta",
+      "Doze"
+     ],
+     "answer": "Quinze",
+     "why": "\"My house number is fifteen\"."
+    },
+    {
+     "q": "O que o Tom diz sobre fifteen e fifty?",
+     "options": [
+      "Que são diferentes",
+      "Que são iguais",
+      "Que não existem"
+     ],
+     "answer": "Que são diferentes",
+     "why": "\"Fifteen and fifty are different\": 15 e 50."
+    }
+   ]
+  },
+  {
+   "id": "pod-a1u4",
+   "level": "A1",
+   "unlock": "a1-u4",
+   "title": "A minha família",
+   "intro": "O Tom fala da família dele, e a Ana conta da família no Brasil.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Today we talk about our families.",
+     "pt": "Hoje vamos falar das nossas famílias."
+    },
+    {
+     "who": "tom",
+     "en": "My mother's name is Laura. My sister's name is Nina.",
+     "pt": "O nome da minha mãe é Laura. O nome da minha irmã é Nina."
+    },
+    {
+     "who": "ana",
+     "en": "I have a brother. His name is Pedro.",
+     "pt": "Eu tenho um irmão. O nome dele é Pedro."
+    },
+    {
+     "who": "tom",
+     "en": "Is Pedro older than you?",
+     "pt": "O Pedro é mais velho que você?"
+    },
+    {
+     "who": "ana",
+     "en": "No, he is young. He is fifteen.",
+     "pt": "Não, ele é novo. Tem quinze."
+    },
+    {
+     "who": "ana",
+     "en": "My grandmother lives with us. Her name is Rita.",
+     "pt": "Minha avó mora com a gente. O nome dela é Rita."
+    },
+    {
+     "who": "tom",
+     "en": "My grandparents live in a small town.",
+     "pt": "Meus avós moram numa cidade pequena."
+    },
+    {
+     "who": "ana",
+     "en": "Family is very important to me.",
+     "pt": "Família é muito importante para mim."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual é o nome do irmão da Ana?",
+     "options": [
+      "Pedro",
+      "Tom",
+      "Carlos"
+     ],
+     "answer": "Pedro",
+     "why": "\"His name is Pedro\"."
+    },
+    {
+     "q": "Quem mora com a família da Ana?",
+     "options": [
+      "A avó",
+      "O tio",
+      "O Tom"
+     ],
+     "answer": "A avó",
+     "why": "\"My grandmother lives with us\"."
+    },
+    {
+     "q": "Por que \"her name\" para falar da avó?",
+     "options": [
+      "Porque ela é mulher",
+      "Porque ela é velha",
+      "Porque é plural"
+     ],
+     "answer": "Porque ela é mulher",
+     "why": "\"Her\" = dela (mulher); \"his\" = dele (homem)."
+    }
+   ]
+  },
+  {
+   "id": "pod-a1u5",
+   "level": "A1",
+   "unlock": "a1-u5",
+   "title": "Cores e coisas",
+   "intro": "O que tem na mochila? A Ana e o Tom mostram objetos e cores.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, what is this?",
+     "pt": "Tom, o que é isto?"
+    },
+    {
+     "who": "tom",
+     "en": "This is my bag. It's black.",
+     "pt": "Esta é a minha mochila. É preta."
+    },
+    {
+     "who": "ana",
+     "en": "And what are these?",
+     "pt": "E o que são estes?"
+    },
+    {
+     "who": "tom",
+     "en": "These are my books. This one is red and that one is blue.",
+     "pt": "Estes são meus livros. Este é vermelho e aquele é azul."
+    },
+    {
+     "who": "ana",
+     "en": "I have two pens. They are green.",
+     "pt": "Eu tenho duas canetas. Elas são verdes."
+    },
+    {
+     "who": "tom",
+     "en": "What is your favorite color?",
+     "pt": "Qual é a sua cor favorita?"
+    },
+    {
+     "who": "ana",
+     "en": "My favorite color is yellow. Like the sun!",
+     "pt": "Minha cor favorita é amarelo. Como o sol!"
+    },
+    {
+     "who": "tom",
+     "en": "Mine is blue.",
+     "pt": "A minha é azul."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "De que cor é a mochila do Tom?",
+     "options": [
+      "Preta",
+      "Azul",
+      "Verde"
+     ],
+     "answer": "Preta",
+     "why": "\"This is my bag. It's black\"."
+    },
+    {
+     "q": "Qual é a cor favorita da Ana?",
+     "options": [
+      "Amarelo",
+      "Azul",
+      "Vermelho"
+     ],
+     "answer": "Amarelo",
+     "why": "\"My favorite color is yellow\"."
+    },
+    {
+     "q": "Por que o Tom diz \"these are\"?",
+     "options": [
+      "Porque são vários livros",
+      "Porque é um livro só",
+      "Porque o livro está longe"
+     ],
+     "answer": "Porque são vários livros",
+     "why": "Plural e perto: \"these\" + \"are\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a1u6",
+   "level": "A1",
+   "unlock": "a1-u6",
+   "title": "Um dia normal",
+   "intro": "A rotina da Ana e do Tom, da hora de acordar até a hora de dormir.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "I get up at seven every day.",
+     "pt": "Eu acordo às sete todo dia."
+    },
+    {
+     "who": "tom",
+     "en": "Not me! I get up at nine on Saturdays.",
+     "pt": "Eu não! Aos sábados eu acordo às nove."
+    },
+    {
+     "who": "ana",
+     "en": "I have breakfast and I go to school at eight.",
+     "pt": "Eu tomo café da manhã e vou para a escola às oito."
+    },
+    {
+     "who": "tom",
+     "en": "I work in the afternoon. I finish at six.",
+     "pt": "Eu trabalho à tarde. Termino às seis."
+    },
+    {
+     "who": "ana",
+     "en": "In the evening, I watch TV or I read.",
+     "pt": "À noite, eu vejo TV ou leio."
+    },
+    {
+     "who": "tom",
+     "en": "I play football on Wednesdays.",
+     "pt": "Eu jogo futebol às quartas."
+    },
+    {
+     "who": "ana",
+     "en": "And I go to bed at eleven.",
+     "pt": "E eu vou dormir às onze."
+    },
+    {
+     "who": "tom",
+     "en": "Eleven? That's late!",
+     "pt": "Onze? Que tarde!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "A que horas a Ana acorda?",
+     "options": [
+      "Às sete",
+      "Às nove",
+      "Às oito"
+     ],
+     "answer": "Às sete",
+     "why": "\"I get up at seven every day\"."
+    },
+    {
+     "q": "Quando o Tom joga futebol?",
+     "options": [
+      "Às quartas",
+      "Aos sábados",
+      "Todo dia"
+     ],
+     "answer": "Às quartas",
+     "why": "\"On Wednesdays\" = às quartas-feiras."
+    },
+    {
+     "q": "O que a Ana faz à noite?",
+     "options": [
+      "Vê TV ou lê",
+      "Joga futebol",
+      "Trabalha"
+     ],
+     "answer": "Vê TV ou lê",
+     "why": "\"I watch TV or I read\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a1u7",
+   "level": "A1",
+   "unlock": "a1-u7",
+   "title": "Comida favorita",
+   "intro": "Do que a gente gosta e do que não gosta de comer? Com o Sam, do café.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Today Sam from the cafe is here with us!",
+     "pt": "Hoje o Sam, do café, está aqui com a gente!"
+    },
+    {
+     "who": "sam",
+     "en": "Hello! I love food. I like cheese and bread.",
+     "pt": "Olá! Eu amo comida. Gosto de queijo e pão."
+    },
+    {
+     "who": "tom",
+     "en": "Do you like fish, Sam?",
+     "pt": "Você gosta de peixe, Sam?"
+    },
+    {
+     "who": "sam",
+     "en": "No, I don't. I don't like fish.",
+     "pt": "Não. Eu não gosto de peixe."
+    },
+    {
+     "who": "ana",
+     "en": "I love rice and beans. It's Brazilian food.",
+     "pt": "Eu amo arroz e feijão. É comida brasileira."
+    },
+    {
+     "who": "tom",
+     "en": "And what do you drink in the morning?",
+     "pt": "E o que você bebe de manhã?"
+    },
+    {
+     "who": "sam",
+     "en": "Coffee, of course! With milk.",
+     "pt": "Café, claro! Com leite."
+    },
+    {
+     "who": "ana",
+     "en": "I'd like a coffee now, please!",
+     "pt": "Eu queria um café agora, por favor!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O Sam gosta de peixe?",
+     "options": [
+      "Não",
+      "Sim",
+      "Só no jantar"
+     ],
+     "answer": "Não",
+     "why": "\"I don't like fish\"."
+    },
+    {
+     "q": "Qual comida a Ana ama?",
+     "options": [
+      "Arroz e feijão",
+      "Peixe",
+      "Queijo"
+     ],
+     "answer": "Arroz e feijão",
+     "why": "\"I love rice and beans\"."
+    },
+    {
+     "q": "Como o Sam toma café?",
+     "options": [
+      "Com leite",
+      "Com açúcar",
+      "Sem nada"
+     ],
+     "answer": "Com leite",
+     "why": "\"Coffee, of course! With milk\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a1u8",
+   "level": "A1",
+   "unlock": "a1-u8",
+   "title": "O meu bairro",
+   "intro": "O que tem perto de casa? A Ana descreve o bairro dela em Londres.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, what is there near your house?",
+     "pt": "Ana, o que tem perto da sua casa?"
+    },
+    {
+     "who": "ana",
+     "en": "There is a big park and there are two cafes.",
+     "pt": "Tem um parque grande e tem dois cafés."
+    },
+    {
+     "who": "tom",
+     "en": "Is there a supermarket?",
+     "pt": "Tem supermercado?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, there is. It's near the station.",
+     "pt": "Tem, sim. Fica perto da estação."
+    },
+    {
+     "who": "ana",
+     "en": "There isn't a cinema. That's sad!",
+     "pt": "Não tem cinema. Que pena!"
+    },
+    {
+     "who": "tom",
+     "en": "There is a cinema in my street!",
+     "pt": "Tem um cinema na minha rua!"
+    },
+    {
+     "who": "ana",
+     "en": "Great! We can go on Friday.",
+     "pt": "Ótimo! Podemos ir na sexta."
+    },
+    {
+     "who": "tom",
+     "en": "Good idea!",
+     "pt": "Boa ideia!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quantos cafés tem perto da casa da Ana?",
+     "options": [
+      "Dois",
+      "Um",
+      "Nenhum"
+     ],
+     "answer": "Dois",
+     "why": "\"There are two cafes\"."
+    },
+    {
+     "q": "Onde fica o supermercado?",
+     "options": [
+      "Perto da estação",
+      "No parque",
+      "Na rua do Tom"
+     ],
+     "answer": "Perto da estação",
+     "why": "\"It's near the station\"."
+    },
+    {
+     "q": "O que NÃO tem perto da casa da Ana?",
+     "options": [
+      "Cinema",
+      "Parque",
+      "Supermercado"
+     ],
+     "answer": "Cinema",
+     "why": "\"There isn't a cinema\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u1",
+   "level": "A2",
+   "unlock": "a2-u1",
+   "title": "Ontem à noite",
+   "intro": "Onde vocês estavam ontem à noite? Hoje o assunto é o passado do verbo to be.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, where were you last night?",
+     "pt": "Ana, onde você estava ontem à noite?"
+    },
+    {
+     "who": "ana",
+     "en": "I was at the cinema with friends. It was great!",
+     "pt": "Eu estava no cinema com amigos. Foi ótimo!"
+    },
+    {
+     "who": "tom",
+     "en": "Was the film good?",
+     "pt": "O filme foi bom?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, it was very funny. And you?",
+     "pt": "Foi, muito engraçado. E você?"
+    },
+    {
+     "who": "tom",
+     "en": "I was at home. My parents were in London.",
+     "pt": "Eu estava em casa. Meus pais estavam em Londres."
+    },
+    {
+     "who": "ana",
+     "en": "Were you bored?",
+     "pt": "Você estava entediado?"
+    },
+    {
+     "who": "tom",
+     "en": "No, I wasn't. I was very tired, so I slept early.",
+     "pt": "Não. Eu estava muito cansado, então dormi cedo."
+    },
+    {
+     "who": "ana",
+     "en": "Next time, come with us!",
+     "pt": "Da próxima vez, venha com a gente!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Onde a Ana estava?",
+     "options": [
+      "No cinema",
+      "Em casa",
+      "Em Londres"
+     ],
+     "answer": "No cinema",
+     "why": "\"I was at the cinema with friends\"."
+    },
+    {
+     "q": "Onde estavam os pais do Tom?",
+     "options": [
+      "Em Londres",
+      "Em casa",
+      "No cinema"
+     ],
+     "answer": "Em Londres",
+     "why": "\"My parents were in London\"."
+    },
+    {
+     "q": "Como o Tom estava?",
+     "options": [
+      "Cansado",
+      "Entediado",
+      "Triste"
+     ],
+     "answer": "Cansado",
+     "why": "\"I wasn't bored. I was very tired\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u2",
+   "level": "A2",
+   "unlock": "a2-u2",
+   "title": "O que você fez?",
+   "intro": "O fim de semana do Tom foi cheio de pequenas tarefas. E o da Ana?",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, what did you do last weekend?",
+     "pt": "Tom, o que você fez no fim de semana passado?"
+    },
+    {
+     "who": "tom",
+     "en": "I cleaned my room and I cooked lunch for my family.",
+     "pt": "Eu limpei meu quarto e cozinhei o almoço para a minha família."
+    },
+    {
+     "who": "ana",
+     "en": "Did they like it?",
+     "pt": "Eles gostaram?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes, they did! Then I played football in the park.",
+     "pt": "Gostaram! Depois joguei futebol no parque."
+    },
+    {
+     "who": "ana",
+     "en": "I visited a museum and I watched a film.",
+     "pt": "Eu visitei um museu e assisti a um filme."
+    },
+    {
+     "who": "tom",
+     "en": "Did you walk to the museum?",
+     "pt": "Você foi a pé até o museu?"
+    },
+    {
+     "who": "ana",
+     "en": "No, I didn't. It rained a lot, so I used the bus.",
+     "pt": "Não. Choveu muito, então peguei o ônibus."
+    },
+    {
+     "who": "tom",
+     "en": "A very English weekend!",
+     "pt": "Um fim de semana bem inglês!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom cozinhou?",
+     "options": [
+      "O almoço da família",
+      "Um bolo",
+      "O jantar da Ana"
+     ],
+     "answer": "O almoço da família",
+     "why": "\"I cooked lunch for my family\"."
+    },
+    {
+     "q": "Como a Ana foi ao museu?",
+     "options": [
+      "De ônibus",
+      "A pé",
+      "De carro"
+     ],
+     "answer": "De ônibus",
+     "why": "\"It rained a lot, so I used the bus\"."
+    },
+    {
+     "q": "Por que \"Did they like it?\" usa \"like\" e não \"liked\"?",
+     "options": [
+      "Depois de \"did\" o verbo fica na forma normal",
+      "Porque é presente",
+      "Porque é plural"
+     ],
+     "answer": "Depois de \"did\" o verbo fica na forma normal",
+     "why": "O \"did\" já marca o passado."
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u3",
+   "level": "A2",
+   "unlock": "a2-u3",
+   "title": "Uma viagem",
+   "intro": "A Laura, mãe do Tom, conta da viagem de férias da família.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "My mother Laura is here today. Hi, Mum!",
+     "pt": "Minha mãe, a Laura, está aqui hoje. Oi, mãe!"
+    },
+    {
+     "who": "laura",
+     "en": "Hello! Last summer we went to Spain.",
+     "pt": "Olá! No verão passado nós fomos para a Espanha."
+    },
+    {
+     "who": "ana",
+     "en": "How did you go?",
+     "pt": "Como vocês foram?"
+    },
+    {
+     "who": "laura",
+     "en": "We took a plane. Then we drove to a small town near the sea.",
+     "pt": "Pegamos um avião. Depois fomos de carro até uma cidade pequena perto do mar."
+    },
+    {
+     "who": "ana",
+     "en": "What did you eat?",
+     "pt": "O que vocês comeram?"
+    },
+    {
+     "who": "laura",
+     "en": "We ate a lot of fish. And Nina ate ice cream every day!",
+     "pt": "Comemos muito peixe. E a Nina tomou sorvete todo dia!"
+    },
+    {
+     "who": "tom",
+     "en": "And I lost my phone on the beach.",
+     "pt": "E eu perdi meu celular na praia."
+    },
+    {
+     "who": "laura",
+     "en": "But you found it the next day!",
+     "pt": "Mas você achou no dia seguinte!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Para onde a família foi?",
+     "options": [
+      "Espanha",
+      "Portugal",
+      "França"
+     ],
+     "answer": "Espanha",
+     "why": "\"Last summer we went to Spain\"."
+    },
+    {
+     "q": "O que a Nina comeu todo dia?",
+     "options": [
+      "Sorvete",
+      "Peixe",
+      "Bolo"
+     ],
+     "answer": "Sorvete",
+     "why": "\"Nina ate ice cream every day\"."
+    },
+    {
+     "q": "O que aconteceu com o celular do Tom?",
+     "options": [
+      "Ele perdeu e achou depois",
+      "Quebrou",
+      "Foi roubado"
+     ],
+     "answer": "Ele perdeu e achou depois",
+     "why": "\"I lost my phone... you found it the next day\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u4",
+   "level": "A2",
+   "unlock": "a2-u4",
+   "title": "Gravando agora",
+   "intro": "O que está acontecendo neste exato momento no estúdio e lá fora?",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "We are recording this podcast in Tom's kitchen.",
+     "pt": "Estamos gravando este podcast na cozinha do Tom."
+    },
+    {
+     "who": "tom",
+     "en": "Right now, my mother is cooking dinner.",
+     "pt": "Neste momento, minha mãe está fazendo o jantar."
+    },
+    {
+     "who": "ana",
+     "en": "And Nina is playing the piano. Can you hear it?",
+     "pt": "E a Nina está tocando piano. Vocês estão ouvindo?"
+    },
+    {
+     "who": "tom",
+     "en": "Outside, it's raining. People are running to the bus.",
+     "pt": "Lá fora está chovendo. As pessoas estão correndo para o ônibus."
+    },
+    {
+     "who": "ana",
+     "en": "What are you doing now, Tom?",
+     "pt": "O que você está fazendo agora, Tom?"
+    },
+    {
+     "who": "tom",
+     "en": "I'm drinking tea and I'm talking to you!",
+     "pt": "Estou tomando chá e falando com você!"
+    },
+    {
+     "who": "ana",
+     "en": "And I'm writing our next questions.",
+     "pt": "E eu estou escrevendo as nossas próximas perguntas."
+    },
+    {
+     "who": "tom",
+     "en": "Wait, the dog is eating my sandwich!",
+     "pt": "Espera, o cachorro está comendo meu sanduíche!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a mãe do Tom está fazendo?",
+     "options": [
+      "Fazendo o jantar",
+      "Tocando piano",
+      "Tomando chá"
+     ],
+     "answer": "Fazendo o jantar",
+     "why": "\"My mother is cooking dinner\"."
+    },
+    {
+     "q": "Como está o tempo lá fora?",
+     "options": [
+      "Chovendo",
+      "Ensolarado",
+      "Nevando"
+     ],
+     "answer": "Chovendo",
+     "why": "\"Outside, it's raining\"."
+    },
+    {
+     "q": "O que aconteceu com o sanduíche do Tom?",
+     "options": [
+      "O cachorro está comendo",
+      "A Nina comeu",
+      "Caiu no chão"
+     ],
+     "answer": "O cachorro está comendo",
+     "why": "\"The dog is eating my sandwich!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u5",
+   "level": "A2",
+   "unlock": "a2-u5",
+   "title": "Qual é melhor?",
+   "intro": "Cidade ou campo? Verão ou inverno? A Ana e o Tom comparam tudo.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, is London bigger than your city in Brazil?",
+     "pt": "Ana, Londres é maior que a sua cidade no Brasil?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, it is. But my city is hotter and sunnier.",
+     "pt": "É, sim. Mas a minha cidade é mais quente e mais ensolarada."
+    },
+    {
+     "who": "tom",
+     "en": "Which is better: summer or winter?",
+     "pt": "O que é melhor: verão ou inverno?"
+    },
+    {
+     "who": "ana",
+     "en": "Summer, of course! Winter here is too cold for me.",
+     "pt": "Verão, claro! O inverno aqui é frio demais para mim."
+    },
+    {
+     "who": "tom",
+     "en": "I think winter is more beautiful. I love the snow.",
+     "pt": "Eu acho o inverno mais bonito. Eu amo a neve."
+    },
+    {
+     "who": "ana",
+     "en": "What is the best food in England?",
+     "pt": "Qual é a melhor comida da Inglaterra?"
+    },
+    {
+     "who": "tom",
+     "en": "Fish and chips! It's the most popular too.",
+     "pt": "Fish and chips! Também é a mais popular."
+    },
+    {
+     "who": "ana",
+     "en": "OK, but Brazilian food is more interesting!",
+     "pt": "Certo, mas a comida brasileira é mais interessante!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Segundo a Ana, como é a cidade dela?",
+     "options": [
+      "Mais quente e ensolarada",
+      "Maior que Londres",
+      "Mais fria"
+     ],
+     "answer": "Mais quente e ensolarada",
+     "why": "\"Hotter and sunnier\": mais quente e mais ensolarada."
+    },
+    {
+     "q": "Qual estação o Tom acha mais bonita?",
+     "options": [
+      "Inverno",
+      "Verão",
+      "Primavera"
+     ],
+     "answer": "Inverno",
+     "why": "\"I think winter is more beautiful\"."
+    },
+    {
+     "q": "Por que \"more beautiful\" e não \"beautifuler\"?",
+     "options": [
+      "Adjetivo longo usa more",
+      "É uma exceção",
+      "Porque é plural"
+     ],
+     "answer": "Adjetivo longo usa more",
+     "why": "Adjetivos longos fazem o comparativo com \"more\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u6",
+   "level": "A2",
+   "unlock": "a2-u6",
+   "title": "Planos para o ano",
+   "intro": "O que a Ana e o Tom vão fazer no ano que vem? Planos e previsões.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "So, Ana, what are you going to do next year?",
+     "pt": "Então, Ana, o que você vai fazer no ano que vem?"
+    },
+    {
+     "who": "ana",
+     "en": "I'm going to study more and I'm going to visit Scotland.",
+     "pt": "Vou estudar mais e vou visitar a Escócia."
+    },
+    {
+     "who": "tom",
+     "en": "I'm going to learn to drive.",
+     "pt": "Eu vou aprender a dirigir."
+    },
+    {
+     "who": "ana",
+     "en": "Do you think it will be easy?",
+     "pt": "Você acha que vai ser fácil?"
+    },
+    {
+     "who": "tom",
+     "en": "No, I think it will be hard. But I will try!",
+     "pt": "Não, acho que vai ser difícil. Mas vou tentar!"
+    },
+    {
+     "who": "ana",
+     "en": "I think you will be a good driver.",
+     "pt": "Acho que você vai ser um bom motorista."
+    },
+    {
+     "who": "tom",
+     "en": "Thanks! I'll drive you to Scotland!",
+     "pt": "Obrigado! Eu te levo de carro até a Escócia!"
+    },
+    {
+     "who": "ana",
+     "en": "OK, I'll pay for the coffee.",
+     "pt": "Combinado, eu pago o café."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom vai aprender?",
+     "options": [
+      "A dirigir",
+      "A cozinhar",
+      "Espanhol"
+     ],
+     "answer": "A dirigir",
+     "why": "\"I'm going to learn to drive\"."
+    },
+    {
+     "q": "Para onde a Ana vai viajar?",
+     "options": [
+      "Escócia",
+      "Espanha",
+      "Brasil"
+     ],
+     "answer": "Escócia",
+     "why": "\"I'm going to visit Scotland\"."
+    },
+    {
+     "q": "Em \"I'll pay for the coffee\", por que \"will\"?",
+     "options": [
+      "É uma decisão na hora",
+      "É um plano antigo",
+      "É passado"
+     ],
+     "answer": "É uma decisão na hora",
+     "why": "Decisões tomadas no momento de falar usam \"will\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u7",
+   "level": "A2",
+   "unlock": "a2-u7",
+   "title": "No mercado",
+   "intro": "A Ana e o Tom vão às compras e falam de preços e quantidades.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "We need some food for the weekend.",
+     "pt": "Precisamos de comida para o fim de semana."
+    },
+    {
+     "who": "tom",
+     "en": "Is there any milk at home?",
+     "pt": "Tem leite em casa?"
+    },
+    {
+     "who": "ana",
+     "en": "No, there isn't any. And we need some eggs.",
+     "pt": "Não, não tem nada. E precisamos de ovos."
+    },
+    {
+     "who": "tom",
+     "en": "How many eggs?",
+     "pt": "Quantos ovos?"
+    },
+    {
+     "who": "ana",
+     "en": "Six. And how much cheese do we have?",
+     "pt": "Seis. E quanto queijo nós temos?"
+    },
+    {
+     "who": "tom",
+     "en": "Not much. Let's buy some.",
+     "pt": "Pouco. Vamos comprar."
+    },
+    {
+     "who": "ana",
+     "en": "How much is all this?",
+     "pt": "Quanto custa tudo isso?"
+    },
+    {
+     "who": "tom",
+     "en": "Twelve pounds. That's cheap!",
+     "pt": "Doze libras. Que barato!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quantos ovos eles vão comprar?",
+     "options": [
+      "Seis",
+      "Doze",
+      "Dois"
+     ],
+     "answer": "Seis",
+     "why": "\"How many eggs?\" \"Six\"."
+    },
+    {
+     "q": "Quanto custou tudo?",
+     "options": [
+      "Doze libras",
+      "Seis libras",
+      "Vinte libras"
+     ],
+     "answer": "Doze libras",
+     "why": "\"Twelve pounds\"."
+    },
+    {
+     "q": "Por que \"how much cheese\" e não \"how many\"?",
+     "options": [
+      "Queijo não se conta em unidades",
+      "Porque é caro",
+      "Porque é passado"
+     ],
+     "answer": "Queijo não se conta em unidades",
+     "why": "Coisas que não contamos usam \"how much\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u8",
+   "level": "A2",
+   "unlock": "a2-u8",
+   "title": "Regras da casa",
+   "intro": "O que pode e o que não pode na casa do Tom? Habilidades, pedidos e obrigações.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, can you cook?",
+     "pt": "Tom, você sabe cozinhar?"
+    },
+    {
+     "who": "tom",
+     "en": "I can cook pasta, but I can't make a cake.",
+     "pt": "Sei fazer macarrão, mas não sei fazer bolo."
+    },
+    {
+     "who": "ana",
+     "en": "In your house, do you have to clean your room?",
+     "pt": "Na sua casa, você tem que limpar o seu quarto?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes, I have to clean it every Saturday.",
+     "pt": "Sim, tenho que limpar todo sábado."
+    },
+    {
+     "who": "ana",
+     "en": "Could I use your computer after the podcast?",
+     "pt": "Posso usar o seu computador depois do podcast?"
+    },
+    {
+     "who": "tom",
+     "en": "Of course you can.",
+     "pt": "Claro que pode."
+    },
+    {
+     "who": "ana",
+     "en": "When I was a child, I could swim very well.",
+     "pt": "Quando eu era criança, eu nadava muito bem."
+    },
+    {
+     "who": "tom",
+     "en": "And now?",
+     "pt": "E agora?"
+    },
+    {
+     "who": "ana",
+     "en": "Now I can't. I don't have to swim in London!",
+     "pt": "Agora não consigo. Em Londres eu não preciso nadar!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom não sabe fazer?",
+     "options": [
+      "Bolo",
+      "Macarrão",
+      "Café"
+     ],
+     "answer": "Bolo",
+     "why": "\"I can't make a cake\"."
+    },
+    {
+     "q": "Quando o Tom tem que limpar o quarto?",
+     "options": [
+      "Todo sábado",
+      "Todo dia",
+      "Nunca"
+     ],
+     "answer": "Todo sábado",
+     "why": "\"I have to clean it every Saturday\"."
+    },
+    {
+     "q": "O que significa \"I could swim\" na fala da Ana?",
+     "options": [
+      "Ela sabia nadar quando criança",
+      "Ela vai nadar",
+      "Ela quer nadar"
+     ],
+     "answer": "Ela sabia nadar quando criança",
+     "why": "\"Could\" é o passado de \"can\" para habilidade."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u1",
+   "level": "B1",
+   "unlock": "b1-u1",
+   "title": "Você já...?",
+   "intro": "Experiências de vida: o que a Ana e o Tom já fizeram, e o que nunca fizeram.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Today's question: have you ever done something crazy?",
+     "pt": "A pergunta de hoje: você já fez alguma loucura?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, I have! I've jumped from a plane.",
+     "pt": "Já! Já pulei de um avião."
+    },
+    {
+     "who": "tom",
+     "en": "No way! When did you do that?",
+     "pt": "Não acredito! Quando você fez isso?"
+    },
+    {
+     "who": "ana",
+     "en": "I did it two years ago, in Brazil. It was amazing.",
+     "pt": "Fiz há dois anos, no Brasil. Foi incrível."
+    },
+    {
+     "who": "tom",
+     "en": "I've never done anything like that. I've never even been on a plane alone.",
+     "pt": "Nunca fiz nada parecido. Nunca nem andei de avião sozinho."
+    },
+    {
+     "who": "ana",
+     "en": "Have you ever eaten Brazilian food?",
+     "pt": "Você já comeu comida brasileira?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes, I have. You've cooked for me many times!",
+     "pt": "Já, sim. Você já cozinhou pra mim várias vezes!"
+    },
+    {
+     "who": "ana",
+     "en": "That's true. And you've always asked for more.",
+     "pt": "É verdade. E você sempre pediu mais."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual loucura a Ana já fez?",
+     "options": [
+      "Pulou de um avião",
+      "Nadou com tubarões",
+      "Viajou sozinha"
+     ],
+     "answer": "Pulou de um avião",
+     "why": "\"I've jumped from a plane\"."
+    },
+    {
+     "q": "Por que \"I did it two years ago\" usa o passado simples?",
+     "options": [
+      "Porque diz quando aconteceu",
+      "Porque é uma experiência",
+      "Porque é negativo"
+     ],
+     "answer": "Porque diz quando aconteceu",
+     "why": "Com tempo definido (two years ago), usamos o passado simples, não o present perfect."
+    },
+    {
+     "q": "O que o Tom nunca fez?",
+     "options": [
+      "Andar de avião sozinho",
+      "Comer comida brasileira",
+      "Cozinhar"
+     ],
+     "answer": "Andar de avião sozinho",
+     "why": "\"I've never even been on a plane alone\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u2",
+   "level": "B1",
+   "unlock": "b1-u2",
+   "title": "Novidades",
+   "intro": "O que mudou na vida deles? Desde quando, há quanto tempo, já e ainda não.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, how long have you lived in London?",
+     "pt": "Ana, há quanto tempo você mora em Londres?"
+    },
+    {
+     "who": "ana",
+     "en": "I've lived here for ten months. Since January.",
+     "pt": "Moro aqui há dez meses. Desde janeiro."
+    },
+    {
+     "who": "tom",
+     "en": "Have you found a new flat yet?",
+     "pt": "Você já achou um apartamento novo?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, I've just found one! I signed the papers this morning.",
+     "pt": "Sim, acabei de achar um! Assinei os papéis hoje de manhã."
+    },
+    {
+     "who": "tom",
+     "en": "That's great! Have you told my mum?",
+     "pt": "Que ótimo! Você já contou para a minha mãe?"
+    },
+    {
+     "who": "ana",
+     "en": "Not yet. I haven't had time.",
+     "pt": "Ainda não. Não tive tempo."
+    },
+    {
+     "who": "tom",
+     "en": "I've already told her, sorry!",
+     "pt": "Eu já contei para ela, desculpa!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom! You've ruined the surprise!",
+     "pt": "Tom! Você estragou a surpresa!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Há quanto tempo a Ana mora em Londres?",
+     "options": [
+      "Dez meses",
+      "Desde dezembro",
+      "Dois anos"
+     ],
+     "answer": "Dez meses",
+     "why": "\"For ten months\": \"for\" indica o período."
+    },
+    {
+     "q": "O que a Ana acabou de fazer?",
+     "options": [
+      "Achou um apartamento",
+      "Contou para a Laura",
+      "Mudou de cidade"
+     ],
+     "answer": "Achou um apartamento",
+     "why": "\"I've just found one\": \"just\" = acabei de."
+    },
+    {
+     "q": "Quem contou a novidade para a mãe do Tom?",
+     "options": [
+      "O Tom",
+      "A Ana",
+      "Ninguém ainda"
+     ],
+     "answer": "O Tom",
+     "why": "\"I've already told her\", diz o Tom."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u3",
+   "level": "B1",
+   "unlock": "b1-u3",
+   "title": "Uma história estranha",
+   "intro": "O Tom conta o que aconteceu numa noite estranha no ônibus.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "I have a strange story. Last week, I was going home by bus.",
+     "pt": "Tenho uma história estranha. Semana passada, eu estava indo para casa de ônibus."
+    },
+    {
+     "who": "tom",
+     "en": "It was raining and I was reading a book.",
+     "pt": "Estava chovendo e eu estava lendo um livro."
+    },
+    {
+     "who": "ana",
+     "en": "And then?",
+     "pt": "E aí?"
+    },
+    {
+     "who": "tom",
+     "en": "While I was reading, a man sat next to me. He was holding a cat!",
+     "pt": "Enquanto eu lia, um homem sentou do meu lado. Ele estava segurando um gato!"
+    },
+    {
+     "who": "ana",
+     "en": "A cat on the bus?",
+     "pt": "Um gato no ônibus?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes! And when the bus stopped, the cat jumped on my book.",
+     "pt": "Sim! E quando o ônibus parou, o gato pulou no meu livro."
+    },
+    {
+     "who": "ana",
+     "en": "What were the other people doing?",
+     "pt": "O que as outras pessoas estavam fazendo?"
+    },
+    {
+     "who": "tom",
+     "en": "They were all laughing. Even the driver!",
+     "pt": "Estavam todos rindo. Até o motorista!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom estava fazendo no ônibus?",
+     "options": [
+      "Lendo um livro",
+      "Dormindo",
+      "Falando ao telefone"
+     ],
+     "answer": "Lendo um livro",
+     "why": "\"I was reading a book\"."
+    },
+    {
+     "q": "O que o homem estava segurando?",
+     "options": [
+      "Um gato",
+      "Um guarda-chuva",
+      "Um cachorro"
+     ],
+     "answer": "Um gato",
+     "why": "\"He was holding a cat\"."
+    },
+    {
+     "q": "O que aconteceu quando o ônibus parou?",
+     "options": [
+      "O gato pulou no livro",
+      "O homem desceu",
+      "Começou a chover"
+     ],
+     "answer": "O gato pulou no livro",
+     "why": "Past continuous (ação em andamento) + passado simples (o que interrompeu)."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u4",
+   "level": "B1",
+   "unlock": "b1-u4",
+   "title": "Se der certo...",
+   "intro": "Planos com condições: o que vai acontecer se as coisas derem certo (ou não).",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, if you pass your driving test, what will you do?",
+     "pt": "Tom, se você passar no exame de direção, o que vai fazer?"
+    },
+    {
+     "who": "tom",
+     "en": "If I pass, I'll buy a small car.",
+     "pt": "Se eu passar, vou comprar um carro pequeno."
+    },
+    {
+     "who": "ana",
+     "en": "And if you don't pass?",
+     "pt": "E se não passar?"
+    },
+    {
+     "who": "tom",
+     "en": "If I don't pass, I'll try again next month.",
+     "pt": "Se não passar, tento de novo no mês que vem."
+    },
+    {
+     "who": "ana",
+     "en": "I might go to Scotland in the summer.",
+     "pt": "Talvez eu vá para a Escócia no verão."
+    },
+    {
+     "who": "tom",
+     "en": "If it's sunny, we'll go to the mountains.",
+     "pt": "Se fizer sol, a gente vai para as montanhas."
+    },
+    {
+     "who": "ana",
+     "en": "And if it rains?",
+     "pt": "E se chover?"
+    },
+    {
+     "who": "tom",
+     "en": "If it rains, we'll stay in a cafe and drink hot chocolate.",
+     "pt": "Se chover, ficamos num café tomando chocolate quente."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom vai fazer se passar no exame?",
+     "options": [
+      "Comprar um carro pequeno",
+      "Viajar para a Escócia",
+      "Tentar de novo"
+     ],
+     "answer": "Comprar um carro pequeno",
+     "why": "\"If I pass, I'll buy a small car\"."
+    },
+    {
+     "q": "O que significa \"I might go\"?",
+     "options": [
+      "Talvez eu vá",
+      "Eu vou com certeza",
+      "Eu fui"
+     ],
+     "answer": "Talvez eu vá",
+     "why": "\"Might\" indica possibilidade."
+    },
+    {
+     "q": "Qual é a estrutura do first conditional?",
+     "options": [
+      "If + presente, will + verbo",
+      "If + passado, would + verbo",
+      "If + will, will"
+     ],
+     "answer": "If + presente, will + verbo",
+     "why": "Ex.: \"If it rains, we'll stay in a cafe\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u5",
+   "level": "B1",
+   "unlock": "b1-u5",
+   "title": "E se...?",
+   "intro": "Perguntas imaginárias: o que você faria se...?",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, if you could live in any country, where would you live?",
+     "pt": "Tom, se você pudesse morar em qualquer país, onde moraria?"
+    },
+    {
+     "who": "tom",
+     "en": "I'd live in Brazil. The beaches are beautiful.",
+     "pt": "Eu moraria no Brasil. As praias são lindas."
+    },
+    {
+     "who": "ana",
+     "en": "If I were you, I'd learn Portuguese first!",
+     "pt": "Se eu fosse você, aprenderia português primeiro!"
+    },
+    {
+     "who": "tom",
+     "en": "Good advice. And if you had a lot of money?",
+     "pt": "Bom conselho. E se você tivesse muito dinheiro?"
+    },
+    {
+     "who": "ana",
+     "en": "I'd open a school for children in my city.",
+     "pt": "Eu abriria uma escola para crianças na minha cidade."
+    },
+    {
+     "who": "tom",
+     "en": "That's a beautiful idea.",
+     "pt": "Que ideia bonita."
+    },
+    {
+     "who": "ana",
+     "en": "What would you do if you didn't have to work?",
+     "pt": "O que você faria se não precisasse trabalhar?"
+    },
+    {
+     "who": "tom",
+     "en": "I'd travel around the world and make more podcasts with you!",
+     "pt": "Eu viajaria pelo mundo e faria mais podcasts com você!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Onde o Tom moraria?",
+     "options": [
+      "No Brasil",
+      "Na Escócia",
+      "Na Espanha"
+     ],
+     "answer": "No Brasil",
+     "why": "\"I'd live in Brazil\"."
+    },
+    {
+     "q": "Que conselho a Ana dá?",
+     "options": [
+      "Aprender português primeiro",
+      "Comprar uma casa",
+      "Trabalhar mais"
+     ],
+     "answer": "Aprender português primeiro",
+     "why": "\"If I were you, I'd learn Portuguese first\"."
+    },
+    {
+     "q": "O que a Ana faria com muito dinheiro?",
+     "options": [
+      "Abriria uma escola",
+      "Viajaria pelo mundo",
+      "Compraria um carro"
+     ],
+     "answer": "Abriria uma escola",
+     "why": "\"I'd open a school for children\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u6",
+   "level": "B1",
+   "unlock": "b1-u6",
+   "title": "Antigamente",
+   "intro": "Como era a vida quando eram crianças? Com a participação da Laura.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "My mum is with us again. Mum, what was life like when you were a child?",
+     "pt": "Minha mãe está com a gente de novo. Mãe, como era a vida quando você era criança?"
+    },
+    {
+     "who": "laura",
+     "en": "We didn't use to have phones. We used to play in the street all day.",
+     "pt": "A gente não tinha celular. A gente brincava na rua o dia todo."
+    },
+    {
+     "who": "ana",
+     "en": "In Brazil, I used to play football with my brother.",
+     "pt": "No Brasil, eu jogava futebol com o meu irmão."
+    },
+    {
+     "who": "laura",
+     "en": "I used to write letters to my friends.",
+     "pt": "Eu escrevia cartas para os meus amigos."
+    },
+    {
+     "who": "tom",
+     "en": "Letters? On paper?",
+     "pt": "Cartas? Em papel?"
+    },
+    {
+     "who": "laura",
+     "en": "Yes! And I used to wait weeks for an answer.",
+     "pt": "Sim! E eu esperava semanas por uma resposta."
+    },
+    {
+     "who": "ana",
+     "en": "Did you use to watch TV?",
+     "pt": "Vocês assistiam TV?"
+    },
+    {
+     "who": "laura",
+     "en": "Only on Sundays. Now Nina watches every day!",
+     "pt": "Só aos domingos. Agora a Nina assiste todo dia!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Onde a Laura brincava quando era criança?",
+     "options": [
+      "Na rua",
+      "Em casa",
+      "Na escola"
+     ],
+     "answer": "Na rua",
+     "why": "\"We used to play in the street all day\"."
+    },
+    {
+     "q": "Como a Laura falava com os amigos?",
+     "options": [
+      "Por cartas",
+      "Por telefone",
+      "Pessoalmente só"
+     ],
+     "answer": "Por cartas",
+     "why": "\"I used to write letters to my friends\"."
+    },
+    {
+     "q": "O que \"used to\" indica?",
+     "options": [
+      "Hábito do passado que não existe mais",
+      "Algo que acontece agora",
+      "Um plano futuro"
+     ],
+     "answer": "Hábito do passado que não existe mais",
+     "why": "\"Used to\" fala de hábitos e situações do passado."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u7",
+   "level": "B1",
+   "unlock": "b1-u7",
+   "title": "Feito no Brasil",
+   "intro": "Coisas famosas que são feitas ou foram inventadas no Brasil.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, tell us something that is made in Brazil.",
+     "pt": "Ana, conta pra gente algo que é feito no Brasil."
+    },
+    {
+     "who": "ana",
+     "en": "A lot of coffee is grown in Brazil. It's sold all over the world.",
+     "pt": "Muito café é plantado no Brasil. Ele é vendido no mundo todo."
+    },
+    {
+     "who": "tom",
+     "en": "And planes! Some planes are built in Brazil, right?",
+     "pt": "E aviões! Alguns aviões são construídos no Brasil, né?"
+    },
+    {
+     "who": "ana",
+     "en": "That's right. And Brazilian music is listened to in many countries.",
+     "pt": "Isso mesmo. E a música brasileira é ouvida em muitos países."
+    },
+    {
+     "who": "tom",
+     "en": "Was the famous statue in Rio built by Brazilian people?",
+     "pt": "A estátua famosa do Rio foi construída por brasileiros?"
+    },
+    {
+     "who": "ana",
+     "en": "It was designed by a Brazilian, but some parts were made in France.",
+     "pt": "Ela foi projetada por um brasileiro, mas algumas partes foram feitas na França."
+    },
+    {
+     "who": "tom",
+     "en": "I didn't know that!",
+     "pt": "Eu não sabia disso!"
+    },
+    {
+     "who": "ana",
+     "en": "This podcast is recorded in England, but it was written by a Brazilian!",
+     "pt": "Este podcast é gravado na Inglaterra, mas foi escrito por uma brasileira!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que é plantado no Brasil e vendido no mundo todo?",
+     "options": [
+      "Café",
+      "Chá",
+      "Chocolate"
+     ],
+     "answer": "Café",
+     "why": "\"A lot of coffee is grown in Brazil\"."
+    },
+    {
+     "q": "Onde algumas partes da estátua do Rio foram feitas?",
+     "options": [
+      "Na França",
+      "Na Inglaterra",
+      "Na Espanha"
+     ],
+     "answer": "Na França",
+     "why": "\"Some parts were made in France\"."
+    },
+    {
+     "q": "Qual é a estrutura da voz passiva?",
+     "options": [
+      "be + particípio",
+      "have + particípio",
+      "will + verbo"
+     ],
+     "answer": "be + particípio",
+     "why": "Ex.: \"is made\", \"was built\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u8",
+   "level": "B1",
+   "unlock": "b1-u8",
+   "title": "Na nossa opinião",
+   "intro": "A Ana e o Tom discutem: é melhor morar sozinho ou com a família?",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Today's topic: is it better to live alone or with your family?",
+     "pt": "O tema de hoje: é melhor morar sozinho ou com a família?"
+    },
+    {
+     "who": "ana",
+     "en": "In my opinion, living with a family is better when you're in a new country.",
+     "pt": "Na minha opinião, morar com uma família é melhor quando você está num país novo."
+    },
+    {
+     "who": "tom",
+     "en": "Why do you think that?",
+     "pt": "Por que você acha isso?"
+    },
+    {
+     "who": "ana",
+     "en": "Because the family that I lived with taught me so much.",
+     "pt": "Porque a família com quem eu morei me ensinou muito."
+    },
+    {
+     "who": "tom",
+     "en": "I think people who live alone learn to cook and to save money.",
+     "pt": "Eu acho que quem mora sozinho aprende a cozinhar e a economizar."
+    },
+    {
+     "who": "ana",
+     "en": "I agree, but it can be lonely.",
+     "pt": "Concordo, mas pode ser solitário."
+    },
+    {
+     "who": "tom",
+     "en": "So, the city where you live is important too.",
+     "pt": "Então, a cidade onde você mora também importa."
+    },
+    {
+     "who": "ana",
+     "en": "Exactly. What do you think? Tell us!",
+     "pt": "Exatamente. E vocês, o que acham? Contem pra gente!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a Ana prefere num país novo?",
+     "options": [
+      "Morar com uma família",
+      "Morar sozinha",
+      "Morar num hotel"
+     ],
+     "answer": "Morar com uma família",
+     "why": "\"Living with a family is better when you're in a new country\"."
+    },
+    {
+     "q": "Segundo o Tom, o que aprende quem mora sozinho?",
+     "options": [
+      "A cozinhar e economizar",
+      "A falar inglês",
+      "A dirigir"
+     ],
+     "answer": "A cozinhar e economizar",
+     "why": "\"Learn to cook and to save money\"."
+    },
+    {
+     "q": "Em \"people who live alone\", por que \"who\"?",
+     "options": [
+      "Porque fala de pessoas",
+      "Porque fala de lugar",
+      "Porque é pergunta"
+     ],
+     "answer": "Porque fala de pessoas",
+     "why": "\"Who\" para pessoas, \"which/that\" para coisas, \"where\" para lugares."
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u1",
+   "level": "B2",
+   "unlock": "b2-u1",
+   "title": "Antes disso...",
+   "intro": "A Ana conta o dia em que perdeu o trem, e tudo o que já tinha dado errado antes.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Last Monday was a terrible day. When I got to the station, the train had already left.",
+     "pt": "Segunda passada foi um dia terrível. Quando cheguei à estação, o trem já tinha partido."
+    },
+    {
+     "who": "tom",
+     "en": "Oh no! Why were you late?",
+     "pt": "Ah, não! Por que você se atrasou?"
+    },
+    {
+     "who": "ana",
+     "en": "I had forgotten my keys, so I had to go back home.",
+     "pt": "Eu tinha esquecido as chaves, então tive que voltar para casa."
+    },
+    {
+     "who": "tom",
+     "en": "Had you set your alarm?",
+     "pt": "Você tinha colocado o despertador?"
+    },
+    {
+     "who": "ana",
+     "en": "I thought I had, but my phone had died during the night.",
+     "pt": "Eu achei que sim, mas o celular tinha descarregado durante a noite."
+    },
+    {
+     "who": "tom",
+     "en": "And what happened when you finally arrived at work?",
+     "pt": "E o que aconteceu quando você finalmente chegou ao trabalho?"
+    },
+    {
+     "who": "ana",
+     "en": "Sam had opened the cafe on his own. He had made coffee for everyone!",
+     "pt": "O Sam tinha aberto o café sozinho. Ele tinha feito café para todo mundo!"
+    },
+    {
+     "who": "tom",
+     "en": "What a good friend.",
+     "pt": "Que bom amigo."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quando a Ana chegou à estação, o que tinha acontecido?",
+     "options": [
+      "O trem já tinha partido",
+      "O trem estava atrasado",
+      "A estação estava fechada"
+     ],
+     "answer": "O trem já tinha partido",
+     "why": "\"The train had already left\": past perfect, algo que aconteceu antes."
+    },
+    {
+     "q": "Por que a Ana voltou para casa?",
+     "options": [
+      "Tinha esquecido as chaves",
+      "Tinha esquecido o celular",
+      "Estava chovendo"
+     ],
+     "answer": "Tinha esquecido as chaves",
+     "why": "\"I had forgotten my keys\"."
+    },
+    {
+     "q": "O que o Sam tinha feito?",
+     "options": [
+      "Aberto o café sozinho",
+      "Ligado para a Ana",
+      "Fechado o café"
+     ],
+     "answer": "Aberto o café sozinho",
+     "why": "\"Sam had opened the cafe on his own\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u2",
+   "level": "B2",
+   "unlock": "b2-u2",
+   "title": "Arrependimentos",
+   "intro": "Se eu tivesse sabido... A Ana e o Tom falam do que fariam diferente.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Do you have any regrets, Ana?",
+     "pt": "Você tem algum arrependimento, Ana?"
+    },
+    {
+     "who": "ana",
+     "en": "If I had studied English earlier, I would have come to London sooner.",
+     "pt": "Se eu tivesse estudado inglês antes, teria vindo para Londres mais cedo."
+    },
+    {
+     "who": "tom",
+     "en": "I wish I had learned to play the guitar as a child.",
+     "pt": "Queria ter aprendido a tocar violão quando criança."
+    },
+    {
+     "who": "ana",
+     "en": "It's not too late! You could start now.",
+     "pt": "Não é tarde! Você podia começar agora."
+    },
+    {
+     "who": "tom",
+     "en": "If only I had more free time.",
+     "pt": "Se ao menos eu tivesse mais tempo livre."
+    },
+    {
+     "who": "ana",
+     "en": "If you hadn't joined this podcast, you'd have more time!",
+     "pt": "Se você não tivesse entrado neste podcast, teria mais tempo!"
+    },
+    {
+     "who": "tom",
+     "en": "True, but then I wouldn't have met so many listeners.",
+     "pt": "É verdade, mas aí eu não teria conhecido tantos ouvintes."
+    },
+    {
+     "who": "ana",
+     "en": "So no regrets about that!",
+     "pt": "Então, disso não tem arrependimento!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a Ana teria feito se tivesse estudado inglês antes?",
+     "options": [
+      "Vindo para Londres mais cedo",
+      "Aprendido violão",
+      "Aberto um café"
+     ],
+     "answer": "Vindo para Londres mais cedo",
+     "why": "\"I would have come to London sooner\": third conditional."
+    },
+    {
+     "q": "O que o Tom queria ter aprendido?",
+     "options": [
+      "A tocar violão",
+      "A dirigir",
+      "Português"
+     ],
+     "answer": "A tocar violão",
+     "why": "\"I wish I had learned to play the guitar\"."
+    },
+    {
+     "q": "Qual é a estrutura do third conditional?",
+     "options": [
+      "If + had + particípio, would have + particípio",
+      "If + presente, will",
+      "If + passado, would"
+     ],
+     "answer": "If + had + particípio, would have + particípio",
+     "why": "Fala de um passado imaginário que não aconteceu."
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u3",
+   "level": "B2",
+   "unlock": "b2-u3",
+   "title": "Ela disse que...",
+   "intro": "Fofoca do bem: o que cada um disse sobre o podcast.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, what did your mother say about our podcast?",
+     "pt": "Ana, o que a sua mãe disse sobre o nosso podcast?"
+    },
+    {
+     "who": "ana",
+     "en": "She said that she listened to every episode.",
+     "pt": "Ela disse que ouvia todos os episódios."
+    },
+    {
+     "who": "tom",
+     "en": "And my sister told me that my voice was too loud!",
+     "pt": "E a minha irmã me disse que a minha voz era alta demais!"
+    },
+    {
+     "who": "ana",
+     "en": "Sam asked me if we would record an episode at the cafe.",
+     "pt": "O Sam me perguntou se a gente gravaria um episódio no café."
+    },
+    {
+     "who": "tom",
+     "en": "What did you answer?",
+     "pt": "O que você respondeu?"
+    },
+    {
+     "who": "ana",
+     "en": "I told him that we would think about it.",
+     "pt": "Eu disse a ele que íamos pensar."
+    },
+    {
+     "who": "tom",
+     "en": "My teacher said she had recommended us to her students.",
+     "pt": "Minha professora disse que tinha nos recomendado para os alunos dela."
+    },
+    {
+     "who": "ana",
+     "en": "That's wonderful news!",
+     "pt": "Que notícia maravilhosa!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a mãe da Ana disse?",
+     "options": [
+      "Que ouvia todos os episódios",
+      "Que a voz do Tom era alta",
+      "Que queria participar"
+     ],
+     "answer": "Que ouvia todos os episódios",
+     "why": "\"She said that she listened to every episode\"."
+    },
+    {
+     "q": "O que o Sam perguntou?",
+     "options": [
+      "Se gravariam no café",
+      "Se queriam café",
+      "Se ele podia participar"
+     ],
+     "answer": "Se gravariam no café",
+     "why": "\"Sam asked me if we would record an episode at the cafe\"."
+    },
+    {
+     "q": "No reported speech, o que acontece com \"will\"?",
+     "options": [
+      "Vira \"would\"",
+      "Continua \"will\"",
+      "Vira \"did\""
+     ],
+     "answer": "Vira \"would\"",
+     "why": "Ao relatar o que alguém disse, o tempo verbal costuma recuar: will → would."
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u4",
+   "level": "B2",
+   "unlock": "b2-u4",
+   "title": "Deve ter sido...",
+   "intro": "Um mistério no estúdio: quem comeu o bolo? Dedução com must, might e can't.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, there was a cake on the table this morning. Now it's gone!",
+     "pt": "Ana, tinha um bolo na mesa hoje de manhã. Agora sumiu!"
+    },
+    {
+     "who": "ana",
+     "en": "It must have been Nina. She loves chocolate.",
+     "pt": "Deve ter sido a Nina. Ela ama chocolate."
+    },
+    {
+     "who": "tom",
+     "en": "It can't have been Nina. She was at school all day.",
+     "pt": "Não pode ter sido a Nina. Ela ficou na escola o dia todo."
+    },
+    {
+     "who": "ana",
+     "en": "Then it might have been your dad.",
+     "pt": "Então talvez tenha sido o seu pai."
+    },
+    {
+     "who": "tom",
+     "en": "He might have eaten a piece, but not the whole cake!",
+     "pt": "Ele pode ter comido um pedaço, mas não o bolo inteiro!"
+    },
+    {
+     "who": "ana",
+     "en": "Look, there's chocolate on the dog's nose.",
+     "pt": "Olha, tem chocolate no nariz do cachorro."
+    },
+    {
+     "who": "tom",
+     "en": "It must have been the dog! Chocolate is bad for dogs, though.",
+     "pt": "Deve ter sido o cachorro! Mas chocolate faz mal para cachorro."
+    },
+    {
+     "who": "ana",
+     "en": "He must be fine. He's sleeping happily.",
+     "pt": "Ele deve estar bem. Está dormindo feliz."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Por que não pode ter sido a Nina?",
+     "options": [
+      "Ela estava na escola",
+      "Ela não gosta de chocolate",
+      "Ela estava dormindo"
+     ],
+     "answer": "Ela estava na escola",
+     "why": "\"It can't have been Nina. She was at school all day\"."
+    },
+    {
+     "q": "Quem comeu o bolo?",
+     "options": [
+      "O cachorro",
+      "O pai do Tom",
+      "A Ana"
+     ],
+     "answer": "O cachorro",
+     "why": "A pista é o chocolate no nariz do cachorro."
+    },
+    {
+     "q": "O que significa \"must have been\"?",
+     "options": [
+      "Com certeza foi (dedução)",
+      "Talvez tenha sido",
+      "Não pode ter sido"
+     ],
+     "answer": "Com certeza foi (dedução)",
+     "why": "\"Must have\" = conclusão quase certa sobre o passado."
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u5",
+   "level": "B2",
+   "unlock": "b2-u5",
+   "title": "Mandei fazer",
+   "intro": "O que a gente faz sozinho e o que manda fazer? Serviços do dia a dia.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "I had my hair cut yesterday. Do you like it?",
+     "pt": "Cortei o cabelo ontem. Gostou?"
+    },
+    {
+     "who": "tom",
+     "en": "It looks great! I usually cut my own hair.",
+     "pt": "Ficou ótimo! Eu normalmente corto o meu sozinho."
+    },
+    {
+     "who": "ana",
+     "en": "That explains a lot!",
+     "pt": "Isso explica muita coisa!"
+    },
+    {
+     "who": "tom",
+     "en": "Very funny. I'm getting my car repaired this week.",
+     "pt": "Muito engraçado. Vou mandar consertar meu carro esta semana."
+    },
+    {
+     "who": "ana",
+     "en": "My new flat is being painted right now.",
+     "pt": "Meu apartamento novo está sendo pintado agora."
+    },
+    {
+     "who": "tom",
+     "en": "Are you having the kitchen changed too?",
+     "pt": "Você também vai mandar trocar a cozinha?"
+    },
+    {
+     "who": "ana",
+     "en": "No, the kitchen was changed last year.",
+     "pt": "Não, a cozinha foi reformada no ano passado."
+    },
+    {
+     "who": "tom",
+     "en": "When the work has been finished, we'll have a party there!",
+     "pt": "Quando a obra estiver terminada, a gente faz uma festa lá!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a Ana fez ontem?",
+     "options": [
+      "Cortou o cabelo num salão",
+      "Cortou o próprio cabelo",
+      "Pintou o apartamento"
+     ],
+     "answer": "Cortou o cabelo num salão",
+     "why": "\"I had my hair cut\": alguém cortou para ela."
+    },
+    {
+     "q": "O que está acontecendo com o apartamento da Ana?",
+     "options": [
+      "Está sendo pintado",
+      "Está sendo vendido",
+      "Foi reformado ano passado"
+     ],
+     "answer": "Está sendo pintado",
+     "why": "\"My new flat is being painted right now\"."
+    },
+    {
+     "q": "O que \"have something done\" significa?",
+     "options": [
+      "Mandar alguém fazer algo para você",
+      "Fazer algo sozinho",
+      "Ter feito algo antes"
+     ],
+     "answer": "Mandar alguém fazer algo para você",
+     "why": "Ex.: \"I'm getting my car repaired\"."
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u6",
+   "level": "B2",
+   "unlock": "b2-u6",
+   "title": "Gosto de fazer",
+   "intro": "Gostos, decisões e lembranças: quando usar -ing e quando usar to.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Ana, what do you enjoy doing at the weekend?",
+     "pt": "Ana, o que você curte fazer no fim de semana?"
+    },
+    {
+     "who": "ana",
+     "en": "I enjoy walking by the river and trying new cafes.",
+     "pt": "Eu curto caminhar perto do rio e conhecer cafés novos."
+    },
+    {
+     "who": "tom",
+     "en": "I've decided to start running. I want to be fitter.",
+     "pt": "Eu decidi começar a correr. Quero ficar em melhor forma."
+    },
+    {
+     "who": "ana",
+     "en": "Remember to buy good shoes!",
+     "pt": "Lembre de comprar um tênis bom!"
+    },
+    {
+     "who": "tom",
+     "en": "I remember buying shoes last year, but I never used them.",
+     "pt": "Eu lembro de ter comprado um tênis ano passado, mas nunca usei."
+    },
+    {
+     "who": "ana",
+     "en": "You should stop buying things you don't use.",
+     "pt": "Você devia parar de comprar coisas que não usa."
+    },
+    {
+     "who": "tom",
+     "en": "On the way home, I stopped to buy bread and saw a running club.",
+     "pt": "No caminho para casa, parei para comprar pão e vi um clube de corrida."
+    },
+    {
+     "who": "ana",
+     "en": "That's a sign! Don't forget to join.",
+     "pt": "Isso é um sinal! Não esqueça de entrar."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a Ana curte fazer no fim de semana?",
+     "options": [
+      "Caminhar perto do rio",
+      "Correr",
+      "Fazer compras"
+     ],
+     "answer": "Caminhar perto do rio",
+     "why": "\"I enjoy walking by the river\"."
+    },
+    {
+     "q": "Qual é a diferença entre \"remember to buy\" e \"remember buying\"?",
+     "options": [
+      "Lembrar de fazer x lembrar de ter feito",
+      "Não tem diferença",
+      "Presente x futuro"
+     ],
+     "answer": "Lembrar de fazer x lembrar de ter feito",
+     "why": "\"Remember to\" = não esquecer de fazer; \"remember -ing\" = lembrar de algo que já fez."
+    },
+    {
+     "q": "Em \"I stopped to buy bread\", o que o Tom fez?",
+     "options": [
+      "Parou para comprar pão",
+      "Parou de comprar pão",
+      "Esqueceu o pão"
+     ],
+     "answer": "Parou para comprar pão",
+     "why": "\"Stop to\" = parar para fazer algo; \"stop -ing\" = parar de fazer."
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u7",
+   "level": "B2",
+   "unlock": "b2-u7",
+   "title": "Phrasal verbs",
+   "intro": "Os verbos com partícula que os ingleses usam o tempo todo.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Today we're going to talk about phrasal verbs. Don't give up!",
+     "pt": "Hoje vamos falar de phrasal verbs. Não desistam!"
+    },
+    {
+     "who": "ana",
+     "en": "When I arrived, I couldn't figure out what people were saying.",
+     "pt": "Quando cheguei, eu não conseguia entender o que as pessoas diziam."
+    },
+    {
+     "who": "tom",
+     "en": "Like what?",
+     "pt": "Tipo o quê?"
+    },
+    {
+     "who": "ana",
+     "en": "Your mum said: can you look after Nina? I had no idea!",
+     "pt": "Sua mãe disse: can you look after Nina? Eu não fazia ideia!"
+    },
+    {
+     "who": "tom",
+     "en": "It means to take care of someone.",
+     "pt": "Quer dizer cuidar de alguém."
+    },
+    {
+     "who": "ana",
+     "en": "I looked it up in the dictionary and found out.",
+     "pt": "Eu procurei no dicionário e descobri."
+    },
+    {
+     "who": "tom",
+     "en": "My favorite is to get on with someone. It means to like each other.",
+     "pt": "Meu favorito é get on with someone. Quer dizer se dar bem com alguém."
+    },
+    {
+     "who": "ana",
+     "en": "Like us! We get on with each other really well.",
+     "pt": "Como a gente! Nós nos damos muito bem."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que significa \"look after\"?",
+     "options": [
+      "Cuidar de alguém",
+      "Procurar algo",
+      "Olhar para trás"
+     ],
+     "answer": "Cuidar de alguém",
+     "why": "\"It means to take care of someone\"."
+    },
+    {
+     "q": "O que a Ana fez para descobrir o significado?",
+     "options": [
+      "Procurou no dicionário",
+      "Perguntou para a Laura",
+      "Desistiu"
+     ],
+     "answer": "Procurou no dicionário",
+     "why": "\"I looked it up in the dictionary\"."
+    },
+    {
+     "q": "O que significa \"give up\"?",
+     "options": [
+      "Desistir",
+      "Levantar",
+      "Dar um presente"
+     ],
+     "answer": "Desistir",
+     "why": "\"Don't give up!\" = não desistam!"
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u8",
+   "level": "B2",
+   "unlock": "b2-u8",
+   "title": "Debate final",
+   "intro": "No último episódio da temporada, um debate: aprender inglês por app funciona?",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "tom",
+     "en": "Final question of the season: can you really learn English with an app?",
+     "pt": "Última pergunta da temporada: dá mesmo para aprender inglês com um app?"
+    },
+    {
+     "who": "ana",
+     "en": "Although apps are useful, you also need to speak with real people.",
+     "pt": "Embora os apps sejam úteis, você também precisa falar com pessoas de verdade."
+    },
+    {
+     "who": "tom",
+     "en": "However, not everyone can travel or pay for classes.",
+     "pt": "Porém, nem todo mundo pode viajar ou pagar aulas."
+    },
+    {
+     "who": "ana",
+     "en": "That's true. Despite that, practice every day makes a big difference.",
+     "pt": "É verdade. Apesar disso, praticar todo dia faz muita diferença."
+    },
+    {
+     "who": "tom",
+     "en": "In addition, apps help you to keep going when you're busy.",
+     "pt": "Além disso, os apps ajudam a continuar quando você está ocupado."
+    },
+    {
+     "who": "ana",
+     "en": "On the other hand, it's easy to stop if nobody checks on you.",
+     "pt": "Por outro lado, é fácil parar se ninguém te cobra."
+    },
+    {
+     "who": "tom",
+     "en": "So, in conclusion?",
+     "pt": "Então, conclusão?"
+    },
+    {
+     "who": "ana",
+     "en": "Use an app, listen to podcasts and talk to people. That's how I learned!",
+     "pt": "Use um app, ouça podcasts e converse com pessoas. Foi assim que eu aprendi!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Segundo a Ana, além do app, o que é preciso?",
+     "options": [
+      "Falar com pessoas de verdade",
+      "Ler mais livros",
+      "Viajar"
+     ],
+     "answer": "Falar com pessoas de verdade",
+     "why": "\"You also need to speak with real people\"."
+    },
+    {
+     "q": "O que significa \"despite that\"?",
+     "options": [
+      "Apesar disso",
+      "Por causa disso",
+      "Além disso"
+     ],
+     "answer": "Apesar disso",
+     "why": "\"Despite\" = apesar de."
+    },
+    {
+     "q": "Qual conector introduz uma ideia contrária?",
+     "options": [
+      "However",
+      "In addition",
+      "So"
+     ],
+     "answer": "However",
+     "why": "\"However\" = porém, no entanto."
+    }
+   ]
+  }
+ ]
+}

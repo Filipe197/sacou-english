@@ -4,7 +4,7 @@ import { useAuth } from '../lib/auth.jsx';
 import { useProgress } from '../lib/progress.js';
 import { Shell, Spinner, Icon } from '../components/ui.jsx';
 import { Stage, Person } from './art.jsx';
-import { EPISODES, SERIES, CASES, MISSIONS, cast, unitDone, unlockLabel, played, getBest } from './lib.js';
+import { EPISODES, SERIES, CASES, MISSIONS, PODCASTS, PODCAST_INFO, cast, unitDone, unlockLabel, played, getBest } from './lib.js';
 
 function Card({ to, locked, unlock, done, kicker, title, art, children }) {
   const inner = (
@@ -52,6 +52,20 @@ export default function Hub() {
                 <span className="muted">{q.sub}</span>
                 {getBest(user?.id, q.id) > 0 && <span className="gh-best"><Icon name="medal" size={15} />Recorde: {getBest(user?.id, q.id)}</span>}
               </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="gh-sec">
+          <div className="gh-sec-head"><h2>🎙️ {PODCAST_INFO.title}</h2><span className="muted">Um episódio por unidade, cerca de 1 minuto</span></div>
+          <p className="muted" style={{ margin: '-6px 0 14px' }}>{PODCAST_INFO.about}</p>
+          <div className="gh-grid">
+            {PODCASTS.map((p, i) => (
+              <Card key={p.id} to={`/jogos/podcast/${p.id}`} locked={!open(p)} unlock={p.unlock} done={played(prog.scores, p.id)}
+                kicker={`Episódio ${i + 1} · ${p.level}`} title={p.title}
+                art={<Stage place="office" cast={[...new Set(p.lines.map(l => l.who))]} looks={cast} height={130} />}>
+                <span className="gh-sub">{p.intro}</span>
+              </Card>
             ))}
           </div>
         </section>

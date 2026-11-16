@@ -7,6 +7,7 @@ import CityMission from './CityMission.jsx';
 import Flash from './Flash.jsx';
 import Listen from './Listen.jsx';
 import Falling from './Falling.jsx';
+import Podcast from './Podcast.jsx';
 import './games.css';
 
 export default function Games() {
@@ -19,6 +20,7 @@ export default function Games() {
       <Route path="relampago" element={<Flash />} />
       <Route path="ouvir" element={<Listen />} />
       <Route path="frases" element={<Falling />} />
+      <Route path="podcast/:id" element={<Podcast />} />
       <Route path="*" element={<Navigate to="/jogos" replace />} />
     </Routes>
   );

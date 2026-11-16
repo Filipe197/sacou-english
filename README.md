@@ -57,6 +57,9 @@ npm run dev
 ## Jogos e histórias (`/jogos`)
 
 - **Ana em Londres:** série de episódios ilustrados com áudio, perguntas e escolhas que mudam a história.
+- **Podcast da Ana:** um episódio curto por unidade (A1 a B2) com as vozes dos personagens, transcrição que
+  acompanha o áudio e 3 perguntas. Roteiros em `src/games/data/podcasts.json`; áudio gerado por
+  `python scripts/gen-podcasts.py` (em `public/audio/podcast/`).
 - **Detetive:** casos para resolver lendo depoimentos e pistas. **Missões na cidade:** situações reais de viagem.
 - **Jogos rápidos:** Palavra Relâmpago, Ouviu, tocou e Frase em pedaços (usam o que o aluno já estudou).
 - Conteúdo em `src/games/data/`. Episódios, casos e missões liberam ao terminar a unidade indicada em `unlock`.
