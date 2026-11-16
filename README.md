@@ -79,6 +79,14 @@ npm run dev
   feminina ou masculina conforme o personagem (`src/lib/voices.json`). Depois de criar conteúdo novo, rode
   `python scripts/gen-audio.py` (instruções no topo do arquivo). Frases sem áudio usam a voz do aparelho.
 
+## Atualizações chegando para todo mundo
+
+- Cada publicação gera `version.json` com o número da versão (`vite.config.js`). O app confere sempre que volta
+  para a tela e a cada 15 min (`src/components/UpdateManager.jsx`): em telas paradas recarrega na hora; no meio de
+  uma lição, jogo ou anotação mostra a faixa "Nova versão disponível" e atualiza quando a pessoa sai da tela.
+- **Novidades:** para avisar os alunos de algo novo, adicione um item no topo de `src/novidades.json`. O app mostra
+  esse cartão uma vez para quem já usava o app.
+
 ## Conteúdo
 
 - As unidades ficam em `src/content/<nível>/unit-XX.json` (A1, A2, B1 e B2, 8 unidades de 7 lições cada).

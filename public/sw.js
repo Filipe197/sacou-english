@@ -2,7 +2,7 @@
 // - Páginas: tenta a rede primeiro; sem rede, usa a última versão salva.
 // - Arquivos do site (JS, CSS, sons, ícones): usa o que está salvo e atualiza em segundo plano.
 // - Supabase (login e progresso) NUNCA passa pelo cache.
-const CACHE = 'sacou-v2';
+const CACHE = 'sacou-v3';
 const SHELL = ['/', '/manifest.webmanifest', '/icon-192.png', '/favicon.svg'];
 
 self.addEventListener('install', (e) => {
@@ -17,6 +17,9 @@ self.addEventListener('fetch', (e) => {
   const req = e.request;
   const url = new URL(req.url);
   if (req.method !== 'GET' || url.origin !== self.location.origin) return; // Supabase e fontes externas: direto na rede
+
+  // número da versão: sempre direto da rede (é assim que o app descobre que saiu atualização)
+  if (url.pathname === '/version.json') { e.respondWith(fetch(req, { cache: 'no-store' })); return; }
 
   if (req.mode === 'navigate') {
     e.respondWith(

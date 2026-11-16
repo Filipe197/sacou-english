@@ -24,8 +24,17 @@ function apiDev() {
   };
 }
 
+// Número da versão publicada: o app compara com /version.json para saber se saiu atualização.
+const BUILD_ID = (process.env.VERCEL_GIT_COMMIT_SHA || '').slice(0, 12) || `local-${Date.now().toString(36)}`;
+function versionFile() {
+  return {
+    name: 'sacou-version',
+    generateBundle() { this.emitFile({ type: 'asset', fileName: 'version.json', source: JSON.stringify({ v: BUILD_ID }) }); },
+  };
+}
+
 export default defineConfig(({ mode }) => {
   // variáveis sem VITE_ (como ANTHROPIC_API_KEY) ficam só no servidor local
   Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
-  return { plugins: [react(), apiDev()] };
+  return { plugins: [react(), apiDev(), versionFile()], define: { __BUILD_ID__: JSON.stringify(BUILD_ID) } };
 });

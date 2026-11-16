@@ -340,3 +340,13 @@ button{font-family:inherit}
   .logo-text{font-size:18px}
   .logo-mark{width:34px;height:34px}
 }
+
+/* atualização disponível e novidades */
+.upd-bar{position:fixed;left:50%;transform:translateX(-50%);top:max(10px,env(safe-area-inset-top));z-index:90;display:flex;align-items:center;gap:12px;background:var(--ink);color:#fff;padding:10px 10px 10px 16px;border-radius:999px;box-shadow:0 12px 30px rgba(11,13,26,.3);font-size:14px;font-weight:600;max-width:calc(100vw - 24px)}
+.upd-bar button{border:0;background:var(--lime);color:var(--ink);font:inherit;font-weight:800;padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.nov-bg{position:fixed;inset:0;z-index:95;background:rgba(11,13,26,.45);display:flex;align-items:center;justify-content:center;padding:16px;animation:fade-in .2s}
+.nov{background:#fff;border-radius:26px;padding:24px;max-width:440px;width:100%;box-shadow:0 30px 80px rgba(11,13,26,.35)}
+.nov-tag{display:inline-block;background:var(--violet-l);color:var(--violet-dd);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:999px}
+.nov h2{font-size:24px;margin:10px 0 12px}
+.nov ul{margin:0 0 18px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.45;color:var(--text2)}
+.nov-actions{display:flex;gap:10px;flex-wrap:wrap}

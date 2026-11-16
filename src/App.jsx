@@ -2,6 +2,8 @@ import { Navigate, Route, Routes, useLocation, useParams } from 'react-router-do
 import { lazy, Suspense, useEffect } from 'react';
 import { useAuth } from './lib/auth.jsx';
 import { Spinner } from './components/ui.jsx';
+import UpdateManager from './components/UpdateManager.jsx';
+import Novidades from './components/Novidades.jsx';
 import Landing from './pages/Landing.jsx';
 import Auth from './pages/Auth.jsx';
 import ResetPassword from './pages/ResetPassword.jsx';
@@ -43,6 +45,8 @@ export default function App() {
   return (
     <>
       <ScrollTop />
+      <UpdateManager />
+      <Novidades />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/entrar" element={<Auth mode="login" />} />

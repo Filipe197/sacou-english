@@ -1,0 +1,16 @@
+{
+  "_como_usar": "A cada publicação com novidade para o aluno, adicione um item NO TOPO da lista com um id novo (ex.: data + tema). O app mostra uma vez o item mais recente para quem já usava o app. Correções pequenas não precisam de item.",
+  "itens": [
+    {
+      "id": "2026-11-16-podcast",
+      "titulo": "Novidades no Sacou English",
+      "linhas": [
+        "🎙️ Podcast da Ana: um episódio curto por unidade, com transcrição e perguntas.",
+        "🗣️ Voz natural: cada personagem fala com a sua voz, feminina ou masculina.",
+        "🎮 Jogos e histórias: 24 episódios da Ana, detetive, missões e jogos rápidos.",
+        "🚀 Chegou o nível B2."
+      ],
+      "botao": { "texto": "Ouvir o podcast", "para": "/jogos" }
+    }
+  ]
+}
