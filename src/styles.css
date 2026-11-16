@@ -236,6 +236,13 @@ button{font-family:inherit}
 .story-line{display:flex;gap:6px;align-items:flex-start}
 .story-text{flex:1;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:18px;line-height:1.45;cursor:pointer;color:var(--ink);font-family:inherit;display:flex;flex-direction:column;gap:4px}
 .story-text:hover{border-color:#9C8BFA}
-.story-who{color:var(--violet-dd);font-weight:700}
+.story-who{color:var(--violet-dd);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px}
 .story-pt{font-size:15px;color:var(--text2)}
 .exit-box{max-width:760px;width:calc(100% - 48px);margin:0 auto 8px;background:var(--bad-bg);border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.story-line.current .story-text{border-color:var(--violet);box-shadow:0 0 0 3px var(--violet-ring)}
+.story-ask{background:#fff;border:2px dashed var(--violet);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;font-size:16px}
+.story-ask.ok{border-style:solid;border-color:var(--ok);background:var(--ok-bg)}
+.story-ask.ok span{color:var(--ok-d);font-size:15px}
+.story-line,.story-ask{animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.story-line,.story-ask{animation:none}}

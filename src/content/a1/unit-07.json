@@ -640,8 +640,16 @@
      },
      {
       "who": "Mike",
-      "en": "I'd like the chicken and rice, please.",
-      "pt": "Eu gostaria do frango com arroz, por favor."
+      "en": "I'd ___ the chicken and rice, please.",
+      "pt": "Eu gostaria do frango com arroz, por favor.",
+      "gap": {
+       "answer": "like",
+       "options": [
+        "like",
+        "likes",
+        "want"
+       ]
+      }
      },
      {
       "who": "Garçom",
@@ -654,9 +662,27 @@
       "pt": "Um suco de laranja, por favor."
      },
      {
+      "ask": "O que o Mike vai beber?",
+      "options": [
+       "Suco de laranja",
+       "Água",
+       "Café"
+      ],
+      "answer": "Suco de laranja",
+      "why": "\"An orange juice, please\"."
+     },
+     {
       "who": "Emma",
-      "en": "I don't like chicken. I'd like the fish salad, please.",
-      "pt": "Eu não gosto de frango. Eu gostaria da salada de peixe, por favor."
+      "en": "I ___ like chicken. I'd like the fish salad, please.",
+      "pt": "Eu não gosto de frango. Eu gostaria da salada de peixe, por favor.",
+      "gap": {
+       "answer": "don't",
+       "options": [
+        "don't",
+        "doesn't",
+        "not"
+       ]
+      }
      },
      {
       "who": "Garçom",
@@ -665,8 +691,16 @@
      },
      {
       "who": "Emma",
-      "en": "Water, please.",
-      "pt": "Água, por favor."
+      "en": "Water, ___.",
+      "pt": "Água, por favor.",
+      "gap": {
+       "answer": "please",
+       "options": [
+        "please",
+        "sorry",
+        "hello"
+       ]
+      }
      }
     ]
    },
@@ -674,7 +708,7 @@
     {
      "id": "a1u7l7-1",
      "type": "story",
-     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
     },
     {
      "id": "a1u7l7-2",
@@ -686,22 +720,10 @@
       "Salada"
      ],
      "answer": "Frango com arroz",
-     "why": "\"I'd like the chicken and rice\"."
+     "why": "\"the chicken and rice\"."
     },
     {
      "id": "a1u7l7-3",
-     "type": "quiz",
-     "q": "O que o Mike pede para beber?",
-     "options": [
-      "Suco de laranja",
-      "Água",
-      "Café"
-     ],
-     "answer": "Suco de laranja",
-     "why": "\"An orange juice, please\"."
-    },
-    {
-     "id": "a1u7l7-4",
      "type": "quiz",
      "q": "A Emma gosta de frango?",
      "options": [
@@ -710,10 +732,10 @@
       "Só com arroz"
      ],
      "answer": "Não",
-     "why": "\"I don't like chicken\" — eu não gosto de frango."
+     "why": "\"I don't like chicken\"."
     },
     {
-     "id": "a1u7l7-5",
+     "id": "a1u7l7-4",
      "type": "quiz",
      "q": "O que a Emma bebe?",
      "options": [

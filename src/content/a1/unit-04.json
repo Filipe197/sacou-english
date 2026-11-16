@@ -683,12 +683,30 @@
       "pt": "Oi! Eu sou a Julia. Esta é a minha família."
      },
      {
-      "en": "My father is Carlos. He is a doctor.",
-      "pt": "Meu pai é o Carlos. Ele é médico."
+      "en": "My father is Carlos. ___ is a doctor.",
+      "pt": "Meu pai é o Carlos. Ele é médico.",
+      "gap": {
+       "answer": "He",
+       "options": [
+        "He",
+        "She",
+        "His"
+       ]
+      }
      },
      {
       "en": "My mother is Maria. She is a teacher.",
       "pt": "Minha mãe é a Maria. Ela é professora."
+     },
+     {
+      "ask": "Qual é a profissão da mãe da Julia?",
+      "options": [
+       "Professora",
+       "Médica",
+       "Enfermeira"
+      ],
+      "answer": "Professora",
+      "why": "\"She is a teacher\"."
      },
      {
       "en": "I have one brother and one sister.",
@@ -699,8 +717,16 @@
       "pt": "O nome do meu irmão é Tom. Ele tem oito anos."
      },
      {
-      "en": "My sister is a baby. Her name is Emma.",
-      "pt": "Minha irmã é um bebê. O nome dela é Emma."
+      "en": "My sister is a baby. ___ name is Emma.",
+      "pt": "Minha irmã é um bebê. O nome dela é Emma.",
+      "gap": {
+       "answer": "Her",
+       "options": [
+        "Her",
+        "His",
+        "My"
+       ]
+      }
      },
      {
       "en": "We have a dog too. His name is Max.",
@@ -712,7 +738,7 @@
     {
      "id": "a1u4l7-1",
      "type": "story",
-     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
     },
     {
      "id": "a1u4l7-2",
@@ -724,7 +750,7 @@
       "Engenheiro"
      ],
      "answer": "Médico",
-     "why": "\"He is a doctor\" — ele é médico."
+     "why": "\"He is a doctor\"."
     },
     {
      "id": "a1u4l7-3",
@@ -741,26 +767,14 @@
     {
      "id": "a1u4l7-4",
      "type": "quiz",
-     "q": "Quem é a Emma?",
+     "q": "Quem é o Max?",
      "options": [
-      "A irmã bebê",
-      "A mãe",
-      "A cachorra"
+      "O cachorro",
+      "O irmão",
+      "O pai"
      ],
-     "answer": "A irmã bebê",
-     "why": "\"My sister is a baby. Her name is Emma.\""
-    },
-    {
-     "id": "a1u4l7-5",
-     "type": "quiz",
-     "q": "Quantos anos tem o Tom?",
-     "options": [
-      "Oito",
-      "Dezoito",
-      "Oitenta"
-     ],
-     "answer": "Oito",
-     "why": "\"He is eight\" — ele tem oito anos."
+     "answer": "O cachorro",
+     "why": "\"We have a dog too. His name is Max.\""
     }
    ]
   }

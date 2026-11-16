@@ -697,8 +697,16 @@
      },
      {
       "who": "Tom",
-      "en": "Good morning, Ana! How are you?",
-      "pt": "Bom dia, Ana! Como você está?"
+      "en": "Good ___, Ana! How are you?",
+      "pt": "Bom dia, Ana! Como você está?",
+      "gap": {
+       "answer": "morning",
+       "options": [
+        "morning",
+        "night",
+        "bye"
+       ]
+      }
      },
      {
       "who": "Ana",
@@ -706,14 +714,42 @@
       "pt": "Estou bem, obrigada. E você?"
      },
      {
+      "ask": "Como a Ana está?",
+      "options": [
+       "Bem",
+       "Cansada",
+       "Doente"
+      ],
+      "answer": "Bem",
+      "why": "Ela diz \"I'm fine\" — estou bem."
+     },
+     {
       "who": "Tom",
-      "en": "I'm fine, thanks. Excuse me, where is the coffee?",
-      "pt": "Estou bem, valeu. Com licença, onde está o café?"
+      "en": "I'm fine, ___. Excuse me, where is the coffee?",
+      "pt": "Estou bem, valeu. Com licença, onde está o café?",
+      "gap": {
+       "answer": "thanks",
+       "options": [
+        "thanks",
+        "sorry",
+        "please"
+       ]
+      }
      },
      {
       "who": "Ana",
       "en": "Sorry, there is no coffee today.",
       "pt": "Desculpe, não tem café hoje."
+     },
+     {
+      "ask": "Por que a Ana pede desculpas?",
+      "options": [
+       "Porque não tem café",
+       "Porque ela está atrasada",
+       "Porque ela não conhece o Tom"
+      ],
+      "answer": "Porque não tem café",
+      "why": "\"There is no coffee today\" — não tem café hoje."
      },
      {
       "who": "Tom",
@@ -731,22 +767,10 @@
     {
      "id": "a1u1l7-1",
      "type": "story",
-     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
     },
     {
      "id": "a1u1l7-2",
-     "type": "quiz",
-     "q": "Como a Ana está?",
-     "options": [
-      "Bem",
-      "Cansada",
-      "Doente"
-     ],
-     "answer": "Bem",
-     "why": "Ela diz \"I'm fine, thank you\" — estou bem, obrigada."
-    },
-    {
-     "id": "a1u1l7-3",
      "type": "quiz",
      "q": "O que o Tom procura?",
      "options": [
@@ -755,10 +779,10 @@
       "A chave"
      ],
      "answer": "O café",
-     "why": "Ele pergunta \"where is the coffee?\" — onde está o café?"
+     "why": "Ele pergunta \"where is the coffee?\"."
     },
     {
-     "id": "a1u1l7-4",
+     "id": "a1u1l7-3",
      "type": "quiz",
      "q": "Tem café hoje?",
      "options": [
@@ -767,10 +791,10 @@
       "Só à tarde"
      ],
      "answer": "Não",
-     "why": "Ana diz \"there is no coffee today\" — não tem café hoje."
+     "why": "\"There is no coffee today\"."
     },
     {
-     "id": "a1u1l7-5",
+     "id": "a1u1l7-4",
      "type": "quiz",
      "q": "Como o Tom se despede?",
      "options": [

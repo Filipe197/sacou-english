@@ -646,20 +646,46 @@
     "title": "O dia da Sarah",
     "lines": [
      {
-      "en": "Sarah is a nurse. She works in a hospital.",
-      "pt": "A Sarah é enfermeira. Ela trabalha num hospital."
+      "en": "Sarah is a nurse. She ___ in a hospital.",
+      "pt": "A Sarah é enfermeira. Ela trabalha num hospital.",
+      "gap": {
+       "answer": "works",
+       "options": [
+        "works",
+        "work",
+        "working"
+       ]
+      }
      },
      {
       "en": "She gets up at six o'clock every day.",
       "pt": "Ela levanta às seis horas todo dia."
      },
      {
+      "ask": "A que horas a Sarah levanta?",
+      "options": [
+       "Às seis",
+       "Às sete",
+       "À uma"
+      ],
+      "answer": "Às seis",
+      "why": "\"at six o'clock\"."
+     },
+     {
       "en": "She has breakfast at home: bread and coffee.",
       "pt": "Ela toma café da manhã em casa: pão e café."
      },
      {
-      "en": "She goes to work at seven.",
-      "pt": "Ela vai para o trabalho às sete."
+      "en": "She ___ to work at seven.",
+      "pt": "Ela vai para o trabalho às sete.",
+      "gap": {
+       "answer": "goes",
+       "options": [
+        "goes",
+        "go",
+        "going"
+       ]
+      }
      },
      {
       "en": "She has lunch at one o'clock with her friends.",
@@ -670,8 +696,16 @@
       "pt": "À noite, ela assiste TV e lê um livro."
      },
      {
-      "en": "She doesn't work on Saturday and Sunday.",
-      "pt": "Ela não trabalha no sábado e no domingo."
+      "en": "She ___ work on Saturday and Sunday.",
+      "pt": "Ela não trabalha no sábado e no domingo.",
+      "gap": {
+       "answer": "doesn't",
+       "options": [
+        "doesn't",
+        "don't",
+        "isn't"
+       ]
+      }
      }
     ]
    },
@@ -679,7 +713,7 @@
     {
      "id": "a1u6l7-1",
      "type": "story",
-     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
     },
     {
      "id": "a1u6l7-2",
@@ -696,18 +730,6 @@
     {
      "id": "a1u6l7-3",
      "type": "quiz",
-     "q": "A que horas ela levanta?",
-     "options": [
-      "Às seis",
-      "Às sete",
-      "À uma"
-     ],
-     "answer": "Às seis",
-     "why": "\"She gets up at six o'clock\"."
-    },
-    {
-     "id": "a1u6l7-4",
-     "type": "quiz",
      "q": "O que ela come no café da manhã?",
      "options": [
       "Pão e café",
@@ -715,10 +737,10 @@
       "Nada"
      ],
      "answer": "Pão e café",
-     "why": "\"bread and coffee\" = pão e café."
+     "why": "\"bread and coffee\"."
     },
     {
-     "id": "a1u6l7-5",
+     "id": "a1u6l7-4",
      "type": "quiz",
      "q": "Quando ela não trabalha?",
      "options": [

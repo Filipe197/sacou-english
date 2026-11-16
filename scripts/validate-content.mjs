@@ -143,10 +143,31 @@ for (const { f, u, rank } of units) {
   for (const l of u.lessons || []) {
     if (!/^[a-z0-9-]{3,40}$/.test(l.id)) err(W, `id de lição inválido "${l.id}"`);
     if (ids.has(l.id)) err(W, `id repetido "${l.id}"`); ids.add(l.id);
-    if (!l.items?.length || l.items.length < 4) err(l.id, 'lição precisa de pelo menos 4 exercícios');
+    if (!l.items?.length || l.items.length < (l.story ? 3 : 4)) err(l.id, 'lição precisa de pelo menos 4 exercícios (3 se tiver história)');
     if (l.story) {
       if (!l.story.title || !Array.isArray(l.story.lines) || l.story.lines.length < 4) err(l.id, 'história precisa de título e pelo menos 4 frases');
-      for (const ln of l.story.lines || []) { if (!ln.en || !ln.pt) err(l.id, 'frase da história sem en/pt'); else checkEn(`${l.id} história`, ln.en); }
+      let asks = 0, gaps = 0;
+      for (const ln of l.story.lines || []) {
+        if (ln.ask) { // pergunta no meio da história
+          asks++;
+          if (!ln.options?.includes(ln.answer)) err(l.id, `pergunta "${ln.ask}" sem a resposta nas opções`);
+          if (!ln.why) err(l.id, `pergunta "${ln.ask}" sem explicação`);
+          continue;
+        }
+        if (!ln.en || !ln.pt) { err(l.id, 'frase da história sem en/pt'); continue; }
+        if (ln.gap) {
+          gaps++;
+          if (!ln.en.includes('___')) err(l.id, `lacuna sem "___" em "${ln.en}"`);
+          if (!ln.gap.options?.includes(ln.gap.answer)) err(l.id, `lacuna sem a resposta nas opções em "${ln.en}"`);
+          if (new Set(ln.gap.options).size !== ln.gap.options?.length) err(l.id, 'opções repetidas na lacuna');
+          ln.gap.options?.forEach(o => checkEn(`${l.id} história`, o));
+          checkEn(`${l.id} história`, ln.en.replace('___', ln.gap.answer));
+        } else {
+          if (ln.en.includes('___')) err(l.id, `"___" sem lacuna definida em "${ln.en}"`);
+          checkEn(`${l.id} história`, ln.en);
+        }
+      }
+      if (gaps + asks < 2) err(l.id, 'história precisa de pelo menos 2 interações (lacunas ou perguntas)');
       if (l.items[0]?.type !== 'story') err(l.id, 'lição com história deve começar com um item "story"');
     }
     for (const it of l.items || []) {

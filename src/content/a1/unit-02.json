@@ -683,23 +683,57 @@
      },
      {
       "who": "Sofia",
-      "en": "Hi! My name is Sofia. I'm from Mexico.",
-      "pt": "Oi! Meu nome é Sofia. Eu sou do México."
+      "en": "Hi! My ___ is Sofia. I'm from Mexico.",
+      "pt": "Oi! Meu nome é Sofia. Eu sou do México.",
+      "gap": {
+       "answer": "name",
+       "options": [
+        "name",
+        "from",
+        "is"
+       ]
+      }
+     },
+     {
+      "ask": "De onde a Sofia é?",
+      "options": [
+       "México",
+       "Brasil",
+       "Espanha"
+      ],
+      "answer": "México",
+      "why": "\"I'm from Mexico\"."
      },
      {
       "who": "Lucas",
-      "en": "Hi, Sofia! I'm Lucas. Nice to meet you.",
-      "pt": "Oi, Sofia! Eu sou o Lucas. Prazer em te conhecer."
+      "en": "Hi, Sofia! I'm Lucas. Nice to ___ you.",
+      "pt": "Oi, Sofia! Eu sou o Lucas. Prazer em te conhecer.",
+      "gap": {
+       "answer": "meet",
+       "options": [
+        "meet",
+        "are",
+        "from"
+       ]
+      }
      },
      {
       "who": "Sofia",
       "en": "Nice to meet you too. Where are you from, Lucas?",
-      "pt": "Prazer em te conhecer também. De onde você é, Lucas?"
+      "pt": "Prazer também. De onde você é, Lucas?"
      },
      {
       "who": "Lucas",
-      "en": "I'm from Brazil. I'm from Rio.",
-      "pt": "Eu sou do Brasil. Eu sou do Rio."
+      "en": "I'm ___ Brazil. I'm from Rio.",
+      "pt": "Eu sou do Brasil. Eu sou do Rio.",
+      "gap": {
+       "answer": "from",
+       "options": [
+        "from",
+        "in",
+        "at"
+       ]
+      }
      },
      {
       "who": "Sofia",
@@ -710,6 +744,16 @@
       "who": "Lucas",
       "en": "No, I'm not. I'm a teacher!",
       "pt": "Não. Eu sou professor!"
+     },
+     {
+      "ask": "Qual é a surpresa no final?",
+      "options": [
+       "O Lucas é professor",
+       "O Lucas é do México",
+       "O Lucas é aluno novo"
+      ],
+      "answer": "O Lucas é professor",
+      "why": "\"I'm a teacher!\" — eu sou professor!"
      }
     ]
    },
@@ -717,22 +761,10 @@
     {
      "id": "a1u2l7-1",
      "type": "story",
-     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
     },
     {
      "id": "a1u2l7-2",
-     "type": "quiz",
-     "q": "De onde a Sofia é?",
-     "options": [
-      "México",
-      "Brasil",
-      "Espanha"
-     ],
-     "answer": "México",
-     "why": "Ela diz \"I'm from Mexico\"."
-    },
-    {
-     "id": "a1u2l7-3",
      "type": "quiz",
      "q": "De que cidade o Lucas é?",
      "options": [
@@ -741,22 +773,10 @@
       "Paris"
      ],
      "answer": "Rio",
-     "why": "Ele diz \"I'm from Rio\"."
+     "why": "\"I'm from Rio\"."
     },
     {
-     "id": "a1u2l7-4",
-     "type": "quiz",
-     "q": "O Lucas é estudante?",
-     "options": [
-      "Não, ele é professor",
-      "Sim, ele é aluno novo",
-      "Não, ele é médico"
-     ],
-     "answer": "Não, ele é professor",
-     "why": "\"No, I'm not. I'm a teacher!\" — não, eu sou professor."
-    },
-    {
-     "id": "a1u2l7-5",
+     "id": "a1u2l7-3",
      "type": "quiz",
      "q": "Quem é a aluna nova?",
      "options": [
@@ -765,7 +785,19 @@
       "Lucas"
      ],
      "answer": "Sofia",
-     "why": "A professora diz \"This is Sofia. She is a new student\"."
+     "why": "\"This is Sofia. She is a new student\"."
+    },
+    {
+     "id": "a1u2l7-4",
+     "type": "quiz",
+     "q": "O que a Sofia pergunta ao Lucas?",
+     "options": [
+      "De onde ele é",
+      "Quantos anos ele tem",
+      "Qual é o telefone dele"
+     ],
+     "answer": "De onde ele é",
+     "why": "\"Where are you from, Lucas?\""
     }
    ]
   }
