@@ -232,3 +232,4 @@ button{font-family:inherit}
 .story-text:hover{border-color:#9C8BFA}
 .story-who{color:var(--violet-dd);font-weight:700}
 .story-pt{font-size:15px;color:var(--text2)}
+.exit-box{max-width:760px;width:calc(100% - 48px);margin:0 auto 8px;background:var(--bad-bg);border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}

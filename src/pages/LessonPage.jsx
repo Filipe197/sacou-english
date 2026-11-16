@@ -1,7 +1,7 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { useMemo } from 'react';
 import LessonRunner from '../components/LessonRunner.jsx';
-import { getLesson, lessonStates } from '../lib/content.js';
+import { getLesson, lessonStates, LESSONS } from '../lib/content.js';
 import { useProgress } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { supabase } from '../lib/supabase.js';
@@ -33,8 +33,9 @@ export default function LessonPage() {
         if (data) setProfile(data);
         // primeira lição do dia: a sequência subiu
         const streakUp = data && profile && profile.last_active !== data.last_active;
+        const next = LESSONS[LESSONS.findIndex(l => l.id === lesson.id) + 1];
         return {
-          xp, streak: data?.streak,
+          xp, streak: data?.streak, next: next && !repeat ? next : undefined,
           anim: streakUp ? 'streak' : undefined,
           title: streakUp ? (data.streak === 1 ? 'Sequência iniciada!' : `${data.streak} dias seguidos!`) : repeat ? 'Treino concluído!' : undefined,
           message: streakUp ? 'Você estudou hoje e sua sequência está garantida. Volte amanhã para continuar.' : undefined,

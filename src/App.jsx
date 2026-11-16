@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useAuth } from './lib/auth.jsx';
 import { Spinner } from './components/ui.jsx';
@@ -24,6 +24,9 @@ function Private({ children, allowNotOnboarded = false }) {
   return children;
 }
 
+// Remonta a lição ao trocar de id (recarrega o progresso e zera o estado)
+function LessonByKey() { const { id } = useParams(); return <LessonPage key={id} />; }
+
 function ScrollTop() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
@@ -43,7 +46,7 @@ export default function App() {
         <Route path="/bem-vindo" element={<Private allowNotOnboarded><Onboarding /></Private>} />
         <Route path="/nivelamento" element={<Private allowNotOnboarded><Placement /></Private>} />
         <Route path="/aprender" element={<Private><Trail /></Private>} />
-        <Route path="/licao/:id" element={<Private><LessonPage /></Private>} />
+        <Route path="/licao/:id" element={<Private><LessonByKey /></Private>} />
         <Route path="/revisao" element={<Private><Review /></Private>} />
         <Route path="/praticar" element={<Private><Practice /></Private>} />
         <Route path="/guia" element={<Private><Guide /></Private>} />

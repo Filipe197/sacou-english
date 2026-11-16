@@ -245,7 +245,11 @@ function Speak({ item, locked, onDone }) {
           {msg && <span className="alert" role="status">{msg}</span>}
         </div>
       ) : <div className="note" style={{ marginTop: 24 }}>Seu navegador não reconhece fala. No computador, use Chrome ou Edge para praticar a pronúncia.</div>}
-      {!locked && <button type="button" className="link-btn" style={{ marginTop: 16 }} onClick={() => onDone(true, null, true)}>Não posso falar agora</button>}
+      {!locked && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: 20 }}>
+          <button type="button" className="btn btn-out" onClick={() => onDone(true, null, true)}>Não posso falar agora — pular</button>
+        </div>
+      )}
     </>
   );
 }
@@ -335,7 +339,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [value, setValue] = useState(null);
   const [status, setStatus] = useState('answering'); // answering | correct | wrong
   const [matchMisses, setMatchMisses] = useState(0);
-  const [note, setNote] = useState(null); // observação extra no feedback (grafia, fala pulada...)
+  const [note, setNote] = useState(null);
+  const [confirmExit, setConfirmExit] = useState(false); // observação extra no feedback (grafia, fala pulada...)
   const [help, setHelp] = useState(false);
   const [report, setReport] = useState(false);
   const [result, setResult] = useState(null);
@@ -415,7 +420,10 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
           {result.streak != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Sequência</span><b>{result.streak} {result.streak === 1 ? 'dia' : 'dias'}</b></div>}
         </div>
         {result.error && <div className="alert" role="alert" style={{ maxWidth: 480 }}>{result.error}</div>}
-        <Link className="btn btn-violet btn-lg btn-3d" to={result.to || exitTo} autoFocus>{finishCta}</Link>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
+          {result.next && <Link className="btn btn-violet btn-lg btn-3d" to={`/licao/${result.next.id}`} autoFocus>Próxima lição: {result.next.title}</Link>}
+          <Link className={'btn btn-lg ' + (result.next ? 'btn-out' : 'btn-violet btn-3d')} to={result.to || exitTo} autoFocus={!result.next}>{result.next ? 'Voltar para a trilha' : finishCta}</Link>
+        </div>
       </div>
     );
   }
@@ -429,11 +437,23 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   return (
     <div className="lesson">
       <header className="lesson-top">
-        <Link to={exitTo} className="icon-btn" aria-label="Sair (o progresso desta lição não é salvo)"><Icon name="x" size={24} stroke={2.4} /></Link>
+        <button type="button" className="icon-btn" aria-label="Sair da lição" onClick={() => setConfirmExit(true)}><Icon name="x" size={24} stroke={2.4} /></button>
         <div className="track" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} aria-label={title}><div className="fill" style={{ width: progress + '%' }} /></div>
         <span style={{ fontWeight: 700, color: 'var(--violet-dd)', fontSize: 15 }}>{Math.min(firstTry.current.size + (locked ? 0 : 1), total)}/{total}</span>
       </header>
 
+      {confirmExit && (
+        <div className="exit-box" role="alertdialog" aria-label="Sair da lição">
+          <div>
+            <b style={{ display: 'block', marginBottom: 4 }}>Sair da lição?</b>
+            <span className="muted" style={{ fontSize: 15 }}>A lição só fica salva quando você chega até o final. Se sair agora, vai precisar começar de novo.</span>
+          </div>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <button type="button" className="btn btn-violet" onClick={() => setConfirmExit(false)} autoFocus>Continuar a lição</button>
+            <Link to={exitTo} className="btn btn-out">Sair</Link>
+          </div>
+        </div>
+      )}
       <main className="lesson-main" key={idx}>
         {item.type === 'choice' && <Choice item={item} value={value} setValue={setValue} locked={locked} />}
         {item.type === 'meaning' && <Meaning item={item} value={value} setValue={setValue} locked={locked} />}
