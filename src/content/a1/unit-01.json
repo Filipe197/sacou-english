@@ -683,6 +683,105 @@
      "why": "\"Very much\" = muito. \"Thank you very much\" é um agradecimento mais forte."
     }
    ]
+  },
+  {
+   "id": "a1-u1-l7",
+   "title": "História: Bom dia no escritório",
+   "story": {
+    "title": "Bom dia no escritório",
+    "lines": [
+     {
+      "who": "Ana",
+      "en": "Good morning, Tom!",
+      "pt": "Bom dia, Tom!"
+     },
+     {
+      "who": "Tom",
+      "en": "Good morning, Ana! How are you?",
+      "pt": "Bom dia, Ana! Como você está?"
+     },
+     {
+      "who": "Ana",
+      "en": "I'm fine, thank you. And you?",
+      "pt": "Estou bem, obrigada. E você?"
+     },
+     {
+      "who": "Tom",
+      "en": "I'm fine, thanks. Excuse me, where is the coffee?",
+      "pt": "Estou bem, valeu. Com licença, onde está o café?"
+     },
+     {
+      "who": "Ana",
+      "en": "Sorry, there is no coffee today.",
+      "pt": "Desculpe, não tem café hoje."
+     },
+     {
+      "who": "Tom",
+      "en": "Oh no! OK, see you later, Ana.",
+      "pt": "Ah, não! Tudo bem, até mais tarde, Ana."
+     },
+     {
+      "who": "Ana",
+      "en": "Bye, Tom!",
+      "pt": "Tchau, Tom!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u1l7-1",
+     "type": "story",
+     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+    },
+    {
+     "id": "a1u1l7-2",
+     "type": "quiz",
+     "q": "Como a Ana está?",
+     "options": [
+      "Bem",
+      "Cansada",
+      "Doente"
+     ],
+     "answer": "Bem",
+     "why": "Ela diz \"I'm fine, thank you\" — estou bem, obrigada."
+    },
+    {
+     "id": "a1u1l7-3",
+     "type": "quiz",
+     "q": "O que o Tom procura?",
+     "options": [
+      "O café",
+      "A Ana",
+      "A chave"
+     ],
+     "answer": "O café",
+     "why": "Ele pergunta \"where is the coffee?\" — onde está o café?"
+    },
+    {
+     "id": "a1u1l7-4",
+     "type": "quiz",
+     "q": "Tem café hoje?",
+     "options": [
+      "Não",
+      "Sim",
+      "Só à tarde"
+     ],
+     "answer": "Não",
+     "why": "Ana diz \"there is no coffee today\" — não tem café hoje."
+    },
+    {
+     "id": "a1u1l7-5",
+     "type": "quiz",
+     "q": "Como o Tom se despede?",
+     "options": [
+      "See you later",
+      "Good morning",
+      "Thank you"
+     ],
+     "answer": "See you later",
+     "why": "\"See you later\" = até mais tarde."
+    }
+   ]
   }
  ]
 }

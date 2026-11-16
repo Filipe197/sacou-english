@@ -642,6 +642,98 @@
      "why": "\"Behind\" soa como \"bi-RÁIND\"."
     }
    ]
+  },
+  {
+   "id": "a1-u8-l7",
+   "title": "História: A minha rua",
+   "story": {
+    "title": "A minha rua",
+    "lines": [
+     {
+      "en": "I live in a small street in Rio.",
+      "pt": "Eu moro numa rua pequena no Rio."
+     },
+     {
+      "en": "There is a supermarket near my house.",
+      "pt": "Tem um supermercado perto da minha casa."
+     },
+     {
+      "en": "Next to the supermarket, there is a bank.",
+      "pt": "Ao lado do supermercado, tem um banco."
+     },
+     {
+      "en": "There are two restaurants in my street.",
+      "pt": "Tem dois restaurantes na minha rua."
+     },
+     {
+      "en": "The park is behind my house.",
+      "pt": "O parque fica atrás da minha casa."
+     },
+     {
+      "en": "There isn't a hospital in my street, but there is one near the station.",
+      "pt": "Não tem hospital na minha rua, mas tem um perto da estação."
+     },
+     {
+      "en": "I love my street!",
+      "pt": "Eu amo a minha rua!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u8l7-1",
+     "type": "story",
+     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+    },
+    {
+     "id": "a1u8l7-2",
+     "type": "quiz",
+     "q": "O que fica ao lado do supermercado?",
+     "options": [
+      "Um banco",
+      "Um parque",
+      "Um hospital"
+     ],
+     "answer": "Um banco",
+     "why": "\"Next to the supermarket, there is a bank\"."
+    },
+    {
+     "id": "a1u8l7-3",
+     "type": "quiz",
+     "q": "Quantos restaurantes tem na rua?",
+     "options": [
+      "Dois",
+      "Um",
+      "Três"
+     ],
+     "answer": "Dois",
+     "why": "\"There are two restaurants\"."
+    },
+    {
+     "id": "a1u8l7-4",
+     "type": "quiz",
+     "q": "Onde fica o parque?",
+     "options": [
+      "Atrás da casa",
+      "Ao lado do banco",
+      "Perto da estação"
+     ],
+     "answer": "Atrás da casa",
+     "why": "\"The park is behind my house\"."
+    },
+    {
+     "id": "a1u8l7-5",
+     "type": "quiz",
+     "q": "Tem hospital na rua?",
+     "options": [
+      "Não, mas tem um perto da estação",
+      "Sim, ao lado do banco",
+      "Sim, atrás da casa"
+     ],
+     "answer": "Não, mas tem um perto da estação",
+     "why": "\"There isn't a hospital in my street, but there is one near the station\"."
+    }
+   ]
   }
  ]
 }

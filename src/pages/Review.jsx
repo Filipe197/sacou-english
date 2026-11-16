@@ -13,7 +13,7 @@ export default function Review() {
   const [started, setStarted] = useState(false);
 
   const entries = useMemo(() => prog.mistakes
-    .map(m => { const f = getItem(m.item_id); return f && { item: f.item, lessonId: f.lesson.id, unit: f.lesson.unit, times: m.times }; })
+    .map(m => { const f = getItem(m.item_id); return f && f.item.type !== 'story' && { item: f.item, lessonId: f.lesson.id, unit: f.lesson.unit, story: f.lesson.story, times: m.times }; })
     .filter(Boolean).slice(0, 10), [prog.mistakes]);
 
   if (prog.loading) return <Spinner />;

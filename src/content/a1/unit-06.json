@@ -638,6 +638,98 @@
      "why": "\"Early\" = cedo. Soa como \"ÊR-li\"."
     }
    ]
+  },
+  {
+   "id": "a1-u6-l7",
+   "title": "História: O dia da Sarah",
+   "story": {
+    "title": "O dia da Sarah",
+    "lines": [
+     {
+      "en": "Sarah is a nurse. She works in a hospital.",
+      "pt": "A Sarah é enfermeira. Ela trabalha num hospital."
+     },
+     {
+      "en": "She gets up at six o'clock every day.",
+      "pt": "Ela levanta às seis horas todo dia."
+     },
+     {
+      "en": "She has breakfast at home: bread and coffee.",
+      "pt": "Ela toma café da manhã em casa: pão e café."
+     },
+     {
+      "en": "She goes to work at seven.",
+      "pt": "Ela vai para o trabalho às sete."
+     },
+     {
+      "en": "She has lunch at one o'clock with her friends.",
+      "pt": "Ela almoça à uma hora com as amigas."
+     },
+     {
+      "en": "In the evening, she watches TV and reads a book.",
+      "pt": "À noite, ela assiste TV e lê um livro."
+     },
+     {
+      "en": "She doesn't work on Saturday and Sunday.",
+      "pt": "Ela não trabalha no sábado e no domingo."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u6l7-1",
+     "type": "story",
+     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+    },
+    {
+     "id": "a1u6l7-2",
+     "type": "quiz",
+     "q": "Onde a Sarah trabalha?",
+     "options": [
+      "Num hospital",
+      "Numa escola",
+      "Num banco"
+     ],
+     "answer": "Num hospital",
+     "why": "\"She works in a hospital\"."
+    },
+    {
+     "id": "a1u6l7-3",
+     "type": "quiz",
+     "q": "A que horas ela levanta?",
+     "options": [
+      "Às seis",
+      "Às sete",
+      "À uma"
+     ],
+     "answer": "Às seis",
+     "why": "\"She gets up at six o'clock\"."
+    },
+    {
+     "id": "a1u6l7-4",
+     "type": "quiz",
+     "q": "O que ela come no café da manhã?",
+     "options": [
+      "Pão e café",
+      "Arroz e frango",
+      "Nada"
+     ],
+     "answer": "Pão e café",
+     "why": "\"bread and coffee\" = pão e café."
+    },
+    {
+     "id": "a1u6l7-5",
+     "type": "quiz",
+     "q": "Quando ela não trabalha?",
+     "options": [
+      "Sábado e domingo",
+      "Segunda e terça",
+      "Sexta"
+     ],
+     "answer": "Sábado e domingo",
+     "why": "\"She doesn't work on Saturday and Sunday\"."
+    }
+   ]
   }
  ]
 }

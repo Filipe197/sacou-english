@@ -671,6 +671,98 @@
      "why": "\"Mother\" tem o \"th\" com a língua entre os dentes: \"MÂ-der\"."
     }
    ]
+  },
+  {
+   "id": "a1-u4-l7",
+   "title": "História: A família da Julia",
+   "story": {
+    "title": "A família da Julia",
+    "lines": [
+     {
+      "en": "Hi! I'm Julia. This is my family.",
+      "pt": "Oi! Eu sou a Julia. Esta é a minha família."
+     },
+     {
+      "en": "My father is Carlos. He is a doctor.",
+      "pt": "Meu pai é o Carlos. Ele é médico."
+     },
+     {
+      "en": "My mother is Maria. She is a teacher.",
+      "pt": "Minha mãe é a Maria. Ela é professora."
+     },
+     {
+      "en": "I have one brother and one sister.",
+      "pt": "Eu tenho um irmão e uma irmã."
+     },
+     {
+      "en": "My brother's name is Tom. He is eight.",
+      "pt": "O nome do meu irmão é Tom. Ele tem oito anos."
+     },
+     {
+      "en": "My sister is a baby. Her name is Emma.",
+      "pt": "Minha irmã é um bebê. O nome dela é Emma."
+     },
+     {
+      "en": "We have a dog too. His name is Max.",
+      "pt": "Nós também temos um cachorro. O nome dele é Max."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u4l7-1",
+     "type": "story",
+     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+    },
+    {
+     "id": "a1u4l7-2",
+     "type": "quiz",
+     "q": "Qual é a profissão do pai da Julia?",
+     "options": [
+      "Médico",
+      "Professor",
+      "Engenheiro"
+     ],
+     "answer": "Médico",
+     "why": "\"He is a doctor\" — ele é médico."
+    },
+    {
+     "id": "a1u4l7-3",
+     "type": "quiz",
+     "q": "Quantos irmãos a Julia tem?",
+     "options": [
+      "Dois: um irmão e uma irmã",
+      "Três irmãos",
+      "Nenhum"
+     ],
+     "answer": "Dois: um irmão e uma irmã",
+     "why": "\"I have one brother and one sister\"."
+    },
+    {
+     "id": "a1u4l7-4",
+     "type": "quiz",
+     "q": "Quem é a Emma?",
+     "options": [
+      "A irmã bebê",
+      "A mãe",
+      "A cachorra"
+     ],
+     "answer": "A irmã bebê",
+     "why": "\"My sister is a baby. Her name is Emma.\""
+    },
+    {
+     "id": "a1u4l7-5",
+     "type": "quiz",
+     "q": "Quantos anos tem o Tom?",
+     "options": [
+      "Oito",
+      "Dezoito",
+      "Oitenta"
+     ],
+     "answer": "Oito",
+     "why": "\"He is eight\" — ele tem oito anos."
+    }
+   ]
   }
  ]
 }

@@ -224,3 +224,11 @@ button{font-family:inherit}
 .mic.on{background:var(--bad);border-bottom-color:#8a2e08;animation:pulse-mic 1s infinite}
 .mic:disabled{cursor:default}
 @keyframes pulse-mic{50%{transform:scale(1.06)}}
+
+/* histórias */
+.story{display:flex;flex-direction:column;gap:6px;background:var(--bg);border-radius:20px;padding:12px}
+.story-line{display:flex;gap:6px;align-items:flex-start}
+.story-text{flex:1;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:18px;line-height:1.45;cursor:pointer;color:var(--ink);font-family:inherit;display:flex;flex-direction:column;gap:4px}
+.story-text:hover{border-color:#9C8BFA}
+.story-who{color:var(--violet-dd);font-weight:700}
+.story-pt{font-size:15px;color:var(--text2)}

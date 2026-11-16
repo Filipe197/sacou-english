@@ -641,6 +641,105 @@
      "why": "\"Red\" com o r inglês, sem vibrar a língua."
     }
    ]
+  },
+  {
+   "id": "a1-u5-l7",
+   "title": "História: Onde estão as chaves?",
+   "story": {
+    "title": "Onde estão as chaves?",
+    "lines": [
+     {
+      "who": "Tom",
+      "en": "Mom, where are my keys?",
+      "pt": "Mãe, onde estão as minhas chaves?"
+     },
+     {
+      "who": "Mãe",
+      "en": "Are they in your bag?",
+      "pt": "Elas estão na sua bolsa?"
+     },
+     {
+      "who": "Tom",
+      "en": "No, they aren't. This is my blue bag, and the keys aren't here.",
+      "pt": "Não. Esta é a minha bolsa azul, e as chaves não estão aqui."
+     },
+     {
+      "who": "Mãe",
+      "en": "Look! Is that your black bag on the table?",
+      "pt": "Olha! Aquela é a sua bolsa preta em cima da mesa?"
+     },
+     {
+      "who": "Tom",
+      "en": "Yes, it is! And my keys are in it. Thank you, Mom!",
+      "pt": "É sim! E as minhas chaves estão nela. Obrigado, mãe!"
+     },
+     {
+      "who": "Mãe",
+      "en": "And where is your phone?",
+      "pt": "E onde está o seu celular?"
+     },
+     {
+      "who": "Tom",
+      "en": "Oh no!",
+      "pt": "Ah, não!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u5l7-1",
+     "type": "story",
+     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+    },
+    {
+     "id": "a1u5l7-2",
+     "type": "quiz",
+     "q": "Onde estavam as chaves?",
+     "options": [
+      "Na bolsa preta, em cima da mesa",
+      "Na bolsa azul",
+      "Embaixo da cadeira"
+     ],
+     "answer": "Na bolsa preta, em cima da mesa",
+     "why": "\"Is that your black bag on the table?... my keys are in it\"."
+    },
+    {
+     "id": "a1u5l7-3",
+     "type": "quiz",
+     "q": "De que cor é a bolsa em que as chaves NÃO estavam?",
+     "options": [
+      "Azul",
+      "Preta",
+      "Vermelha"
+     ],
+     "answer": "Azul",
+     "why": "\"This is my blue bag, and the keys aren't here\"."
+    },
+    {
+     "id": "a1u5l7-4",
+     "type": "quiz",
+     "q": "O que o Tom ainda não sabe onde está?",
+     "options": [
+      "O celular",
+      "As chaves",
+      "A bolsa"
+     ],
+     "answer": "O celular",
+     "why": "No final a mãe pergunta pelo celular e ele diz \"Oh no!\"."
+    },
+    {
+     "id": "a1u5l7-5",
+     "type": "quiz",
+     "q": "Quem ajuda o Tom?",
+     "options": [
+      "A mãe dele",
+      "O pai dele",
+      "A irmã dele"
+     ],
+     "answer": "A mãe dele",
+     "why": "Ele fala com a mãe: \"Mom\"."
+    }
+   ]
   }
  ]
 }

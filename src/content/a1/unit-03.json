@@ -683,6 +683,110 @@
      "why": "Fale número por número, com calma: nine, eight, seven."
     }
    ]
+  },
+  {
+   "id": "a1-u3-l7",
+   "title": "História: O aniversário do Pedro",
+   "story": {
+    "title": "O aniversário do Pedro",
+    "lines": [
+     {
+      "who": "Ana",
+      "en": "Happy birthday, Pedro!",
+      "pt": "Feliz aniversário, Pedro!"
+     },
+     {
+      "who": "Pedro",
+      "en": "Thank you, Ana!",
+      "pt": "Obrigado, Ana!"
+     },
+     {
+      "who": "Ana",
+      "en": "How old are you today?",
+      "pt": "Quantos anos você faz hoje?"
+     },
+     {
+      "who": "Pedro",
+      "en": "I'm twenty-one.",
+      "pt": "Eu tenho vinte e um anos."
+     },
+     {
+      "who": "Ana",
+      "en": "And how old is your sister?",
+      "pt": "E quantos anos tem a sua irmã?"
+     },
+     {
+      "who": "Pedro",
+      "en": "She's seventeen. Her birthday is on Friday.",
+      "pt": "Ela tem dezessete. O aniversário dela é na sexta."
+     },
+     {
+      "who": "Ana",
+      "en": "What's her phone number?",
+      "pt": "Qual é o telefone dela?"
+     },
+     {
+      "who": "Pedro",
+      "en": "It's nine, eight, four, two, six, one.",
+      "pt": "É nove, oito, quatro, dois, seis, um."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u3l7-1",
+     "type": "story",
+     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+    },
+    {
+     "id": "a1u3l7-2",
+     "type": "quiz",
+     "q": "Quantos anos o Pedro faz?",
+     "options": [
+      "21",
+      "20",
+      "31"
+     ],
+     "answer": "21",
+     "why": "\"Twenty-one\" = 21."
+    },
+    {
+     "id": "a1u3l7-3",
+     "type": "quiz",
+     "q": "Quantos anos tem a irmã do Pedro?",
+     "options": [
+      "17",
+      "7",
+      "70"
+     ],
+     "answer": "17",
+     "why": "\"Seventeen\" = 17 (seventy seria 70)."
+    },
+    {
+     "id": "a1u3l7-4",
+     "type": "quiz",
+     "q": "Quando é o aniversário da irmã?",
+     "options": [
+      "Na sexta-feira",
+      "Hoje",
+      "No sábado"
+     ],
+     "answer": "Na sexta-feira",
+     "why": "\"Her birthday is on Friday\" — o aniversário dela é na sexta."
+    },
+    {
+     "id": "a1u3l7-5",
+     "type": "quiz",
+     "q": "O que a Ana pergunta sobre a irmã no final?",
+     "options": [
+      "O telefone dela",
+      "O nome dela",
+      "De onde ela é"
+     ],
+     "answer": "O telefone dela",
+     "why": "\"What's her phone number?\" — qual é o telefone dela?"
+    }
+   ]
   }
  ]
 }

@@ -19,11 +19,12 @@ const CSV = path.join(root, 'content/sources/cefrj-vocabulary-profile-1.5.csv');
 const CONTENT_DIR = path.join(root, 'src/content');
 const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
-// Nomes próprios, países e nacionalidades (não constam em listas de vocabulário)
+// Nomes próprios, países, nacionalidades e interjeições (não constam em listas de vocabulário)
 const NAMES = new Set(`ana pedro maria john lucas sofia tom emma carlos julia mike sarah
 brazil brazilian england english london portugal portuguese spain spanish
 japan japanese usa american canada canadian mexico mexican rio paris italy italian
-china chinese france french germany german reais`
+china chinese france french germany german reais
+max sarah oh wow`
   .split(/\s+/).filter(Boolean));
 
 // ---------- CEFR-J ----------
@@ -99,7 +100,7 @@ const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 const files = fs.readdirSync(CONTENT_DIR).filter(d => /^[abc][12]$/.test(d))
   .flatMap(d => fs.readdirSync(path.join(CONTENT_DIR, d)).filter(f => f.endsWith('.json')).map(f => `${d}/${f}`)).sort();
 const ids = new Set();
-const TYPES = new Set(['choice', 'build', 'match', 'listen', 'meaning', 'type', 'dictation', 'speak', 'dialogue']);
+const TYPES = new Set(['choice', 'build', 'match', 'listen', 'meaning', 'type', 'dictation', 'speak', 'dialogue', 'story', 'quiz']);
 let itemCount = 0; let wordCount = 0;
 const introduced = new Map(); // palavra -> ordem da unidade
 
@@ -143,6 +144,11 @@ for (const { f, u, rank } of units) {
     if (!/^[a-z0-9-]{3,40}$/.test(l.id)) err(W, `id de lição inválido "${l.id}"`);
     if (ids.has(l.id)) err(W, `id repetido "${l.id}"`); ids.add(l.id);
     if (!l.items?.length || l.items.length < 4) err(l.id, 'lição precisa de pelo menos 4 exercícios');
+    if (l.story) {
+      if (!l.story.title || !Array.isArray(l.story.lines) || l.story.lines.length < 4) err(l.id, 'história precisa de título e pelo menos 4 frases');
+      for (const ln of l.story.lines || []) { if (!ln.en || !ln.pt) err(l.id, 'frase da história sem en/pt'); else checkEn(`${l.id} história`, ln.en); }
+      if (l.items[0]?.type !== 'story') err(l.id, 'lição com história deve começar com um item "story"');
+    }
     for (const it of l.items || []) {
       itemCount++;
       const L = `${l.id}/${it.id}`;
@@ -191,6 +197,15 @@ for (const { f, u, rank } of units) {
           if (new Set(it.options).size !== it.options?.length) err(L, 'opções repetidas');
           it.options?.forEach(o => checkEn(L, o));
           for (const o of Object.keys(it.wrong || {})) if (!it.options.includes(o)) err(L, `"wrong" cita opção inexistente "${o}"`);
+          break;
+        case 'story':
+          if (!l.story) err(L, 'item "story" em lição sem história');
+          break;
+        case 'quiz':
+          if (!l.story) err(L, 'quiz precisa de uma história na lição');
+          if (!it.q) err(L, 'quiz precisa da pergunta "q"');
+          if (!it.options?.includes(it.answer)) err(L, 'resposta não está nas opções');
+          if (new Set(it.options).size !== it.options?.length) err(L, 'opções repetidas');
           break;
         case 'listen':
         case 'meaning':

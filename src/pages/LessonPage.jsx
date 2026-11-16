@@ -13,7 +13,7 @@ export default function LessonPage() {
   const prog = useProgress();
   const { profile, setProfile } = useAuth();
 
-  const entries = useMemo(() => lesson ? lesson.items.map(item => ({ item, lessonId: lesson.id, unit: lesson.unit })) : [], [lesson]);
+  const entries = useMemo(() => lesson ? lesson.items.map(item => ({ item, lessonId: lesson.id, unit: lesson.unit, story: lesson.story })) : [], [lesson]);
 
   if (!lesson) return <Navigate to="/aprender" replace />;
   if (prog.loading) return <Spinner />;

@@ -669,6 +669,105 @@
      "why": "\"Nurse\" soa como \"nârs\", com o r suave."
     }
    ]
+  },
+  {
+   "id": "a1-u2-l7",
+   "title": "História: A nova aluna",
+   "story": {
+    "title": "A nova aluna",
+    "lines": [
+     {
+      "who": "Professora",
+      "en": "Hello, class! This is Sofia. She is a new student.",
+      "pt": "Olá, turma! Esta é a Sofia. Ela é uma aluna nova."
+     },
+     {
+      "who": "Sofia",
+      "en": "Hi! My name is Sofia. I'm from Mexico.",
+      "pt": "Oi! Meu nome é Sofia. Eu sou do México."
+     },
+     {
+      "who": "Lucas",
+      "en": "Hi, Sofia! I'm Lucas. Nice to meet you.",
+      "pt": "Oi, Sofia! Eu sou o Lucas. Prazer em te conhecer."
+     },
+     {
+      "who": "Sofia",
+      "en": "Nice to meet you too. Where are you from, Lucas?",
+      "pt": "Prazer em te conhecer também. De onde você é, Lucas?"
+     },
+     {
+      "who": "Lucas",
+      "en": "I'm from Brazil. I'm from Rio.",
+      "pt": "Eu sou do Brasil. Eu sou do Rio."
+     },
+     {
+      "who": "Sofia",
+      "en": "Are you a student too?",
+      "pt": "Você também é aluno?"
+     },
+     {
+      "who": "Lucas",
+      "en": "No, I'm not. I'm a teacher!",
+      "pt": "Não. Eu sou professor!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u2l7-1",
+     "type": "story",
+     "why": "Ler e ouvir histórias curtas é o que faz você entender o inglês de verdade, além de frases soltas. Toque em cada frase para ver a tradução."
+    },
+    {
+     "id": "a1u2l7-2",
+     "type": "quiz",
+     "q": "De onde a Sofia é?",
+     "options": [
+      "México",
+      "Brasil",
+      "Espanha"
+     ],
+     "answer": "México",
+     "why": "Ela diz \"I'm from Mexico\"."
+    },
+    {
+     "id": "a1u2l7-3",
+     "type": "quiz",
+     "q": "De que cidade o Lucas é?",
+     "options": [
+      "Rio",
+      "Londres",
+      "Paris"
+     ],
+     "answer": "Rio",
+     "why": "Ele diz \"I'm from Rio\"."
+    },
+    {
+     "id": "a1u2l7-4",
+     "type": "quiz",
+     "q": "O Lucas é estudante?",
+     "options": [
+      "Não, ele é professor",
+      "Sim, ele é aluno novo",
+      "Não, ele é médico"
+     ],
+     "answer": "Não, ele é professor",
+     "why": "\"No, I'm not. I'm a teacher!\" — não, eu sou professor."
+    },
+    {
+     "id": "a1u2l7-5",
+     "type": "quiz",
+     "q": "Quem é a aluna nova?",
+     "options": [
+      "Sofia",
+      "A professora",
+      "Lucas"
+     ],
+     "answer": "Sofia",
+     "why": "A professora diz \"This is Sofia. She is a new student\"."
+    }
+   ]
   }
  ]
 }

@@ -15,7 +15,7 @@ export function useProgress() {
     if (!user) return;
     const since = new Date(Date.now() - 7 * 864e5).toISOString().slice(0, 10);
     const [lp, mk, dx] = await Promise.all([
-      supabase.from('lesson_progress').select('lesson_id,best_score,times_done'),
+      supabase.from('lesson_progress').select('lesson_id,best_score,times_done,completed_at'),
       supabase.from('mistakes').select('item_id,lesson_id,times,last_seen').eq('resolved', false).order('last_seen', { ascending: false }),
       supabase.from('daily_xp').select('day,xp').gte('day', since),
     ]);
@@ -53,4 +53,15 @@ export function liveStreak(profile) {
   const today = todayBR();
   const y = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date(Date.now() - 864e5));
   return profile.last_active === today || profile.last_active === y ? profile.streak : 0;
+}
+
+// Revisão espaçada: uma lição "volta" 1, 3, 7, 14 e 30 dias depois de feita.
+const INTERVALS = [[1, 2], [3, 4], [7, 9], [14, 17], [30, 35]];
+export function dueLessonIds(scores) {
+  const now = Date.now();
+  return Object.values(scores).filter(r => {
+    if (!r.completed_at || !r.times_done) return false; // puladas no teste não entram
+    const days = (now - new Date(r.completed_at).getTime()) / 864e5;
+    return INTERVALS.some(([a, b]) => days >= a && days < b);
+  }).map(r => r.lesson_id);
 }

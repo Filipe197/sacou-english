@@ -250,6 +250,60 @@ function Speak({ item, locked, onDone }) {
   );
 }
 
+function StoryText({ story, compact }) {
+  const [open, setOpen] = useState({});
+  return (
+    <div className="story">
+      {story.lines.map((ln, i) => (
+        <div key={i} className="story-line">
+          {canSpeak() && <button type="button" className="icon-btn" style={{ width: 36, height: 36, flex: 'none' }} aria-label={`Ouvir: ${ln.en}`} onClick={() => speak(ln.en)}><Icon name="sound" size={18} /></button>}
+          <button type="button" className="story-text" onClick={() => setOpen(o => ({ ...o, [i]: !o[i] }))} aria-expanded={!!open[i]}>
+            {ln.who && <b className="story-who">{ln.who}: </b>}<span lang="en">{ln.en}</span>
+            {open[i] && <span className="story-pt">{ln.pt}</span>}
+          </button>
+        </div>
+      ))}
+      {!compact && <p className="muted" style={{ fontSize: 13, margin: '8px 0 0' }}>Toque numa frase para ver a tradução.</p>}
+    </div>
+  );
+}
+
+function Story({ story, locked, onDone }) {
+  const [playing, setPlaying] = useState(false);
+  function playAll() {
+    if (!canSpeak()) return;
+    window.speechSynthesis.cancel(); setPlaying(true);
+    story.lines.forEach((ln, i) => {
+      const u = new SpeechSynthesisUtterance(ln.en); u.lang = 'en-US'; u.rate = 0.85;
+      if (i === story.lines.length - 1) u.onend = () => setPlaying(false);
+      window.speechSynthesis.speak(u);
+    });
+  }
+  return (
+    <>
+      <p className="q-label">Leia e ouça a história</p>
+      <h1 className="q" style={{ marginBottom: 16 }}>{story.title}</h1>
+      {canSpeak() && <button type="button" className="btn btn-out" style={{ minHeight: 44, marginBottom: 16 }} onClick={playAll} disabled={playing}><Icon name="sound" size={18} />{playing ? 'Tocando...' : 'Ouvir a história toda'}</button>}
+      <StoryText story={story} />
+      {!locked && <button type="button" className="btn btn-violet btn-lg btn-3d" style={{ marginTop: 24 }} onClick={onDone}>Li a história, vamos às perguntas</button>}
+    </>
+  );
+}
+
+function Quiz({ item, story, value, setValue, locked }) {
+  const opts = useMemo(() => shuffle(item.options), [item.id]);
+  const [show, setShow] = useState(false);
+  return (
+    <>
+      <p className="q-label">Sobre a história{story ? `: ${story.title}` : ''}</p>
+      <h1 className="q" style={{ fontSize: 'clamp(24px,3vw,32px)' }}>{item.q}</h1>
+      {story && <button type="button" className="link-btn" onClick={() => setShow(v => !v)} aria-expanded={show}>{show ? 'Esconder a história' : 'Reler a história'}</button>}
+      {show && story && <StoryText story={story} compact />}
+      <Options options={opts} value={value} onPick={setValue} locked={locked} answer={item.answer} />
+    </>
+  );
+}
+
 function ReportBox({ itemId, onClose }) {
   const [msg, setMsg] = useState('');
   const [sent, setSent] = useState(false);
@@ -310,7 +364,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     fx.play(ok ? 'correct' : 'wrong');
     if (!firstTry.current.has(item.id)) firstTry.current.set(item.id, ok);
     onItemResult?.(cur, ok);
-    if (!ok && retryWrong && item.type !== 'match' && item.type !== 'speak') setQueue(q => [...q, cur]);
+    if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) setQueue(q => [...q, cur]);
     if (item.type === 'build' || item.type === 'type') speak(item.answer);
     else if (item.type === 'choice') speak(item.en.replace('___', item.answer));
     else if (item.type === 'dialogue') speak(item.answer);
@@ -389,12 +443,14 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         {item.type === 'type' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} />}
         {item.type === 'dictation' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} dictation />}
         {item.type === 'dialogue' && <Dialogue item={item} value={value} setValue={setValue} locked={locked} />}
+        {item.type === 'story' && cur.story && <Story story={cur.story} locked={locked} onDone={() => { setNote(null); settle(true); }} />}
+        {item.type === 'quiz' && <Quiz item={item} story={cur.story} value={value} setValue={setValue} locked={locked} />}
         {item.type === 'speak' && <Speak item={item} locked={locked} onDone={(ok, heard, skipped) => {
           setNote(skipped ? 'Sem problema! Quando puder, pratique a fala em voz alta — é o que mais destrava a conversa.' : heard ? `Ouvi: “${heard}”.` : null);
           settle(ok);
         }} />}
 
-        {guide && !locked && (
+        {guide && !locked && item.type !== 'story' && (
           <div style={{ marginTop: 24 }}>
             <button type="button" className="btn btn-out" style={{ minHeight: 44, fontSize: 15 }} onClick={() => setHelp(h => !h)} aria-expanded={help}>
               <Icon name="help" size={18} />{help ? 'Esconder explicação' : 'Não entendi, me explique'}
@@ -420,8 +476,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       <footer className={'bar' + (status === 'correct' ? ' ok' : status === 'wrong' ? ' bad' : '')}>
         <div className="bar-in" aria-live="polite">
           {status === 'answering' && <>
-            <span className="muted" style={{ fontSize: 15 }}>{item.type === 'match' ? 'Combine todos os pares para continuar.' : item.type === 'build' ? 'Toque nas palavras na ordem certa.' : item.type === 'speak' ? 'Fale a frase para continuar.' : item.type === 'type' || item.type === 'dictation' ? 'Escreva e aperte Enter ou Verificar.' : 'Escolha uma opção e toque em Verificar.'}</span>
-            {item.type !== 'match' && item.type !== 'speak' && <button className="btn btn-violet btn-3d btn-lg cta" disabled={!hasAnswer()} onClick={check}>Verificar</button>}
+            <span className="muted" style={{ fontSize: 15 }}>{item.type === 'story' ? 'Leia com calma. Depois vêm as perguntas.' : item.type === 'match' ? 'Combine todos os pares para continuar.' : item.type === 'build' ? 'Toque nas palavras na ordem certa.' : item.type === 'speak' ? 'Fale a frase para continuar.' : item.type === 'type' || item.type === 'dictation' ? 'Escreva e aperte Enter ou Verificar.' : 'Escolha uma opção e toque em Verificar.'}</span>
+            {item.type !== 'match' && item.type !== 'speak' && item.type !== 'story' && <button className="btn btn-violet btn-3d btn-lg cta" disabled={!hasAnswer()} onClick={check}>Verificar</button>}
           </>}
           {status !== 'answering' && <>
             <div className="fb">
