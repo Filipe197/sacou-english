@@ -350,3 +350,24 @@ button{font-family:inherit}
 .nov h2{font-size:24px;margin:10px 0 12px}
 .nov ul{margin:0 0 18px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.45;color:var(--text2)}
 .nov-actions{display:flex;gap:10px;flex-wrap:wrap}
+.shield-pill{display:block;font-size:11px;font-weight:700;color:#1D4ED8;margin-top:2px;white-space:nowrap}
+.shield-card{background:#EFF6FF;border-color:#BFDBFE;display:flex;flex-direction:column;gap:4px}
+.shield-card span{font-size:14px;color:#1E3A8A;line-height:1.45}
+/* conquistas */
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
+.ach{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:14px 8px 12px;border-radius:18px;border:1.5px solid var(--line);background:#F7F7FB;font:inherit;color:var(--text3);cursor:pointer;min-height:132px}
+.ach b{font-size:13px;line-height:1.25}
+.ach .ach-ic{filter:grayscale(1);opacity:.45}
+.ach.on{background:#fff;color:var(--ink);border-color:var(--violet-ring);box-shadow:0 6px 16px rgba(91,61,245,.08)}
+.ach.on .ach-ic{filter:none;opacity:1}
+.ach.open{border-color:var(--violet)}
+.ach.new{border-color:var(--fire);box-shadow:0 0 0 3px rgba(255,138,31,.18)}
+.ach-ic{width:54px;height:54px;border-radius:50%;background:linear-gradient(145deg,#FFF7E6,#FDE9C8);display:flex;align-items:center;justify-content:center;font-size:28px;flex:none}
+.ach-ic.big{width:64px;height:64px;font-size:34px}
+.ach-new{position:absolute;top:6px;right:6px;background:var(--fire);color:#fff;font-size:10px;font-weight:800;padding:2px 7px;border-radius:99px}
+.ach-track{width:80%;height:6px}
+.ach-p{font-size:11px;font-weight:600}
+.ach-detail{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:14px;padding:14px;border-radius:18px;background:var(--violet-l)}
+.ach-toast{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;border-color:#FED7AA;background:#FFF7ED}
+.ach-toast .ach-ic{width:46px;height:46px;font-size:24px}
+.ach-toast span:last-child{display:flex;flex-direction:column;gap:2px;font-size:14px}

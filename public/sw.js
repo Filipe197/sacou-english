@@ -44,6 +44,8 @@ self.addEventListener('fetch', (e) => {
 self.addEventListener('push', (e) => {
   let d = {};
   try { d = e.data ? e.data.json() : {}; } catch { d = { title: 'Sacou English', body: e.data?.text() }; }
+  // o lembrete também acende o número no ícone do app
+  try { self.navigator.setAppBadge?.(1).catch(() => {}); } catch { /* sem suporte */ }
   e.waitUntil(self.registration.showNotification(d.title || 'Sacou English', {
     body: d.body || 'Hora de praticar inglês!', icon: '/icon-192.png', badge: '/icon-192.png',
     tag: 'lembrete', renotify: true, data: { url: d.url || '/aprender' },

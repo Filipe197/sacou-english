@@ -8,6 +8,7 @@ import { Shell, Spinner, Icon, Fire, Bolt } from '../components/ui.jsx';
 import { Missions } from '../components/Missions.jsx';
 import { ShareButton, progressCard } from '../components/ShareCard.jsx';
 import Reminder from '../components/Reminder.jsx';
+import { Achievements } from '../components/Achievements.jsx';
 
 export default function Progress() {
   const prog = useProgress();
@@ -51,6 +52,8 @@ export default function Progress() {
             <div key={l} className="card">{ic}<b style={{ display: 'block', fontFamily: 'var(--head)', fontSize: 32, margin: '10px 0 2px' }}>{v}</b><span className="muted" style={{ fontSize: 14 }}>{l}</span></div>
           ))}
         </div>
+
+        <Achievements prog={prog} />
 
         <div className="two">
           <Missions />

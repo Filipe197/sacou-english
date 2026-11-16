@@ -48,12 +48,18 @@ export function lastSevenDays(week) {
   return out;
 }
 
-// A sequência só vale se o último dia ativo foi hoje ou ontem
+// A sequência só vale se o último dia ativo foi hoje ou ontem, ou se os escudos cobrem os dias perdidos
 export function liveStreak(profile) {
   if (!profile?.last_active) return 0;
-  const today = todayBR();
-  const y = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date(Date.now() - 864e5));
-  return profile.last_active === today || profile.last_active === y ? profile.streak : 0;
+  const missed = Math.round((new Date(todayBR() + 'T12:00:00') - new Date(profile.last_active + 'T12:00:00')) / 864e5) - 1;
+  if (missed <= 0) return profile.streak;
+  return missed <= (profile.streak_freezes || 0) ? profile.streak : 0;
+}
+// Dias perdidos que um escudo vai cobrir na próxima lição (0 = nenhum)
+export function shieldCovering(profile) {
+  if (!profile?.last_active || !profile.streak) return 0;
+  const missed = Math.round((new Date(todayBR() + 'T12:00:00') - new Date(profile.last_active + 'T12:00:00')) / 864e5) - 1;
+  return missed > 0 && missed <= (profile.streak_freezes || 0) ? missed : 0;
 }
 
 // Revisão espaçada: uma lição "volta" 1, 3, 7, 14 e 30 dias depois de feita.

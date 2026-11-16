@@ -18,7 +18,7 @@ npm run dev
    `supabase/004_ia.sql` (limite diário do professor de IA) e `supabase/005_turmas_missoes.sql`
    (missões, turmas, lembretes, treino com IA e lição feita sem internet) e `supabase/006_admin_alunos.sql`
    (lista de alunos com nome e e-mail no painel Admin; só administradores veem) e `supabase/007_jogos.sql`
-   (jogos e histórias: missão da semana de jogos). Por último, `supabase/008_erros.sql` (aviso automático de erros).
+   (jogos e histórias: missão da semana de jogos). Depois, `supabase/008_erros.sql` (aviso automático de erros) e `supabase/009_escudo.sql` (escudo da sequência).
 2. **Login:** Supabase → Authentication → URL Configuration → *Site URL* = endereço do site na Vercel
    e, em *Redirect URLs*, adicione `https://SEU-SITE.vercel.app/**` e `http://localhost:5173/**`.
 3. **Vercel:** importe o repositório e cadastre as variáveis `VITE_SUPABASE_URL` e
@@ -78,6 +78,15 @@ npm run dev
 - **Voz natural:** `public/audio/` tem um MP3 por frase, gerado com a Kokoro (voz neural, Apache 2.0), com voz
   feminina ou masculina conforme o personagem (`src/lib/voices.json`). Depois de criar conteúdo novo, rode
   `python scripts/gen-audio.py` (instruções no topo do arquivo). Frases sem áudio usam a voz do aparelho.
+
+## Escudo, conquistas e ícone
+
+- **Escudo da sequência** (`009_escudo.sql`): a cada 7 dias seguidos o aluno ganha um escudo (máx. 2). Se faltar
+  um dia, o escudo é usado sozinho na próxima lição e a sequência continua.
+- **Conquistas:** 23 medalhas calculadas do progresso (`src/lib/achievements.js`), em Meu progresso, com card para o story.
+- **Número no ícone** do app instalado: erros para revisar, ou 1 se ainda não estudou hoje (`AppBadge.jsx`).
+- **Modo lento palavra por palavra:** cada palavra do curso tem áudio próprio (`public/audio/w/`, gerado pelo
+  `gen-audio.py`); a tartaruga junta as palavras com pausas.
 
 ## Atualizações chegando para todo mundo
 

@@ -2,6 +2,21 @@
   "_como_usar": "A cada publicação com novidade para o aluno, adicione um item NO TOPO da lista com um id novo (ex.: data + tema). O app mostra uma vez o item mais recente para quem já usava o app. Correções pequenas não precisam de item.",
   "itens": [
     {
+      "id": "2026-11-16-escudo-conquistas",
+      "titulo": "Novidades no Sacou English",
+      "linhas": [
+        "🎙️ Podcast da Ana: um episódio curto por unidade, em Jogos e histórias.",
+        "🛡️ Escudo da sequência: a cada 7 dias seguidos você ganha um, que salva seus dias se você faltar.",
+        "🏅 Conquistas: 23 medalhas para colecionar em Meu progresso.",
+        "🐢 Modo lento novo: a tartaruga fala palavra por palavra.",
+        "🚀 Chegou o nível B2, e cada personagem tem a sua voz."
+      ],
+      "botao": {
+        "texto": "Ver minhas conquistas",
+        "para": "/progresso#conquistas"
+      }
+    },
+    {
       "id": "2026-11-16-podcast",
       "titulo": "Novidades no Sacou English",
       "linhas": [
@@ -10,7 +25,10 @@
         "🎮 Jogos e histórias: 24 episódios da Ana, detetive, missões e jogos rápidos.",
         "🚀 Chegou o nível B2."
       ],
-      "botao": { "texto": "Ouvir o podcast", "para": "/jogos" }
+      "botao": {
+        "texto": "Ouvir o podcast",
+        "para": "/jogos"
+      }
     }
   ]
 }

@@ -154,3 +154,44 @@ for f in glob.glob(os.path.join(OUT, '*.mp3')):  # áudios de frases que saíram
         os.remove(f)
 json.dump(have, open(os.path.join(OUT, 'index.json'), 'w'), separators=(',', ':'))
 print(f'pronto: {len(have)} áudios', flush=True)
+
+# ---------- palavras soltas (modo lento, "palavra por palavra") ----------
+# Mesma separação de palavras do site (src/lib/fx.js → wordsOf).
+def split_words(t):
+    out = []
+    for raw in norm(t).replace('\u2019', "'").split(' '):
+        w = re.sub(r"^[^A-Za-z0-9']+|[^A-Za-z0-9']+$", '', raw).strip("'")
+        if w:
+            out.append(w.lower())
+    return out
+
+WOUT = os.path.join(OUT, 'w')
+os.makedirs(WOUT, exist_ok=True)
+wentries = {}
+for v, t in entries.values():
+    for w in split_words(t):
+        wentries[key('w' + v, w)] = (v, w)
+wtodo = [(h, v, w) for h, (v, w) in wentries.items() if not os.path.exists(os.path.join(WOUT, h + '.mp3'))]
+print(f'{len(wentries)} palavras, {len(wtodo)} para gerar', flush=True)
+if wtodo:
+    import soundfile as sf
+    from kokoro_onnx import Kokoro
+    d = os.environ.get('KOKORO_DIR') or sys.exit('Defina KOKORO_DIR com a pasta do modelo Kokoro.')
+    k = Kokoro(os.path.join(d, 'kokoro-v1.0.onnx'), os.path.join(d, 'voices-v1.0.bin'))
+    t0 = time.time()
+    for i, (h, v, w) in enumerate(wtodo):
+        try:
+            # "I" sozinho e palavras curtas soam melhor com a primeira letra maiúscula
+            say = 'I' if w == 'i' else w
+            audio, sr = k.create(say, voice=VOICE_ID[v], speed=0.85, lang='en-us')
+            sf.write(os.path.join(WOUT, h + '.mp3'), audio, sr, format='MP3', compression_level=0.9)
+        except Exception as e:
+            print('falhou:', w, e, flush=True)
+        if i % 500 == 0:
+            print(f'palavras {i}/{len(wtodo)} ({time.time() - t0:.0f}s)', flush=True)
+whave = sorted(h for h in wentries if os.path.exists(os.path.join(WOUT, h + '.mp3')))
+for f in glob.glob(os.path.join(WOUT, '*.mp3')):
+    if os.path.basename(f)[:-4] not in wentries:
+        os.remove(f)
+json.dump(whave, open(os.path.join(OUT, 'words.json'), 'w'), separators=(',', ':'))
+print(f'pronto: {len(whave)} palavras', flush=True)
