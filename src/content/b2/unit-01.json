@@ -1,0 +1,716 @@
+{
+ "id": "b2-u1",
+ "level": "B2",
+ "order": 1,
+ "title": "Antes disso, eu já tinha…",
+ "subtitle": "Past perfect: o passado do passado.",
+ "can_do": {
+  "text": "Consigo contar uma história deixando claro o que aconteceu antes de outra coisa no passado.",
+  "source": "CEFR (Conselho da Europa) — Produção oral: narrar experiências, nível B2"
+ },
+ "core_inventory": [
+  "Grammar: past perfect simple (had + past participle)",
+  "Grammar: past perfect with when / by the time / before / after / already",
+  "Functions: narrating events in a clear sequence",
+  "Lexis: travel problems and unexpected events"
+ ],
+ "words": [
+  [
+   "realize",
+   "perceber, se dar conta"
+  ],
+  [
+   "notice",
+   "notar"
+  ],
+  [
+   "recognize",
+   "reconhecer"
+  ],
+  [
+   "earlier",
+   "mais cedo"
+  ],
+  [
+   "escape",
+   "fugir, escapar"
+  ],
+  [
+   "passport",
+   "passaporte"
+  ],
+  [
+   "flight",
+   "voo"
+  ],
+  [
+   "traffic",
+   "trânsito"
+  ],
+  [
+   "gate",
+   "portão (de embarque)"
+  ],
+  [
+   "mistake",
+   "erro"
+  ]
+ ],
+ "guide": {
+  "title": "Past perfect: had + particípio",
+  "intro": "Quando você conta uma história no passado e precisa mostrar que algo aconteceu ANTES de outra coisa, use had + particípio. É o nosso \"tinha feito\".",
+  "points": [
+   {
+    "en": "When I arrived, the train had left.",
+    "pt": "Quando cheguei, o trem já tinha saído.",
+    "note": "Primeiro o trem saiu, depois eu cheguei."
+   },
+   {
+    "en": "She had never seen snow before.",
+    "pt": "Ela nunca tinha visto neve antes.",
+    "note": "Had + never + particípio = nunca tinha…"
+   },
+   {
+    "en": "By the time we got there, the shop had closed.",
+    "pt": "Quando chegamos lá, a loja já tinha fechado.",
+    "note": "By the time = quando, até o momento em que."
+   },
+   {
+    "en": "I realized I had made a mistake.",
+    "pt": "Percebi que tinha cometido um erro.",
+    "note": "Muito comum depois de realize, notice e find out."
+   },
+   {
+    "en": "They hadn't met before.",
+    "pt": "Eles não tinham se conhecido antes.",
+    "note": "Negativa: hadn't + particípio."
+   }
+  ],
+  "tips": [
+   "Had é igual para todas as pessoas: I had, she had, they had. Na fala vira I'd, she'd, they'd.",
+   "Se a ordem já está clara (com after ou before), o passado simples também serve: After I ate, I left."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u1-l1",
+   "title": "Eu já tinha saído",
+   "items": [
+    {
+     "id": "b2u1l1-1",
+     "type": "meaning",
+     "en": "When I got to the station, the train had left.",
+     "options": [
+      "Quando cheguei na estação, o trem já tinha saído.",
+      "Quando cheguei na estação, o trem estava saindo.",
+      "Cheguei na estação antes de o trem sair."
+     ],
+     "answer": "Quando cheguei na estação, o trem já tinha saído.",
+     "why": "Had left = tinha saído. Aconteceu ANTES de eu chegar."
+    },
+    {
+     "id": "b2u1l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "When we arrived, the film ___ already started.",
+     "options": [
+      "had",
+      "has",
+      "was"
+     ],
+     "answer": "had",
+     "why": "Duas ações no passado: a que veio antes usa had + particípio.",
+     "wrong": {
+      "has": "Has started é present perfect (liga com o agora). Aqui a história está toda no passado, então use had."
+     }
+    },
+    {
+     "id": "b2u1l1-3",
+     "type": "choice",
+     "en": "She was tired because she ___ all night.",
+     "options": [
+      "had worked",
+      "has worked",
+      "works"
+     ],
+     "answer": "had worked",
+     "why": "Ela estava cansada (passado) por algo que veio antes: had worked."
+    },
+    {
+     "id": "b2u1l1-4",
+     "type": "build",
+     "pt": "Eu nunca tinha visto o mar antes.",
+     "answer": "I had never seen the sea before",
+     "extra": [
+      "have",
+      "saw"
+     ],
+     "display": "I had never seen the sea before.",
+     "why": "Had + never + particípio (seen) = nunca tinha visto."
+    },
+    {
+     "id": "b2u1l1-5",
+     "type": "choice",
+     "en": "I couldn't pay because I ___ my wallet at home.",
+     "options": [
+      "had left",
+      "have left",
+      "leave"
+     ],
+     "answer": "had left",
+     "why": "Esquecer a carteira veio antes de não conseguir pagar: had left."
+    },
+    {
+     "id": "b2u1l1-6",
+     "type": "listen",
+     "en": "By the time the police arrived, the thief had escaped.",
+     "options": [
+      "Quando a polícia chegou, o ladrão já tinha fugido.",
+      "A polícia chegou antes de o ladrão fugir.",
+      "O ladrão chamou a polícia."
+     ],
+     "answer": "Quando a polícia chegou, o ladrão já tinha fugido.",
+     "why": "By the time = quando. Had escaped = já tinha fugido."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l2",
+   "title": "By the time, before e after",
+   "items": [
+    {
+     "id": "b2u1l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "By the time I woke up, my parents ___ for work.",
+     "options": [
+      "had gone",
+      "have gone",
+      "go"
+     ],
+     "answer": "had gone",
+     "why": "By the time + passado simples; a ação anterior vai para o past perfect."
+    },
+    {
+     "id": "b2u1l2-2",
+     "type": "meaning",
+     "en": "I realized I had made a mistake.",
+     "options": [
+      "Percebi que tinha cometido um erro.",
+      "Percebo que estou cometendo um erro.",
+      "Eu quase cometi um erro."
+     ],
+     "answer": "Percebi que tinha cometido um erro.",
+     "why": "Realized (percebi) + had made (tinha cometido)."
+    },
+    {
+     "id": "b2u1l2-3",
+     "type": "choice",
+     "en": "After she ___ the email, she turned off the computer.",
+     "options": [
+      "had sent",
+      "has sent",
+      "sends"
+     ],
+     "answer": "had sent",
+     "why": "After + past perfect mostra a ordem: primeiro enviou, depois desligou."
+    },
+    {
+     "id": "b2u1l2-4",
+     "type": "build",
+     "pt": "Quando eu liguei, ela já tinha ido embora.",
+     "answer": "When I called she had already left",
+     "extra": [
+      "has",
+      "was"
+     ],
+     "display": "When I called, she had already left.",
+     "why": "Ligar veio depois; ir embora veio antes: had already left."
+    },
+    {
+     "id": "b2u1l2-5",
+     "type": "listen",
+     "en": "We had never met before that day.",
+     "options": [
+      "Nunca tínhamos nos encontrado antes daquele dia.",
+      "Nós nos encontramos de novo naquele dia.",
+      "Nunca mais nos encontramos depois daquele dia."
+     ],
+     "answer": "Nunca tínhamos nos encontrado antes daquele dia.",
+     "why": "Had never met = nunca tínhamos nos encontrado."
+    },
+    {
+     "id": "b2u1l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "realize",
+       "perceber"
+      ],
+      [
+       "notice",
+       "notar"
+      ],
+      [
+       "by the time",
+       "até o momento em que"
+      ],
+      [
+       "earlier",
+       "mais cedo"
+      ],
+      [
+       "luckily",
+       "por sorte"
+      ]
+     ],
+     "why": "Palavras para contar o que aconteceu e em que ordem."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l3",
+   "title": "Contando o que aconteceu",
+   "items": [
+    {
+     "id": "b2u1l3-1",
+     "type": "meaning",
+     "en": "I didn't notice that someone had taken my bag.",
+     "options": [
+      "Não notei que alguém tinha levado minha bolsa.",
+      "Notei que alguém estava com minha bolsa.",
+      "Ninguém levou minha bolsa."
+     ],
+     "answer": "Não notei que alguém tinha levado minha bolsa.",
+     "why": "Notice = notar. Had taken = tinha levado."
+    },
+    {
+     "id": "b2u1l3-2",
+     "type": "choice",
+     "en": "___ she got to the airport, the plane had already left.",
+     "options": [
+      "By the time",
+      "Since",
+      "Until"
+     ],
+     "answer": "By the time",
+     "why": "By the time = quando (a outra ação já tinha acontecido)."
+    },
+    {
+     "id": "b2u1l3-3",
+     "type": "choice",
+     "en": "He was nervous because he ___ flown before.",
+     "options": [
+      "had never",
+      "has never",
+      "never had"
+     ],
+     "answer": "had never",
+     "why": "A ordem é had + never + particípio: had never flown."
+    },
+    {
+     "id": "b2u1l3-4",
+     "type": "build",
+     "pt": "Ela percebeu que tinha esquecido a senha.",
+     "answer": "She realized she had forgotten the password",
+     "extra": [
+      "has",
+      "forgot"
+     ],
+     "display": "She realized she had forgotten the password.",
+     "why": "Realized + had forgotten. Forget → forgot → forgotten."
+    },
+    {
+     "id": "b2u1l3-5",
+     "type": "listen",
+     "en": "Luckily, I had saved a copy of the file.",
+     "options": [
+      "Por sorte, eu tinha salvado uma cópia do arquivo.",
+      "Infelizmente, perdi o arquivo.",
+      "Vou salvar uma cópia do arquivo."
+     ],
+     "answer": "Por sorte, eu tinha salvado uma cópia do arquivo.",
+     "why": "Luckily = por sorte. Had saved = tinha salvado."
+    },
+    {
+     "id": "b2u1l3-6",
+     "type": "choice",
+     "en": "I recognized him because I ___ him on TV.",
+     "options": [
+      "had seen",
+      "have seen",
+      "see"
+     ],
+     "answer": "had seen",
+     "why": "Reconheci (passado) porque tinha visto antes: had seen."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u1l4-1",
+     "type": "type",
+     "pt": "O trem já tinha saído.",
+     "answer": "The train had already left",
+     "accept": [
+      "The train had left already"
+     ],
+     "why": "Had + already + particípio."
+    },
+    {
+     "id": "b2u1l4-2",
+     "type": "type",
+     "pt": "Eu nunca tinha comido comida japonesa antes.",
+     "answer": "I had never eaten Japanese food before",
+     "accept": [
+      "I'd never eaten Japanese food before"
+     ],
+     "why": "Had never + particípio. Eat → ate → eaten."
+    },
+    {
+     "id": "b2u1l4-3",
+     "type": "dictation",
+     "en": "By the time we arrived, the party had finished.",
+     "why": "By the time + passado; had finished = já tinha acabado."
+    },
+    {
+     "id": "b2u1l4-4",
+     "type": "type",
+     "pt": "Quando cheguei, ela já tinha ido embora.",
+     "answer": "When I arrived she had already left",
+     "accept": [
+      "When I arrived, she had already left",
+      "When I got there, she had already left",
+      "When I got there she had already left",
+      "When I arrived, she'd already left",
+      "When I arrived she'd already left"
+     ],
+     "why": "A ação mais antiga (ela ir embora) vai para o past perfect."
+    },
+    {
+     "id": "b2u1l4-5",
+     "type": "dictation",
+     "en": "I realized I had made a mistake.",
+     "why": "Realize = perceber, se dar conta."
+    },
+    {
+     "id": "b2u1l4-6",
+     "type": "type",
+     "pt": "Ele estava cansado porque tinha trabalhado muito.",
+     "answer": "He was tired because he had worked a lot",
+     "accept": [
+      "He was tired because he had worked hard",
+      "He was tired because he'd worked a lot",
+      "He was tired because he'd worked hard"
+     ],
+     "why": "O trabalho veio antes do cansaço: had worked."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u1l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why were you late for the meeting?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "My bus had broken down, so I had to walk.",
+      "My bus has broken down, so I had to walk.",
+      "My bus breaks down, so I had to walk."
+     ],
+     "answer": "My bus had broken down, so I had to walk.",
+     "why": "O ônibus quebrou ANTES do atraso: had broken down."
+    },
+    {
+     "id": "b2u1l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you enjoy the concert?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Not really. I had expected something better.",
+      "Not really. I have expected something better.",
+      "Not really. I had expect something better."
+     ],
+     "answer": "Not really. I had expected something better.",
+     "why": "Had expected = tinha esperado. A expectativa veio antes do show."
+    },
+    {
+     "id": "b2u1l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you see Laura at the party?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, she had already gone home when I got there.",
+      "No, she has already gone home when I got there.",
+      "No, she already go home when I got there."
+     ],
+     "answer": "No, she had already gone home when I got there.",
+     "why": "Ela foi embora antes de eu chegar: had already gone."
+    },
+    {
+     "id": "b2u1l5-4",
+     "type": "speak",
+     "en": "I had never seen the sea before.",
+     "pt": "Eu nunca tinha visto o mar antes.",
+     "why": "Na fala, \"I had\" vira \"I'd\": \"aid NÉ-ver sín\"."
+    },
+    {
+     "id": "b2u1l5-5",
+     "type": "speak",
+     "en": "By the time I arrived, it had finished.",
+     "pt": "Quando cheguei, já tinha acabado.",
+     "why": "Fale \"by the time\" junto, como uma palavra só: \"bai-de-TAIM\"."
+    },
+    {
+     "id": "b2u1l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How was your first day at the new job?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Strange! I had never worked in such a big office.",
+      "Strange! I have never work in such a big office.",
+      "Strange! I never had worked in such a big office."
+     ],
+     "answer": "Strange! I had never worked in such a big office.",
+     "why": "Had never worked = nunca tinha trabalhado (antes daquele dia)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u1l6-1",
+     "type": "choice",
+     "en": "When I opened the fridge, someone ___ all the cake.",
+     "options": [
+      "had eaten",
+      "has eaten",
+      "eats"
+     ],
+     "answer": "had eaten",
+     "why": "Alguém comeu antes de eu abrir a geladeira: had eaten."
+    },
+    {
+     "id": "b2u1l6-2",
+     "type": "type",
+     "pt": "Percebi que tinha perdido as chaves.",
+     "answer": "I realized I had lost my keys",
+     "accept": [
+      "I realized that I had lost my keys",
+      "I realized I'd lost my keys",
+      "I realized I had lost the keys"
+     ],
+     "why": "Realized + had lost. Lose → lost → lost."
+    },
+    {
+     "id": "b2u1l6-3",
+     "type": "meaning",
+     "en": "She had worked there for ten years before she left.",
+     "options": [
+      "Ela tinha trabalhado lá por dez anos antes de sair.",
+      "Ela trabalha lá há dez anos.",
+      "Ela vai sair depois de dez anos."
+     ],
+     "answer": "Ela tinha trabalhado lá por dez anos antes de sair.",
+     "why": "Had worked = tinha trabalhado (antes de sair)."
+    },
+    {
+     "id": "b2u1l6-4",
+     "type": "choice",
+     "en": "They ___ each other before the trip.",
+     "options": [
+      "hadn't met",
+      "haven't met",
+      "didn't met"
+     ],
+     "answer": "hadn't met",
+     "why": "Negativa do past perfect: hadn't + particípio.",
+     "wrong": {
+      "didn't met": "Depois de didn't o verbo fica na forma base (meet). Mas aqui o certo é hadn't met."
+     }
+    },
+    {
+     "id": "b2u1l6-5",
+     "type": "dictation",
+     "en": "Luckily, I had saved a copy.",
+     "why": "Luckily = por sorte; had saved = tinha salvado."
+    },
+    {
+     "id": "b2u1l6-6",
+     "type": "speak",
+     "en": "I realized I had forgotten my phone.",
+     "pt": "Percebi que tinha esquecido o celular.",
+     "why": "\"Realized\" soa \"RÍ-a-laizd\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l7",
+   "title": "História: O voo perdido",
+   "story": {
+    "title": "O voo perdido",
+    "lines": [
+     {
+      "who": "Pedro",
+      "en": "Last year I almost missed my flight to Lisbon.",
+      "pt": "Ano passado eu quase perdi meu voo para Lisboa."
+     },
+     {
+      "who": "Ana",
+      "en": "Really? What happened?",
+      "pt": "Sério? O que aconteceu?"
+     },
+     {
+      "who": "Pedro",
+      "en": "When I got to the airport, I realized I ___ my passport at home.",
+      "pt": "Quando cheguei no aeroporto, percebi que tinha deixado o passaporte em casa.",
+      "gap": {
+       "answer": "had left",
+       "options": [
+        "had left",
+        "have left",
+        "leave"
+       ]
+      }
+     },
+     {
+      "ask": "O que o Pedro tinha esquecido?",
+      "options": [
+       "O passaporte",
+       "A mala",
+       "O celular"
+      ],
+      "answer": "O passaporte",
+      "why": "\"I had left my passport at home\"."
+     },
+     {
+      "who": "Pedro",
+      "en": "So I took a taxi back home. Luckily, the traffic had improved.",
+      "pt": "Então peguei um táxi de volta para casa. Por sorte, o trânsito tinha melhorado."
+     },
+     {
+      "who": "Ana",
+      "en": "And did you get back in time?",
+      "pt": "E você voltou a tempo?"
+     },
+     {
+      "who": "Pedro",
+      "en": "Almost. By the time I arrived, they ___ closed the gate.",
+      "pt": "Quase. Quando eu cheguei, eles já tinham fechado o portão.",
+      "gap": {
+       "answer": "had already",
+       "options": [
+        "had already",
+        "have already",
+        "already have"
+       ]
+      }
+     },
+     {
+      "who": "Pedro",
+      "en": "But a woman at the desk noticed that I was very worried.",
+      "pt": "Mas uma mulher no balcão notou que eu estava muito preocupado."
+     },
+     {
+      "who": "Pedro",
+      "en": "She called the gate, and they let me get on the plane!",
+      "pt": "Ela ligou para o portão, e eles me deixaram embarcar!"
+     },
+     {
+      "ask": "Como o Pedro conseguiu embarcar?",
+      "options": [
+       "Uma funcionária ligou para o portão",
+       "Ele comprou outra passagem",
+       "O voo estava atrasado"
+      ],
+      "answer": "Uma funcionária ligou para o portão",
+      "why": "\"She called the gate, and they let me get on the plane!\""
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u1l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u1l7-2",
+     "type": "quiz",
+     "q": "Para onde o Pedro ia viajar?",
+     "options": [
+      "Lisboa",
+      "Londres",
+      "Paris"
+     ],
+     "answer": "Lisboa",
+     "why": "\"my flight to Lisbon\"."
+    },
+    {
+     "id": "b2u1l7-3",
+     "type": "quiz",
+     "q": "Como ele voltou para casa?",
+     "options": [
+      "De táxi",
+      "De ônibus",
+      "A pé"
+     ],
+     "answer": "De táxi",
+     "why": "\"I took a taxi back home\"."
+    },
+    {
+     "id": "b2u1l7-4",
+     "type": "quiz",
+     "q": "O que tinha acontecido com o trânsito?",
+     "options": [
+      "Tinha melhorado",
+      "Estava parado",
+      "Tinha piorado"
+     ],
+     "answer": "Tinha melhorado",
+     "why": "\"the traffic had improved\"."
+    }
+   ]
+  }
+ ]
+}

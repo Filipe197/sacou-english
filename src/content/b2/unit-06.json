@@ -1,0 +1,716 @@
+{
+ "id": "b2-u6",
+ "level": "B2",
+ "order": 6,
+ "title": "Gosto de fazer, decidi fazer",
+ "subtitle": "Gerúndio ou infinitivo? E os verbos que mudam de sentido.",
+ "can_do": {
+  "text": "Consigo falar de gostos, planos e hábitos usando a forma certa do verbo depois de outro verbo.",
+  "source": "CEFR (Conselho da Europa) — Correção gramatical, nível B2"
+ },
+ "core_inventory": [
+  "Grammar: verb + -ing (enjoy, avoid, mind, finish, keep)",
+  "Grammar: verb + to-infinitive (decide, hope, manage, refuse, afford, pretend)",
+  "Grammar: verbs that change meaning (stop, remember, forget, try)",
+  "Grammar: be used to / get used to + -ing"
+ ],
+ "words": [
+  [
+   "avoid",
+   "evitar"
+  ],
+  [
+   "mind",
+   "se importar"
+  ],
+  [
+   "manage",
+   "conseguir"
+  ],
+  [
+   "refuse",
+   "recusar-se"
+  ],
+  [
+   "afford",
+   "ter dinheiro para"
+  ],
+  [
+   "pretend",
+   "fingir"
+  ],
+  [
+   "consider",
+   "considerar"
+  ],
+  [
+   "lock",
+   "trancar"
+  ],
+  [
+   "bill",
+   "conta (a pagar)"
+  ],
+  [
+   "habit",
+   "hábito"
+  ]
+ ],
+ "guide": {
+  "title": "-ing ou to + verbo?",
+  "intro": "Depois de alguns verbos vem -ing (enjoy doing); depois de outros, to + verbo (decide to do). Alguns aceitam os dois, mas o sentido muda.",
+  "points": [
+   {
+    "en": "I enjoy cooking. She avoided answering.",
+    "pt": "Gosto de cozinhar. Ela evitou responder.",
+    "note": "Enjoy, avoid, mind, finish, keep + -ing."
+   },
+   {
+    "en": "We decided to move. I can't afford to buy it.",
+    "pt": "Decidimos nos mudar. Não tenho dinheiro para comprar.",
+    "note": "Decide, hope, manage, refuse, afford + to."
+   },
+   {
+    "en": "He stopped smoking. He stopped to smoke.",
+    "pt": "Ele parou de fumar. Ele parou para fumar.",
+    "note": "Stop + -ing = parar de. Stop + to = parar para."
+   },
+   {
+    "en": "Remember to call me! I remember meeting her.",
+    "pt": "Lembre de me ligar! Lembro de ter conhecido ela.",
+    "note": "Remember to = não esquecer de fazer. Remember + -ing = lembrar de algo que já aconteceu."
+   },
+   {
+    "en": "I'm used to waking up early.",
+    "pt": "Estou acostumado a acordar cedo.",
+    "note": "Be used to + -ing = estar acostumado. Get used to = se acostumar."
+   }
+  ],
+  "tips": [
+   "Depois de preposição (about, of, at, for, without…) o verbo vai sempre com -ing: I'm good at cooking. Thanks for coming.",
+   "Não confunda: I used to work (eu trabalhava antigamente) e I'm used to working (estou acostumado a trabalhar)."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u6-l1",
+   "title": "Enjoy doing, decide to do",
+   "items": [
+    {
+     "id": "b2u6l1-1",
+     "type": "meaning",
+     "en": "I don't mind waiting.",
+     "options": [
+      "Não me importo de esperar.",
+      "Não gosto de esperar.",
+      "Não posso esperar."
+     ],
+     "answer": "Não me importo de esperar.",
+     "why": "Mind + -ing = se importar de."
+    },
+    {
+     "id": "b2u6l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She enjoys ___ in the morning.",
+     "options": [
+      "running",
+      "to run",
+      "run"
+     ],
+     "answer": "running",
+     "why": "Depois de enjoy, o verbo vai com -ing.",
+     "wrong": {
+      "to run": "Depois de enjoy vem -ing, nunca to: enjoys running."
+     }
+    },
+    {
+     "id": "b2u6l1-3",
+     "type": "choice",
+     "en": "We decided ___ a new car.",
+     "options": [
+      "to buy",
+      "buying",
+      "buy"
+     ],
+     "answer": "to buy",
+     "why": "Decide + to + verbo."
+    },
+    {
+     "id": "b2u6l1-4",
+     "type": "build",
+     "pt": "Ele evitou responder a pergunta.",
+     "answer": "He avoided answering the question",
+     "extra": [
+      "to",
+      "answer"
+     ],
+     "display": "He avoided answering the question.",
+     "why": "Depois de avoid, o verbo vai com -ing."
+    },
+    {
+     "id": "b2u6l1-5",
+     "type": "choice",
+     "en": "I can't afford ___ on holiday this year.",
+     "options": [
+      "to go",
+      "going",
+      "go"
+     ],
+     "answer": "to go",
+     "why": "Afford + to = ter dinheiro para."
+    },
+    {
+     "id": "b2u6l1-6",
+     "type": "listen",
+     "en": "They managed to finish the project on time.",
+     "options": [
+      "Eles conseguiram terminar o projeto a tempo.",
+      "Eles cuidaram do projeto todo.",
+      "Eles não terminaram o projeto."
+     ],
+     "answer": "Eles conseguiram terminar o projeto a tempo.",
+     "why": "Manage to = conseguir (com esforço)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l2",
+   "title": "O sentido muda",
+   "items": [
+    {
+     "id": "b2u6l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He stopped ___ ten years ago. Now he's much healthier.",
+     "options": [
+      "smoking",
+      "to smoke",
+      "smoke"
+     ],
+     "answer": "smoking",
+     "why": "Stop + -ing = parar de fazer."
+    },
+    {
+     "id": "b2u6l2-2",
+     "type": "meaning",
+     "en": "We stopped to buy some water.",
+     "options": [
+      "Paramos para comprar água.",
+      "Paramos de comprar água.",
+      "Esquecemos de comprar água."
+     ],
+     "answer": "Paramos para comprar água.",
+     "why": "Stop + to = parar PARA fazer outra coisa."
+    },
+    {
+     "id": "b2u6l2-3",
+     "type": "choice",
+     "en": "Remember ___ the door when you leave!",
+     "options": [
+      "to lock",
+      "locking",
+      "lock"
+     ],
+     "answer": "to lock",
+     "why": "Remember to = não esquecer de fazer (algo que ainda vai acontecer)."
+    },
+    {
+     "id": "b2u6l2-4",
+     "type": "build",
+     "pt": "Eu lembro de ter conhecido ela na festa.",
+     "answer": "I remember meeting her at the party",
+     "extra": [
+      "to",
+      "met"
+     ],
+     "display": "I remember meeting her at the party.",
+     "why": "Remember + -ing = lembrar de algo que já aconteceu."
+    },
+    {
+     "id": "b2u6l2-5",
+     "type": "listen",
+     "en": "I'll never forget seeing the sea for the first time.",
+     "options": [
+      "Nunca vou esquecer a primeira vez que vi o mar.",
+      "Esqueci de ir ver o mar.",
+      "Vou ver o mar pela primeira vez."
+     ],
+     "answer": "Nunca vou esquecer a primeira vez que vi o mar.",
+     "why": "Forget + -ing = esquecer algo que você já viveu."
+    },
+    {
+     "id": "b2u6l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "avoid",
+       "evitar"
+      ],
+      [
+       "afford",
+       "ter dinheiro para"
+      ],
+      [
+       "refuse",
+       "recusar-se"
+      ],
+      [
+       "pretend",
+       "fingir"
+      ],
+      [
+       "manage",
+       "conseguir"
+      ]
+     ],
+     "why": "Verbos que pedem -ing ou to."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l3",
+   "title": "Acostumado",
+   "items": [
+    {
+     "id": "b2u6l3-1",
+     "type": "meaning",
+     "en": "I'm used to working at night.",
+     "options": [
+      "Estou acostumado a trabalhar à noite.",
+      "Eu trabalhava à noite antigamente.",
+      "Uso a noite para trabalhar."
+     ],
+     "answer": "Estou acostumado a trabalhar à noite.",
+     "why": "Be used to + -ing = estar acostumado a."
+    },
+    {
+     "id": "b2u6l3-2",
+     "type": "choice",
+     "en": "It took me a year to get used to ___ on the left.",
+     "options": [
+      "driving",
+      "drive",
+      "drove"
+     ],
+     "answer": "driving",
+     "why": "Get used to + -ing = se acostumar a. Aqui o to é preposição."
+    },
+    {
+     "id": "b2u6l3-3",
+     "type": "choice",
+     "en": "When I was a kid, I ___ play football every day.",
+     "options": [
+      "used to",
+      "was used to",
+      "use to"
+     ],
+     "answer": "used to",
+     "why": "Used to + verbo = costumava (hábito no passado)."
+    },
+    {
+     "id": "b2u6l3-4",
+     "type": "build",
+     "pt": "Ela se recusou a pagar a conta.",
+     "answer": "She refused to pay the bill",
+     "extra": [
+      "paying",
+      "for"
+     ],
+     "display": "She refused to pay the bill.",
+     "why": "Refuse + to + verbo."
+    },
+    {
+     "id": "b2u6l3-5",
+     "type": "listen",
+     "en": "Thanks for helping me with the move.",
+     "options": [
+      "Obrigado por me ajudar com a mudança.",
+      "Obrigado, vou te ajudar com a mudança.",
+      "Você pode me ajudar com a mudança?"
+     ],
+     "answer": "Obrigado por me ajudar com a mudança.",
+     "why": "Depois de preposição (for), o verbo vai com -ing."
+    },
+    {
+     "id": "b2u6l3-6",
+     "type": "choice",
+     "en": "He pretended ___ asleep when his mother came in.",
+     "options": [
+      "to be",
+      "being",
+      "be"
+     ],
+     "answer": "to be",
+     "why": "Pretend + to = fingir."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u6l4-1",
+     "type": "type",
+     "pt": "Gosto de cozinhar.",
+     "answer": "I enjoy cooking",
+     "accept": [
+      "I like cooking",
+      "I like to cook",
+      "I love cooking",
+      "I love to cook"
+     ],
+     "why": "Enjoy + -ing (like aceita os dois)."
+    },
+    {
+     "id": "b2u6l4-2",
+     "type": "type",
+     "pt": "Decidimos nos mudar.",
+     "answer": "We decided to move",
+     "accept": [
+      "We decided to move house"
+     ],
+     "why": "Depois de decide, use to + verbo."
+    },
+    {
+     "id": "b2u6l4-3",
+     "type": "dictation",
+     "en": "He stopped smoking ten years ago.",
+     "why": "Stop + -ing = parar de."
+    },
+    {
+     "id": "b2u6l4-4",
+     "type": "type",
+     "pt": "Lembre de me ligar.",
+     "answer": "Remember to call me",
+     "accept": [
+      "Don't forget to call me"
+     ],
+     "why": "Remember to = não esqueça de."
+    },
+    {
+     "id": "b2u6l4-5",
+     "type": "dictation",
+     "en": "I'm used to waking up early.",
+     "why": "Be used to + -ing."
+    },
+    {
+     "id": "b2u6l4-6",
+     "type": "type",
+     "pt": "Você se importa de esperar?",
+     "answer": "Do you mind waiting",
+     "accept": [
+      "Would you mind waiting"
+     ],
+     "why": "Depois de mind, o verbo vai com -ing."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u6l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you want to go out tonight?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'd love to, but I can't afford to spend money this month.",
+      "I'd love to, but I can't afford spending money this month.",
+      "I'd love, but I can't afford to spend money this month."
+     ],
+     "answer": "I'd love to, but I can't afford to spend money this month.",
+     "why": "Afford + to. E \"I'd love to\" precisa do to no fim."
+    },
+    {
+     "id": "b2u6l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Would you mind closing the window?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Not at all. It's a bit cold.",
+      "Yes, of course! It's a bit cold.",
+      "No, I mind. It's a bit cold."
+     ],
+     "answer": "Not at all. It's a bit cold.",
+     "why": "\"Would you mind…?\" pergunta se você se incomoda. Para aceitar, diga \"Not at all\" (não me incomodo nada)."
+    },
+    {
+     "id": "b2u6l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How is life in London?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Great! But I'm still getting used to driving on the left.",
+      "Great! But I'm still getting used to drive on the left.",
+      "Great! But I still used to driving on the left."
+     ],
+     "answer": "Great! But I'm still getting used to driving on the left.",
+     "why": "Get used to + -ing."
+    },
+    {
+     "id": "b2u6l5-4",
+     "type": "speak",
+     "en": "I don't mind waiting.",
+     "pt": "Não me importo de esperar.",
+     "why": "\"Mind\" soa \"máind\"."
+    },
+    {
+     "id": "b2u6l5-5",
+     "type": "speak",
+     "en": "Remember to lock the door.",
+     "pt": "Lembre de trancar a porta.",
+     "why": "\"Lock\" tem o o aberto: \"lók\"."
+    },
+    {
+     "id": "b2u6l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why did you leave the party so early?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I wanted to avoid getting home too late.",
+      "I wanted to avoid to get home too late.",
+      "I wanted avoid getting home too late."
+     ],
+     "answer": "I wanted to avoid getting home too late.",
+     "why": "Depois de avoid, o verbo vai com -ing."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u6l6-1",
+     "type": "choice",
+     "en": "Have you finished ___ that book?",
+     "options": [
+      "reading",
+      "to read",
+      "read"
+     ],
+     "answer": "reading",
+     "why": "Depois de finish, o verbo vai com -ing."
+    },
+    {
+     "id": "b2u6l6-2",
+     "type": "type",
+     "pt": "Ela fingiu não me ver.",
+     "answer": "She pretended not to see me",
+     "accept": [
+      "She pretended that she didn't see me"
+     ],
+     "why": "Pretend + not to + verbo."
+    },
+    {
+     "id": "b2u6l6-3",
+     "type": "meaning",
+     "en": "I tried calling her, but she didn't answer.",
+     "options": [
+      "Tentei ligar para ela, mas ela não atendeu.",
+      "Não tentei ligar para ela.",
+      "Ela tentou me ligar."
+     ],
+     "answer": "Tentei ligar para ela, mas ela não atendeu.",
+     "why": "Try + -ing = tentar uma solução para ver se dá certo."
+    },
+    {
+     "id": "b2u6l6-4",
+     "type": "choice",
+     "en": "Do you remember ___ your keys on the table?",
+     "options": [
+      "leaving",
+      "to leave",
+      "leave"
+     ],
+     "answer": "leaving",
+     "why": "Lembrar de algo que já aconteceu: remember + -ing."
+    },
+    {
+     "id": "b2u6l6-5",
+     "type": "dictation",
+     "en": "She refused to pay the bill.",
+     "why": "Depois de refuse, use to + verbo."
+    },
+    {
+     "id": "b2u6l6-6",
+     "type": "speak",
+     "en": "I'm used to waking up early.",
+     "pt": "Estou acostumado a acordar cedo.",
+     "why": "\"Used to\" soa \"IÚS-tu\", com s, não z."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l7",
+   "title": "História: Morando fora",
+   "story": {
+    "title": "Morando fora",
+    "lines": [
+     {
+      "who": "Ana",
+      "en": "So, Lucas, how is life in Canada?",
+      "pt": "E aí, Lucas, como está a vida no Canadá?"
+     },
+     {
+      "who": "Lucas",
+      "en": "I love it! But I'm still getting used to ___ in the cold.",
+      "pt": "Estou amando! Mas ainda estou me acostumando a viver no frio.",
+      "gap": {
+       "answer": "living",
+       "options": [
+        "living",
+        "live",
+        "lived"
+       ]
+      }
+     },
+     {
+      "who": "Ana",
+      "en": "Do you miss Brazil?",
+      "pt": "Você sente falta do Brasil?"
+     },
+     {
+      "who": "Lucas",
+      "en": "Of course. I miss ___ to the beach on Sundays.",
+      "pt": "Claro. Sinto falta de ir à praia aos domingos.",
+      "gap": {
+       "answer": "going",
+       "options": [
+        "going",
+        "to go",
+        "go"
+       ]
+      }
+     },
+     {
+      "ask": "Do que o Lucas sente falta?",
+      "options": [
+       "De ir à praia",
+       "Do trabalho antigo",
+       "Da escola"
+      ],
+      "answer": "De ir à praia",
+      "why": "\"I miss going to the beach on Sundays\"."
+     },
+     {
+      "who": "Ana",
+      "en": "And the job? Did you manage to find something?",
+      "pt": "E o emprego? Conseguiu achar alguma coisa?"
+     },
+     {
+      "who": "Lucas",
+      "en": "Yes! I decided ___ for a small company, and I started last week.",
+      "pt": "Sim! Decidi trabalhar para uma empresa pequena e comecei semana passada.",
+      "gap": {
+       "answer": "to work",
+       "options": [
+        "to work",
+        "working",
+        "work"
+       ]
+      }
+     },
+     {
+      "who": "Ana",
+      "en": "That's great! Remember to call Mom on Sunday. It's her birthday.",
+      "pt": "Que ótimo! Lembre de ligar para a mãe no domingo. É aniversário dela."
+     },
+     {
+      "who": "Lucas",
+      "en": "Don't worry, I won't forget. I've already bought her a present.",
+      "pt": "Fica tranquila, não vou esquecer. Já comprei um presente para ela."
+     },
+     {
+      "ask": "O que a Ana pede para o Lucas lembrar?",
+      "options": [
+       "Ligar para a mãe",
+       "Comprar um casaco",
+       "Visitar o Brasil"
+      ],
+      "answer": "Ligar para a mãe",
+      "why": "\"Remember to call Mom on Sunday\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u6l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u6l7-2",
+     "type": "quiz",
+     "q": "Onde o Lucas está morando?",
+     "options": [
+      "No Canadá",
+      "Na Inglaterra",
+      "Em Portugal"
+     ],
+     "answer": "No Canadá",
+     "why": "\"how is life in Canada?\""
+    },
+    {
+     "id": "b2u6l7-3",
+     "type": "quiz",
+     "q": "Quando ele começou no novo emprego?",
+     "options": [
+      "Semana passada",
+      "Ontem",
+      "Mês passado"
+     ],
+     "answer": "Semana passada",
+     "why": "\"I started last week\"."
+    },
+    {
+     "id": "b2u6l7-4",
+     "type": "quiz",
+     "q": "Por que ele precisa ligar para a mãe?",
+     "options": [
+      "É aniversário dela",
+      "Ela está doente",
+      "Ela vai visitá-lo"
+     ],
+     "answer": "É aniversário dela",
+     "why": "\"It's her birthday\"."
+    }
+   ]
+  }
+ ]
+}

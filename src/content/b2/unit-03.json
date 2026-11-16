@@ -1,0 +1,717 @@
+{
+ "id": "b2-u3",
+ "level": "B2",
+ "order": 3,
+ "title": "Ela disse que…",
+ "subtitle": "Reported speech: contando o que os outros disseram.",
+ "can_do": {
+  "text": "Consigo contar o que outras pessoas disseram, perguntaram ou pediram.",
+  "source": "CEFR (Conselho da Europa) — Mediação: repassar informações específicas, nível B2"
+ },
+ "core_inventory": [
+  "Grammar: reported statements (say / tell + that, tense backshift)",
+  "Grammar: reported questions (asked if / whether / where)",
+  "Grammar: reported requests and orders (ask / tell someone to do)",
+  "Functions: passing on messages"
+ ],
+ "words": [
+  [
+   "explain",
+   "explicar"
+  ],
+  [
+   "promise",
+   "prometer"
+  ],
+  [
+   "mention",
+   "mencionar"
+  ],
+  [
+   "reply",
+   "responder"
+  ],
+  [
+   "complain",
+   "reclamar"
+  ],
+  [
+   "whether",
+   "se (em perguntas indiretas)"
+  ],
+  [
+   "remind",
+   "lembrar (alguém)"
+  ],
+  [
+   "admit",
+   "admitir"
+  ],
+  [
+   "suggest",
+   "sugerir"
+  ],
+  [
+   "report",
+   "relatório"
+  ]
+ ],
+ "guide": {
+  "title": "Reported speech: said, told e asked",
+  "intro": "Para contar o que alguém disse, use said (that) ou told + pessoa. Normalmente o verbo dá um passo para trás no tempo: is vira was, will vira would, did vira had done.",
+  "points": [
+   {
+    "en": "\"I am tired.\" → She said she was tired.",
+    "pt": "\"Estou cansada.\" → Ela disse que estava cansada.",
+    "note": "Presente vira passado."
+   },
+   {
+    "en": "He told me he would call.",
+    "pt": "Ele me disse que ia ligar.",
+    "note": "Tell precisa de alguém: told me, told her."
+   },
+   {
+    "en": "She asked me where I lived.",
+    "pt": "Ela me perguntou onde eu morava.",
+    "note": "Pergunta relatada: sem do/did, na ordem normal."
+   },
+   {
+    "en": "He asked if I was OK.",
+    "pt": "Ele perguntou se eu estava bem.",
+    "note": "Perguntas de sim ou não: asked if ou whether."
+   },
+   {
+    "en": "My boss told me to wait.",
+    "pt": "Meu chefe me mandou esperar.",
+    "note": "Pedidos e ordens: told/asked + pessoa + to + verbo."
+   }
+  ],
+  "tips": [
+   "Say something, tell someone. \"She said me\" está errado: o certo é \"She told me\" ou \"She said to me\".",
+   "Se a informação ainda é verdade, não precisa mudar o tempo: He said he lives in Rio."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u3-l1",
+   "title": "Ela disse que…",
+   "items": [
+    {
+     "id": "b2u3l1-1",
+     "type": "meaning",
+     "en": "She said she was tired.",
+     "options": [
+      "Ela disse que estava cansada.",
+      "Ela diz que vai descansar.",
+      "Ela disse para eu descansar."
+     ],
+     "answer": "Ela disse que estava cansada.",
+     "why": "Said (disse) + was (estava): o verbo volta um tempo."
+    },
+    {
+     "id": "b2u3l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Yesterday Tom said he ___ hungry, so we ordered a pizza.",
+     "options": [
+      "was",
+      "is",
+      "be"
+     ],
+     "answer": "was",
+     "why": "A fala foi ontem e a fome também: said + was."
+    },
+    {
+     "id": "b2u3l1-3",
+     "type": "choice",
+     "en": "She ___ me that she was moving to Canada.",
+     "options": [
+      "told",
+      "said",
+      "spoke"
+     ],
+     "answer": "told",
+     "why": "Tell + pessoa: told me. Say não leva a pessoa logo depois.",
+     "wrong": {
+      "said": "Said não vem com a pessoa logo depois. Use told me, ou said (to me) that."
+     }
+    },
+    {
+     "id": "b2u3l1-4",
+     "type": "build",
+     "pt": "Ele me disse que ia ligar.",
+     "answer": "He told me he would call",
+     "extra": [
+      "said",
+      "will"
+     ],
+     "display": "He told me he would call.",
+     "why": "Na fala relatada, will vira would."
+    },
+    {
+     "id": "b2u3l1-5",
+     "type": "choice",
+     "en": "Last week Ana said she ___ finished the report.",
+     "options": [
+      "had",
+      "has",
+      "have"
+     ],
+     "answer": "had",
+     "why": "Has finished vira had finished quando você relata."
+    },
+    {
+     "id": "b2u3l1-6",
+     "type": "listen",
+     "en": "They said they had never been to Rio.",
+     "options": [
+      "Eles disseram que nunca tinham ido ao Rio.",
+      "Eles disseram que vão ao Rio.",
+      "Eles nunca disseram nada sobre o Rio."
+     ],
+     "answer": "Eles disseram que nunca tinham ido ao Rio.",
+     "why": "Had never been = nunca tinham ido."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l2",
+   "title": "Perguntas relatadas",
+   "items": [
+    {
+     "id": "b2u3l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She asked me where I ___.",
+     "options": [
+      "lived",
+      "do live",
+      "did I live"
+     ],
+     "answer": "lived",
+     "why": "Pergunta relatada fica na ordem normal (I lived), sem do/did.",
+     "wrong": {
+      "did I live": "Na pergunta relatada não há inversão: where I lived."
+     }
+    },
+    {
+     "id": "b2u3l2-2",
+     "type": "meaning",
+     "en": "He asked if I wanted a coffee.",
+     "options": [
+      "Ele perguntou se eu queria um café.",
+      "Ele quis um café.",
+      "Ele pediu um café para mim."
+     ],
+     "answer": "Ele perguntou se eu queria um café.",
+     "why": "Asked if = perguntou se."
+    },
+    {
+     "id": "b2u3l2-3",
+     "type": "choice",
+     "en": "The teacher asked ___ we had finished.",
+     "options": [
+      "whether",
+      "that",
+      "what"
+     ],
+     "answer": "whether",
+     "why": "Pergunta de sim ou não: asked if ou whether (= se)."
+    },
+    {
+     "id": "b2u3l2-4",
+     "type": "build",
+     "pt": "Ela me perguntou quantos anos eu tinha.",
+     "answer": "She asked me how old I was",
+     "extra": [
+      "am",
+      "did"
+     ],
+     "display": "She asked me how old I was.",
+     "why": "Pergunta relatada: how old I was (ordem normal)."
+    },
+    {
+     "id": "b2u3l2-5",
+     "type": "listen",
+     "en": "I asked him why he was so late.",
+     "options": [
+      "Perguntei a ele por que estava tão atrasado.",
+      "Ele me perguntou por que eu estava atrasado.",
+      "Ele chegou atrasado de novo."
+     ],
+     "answer": "Perguntei a ele por que estava tão atrasado.",
+     "why": "Asked him why he was = perguntei por que ele estava."
+    },
+    {
+     "id": "b2u3l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "explain",
+       "explicar"
+      ],
+      [
+       "promise",
+       "prometer"
+      ],
+      [
+       "mention",
+       "mencionar"
+      ],
+      [
+       "reply",
+       "responder"
+      ],
+      [
+       "complain",
+       "reclamar"
+      ]
+     ],
+     "why": "Verbos para contar o que alguém disse."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l3",
+   "title": "Pedidos e ordens",
+   "items": [
+    {
+     "id": "b2u3l3-1",
+     "type": "meaning",
+     "en": "The doctor told me to rest for a few days.",
+     "options": [
+      "O médico me mandou descansar por alguns dias.",
+      "O médico descansou alguns dias.",
+      "Contei ao médico que descansei."
+     ],
+     "answer": "O médico me mandou descansar por alguns dias.",
+     "why": "Told + pessoa + to + verbo = mandou fazer."
+    },
+    {
+     "id": "b2u3l3-2",
+     "type": "choice",
+     "en": "My mother asked me ___ the dishes.",
+     "options": [
+      "to wash",
+      "wash",
+      "washing"
+     ],
+     "answer": "to wash",
+     "why": "Asked + pessoa + to + verbo = pediu para fazer."
+    },
+    {
+     "id": "b2u3l3-3",
+     "type": "choice",
+     "en": "He told us ___ late again.",
+     "options": [
+      "not to be",
+      "to not being",
+      "don't be"
+     ],
+     "answer": "not to be",
+     "why": "Ordem negativa: told + pessoa + not to + verbo."
+    },
+    {
+     "id": "b2u3l3-4",
+     "type": "build",
+     "pt": "Ela me pediu para fechar a janela.",
+     "answer": "She asked me to close the window",
+     "extra": [
+      "that",
+      "closing"
+     ],
+     "display": "She asked me to close the window.",
+     "why": "Asked me to close = pediu para eu fechar."
+    },
+    {
+     "id": "b2u3l3-5",
+     "type": "listen",
+     "en": "He promised he would never do it again.",
+     "options": [
+      "Ele prometeu que nunca mais faria aquilo.",
+      "Ele faz isso de novo sempre.",
+      "Ele não prometeu nada."
+     ],
+     "answer": "Ele prometeu que nunca mais faria aquilo.",
+     "why": "Promised + would = prometeu que faria."
+    },
+    {
+     "id": "b2u3l3-6",
+     "type": "choice",
+     "en": "She explained that the shop ___ closed on Sundays.",
+     "options": [
+      "was",
+      "were",
+      "be"
+     ],
+     "answer": "was",
+     "why": "Explained + that + frase no passado: the shop was closed."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u3l4-1",
+     "type": "type",
+     "pt": "Ela disse que estava cansada.",
+     "answer": "She said she was tired",
+     "accept": [
+      "She said that she was tired"
+     ],
+     "why": "Said + was: o verbo volta um tempo."
+    },
+    {
+     "id": "b2u3l4-2",
+     "type": "type",
+     "pt": "Ele me disse que ia ligar.",
+     "answer": "He told me he would call",
+     "accept": [
+      "He told me that he would call",
+      "He said he would call",
+      "He said that he would call",
+      "He told me he'd call"
+     ],
+     "why": "Told me + would."
+    },
+    {
+     "id": "b2u3l4-3",
+     "type": "dictation",
+     "en": "She asked me where I lived.",
+     "why": "Pergunta relatada: ordem normal, sem do."
+    },
+    {
+     "id": "b2u3l4-4",
+     "type": "type",
+     "pt": "Perguntei se ela estava bem.",
+     "answer": "I asked if she was OK",
+     "accept": [
+      "I asked if she was okay",
+      "I asked whether she was OK",
+      "I asked her if she was OK",
+      "I asked her if she was okay",
+      "I asked if she was well"
+     ],
+     "why": "Asked if = perguntei se."
+    },
+    {
+     "id": "b2u3l4-5",
+     "type": "dictation",
+     "en": "The doctor told me to rest.",
+     "why": "Told + pessoa + to + verbo."
+    },
+    {
+     "id": "b2u3l4-6",
+     "type": "type",
+     "pt": "Ele me pediu para esperar.",
+     "answer": "He asked me to wait",
+     "why": "Asked + pessoa + to + verbo."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u3l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What did Carlos say about the trip?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "He said he couldn't come because he was sick.",
+      "He said me he couldn't come because he was sick.",
+      "He told he couldn't come because he was sick."
+     ],
+     "answer": "He said he couldn't come because he was sick.",
+     "why": "Said + frase, ou told + pessoa. \"Said me\" e \"told he\" estão errados."
+    },
+    {
+     "id": "b2u3l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did the manager call back?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, she asked if we could send the documents today.",
+      "Yes, she asked if could we send the documents today.",
+      "Yes, she asked do we can send the documents today."
+     ],
+     "answer": "Yes, she asked if we could send the documents today.",
+     "why": "Pergunta relatada: asked if + ordem normal (we could)."
+    },
+    {
+     "id": "b2u3l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why are you taking the bus today?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "My dad told me not to use his car.",
+      "My dad told me don't use his car.",
+      "My dad said me not to use his car."
+     ],
+     "answer": "My dad told me not to use his car.",
+     "why": "Ordem negativa: told me not to + verbo."
+    },
+    {
+     "id": "b2u3l5-4",
+     "type": "speak",
+     "en": "She told me she was moving.",
+     "pt": "Ela me disse que ia se mudar.",
+     "why": "\"Told\" tem o L leve e o d no fim: \"tôuld\"."
+    },
+    {
+     "id": "b2u3l5-5",
+     "type": "speak",
+     "en": "He asked me where I lived.",
+     "pt": "Ele me perguntou onde eu morava.",
+     "why": "\"Asked\" soa \"ÉSKT\", tudo junto."
+    },
+    {
+     "id": "b2u3l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you give Paula my message?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I told her you would call tonight.",
+      "Yes, I told her you will called tonight.",
+      "Yes, I said her you would call tonight."
+     ],
+     "answer": "Yes, I told her you would call tonight.",
+     "why": "Told her + would call."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u3l6-1",
+     "type": "choice",
+     "en": "He asked me what time the film ___.",
+     "options": [
+      "started",
+      "did start",
+      "does start"
+     ],
+     "answer": "started",
+     "why": "Pergunta relatada sem do/did: what time the film started."
+    },
+    {
+     "id": "b2u3l6-2",
+     "type": "type",
+     "pt": "Ela me disse para não me preocupar.",
+     "answer": "She told me not to worry",
+     "why": "Told + pessoa + not to + verbo."
+    },
+    {
+     "id": "b2u3l6-3",
+     "type": "meaning",
+     "en": "They complained that the room was too small.",
+     "options": [
+      "Eles reclamaram que o quarto era pequeno demais.",
+      "Eles pediram um quarto menor.",
+      "O quarto deles era grande."
+     ],
+     "answer": "Eles reclamaram que o quarto era pequeno demais.",
+     "why": "Complain = reclamar."
+    },
+    {
+     "id": "b2u3l6-4",
+     "type": "choice",
+     "en": "Laura ___ that she had lost her keys.",
+     "options": [
+      "mentioned",
+      "told",
+      "asked"
+     ],
+     "answer": "mentioned",
+     "why": "Mentioned that = mencionou que. Told precisaria de alguém (told me)."
+    },
+    {
+     "id": "b2u3l6-5",
+     "type": "dictation",
+     "en": "He promised he would help me.",
+     "why": "Promised + would = prometeu que faria."
+    },
+    {
+     "id": "b2u3l6-6",
+     "type": "speak",
+     "en": "I asked if she was OK.",
+     "pt": "Perguntei se ela estava bem.",
+     "why": "\"If she\" se liga na fala: \"if-xi\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l7",
+   "title": "História: O recado",
+   "story": {
+    "title": "O recado",
+    "lines": [
+     {
+      "who": "Sofia",
+      "en": "Hi, Ben! Did anyone call while I was out?",
+      "pt": "Oi, Ben! Alguém ligou enquanto eu estava fora?"
+     },
+     {
+      "who": "Ben",
+      "en": "Yes, your mother called. She ___ me she would visit us on Saturday.",
+      "pt": "Sim, sua mãe ligou. Ela me disse que viria nos visitar no sábado.",
+      "gap": {
+       "answer": "told",
+       "options": [
+        "told",
+        "said",
+        "asked"
+       ]
+      }
+     },
+     {
+      "ask": "Quando a mãe da Sofia vem visitar?",
+      "options": [
+       "No sábado",
+       "No domingo",
+       "Hoje à noite"
+      ],
+      "answer": "No sábado",
+      "why": "\"she would visit us on Saturday\"."
+     },
+     {
+      "who": "Ben",
+      "en": "And a man from the bank asked ___ you could call him back.",
+      "pt": "E um homem do banco perguntou se você poderia ligar de volta para ele.",
+      "gap": {
+       "answer": "if",
+       "options": [
+        "if",
+        "that",
+        "what"
+       ]
+      }
+     },
+     {
+      "who": "Sofia",
+      "en": "Did he say what it was about?",
+      "pt": "Ele disse do que se tratava?"
+     },
+     {
+      "who": "Ben",
+      "en": "No, he just told me it was important.",
+      "pt": "Não, ele só me disse que era importante."
+     },
+     {
+      "who": "Ben",
+      "en": "Oh, and Leo asked me ___ you about the party.",
+      "pt": "Ah, e o Leo me pediu para te lembrar da festa.",
+      "gap": {
+       "answer": "to remind",
+       "options": [
+        "to remind",
+        "remind",
+        "reminding"
+       ]
+      }
+     },
+     {
+      "who": "Sofia",
+      "en": "The party! I completely forgot. What time did he say?",
+      "pt": "A festa! Esqueci completamente. Que horas ele disse?"
+     },
+     {
+      "who": "Ben",
+      "en": "He said it started at eight, and he asked us not to be late.",
+      "pt": "Ele disse que começava às oito e pediu para a gente não se atrasar."
+     },
+     {
+      "ask": "O que o Leo pediu?",
+      "options": [
+       "Para não se atrasarem",
+       "Para levarem comida",
+       "Para ligarem para ele"
+      ],
+      "answer": "Para não se atrasarem",
+      "why": "\"he asked us not to be late\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u3l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u3l7-2",
+     "type": "quiz",
+     "q": "Quem ligou do banco?",
+     "options": [
+      "Um homem",
+      "A mãe da Sofia",
+      "O Leo"
+     ],
+     "answer": "Um homem",
+     "why": "\"a man from the bank\"."
+    },
+    {
+     "id": "b2u3l7-3",
+     "type": "quiz",
+     "q": "O que o homem do banco disse?",
+     "options": [
+      "Que era importante",
+      "Que não era nada",
+      "Que ia passar lá"
+     ],
+     "answer": "Que era importante",
+     "why": "\"he just told me it was important\"."
+    },
+    {
+     "id": "b2u3l7-4",
+     "type": "quiz",
+     "q": "A que horas começa a festa?",
+     "options": [
+      "Às oito",
+      "Às sete",
+      "Às nove"
+     ],
+     "answer": "Às oito",
+     "why": "\"He said it started at eight\"."
+    }
+   ]
+  }
+ ]
+}

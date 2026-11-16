@@ -34,6 +34,9 @@ export const CONTRACTIONS = {
   "haven't": ['have', 'not'], "hasn't": ['has', 'not'], "shouldn't": ['should', 'not'], "mustn't": ['must', 'not'], "i've": ['i', 'have'], "let's": ['let', 'us'],
   "we've": ['we', 'have'], "you've": ['you', 'have'], "they've": ['they', 'have'], "he'd": ['he', 'would'], "she'd": ['she', 'would'],
   "we'd": ['we', 'would'], "they'd": ['they', 'would'], "it'd": ['it', 'would'], "wouldn't": ['would', 'not'], "he's": ['he', 'is'],
+  // B2: past perfect e modais com have
+  "hadn't": ['had', 'not'], "would've": ['would', 'have'], "could've": ['could', 'have'], "should've": ['should', 'have'],
+  "must've": ['must', 'have'], "might've": ['might', 'have'],
 };
 export const IRREG = { is: 'be', am: 'be', are: 'be', was: 'be', were: 'be', has: 'have', does: 'do', did: 'do',
   went: 'go', ate: 'eat', bought: 'buy', got: 'get', made: 'make', came: 'come', took: 'take', gave: 'give',

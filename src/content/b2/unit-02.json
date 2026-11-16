@@ -1,0 +1,720 @@
+{
+ "id": "b2-u2",
+ "level": "B2",
+ "order": 2,
+ "title": "Se eu tivesse sabido…",
+ "subtitle": "Third conditional, wish e if only: falando de arrependimentos.",
+ "can_do": {
+  "text": "Consigo falar de situações do passado que poderiam ter sido diferentes e expressar arrependimento.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: expressar sentimentos e opiniões, nível B2"
+ },
+ "core_inventory": [
+  "Grammar: third conditional (if + had done, would have done)",
+  "Grammar: wish / if only + past simple and past perfect",
+  "Functions: expressing regret",
+  "Functions: imagining a different past"
+ ],
+ "words": [
+  [
+   "regret",
+   "arrepender-se"
+  ],
+  [
+   "wish",
+   "desejar, queria que"
+  ],
+  [
+   "apologize",
+   "pedir desculpas"
+  ],
+  [
+   "chance",
+   "chance"
+  ],
+  [
+   "opportunity",
+   "oportunidade"
+  ],
+  [
+   "decision",
+   "decisão"
+  ],
+  [
+   "warn",
+   "avisar, alertar"
+  ],
+  [
+   "interview",
+   "entrevista"
+  ],
+  [
+   "prepare",
+   "preparar(-se)"
+  ]
+ ],
+ "guide": {
+  "title": "Third conditional, wish e if only",
+  "intro": "Para imaginar um passado diferente: If + had + particípio, would have + particípio. Para dizer que você queria que algo fosse diferente: I wish ou If only.",
+  "points": [
+   {
+    "en": "If I had studied, I would have passed.",
+    "pt": "Se eu tivesse estudado, teria passado.",
+    "note": "Passado imaginário: não estudou e não passou."
+   },
+   {
+    "en": "If you had told me, I would have helped.",
+    "pt": "Se você tivesse me contado, eu teria ajudado.",
+    "note": "Would have + particípio = teria feito."
+   },
+   {
+    "en": "I wish I had more time.",
+    "pt": "Queria ter mais tempo.",
+    "note": "Wish + passado = desejo sobre o presente."
+   },
+   {
+    "en": "I wish I had listened to you.",
+    "pt": "Queria ter te ouvido.",
+    "note": "Wish + had + particípio = arrependimento sobre o passado."
+   },
+   {
+    "en": "If only I hadn't said that!",
+    "pt": "Se ao menos eu não tivesse dito aquilo!",
+    "note": "If only = um wish mais forte."
+   }
+  ],
+  "tips": [
+   "Na fala, would have vira would've (soa \"wúd-âv\"). Nunca escreva \"would of\".",
+   "Nunca use would na parte do if: If I had known (e não If I would have known)."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u2-l1",
+   "title": "Se eu tivesse…",
+   "items": [
+    {
+     "id": "b2u2l1-1",
+     "type": "meaning",
+     "en": "If I had known, I would have come.",
+     "options": [
+      "Se eu tivesse sabido, teria vindo.",
+      "Se eu souber, eu venho.",
+      "Eu sabia, por isso vim."
+     ],
+     "answer": "Se eu tivesse sabido, teria vindo.",
+     "why": "If + had known, would have come: um passado que não aconteceu."
+    },
+    {
+     "id": "b2u2l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If she had left earlier, she ___ the bus.",
+     "options": [
+      "would have caught",
+      "will catch",
+      "would catch"
+     ],
+     "answer": "would have caught",
+     "why": "Passado imaginário: if + had left, would have + particípio."
+    },
+    {
+     "id": "b2u2l1-3",
+     "type": "choice",
+     "en": "If we ___ the map, we wouldn't have got lost.",
+     "options": [
+      "had checked",
+      "have checked",
+      "would check"
+     ],
+     "answer": "had checked",
+     "why": "Na parte do if vai had + particípio, nunca would.",
+     "wrong": {
+      "would check": "Would não entra na parte do if. O certo é If we had checked."
+     }
+    },
+    {
+     "id": "b2u2l1-4",
+     "type": "build",
+     "pt": "Se você tivesse me contado, eu teria ajudado.",
+     "answer": "If you had told me I would have helped",
+     "extra": [
+      "will",
+      "did"
+     ],
+     "display": "If you had told me, I would have helped.",
+     "why": "If + had told, would have helped."
+    },
+    {
+     "id": "b2u2l1-5",
+     "type": "choice",
+     "en": "He would have won if he ___ harder.",
+     "options": [
+      "had trained",
+      "trained",
+      "would train"
+     ],
+     "answer": "had trained",
+     "why": "A parte do if fala do passado imaginário: had trained."
+    },
+    {
+     "id": "b2u2l1-6",
+     "type": "listen",
+     "en": "If it hadn't rained, we would have gone to the beach.",
+     "options": [
+      "Se não tivesse chovido, teríamos ido à praia.",
+      "Se não chover, vamos à praia.",
+      "Choveu na praia ontem."
+     ],
+     "answer": "Se não tivesse chovido, teríamos ido à praia.",
+     "why": "If it hadn't rained = se não tivesse chovido."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l2",
+   "title": "Wish e if only",
+   "items": [
+    {
+     "id": "b2u2l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I wish I ___ more time to travel.",
+     "options": [
+      "had",
+      "have",
+      "will have"
+     ],
+     "answer": "had",
+     "why": "Wish + passado (had) = queria que fosse diferente agora.",
+     "wrong": {
+      "have": "Depois de wish, o verbo \"volta\" um tempo: I wish I had (e não have)."
+     }
+    },
+    {
+     "id": "b2u2l2-2",
+     "type": "meaning",
+     "en": "I wish I had listened to my mother.",
+     "options": [
+      "Queria ter ouvido minha mãe.",
+      "Eu sempre ouço minha mãe.",
+      "Minha mãe queria me ouvir."
+     ],
+     "answer": "Queria ter ouvido minha mãe.",
+     "why": "Wish + had + particípio = arrependimento sobre o passado."
+    },
+    {
+     "id": "b2u2l2-3",
+     "type": "choice",
+     "en": "If only I ___ said that! Now she is angry.",
+     "options": [
+      "hadn't",
+      "haven't",
+      "didn't"
+     ],
+     "answer": "hadn't",
+     "why": "Arrependimento sobre o passado: if only + hadn't + particípio."
+    },
+    {
+     "id": "b2u2l2-4",
+     "type": "build",
+     "pt": "Queria morar mais perto do trabalho.",
+     "answer": "I wish I lived closer to work",
+     "extra": [
+      "live",
+      "will"
+     ],
+     "display": "I wish I lived closer to work.",
+     "why": "Wish + passado (lived) para falar do presente."
+    },
+    {
+     "id": "b2u2l2-5",
+     "type": "listen",
+     "en": "She regrets not taking the job.",
+     "options": [
+      "Ela se arrepende de não ter aceitado o emprego.",
+      "Ela vai aceitar o emprego.",
+      "Ela não gosta do emprego."
+     ],
+     "answer": "Ela se arrepende de não ter aceitado o emprego.",
+     "why": "Regret + -ing = arrepender-se de."
+    },
+    {
+     "id": "b2u2l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "regret",
+       "arrepender-se"
+      ],
+      [
+       "wish",
+       "queria que"
+      ],
+      [
+       "warn",
+       "avisar"
+      ],
+      [
+       "opportunity",
+       "oportunidade"
+      ],
+      [
+       "decision",
+       "decisão"
+      ]
+     ],
+     "why": "Palavras para falar de escolhas e arrependimentos."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l3",
+   "title": "Arrependimentos",
+   "items": [
+    {
+     "id": "b2u2l3-1",
+     "type": "meaning",
+     "en": "If you had warned me, I wouldn't have made that mistake.",
+     "options": [
+      "Se você tivesse me avisado, eu não teria cometido aquele erro.",
+      "Você me avisou, mas eu errei.",
+      "Se você me avisar, não vou errar."
+     ],
+     "answer": "Se você tivesse me avisado, eu não teria cometido aquele erro.",
+     "why": "Had warned = tivesse avisado; wouldn't have made = não teria cometido."
+    },
+    {
+     "id": "b2u2l3-2",
+     "type": "choice",
+     "en": "I ___ I had saved more money when I was younger.",
+     "options": [
+      "wish",
+      "hope",
+      "want"
+     ],
+     "answer": "wish",
+     "why": "Para arrependimento, use wish. Hope é para um futuro possível."
+    },
+    {
+     "id": "b2u2l3-3",
+     "type": "choice",
+     "en": "We would have arrived on time if the train ___ late.",
+     "options": [
+      "hadn't been",
+      "wasn't",
+      "won't be"
+     ],
+     "answer": "hadn't been",
+     "why": "Passado imaginário na parte do if: hadn't been."
+    },
+    {
+     "id": "b2u2l3-4",
+     "type": "build",
+     "pt": "Quem dera eu tivesse aceitado aquela oportunidade.",
+     "answer": "If only I had taken that opportunity",
+     "extra": [
+      "have",
+      "would"
+     ],
+     "display": "If only I had taken that opportunity.",
+     "why": "If only + had + particípio = quem dera eu tivesse…"
+    },
+    {
+     "id": "b2u2l3-5",
+     "type": "listen",
+     "en": "I would have called you, but my phone was dead.",
+     "options": [
+      "Eu teria te ligado, mas meu celular estava sem bateria.",
+      "Vou te ligar quando tiver bateria.",
+      "Te liguei, mas você não atendeu."
+     ],
+     "answer": "Eu teria te ligado, mas meu celular estava sem bateria.",
+     "why": "Would have called = teria ligado. \"My phone was dead\" = celular sem bateria."
+    },
+    {
+     "id": "b2u2l3-6",
+     "type": "choice",
+     "en": "If I ___ you, I would apologize.",
+     "options": [
+      "were",
+      "had been",
+      "am"
+     ],
+     "answer": "were",
+     "why": "Conselho sobre o agora (second conditional): If I were you = se eu fosse você."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u2l4-1",
+     "type": "type",
+     "pt": "Se eu tivesse estudado, teria passado.",
+     "answer": "If I had studied I would have passed",
+     "accept": [
+      "If I had studied, I would have passed",
+      "If I'd studied, I would have passed",
+      "If I had studied, I'd have passed",
+      "If I had studied I'd have passed",
+      "If I'd studied I would have passed",
+      "If I had studied, I would've passed",
+      "If I had studied I would've passed"
+     ],
+     "why": "If + had + particípio, would have + particípio."
+    },
+    {
+     "id": "b2u2l4-2",
+     "type": "type",
+     "pt": "Queria ter mais tempo.",
+     "answer": "I wish I had more time",
+     "why": "Wish + passado = desejo sobre o presente."
+    },
+    {
+     "id": "b2u2l4-3",
+     "type": "dictation",
+     "en": "If you had told me, I would have helped.",
+     "why": "Would have helped = teria ajudado."
+    },
+    {
+     "id": "b2u2l4-4",
+     "type": "type",
+     "pt": "Queria ter te ouvido.",
+     "answer": "I wish I had listened to you",
+     "accept": [
+      "I wish I'd listened to you"
+     ],
+     "why": "Wish + had + particípio = arrependimento."
+    },
+    {
+     "id": "b2u2l4-5",
+     "type": "dictation",
+     "en": "If only I hadn't said that.",
+     "why": "If only = se ao menos."
+    },
+    {
+     "id": "b2u2l4-6",
+     "type": "type",
+     "pt": "Se não tivesse chovido, teríamos ido.",
+     "answer": "If it hadn't rained we would have gone",
+     "accept": [
+      "If it hadn't rained, we would have gone",
+      "If it had not rained, we would have gone",
+      "If it hadn't rained, we'd have gone",
+      "If it hadn't rained, we would've gone"
+     ],
+     "why": "If it hadn't rained = se não tivesse chovido."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u2l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I failed my driving test again."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Oh no! If you had practiced more, you would have passed.",
+      "Oh no! If you practiced more, you would have passed.",
+      "Oh no! If you would have practiced more, you passed."
+     ],
+     "answer": "Oh no! If you had practiced more, you would have passed.",
+     "why": "Passado imaginário: if + had practiced, would have passed."
+    },
+    {
+     "id": "b2u2l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you like your new apartment?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It's OK, but I wish it were bigger.",
+      "It's OK, but I wish it is bigger.",
+      "It's OK, but I wish it will be bigger."
+     ],
+     "answer": "It's OK, but I wish it were bigger.",
+     "why": "Wish + were = queria que fosse. No dia a dia também se ouve \"I wish it was bigger\"."
+    },
+    {
+     "id": "b2u2l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why didn't you come to the party?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Nobody told me! If I had known, I would have come.",
+      "Nobody told me! If I knew, I will come.",
+      "Nobody told me! If I have known, I would come."
+     ],
+     "answer": "Nobody told me! If I had known, I would have come.",
+     "why": "If I had known, I would have come = se eu tivesse sabido, teria vindo."
+    },
+    {
+     "id": "b2u2l5-4",
+     "type": "speak",
+     "en": "I wish I had more time.",
+     "pt": "Queria ter mais tempo.",
+     "why": "\"Wish\" soa \"uích\", com o i curto."
+    },
+    {
+     "id": "b2u2l5-5",
+     "type": "speak",
+     "en": "If only I had listened to you.",
+     "pt": "Se ao menos eu tivesse te ouvido.",
+     "why": "\"If only\" soa junto: \"if-ÔUN-li\"."
+    },
+    {
+     "id": "b2u2l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I sold my old guitar last year."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Really? I wish you hadn't sold it. It was beautiful.",
+      "Really? I wish you didn't sell it. It was beautiful.",
+      "Really? I hope you hadn't sold it. It was beautiful."
+     ],
+     "answer": "Really? I wish you hadn't sold it. It was beautiful.",
+     "why": "Arrependimento sobre o passado: wish + hadn't + particípio."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u2l6-1",
+     "type": "choice",
+     "en": "If he had asked me, I ___ him my car.",
+     "options": [
+      "would have lent",
+      "will lend",
+      "had lent"
+     ],
+     "answer": "would have lent",
+     "why": "Would have + particípio. Lend → lent → lent."
+    },
+    {
+     "id": "b2u2l6-2",
+     "type": "type",
+     "pt": "Quem dera eu tivesse ido.",
+     "answer": "If only I had gone",
+     "accept": [
+      "If only I'd gone",
+      "I wish I had gone",
+      "I wish I'd gone"
+     ],
+     "why": "If only + had + particípio."
+    },
+    {
+     "id": "b2u2l6-3",
+     "type": "meaning",
+     "en": "I regret not studying harder at school.",
+     "options": [
+      "Me arrependo de não ter estudado mais na escola.",
+      "Vou estudar mais na escola.",
+      "Estudei muito na escola."
+     ],
+     "answer": "Me arrependo de não ter estudado mais na escola.",
+     "why": "Regret not + -ing = arrepender-se de não ter feito."
+    },
+    {
+     "id": "b2u2l6-4",
+     "type": "choice",
+     "en": "I wish you ___ here with me now.",
+     "options": [
+      "were",
+      "are",
+      "will be"
+     ],
+     "answer": "were",
+     "why": "Wish sobre o presente: o verbo vai para o passado (were)."
+    },
+    {
+     "id": "b2u2l6-5",
+     "type": "dictation",
+     "en": "I would have called you, but I was busy.",
+     "why": "Would have called = teria ligado."
+    },
+    {
+     "id": "b2u2l6-6",
+     "type": "speak",
+     "en": "If I had known, I would have come.",
+     "pt": "Se eu tivesse sabido, teria vindo.",
+     "why": "Na fala rápida, would have vira \"would've\": \"wúd-âv kâm\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l7",
+   "title": "História: A entrevista",
+   "story": {
+    "title": "A entrevista",
+    "lines": [
+     {
+      "who": "Julia",
+      "en": "I didn't get the job at the bank.",
+      "pt": "Não consegui a vaga no banco."
+     },
+     {
+      "who": "Lucas",
+      "en": "Oh no! What happened in the interview?",
+      "pt": "Ah, não! O que aconteceu na entrevista?"
+     },
+     {
+      "who": "Julia",
+      "en": "I arrived twenty minutes late. If I ___ earlier, I would have been on time.",
+      "pt": "Cheguei vinte minutos atrasada. Se eu tivesse saído mais cedo, teria chegado na hora.",
+      "gap": {
+       "answer": "had left",
+       "options": [
+        "had left",
+        "left",
+        "would leave"
+       ]
+      }
+     },
+     {
+      "ask": "Por que a entrevista deu errado?",
+      "options": [
+       "Ela chegou atrasada",
+       "Ela esqueceu o currículo",
+       "Ela foi para o banco errado"
+      ],
+      "answer": "Ela chegou atrasada",
+      "why": "\"I arrived twenty minutes late\"."
+     },
+     {
+      "who": "Julia",
+      "en": "And I was so nervous. I wish I ___ more.",
+      "pt": "E eu estava muito nervosa. Queria ter me preparado mais.",
+      "gap": {
+       "answer": "had prepared",
+       "options": [
+        "had prepared",
+        "prepared",
+        "will prepare"
+       ]
+      }
+     },
+     {
+      "who": "Lucas",
+      "en": "Don't be so hard on yourself. Everybody makes mistakes.",
+      "pt": "Não seja tão dura com você mesma. Todo mundo erra."
+     },
+     {
+      "who": "Julia",
+      "en": "I know. But it was a great opportunity.",
+      "pt": "Eu sei. Mas era uma ótima oportunidade."
+     },
+     {
+      "who": "Lucas",
+      "en": "There will be other chances. And next time, take an earlier bus!",
+      "pt": "Vão aparecer outras chances. E da próxima vez, pegue um ônibus mais cedo!"
+     },
+     {
+      "who": "Julia",
+      "en": "If only someone ___ me that before!",
+      "pt": "Se ao menos alguém tivesse me dito isso antes!",
+      "gap": {
+       "answer": "had told",
+       "options": [
+        "had told",
+        "has told",
+        "tells"
+       ]
+      }
+     },
+     {
+      "ask": "Qual é o conselho do Lucas?",
+      "options": [
+       "Pegar um ônibus mais cedo",
+       "Desistir de trabalhar em banco",
+       "Estudar mais inglês"
+      ],
+      "answer": "Pegar um ônibus mais cedo",
+      "why": "\"next time, take an earlier bus!\""
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u2l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u2l7-2",
+     "type": "quiz",
+     "q": "Onde era a vaga da Julia?",
+     "options": [
+      "Num banco",
+      "Numa escola",
+      "Num hospital"
+     ],
+     "answer": "Num banco",
+     "why": "\"the job at the bank\"."
+    },
+    {
+     "id": "b2u2l7-3",
+     "type": "quiz",
+     "q": "Quanto ela se atrasou?",
+     "options": [
+      "Vinte minutos",
+      "Duas horas",
+      "Cinco minutos"
+     ],
+     "answer": "Vinte minutos",
+     "why": "\"I arrived twenty minutes late\"."
+    },
+    {
+     "id": "b2u2l7-4",
+     "type": "quiz",
+     "q": "Como a Julia se sentiu na entrevista?",
+     "options": [
+      "Nervosa",
+      "Tranquila",
+      "Animada"
+     ],
+     "answer": "Nervosa",
+     "why": "\"I was so nervous\"."
+    }
+   ]
+  }
+ ]
+}

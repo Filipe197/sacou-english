@@ -1,0 +1,718 @@
+{
+ "id": "b2-u4",
+ "level": "B2",
+ "order": 4,
+ "title": "Deve ter sido…",
+ "subtitle": "Must, might e can't (have): tirando conclusões.",
+ "can_do": {
+  "text": "Consigo levantar hipóteses e tirar conclusões sobre o que está acontecendo ou o que aconteceu, com mais ou menos certeza.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: discussão informal, levantar hipóteses, nível B2"
+ },
+ "core_inventory": [
+  "Grammar: modals of deduction in the present (must / might / can't be)",
+  "Grammar: modals of deduction in the past (must / might / can't have + past participle)",
+  "Grammar: should have / shouldn't have (criticism and regret)",
+  "Functions: speculating and drawing conclusions"
+ ],
+ "words": [
+  [
+   "clue",
+   "pista"
+  ],
+  [
+   "mystery",
+   "mistério"
+  ],
+  [
+   "suspect",
+   "suspeitar"
+  ],
+  [
+   "explanation",
+   "explicação"
+  ],
+  [
+   "obviously",
+   "obviamente"
+  ],
+  [
+   "certain",
+   "certo, com certeza"
+  ],
+  [
+   "impossible",
+   "impossível"
+  ],
+  [
+   "serious",
+   "sério"
+  ],
+  [
+   "floor",
+   "chão"
+  ],
+  [
+   "vet",
+   "veterinário"
+  ]
+ ],
+ "guide": {
+  "title": "Must, might, can't + have",
+  "intro": "Para tirar conclusões: must (tenho quase certeza que sim), might ou could (talvez), can't (tenho quase certeza que não). Para o passado, acrescente have + particípio.",
+  "points": [
+   {
+    "en": "She must be at home. The lights are on.",
+    "pt": "Ela deve estar em casa. As luzes estão acesas.",
+    "note": "Must = conclusão lógica (quase certeza)."
+   },
+   {
+    "en": "He can't be hungry. He just ate.",
+    "pt": "Ele não pode estar com fome. Acabou de comer.",
+    "note": "Can't = impossível, na minha opinião."
+   },
+   {
+    "en": "They must have left early.",
+    "pt": "Eles devem ter saído cedo.",
+    "note": "Must have + particípio = conclusão sobre o passado."
+   },
+   {
+    "en": "She might have missed the bus.",
+    "pt": "Ela pode ter perdido o ônibus.",
+    "note": "Might ou could have = talvez tenha…"
+   },
+   {
+    "en": "You should have told me.",
+    "pt": "Você devia ter me contado.",
+    "note": "Should have = crítica ou arrependimento."
+   }
+  ],
+  "tips": [
+   "O contrário de must (dedução) é can't, e não mustn't: He can't be home. Mustn't é proibição.",
+   "Na fala: must've, might've, should've (soam \"mâs-tâv\", \"mai-tâv\", \"xúd-âv\")."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u4-l1",
+   "title": "Deve ser, não pode ser",
+   "items": [
+    {
+     "id": "b2u4l1-1",
+     "type": "meaning",
+     "en": "She must be tired. She worked all night.",
+     "options": [
+      "Ela deve estar cansada. Trabalhou a noite toda.",
+      "Ela precisa descansar porque vai trabalhar à noite.",
+      "Ela não está cansada, apesar do trabalho."
+     ],
+     "answer": "Ela deve estar cansada. Trabalhou a noite toda.",
+     "why": "Aqui must não é obrigação: é conclusão lógica."
+    },
+    {
+     "id": "b2u4l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He ___ be at work. His car isn't here.",
+     "options": [
+      "can't",
+      "mustn't",
+      "must"
+     ],
+     "answer": "can't",
+     "why": "Quase certeza de que não: can't.",
+     "wrong": {
+      "mustn't": "Mustn't é proibição. Para dedução negativa, use can't."
+     }
+    },
+    {
+     "id": "b2u4l1-3",
+     "type": "choice",
+     "en": "Someone is at the door. It ___ be the pizza!",
+     "options": [
+      "might",
+      "can't",
+      "should"
+     ],
+     "answer": "might",
+     "why": "Might = talvez. Você acha possível, mas não tem certeza."
+    },
+    {
+     "id": "b2u4l1-4",
+     "type": "build",
+     "pt": "Isso não pode ser verdade.",
+     "answer": "That can't be true",
+     "extra": [
+      "must",
+      "isn't"
+     ],
+     "display": "That can't be true.",
+     "why": "Can't be = não pode ser (impossível)."
+    },
+    {
+     "id": "b2u4l1-5",
+     "type": "choice",
+     "en": "They have three cars and a big house. They ___ be rich.",
+     "options": [
+      "must",
+      "can't",
+      "mustn't"
+     ],
+     "answer": "must",
+     "why": "Conclusão lógica a partir das pistas: must."
+    },
+    {
+     "id": "b2u4l1-6",
+     "type": "listen",
+     "en": "You must be Maria's brother. You look just like her.",
+     "options": [
+      "Você deve ser o irmão da Maria. Você é igualzinho a ela.",
+      "Você precisa ser o irmão da Maria.",
+      "A Maria não tem irmão."
+     ],
+     "answer": "Você deve ser o irmão da Maria. Você é igualzinho a ela.",
+     "why": "Must be = deve ser (conclusão)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l2",
+   "title": "Deve ter acontecido",
+   "items": [
+    {
+     "id": "b2u4l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The street is wet. It ___ rained last night.",
+     "options": [
+      "must have",
+      "can't have",
+      "should have"
+     ],
+     "answer": "must have",
+     "why": "Pista (rua molhada) + conclusão sobre o passado: must have + particípio."
+    },
+    {
+     "id": "b2u4l2-2",
+     "type": "meaning",
+     "en": "She might have forgotten about the meeting.",
+     "options": [
+      "Ela pode ter esquecido da reunião.",
+      "Ela esqueceu a reunião de propósito.",
+      "Ela nunca esquece reuniões."
+     ],
+     "answer": "Ela pode ter esquecido da reunião.",
+     "why": "Might have + particípio = talvez tenha…"
+    },
+    {
+     "id": "b2u4l2-3",
+     "type": "choice",
+     "en": "He ___ have seen me. He was looking the other way.",
+     "options": [
+      "can't",
+      "must",
+      "should"
+     ],
+     "answer": "can't",
+     "why": "Ele olhava para o outro lado: é impossível ter me visto. Can't have seen."
+    },
+    {
+     "id": "b2u4l2-4",
+     "type": "build",
+     "pt": "Eles devem ter saído cedo.",
+     "answer": "They must have left early",
+     "extra": [
+      "can't",
+      "leave"
+     ],
+     "display": "They must have left early.",
+     "why": "Must have + particípio (left)."
+    },
+    {
+     "id": "b2u4l2-5",
+     "type": "listen",
+     "en": "I can't find my keys. I might have left them at work.",
+     "options": [
+      "Não acho minhas chaves. Posso ter deixado no trabalho.",
+      "Deixei as chaves no trabalho de propósito.",
+      "Achei as chaves no trabalho."
+     ],
+     "answer": "Não acho minhas chaves. Posso ter deixado no trabalho.",
+     "why": "Might have left = posso ter deixado."
+    },
+    {
+     "id": "b2u4l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "clue",
+       "pista"
+      ],
+      [
+       "mystery",
+       "mistério"
+      ],
+      [
+       "suspect",
+       "suspeitar"
+      ],
+      [
+       "explanation",
+       "explicação"
+      ],
+      [
+       "obviously",
+       "obviamente"
+      ]
+     ],
+     "why": "Palavras para investigar e tirar conclusões."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l3",
+   "title": "Devia ter feito",
+   "items": [
+    {
+     "id": "b2u4l3-1",
+     "type": "meaning",
+     "en": "You should have told me earlier.",
+     "options": [
+      "Você devia ter me contado antes.",
+      "Você deveria me contar agora.",
+      "Você me contou cedo demais."
+     ],
+     "answer": "Você devia ter me contado antes.",
+     "why": "Should have = devia ter (crítica)."
+    },
+    {
+     "id": "b2u4l3-2",
+     "type": "choice",
+     "en": "I'm so tired. I ___ gone to bed so late.",
+     "options": [
+      "shouldn't have",
+      "mustn't have",
+      "can't have"
+     ],
+     "answer": "shouldn't have",
+     "why": "Arrependimento: shouldn't have + particípio = não devia ter…"
+    },
+    {
+     "id": "b2u4l3-3",
+     "type": "choice",
+     "en": "The window is broken. Someone ___ thrown a ball.",
+     "options": [
+      "must have",
+      "should have",
+      "can't have"
+     ],
+     "answer": "must have",
+     "why": "Pista (janela quebrada) + conclusão: must have thrown."
+    },
+    {
+     "id": "b2u4l3-4",
+     "type": "build",
+     "pt": "Você devia ter levado um guarda-chuva.",
+     "answer": "You should have taken an umbrella",
+     "extra": [
+      "must",
+      "take"
+     ],
+     "display": "You should have taken an umbrella.",
+     "why": "Should have + particípio (taken)."
+    },
+    {
+     "id": "b2u4l3-5",
+     "type": "listen",
+     "en": "She can't have stolen the money. She was with me all day.",
+     "options": [
+      "Ela não pode ter roubado o dinheiro. Ficou comigo o dia todo.",
+      "Ela roubou o dinheiro ontem.",
+      "Ela me deu o dinheiro."
+     ],
+     "answer": "Ela não pode ter roubado o dinheiro. Ficou comigo o dia todo.",
+     "why": "Can't have stolen = não pode ter roubado."
+    },
+    {
+     "id": "b2u4l3-6",
+     "type": "choice",
+     "en": "Where is Tom? He ___ be in a meeting.",
+     "options": [
+      "could",
+      "must have",
+      "should have"
+     ],
+     "answer": "could",
+     "why": "Could be = pode ser que esteja (possibilidade no presente)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u4l4-1",
+     "type": "type",
+     "pt": "Ela deve estar em casa.",
+     "answer": "She must be at home",
+     "accept": [
+      "She must be home"
+     ],
+     "why": "Must be = deve estar (conclusão)."
+    },
+    {
+     "id": "b2u4l4-2",
+     "type": "type",
+     "pt": "Isso não pode ser verdade.",
+     "answer": "That can't be true",
+     "accept": [
+      "That cannot be true",
+      "It can't be true",
+      "It cannot be true"
+     ],
+     "why": "Can't be = não pode ser."
+    },
+    {
+     "id": "b2u4l4-3",
+     "type": "dictation",
+     "en": "They must have left early.",
+     "why": "Must have + particípio."
+    },
+    {
+     "id": "b2u4l4-4",
+     "type": "type",
+     "pt": "Você devia ter me contado.",
+     "answer": "You should have told me",
+     "accept": [
+      "You should've told me"
+     ],
+     "why": "Should have + particípio."
+    },
+    {
+     "id": "b2u4l4-5",
+     "type": "dictation",
+     "en": "She might have missed the bus.",
+     "why": "Might have = pode ter."
+    },
+    {
+     "id": "b2u4l4-6",
+     "type": "type",
+     "pt": "Ele não pode ter visto a gente.",
+     "answer": "He can't have seen us",
+     "accept": [
+      "He cannot have seen us",
+      "He couldn't have seen us"
+     ],
+     "why": "Can't have + particípio."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u4l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Pedro isn't answering his phone."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "He might be asleep. It's very late.",
+      "He must to be asleep. It's very late.",
+      "He mights be asleep. It's very late."
+     ],
+     "answer": "He might be asleep. It's very late.",
+     "why": "Might be = talvez esteja. Depois de modal, o verbo vem sem \"to\" e sem -s."
+    },
+    {
+     "id": "b2u4l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I've just run for two hours!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Wow, you must be really tired!",
+      "Wow, you can't be really tired!",
+      "Wow, you mustn't be really tired!"
+     ],
+     "answer": "Wow, you must be really tired!",
+     "why": "Conclusão lógica: must be tired."
+    },
+    {
+     "id": "b2u4l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Ana didn't come to class today."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "She must have been sick. She never misses class.",
+      "She must be sick yesterday. She never misses class.",
+      "She must had been sick. She never misses class."
+     ],
+     "answer": "She must have been sick. She never misses class.",
+     "why": "Must have + particípio (been)."
+    },
+    {
+     "id": "b2u4l5-4",
+     "type": "speak",
+     "en": "You should have told me.",
+     "pt": "Você devia ter me contado.",
+     "why": "Na fala: \"you should've told me\" (\"xúd-âv\")."
+    },
+    {
+     "id": "b2u4l5-5",
+     "type": "speak",
+     "en": "It must have been a mistake.",
+     "pt": "Deve ter sido um erro.",
+     "why": "\"Must have\" vira \"must've\": \"mâs-tâv\"."
+    },
+    {
+     "id": "b2u4l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I failed the exam. I didn't study at all."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Well, you should have studied!",
+      "Well, you must have studied!",
+      "Well, you should studied!"
+     ],
+     "answer": "Well, you should have studied!",
+     "why": "Crítica sobre o passado: should have studied."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u4l6-1",
+     "type": "choice",
+     "en": "The shop is closed. They ___ have gone home.",
+     "options": [
+      "must",
+      "can't",
+      "should"
+     ],
+     "answer": "must",
+     "why": "Pista (loja fechada) + conclusão: must have gone."
+    },
+    {
+     "id": "b2u4l6-2",
+     "type": "type",
+     "pt": "Ela pode ter esquecido.",
+     "answer": "She might have forgotten",
+     "accept": [
+      "She may have forgotten",
+      "She could have forgotten",
+      "She might've forgotten"
+     ],
+     "why": "Might have + particípio (forgotten)."
+    },
+    {
+     "id": "b2u4l6-3",
+     "type": "meaning",
+     "en": "He can't be serious!",
+     "options": [
+      "Ele não pode estar falando sério!",
+      "Ele nunca é sério.",
+      "Ele precisa ficar sério."
+     ],
+     "answer": "Ele não pode estar falando sério!",
+     "why": "Can't be serious = não pode estar falando sério."
+    },
+    {
+     "id": "b2u4l6-4",
+     "type": "choice",
+     "en": "We ___ have left the door open. Look, the cat ran away!",
+     "options": [
+      "shouldn't",
+      "can't",
+      "mustn't"
+     ],
+     "answer": "shouldn't",
+     "why": "Arrependimento: shouldn't have left = não devíamos ter deixado."
+    },
+    {
+     "id": "b2u4l6-5",
+     "type": "dictation",
+     "en": "It must have been a mistake.",
+     "why": "Must have been = deve ter sido."
+    },
+    {
+     "id": "b2u4l6-6",
+     "type": "speak",
+     "en": "He can't have seen us.",
+     "pt": "Ele não pode ter visto a gente.",
+     "why": "\"Can't\" no inglês americano soa \"KÉNT\", com o t bem fraco."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l7",
+   "title": "História: O bolo sumido",
+   "story": {
+    "title": "O bolo sumido",
+    "lines": [
+     {
+      "who": "Emma",
+      "en": "Max, where is the chocolate cake? I left it on the table.",
+      "pt": "Max, cadê o bolo de chocolate? Deixei na mesa."
+     },
+     {
+      "who": "Max",
+      "en": "I don't know. Someone ___ eaten it.",
+      "pt": "Não sei. Alguém deve ter comido.",
+      "gap": {
+       "answer": "must have",
+       "options": [
+        "must have",
+        "should have",
+        "can't have"
+       ]
+      }
+     },
+     {
+      "who": "Emma",
+      "en": "It can't have been you. You were at the gym all afternoon.",
+      "pt": "Não pode ter sido você. Você ficou na academia a tarde toda."
+     },
+     {
+      "ask": "Por que não pode ter sido o Max?",
+      "options": [
+       "Ele estava na academia",
+       "Ele não gosta de bolo",
+       "Ele estava dormindo"
+      ],
+      "answer": "Ele estava na academia",
+      "why": "\"You were at the gym all afternoon\"."
+     },
+     {
+      "who": "Max",
+      "en": "What about your brother? He ___ have come home early.",
+      "pt": "E o seu irmão? Ele pode ter chegado cedo.",
+      "gap": {
+       "answer": "might",
+       "options": [
+        "might",
+        "can't",
+        "mustn't"
+       ]
+      }
+     },
+     {
+      "who": "Emma",
+      "en": "No, he's still at school. Wait… there's chocolate on the floor.",
+      "pt": "Não, ele ainda está na escola. Espera… tem chocolate no chão."
+     },
+     {
+      "who": "Max",
+      "en": "And look at the dog. His face is all brown!",
+      "pt": "E olha o cachorro. A cara dele está toda marrom!"
+     },
+     {
+      "who": "Emma",
+      "en": "Oh no! It must have been the dog. We ___ left the cake on the table.",
+      "pt": "Ah, não! Deve ter sido o cachorro. Não devíamos ter deixado o bolo na mesa.",
+      "gap": {
+       "answer": "shouldn't have",
+       "options": [
+        "shouldn't have",
+        "must have",
+        "can't have"
+       ]
+      }
+     },
+     {
+      "who": "Max",
+      "en": "Chocolate is bad for dogs. We should call the vet.",
+      "pt": "Chocolate faz mal para cachorro. A gente devia ligar para o veterinário."
+     },
+     {
+      "ask": "Quem comeu o bolo?",
+      "options": [
+       "O cachorro",
+       "O irmão da Emma",
+       "O Max"
+      ],
+      "answer": "O cachorro",
+      "why": "\"It must have been the dog\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u4l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u4l7-2",
+     "type": "quiz",
+     "q": "Onde a Emma deixou o bolo?",
+     "options": [
+      "Na mesa",
+      "Na geladeira",
+      "No carro"
+     ],
+     "answer": "Na mesa",
+     "why": "\"I left it on the table\"."
+    },
+    {
+     "id": "b2u4l7-3",
+     "type": "quiz",
+     "q": "Que pista eles encontraram no chão?",
+     "options": [
+      "Chocolate",
+      "Pegadas",
+      "Um prato quebrado"
+     ],
+     "answer": "Chocolate",
+     "why": "\"there's chocolate on the floor\"."
+    },
+    {
+     "id": "b2u4l7-4",
+     "type": "quiz",
+     "q": "O que o Max sugere no fim?",
+     "options": [
+      "Ligar para o veterinário",
+      "Fazer outro bolo",
+      "Ir à academia"
+     ],
+     "answer": "Ligar para o veterinário",
+     "why": "\"We should call the vet\"."
+    }
+   ]
+  }
+ ]
+}

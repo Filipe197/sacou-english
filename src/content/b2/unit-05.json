@@ -1,0 +1,720 @@
+{
+ "id": "b2-u5",
+ "level": "B2",
+ "order": 5,
+ "title": "Mandei fazer",
+ "subtitle": "Passiva em vários tempos e have/get something done.",
+ "can_do": {
+  "text": "Consigo falar de serviços que pedi para alguém fazer e descrever processos e mudanças em vários tempos verbais.",
+  "source": "CEFR (Conselho da Europa) — Produção escrita: relatórios e descrições, nível B2"
+ },
+ "core_inventory": [
+  "Grammar: passive in continuous and perfect tenses (is being / has been done)",
+  "Grammar: passive with modals (can / must / will be done)",
+  "Grammar: causative have / get something done",
+  "Lexis: services, repairs and deliveries"
+ ],
+ "words": [
+  [
+   "repair",
+   "consertar"
+  ],
+  [
+   "deliver",
+   "entregar"
+  ],
+  [
+   "install",
+   "instalar"
+  ],
+  [
+   "replace",
+   "substituir"
+  ],
+  [
+   "damage",
+   "estragar, danificar"
+  ],
+  [
+   "package",
+   "pacote, encomenda"
+  ],
+  [
+   "wall",
+   "parede"
+  ],
+  [
+   "professional",
+   "profissional"
+  ],
+  [
+   "screen",
+   "tela"
+  ],
+  [
+   "form",
+   "formulário"
+  ]
+ ],
+ "guide": {
+  "title": "Passiva avançada e have something done",
+  "intro": "Na passiva, o foco é no que acontece, não em quem faz. Ela funciona em todos os tempos: is being done, has been done, will be done. E quando você paga alguém para fazer algo, use have (ou get) + coisa + particípio.",
+  "points": [
+   {
+    "en": "The road is being repaired.",
+    "pt": "A rua está sendo consertada.",
+    "note": "Presente contínuo: is being + particípio."
+   },
+   {
+    "en": "My car has been stolen!",
+    "pt": "Meu carro foi roubado!",
+    "note": "Present perfect: has been + particípio."
+   },
+   {
+    "en": "The package will be delivered tomorrow.",
+    "pt": "O pacote será entregue amanhã.",
+    "note": "Com modais: will, can, must + be + particípio."
+   },
+   {
+    "en": "I had my hair cut yesterday.",
+    "pt": "Cortei o cabelo ontem (no cabeleireiro).",
+    "note": "Have + coisa + particípio = mandar fazer."
+   },
+   {
+    "en": "We need to get the TV fixed.",
+    "pt": "Precisamos mandar consertar a TV.",
+    "note": "Get é mais informal que have."
+   }
+  ],
+  "tips": [
+   "\"I cut my hair\" = eu mesmo cortei. \"I had my hair cut\" = alguém cortou para mim. Em português dizemos \"cortei o cabelo\" nos dois casos!",
+   "A ordem é have + coisa + particípio. \"I had cut my hair\" é outra coisa: é o past perfect (eu tinha cortado)."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u5-l1",
+   "title": "Está sendo feito",
+   "items": [
+    {
+     "id": "b2u5l1-1",
+     "type": "meaning",
+     "en": "The bridge is being repaired.",
+     "options": [
+      "A ponte está sendo consertada.",
+      "A ponte foi consertada ano passado.",
+      "Vão consertar a ponte um dia."
+     ],
+     "answer": "A ponte está sendo consertada.",
+     "why": "Is being + particípio = está sendo feito agora."
+    },
+    {
+     "id": "b2u5l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Sorry, the room is ___ cleaned right now.",
+     "options": [
+      "being",
+      "been",
+      "be"
+     ],
+     "answer": "being",
+     "why": "Passiva contínua: is being cleaned."
+    },
+    {
+     "id": "b2u5l1-3",
+     "type": "choice",
+     "en": "My bike ___ stolen! I can't find it anywhere.",
+     "options": [
+      "has been",
+      "has being",
+      "is been"
+     ],
+     "answer": "has been",
+     "why": "Present perfect passivo: has been + particípio."
+    },
+    {
+     "id": "b2u5l1-4",
+     "type": "build",
+     "pt": "O pacote será entregue amanhã.",
+     "answer": "The package will be delivered tomorrow",
+     "extra": [
+      "is",
+      "delivering"
+     ],
+     "display": "The package will be delivered tomorrow.",
+     "why": "Will be + particípio (delivered)."
+    },
+    {
+     "id": "b2u5l1-5",
+     "type": "choice",
+     "en": "All the tickets ___ sold. There are none left.",
+     "options": [
+      "have been",
+      "has been",
+      "are being"
+     ],
+     "answer": "have been",
+     "why": "Tickets é plural: have been sold."
+    },
+    {
+     "id": "b2u5l1-6",
+     "type": "listen",
+     "en": "A new hospital is being built in my city.",
+     "options": [
+      "Um hospital novo está sendo construído na minha cidade.",
+      "Construíram um hospital novo na cidade.",
+      "Minha cidade não tem hospital."
+     ],
+     "answer": "Um hospital novo está sendo construído na minha cidade.",
+     "why": "Is being built = está sendo construído."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l2",
+   "title": "Mandei fazer",
+   "items": [
+    {
+     "id": "b2u5l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ my hair cut every month.",
+     "options": [
+      "have",
+      "make",
+      "do"
+     ],
+     "answer": "have",
+     "why": "Mandar fazer: have + coisa + particípio."
+    },
+    {
+     "id": "b2u5l2-2",
+     "type": "meaning",
+     "en": "We had the house painted last year.",
+     "options": [
+      "Mandamos pintar a casa ano passado.",
+      "Nós mesmos pintamos a casa.",
+      "A casa já estava pintada quando compramos."
+     ],
+     "answer": "Mandamos pintar a casa ano passado.",
+     "why": "Had the house painted = mandamos pintar (alguém pintou)."
+    },
+    {
+     "id": "b2u5l2-3",
+     "type": "choice",
+     "en": "I need to get my phone ___. The screen is broken.",
+     "options": [
+      "repaired",
+      "repair",
+      "repairing"
+     ],
+     "answer": "repaired",
+     "why": "Get + coisa + particípio: get my phone repaired."
+    },
+    {
+     "id": "b2u5l2-4",
+     "type": "build",
+     "pt": "Ela vai mandar consertar o carro.",
+     "answer": "She is going to have her car repaired",
+     "extra": [
+      "repair",
+      "make"
+     ],
+     "display": "She is going to have her car repaired.",
+     "why": "Have + her car + repaired."
+    },
+    {
+     "id": "b2u5l2-5",
+     "type": "listen",
+     "en": "Where do you get your nails done?",
+     "options": [
+      "Onde você faz as unhas?",
+      "Você mesma faz suas unhas?",
+      "Suas unhas estão lindas."
+     ],
+     "answer": "Onde você faz as unhas?",
+     "why": "Get your nails done = fazer as unhas (com alguém)."
+    },
+    {
+     "id": "b2u5l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "repair",
+       "consertar"
+      ],
+      [
+       "deliver",
+       "entregar"
+      ],
+      [
+       "install",
+       "instalar"
+      ],
+      [
+       "replace",
+       "substituir"
+      ],
+      [
+       "damage",
+       "danificar"
+      ]
+     ],
+     "why": "Palavras de serviços e consertos."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l3",
+   "title": "Passiva com modais",
+   "items": [
+    {
+     "id": "b2u5l3-1",
+     "type": "meaning",
+     "en": "This form must be signed by your parents.",
+     "options": [
+      "Este formulário precisa ser assinado pelos seus pais.",
+      "Seus pais precisam preencher um formulário.",
+      "Você assinou o formulário dos seus pais."
+     ],
+     "answer": "Este formulário precisa ser assinado pelos seus pais.",
+     "why": "Must be signed = precisa ser assinado."
+    },
+    {
+     "id": "b2u5l3-2",
+     "type": "choice",
+     "en": "Phones can't ___ during the exam.",
+     "options": [
+      "be used",
+      "use",
+      "being used"
+     ],
+     "answer": "be used",
+     "why": "Modal + be + particípio: can't be used."
+    },
+    {
+     "id": "b2u5l3-3",
+     "type": "choice",
+     "en": "The results ___ announced next week.",
+     "options": [
+      "will be",
+      "will",
+      "have"
+     ],
+     "answer": "will be",
+     "why": "Futuro passivo: will be + particípio."
+    },
+    {
+     "id": "b2u5l3-4",
+     "type": "build",
+     "pt": "O jantar já foi servido.",
+     "answer": "Dinner has already been served",
+     "extra": [
+      "is",
+      "serving"
+     ],
+     "display": "Dinner has already been served.",
+     "why": "Has already been + particípio."
+    },
+    {
+     "id": "b2u5l3-5",
+     "type": "listen",
+     "en": "Your order has been sent and should arrive on Monday.",
+     "options": [
+      "Seu pedido foi enviado e deve chegar na segunda.",
+      "Seu pedido vai ser enviado na segunda.",
+      "Seu pedido chegou na segunda."
+     ],
+     "answer": "Seu pedido foi enviado e deve chegar na segunda.",
+     "why": "Has been sent = foi enviado."
+    },
+    {
+     "id": "b2u5l3-6",
+     "type": "choice",
+     "en": "We're having a new kitchen ___ next month.",
+     "options": [
+      "installed",
+      "install",
+      "installing"
+     ],
+     "answer": "installed",
+     "why": "Have + coisa + particípio também funciona no futuro."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u5l4-1",
+     "type": "type",
+     "pt": "A rua está sendo consertada.",
+     "answer": "The street is being repaired",
+     "accept": [
+      "The road is being repaired",
+      "The street is being fixed",
+      "The road is being fixed"
+     ],
+     "why": "Is being + particípio."
+    },
+    {
+     "id": "b2u5l4-2",
+     "type": "type",
+     "pt": "Meu celular foi roubado.",
+     "answer": "My phone has been stolen",
+     "accept": [
+      "My phone was stolen",
+      "My mobile phone has been stolen",
+      "My mobile phone was stolen"
+     ],
+     "why": "Has been stolen (ou was stolen)."
+    },
+    {
+     "id": "b2u5l4-3",
+     "type": "dictation",
+     "en": "I had my hair cut yesterday.",
+     "why": "Have + coisa + particípio = mandar fazer."
+    },
+    {
+     "id": "b2u5l4-4",
+     "type": "type",
+     "pt": "Preciso mandar consertar meu carro.",
+     "answer": "I need to have my car repaired",
+     "accept": [
+      "I need to get my car repaired",
+      "I need to get my car fixed",
+      "I need to have my car fixed"
+     ],
+     "why": "Have ou get + my car + particípio."
+    },
+    {
+     "id": "b2u5l4-5",
+     "type": "dictation",
+     "en": "The package will be delivered tomorrow.",
+     "why": "Will be delivered = será entregue."
+    },
+    {
+     "id": "b2u5l4-6",
+     "type": "type",
+     "pt": "Os ingressos foram todos vendidos.",
+     "answer": "All the tickets have been sold",
+     "accept": [
+      "The tickets have all been sold",
+      "All the tickets were sold",
+      "All tickets have been sold"
+     ],
+     "why": "Have been + particípio."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u5l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Your hair looks great!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Thanks! I had it cut yesterday.",
+      "Thanks! I had cut it yesterday.",
+      "Thanks! I made it cut yesterday."
+     ],
+     "answer": "Thanks! I had it cut yesterday.",
+     "why": "Had it cut = mandei cortar. \"I had cut it\" é past perfect."
+    },
+    {
+     "id": "b2u5l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Can we use the meeting room?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Not now, sorry. It's being cleaned.",
+      "Not now, sorry. It's been clean.",
+      "Not now, sorry. It's cleaning."
+     ],
+     "answer": "Not now, sorry. It's being cleaned.",
+     "why": "Is being cleaned = está sendo limpa. \"It's cleaning\" diria que a sala está limpando algo!"
+    },
+    {
+     "id": "b2u5l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why are you walking to work?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "My car is being repaired this week.",
+      "My car is repairing this week.",
+      "My car has repair this week."
+     ],
+     "answer": "My car is being repaired this week.",
+     "why": "O carro não conserta nada: ele está sendo consertado (is being repaired)."
+    },
+    {
+     "id": "b2u5l5-4",
+     "type": "speak",
+     "en": "I had my hair cut yesterday.",
+     "pt": "Cortei o cabelo ontem.",
+     "why": "Fale ligado: \"hed-mai-RÉR-cât\"."
+    },
+    {
+     "id": "b2u5l5-5",
+     "type": "speak",
+     "en": "It has already been done.",
+     "pt": "Já foi feito.",
+     "why": "\"Been\" soa curto: \"bin\"."
+    },
+    {
+     "id": "b2u5l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is the new website ready?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Almost. It will be finished by Friday.",
+      "Almost. It will finished by Friday.",
+      "Almost. It will be finish by Friday."
+     ],
+     "answer": "Almost. It will be finished by Friday.",
+     "why": "Will be + particípio (finished)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u5l6-1",
+     "type": "choice",
+     "en": "The museum ___ closed since May.",
+     "options": [
+      "has been",
+      "is being",
+      "was been"
+     ],
+     "answer": "has been",
+     "why": "Since May → present perfect: has been closed."
+    },
+    {
+     "id": "b2u5l6-2",
+     "type": "type",
+     "pt": "Mandamos pintar a casa.",
+     "answer": "We had the house painted",
+     "accept": [
+      "We got the house painted",
+      "We had our house painted",
+      "We got our house painted"
+     ],
+     "why": "Had + the house + painted."
+    },
+    {
+     "id": "b2u5l6-3",
+     "type": "meaning",
+     "en": "English is spoken all over the world.",
+     "options": [
+      "O inglês é falado no mundo todo.",
+      "Todo mundo fala inglês bem.",
+      "O mundo todo fala inglês em casa."
+     ],
+     "answer": "O inglês é falado no mundo todo.",
+     "why": "Is spoken = é falado."
+    },
+    {
+     "id": "b2u5l6-4",
+     "type": "choice",
+     "en": "The new rules will ___ next year.",
+     "options": [
+      "be introduced",
+      "introduce",
+      "being introduced"
+     ],
+     "answer": "be introduced",
+     "why": "Will + be + particípio."
+    },
+    {
+     "id": "b2u5l6-5",
+     "type": "dictation",
+     "en": "My bike has been stolen.",
+     "why": "Has been stolen = foi roubada."
+    },
+    {
+     "id": "b2u5l6-6",
+     "type": "speak",
+     "en": "We're having the kitchen painted.",
+     "pt": "Estamos mandando pintar a cozinha.",
+     "why": "\"Painted\" soa \"PÊIN-tid\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l7",
+   "title": "História: A reforma",
+   "story": {
+    "title": "A reforma",
+    "lines": [
+     {
+      "who": "Rita",
+      "en": "Marcos, the apartment looks so different!",
+      "pt": "Marcos, o apartamento está tão diferente!"
+     },
+     {
+      "who": "Marcos",
+      "en": "I know! The walls ___ painted last week.",
+      "pt": "Pois é! As paredes foram pintadas semana passada.",
+      "gap": {
+       "answer": "were",
+       "options": [
+        "were",
+        "are being",
+        "have"
+       ]
+      }
+     },
+     {
+      "who": "Rita",
+      "en": "Did you paint them yourself?",
+      "pt": "Você mesmo pintou?"
+     },
+     {
+      "who": "Marcos",
+      "en": "No way! I had them ___ by a professional.",
+      "pt": "Nem pensar! Mandei pintar com um profissional.",
+      "gap": {
+       "answer": "painted",
+       "options": [
+        "painted",
+        "paint",
+        "painting"
+       ]
+      }
+     },
+     {
+      "ask": "Quem pintou as paredes?",
+      "options": [
+       "Um profissional",
+       "O Marcos",
+       "A Rita"
+      ],
+      "answer": "Um profissional",
+      "why": "\"I had them painted by a professional\"."
+     },
+     {
+      "who": "Rita",
+      "en": "And what about the kitchen?",
+      "pt": "E a cozinha?"
+     },
+     {
+      "who": "Marcos",
+      "en": "It's ___ repaired right now. A new oven will be installed on Monday.",
+      "pt": "Está sendo consertada agora. Um forno novo vai ser instalado na segunda.",
+      "gap": {
+       "answer": "being",
+       "options": [
+        "being",
+        "been",
+        "be"
+       ]
+      }
+     },
+     {
+      "who": "Rita",
+      "en": "So where do you cook?",
+      "pt": "Então onde você cozinha?"
+     },
+     {
+      "who": "Marcos",
+      "en": "I don't! All my meals are delivered by the restaurant downstairs.",
+      "pt": "Não cozinho! Todas as minhas refeições são entregues pelo restaurante lá de baixo."
+     },
+     {
+      "ask": "Quando o forno novo vai ser instalado?",
+      "options": [
+       "Na segunda",
+       "Hoje",
+       "No fim do mês"
+      ],
+      "answer": "Na segunda",
+      "why": "\"A new oven will be installed on Monday\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u5l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u5l7-2",
+     "type": "quiz",
+     "q": "Quando as paredes foram pintadas?",
+     "options": [
+      "Semana passada",
+      "Ontem",
+      "Ano passado"
+     ],
+     "answer": "Semana passada",
+     "why": "\"The walls were painted last week\"."
+    },
+    {
+     "id": "b2u5l7-3",
+     "type": "quiz",
+     "q": "O que está sendo consertado agora?",
+     "options": [
+      "A cozinha",
+      "O banheiro",
+      "A sala"
+     ],
+     "answer": "A cozinha",
+     "why": "\"It's being repaired right now\" (a cozinha)."
+    },
+    {
+     "id": "b2u5l7-4",
+     "type": "quiz",
+     "q": "Como o Marcos está se alimentando?",
+     "options": [
+      "A comida é entregue por um restaurante",
+      "Ele come na casa da Rita",
+      "Ele cozinha no forno novo"
+     ],
+     "answer": "A comida é entregue por um restaurante",
+     "why": "\"All my meals are delivered by the restaurant downstairs\"."
+    }
+   ]
+  }
+ ]
+}

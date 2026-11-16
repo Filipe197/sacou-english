@@ -7,7 +7,8 @@ const LEVELS = [
   { title: 'Nunca estudei inglês', desc: 'Vou começar do zero, sem problema.', out: 'Você começa no nível A1, Unidade 1: cumprimentos e palavras do dia a dia. Tudo explicado passo a passo.', cta: 'Começar do zero', test: false },
   { title: 'Sei algumas palavras', desc: 'Entendo coisas como “hello”, cores e números.', out: 'Você faz um teste rápido (cerca de 3 minutos). As unidades que você já domina são marcadas como concluídas e você começa no ponto certo.', cta: 'Fazer teste rápido', test: true },
   { title: 'Consigo conversas simples', desc: 'Me apresento e falo da minha rotina.', out: 'O teste vai conferir o que você já sabe do A1 e do A2 (cerca de 6 minutos) e te colocar no ponto certo da trilha.', cta: 'Fazer teste de nível', test: true },
-  { title: 'Sou intermediário ou mais', desc: 'Leio textos e assisto séries com legenda.', out: 'O teste confere o que você já sabe do A1 ao B1 (cerca de 8 minutos) e te coloca no ponto certo da trilha.', cta: 'Fazer teste de nível', test: true },
+  { title: 'Sou intermediário', desc: 'Me viro em viagens e consigo contar experiências.', out: 'O teste confere o que você já sabe do A1 ao B1 (cerca de 8 minutos) e te coloca no ponto certo da trilha.', cta: 'Fazer teste de nível', test: true, upTo: 'B1' },
+  { title: 'Já me viro bem em inglês', desc: 'Converso, defendo opiniões e assisto séries com legenda.', out: 'O teste confere o que você já sabe do A1 ao B2 (cerca de 10 minutos) e te coloca no ponto certo da trilha.', cta: 'Fazer teste de nível', test: true, upTo: 'B2' },
 ];
 const GOALS = [{ min: 5, xp: 15, label: 'Leve' }, { min: 10, xp: 30, label: 'Regular' }, { min: 15, xp: 45, label: 'Firme' }, { min: 20, xp: 60, label: 'Intenso' }];
 
@@ -26,7 +27,7 @@ export default function Onboarding() {
     const { error } = await updateProfile({ daily_goal_xp: GOALS[goal].xp, start_level: 'A1', onboarded: !L.test });
     setBusy(false);
     if (error) return setErr('Não foi possível salvar. Verifique sua conexão e tente de novo.');
-    nav(L.test ? `/nivelamento?ate=${level >= 3 ? 'B1' : level >= 2 ? 'A2' : 'A1'}` : '/aprender', { replace: true });
+    nav(L.test ? `/nivelamento?ate=${L.upTo || (level >= 2 ? 'A2' : 'A1')}` : '/aprender', { replace: true });
   }
 
   return (
@@ -45,7 +46,7 @@ export default function Onboarding() {
 
         <div className="opts2" role="radiogroup" aria-label="Seu nível">
           {LEVELS.map((l, i) => (
-            <button key={l.title} type="button" role="radio" aria-checked={i === level} className={'opt' + (i === level ? ' on' : '')} onClick={() => setLevel(i)}>
+            <button key={l.title} type="button" role="radio" aria-checked={i === level} className={'opt' + (i === level ? ' on' : '')} onClick={() => setLevel(i)} style={i === LEVELS.length - 1 && LEVELS.length % 2 ? { gridColumn: '1 / -1' } : undefined}>
               <span className="dot" />
               <span style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                 <b style={{ fontSize: 18, fontFamily: 'var(--head)' }}>{l.title}</b>

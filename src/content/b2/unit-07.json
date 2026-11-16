@@ -1,0 +1,721 @@
+{
+ "id": "b2-u7",
+ "level": "B2",
+ "order": 7,
+ "title": "Phrasal verbs do dia a dia",
+ "subtitle": "Give up, find out, look after e outros verbos com partícula.",
+ "can_do": {
+  "text": "Consigo entender e usar os phrasal verbs mais comuns em conversas do dia a dia e no trabalho.",
+  "source": "CEFR (Conselho da Europa) — Amplitude de vocabulário, nível B2"
+ },
+ "core_inventory": [
+  "Lexis: common phrasal verbs (give up, find out, look after, put off, turn down)",
+  "Grammar: separable phrasal verbs and object pronouns (turn it off, not turn off it)",
+  "Lexis: three-part phrasal verbs (run out of, get on with, come up with, look forward to)",
+  "Functions: talking about work and life changes"
+ ],
+ "words": [
+  [
+   "give up",
+   "desistir"
+  ],
+  [
+   "find out",
+   "descobrir"
+  ],
+  [
+   "look after",
+   "cuidar de"
+  ],
+  [
+   "put off",
+   "adiar"
+  ],
+  [
+   "turn down",
+   "recusar (uma oferta)"
+  ],
+  [
+   "run out of",
+   "ficar sem"
+  ],
+  [
+   "come up with",
+   "ter (uma ideia)"
+  ],
+  [
+   "get on with",
+   "se dar bem com"
+  ],
+  [
+   "look forward to",
+   "estar ansioso por (algo bom)"
+  ],
+  [
+   "set up",
+   "abrir, montar (um negócio)"
+  ]
+ ],
+ "guide": {
+  "title": "Phrasal verbs: verbo + partícula",
+  "intro": "Phrasal verbs são verbos + partícula (up, out, off…) que ganham um sentido novo. Give = dar, mas give up = desistir. O jeito de aprender é com exemplos, em blocos.",
+  "points": [
+   {
+    "en": "Don't give up! You can do it.",
+    "pt": "Não desista! Você consegue.",
+    "note": "Give up = desistir."
+   },
+   {
+    "en": "I found out the truth yesterday.",
+    "pt": "Descobri a verdade ontem.",
+    "note": "Find out = descobrir (uma informação)."
+   },
+   {
+    "en": "Can you look after my cat this weekend?",
+    "pt": "Você pode cuidar do meu gato neste fim de semana?",
+    "note": "Look after = cuidar de."
+   },
+   {
+    "en": "Turn it off, please.",
+    "pt": "Desliga isso, por favor.",
+    "note": "Com pronome (it, them), ele vai no meio: turn it off (nunca turn off it)."
+   },
+   {
+    "en": "We've run out of milk.",
+    "pt": "Acabou o leite.",
+    "note": "Run out of = ficar sem."
+   }
+  ],
+  "tips": [
+   "Muitos phrasal verbs têm um sinônimo mais formal: put off = postpone, find out = discover. Na conversa, o phrasal verb soa mais natural.",
+   "Look forward to + -ing: I'm looking forward to seeing you (e não to see you)."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u7-l1",
+   "title": "Desistir, descobrir, cuidar",
+   "items": [
+    {
+     "id": "b2u7l1-1",
+     "type": "meaning",
+     "en": "She gave up smoking last year.",
+     "options": [
+      "Ela parou de fumar ano passado.",
+      "Ela começou a fumar ano passado.",
+      "Ela deu cigarros de presente."
+     ],
+     "answer": "Ela parou de fumar ano passado.",
+     "why": "Give up = desistir, largar (um hábito)."
+    },
+    {
+     "id": "b2u7l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I need someone to ___ my dog while I'm away.",
+     "options": [
+      "look after",
+      "look for",
+      "look at"
+     ],
+     "answer": "look after",
+     "why": "Look after = cuidar de. Look for = procurar.",
+     "wrong": {
+      "look for": "Look for = procurar. Para cuidar, use look after."
+     }
+    },
+    {
+     "id": "b2u7l1-3",
+     "type": "choice",
+     "en": "How did you ___ about the party?",
+     "options": [
+      "find out",
+      "find up",
+      "find off"
+     ],
+     "answer": "find out",
+     "why": "Find out = descobrir (uma informação)."
+    },
+    {
+     "id": "b2u7l1-4",
+     "type": "build",
+     "pt": "Não desista dos seus sonhos.",
+     "answer": "Don't give up on your dreams",
+     "extra": [
+      "out",
+      "off"
+     ],
+     "display": "Don't give up on your dreams.",
+     "why": "Give up on = desistir de."
+    },
+    {
+     "id": "b2u7l1-5",
+     "type": "choice",
+     "en": "We had to ___ the meeting until next week.",
+     "options": [
+      "put off",
+      "put on",
+      "put up"
+     ],
+     "answer": "put off",
+     "why": "Put off = adiar."
+    },
+    {
+     "id": "b2u7l1-6",
+     "type": "listen",
+     "en": "He turned down the job because the salary was too low.",
+     "options": [
+      "Ele recusou o emprego porque o salário era baixo demais.",
+      "Ele aceitou o emprego mesmo com o salário baixo.",
+      "Ele perdeu o emprego por causa do salário."
+     ],
+     "answer": "Ele recusou o emprego porque o salário era baixo demais.",
+     "why": "Turn down = recusar (uma oferta)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l2",
+   "title": "Turn it off",
+   "items": [
+    {
+     "id": "b2u7l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The music is too loud. Can you turn ___?",
+     "options": [
+      "it down",
+      "down it",
+      "it up"
+     ],
+     "answer": "it down",
+     "why": "Com pronome, ele vai no meio: turn it down (abaixar o volume).",
+     "wrong": {
+      "it up": "Turn it up = aumentar o volume. A música já está alta!"
+     }
+    },
+    {
+     "id": "b2u7l2-2",
+     "type": "meaning",
+     "en": "Could you pick me up at the station?",
+     "options": [
+      "Você poderia me buscar na estação?",
+      "Você pode me deixar na estação?",
+      "Você me viu na estação?"
+     ],
+     "answer": "Você poderia me buscar na estação?",
+     "why": "Pick up = buscar (alguém)."
+    },
+    {
+     "id": "b2u7l2-3",
+     "type": "choice",
+     "en": "Take ___ your shoes before you come in.",
+     "options": [
+      "off",
+      "out",
+      "up"
+     ],
+     "answer": "off",
+     "why": "Take off = tirar (roupa, sapato). Também é decolar (avião)."
+    },
+    {
+     "id": "b2u7l2-4",
+     "type": "build",
+     "pt": "Desliga a TV, por favor.",
+     "answer": "Turn off the TV please",
+     "extra": [
+      "on",
+      "it"
+     ],
+     "display": "Turn off the TV, please.",
+     "why": "Turn off = desligar. Turn on = ligar."
+    },
+    {
+     "id": "b2u7l2-5",
+     "type": "listen",
+     "en": "I filled in the form and sent it back.",
+     "options": [
+      "Preenchi o formulário e mandei de volta.",
+      "Perdi o formulário.",
+      "Ainda não preenchi o formulário."
+     ],
+     "answer": "Preenchi o formulário e mandei de volta.",
+     "why": "Fill in = preencher."
+    },
+    {
+     "id": "b2u7l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "give up",
+       "desistir"
+      ],
+      [
+       "find out",
+       "descobrir"
+      ],
+      [
+       "look after",
+       "cuidar de"
+      ],
+      [
+       "put off",
+       "adiar"
+      ],
+      [
+       "turn down",
+       "recusar"
+      ]
+     ],
+     "why": "Os phrasal verbs da unidade."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l3",
+   "title": "Três palavras de uma vez",
+   "items": [
+    {
+     "id": "b2u7l3-1",
+     "type": "meaning",
+     "en": "We've run out of coffee.",
+     "options": [
+      "Acabou o café.",
+      "Saímos para tomar café.",
+      "Fizemos café demais."
+     ],
+     "answer": "Acabou o café.",
+     "why": "Run out of = ficar sem."
+    },
+    {
+     "id": "b2u7l3-2",
+     "type": "choice",
+     "en": "I get on well ___ my colleagues.",
+     "options": [
+      "with",
+      "to",
+      "for"
+     ],
+     "answer": "with",
+     "why": "Get on with = se dar bem com."
+    },
+    {
+     "id": "b2u7l3-3",
+     "type": "choice",
+     "en": "I'm looking forward to ___ you next week.",
+     "options": [
+      "seeing",
+      "see",
+      "saw"
+     ],
+     "answer": "seeing",
+     "why": "Look forward to + -ing (o to aqui é preposição)."
+    },
+    {
+     "id": "b2u7l3-4",
+     "type": "build",
+     "pt": "Ela teve uma ideia ótima.",
+     "answer": "She came up with a great idea",
+     "extra": [
+      "for",
+      "to"
+     ],
+     "display": "She came up with a great idea.",
+     "why": "Come up with = ter, inventar (uma ideia)."
+    },
+    {
+     "id": "b2u7l3-5",
+     "type": "listen",
+     "en": "I can't keep up with all these messages.",
+     "options": [
+      "Não consigo acompanhar todas essas mensagens.",
+      "Não guardei nenhuma mensagem.",
+      "Vou responder todas as mensagens."
+     ],
+     "answer": "Não consigo acompanhar todas essas mensagens.",
+     "why": "Keep up with = acompanhar (o ritmo)."
+    },
+    {
+     "id": "b2u7l3-6",
+     "type": "choice",
+     "en": "My grandmother brought me ___ in a small town.",
+     "options": [
+      "up",
+      "out",
+      "off"
+     ],
+     "answer": "up",
+     "why": "Bring up = criar (uma criança)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u7l4-1",
+     "type": "type",
+     "pt": "Não desista!",
+     "answer": "Don't give up",
+     "accept": [
+      "Do not give up"
+     ],
+     "why": "Give up = desistir."
+    },
+    {
+     "id": "b2u7l4-2",
+     "type": "type",
+     "pt": "Descobri a verdade.",
+     "answer": "I found out the truth",
+     "why": "Find out = descobrir. Find → found."
+    },
+    {
+     "id": "b2u7l4-3",
+     "type": "dictation",
+     "en": "Can you look after my cat this weekend?",
+     "why": "Look after = cuidar de."
+    },
+    {
+     "id": "b2u7l4-4",
+     "type": "type",
+     "pt": "Acabou o leite.",
+     "answer": "We've run out of milk",
+     "accept": [
+      "We have run out of milk",
+      "We ran out of milk",
+      "We're out of milk"
+     ],
+     "why": "Run out of = ficar sem."
+    },
+    {
+     "id": "b2u7l4-5",
+     "type": "dictation",
+     "en": "Turn it off, please.",
+     "why": "Com pronome: turn it off."
+    },
+    {
+     "id": "b2u7l4-6",
+     "type": "type",
+     "pt": "Estou ansioso para te ver.",
+     "answer": "I'm looking forward to seeing you",
+     "accept": [
+      "I am looking forward to seeing you",
+      "I look forward to seeing you"
+     ],
+     "why": "Look forward to + -ing."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u7l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you accept the job offer?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, I turned it down. It was too far from home.",
+      "No, I turned down it. It was too far from home.",
+      "No, I turned it off. It was too far from home."
+     ],
+     "answer": "No, I turned it down. It was too far from home.",
+     "why": "Turn down = recusar. Com pronome: turned it down."
+    },
+    {
+     "id": "b2u7l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Can you help me with this problem?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Sure. Let's try to come up with a solution.",
+      "Sure. Let's try to come with up a solution.",
+      "Sure. Let's try to come up a solution."
+     ],
+     "answer": "Sure. Let's try to come up with a solution.",
+     "why": "Come up with = encontrar (uma solução, uma ideia)."
+    },
+    {
+     "id": "b2u7l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why is the car stopping?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Oh no! I think we've run out of fuel.",
+      "Oh no! I think we've run out fuel.",
+      "Oh no! I think we've run off of fuel."
+     ],
+     "answer": "Oh no! I think we've run out of fuel.",
+     "why": "Run out of = ficar sem."
+    },
+    {
+     "id": "b2u7l5-4",
+     "type": "speak",
+     "en": "Don't give up! You can do it.",
+     "pt": "Não desista! Você consegue.",
+     "why": "\"Give up\" se liga na fala: \"gi-VÂP\"."
+    },
+    {
+     "id": "b2u7l5-5",
+     "type": "speak",
+     "en": "I'm looking forward to seeing you.",
+     "pt": "Estou ansioso para te ver.",
+     "why": "\"Forward\" soa \"FÓR-uârd\"."
+    },
+    {
+     "id": "b2u7l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How do you get on with your new boss?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Very well. She's really nice.",
+      "I get on the bus at eight.",
+      "She gets up very early."
+     ],
+     "answer": "Very well. She's really nice.",
+     "why": "Get on with someone = se dar bem com alguém. Get on the bus = subir no ônibus."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u7l6-1",
+     "type": "choice",
+     "en": "Please ___ the form and give it to the teacher.",
+     "options": [
+      "fill in",
+      "fill up",
+      "fill on"
+     ],
+     "answer": "fill in",
+     "why": "Fill in = preencher (formulário)."
+    },
+    {
+     "id": "b2u7l6-2",
+     "type": "type",
+     "pt": "Ela cuida da avó.",
+     "answer": "She looks after her grandmother",
+     "accept": [
+      "She takes care of her grandmother"
+     ],
+     "why": "Look after = cuidar de."
+    },
+    {
+     "id": "b2u7l6-3",
+     "type": "meaning",
+     "en": "We had to put off the trip because of the rain.",
+     "options": [
+      "Tivemos que adiar a viagem por causa da chuva.",
+      "Cancelamos a viagem para sempre.",
+      "Fizemos a viagem mesmo com chuva."
+     ],
+     "answer": "Tivemos que adiar a viagem por causa da chuva.",
+     "why": "Put off = adiar."
+    },
+    {
+     "id": "b2u7l6-4",
+     "type": "choice",
+     "en": "I'll pick you ___ at seven.",
+     "options": [
+      "up",
+      "on",
+      "off"
+     ],
+     "answer": "up",
+     "why": "Pick up = buscar (alguém). Com pronome: pick you up."
+    },
+    {
+     "id": "b2u7l6-5",
+     "type": "dictation",
+     "en": "We've run out of coffee.",
+     "why": "Run out of = ficar sem."
+    },
+    {
+     "id": "b2u7l6-6",
+     "type": "speak",
+     "en": "She came up with a great idea.",
+     "pt": "Ela teve uma ideia ótima.",
+     "why": "\"Came up with\" se liga: \"kêi-mâp-uíd\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l7",
+   "title": "História: Recomeço",
+   "story": {
+    "title": "Recomeço",
+    "lines": [
+     {
+      "who": "Clara",
+      "en": "Paula! I heard you left your job at the bank. Is it true?",
+      "pt": "Paula! Ouvi dizer que você saiu do emprego no banco. É verdade?"
+     },
+     {
+      "who": "Paula",
+      "en": "Yes! I finally decided to ___ my own business.",
+      "pt": "Sim! Finalmente decidi abrir meu próprio negócio.",
+      "gap": {
+       "answer": "set up",
+       "options": [
+        "set up",
+        "set off",
+        "give up"
+       ]
+      }
+     },
+     {
+      "who": "Clara",
+      "en": "Wow! What kind of business?",
+      "pt": "Nossa! Que tipo de negócio?"
+     },
+     {
+      "who": "Paula",
+      "en": "A small bakery. I came ___ the idea during the holidays.",
+      "pt": "Uma padaria pequena. Tive a ideia durante as férias.",
+      "gap": {
+       "answer": "up with",
+       "options": [
+        "up with",
+        "out of",
+        "on with"
+       ]
+      }
+     },
+     {
+      "ask": "Que negócio a Paula vai abrir?",
+      "options": [
+       "Uma padaria",
+       "Um restaurante",
+       "Uma loja de roupas"
+      ],
+      "answer": "Uma padaria",
+      "why": "\"A small bakery\"."
+     },
+     {
+      "who": "Clara",
+      "en": "Weren't you scared?",
+      "pt": "Você não ficou com medo?"
+     },
+     {
+      "who": "Paula",
+      "en": "A little. The bank offered me more money, but I turned it ___.",
+      "pt": "Um pouco. O banco me ofereceu mais dinheiro, mas eu recusei.",
+      "gap": {
+       "answer": "down",
+       "options": [
+        "down",
+        "off",
+        "up"
+       ]
+      }
+     },
+     {
+      "who": "Paula",
+      "en": "Now I just need to find out where I can buy good flour.",
+      "pt": "Agora só preciso descobrir onde comprar uma farinha boa."
+     },
+     {
+      "who": "Clara",
+      "en": "I'm sure it will be a success. Don't give up!",
+      "pt": "Tenho certeza de que vai dar certo. Não desista!"
+     },
+     {
+      "who": "Paula",
+      "en": "Thanks! I'm looking forward to opening the doors.",
+      "pt": "Obrigada! Estou ansiosa para abrir as portas."
+     },
+     {
+      "ask": "O que o banco fez quando a Paula quis sair?",
+      "options": [
+       "Ofereceu mais dinheiro",
+       "Deu uma festa",
+       "Pediu para ela ficar mais um mês"
+      ],
+      "answer": "Ofereceu mais dinheiro",
+      "why": "\"The bank offered me more money\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u7l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u7l7-2",
+     "type": "quiz",
+     "q": "Onde a Paula trabalhava?",
+     "options": [
+      "Num banco",
+      "Numa padaria",
+      "Numa escola"
+     ],
+     "answer": "Num banco",
+     "why": "\"you left your job at the bank\"."
+    },
+    {
+     "id": "b2u7l7-3",
+     "type": "quiz",
+     "q": "Quando ela teve a ideia?",
+     "options": [
+      "Durante as férias",
+      "No trabalho",
+      "Numa festa"
+     ],
+     "answer": "Durante as férias",
+     "why": "\"I came up with the idea during the holidays\"."
+    },
+    {
+     "id": "b2u7l7-4",
+     "type": "quiz",
+     "q": "O que a Paula ainda precisa descobrir?",
+     "options": [
+      "Onde comprar uma farinha boa",
+      "Onde abrir a loja",
+      "Quanto cobrar pelo pão"
+     ],
+     "answer": "Onde comprar uma farinha boa",
+     "why": "\"I just need to find out where I can buy good flour\"."
+    }
+   ]
+  }
+ ]
+}

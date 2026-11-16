@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import LessonRunner from '../components/LessonRunner.jsx';
-import { UNITS, LEVEL_ORDER, shuffle } from '../lib/content.js';
+import { UNITS, LEVELS, LEVEL_ORDER, shuffle } from '../lib/content.js';
 import { useAuth } from '../lib/auth.jsx';
 import { supabase } from '../lib/supabase.js';
 import { Logo } from '../components/ui.jsx';
@@ -14,7 +14,8 @@ export default function Placement() {
   const { updateProfile } = useAuth();
   const [started, setStarted] = useState(false);
   const [params] = useSearchParams();
-  const upTo = LEVEL_ORDER.indexOf(['A2', 'B1'].includes(params.get('ate')) ? params.get('ate') : 'A1');
+  const upTo = LEVEL_ORDER.indexOf(LEVELS.includes(params.get('ate')) ? params.get('ate') : 'A1');
+  const tested = LEVEL_ORDER.slice(0, upTo + 1);
   const units = UNITS.filter(u => LEVEL_ORDER.indexOf(u.level) <= upTo);
   const entries = useMemo(() => units.flatMap(u => {
     const per = upTo > 0 && LEVEL_ORDER.indexOf(u.level) < upTo ? 2 : 3; // no teste longo, menos perguntas dos níveis de baixo
@@ -28,7 +29,7 @@ export default function Placement() {
         <div className="card" style={{ maxWidth: 560, padding: 32 }}>
           <h1 style={{ fontSize: 32, margin: '0 0 12px' }}>Teste de nível</h1>
           <p className="muted" style={{ fontSize: 17, lineHeight: 1.6, margin: '0 0 16px' }}>
-            São {entries.length} perguntas rápidas sobre o conteúdo {upTo === 2 ? 'dos níveis A1, A2 e B1' : upTo === 1 ? 'dos níveis A1 e A2' : 'do nível A1'}. Não tem problema errar: o teste só serve para descobrir <b>por onde você começa</b>.
+            São {entries.length} perguntas rápidas sobre o conteúdo {tested.length === 1 ? 'do nível A1' : `dos níveis ${tested.slice(0, -1).join(', ')} e ${tested[tested.length - 1]}`}. Não tem problema errar: o teste só serve para descobrir <b>por onde você começa</b>.
           </p>
           <ul style={{ margin: '0 0 24px', paddingLeft: 20, lineHeight: 1.8, color: 'var(--text2)' }}>
             <li>Cada unidade em que você acertar pelo menos 2 de cada 3 perguntas é marcada como concluída (a partir da primeira).</li>

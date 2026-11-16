@@ -1,0 +1,731 @@
+{
+ "id": "b2-u8",
+ "level": "B2",
+ "order": 8,
+ "title": "Defendendo um ponto",
+ "subtitle": "Although, however, despite e outros conectores para argumentar.",
+ "can_do": {
+  "text": "Consigo defender um ponto de vista, comparar vantagens e desvantagens e ligar minhas ideias com clareza.",
+  "source": "CEFR (Conselho da Europa) — Produção oral: argumentar (por exemplo, num debate), nível B2"
+ },
+ "core_inventory": [
+  "Grammar: contrast linkers (although, however, despite / in spite of, whereas)",
+  "Grammar: cause and result linkers (because of, therefore, as a result, so that)",
+  "Functions: presenting advantages and disadvantages (on the one hand / on the other hand)",
+  "Functions: adding points and concluding (moreover, in addition, to sum up)"
+ ],
+ "words": [
+  [
+   "although",
+   "embora"
+  ],
+  [
+   "however",
+   "no entanto"
+  ],
+  [
+   "despite",
+   "apesar de"
+  ],
+  [
+   "whereas",
+   "enquanto (contraste)"
+  ],
+  [
+   "therefore",
+   "portanto"
+  ],
+  [
+   "moreover",
+   "além disso"
+  ],
+  [
+   "advantage",
+   "vantagem"
+  ],
+  [
+   "disadvantage",
+   "desvantagem"
+  ],
+  [
+   "argument",
+   "argumento"
+  ],
+  [
+   "conclusion",
+   "conclusão"
+  ]
+ ],
+ "guide": {
+  "title": "Conectores para argumentar",
+  "intro": "Conectores deixam seu argumento claro: mostram contraste (although, however, despite), causa e resultado (because of, therefore) e organizam as ideias (on the one hand, moreover, to sum up).",
+  "points": [
+   {
+    "en": "Although it was raining, we went out.",
+    "pt": "Embora estivesse chovendo, nós saímos.",
+    "note": "Although + frase completa."
+   },
+   {
+    "en": "Despite the rain, we went out.",
+    "pt": "Apesar da chuva, nós saímos.",
+    "note": "Despite + substantivo ou -ing (nunca + frase completa)."
+   },
+   {
+    "en": "The plan is good. However, it is expensive.",
+    "pt": "O plano é bom. No entanto, é caro.",
+    "note": "However costuma começar a frase, com vírgula."
+   },
+   {
+    "en": "The flight was cancelled. Therefore, we stayed another night.",
+    "pt": "O voo foi cancelado. Portanto, ficamos mais uma noite.",
+    "note": "Therefore = portanto (resultado)."
+   },
+   {
+    "en": "On the one hand, it's cheap. On the other hand, it's slow.",
+    "pt": "Por um lado, é barato. Por outro lado, é lento.",
+    "note": "Para comparar vantagens e desvantagens."
+   }
+  ],
+  "tips": [
+   "Erro comum: \"Despite it was raining\". Com frase completa, use although. Com despite, diga \"despite the rain\".",
+   "\"But\" fica no meio da frase. \"However\" é mais formal e costuma começar uma frase nova."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b2-u8-l1",
+   "title": "Although e despite",
+   "items": [
+    {
+     "id": "b2u8l1-1",
+     "type": "meaning",
+     "en": "Although he was tired, he finished the work.",
+     "options": [
+      "Embora estivesse cansado, ele terminou o trabalho.",
+      "Ele estava cansado, então não terminou o trabalho.",
+      "Ele terminou o trabalho e ficou cansado."
+     ],
+     "answer": "Embora estivesse cansado, ele terminou o trabalho.",
+     "why": "Although = embora (contraste)."
+    },
+    {
+     "id": "b2u8l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ the traffic, we arrived on time.",
+     "options": [
+      "Despite",
+      "Although",
+      "However"
+     ],
+     "answer": "Despite",
+     "why": "Despite + substantivo (the traffic).",
+     "wrong": {
+      "Although": "Although precisa de uma frase completa: Although there was traffic…"
+     }
+    },
+    {
+     "id": "b2u8l1-3",
+     "type": "choice",
+     "en": "___ she studied a lot, she failed the test.",
+     "options": [
+      "Although",
+      "Despite",
+      "Because"
+     ],
+     "answer": "Although",
+     "why": "Although + frase completa (she studied a lot)."
+    },
+    {
+     "id": "b2u8l1-4",
+     "type": "build",
+     "pt": "Apesar da chuva, o jogo continuou.",
+     "answer": "Despite the rain the game continued",
+     "extra": [
+      "although",
+      "of"
+     ],
+     "display": "Despite the rain, the game continued.",
+     "why": "Despite + substantivo, sem \"of\"."
+    },
+    {
+     "id": "b2u8l1-5",
+     "type": "choice",
+     "en": "He went to work despite ___ sick.",
+     "options": [
+      "feeling",
+      "he felt",
+      "feel"
+     ],
+     "answer": "feeling",
+     "why": "Despite + -ing (ou substantivo)."
+    },
+    {
+     "id": "b2u8l1-6",
+     "type": "listen",
+     "en": "In spite of the price, the tickets sold out in an hour.",
+     "options": [
+      "Apesar do preço, os ingressos esgotaram em uma hora.",
+      "Por causa do preço, ninguém comprou ingresso.",
+      "Os ingressos estavam baratos."
+     ],
+     "answer": "Apesar do preço, os ingressos esgotaram em uma hora.",
+     "why": "In spite of = despite = apesar de."
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l2",
+   "title": "However e therefore",
+   "items": [
+    {
+     "id": "b2u8l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The hotel was beautiful. ___, the food was terrible.",
+     "options": [
+      "However",
+      "Therefore",
+      "Moreover"
+     ],
+     "answer": "However",
+     "why": "However = no entanto (contraste)."
+    },
+    {
+     "id": "b2u8l2-2",
+     "type": "meaning",
+     "en": "It was raining. Therefore, the match was cancelled.",
+     "options": [
+      "Estava chovendo. Portanto, a partida foi cancelada.",
+      "Estava chovendo, mas jogaram mesmo assim.",
+      "A partida foi cancelada antes da chuva."
+     ],
+     "answer": "Estava chovendo. Portanto, a partida foi cancelada.",
+     "why": "Therefore = portanto (resultado)."
+    },
+    {
+     "id": "b2u8l2-3",
+     "type": "choice",
+     "en": "The course is cheap. ___, it's online, so you can study at home.",
+     "options": [
+      "Moreover",
+      "However",
+      "Although"
+     ],
+     "answer": "Moreover",
+     "why": "Moreover = além disso (adiciona mais um ponto a favor)."
+    },
+    {
+     "id": "b2u8l2-4",
+     "type": "build",
+     "pt": "Meu irmão ama esportes, enquanto eu prefiro livros.",
+     "answer": "My brother loves sports whereas I prefer books",
+     "extra": [
+      "despite",
+      "however"
+     ],
+     "display": "My brother loves sports, whereas I prefer books.",
+     "why": "Whereas = enquanto (comparando duas coisas diferentes)."
+    },
+    {
+     "id": "b2u8l2-5",
+     "type": "listen",
+     "en": "As a result of the storm, many flights were delayed.",
+     "options": [
+      "Por causa da tempestade, muitos voos atrasaram.",
+      "A tempestade começou depois dos voos.",
+      "Nenhum voo atrasou por causa da tempestade."
+     ],
+     "answer": "Por causa da tempestade, muitos voos atrasaram.",
+     "why": "As a result of = em consequência de."
+    },
+    {
+     "id": "b2u8l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "although",
+       "embora"
+      ],
+      [
+       "however",
+       "no entanto"
+      ],
+      [
+       "despite",
+       "apesar de"
+      ],
+      [
+       "therefore",
+       "portanto"
+      ],
+      [
+       "moreover",
+       "além disso"
+      ]
+     ],
+     "why": "Conectores para ligar ideias."
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l3",
+   "title": "Prós e contras",
+   "items": [
+    {
+     "id": "b2u8l3-1",
+     "type": "meaning",
+     "en": "On the one hand, city life is exciting. On the other hand, it's very expensive.",
+     "options": [
+      "Por um lado, a vida na cidade é empolgante. Por outro lado, é muito cara.",
+      "A vida na cidade é empolgante e barata.",
+      "Na cidade, uma mão lava a outra."
+     ],
+     "answer": "Por um lado, a vida na cidade é empolgante. Por outro lado, é muito cara.",
+     "why": "On the one hand / on the other hand = por um lado / por outro lado."
+    },
+    {
+     "id": "b2u8l3-2",
+     "type": "choice",
+     "en": "One ___ of working from home is that you don't waste time in traffic.",
+     "options": [
+      "advantage",
+      "disadvantage",
+      "argument"
+     ],
+     "answer": "advantage",
+     "why": "Advantage = vantagem. Não perder tempo no trânsito é algo bom."
+    },
+    {
+     "id": "b2u8l3-3",
+     "type": "choice",
+     "en": "I'm saving money ___ I can travel next year.",
+     "options": [
+      "so that",
+      "although",
+      "however"
+     ],
+     "answer": "so that",
+     "why": "So that = para que (objetivo)."
+    },
+    {
+     "id": "b2u8l3-4",
+     "type": "build",
+     "pt": "Por outro lado, é mais seguro.",
+     "answer": "On the other hand it is safer",
+     "extra": [
+      "one",
+      "however"
+     ],
+     "display": "On the other hand, it is safer.",
+     "why": "On the other hand = por outro lado."
+    },
+    {
+     "id": "b2u8l3-5",
+     "type": "listen",
+     "en": "To sum up, I believe the advantages are bigger than the disadvantages.",
+     "options": [
+      "Resumindo, acredito que as vantagens são maiores que as desvantagens.",
+      "As desvantagens são maiores, sem dúvida.",
+      "Ainda não sei quais são as vantagens."
+     ],
+     "answer": "Resumindo, acredito que as vantagens são maiores que as desvantagens.",
+     "why": "To sum up = resumindo, concluindo."
+    },
+    {
+     "id": "b2u8l3-6",
+     "type": "choice",
+     "en": "The streets were closed ___ the festival.",
+     "options": [
+      "because of",
+      "because",
+      "although"
+     ],
+     "answer": "because of",
+     "why": "Because of + substantivo. Because + frase completa.",
+     "wrong": {
+      "because": "Because pede uma frase completa (because there was a festival). Antes de substantivo, use because of."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b2u8l4-1",
+     "type": "type",
+     "pt": "Embora estivesse chovendo, nós saímos.",
+     "answer": "Although it was raining we went out",
+     "accept": [
+      "Although it was raining, we went out",
+      "Even though it was raining, we went out",
+      "Even though it was raining we went out"
+     ],
+     "why": "Although + frase completa."
+    },
+    {
+     "id": "b2u8l4-2",
+     "type": "type",
+     "pt": "Apesar da chuva, nós saímos.",
+     "answer": "Despite the rain we went out",
+     "accept": [
+      "Despite the rain, we went out",
+      "In spite of the rain, we went out",
+      "In spite of the rain we went out"
+     ],
+     "why": "Despite + substantivo."
+    },
+    {
+     "id": "b2u8l4-3",
+     "type": "dictation",
+     "en": "However, it is very expensive.",
+     "why": "However = no entanto."
+    },
+    {
+     "id": "b2u8l4-4",
+     "type": "type",
+     "pt": "Portanto, ficamos em casa.",
+     "answer": "Therefore we stayed at home",
+     "accept": [
+      "Therefore, we stayed at home",
+      "Therefore, we stayed home",
+      "Therefore we stayed home"
+     ],
+     "why": "Therefore = portanto."
+    },
+    {
+     "id": "b2u8l4-5",
+     "type": "dictation",
+     "en": "On the other hand, it is safer.",
+     "why": "On the other hand = por outro lado."
+    },
+    {
+     "id": "b2u8l4-6",
+     "type": "type",
+     "pt": "Além disso, é mais barato.",
+     "answer": "Moreover it is cheaper",
+     "accept": [
+      "Moreover, it is cheaper",
+      "Moreover, it's cheaper",
+      "In addition, it is cheaper",
+      "In addition, it's cheaper"
+     ],
+     "why": "Moreover ou in addition = além disso."
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b2u8l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Should schools allow phones in class?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I don't think so. Although phones are useful, they distract students.",
+      "I don't think so. Despite phones are useful, they distract students.",
+      "I don't think so. However phones are useful, they distract students."
+     ],
+     "answer": "I don't think so. Although phones are useful, they distract students.",
+     "why": "Although + frase completa. Despite não aceita frase completa."
+    },
+    {
+     "id": "b2u8l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is it better to rent or to buy a house?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "On the one hand, buying is safer. On the other hand, it's expensive.",
+      "In one hand, buying is safer. In other hand, it's expensive.",
+      "On one side, buying is safer. On another side, it's expensive."
+     ],
+     "answer": "On the one hand, buying is safer. On the other hand, it's expensive.",
+     "why": "A expressão fixa é on the one hand / on the other hand."
+    },
+    {
+     "id": "b2u8l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why didn't you go to the beach?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Because of the weather. It was really cold.",
+      "Because the weather. It was really cold.",
+      "Despite the weather. It was really cold."
+     ],
+     "answer": "Because of the weather. It was really cold.",
+     "why": "Because of + substantivo (the weather)."
+    },
+    {
+     "id": "b2u8l5-4",
+     "type": "speak",
+     "en": "I see your point. However, I disagree.",
+     "pt": "Entendo seu ponto. No entanto, discordo.",
+     "why": "\"However\" tem força no meio: \"rau-É-ver\"."
+    },
+    {
+     "id": "b2u8l5-5",
+     "type": "speak",
+     "en": "Despite the rain, we had fun.",
+     "pt": "Apesar da chuva, nos divertimos.",
+     "why": "\"Despite\" soa \"dis-PÁIT\"."
+    },
+    {
+     "id": "b2u8l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "So, what's your conclusion?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "To sum up, the advantages are bigger than the disadvantages.",
+      "To sum, the advantages are bigger than the disadvantages.",
+      "For sum up, the advantages are bigger than the disadvantages."
+     ],
+     "answer": "To sum up, the advantages are bigger than the disadvantages.",
+     "why": "A expressão completa é \"to sum up\" (resumindo)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b2u8l6-1",
+     "type": "choice",
+     "en": "She got the job ___ having no experience.",
+     "options": [
+      "despite",
+      "although",
+      "however"
+     ],
+     "answer": "despite",
+     "why": "Despite + -ing (having)."
+    },
+    {
+     "id": "b2u8l6-2",
+     "type": "type",
+     "pt": "No entanto, não concordo.",
+     "answer": "However I don't agree",
+     "accept": [
+      "However, I don't agree",
+      "However, I disagree",
+      "However I disagree",
+      "However, I do not agree"
+     ],
+     "why": "However + vírgula + frase."
+    },
+    {
+     "id": "b2u8l6-3",
+     "type": "meaning",
+     "en": "Whereas my sister loves cities, I prefer the countryside.",
+     "options": [
+      "Enquanto minha irmã ama cidades, eu prefiro o campo.",
+      "Minha irmã e eu amamos o campo.",
+      "Onde minha irmã mora, eu prefiro o campo."
+     ],
+     "answer": "Enquanto minha irmã ama cidades, eu prefiro o campo.",
+     "why": "Whereas = enquanto (comparando duas coisas diferentes)."
+    },
+    {
+     "id": "b2u8l6-4",
+     "type": "choice",
+     "en": "The bus was late. ___, I missed the start of the film.",
+     "options": [
+      "As a result",
+      "Despite",
+      "Although"
+     ],
+     "answer": "As a result",
+     "why": "As a result = como resultado, por isso."
+    },
+    {
+     "id": "b2u8l6-5",
+     "type": "dictation",
+     "en": "Although it was late, we kept working.",
+     "why": "Although + frase completa."
+    },
+    {
+     "id": "b2u8l6-6",
+     "type": "speak",
+     "en": "On the other hand, it's very expensive.",
+     "pt": "Por outro lado, é muito caro.",
+     "why": "\"Other hand\" se liga: \"â-der-RÉND\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l7",
+   "title": "História: O debate da escola",
+   "story": {
+    "title": "O debate da escola",
+    "lines": [
+     {
+      "who": "Teacher",
+      "en": "Today's question is: should students have homework every day?",
+      "pt": "A pergunta de hoje é: os alunos devem ter lição de casa todo dia?"
+     },
+     {
+      "who": "Nina",
+      "en": "I think not. ___ homework is useful, too much of it makes students tired.",
+      "pt": "Acho que não. Embora a lição de casa seja útil, lição demais deixa os alunos cansados.",
+      "gap": {
+       "answer": "Although",
+       "options": [
+        "Although",
+        "Despite",
+        "However"
+       ]
+      }
+     },
+     {
+      "who": "Leo",
+      "en": "I disagree. Homework helps us practice. ___, it teaches us to organize our time.",
+      "pt": "Discordo. A lição ajuda a gente a praticar. Além disso, ensina a organizar o tempo.",
+      "gap": {
+       "answer": "Moreover",
+       "options": [
+        "Moreover",
+        "Although",
+        "Despite"
+       ]
+      }
+     },
+     {
+      "ask": "Qual é a opinião do Leo?",
+      "options": [
+       "Ele é a favor da lição de casa",
+       "Ele é contra a lição de casa",
+       "Ele não tem opinião"
+      ],
+      "answer": "Ele é a favor da lição de casa",
+      "why": "\"I disagree. Homework helps us practice\"."
+     },
+     {
+      "who": "Nina",
+      "en": "On the one hand, that's true. On the other ___, we also need time for sports and family.",
+      "pt": "Por um lado, é verdade. Por outro lado, a gente também precisa de tempo para esporte e família.",
+      "gap": {
+       "answer": "hand",
+       "options": [
+        "hand",
+        "side",
+        "way"
+       ]
+      }
+     },
+     {
+      "who": "Leo",
+      "en": "Maybe. But many students don't study at all at home. Therefore, homework is necessary.",
+      "pt": "Talvez. Mas muitos alunos não estudam nada em casa. Portanto, a lição é necessária."
+     },
+     {
+      "who": "Nina",
+      "en": "What about homework only three days a week? That way, everyone is happy.",
+      "pt": "E que tal lição só três dias por semana? Assim todo mundo fica feliz."
+     },
+     {
+      "who": "Teacher",
+      "en": "Interesting! ___ your different opinions, you found a solution together.",
+      "pt": "Interessante! Apesar das opiniões diferentes, vocês encontraram uma solução juntos.",
+      "gap": {
+       "answer": "Despite",
+       "options": [
+        "Despite",
+        "Although",
+        "Therefore"
+       ]
+      }
+     },
+     {
+      "ask": "Qual foi a solução proposta pela Nina?",
+      "options": [
+       "Lição três dias por semana",
+       "Nenhuma lição",
+       "Lição todo dia"
+      ],
+      "answer": "Lição três dias por semana",
+      "why": "\"homework only three days a week\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u8l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u8l7-2",
+     "type": "quiz",
+     "q": "Qual era o tema do debate?",
+     "options": [
+      "Lição de casa todo dia",
+      "Celular na escola",
+      "Uniforme escolar"
+     ],
+     "answer": "Lição de casa todo dia",
+     "why": "\"should students have homework every day?\""
+    },
+    {
+     "id": "b2u8l7-3",
+     "type": "quiz",
+     "q": "Segundo a Nina, o que o excesso de lição causa?",
+     "options": [
+      "Deixa os alunos cansados",
+      "Melhora as notas",
+      "Deixa os pais felizes"
+     ],
+     "answer": "Deixa os alunos cansados",
+     "why": "\"too much of it makes students tired\"."
+    },
+    {
+     "id": "b2u8l7-4",
+     "type": "quiz",
+     "q": "Para que mais a Nina diz que os alunos precisam de tempo?",
+     "options": [
+      "Esporte e família",
+      "Videogame",
+      "Trabalhar"
+     ],
+     "answer": "Esporte e família",
+     "why": "\"we also need time for sports and family\"."
+    }
+   ]
+  }
+ ]
+}

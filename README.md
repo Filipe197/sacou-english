@@ -65,9 +65,9 @@ npm run dev
 
 ## Conteúdo
 
-- As unidades ficam em `src/content/a1/unit-XX.json`.
+- As unidades ficam em `src/content/<nível>/unit-XX.json` (A1, A2, B1 e B2, 8 unidades de 7 lições cada).
 - `npm run validate` confere tudo: estrutura, explicação em cada exercício e se **toda palavra em inglês
-  está no nível A1 da CEFR-J Wordlist** (`content/sources/`). O `npm run build` roda essa checagem antes;
+  está no nível da unidade (ou abaixo) na CEFR-J Wordlist** (`content/sources/`). O `npm run build` roda essa checagem antes;
   se algo estiver errado, o deploy falha em vez de publicar conteúdo quebrado.
 - Palavras fora da lista só entram em `extra_vocab`, com justificativa (geram aviso).
 
