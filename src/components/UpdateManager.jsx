@@ -33,6 +33,7 @@ async function reloadTo(v) {
 export default function UpdateManager() {
   const loc = useLocation();
   const [pending, setPending] = useState(null); // versão nova esperando a pessoa sair da tela
+  const [hidden, setHidden] = useState(false);
   const busyRef = useRef(false);
   busyRef.current = BUSY.test(loc.pathname);
 
@@ -58,11 +59,13 @@ export default function UpdateManager() {
   // saiu da lição/jogo: aplica a atualização que estava esperando
   useEffect(() => { if (pending && !BUSY.test(loc.pathname)) reloadTo(pending); }, [loc.pathname, pending]);
 
-  if (!pending) return null;
+  if (!pending || hidden) return null;
   return (
     <div className="upd-bar" role="status">
-      <span>✨ Nova versão do Sacou English disponível.</span>
-      <button type="button" onClick={() => reloadTo(pending)}>Atualizar</button>
+      <span className="upd-ic" aria-hidden="true">✨</span>
+      <span className="upd-txt"><b>Nova versão</b><small>Atualiza ao fim da lição</small></span>
+      <button type="button" className="upd-go" onClick={() => reloadTo(pending)}>Atualizar</button>
+      <button type="button" className="upd-x" aria-label="Dispensar" onClick={() => setHidden(true)}>×</button>
     </div>
   );
 }
