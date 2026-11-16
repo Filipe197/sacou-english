@@ -365,6 +365,381 @@
      "why": "Promessa/decisão: I'll (I will) + call + you."
     }
    ]
+  },
+  {
+   "id": "a2-u6-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "a2u6l4-1",
+     "type": "type",
+     "pt": "Eu vou visitar meus pais.",
+     "answer": "I'm going to visit my parents.",
+     "why": "Plano: am going to + visit.",
+     "accept": [
+      "I am going to visit my parents."
+     ]
+    },
+    {
+     "id": "a2u6l4-2",
+     "type": "type",
+     "pt": "Vai chover amanhã.",
+     "answer": "It will rain tomorrow.",
+     "why": "Previsão: will. Going to também vale.",
+     "accept": [
+      "It's going to rain tomorrow.",
+      "It is going to rain tomorrow."
+     ]
+    },
+    {
+     "id": "a2u6l4-3",
+     "type": "dictation",
+     "en": "What are you going to do tomorrow?",
+     "why": "Pergunta com going to."
+    },
+    {
+     "id": "a2u6l4-4",
+     "type": "type",
+     "pt": "Nós não vamos viajar.",
+     "answer": "We aren't going to travel.",
+     "why": "Negativa: aren't going to.",
+     "accept": [
+      "We are not going to travel.",
+      "We're not going to travel."
+     ]
+    },
+    {
+     "id": "a2u6l4-5",
+     "type": "dictation",
+     "en": "I'll call you later.",
+     "why": "I'll = I will: decisão ou promessa."
+    },
+    {
+     "id": "a2u6l4-6",
+     "type": "type",
+     "pt": "Ela vai comprar um carro.",
+     "answer": "She's going to buy a car.",
+     "why": "She's going to + buy.",
+     "accept": [
+      "She is going to buy a car."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a2-u6-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "a2u6l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What are you going to do on Saturday?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'm going to visit my grandmother.",
+      "I visited my grandmother.",
+      "I'm visit my grandmother."
+     ],
+     "answer": "I'm going to visit my grandmother.",
+     "why": "Plano para o futuro: going to."
+    },
+    {
+     "id": "a2u6l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "It's very hot in here."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'll open the window.",
+      "I opened the window tomorrow.",
+      "I'm open the window."
+     ],
+     "answer": "I'll open the window.",
+     "why": "Decisão na hora: I'll."
+    },
+    {
+     "id": "a2u6l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Are you going to come to the party?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Maybe. I'll call you later.",
+      "Yes, I came.",
+      "No, I won't came."
+     ],
+     "answer": "Maybe. I'll call you later.",
+     "why": "\"Maybe\" = talvez. I'll call = vou ligar."
+    },
+    {
+     "id": "a2u6l5-4",
+     "type": "speak",
+     "en": "I'm going to study tonight.",
+     "pt": "Vou estudar hoje à noite.",
+     "why": "Na fala rápida \"going to\" vira \"gonna\"."
+    },
+    {
+     "id": "a2u6l5-5",
+     "type": "speak",
+     "en": "I'll help you.",
+     "pt": "Eu te ajudo.",
+     "why": "\"I'll\" soa como \"áil\"."
+    },
+    {
+     "id": "a2u6l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you think it will rain?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, I think it will be sunny.",
+      "No, it rained.",
+      "No, it is raining."
+     ],
+     "answer": "No, I think it will be sunny.",
+     "why": "Previsão: will be."
+    }
+   ]
+  },
+  {
+   "id": "a2-u6-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "a2u6l6-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Next year I ___ going to learn to drive.",
+     "options": [
+      "am",
+      "will",
+      "do"
+     ],
+     "answer": "am",
+     "why": "going to precisa do to be: I am going to.",
+     "wrong": {
+      "will": "\"Will going to\" não existe.",
+      "do": "\"Do going to\" não existe."
+     }
+    },
+    {
+     "id": "a2u6l6-2",
+     "type": "type",
+     "pt": "Eu te ajudo.",
+     "answer": "I'll help you.",
+     "why": "Oferta na hora: I'll.",
+     "accept": [
+      "I will help you."
+     ]
+    },
+    {
+     "id": "a2u6l6-3",
+     "type": "meaning",
+     "en": "We're going to stay at home tonight.",
+     "options": [
+      "Vamos ficar em casa hoje à noite.",
+      "Ficamos em casa ontem à noite.",
+      "Estamos em casa agora."
+     ],
+     "answer": "Vamos ficar em casa hoje à noite.",
+     "why": "going to = plano."
+    },
+    {
+     "id": "a2u6l6-4",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Don't worry. I ___ forget.",
+     "options": [
+      "won't",
+      "don't",
+      "am not"
+     ],
+     "answer": "won't",
+     "why": "Promessa: won't (will not).",
+     "wrong": {
+      "don't": "\"I don't forget\" é hábito, não promessa.",
+      "am not": "\"I am not forget\" não existe."
+     }
+    },
+    {
+     "id": "a2u6l6-5",
+     "type": "dictation",
+     "en": "They're going to travel next week.",
+     "why": "They're going to + travel."
+    },
+    {
+     "id": "a2u6l6-6",
+     "type": "speak",
+     "en": "We're going to have a party.",
+     "pt": "Vamos fazer uma festa.",
+     "why": "\"Party\" soa como \"PÁR-ti\" ou \"PÁR-di\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u6-l7",
+   "title": "História: Planos para o fim de semana",
+   "story": {
+    "title": "Planos para o fim de semana",
+    "lines": [
+     {
+      "who": "Julia",
+      "en": "Are you going to do anything this weekend?",
+      "pt": "Você vai fazer alguma coisa neste fim de semana?"
+     },
+     {
+      "who": "Tom",
+      "en": "Yes! I'm going ___ visit my grandmother.",
+      "pt": "Sim! Vou visitar minha avó.",
+      "gap": {
+       "answer": "to",
+       "options": [
+        "to",
+        "at",
+        "for"
+       ]
+      }
+     },
+     {
+      "who": "Julia",
+      "en": "Nice! Where does she live?",
+      "pt": "Legal! Onde ela mora?"
+     },
+     {
+      "who": "Tom",
+      "en": "In a small town near the sea.",
+      "pt": "Numa cidade pequena perto do mar."
+     },
+     {
+      "ask": "Quem o Tom vai visitar?",
+      "options": [
+       "A avó",
+       "Os amigos",
+       "A Julia"
+      ],
+      "answer": "A avó",
+      "why": "\"visit my grandmother\"."
+     },
+     {
+      "who": "Julia",
+      "en": "Are you going to drive?",
+      "pt": "Você vai de carro?"
+     },
+     {
+      "who": "Tom",
+      "en": "No, I'm going to ___ the train.",
+      "pt": "Não, vou pegar o trem.",
+      "gap": {
+       "answer": "take",
+       "options": [
+        "take",
+        "took",
+        "taking"
+       ]
+      }
+     },
+     {
+      "who": "Julia",
+      "en": "I think it ___ rain on Saturday. Take an umbrella!",
+      "pt": "Acho que vai chover no sábado. Leve um guarda-chuva!",
+      "gap": {
+       "answer": "will",
+       "options": [
+        "will",
+        "is",
+        "did"
+       ]
+      }
+     },
+     {
+      "who": "Tom",
+      "en": "Good idea. I'll buy one today.",
+      "pt": "Boa ideia. Vou comprar um hoje."
+     },
+     {
+      "ask": "O que o Tom decide comprar?",
+      "options": [
+       "Um guarda-chuva",
+       "Uma passagem de avião",
+       "Um presente"
+      ],
+      "answer": "Um guarda-chuva",
+      "why": "\"I'll buy one today\" — um guarda-chuva."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a2u6l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "a2u6l7-2",
+     "type": "quiz",
+     "q": "Onde a avó do Tom mora?",
+     "options": [
+      "Numa cidade pequena perto do mar",
+      "Em Londres",
+      "Perto da Julia"
+     ],
+     "answer": "Numa cidade pequena perto do mar",
+     "why": "\"In a small town near the sea\"."
+    },
+    {
+     "id": "a2u6l7-3",
+     "type": "quiz",
+     "q": "Como o Tom vai viajar?",
+     "options": [
+      "De trem",
+      "De carro",
+      "De avião"
+     ],
+     "answer": "De trem",
+     "why": "\"I'm going to take the train\"."
+    },
+    {
+     "id": "a2u6l7-4",
+     "type": "quiz",
+     "q": "O que a Julia acha do tempo?",
+     "options": [
+      "Vai chover no sábado",
+      "Vai fazer sol",
+      "Vai fazer frio"
+     ],
+     "answer": "Vai chover no sábado",
+     "why": "\"I think it will rain on Saturday\"."
+    }
+   ]
   }
  ]
 }

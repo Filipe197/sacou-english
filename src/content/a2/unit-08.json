@@ -1,66 +1,731 @@
 {
-  "id": "a2-u8",
-  "level": "A2",
-  "order": 8,
-  "title": "Posso? Preciso?",
-  "subtitle": "Can, could e have to: habilidades, pedidos e obrigações.",
-  "can_do": {
-    "text": "Consigo dizer o que sei fazer, pedir algo com educação e explicar o que preciso fazer.",
-    "source": "CEFR (Conselho da Europa) — Troca de informações, nível A2"
-  },
-  "core_inventory": ["Grammar: can / can't (ability, permission)", "Grammar: could (past ability, polite requests)", "Grammar: have to / don't have to (obligation)", "Functions: making polite requests"],
-  "words": [
-    ["can", "consegue / sabe / pode"], ["can't", "não consegue / não pode"], ["could", "conseguia / poderia"], ["have to", "ter que"],
-    ["don't have to", "não precisa"], ["swim", "nadar"], ["drive", "dirigir"], ["speak", "falar (um idioma)"], ["help", "ajudar"], ["borrow", "pegar emprestado"]
+ "id": "a2-u8",
+ "level": "A2",
+ "order": 8,
+ "title": "Posso? Preciso?",
+ "subtitle": "Can, could e have to: habilidades, pedidos e obrigações.",
+ "can_do": {
+  "text": "Consigo dizer o que sei fazer, pedir algo com educação e explicar o que preciso fazer.",
+  "source": "CEFR (Conselho da Europa) — Troca de informações, nível A2"
+ },
+ "core_inventory": [
+  "Grammar: can / can't (ability, permission)",
+  "Grammar: could (past ability, polite requests)",
+  "Grammar: have to / don't have to (obligation)",
+  "Functions: making polite requests"
+ ],
+ "words": [
+  [
+   "can",
+   "consegue / sabe / pode"
   ],
-  "guide": {
-    "title": "Can, could e have to",
-    "intro": "\"Can\" é um verbo especial: não muda com he/she, não usa do/does e o verbo depois dele fica na forma normal. \"Have to\" fala de obrigação.",
-    "points": [
-      { "en": "I can swim. She can speak English.", "pt": "Eu sei nadar. Ela sabe falar inglês.", "note": "Habilidade: can + verbo. Nunca \"she cans\" nem \"can to\"." },
-      { "en": "Can I open the window?", "pt": "Posso abrir a janela?", "note": "Pedir permissão: Can I...?" },
-      { "en": "Could you help me, please?", "pt": "Você poderia me ajudar, por favor?", "note": "\"Could you...?\" é mais educado que \"Can you...?\"." },
-      { "en": "When I was five, I couldn't read.", "pt": "Quando eu tinha cinco anos, não sabia ler.", "note": "\"Could\" também é o passado de can." },
-      { "en": "I have to work. She has to study. You don't have to pay.", "pt": "Tenho que trabalhar. Ela tem que estudar. Você não precisa pagar.", "note": "Obrigação: have/has to. \"Don't have to\" = não precisa (não é proibido)." }
-    ],
-    "tips": ["\"Can't\" se pronuncia \"kent\" (EUA) ou \"kánt\" (Reino Unido). Preste atenção no t no final.", "\"You don't have to\" = não é necessário. Para proibir, use \"you can't\"."]
-  },
-  "lessons": [
-    {
-      "id": "a2-u8-l1",
-      "title": "Eu sei fazer",
-      "items": [
-        { "id": "a2u8l1-1", "type": "meaning", "en": "I can swim.", "options": ["Eu sei nadar.", "Eu preciso nadar.", "Eu nadei."], "answer": "Eu sei nadar.", "why": "\"Can\" para habilidade = saber/conseguir fazer." },
-        { "id": "a2u8l1-2", "type": "choice", "prompt": "Complete:", "en": "My sister can ___ three languages.", "options": ["speak", "speaks", "to speak"], "answer": "speak", "why": "Depois de \"can\" o verbo fica na forma normal, sem -s e sem \"to\".", "wrong": { "speaks": "Depois de can, nunca -s.", "to speak": "\"Can\" não usa \"to\" depois." } },
-        { "id": "a2u8l1-3", "type": "choice", "prompt": "Complete:", "en": "He ___ drive. He doesn't have a car.", "options": ["can't", "doesn't can", "not can"], "answer": "can't", "why": "Negativa de can: can't (cannot). Sem do/does.", "wrong": { "doesn't can": "\"Can\" não usa does: he can't.", "not can": "A ordem certa é \"can't\"." } },
-        { "id": "a2u8l1-4", "type": "build", "pt": "Você sabe cozinhar?", "answer": "Can you cook", "extra": ["do", "cooks"], "display": "Can you cook?", "why": "Pergunta com can: Can + pessoa + verbo. Sem \"do\"." },
-        { "id": "a2u8l1-5", "type": "listen", "en": "When I was a child, I couldn't swim.", "options": ["Quando eu era criança, eu não sabia nadar.", "Quando eu era criança, eu sabia nadar.", "Eu não posso nadar agora."], "answer": "Quando eu era criança, eu não sabia nadar.", "why": "\"Couldn't\" é o passado de \"can't\"." },
-        { "id": "a2u8l1-6", "type": "match", "pairs": [["swim", "nadar"], ["drive", "dirigir"], ["cook", "cozinhar"], ["sing", "cantar"]], "why": "Verbos comuns para falar de habilidades com can / can't." }
-      ]
-    },
-    {
-      "id": "a2-u8-l2",
-      "title": "Pedindo com educação",
-      "items": [
-        { "id": "a2u8l2-1", "type": "meaning", "en": "Could you help me, please?", "options": ["Você poderia me ajudar, por favor?", "Você me ajudou?", "Você sabe me ajudar?"], "answer": "Você poderia me ajudar, por favor?", "why": "\"Could you...?\" é um pedido educado: você poderia...?" },
-        { "id": "a2u8l2-2", "type": "choice", "prompt": "Pedindo permissão. Complete:", "en": "___ I use your phone?", "options": ["Can", "Do", "Am"], "answer": "Can", "why": "Para pedir permissão: Can I...? (ou, mais educado, Could I...?).", "wrong": { "Do": "\"Do I use your phone?\" pergunta sobre hábito, não pede permissão.", "Am": "\"Am I use\" não existe." } },
-        { "id": "a2u8l2-3", "type": "build", "pt": "Posso pegar sua caneta emprestada?", "answer": "Can I borrow your pen", "extra": ["lend", "do"], "display": "Can I borrow your pen?", "why": "\"Borrow\" = pegar emprestado (você recebe). \"Lend\" = emprestar (você dá)." },
-        { "id": "a2u8l2-4", "type": "listen", "en": "Could you open the door, please?", "options": ["Você poderia abrir a porta, por favor?", "Você pode fechar a porta?", "Você abriu a porta?"], "answer": "Você poderia abrir a porta, por favor?", "why": "Pedido educado: Could you + verbo + please?" },
-        { "id": "a2u8l2-5", "type": "choice", "prompt": "Qual é o mais educado?", "en": "___ speak slowly, please?", "options": ["Could you", "You", "Do you"], "answer": "Could you", "why": "\"Could you...?\" é a forma mais educada de pedir algo.", "wrong": { "You": "Sem verbo auxiliar, vira uma ordem, não um pedido.", "Do you": "\"Do you speak slowly?\" pergunta se a pessoa costuma falar devagar." } },
-        { "id": "a2u8l2-6", "type": "build", "pt": "Você poderia repetir, por favor?", "answer": "Could you repeat that please", "extra": ["can't", "do"], "display": "Could you repeat that, please?", "why": "Frase essencial para quem está aprendendo! Could you + repeat + that + please." }
-      ]
-    },
-    {
-      "id": "a2-u8-l3",
-      "title": "Tenho que...",
-      "items": [
-        { "id": "a2u8l3-1", "type": "meaning", "en": "I have to work on Saturday.", "options": ["Eu tenho que trabalhar no sábado.", "Eu gosto de trabalhar no sábado.", "Eu trabalhei no sábado."], "answer": "Eu tenho que trabalhar no sábado.", "why": "\"Have to\" + verbo = ter que (obrigação)." },
-        { "id": "a2u8l3-2", "type": "choice", "prompt": "Complete:", "en": "She ___ to get up early.", "options": ["has", "have", "can"], "answer": "has", "why": "Com he/she, \"have to\" vira \"has to\".", "wrong": { "have": "Com she é \"has to\".", "can": "\"Can to\" não existe." } },
-        { "id": "a2u8l3-3", "type": "meaning", "en": "You don't have to pay. It's free.", "options": ["Você não precisa pagar. É grátis.", "Você não pode pagar. É grátis.", "Você tem que pagar. É caro."], "answer": "Você não precisa pagar. É grátis.", "why": "\"Don't have to\" = não precisa. Não é proibido, só não é necessário. \"Free\" = grátis." },
-        { "id": "a2u8l3-4", "type": "build", "pt": "Nós temos que estudar hoje à noite.", "answer": "We have to study tonight", "extra": ["has", "can"], "display": "We have to study tonight.", "why": "We + have to + study. Com we usamos \"have\"." },
-        { "id": "a2u8l3-5", "type": "choice", "prompt": "Complete a pergunta:", "en": "___ you have to wear a uniform?", "options": ["Do", "Have", "Are"], "answer": "Do", "why": "\"Have to\" faz pergunta com do/does: Do you have to...?", "wrong": { "Have": "Com \"have to\", a pergunta usa \"do\".", "Are": "\"Are\" é para o verbo to be." } },
-        { "id": "a2u8l3-6", "type": "listen", "en": "He doesn't have to come tomorrow.", "options": ["Ele não precisa vir amanhã.", "Ele não pode vir amanhã.", "Ele tem que vir amanhã."], "answer": "Ele não precisa vir amanhã.", "why": "\"Doesn't have to\" = não precisa. Com he, usamos doesn't." }
-      ]
-    }
+  [
+   "can't",
+   "não consegue / não pode"
+  ],
+  [
+   "could",
+   "conseguia / poderia"
+  ],
+  [
+   "have to",
+   "ter que"
+  ],
+  [
+   "don't have to",
+   "não precisa"
+  ],
+  [
+   "swim",
+   "nadar"
+  ],
+  [
+   "drive",
+   "dirigir"
+  ],
+  [
+   "speak",
+   "falar (um idioma)"
+  ],
+  [
+   "help",
+   "ajudar"
+  ],
+  [
+   "borrow",
+   "pegar emprestado"
   ]
+ ],
+ "guide": {
+  "title": "Can, could e have to",
+  "intro": "\"Can\" é um verbo especial: não muda com he/she, não usa do/does e o verbo depois dele fica na forma normal. \"Have to\" fala de obrigação.",
+  "points": [
+   {
+    "en": "I can swim. She can speak English.",
+    "pt": "Eu sei nadar. Ela sabe falar inglês.",
+    "note": "Habilidade: can + verbo. Nunca \"she cans\" nem \"can to\"."
+   },
+   {
+    "en": "Can I open the window?",
+    "pt": "Posso abrir a janela?",
+    "note": "Pedir permissão: Can I...?"
+   },
+   {
+    "en": "Could you help me, please?",
+    "pt": "Você poderia me ajudar, por favor?",
+    "note": "\"Could you...?\" é mais educado que \"Can you...?\"."
+   },
+   {
+    "en": "When I was five, I couldn't read.",
+    "pt": "Quando eu tinha cinco anos, não sabia ler.",
+    "note": "\"Could\" também é o passado de can."
+   },
+   {
+    "en": "I have to work. She has to study. You don't have to pay.",
+    "pt": "Tenho que trabalhar. Ela tem que estudar. Você não precisa pagar.",
+    "note": "Obrigação: have/has to. \"Don't have to\" = não precisa (não é proibido)."
+   }
+  ],
+  "tips": [
+   "\"Can't\" se pronuncia \"kent\" (EUA) ou \"kánt\" (Reino Unido). Preste atenção no t no final.",
+   "\"You don't have to\" = não é necessário. Para proibir, use \"you can't\"."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "a2-u8-l1",
+   "title": "Eu sei fazer",
+   "items": [
+    {
+     "id": "a2u8l1-1",
+     "type": "meaning",
+     "en": "I can swim.",
+     "options": [
+      "Eu sei nadar.",
+      "Eu preciso nadar.",
+      "Eu nadei."
+     ],
+     "answer": "Eu sei nadar.",
+     "why": "\"Can\" para habilidade = saber/conseguir fazer."
+    },
+    {
+     "id": "a2u8l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "My sister can ___ three languages.",
+     "options": [
+      "speak",
+      "speaks",
+      "to speak"
+     ],
+     "answer": "speak",
+     "why": "Depois de \"can\" o verbo fica na forma normal, sem -s e sem \"to\".",
+     "wrong": {
+      "speaks": "Depois de can, nunca -s.",
+      "to speak": "\"Can\" não usa \"to\" depois."
+     }
+    },
+    {
+     "id": "a2u8l1-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He ___ drive. He doesn't have a car.",
+     "options": [
+      "can't",
+      "doesn't can",
+      "not can"
+     ],
+     "answer": "can't",
+     "why": "Negativa de can: can't (cannot). Sem do/does.",
+     "wrong": {
+      "doesn't can": "\"Can\" não usa does: he can't.",
+      "not can": "A ordem certa é \"can't\"."
+     }
+    },
+    {
+     "id": "a2u8l1-4",
+     "type": "build",
+     "pt": "Você sabe cozinhar?",
+     "answer": "Can you cook",
+     "extra": [
+      "do",
+      "cooks"
+     ],
+     "display": "Can you cook?",
+     "why": "Pergunta com can: Can + pessoa + verbo. Sem \"do\"."
+    },
+    {
+     "id": "a2u8l1-5",
+     "type": "listen",
+     "en": "When I was a child, I couldn't swim.",
+     "options": [
+      "Quando eu era criança, eu não sabia nadar.",
+      "Quando eu era criança, eu sabia nadar.",
+      "Eu não posso nadar agora."
+     ],
+     "answer": "Quando eu era criança, eu não sabia nadar.",
+     "why": "\"Couldn't\" é o passado de \"can't\"."
+    },
+    {
+     "id": "a2u8l1-6",
+     "type": "match",
+     "pairs": [
+      [
+       "swim",
+       "nadar"
+      ],
+      [
+       "drive",
+       "dirigir"
+      ],
+      [
+       "cook",
+       "cozinhar"
+      ],
+      [
+       "sing",
+       "cantar"
+      ]
+     ],
+     "why": "Verbos comuns para falar de habilidades com can / can't."
+    }
+   ]
+  },
+  {
+   "id": "a2-u8-l2",
+   "title": "Pedindo com educação",
+   "items": [
+    {
+     "id": "a2u8l2-1",
+     "type": "meaning",
+     "en": "Could you help me, please?",
+     "options": [
+      "Você poderia me ajudar, por favor?",
+      "Você me ajudou?",
+      "Você sabe me ajudar?"
+     ],
+     "answer": "Você poderia me ajudar, por favor?",
+     "why": "\"Could you...?\" é um pedido educado: você poderia...?"
+    },
+    {
+     "id": "a2u8l2-2",
+     "type": "choice",
+     "prompt": "Pedindo permissão. Complete:",
+     "en": "___ I use your phone?",
+     "options": [
+      "Can",
+      "Do",
+      "Am"
+     ],
+     "answer": "Can",
+     "why": "Para pedir permissão: Can I...? (ou, mais educado, Could I...?).",
+     "wrong": {
+      "Do": "\"Do I use your phone?\" pergunta sobre hábito, não pede permissão.",
+      "Am": "\"Am I use\" não existe."
+     }
+    },
+    {
+     "id": "a2u8l2-3",
+     "type": "build",
+     "pt": "Posso pegar sua caneta emprestada?",
+     "answer": "Can I borrow your pen",
+     "extra": [
+      "lend",
+      "do"
+     ],
+     "display": "Can I borrow your pen?",
+     "why": "\"Borrow\" = pegar emprestado (você recebe). \"Lend\" = emprestar (você dá)."
+    },
+    {
+     "id": "a2u8l2-4",
+     "type": "listen",
+     "en": "Could you open the door, please?",
+     "options": [
+      "Você poderia abrir a porta, por favor?",
+      "Você pode fechar a porta?",
+      "Você abriu a porta?"
+     ],
+     "answer": "Você poderia abrir a porta, por favor?",
+     "why": "Pedido educado: Could you + verbo + please?"
+    },
+    {
+     "id": "a2u8l2-5",
+     "type": "choice",
+     "prompt": "Qual é o mais educado?",
+     "en": "___ speak slowly, please?",
+     "options": [
+      "Could you",
+      "You",
+      "Do you"
+     ],
+     "answer": "Could you",
+     "why": "\"Could you...?\" é a forma mais educada de pedir algo.",
+     "wrong": {
+      "You": "Sem verbo auxiliar, vira uma ordem, não um pedido.",
+      "Do you": "\"Do you speak slowly?\" pergunta se a pessoa costuma falar devagar."
+     }
+    },
+    {
+     "id": "a2u8l2-6",
+     "type": "build",
+     "pt": "Você poderia repetir, por favor?",
+     "answer": "Could you repeat that please",
+     "extra": [
+      "can't",
+      "do"
+     ],
+     "display": "Could you repeat that, please?",
+     "why": "Frase essencial para quem está aprendendo! Could you + repeat + that + please."
+    }
+   ]
+  },
+  {
+   "id": "a2-u8-l3",
+   "title": "Tenho que...",
+   "items": [
+    {
+     "id": "a2u8l3-1",
+     "type": "meaning",
+     "en": "I have to work on Saturday.",
+     "options": [
+      "Eu tenho que trabalhar no sábado.",
+      "Eu gosto de trabalhar no sábado.",
+      "Eu trabalhei no sábado."
+     ],
+     "answer": "Eu tenho que trabalhar no sábado.",
+     "why": "\"Have to\" + verbo = ter que (obrigação)."
+    },
+    {
+     "id": "a2u8l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She ___ to get up early.",
+     "options": [
+      "has",
+      "have",
+      "can"
+     ],
+     "answer": "has",
+     "why": "Com he/she, \"have to\" vira \"has to\".",
+     "wrong": {
+      "have": "Com she é \"has to\".",
+      "can": "\"Can to\" não existe."
+     }
+    },
+    {
+     "id": "a2u8l3-3",
+     "type": "meaning",
+     "en": "You don't have to pay. It's free.",
+     "options": [
+      "Você não precisa pagar. É grátis.",
+      "Você não pode pagar. É grátis.",
+      "Você tem que pagar. É caro."
+     ],
+     "answer": "Você não precisa pagar. É grátis.",
+     "why": "\"Don't have to\" = não precisa. Não é proibido, só não é necessário. \"Free\" = grátis."
+    },
+    {
+     "id": "a2u8l3-4",
+     "type": "build",
+     "pt": "Nós temos que estudar hoje à noite.",
+     "answer": "We have to study tonight",
+     "extra": [
+      "has",
+      "can"
+     ],
+     "display": "We have to study tonight.",
+     "why": "We + have to + study. Com we usamos \"have\"."
+    },
+    {
+     "id": "a2u8l3-5",
+     "type": "choice",
+     "prompt": "Complete a pergunta:",
+     "en": "___ you have to wear a uniform?",
+     "options": [
+      "Do",
+      "Have",
+      "Are"
+     ],
+     "answer": "Do",
+     "why": "\"Have to\" faz pergunta com do/does: Do you have to...?",
+     "wrong": {
+      "Have": "Com \"have to\", a pergunta usa \"do\".",
+      "Are": "\"Are\" é para o verbo to be."
+     }
+    },
+    {
+     "id": "a2u8l3-6",
+     "type": "listen",
+     "en": "He doesn't have to come tomorrow.",
+     "options": [
+      "Ele não precisa vir amanhã.",
+      "Ele não pode vir amanhã.",
+      "Ele tem que vir amanhã."
+     ],
+     "answer": "Ele não precisa vir amanhã.",
+     "why": "\"Doesn't have to\" = não precisa. Com he, usamos doesn't."
+    }
+   ]
+  },
+  {
+   "id": "a2-u8-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "a2u8l4-1",
+     "type": "type",
+     "pt": "Eu sei nadar.",
+     "answer": "I can swim.",
+     "why": "Habilidade: can + verbo."
+    },
+    {
+     "id": "a2u8l4-2",
+     "type": "type",
+     "pt": "Você poderia me ajudar?",
+     "answer": "Could you help me?",
+     "why": "Pedido educado: Could you...?",
+     "accept": [
+      "Could you help me, please?"
+     ]
+    },
+    {
+     "id": "a2u8l4-3",
+     "type": "dictation",
+     "en": "She can speak three languages.",
+     "why": "Depois de can, sem -s: speak."
+    },
+    {
+     "id": "a2u8l4-4",
+     "type": "type",
+     "pt": "Eu tenho que trabalhar amanhã.",
+     "answer": "I have to work tomorrow.",
+     "why": "Obrigação: have to."
+    },
+    {
+     "id": "a2u8l4-5",
+     "type": "dictation",
+     "en": "You don't have to pay.",
+     "why": "Don't have to = não precisa."
+    },
+    {
+     "id": "a2u8l4-6",
+     "type": "type",
+     "pt": "Ele não sabe dirigir.",
+     "answer": "He can't drive.",
+     "why": "Negativa: can't.",
+     "accept": [
+      "He cannot drive.",
+      "He can not drive."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a2-u8-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "a2u8l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Can you swim?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I can.",
+      "Yes, I do.",
+      "Yes, I swim can."
+     ],
+     "answer": "Yes, I can.",
+     "why": "Pergunta com can → resposta com can."
+    },
+    {
+     "id": "a2u8l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Could you open the window, please?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Sure, no problem.",
+      "Yes, I could yesterday.",
+      "No, I don't open."
+     ],
+     "answer": "Sure, no problem.",
+     "why": "Resposta comum a um pedido: Sure, no problem."
+    },
+    {
+     "id": "a2u8l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you want to go to the cinema tonight?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Sorry, I can't. I have to study.",
+      "Sorry, I can't. I has to study.",
+      "Sorry, I don't can."
+     ],
+     "answer": "Sorry, I can't. I have to study.",
+     "why": "Com I: have to."
+    },
+    {
+     "id": "a2u8l5-4",
+     "type": "speak",
+     "en": "Could you repeat that, please?",
+     "pt": "Você poderia repetir, por favor?",
+     "why": "\"Could you\" soa como \"kúdju\"."
+    },
+    {
+     "id": "a2u8l5-5",
+     "type": "speak",
+     "en": "I have to go now.",
+     "pt": "Eu tenho que ir agora.",
+     "why": "\"Have to\" na fala soa como \"HÉF-tu\"."
+    },
+    {
+     "id": "a2u8l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do I have to pay for the museum?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, you don't have to. It's free.",
+      "No, you can't. It's free.",
+      "No, you haven't to."
+     ],
+     "answer": "No, you don't have to. It's free.",
+     "why": "Não é necessário = don't have to."
+    }
+   ]
+  },
+  {
+   "id": "a2-u8-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "a2u8l6-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "When I was a child, I ___ swim.",
+     "options": [
+      "couldn't",
+      "can't",
+      "don't"
+     ],
+     "answer": "couldn't",
+     "why": "Passado de can't: couldn't.",
+     "wrong": {
+      "can't": "A frase está no passado.",
+      "don't": "\"I don't swim\" não indica habilidade."
+     }
+    },
+    {
+     "id": "a2u8l6-2",
+     "type": "type",
+     "pt": "Ela tem que estudar hoje à noite.",
+     "answer": "She has to study tonight.",
+     "why": "Com she: has to."
+    },
+    {
+     "id": "a2u8l6-3",
+     "type": "meaning",
+     "en": "Can I borrow your phone?",
+     "options": [
+      "Posso pegar seu celular emprestado?",
+      "Posso te emprestar meu celular?",
+      "Você tem celular?"
+     ],
+     "answer": "Posso pegar seu celular emprestado?",
+     "why": "borrow = pegar emprestado."
+    },
+    {
+     "id": "a2u8l6-4",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We ___ to wear a uniform at school.",
+     "options": [
+      "have",
+      "has",
+      "can"
+     ],
+     "answer": "have",
+     "why": "Com we: have to.",
+     "wrong": {
+      "has": "Has é para he/she.",
+      "can": "\"Can to\" não existe."
+     }
+    },
+    {
+     "id": "a2u8l6-5",
+     "type": "dictation",
+     "en": "Could you speak slowly, please?",
+     "why": "Pedido educado com could."
+    },
+    {
+     "id": "a2u8l6-6",
+     "type": "speak",
+     "en": "I can't come tomorrow.",
+     "pt": "Não posso vir amanhã.",
+     "why": "\"Can't\" tem o t no final: \"kent\" ou \"kánt\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u8-l7",
+   "title": "História: A primeira aula de direção",
+   "story": {
+    "title": "A primeira aula de direção",
+    "lines": [
+     {
+      "who": "Professor",
+      "en": "Hi, Sofia! Can you drive?",
+      "pt": "Oi, Sofia! Você sabe dirigir?"
+     },
+     {
+      "who": "Sofia",
+      "en": "No, I ___. This is my first lesson!",
+      "pt": "Não. Esta é a minha primeira aula!",
+      "gap": {
+       "answer": "can't",
+       "options": [
+        "can't",
+        "don't",
+        "couldn't"
+       ]
+      }
+     },
+     {
+      "who": "Professor",
+      "en": "No problem. First, you have ___ open the door and sit down.",
+      "pt": "Sem problema. Primeiro, você tem que abrir a porta e sentar.",
+      "gap": {
+       "answer": "to",
+       "options": [
+        "to",
+        "at",
+        "for"
+       ]
+      }
+     },
+     {
+      "who": "Sofia",
+      "en": "OK. Could you speak slowly, please? I'm a little nervous.",
+      "pt": "Tá. Você poderia falar devagar, por favor? Estou um pouco nervosa."
+     },
+     {
+      "ask": "Como a Sofia se sente?",
+      "options": [
+       "Um pouco nervosa",
+       "Muito feliz",
+       "Cansada"
+      ],
+      "answer": "Um pouco nervosa",
+      "why": "\"I'm a little nervous\"."
+     },
+     {
+      "who": "Professor",
+      "en": "Sure. Now you ___ start the car.",
+      "pt": "Claro. Agora você pode ligar o carro.",
+      "gap": {
+       "answer": "can",
+       "options": [
+        "can",
+        "have",
+        "could"
+       ]
+      }
+     },
+     {
+      "who": "Sofia",
+      "en": "Wow, I'm driving!",
+      "pt": "Uau, estou dirigindo!"
+     },
+     {
+      "who": "Professor",
+      "en": "Very good! You don't have to be nervous.",
+      "pt": "Muito bem! Você não precisa ficar nervosa."
+     },
+     {
+      "ask": "O que o professor diz no final?",
+      "options": [
+       "Que ela não precisa ficar nervosa",
+       "Que ela tem que parar",
+       "Que a aula acabou"
+      ],
+      "answer": "Que ela não precisa ficar nervosa",
+      "why": "\"You don't have to be nervous\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a2u8l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "a2u8l7-2",
+     "type": "quiz",
+     "q": "É a primeira aula da Sofia?",
+     "options": [
+      "Sim",
+      "Não",
+      "Não sabemos"
+     ],
+     "answer": "Sim",
+     "why": "\"This is my first lesson!\"."
+    },
+    {
+     "id": "a2u8l7-3",
+     "type": "quiz",
+     "q": "O que a Sofia pede ao professor?",
+     "options": [
+      "Para falar devagar",
+      "Para dirigir por ela",
+      "Para parar o carro"
+     ],
+     "answer": "Para falar devagar",
+     "why": "\"Could you speak slowly, please?\"."
+    },
+    {
+     "id": "a2u8l7-4",
+     "type": "quiz",
+     "q": "O que acontece no final?",
+     "options": [
+      "Ela está dirigindo",
+      "Ela desiste",
+      "Ela fica com medo"
+     ],
+     "answer": "Ela está dirigindo",
+     "why": "\"Wow, I'm driving!\"."
+    }
+   ]
+  }
+ ]
 }

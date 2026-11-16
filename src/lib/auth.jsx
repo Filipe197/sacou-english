@@ -7,12 +7,15 @@ const AuthCtx = createContext(null);
 export function AuthProvider({ children }) {
   const [session, setSession] = useState(undefined); // undefined = carregando
   const [profile, setProfile] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   const loadProfile = useCallback(async (uid) => {
-    if (!uid) { setProfile(null); return null; }
+    if (!uid) { setProfile(null); setIsAdmin(false); return null; }
     const { data } = await supabase.from('profiles').select('*').eq('id', uid).maybeSingle();
     setProfile(data || null);
     if (data) fx.setEnabled(data.sound_on);
+    // painel de administração: só aparece para quem está na tabela admins
+    supabase.rpc('is_admin').then(({ data: adm }) => setIsAdmin(!!adm), () => setIsAdmin(false));
     return data;
   }, []);
 
@@ -33,6 +36,7 @@ export function AuthProvider({ children }) {
     user: session?.user || null,
     profile,
     setProfile,
+    isAdmin,
     loading: session === undefined || (session && profile === null),
     refreshProfile: () => loadProfile(session?.user?.id),
     async updateProfile(patch) {

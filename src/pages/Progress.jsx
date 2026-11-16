@@ -2,11 +2,15 @@ import { Link } from 'react-router-dom';
 import { UNITS, LESSONS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, levelPercent, currentLevel } from '../lib/content.js';
 import { useProgress, lastSevenDays, liveStreak } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
+import { useInstall } from '../lib/install.js';
+import { useNavigate } from 'react-router-dom';
 import { Shell, Spinner, Icon, Fire, Bolt } from '../components/ui.jsx';
 
 export default function Progress() {
   const prog = useProgress();
-  const { profile, user } = useAuth();
+  const { profile, user, updateProfile, signOut } = useAuth();
+  const inst = useInstall();
+  const nav = useNavigate();
   if (prog.loading) return <Spinner />;
 
   const days = lastSevenDays(prog.week);
@@ -100,6 +104,17 @@ export default function Progress() {
               );
             })}
           </div>
+        </div>
+        <div className="card">
+          <h2 style={{ margin: '0 0 12px', fontSize: 22 }}>Configurações</h2>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <button className="btn btn-out" onClick={() => updateProfile({ sound_on: !profile?.sound_on })} aria-pressed={!!profile?.sound_on}>
+              <Icon name={profile?.sound_on ? 'sound' : 'mute'} />{profile?.sound_on ? 'Som ligado' : 'Som desligado'}
+            </button>
+            {inst.canInstall && <button className="btn btn-lime" onClick={inst.install}><Icon name="download" />Instalar app</button>}
+            <button className="btn btn-out" onClick={async () => { await signOut(); nav('/'); }}><Icon name="logout" />Sair da conta</button>
+          </div>
+          {!inst.canInstall && inst.iosHint && <p className="note" style={{ marginTop: 12 }}>Para instalar no iPhone: no Safari, toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>}
         </div>
       </div>
     </Shell>

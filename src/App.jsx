@@ -14,6 +14,7 @@ import Placement from './pages/Placement.jsx';
 import Guide from './pages/Guide.jsx';
 import Progress from './pages/Progress.jsx';
 import Credits from './pages/Credits.jsx';
+import Admin from './pages/Admin.jsx';
 
 function Private({ children, allowNotOnboarded = false }) {
   const { session, profile, loading } = useAuth();
@@ -52,6 +53,7 @@ export default function App() {
         <Route path="/guia" element={<Private><Guide /></Private>} />
         <Route path="/guia/:unitId" element={<Private><Guide /></Private>} />
         <Route path="/progresso" element={<Private><Progress /></Private>} />
+        <Route path="/admin" element={<Private><Admin /></Private>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>

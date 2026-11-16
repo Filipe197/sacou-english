@@ -57,7 +57,7 @@ const CONTRACTIONS = {
   "he's": ['he', 'is'], "she's": ['she', 'is'], "it's": ['it', 'is'], "what's": ['what', 'is'],
   "where's": ['where', 'is'], "who's": ['who', 'is'], "that's": ['that', 'is'], "name's": ['name', 'is'],
   "isn't": ['is', 'not'], "aren't": ['are', 'not'], "don't": ['do', 'not'], "doesn't": ['does', 'not'],
-  "can't": ['can', 'not'], "i'd": ['i', 'would'], "you'd": ['you', 'would'],
+  "can't": ['can', 'not'], cannot: ['can', 'not'], "i'd": ['i', 'would'], "you'd": ['you', 'would'],
   "didn't": ['did', 'not'], "there's": ['there', 'is'], "who's": ['who', 'is'], "here's": ['here', 'is'], "wasn't": ['was', 'not'], "weren't": ['were', 'not'], "won't": ['will', 'not'],
   "i'll": ['i', 'will'], "she'll": ['she', 'will'], "he'll": ['he', 'will'], "they'll": ['they', 'will'], "you'll": ['you', 'will'], "we'll": ['we', 'will'], "it'll": ['it', 'will'], "couldn't": ['could', 'not'],
   "haven't": ['have', 'not'], "hasn't": ['has', 'not'], "shouldn't": ['should', 'not'], "mustn't": ['must', 'not'], "i've": ['i', 'have'], "let's": ['let', 'us'],

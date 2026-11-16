@@ -3,6 +3,7 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 
 const DotLottieReact = lazy(() => import('@lottiefiles/dotlottie-react').then(m => ({ default: m.DotLottieReact })));
 import { useAuth } from '../lib/auth.jsx';
+import { useInstall } from '../lib/install.js';
 
 // Ícones em traço (sem emoji)
 const P = {
@@ -26,6 +27,8 @@ const P = {
   trophy: <><path d="M8 21h8" /><path d="M12 17v4" /><path d="M7 4h10v5a5 5 0 0 1-10 0z" /><path d="M17 5h3v2a3 3 0 0 1-3 3" /><path d="M7 5H4v2a3 3 0 0 0 3 3" /></>,
   clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
   bolt: <path d="M13 2L4 14h7l-1 8 9-12h-7z" />,
+  download: <><path d="M12 4v11" /><path d="M7 10l5 5 5-5" /><path d="M5 20h14" /></>,
+  chart: <><path d="M4 20V10" /><path d="M10 20V4" /><path d="M16 20v-7" /><path d="M22 20H2" /></>,
   mic: <><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0" /><path d="M12 18v3" /></>,
 };
 export function Icon({ name, size = 20, color = 'currentColor', stroke = 2, label }) {
@@ -87,14 +90,17 @@ export function Anim({ name, size = 180, loop = false }) {
 
 // Layout da área do aluno (menu lateral)
 export function Shell({ children, rail, mistakesCount = 0 }) {
-  const { signOut, profile, updateProfile } = useAuth();
+  const { signOut, profile, updateProfile, isAdmin } = useAuth();
   const nav = useNavigate();
+  const inst = useInstall();
+  const [iosTip, setIosTip] = useState(false);
   const items = [
     ['/aprender', 'home', 'Aprender'],
     ['/praticar', 'bolt', 'Praticar'],
     ['/revisao', 'review', 'Revisar erros', mistakesCount],
     ['/guia', 'book', 'Guia de gramática'],
     ['/progresso', 'user', 'Meu progresso'],
+    ...(isAdmin ? [['/admin', 'chart', 'Administração']] : []),
   ];
   return (
     <div className="shell">
@@ -106,6 +112,17 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
           </NavLink>
         ))}
         <div className="side-foot">
+          {inst.canInstall && (
+            <button className="nav-a" style={{ background: 'var(--lime)', border: 0, cursor: 'pointer', color: 'var(--ink)' }} onClick={inst.install}>
+              <Icon name="download" />Instalar app
+            </button>
+          )}
+          {!inst.canInstall && inst.iosHint && (
+            <button className="nav-a" style={{ background: 'none', border: 0, cursor: 'pointer' }} onClick={() => setIosTip(v => !v)} aria-expanded={iosTip}>
+              <Icon name="download" />Instalar no iPhone
+            </button>
+          )}
+          {iosTip && <p className="note" style={{ margin: 0, fontSize: 13 }}>No Safari, toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>}
           <button className="nav-a" style={{ background: 'none', border: 0, cursor: 'pointer' }}
             onClick={() => updateProfile({ sound_on: !profile?.sound_on })} aria-pressed={!!profile?.sound_on}>
             <Icon name={profile?.sound_on ? 'sound' : 'mute'} />{profile?.sound_on ? 'Som ligado' : 'Som desligado'}

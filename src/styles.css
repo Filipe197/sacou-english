@@ -115,11 +115,16 @@ button{font-family:inherit}
 .content{flex:999 1 520px;min-width:0;padding:32px 24px 64px}
 .rail{flex:1 1 300px;max-width:380px;padding:32px 24px;display:flex;flex-direction:column;gap:18px}
 @media (max-width:860px){
-  .side{max-width:none;flex-basis:100%;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line);padding:12px;gap:4px}
-  .side .logo{display:none}
-  .side .nav-a{padding:10px 12px;font-size:14px}
-  .side-foot{margin:0;flex-direction:row;padding:0}
-  .rail{max-width:none}
+  /* celular: menu vira uma barra fixa no rodapé, como em apps */
+  .shell{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+  .side{position:fixed;left:0;right:0;bottom:0;z-index:30;max-width:none;flex-direction:row;justify-content:space-around;gap:2px;
+    padding:6px 4px calc(6px + env(safe-area-inset-bottom));border-right:0;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(11,13,26,.06)}
+  .side > div:first-child,.side-foot{display:none!important}
+  .side .nav-a{flex:1;flex-direction:column;justify-content:center;gap:2px;padding:6px 2px;min-height:54px;font-size:11px;text-align:center;line-height:1.15;position:relative}
+  .side .nav-a.active{background:var(--violet-l);color:var(--violet-dd)}
+  .side .badge{position:absolute;top:2px;right:calc(50% - 22px);margin:0;font-size:10px;padding:1px 6px}
+  .content{padding:20px 16px 32px}
+  .rail{max-width:none;padding:16px 16px 0;order:-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 }
 
 /* trilha */
@@ -258,3 +263,38 @@ button{font-family:inherit}
 .nw{display:inline-flex;align-items:center;gap:6px;background:#fff;border:2px solid var(--violet-ring);border-radius:12px;padding:6px 10px;font-size:16px;cursor:pointer;color:var(--ink);font-family:inherit}
 .nw b{color:var(--violet-dd)}
 .nw:hover{border-color:var(--violet)}
+
+/* barra de verificar sempre visível no rodapé (celular) */
+.bar{position:sticky;bottom:0;z-index:10;padding-bottom:env(safe-area-inset-bottom)}
+.lesson{min-height:100dvh}
+
+/* celular deitado: tudo mais compacto para caber na altura */
+@media (max-height:500px) and (orientation:landscape){
+  .lesson-top{padding:6px 16px}
+  .lesson-main{padding:2px 16px 10px}
+  .q{font-size:22px!important;letter-spacing:-.4px}
+  .q-label{margin-bottom:4px;font-size:12px}
+  .options{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+  .option{min-height:46px;font-size:16px;padding:6px 10px;gap:8px}
+  .option .k{width:24px;height:24px;font-size:12px}
+  .audio-btn{width:44px;height:44px}.audio-btn.big{width:52px;height:52px}
+  .match{gap:6px 12px;margin-top:8px}.match-col{gap:6px}.mbtn{min-height:40px;font-size:15px;padding:4px 10px}
+  .bank,.build-line{margin-top:8px}.build-line{min-height:50px;padding:6px 0}
+  .tile{min-height:40px;font-size:16px;padding:0 12px}
+  .bar-in{padding:8px 16px;flex-direction:row;align-items:center}
+  .fb h3{font-size:17px}.fb p{font-size:13px;line-height:1.4}.fb-ic{width:36px;height:36px}
+  .cta{min-height:44px;width:auto;min-width:160px}
+  .new-words{margin-bottom:6px;padding:6px 10px}
+  .type-in{margin-top:10px;min-height:48px;font-size:18px}
+  .chat{gap:6px}.bubble{font-size:16px;padding:8px 12px}
+  .mic{width:60px;height:60px}
+  .help-box{padding:12px 14px}
+}
+
+@media (max-width:520px){
+  .nav{flex-wrap:nowrap}
+  .navlinks{gap:12px}
+  .navlinks .btn{min-height:40px!important;padding:0 14px;font-size:14px!important}
+  .logo-text{font-size:18px}
+  .logo-mark{width:34px;height:34px}
+}
