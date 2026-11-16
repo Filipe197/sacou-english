@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "id": "caso1", "level": "A1", "unlock": "a1-u6", "title": "O bolo desapareceu", "place": "kitchen",
+      "intro": "Sábado. A Laura fez um bolo de chocolate para o aniversário da Nina e deixou na mesa da cozinha. Às dez horas, o bolo não estava mais lá. Ouça os suspeitos, leia as pistas e descubra quem pegou o bolo.",
+      "question": "Quem pegou o bolo?",
+      "suspects": [
+        { "id": "ben", "en": "I'm in the kitchen at ten. I make tea every morning at ten.", "pt": "Eu estou na cozinha às dez. Eu faço chá toda manhã às dez." },
+        { "id": "leo", "en": "I play football in the park at ten. I'm not at home.", "pt": "Eu jogo futebol no parque às dez. Não estou em casa." },
+        { "id": "nina", "en": "I'm in my room at ten. I read a book.", "pt": "Eu estou no meu quarto às dez. Eu leio um livro." }
+      ],
+      "clues": [
+        { "en": "It rains all morning. There is no football in the park.", "pt": "Chove a manhã toda. Não tem futebol no parque.",
+          "check": { "q": "Como estava o tempo de manhã?", "options": ["Chovendo", "Ensolarado", "Nevando"], "answer": "Chovendo", "why": "\"It rains all morning\": chove a manhã toda." } },
+        { "en": "Ben's cup of tea is on the table. It is hot.", "pt": "A xícara de chá do Ben está na mesa. Está quente.",
+          "check": { "q": "O que está na mesa?", "options": ["A xícara de chá do Ben", "O livro da Nina", "A bola do Leo"], "answer": "A xícara de chá do Ben", "why": "\"Ben's cup of tea\": a xícara de chá do Ben. O 's indica de quem é." } },
+        { "en": "There is chocolate on Leo's shirt.", "pt": "Tem chocolate na camisa do Leo.",
+          "check": { "q": "Onde tem chocolate?", "options": ["Na camisa do Leo", "No livro da Nina", "Na mão do Ben"], "answer": "Na camisa do Leo", "why": "\"On Leo's shirt\": na camisa do Leo." } }
+      ],
+      "answer": "leo",
+      "solution": "Foi o Leo! Ele disse que estava jogando futebol no parque, mas choveu a manhã toda e ninguém jogou. E ainda tinha chocolate na camisa dele. O Ben só estava fazendo chá, como faz toda manhã."
+    },
+    {
+      "id": "caso2", "level": "A2", "unlock": "a2-u3", "title": "O celular do hotel", "place": "hotel",
+      "intro": "Ontem à noite, o celular de um hóspede sumiu do balcão da recepção do hotel. Três pessoas estavam no hotel. Leia o que cada uma disse e encontre a mentira.",
+      "question": "Quem pegou o celular?",
+      "suspects": [
+        { "id": "paula", "en": "I worked at the front desk until eight. Then I went home by bus.", "pt": "Trabalhei na recepção até as oito. Depois fui para casa de ônibus." },
+        { "id": "marcos", "en": "I came back to the hotel at ten and went to my room. I slept all night.", "pt": "Voltei ao hotel às dez e fui para o meu quarto. Dormi a noite toda." },
+        { "id": "rita", "en": "I cleaned the rooms on the first floor. I didn't go to the front desk.", "pt": "Limpei os quartos do primeiro andar. Não fui à recepção." }
+      ],
+      "clues": [
+        { "en": "The phone was on the front desk at half past eight.", "pt": "O celular estava no balcão às oito e meia.",
+          "check": { "q": "A que horas o celular ainda estava no balcão?", "options": ["Às oito e meia", "Às nove e meia", "Às oito"], "answer": "Às oito e meia", "why": "\"Half past eight\" = oito e meia." } },
+        { "en": "The camera at the door saw Marcos at nine, not at ten.", "pt": "A câmera da porta viu o Marcos às nove, não às dez.",
+          "check": { "q": "A que horas a câmera viu o Marcos chegar?", "options": ["Às nove", "Às dez", "Às oito"], "answer": "Às nove", "why": "\"Saw Marcos at nine\": viu o Marcos às nove. \"Saw\" é o passado irregular de \"see\"." } },
+        { "en": "A man in glasses walked past the front desk at nine.", "pt": "Um homem de óculos passou pela recepção às nove.",
+          "check": { "q": "Quem passou pela recepção às nove?", "options": ["Um homem de óculos", "Uma mulher de avental", "Ninguém"], "answer": "Um homem de óculos", "why": "\"A man in glasses\": um homem de óculos." } }
+      ],
+      "answer": "marcos",
+      "solution": "Foi o Marcos! Ele disse que voltou às dez, mas a câmera mostrou que ele chegou às nove. Ele usa óculos e passou pela recepção às nove, quando o celular ainda estava lá. A Paula já tinha ido embora às oito."
+    },
+    {
+      "id": "caso3", "level": "B1", "unlock": "b1-u3", "title": "O quadro do museu", "place": "museum",
+      "intro": "Um quadro pequeno sumiu do museu durante uma tempestade, quando a luz acabou por dez minutos. Três pessoas estavam na sala. Compare as histórias com as pistas.",
+      "question": "Quem levou o quadro?",
+      "suspects": [
+        { "id": "john", "en": "I was talking on the phone with my wife when the lights went out. I stayed in my chair.", "pt": "Eu estava falando ao telefone com a minha esposa quando a luz acabou. Fiquei na minha cadeira." },
+        { "id": "clara", "en": "I was taking photos of the paintings. When the lights went out, I was standing next to the window.", "pt": "Eu estava tirando fotos dos quadros. Quando a luz acabou, eu estava em pé perto da janela." },
+        { "id": "bruno", "en": "I was reading a book while I was waiting for my friend. I've never been to this museum before.", "pt": "Eu estava lendo um livro enquanto esperava meu amigo. Nunca tinha vindo a este museu antes." }
+      ],
+      "clues": [
+        { "en": "John's phone has no battery. It has been dead since the morning.", "pt": "O celular do John está sem bateria. Está descarregado desde a manhã.",
+          "check": { "q": "Desde quando o celular do John está sem bateria?", "options": ["Desde a manhã", "Desde a noite anterior", "Desde a tempestade"], "answer": "Desde a manhã", "why": "\"Since the morning\": desde a manhã. \"Since\" marca o ponto de início." } },
+        { "en": "The guard says that Clara has visited the museum every week this month.", "pt": "O segurança diz que a Clara visitou o museu toda semana neste mês.",
+          "check": { "q": "Quantas vezes a Clara visitou o museu neste mês?", "options": ["Toda semana", "Nunca", "Só hoje"], "answer": "Toda semana", "why": "\"Every week this month\": toda semana neste mês." } },
+        { "en": "The painting was found in a bag under John's chair.", "pt": "O quadro foi encontrado numa bolsa embaixo da cadeira do John.",
+          "check": { "q": "Onde o quadro foi encontrado?", "options": ["Numa bolsa embaixo da cadeira do John", "Perto da janela", "No livro do Bruno"], "answer": "Numa bolsa embaixo da cadeira do John", "why": "\"Was found\" é voz passiva: foi encontrado. \"Under John's chair\" = embaixo da cadeira do John." } }
+      ],
+      "answer": "john",
+      "solution": "Foi o John! Ele disse que estava falando ao telefone quando a luz acabou, mas o celular dele estava sem bateria desde a manhã. E o quadro foi encontrado numa bolsa embaixo da cadeira dele. A Clara visita o museu sempre, o que não prova nada."
+    }
+  ]
+}

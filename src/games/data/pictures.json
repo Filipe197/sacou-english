@@ -1,0 +1,16 @@
+{
+  "words": [
+    ["apple", "maçã", "🍎"], ["banana", "banana", "🍌"], ["bread", "pão", "🍞"], ["cake", "bolo", "🍰"], ["cheese", "queijo", "🧀"],
+    ["egg", "ovo", "🥚"], ["fish", "peixe", "🐟"], ["milk", "leite", "🥛"], ["coffee", "café", "☕"], ["tea", "chá", "🍵"],
+    ["water", "água", "💧"], ["pizza", "pizza", "🍕"], ["orange", "laranja", "🍊"], ["sandwich", "sanduíche", "🥪"], ["ice cream", "sorvete", "🍦"],
+    ["dog", "cachorro", "🐶"], ["cat", "gato", "🐱"], ["bird", "pássaro", "🐦"], ["horse", "cavalo", "🐴"], ["cow", "vaca", "🐮"],
+    ["car", "carro", "🚗"], ["bus", "ônibus", "🚌"], ["train", "trem", "🚆"], ["bike", "bicicleta", "🚲"], ["plane", "avião", "✈️"],
+    ["house", "casa", "🏠"], ["school", "escola", "🏫"], ["hospital", "hospital", "🏥"], ["book", "livro", "📖"], ["phone", "celular", "📱"],
+    ["key", "chave", "🔑"], ["bag", "bolsa", "👜"], ["clock", "relógio", "⏰"], ["computer", "computador", "💻"], ["chair", "cadeira", "🪑"],
+    ["bed", "cama", "🛏️"], ["door", "porta", "🚪"], ["sun", "sol", "☀️"], ["rain", "chuva", "🌧️"], ["snow", "neve", "❄️"],
+    ["tree", "árvore", "🌳"], ["flower", "flor", "🌸"], ["ball", "bola", "⚽"], ["shirt", "camisa", "👕"], ["shoes", "sapatos", "👟"],
+    ["hat", "chapéu", "🎩"], ["umbrella", "guarda-chuva", "☂️"], ["money", "dinheiro", "💵"], ["music", "música", "🎵"], ["camera", "câmera", "📷"],
+    ["baby", "bebê", "👶"], ["doctor", "médico", "🧑‍⚕️"], ["teacher", "professor", "🧑‍🏫"], ["cook", "cozinheiro", "🧑‍🍳"], ["moon", "lua", "🌙"],
+    ["star", "estrela", "⭐"], ["heart", "coração", "❤️"], ["gift", "presente", "🎁"], ["window", "janela", "🪟"], ["glasses", "óculos", "👓"]
+  ]
+}

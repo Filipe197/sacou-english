@@ -142,6 +142,7 @@ select.chip{appearance:auto;padding-right:6px}
 .fc-card.flipped .fc-back{transform:rotateY(0)}
 .fc-face small{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:.65}
 .fc-word{font-family:var(--head);font-weight:700;font-size:clamp(28px,5vw,44px);line-height:1.15;letter-spacing:-.02em;word-break:break-word}
+.fc-word.fc-sentence{font-size:clamp(22px,3.6vw,30px)}
 .fc-ex{font-style:italic;font-size:17px;color:#E4DEFF}
 .fc-note{font-size:14px;color:#D9D2FF;max-width:440px;line-height:1.5}
 .fc-actions{display:flex;justify-content:center;gap:10px}

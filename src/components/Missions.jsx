@@ -11,6 +11,8 @@ export const MISSIONS = [
   { id: 'review', label: 'Revise seus erros 2 vezes', goal: 2, kinds: ['review', 'treino'], to: '/revisao', icon: 'review' },
   { id: 'conversa', label: 'Converse 2 vezes com um personagem', goal: 2, kinds: ['conversa'], to: '/conversar', icon: 'chat' },
   { id: 'fone', label: 'Faça 1 sessão no modo fone', goal: 1, kinds: ['fone'], to: '/fone', icon: 'headphones' },
+  // vale a partir da semana em que os jogos chegaram (não muda as medalhas antigas)
+  { id: 'jogo', label: 'Jogue 3 jogos ou histórias', goal: 3, kinds: ['jogo'], to: '/jogos', icon: 'game', since: '2026-11-16' },
   { id: 'xp', label: 'Ganhe 150 XP', goal: 150, xp: true, to: '/aprender', icon: 'bolt' },
 ];
 
@@ -28,7 +30,7 @@ function progressFor(rows, xpRows, week) {
   const counts = {};
   for (const r of rows) if (mondayOf(fmt(new Date(r.created_at))) === week) counts[r.kind] = (counts[r.kind] || 0) + 1;
   const xp = xpRows.filter(r => mondayOf(r.day) === week).reduce((n, r) => n + r.xp, 0);
-  return MISSIONS.map(m => {
+  return MISSIONS.filter(m => !m.since || week >= m.since).map(m => {
     const v = m.xp ? xp : m.kinds.reduce((n, k) => n + (counts[k] || 0), 0);
     return { ...m, value: Math.min(v, m.goal), done: v >= m.goal };
   });

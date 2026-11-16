@@ -277,15 +277,22 @@ function Flashcards({ words }) {
       </div>
       <button type="button" className={'fc-card' + (s.flipped ? ' flipped' : '')} onClick={flip} aria-label={s.flipped ? 'Cartão virado' : 'Virar o cartão'}>
         <span className="fc-face fc-front">
-          <small>{dir === 'en' ? 'Em inglês' : 'Em português'}</small>
-          <span className="fc-word" lang={dir === 'en' ? 'en' : 'pt-BR'}>{front}</span>
+          <small>{dir === 'en' || !card.pt ? 'Em inglês' : 'Em português'}</small>
+          <span className="fc-word" lang={dir === 'en' || !card.pt ? 'en' : 'pt-BR'}>{front}</span>
           <span className="muted" style={{ fontSize: 14 }}>Toque para virar · espaço</span>
         </span>
         <span className="fc-face fc-back">
-          <small>{dir === 'en' ? 'Em português' : 'Em inglês'}</small>
-          <span className="fc-word" lang={dir === 'en' ? 'pt-BR' : 'en'}>{dir === 'en' ? (card.pt || '—') : card.en}</span>
+          {card.pt || dir !== 'en' ? <>
+            <small>{dir === 'en' ? 'Em português' : 'Em inglês'}</small>
+            <span className="fc-word" lang={dir === 'en' ? 'pt-BR' : 'en'}>{dir === 'en' ? card.pt : card.en}</span>
+          </> : <>
+            {/* frases salvas de exercícios de completar não têm tradução: mostra a frase e a explicação */}
+            <small>Lembre-se</small>
+            <span className="fc-word fc-sentence" lang="en">{card.en}</span>
+          </>}
           {card.example && <span className="fc-ex" lang="en">“{card.example}”</span>}
           {card.plain && <span className="fc-note">{card.plain}</span>}
+          {!card.pt && <span className="fc-note" style={{ opacity: .75, fontSize: 13 }}>Sem tradução salva. Dá para adicionar na aba Vocabulário.</span>}
         </span>
       </button>
       <div className="fc-actions">

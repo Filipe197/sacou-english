@@ -26,7 +26,7 @@ begin
              coalesce(p.streak, 0) as streak,
              p.last_active,
              (select count(*) from public.lesson_progress lp
-               where lp.user_id = u.id and lp.times_done > 0 and lp.lesson_id not in ('review', 'practice')) as lessons_done
+               where lp.user_id = u.id and lp.times_done > 0 and lp.lesson_id ~ '^[abc][12]-') as lessons_done
       from auth.users u left join public.profiles p on p.id = u.id
       where lower(coalesce(u.email, '')) like q or lower(coalesce(p.display_name, '')) like q
       order by u.created_at desc

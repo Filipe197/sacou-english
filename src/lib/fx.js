@@ -47,7 +47,7 @@ export function speak(text, { slow = false } = {}) {
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'en-US';
   if (voice) u.voice = voice;
-  u.rate = slow ? 0.6 : 0.9;
+  u.rate = slow ? 0.5 : 0.9;
   window.speechSynthesis.speak(u);
 }
 
@@ -62,7 +62,7 @@ export function speakAsync(text, { slow = false, lang = 'en' } = {}) {
       ptVoice ||= (window.speechSynthesis.getVoices() || []).find(v => /pt-BR/i.test(v.lang)) || null;
       u.lang = 'pt-BR'; if (ptVoice) u.voice = ptVoice; u.rate = 1;
     } else {
-      u.lang = 'en-US'; if (voice) u.voice = voice; u.rate = slow ? 0.6 : 0.9;
+      u.lang = 'en-US'; if (voice) u.voice = voice; u.rate = slow ? 0.5 : 0.9;
     }
     let done = false;
     const end = () => { if (!done) { done = true; resolve(); } };

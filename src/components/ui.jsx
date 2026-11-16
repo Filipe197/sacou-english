@@ -56,9 +56,32 @@ const P = {
   medal: <><circle cx="12" cy="15" r="6" /><path d="M8.5 10L6 3h4l2 4 2-4h4l-2.5 7" /></>,
   grid: <><rect x="4" y="4" width="6.5" height="6.5" rx="1.5" /><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5" /><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5" /><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5" /></>,
   chat: <><path d="M4 5h16v11H9l-5 4z" /><path d="M8 9h8" /><path d="M8 12h5" /></>,
+  game: <><path d="M6 8h12a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L14 14h-4l-1 1.6A4 4 0 0 1 2 13v-1a4 4 0 0 1 4-4z" /><path d="M7 11v3" /><path d="M5.5 12.5h3" /><circle cx="16" cy="11.5" r=".6" /><circle cx="18" cy="13.5" r=".6" /></>,
+  search: <><circle cx="11" cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></>,
+  heart: <><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" /></>,
   mic: <><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0" /><path d="M12 18v3" /></>,
 };
+// Tartaruga colorida do botão "ouvir devagar"
+function TurtleArt({ size, label }) {
+  return (
+    <svg width={size + 6} height={size + 6} viewBox="0 0 32 32" aria-hidden={label ? undefined : true} role={label ? 'img' : undefined} aria-label={label}>
+      <defs><linearGradient id="tt-shell" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#4ADE80" /><stop offset="1" stopColor="#15803D" /></linearGradient></defs>
+      <path d="M5.2 20.6 L1.6 22.4 L5.6 22.9 Z" fill="#86C96B" />
+      <rect x="7.4" y="20" width="4.2" height="6.2" rx="2.1" fill="#86C96B" />
+      <rect x="18.6" y="20" width="4.2" height="6.2" rx="2.1" fill="#86C96B" />
+      <ellipse cx="23.6" cy="18.4" rx="3.4" ry="2.6" fill="#86C96B" />
+      <circle cx="26.4" cy="15.6" r="4.4" fill="#9BD67F" />
+      <circle cx="27.7" cy="14.8" r="1" fill="#1B1E35" /><circle cx="28" cy="14.5" r=".35" fill="#fff" />
+      <path d="M26.6 17.6 q1.1 .9 2.3 .1" fill="none" stroke="#1B1E35" strokeWidth=".8" strokeLinecap="round" />
+      <path d="M4 21 C4 12.5 8.8 8 15 8 C21.2 8 25.6 12.5 25.6 21 Z" fill="url(#tt-shell)" />
+      <path d="M11.6 11.6 H18.2 L20.4 15.6 L18.2 19.4 H11.6 L9.4 15.6 Z" fill="#BBF7D0" opacity=".55" />
+      <path d="M9.4 15.6 H5.4 M20.4 15.6 H24.6 M11.6 11.6 L9.6 9.4 M18.2 11.6 L20.4 9.6" stroke="#BBF7D0" strokeWidth=".9" opacity=".55" strokeLinecap="round" />
+      <rect x="3" y="19.6" width="23.6" height="2.8" rx="1.4" fill="#166534" />
+    </svg>
+  );
+}
 export function Icon({ name, size = 20, color = 'currentColor', stroke = 2, label }) {
+  if (name === 'turtle') return <TurtleArt size={size} label={label} />;
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={stroke}
       strokeLinecap="round" strokeLinejoin="round" aria-hidden={label ? undefined : true} role={label ? 'img' : undefined} aria-label={label}>
@@ -128,6 +151,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     ['/aprender', 'home', 'Aprender'],
     ['/praticar', 'bolt', 'Praticar'],
     ['/conversar', 'chat', 'Conversar'],
+    ['/jogos', 'game', 'Jogos e histórias'],
     ['/revisao', 'review', 'Revisar erros', mistakesCount],
     ['/fone', 'headphones', 'Modo fone'],
     ['/caderno', 'notebook', 'Caderno'],

@@ -1,0 +1,48 @@
+{
+  "missions": [
+    {
+      "id": "m-cafe", "level": "A1", "unlock": "a1-u7", "title": "Pedir um lanche", "place": "cafe", "npc": "sam",
+      "goal": "Peça uma bebida e algo para comer, e pague a conta.",
+      "steps": [
+        { "en": "Hello! What would you like?", "pt": "Olá! O que você gostaria?", "options": ["I'd like an orange juice, please.", "I like orange.", "Yes, I am."], "answer": "I'd like an orange juice, please.", "why": "\"I'd like..., please\" é o jeito educado de pedir." },
+        { "en": "Big or small?", "pt": "Grande ou pequeno?", "options": ["Small, please.", "Hello, please.", "Thank you, small."], "answer": "Small, please.", "why": "Ele pergunta o tamanho. Responda com o tamanho + \"please\"." },
+        { "en": "Do you want something to eat?", "pt": "Quer algo para comer?", "options": ["Yes. Can I have a sandwich, please?", "Yes, I eat.", "No, I'm a sandwich."], "answer": "Yes. Can I have a sandwich, please?", "why": "\"Can I have...?\" (posso pegar...?) também é um pedido educado." },
+        { "en": "Here you are. Anything else?", "pt": "Aqui está. Mais alguma coisa?", "options": ["No, thank you. How much is it?", "Yes, goodbye.", "Here you are."], "answer": "No, thank you. How much is it?", "why": "\"How much is it?\" pergunta o preço: quanto é?" },
+        { "en": "It's six pounds, please.", "pt": "São seis libras, por favor.", "options": ["Here you are. Thank you!", "I'm six.", "Good night!"], "answer": "Here you are. Thank you!", "why": "Ao entregar o dinheiro, dizemos \"Here you are\"." }
+      ]
+    },
+    {
+      "id": "m-taxi", "level": "A1", "unlock": "a1-u8", "title": "Pegar um táxi", "place": "station", "npc": "driver",
+      "goal": "Diga para onde quer ir e entenda o motorista.",
+      "steps": [
+        { "en": "Good afternoon! Where do you want to go?", "pt": "Boa tarde! Para onde você quer ir?", "options": ["To the City Hotel, please.", "I'm from the hotel.", "Good afternoon, hotel."], "answer": "To the City Hotel, please.", "why": "Para dizer o destino: \"To the... , please\"." },
+        { "en": "Is it near the station or near the park?", "pt": "Fica perto da estação ou perto do parque?", "options": ["It's near the park.", "It's a park.", "There are parks."], "answer": "It's near the park.", "why": "\"Near\" = perto de. \"It's near the park\": fica perto do parque." },
+        { "en": "OK. The streets are very busy today.", "pt": "Certo. As ruas estão muito movimentadas hoje.", "options": ["No problem.", "Yes, I am.", "Goodbye!"], "answer": "No problem.", "why": "\"No problem\" (sem problema) é uma resposta simpática e natural." },
+        { "en": "Here we are. The hotel is on the left.", "pt": "Chegamos. O hotel fica à esquerda.", "options": ["Great! How much is it?", "Where is it?", "It's on the left too."], "answer": "Great! How much is it?", "why": "Chegou: hora de perguntar o preço com \"How much is it?\"." },
+        { "en": "Twelve pounds, please.", "pt": "Doze libras, por favor.", "options": ["Here you are. Have a nice day!", "I'm twelve.", "Twelve, please."], "answer": "Here you are. Have a nice day!", "why": "\"Have a nice day\" (tenha um bom dia) é uma despedida educada." }
+      ]
+    },
+    {
+      "id": "m-hotel", "level": "A2", "unlock": "a2-u1", "title": "Check-in no hotel", "place": "hotel", "npc": "paula",
+      "goal": "Faça o check-in e tire suas dúvidas na recepção.",
+      "steps": [
+        { "en": "Good evening! Do you have a room with us?", "pt": "Boa noite! Você tem um quarto conosco?", "options": ["Yes, I do. My name is Ana Silva.", "Yes, I am Ana Silva.", "Yes, I have Ana Silva."], "answer": "Yes, I do. My name is Ana Silva.", "why": "Perguntas com \"Do you...?\" se respondem com \"Yes, I do\"." },
+        { "en": "Thank you. How was your journey?", "pt": "Obrigada. Como foi a sua viagem?", "options": ["It was long, but OK.", "It is tomorrow.", "I was journey."], "answer": "It was long, but OK.", "why": "A pergunta é no passado (was). Responda também no passado: \"It was...\"." },
+        { "en": "Your room is on the third floor. Here's your key.", "pt": "Seu quarto fica no terceiro andar. Aqui está sua chave.", "options": ["Thanks. What time is breakfast?", "Thanks. What time is it breakfast?", "Thanks. When breakfast?"], "answer": "Thanks. What time is breakfast?", "why": "\"What time is breakfast?\": a que horas é o café da manhã?" },
+        { "en": "From seven to ten in the restaurant.", "pt": "Das sete às dez, no restaurante.", "options": ["Great. Is there Wi-Fi in the room?", "Great. Are there Wi-Fi in the room?", "Great. Wi-Fi is there room?"], "answer": "Great. Is there Wi-Fi in the room?", "why": "\"Is there...?\" pergunta se existe algo (singular)." },
+        { "en": "Yes, there is. Enjoy your stay!", "pt": "Sim, tem. Aproveite a estadia!", "options": ["Thank you very much!", "You're welcome!", "Me too!"], "answer": "Thank you very much!", "why": "Ela foi gentil: agradeça. \"You're welcome\" é a resposta a um obrigado." }
+      ]
+    },
+    {
+      "id": "m-shop", "level": "A2", "unlock": "a2-u7", "title": "Comprar uma roupa", "place": "shop", "npc": "clerk",
+      "goal": "Encontre um casaco do seu tamanho e por um bom preço.",
+      "steps": [
+        { "en": "Hi! Can I help you?", "pt": "Oi! Posso ajudar?", "options": ["Yes, please. I'm looking for a coat.", "Yes, I help you.", "No, I'm a coat."], "answer": "Yes, please. I'm looking for a coat.", "why": "\"I'm looking for...\" = estou procurando..." },
+        { "en": "What size are you?", "pt": "Qual é o seu tamanho?", "options": ["Small, I think.", "I'm fine.", "It's blue."], "answer": "Small, I think.", "why": "Ela perguntou o tamanho (size): small (pequeno) ou large (grande)." },
+        { "en": "This one is very popular. It's forty pounds.", "pt": "Este aqui faz muito sucesso. Custa quarenta libras.", "options": ["Do you have a cheaper one?", "Do you have a more cheap one?", "Do you have cheapest one?"], "answer": "Do you have a cheaper one?", "why": "Comparativo de adjetivo curto: cheap → cheaper (mais barato)." },
+        { "en": "Yes, this black one is thirty pounds.", "pt": "Sim, este preto custa trinta libras.", "options": ["Can I try it on?", "Can I try on it?", "Can I trying it?"], "answer": "Can I try it on?", "why": "\"Try on\" = experimentar roupa. Com \"it\", fica no meio: \"try it on\"." },
+        { "en": "Of course. How is it?", "pt": "Claro. Que tal?", "options": ["It's perfect. I'll take it!", "It's perfect. I'm going to taking it!", "It perfect. I take!"], "answer": "It's perfect. I'll take it!", "why": "\"I'll take it\" (vou levar) é uma decisão na hora: usamos \"will\"." }
+      ]
+    }
+  ]
+}

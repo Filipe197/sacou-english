@@ -17,7 +17,8 @@ npm run dev
    `supabase/002_admin.sql` (painel), `supabase/003_caderno.sql` (caderno digital) e
    `supabase/004_ia.sql` (limite diário do professor de IA) e `supabase/005_turmas_missoes.sql`
    (missões, turmas, lembretes, treino com IA e lição feita sem internet) e `supabase/006_admin_alunos.sql`
-   (lista de alunos com nome e e-mail no painel Admin; só administradores veem).
+   (lista de alunos com nome e e-mail no painel Admin; só administradores veem) e `supabase/007_jogos.sql`
+   (jogos e histórias: missão da semana de jogos).
 2. **Login:** Supabase → Authentication → URL Configuration → *Site URL* = endereço do site na Vercel
    e, em *Redirect URLs*, adicione `https://SEU-SITE.vercel.app/**` e `http://localhost:5173/**`.
 3. **Vercel:** importe o repositório e cadastre as variáveis `VITE_SUPABASE_URL` e
@@ -52,6 +53,15 @@ npm run dev
 - **Modo fone** (`/fone`), **missões da semana**, **card para o story**, **turmas** (`/turmas`) e
   **lição sem internet** (fica salva no aparelho e sobe quando a conexão volta: `src/lib/offline.js`).
 - Teste local sem gastar: `AI_MOCK=1` no `.env` devolve respostas de exemplo (não funciona em produção).
+
+## Jogos e histórias (`/jogos`)
+
+- **Ana em Londres:** série de episódios ilustrados com áudio, perguntas e escolhas que mudam a história.
+- **Detetive:** casos para resolver lendo depoimentos e pistas. **Missões na cidade:** situações reais de viagem.
+- **Jogos rápidos:** Palavra Relâmpago, Ouviu, tocou e Frase em pedaços (usam o que o aluno já estudou).
+- Conteúdo em `src/games/data/`. Episódios, casos e missões liberam ao terminar a unidade indicada em `unlock`.
+  `scripts/validate-games.mjs` confere todo o inglês na CEFR-J (roda no build).
+- Ilustrações próprias em SVG (`src/games/art.jsx`): personagens montáveis e cenários.
 
 ## Conteúdo
 

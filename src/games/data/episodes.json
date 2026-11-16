@@ -1,0 +1,159 @@
+{
+  "series": "Ana em Londres",
+  "about": "A Ana saiu do Brasil para estudar em Londres. Acompanhe a nova vida dela, episódio por episódio.",
+  "episodes": [
+    {
+      "id": "ep1", "level": "A1", "unlock": "a1-u2", "title": "Cheguei!",
+      "intro": "A Ana acaba de chegar ao aeroporto de Londres. Primeiro, ela precisa passar pelo controle de passaportes.",
+      "scenes": [
+        { "place": "airport", "cast": ["ana", "officer"], "steps": [
+          { "who": "officer", "en": "Hello! What is your name, please?", "pt": "Olá! Qual é o seu nome, por favor?" },
+          { "pick": "O que a Ana responde?", "who": "ana", "options": ["My name is Ana.", "I'm fine, thanks.", "Goodbye!"], "answer": "My name is Ana.", "pt": "Meu nome é Ana.", "why": "Ele perguntou o nome (\"What is your name?\"). Respondemos com \"My name is...\"." },
+          { "who": "officer", "en": "Where are you from, Ana?", "pt": "De onde você é, Ana?" },
+          { "pick": "E agora?", "who": "ana", "options": ["I'm a student.", "I'm from Brazil.", "I'm twenty."], "answer": "I'm from Brazil.", "pt": "Eu sou do Brasil.", "why": "\"Where are you from?\" pergunta de onde você é. A resposta usa \"I'm from...\"." },
+          { "who": "officer", "en": "Are you a student?", "pt": "Você é estudante?" },
+          { "who": "ana", "en": "Yes, I am. I'm a student of English.", "pt": "Sim, sou. Eu sou estudante de inglês." },
+          { "who": "officer", "en": "Very good. Welcome to London!", "pt": "Muito bem. Bem-vinda a Londres!" },
+          { "ask": "O que o policial perguntou primeiro?", "options": ["O nome da Ana", "A idade da Ana", "O telefone da Ana"], "answer": "O nome da Ana", "why": "A primeira pergunta foi \"What is your name?\": qual é o seu nome." }
+        ] },
+        { "place": "street", "cast": ["ana", "tom"], "steps": [
+          { "who": "tom", "en": "Hi! Are you Ana?", "pt": "Oi! Você é a Ana?" },
+          { "who": "ana", "en": "Yes, I am! Are you Tom?", "pt": "Sim, sou! Você é o Tom?" },
+          { "who": "tom", "en": "Yes, I'm Tom. Nice to meet you!", "pt": "Sim, sou o Tom. Prazer em te conhecer!" },
+          { "branch": "Como a Ana responde?", "who": "ana", "options": [
+            { "en": "Nice to meet you too!", "pt": "Prazer em te conhecer também!", "then": [ { "who": "tom", "en": "Welcome to England! Let's go home.", "pt": "Bem-vinda à Inglaterra! Vamos para casa." } ] },
+            { "en": "Hi Tom! I'm very happy to be here!", "pt": "Oi, Tom! Estou muito feliz de estar aqui!", "then": [ { "who": "tom", "en": "Me too! My family is very happy too. Let's go!", "pt": "Eu também! Minha família também está muito feliz. Vamos!" } ] }
+          ] },
+          { "ask": "Quem é o Tom?", "options": ["Um amigo que veio buscar a Ana", "Um policial do aeroporto", "O irmão da Ana"], "answer": "Um amigo que veio buscar a Ana", "why": "O Tom vai encontrar a Ana na saída e diz \"Let's go home\": vamos para casa." }
+        ] }
+      ]
+    },
+    {
+      "id": "ep2", "level": "A1", "unlock": "a1-u4", "title": "A nova família",
+      "intro": "A Ana vai morar com a família do Tom. Hora de conhecer todo mundo na casa nova.",
+      "scenes": [
+        { "place": "home", "cast": ["tom", "laura", "ana"], "steps": [
+          { "who": "tom", "en": "Ana, this is my mother. Her name is Laura.", "pt": "Ana, esta é a minha mãe. O nome dela é Laura." },
+          { "who": "laura", "en": "Hello, Ana! Welcome to our home.", "pt": "Olá, Ana! Bem-vinda à nossa casa." },
+          { "pick": "Seja educada:", "who": "ana", "options": ["Thank you, Laura!", "Sorry, Laura!", "Good night, Laura!"], "answer": "Thank you, Laura!", "pt": "Obrigada, Laura!", "why": "Quando alguém te dá as boas-vindas, o natural é agradecer: \"Thank you\"." },
+          { "who": "laura", "en": "I'm a teacher. And Tom's father is a doctor.", "pt": "Eu sou professora. E o pai do Tom é médico." },
+          { "ask": "Qual é a profissão da Laura?", "options": ["Professora", "Médica", "Estudante"], "answer": "Professora", "why": "Ela diz \"I'm a teacher\": eu sou professora. Quem é médico (doctor) é o pai do Tom." }
+        ] },
+        { "place": "home", "cast": ["nina", "ana"], "steps": [
+          { "who": "nina", "en": "Hi! I'm Nina. I'm Tom's sister. I'm eight.", "pt": "Oi! Eu sou a Nina. Sou irmã do Tom. Tenho oito anos." },
+          { "who": "nina", "en": "Do you have a brother?", "pt": "Você tem um irmão?" },
+          { "who": "ana", "en": "Yes! This is a photo of my family.", "pt": "Tenho! Esta é uma foto da minha família." },
+          { "pick": "Complete: \"This is my brother. ___ name is Pedro.\"", "who": "ana", "options": ["This is my brother. His name is Pedro.", "This is my brother. Her name is Pedro.", "This is my brother. My name is Pedro."], "answer": "This is my brother. His name is Pedro.", "pt": "Este é o meu irmão. O nome dele é Pedro.", "why": "Para homem usamos \"his\" (dele). \"Her\" é para mulher (dela)." },
+          { "branch": "O que a Ana mostra agora?", "who": "ana", "options": [
+            { "en": "And this is my mother. Her name is Maria.", "pt": "E esta é a minha mãe. O nome dela é Maria.", "then": [ { "who": "nina", "en": "She is very beautiful!", "pt": "Ela é muito bonita!" } ] },
+            { "en": "And this is my dog. His name is Max.", "pt": "E este é o meu cachorro. O nome dele é Max.", "then": [ { "who": "nina", "en": "Oh, I love dogs! He is very cute!", "pt": "Ah, eu amo cachorros! Ele é muito fofo!" } ] }
+          ] },
+          { "ask": "Quantos anos a Nina tem?", "options": ["Oito", "Dez", "Seis"], "answer": "Oito", "why": "Ela diz \"I'm eight\": tenho oito anos. Em inglês a idade usa o verbo \"to be\"." }
+        ] }
+      ]
+    },
+    {
+      "id": "ep3", "level": "A1", "unlock": "a1-u7", "title": "O café do Sam",
+      "intro": "Sábado de manhã. O Tom leva a Ana ao café favorito dele, onde trabalha o Sam.",
+      "scenes": [
+        { "place": "cafe", "cast": ["sam", "ana", "tom"], "steps": [
+          { "who": "sam", "en": "Good morning! What would you like?", "pt": "Bom dia! O que vocês gostariam?" },
+          { "pick": "Peça um café com educação:", "who": "ana", "options": ["I'd like a coffee, please.", "I like coffee.", "Give coffee!"], "answer": "I'd like a coffee, please.", "pt": "Eu gostaria de um café, por favor.", "why": "\"I'd like\" (eu gostaria) é o jeito educado de pedir. \"I like\" quer dizer que você gosta, não que quer." },
+          { "who": "sam", "en": "Milk and sugar?", "pt": "Com leite e açúcar?" },
+          { "who": "ana", "en": "Milk, please. No sugar.", "pt": "Com leite, por favor. Sem açúcar." },
+          { "who": "tom", "en": "And I'd like a tea, please.", "pt": "E eu gostaria de um chá, por favor." },
+          { "who": "sam", "en": "Do you want something to eat? The chocolate cake is very good today.", "pt": "Querem algo para comer? O bolo de chocolate está muito bom hoje." },
+          { "branch": "O que a Ana escolhe?", "who": "ana", "options": [
+            { "en": "Yes, please! I love chocolate.", "pt": "Sim, por favor! Eu amo chocolate.", "then": [ { "who": "sam", "en": "Good idea! Here you are.", "pt": "Boa ideia! Aqui está." } ] },
+            { "en": "No, thank you. I don't like cake.", "pt": "Não, obrigada. Eu não gosto de bolo.", "then": [ { "who": "sam", "en": "No problem. Do you want a sandwich?", "pt": "Sem problema. Quer um sanduíche?" }, { "who": "ana", "en": "Yes, please!", "pt": "Sim, por favor!" } ] }
+          ] },
+          { "ask": "O que o Tom pediu?", "options": ["Um chá", "Um café com leite", "Um suco"], "answer": "Um chá", "why": "O Tom disse \"I'd like a tea, please\": eu gostaria de um chá." }
+        ] },
+        { "place": "cafe", "cast": ["sam", "ana"], "steps": [
+          { "who": "ana", "en": "Excuse me. How much is it?", "pt": "Com licença. Quanto é?" },
+          { "who": "sam", "en": "It's eight pounds, please.", "pt": "São oito libras, por favor." },
+          { "pick": "Ela paga e se despede:", "who": "ana", "options": ["Here you are. Thank you!", "Good morning!", "I'm eight."], "answer": "Here you are. Thank you!", "pt": "Aqui está. Obrigada!", "why": "\"Here you are\" é o que dizemos ao entregar algo para alguém, como o dinheiro." },
+          { "who": "sam", "en": "Thank you! See you on Saturday!", "pt": "Obrigado! Até sábado!" },
+          { "ask": "Quanto custou tudo?", "options": ["Oito libras", "Dez libras", "Dezoito libras"], "answer": "Oito libras", "why": "O Sam diz \"It's eight pounds\". Eight = oito." }
+        ] }
+      ]
+    },
+    {
+      "id": "ep4", "level": "A2", "unlock": "a2-u3", "title": "Que fim de semana!",
+      "intro": "Segunda-feira. O Tom quer saber como foi o fim de semana da Ana, que viajou sozinha pela primeira vez.",
+      "scenes": [
+        { "place": "park", "cast": ["tom", "ana"], "steps": [
+          { "who": "tom", "en": "Hi Ana! How was your weekend?", "pt": "Oi, Ana! Como foi o seu fim de semana?" },
+          { "who": "ana", "en": "It was great! I went to the sea with some friends from school.", "pt": "Foi ótimo! Fui para o mar com uns amigos da escola." },
+          { "who": "tom", "en": "Really? How did you go there?", "pt": "Sério? Como vocês foram até lá?" },
+          { "pick": "Complete com o passado: \"We ___ the train.\"", "who": "ana", "options": ["We took the train.", "We take the train.", "We taked the train."], "answer": "We took the train.", "pt": "Nós pegamos o trem.", "why": "\"Take\" é irregular: o passado é \"took\". \"Taked\" não existe." },
+          { "who": "ana", "en": "We swam, we ate fish and we saw a beautiful old house.", "pt": "Nós nadamos, comemos peixe e vimos uma casa antiga linda." },
+          { "ask": "O que a Ana NÃO fez no fim de semana?", "options": ["Foi ao cinema", "Nadou", "Comeu peixe"], "answer": "Foi ao cinema", "why": "Ela nadou (swam), comeu peixe (ate fish) e viu uma casa antiga (saw an old house). Cinema ela não citou." }
+        ] },
+        { "place": "station", "cast": ["ana", "tom"], "steps": [
+          { "who": "ana", "en": "But then I had a problem. I lost my phone at the station!", "pt": "Mas aí eu tive um problema. Perdi meu celular na estação!" },
+          { "who": "tom", "en": "Oh no! What did you do?", "pt": "Ah, não! O que você fez?" },
+          { "branch": "Escolha o que a Ana fez:", "who": "ana", "options": [
+            { "en": "I asked a man at the station for help.", "pt": "Pedi ajuda a um homem na estação.", "then": [ { "who": "ana", "en": "He found it under a chair. He was very kind!", "pt": "Ele achou embaixo de uma cadeira. Ele foi muito gentil!" } ] },
+            { "en": "I called my phone from my friend's phone.", "pt": "Liguei para o meu celular do celular da minha amiga.", "then": [ { "who": "ana", "en": "A woman answered. She found it on the train!", "pt": "Uma mulher atendeu. Ela tinha achado no trem!" } ] }
+          ] },
+          { "who": "tom", "en": "What a weekend! I didn't do anything. I stayed at home and slept.", "pt": "Que fim de semana! Eu não fiz nada. Fiquei em casa e dormi." },
+          { "pick": "Pergunte ao Tom: \"___ you watch a film?\"", "who": "ana", "options": ["Did you watch a film?", "Do you watched a film?", "Was you watch a film?"], "answer": "Did you watch a film?", "pt": "Você assistiu a um filme?", "why": "Perguntas no passado usam \"did\" + verbo na forma normal: \"Did you watch...?\"." },
+          { "who": "tom", "en": "Yes, I watched two films. They were really bad!", "pt": "Sim, assisti a dois filmes. Eles eram muito ruins!" },
+          { "ask": "O que o Tom fez no fim de semana?", "options": ["Ficou em casa", "Foi para o mar", "Perdeu o celular"], "answer": "Ficou em casa", "why": "Ele diz \"I stayed at home and slept\": fiquei em casa e dormi." }
+        ] }
+      ]
+    },
+    {
+      "id": "ep5", "level": "A2", "unlock": "a2-u6", "title": "Planos de viagem",
+      "intro": "As férias estão chegando. A Ana e o Tom decidem fazer uma viagem juntos.",
+      "scenes": [
+        { "place": "home", "cast": ["tom", "ana"], "steps": [
+          { "who": "tom", "en": "What are you going to do in the holidays?", "pt": "O que você vai fazer nas férias?" },
+          { "pick": "Fale do seu plano: \"I'm ___ visit Scotland.\"", "who": "ana", "options": ["I'm going to visit Scotland.", "I'm go to visit Scotland.", "I going to visit Scotland."], "answer": "I'm going to visit Scotland.", "pt": "Eu vou visitar a Escócia.", "why": "Para planos usamos \"be going to\" + verbo: \"I'm going to visit\"." },
+          { "who": "tom", "en": "Scotland? That's a great idea! Can I come with you?", "pt": "Escócia? Que ótima ideia! Posso ir com você?" },
+          { "who": "ana", "en": "Of course! It's going to be fun.", "pt": "Claro! Vai ser divertido." },
+          { "who": "tom", "en": "The train is cheaper than the plane, but it's slower.", "pt": "O trem é mais barato que o avião, mas é mais lento." },
+          { "branch": "Como eles vão viajar?", "who": "ana", "options": [
+            { "en": "Then I'll take the train. I love trains!", "pt": "Então eu vou de trem. Eu amo trens!", "then": [ { "who": "tom", "en": "OK! I'll buy the tickets tomorrow.", "pt": "Certo! Eu compro as passagens amanhã." } ] },
+            { "en": "I think the plane is better. It's faster.", "pt": "Acho que o avião é melhor. É mais rápido.", "then": [ { "who": "tom", "en": "OK, I'll look for cheap tickets tonight.", "pt": "Certo, vou procurar passagens baratas hoje à noite." } ] }
+          ] },
+          { "ask": "Segundo o Tom, como é o trem?", "options": ["Mais barato e mais lento", "Mais caro e mais rápido", "Mais barato e mais rápido"], "answer": "Mais barato e mais lento", "why": "\"Cheaper\" = mais barato e \"slower\" = mais lento." }
+        ] },
+        { "place": "street", "cast": ["ana", "tom"], "steps": [
+          { "who": "tom", "en": "Look at the sky. I think it's going to rain.", "pt": "Olha o céu. Acho que vai chover." },
+          { "who": "ana", "en": "Don't worry. I'll take my umbrella.", "pt": "Não se preocupe. Vou levar meu guarda-chuva." },
+          { "pick": "O Tom pergunta sobre o tempo na Escócia:", "who": "tom", "options": ["Will it be cold in Scotland?", "Will it is cold in Scotland?", "It will cold in Scotland?"], "answer": "Will it be cold in Scotland?", "pt": "Vai fazer frio na Escócia?", "why": "Pergunta com \"will\": will + sujeito + verbo na forma normal (be)." },
+          { "who": "ana", "en": "Yes, it will. We're going to need warm clothes!", "pt": "Vai, sim. Vamos precisar de roupas quentes!" },
+          { "ask": "O que a Ana vai levar por causa da chuva?", "options": ["Um guarda-chuva", "Um casaco", "Uma mala"], "answer": "Um guarda-chuva", "why": "Ela diz \"I'll take my umbrella\": vou levar meu guarda-chuva." }
+        ] }
+      ]
+    },
+    {
+      "id": "ep6", "level": "B1", "unlock": "b1-u3", "title": "A noite sem luz",
+      "intro": "Uma noite de tempestade em Londres. De repente, a luz acaba na casa toda.",
+      "scenes": [
+        { "place": "kitchen", "cast": ["laura", "ana"], "steps": [
+          { "who": "laura", "en": "Ana, are you OK? What were you doing when the lights went out?", "pt": "Ana, você está bem? O que você estava fazendo quando a luz acabou?" },
+          { "pick": "Responda com o past continuous:", "who": "ana", "options": ["I was cooking dinner.", "I cooked dinner every day.", "I have cooked dinner."], "answer": "I was cooking dinner.", "pt": "Eu estava fazendo o jantar.", "why": "Para a ação que estava acontecendo quando algo interrompeu, usamos was/were + -ing." },
+          { "who": "laura", "en": "And Nina was having a shower! She's very angry.", "pt": "E a Nina estava tomando banho! Ela está muito brava." },
+          { "who": "ana", "en": "Have you seen the candles? I can't find them.", "pt": "Você viu as velas? Não consigo achá-las." },
+          { "who": "laura", "en": "I've just found them. They were in the old box.", "pt": "Acabei de achar. Estavam na caixa velha." },
+          { "ask": "O que a Nina estava fazendo?", "options": ["Tomando banho", "Fazendo o jantar", "Dormindo"], "answer": "Tomando banho", "why": "\"Nina was having a shower\": a Nina estava tomando banho." }
+        ] },
+        { "place": "home", "cast": ["tom", "ana", "nina"], "steps": [
+          { "who": "tom", "en": "While we're waiting, let's tell stories!", "pt": "Enquanto esperamos, vamos contar histórias!" },
+          { "who": "nina", "en": "Ana, how long have you lived in London?", "pt": "Ana, há quanto tempo você mora em Londres?" },
+          { "pick": "Escolha a resposta certa:", "who": "ana", "options": ["I've lived here for six months.", "I live here since six months.", "I'm living here for six months ago."], "answer": "I've lived here for six months.", "pt": "Eu moro aqui há seis meses.", "why": "Algo que começou no passado e continua: present perfect + \"for\" com o período (six months)." },
+          { "branch": "Que história a Ana conta?", "who": "ana", "options": [
+            { "en": "When I arrived, I couldn't understand anything!", "pt": "Quando cheguei, eu não entendia nada!", "then": [ { "who": "tom", "en": "And now you speak English really well.", "pt": "E agora você fala inglês muito bem." } ] },
+            { "en": "On my first day, I was walking in the park when I met a famous actor.", "pt": "No meu primeiro dia, eu estava andando no parque quando conheci um ator famoso.", "then": [ { "who": "nina", "en": "No way! Did you take a photo?", "pt": "Não acredito! Você tirou uma foto?" } ] }
+          ] },
+          { "who": "ana", "en": "I've learned so much since I came here. Thank you for everything.", "pt": "Aprendi muito desde que cheguei aqui. Obrigada por tudo." },
+          { "who": "tom", "en": "Look! The lights have come back!", "pt": "Olha! A luz voltou!" },
+          { "ask": "Há quanto tempo a Ana mora em Londres?", "options": ["Seis meses", "Seis anos", "Seis semanas"], "answer": "Seis meses", "why": "\"I've lived here for six months\": moro aqui há seis meses." }
+        ] }
+      ]
+    }
+  ]
+}
