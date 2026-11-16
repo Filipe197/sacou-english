@@ -153,10 +153,11 @@ button{font-family:inherit}
 }
 @media (max-width:640px){
   /* painel lateral vira um carrossel de cartões para a trilha aparecer logo */
-  .rail{display:flex;flex-direction:row;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding:12px 16px 4px;scrollbar-width:none;overscroll-behavior-x:contain}
+  .rail{display:flex;flex-direction:row;align-items:stretch;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding:12px 16px 4px;scrollbar-width:none;overscroll-behavior-x:contain}
   .rail::-webkit-scrollbar{display:none}
   .rail > *{flex:0 0 86%;scroll-snap-align:center;min-width:0}
   .rail > .card{padding:16px}
+  .rail > div:first-child > .card{height:100%}
   /* missões no carrossel: só o resumo (a lista completa deixava o topo alto demais) */
   .rail .missions .ms-list,.rail .missions .ms-perfect{display:none}
   .rail .missions .ms-mini{display:flex}
