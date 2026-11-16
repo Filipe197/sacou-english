@@ -1,6 +1,7 @@
 // Chamadas às funções de IA do servidor (api/). O token do login vai junto
 // para o servidor conferir quem é o aluno e o limite diário.
 import { supabase } from './supabase.js';
+import { reportError } from './errors.js';
 
 export async function askAI(path, body) {
   if (typeof navigator !== 'undefined' && navigator.onLine === false) throw new Error('Sem internet. O professor de IA precisa de conexão.');
@@ -16,8 +17,13 @@ export async function askAI(path, body) {
   } catch {
     throw new Error('Não consegui falar com o professor. Verifique sua internet.');
   }
-  const j = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(j.error || 'O professor não respondeu agora. Tente de novo.');
+  const raw = await r.text().catch(() => '');
+  let j = null;
+  try { j = JSON.parse(raw); } catch { j = null; }
+  // resposta que não é JSON = a função do servidor quebrou ou estourou o tempo: avisa o admin
+  if (!j) reportError('api', `/api/${path} respondeu ${r.status} sem JSON`, raw.slice(0, 600));
+  else if (r.status >= 500) reportError('api', `/api/${path} respondeu ${r.status}: ${j.error || ''}`);
+  if (!r.ok || !j) throw new Error(j?.error || 'O professor não respondeu agora. Tente de novo.');
   return j;
 }
 

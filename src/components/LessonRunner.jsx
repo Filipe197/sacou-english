@@ -192,7 +192,7 @@ function Dialogue({ item, value, setValue, locked, newKeys }) {
             <div key={i} className={'bubble ' + (who === 'B' ? 'me' : 'other') + (gap ? ' gap' : '')}>
               <span className="who">{who === 'B' ? 'Você' : 'Pessoa'}</span>
               <span lang="en">{gap ? (shown || '...') : <Hinted text={text} newKeys={newKeys} />}</span>
-              {!gap && canSpeak() && <button type="button" className="icon-btn" style={{ width: 32, height: 32 }} aria-label="Ouvir" onClick={() => speak(text)}><Icon name="sound" size={16} /></button>}
+              {!gap && canSpeak() && <button type="button" className="icon-btn" style={{ width: 32, height: 32 }} aria-label="Ouvir" onClick={() => speak(text, { who })}><Icon name="sound" size={16} /></button>}
             </div>
           );
         })}
@@ -266,7 +266,7 @@ function StoryText({ story, compact }) {
         const en = ln.gap ? ln.en.replace('___', ln.gap.answer) : ln.en;
         return (
           <div key={i} className="story-line">
-            {canSpeak() && <button type="button" className="icon-btn" style={{ width: 36, height: 36, flex: 'none' }} aria-label={`Ouvir: ${en}`} onClick={() => speak(en)}><Icon name="sound" size={18} /></button>}
+            {canSpeak() && <button type="button" className="icon-btn" style={{ width: 36, height: 36, flex: 'none' }} aria-label={`Ouvir: ${en}`} onClick={() => speak(en, { who: ln.who })}><Icon name="sound" size={18} /></button>}
             <button type="button" className="story-text" onClick={() => setOpen(o => ({ ...o, [i]: !o[i] }))} aria-expanded={!!open[i]}>
               {ln.who && <b className="story-who">{ln.who}</b>}<span lang="en">{en}</span>
               {open[i] && <span className="story-pt">{ln.pt}</span>}
@@ -297,7 +297,7 @@ function Story({ story, locked, onDone, onProgress, newKeys }) {
 
   useEffect(() => {
     onProgress?.(pos / steps.length);
-    if (cur && !cur.ask && !cur.gap) speak(cur.en);
+    if (cur && !cur.ask && !cur.gap) speak(cur.en, { who: cur.who });
     setTimeout(() => endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' }), 60);
   }, [pos]);
 
@@ -305,7 +305,7 @@ function Story({ story, locked, onDone, onProgress, newKeys }) {
     const right = cur.ask ? cur.answer : cur.gap.answer;
     if (o === right) {
       setSolved(x => ({ ...x, [pos]: true })); fx.play('correct');
-      if (cur.gap) speak(cur.en.replace('___', right));
+      if (cur.gap) speak(cur.en.replace('___', right), { who: cur.who });
       setTimeout(() => endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' }), 60);
     } else {
       missed.current.add(pos); setBad(o); fx.play('wrong');
@@ -331,7 +331,7 @@ function Story({ story, locked, onDone, onProgress, newKeys }) {
           </div>
         ) : (
           <div key={i} className={'story-line' + (i === pos ? ' current' : '')}>
-            {canSpeak() && <button type="button" className="icon-btn" style={{ width: 36, height: 36, flex: 'none' }} aria-label="Ouvir esta fala" onClick={() => speak(ln.gap && !solved[i] ? ln.en.replace('___', '') : lineText(ln, i))}><Icon name="sound" size={18} /></button>}
+            {canSpeak() && <button type="button" className="icon-btn" style={{ width: 36, height: 36, flex: 'none' }} aria-label="Ouvir esta fala" onClick={() => speak(ln.gap && !solved[i] ? ln.en.replace('___', '') : lineText(ln, i), { who: ln.who })}><Icon name="sound" size={18} /></button>}
             <button type="button" className="story-text" onClick={() => setShowPt(o => ({ ...o, [i]: !o[i] }))} aria-expanded={!!showPt[i]}>
               {ln.who && <b className="story-who">{ln.who}</b>}
               <span lang="en">{ln.gap && !solved[i] ? lineText(ln, i) : <Hinted text={lineText(ln, i)} newKeys={newKeys} />}</span>
@@ -445,7 +445,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) setQueue(q => [...q, cur]);
     if (item.type === 'build' || item.type === 'type') speak(item.answer);
     else if (item.type === 'choice') speak(item.en.replace('___', item.answer));
-    else if (item.type === 'dialogue') speak(item.answer);
+    else if (item.type === 'dialogue') speak(item.answer, { who: item.lines.find(l => l[1] === '___')?.[0] || 'B' });
     setTimeout(() => ctaRef.current?.focus(), 50);
   }, [item, cur, onItemResult, retryWrong]);
 

@@ -51,13 +51,13 @@ export function Finish({ title, message, stats = [], xp, streak, record, onAgain
 }
 
 // Fala em inglês com botão de ouvir e tradução escondida
-export function Line({ en, pt, who, big = false, open: startOpen = false }) {
+export function Line({ en, pt, who, voice, big = false, open: startOpen = false }) {
   const [open, setOpen] = useState(startOpen);
   return (
     <div className={'g-line' + (big ? ' big' : '')}>
       {who && <span className="g-who">{who}</span>}
       <div className="g-line-row">
-        {canSpeak() && <button type="button" className="g-say" aria-label={`Ouvir: ${en}`} onClick={() => speak(en)}><Icon name="sound" size={big ? 20 : 16} /></button>}
+        {canSpeak() && <button type="button" className="g-say" aria-label={`Ouvir: ${en}`} onClick={() => speak(en, { who: voice || who })}><Icon name="sound" size={big ? 20 : 16} /></button>}
         <span lang="en" className="g-en">{en}</span>
       </div>
       {pt && (open ? <span className="g-pt">{pt}</span>

@@ -39,7 +39,7 @@ function Case({ c, first }) {
     const n = at + 1;
     setAt(n);
     const s = steps[n];
-    if (s?.k === 'suspect' && canSpeak()) setTimeout(() => speak(c.suspects[s.i].en), 250);
+    if (s?.k === 'suspect' && canSpeak()) setTimeout(() => speak(c.suspects[s.i].en, { who: c.suspects[s.i].id }), 250);
     if (s?.k === 'clue' && canSpeak()) setTimeout(() => speak(c.clues[s.i].en), 250);
   }
 
@@ -96,7 +96,7 @@ function Case({ c, first }) {
         <Person look={sus(s.id).look} mood="neutral" size={120} title={sus(s.id).name} />
         <div style={{ flex: 1, minWidth: 220 }}>
           <h2 style={{ margin: '0 0 8px' }}>{sus(s.id).name}</h2>
-          <Line en={s.en} pt={s.pt} big />
+          <Line en={s.en} pt={s.pt} voice={s.id} big />
         </div>
       </div>
       <p className="muted" style={{ fontSize: 14 }}>Guarde bem o que cada um diz. Uma dessas histórias não bate com as pistas.</p>
@@ -118,7 +118,7 @@ function Case({ c, first }) {
       <h1 className="g-title" style={{ fontSize: 28 }}>{c.question}</h1>
       <details className="g-notes">
         <summary>Rever depoimentos e pistas</summary>
-        {c.suspects.map(s => <Line key={s.id} who={sus(s.id).name} en={s.en} pt={s.pt} />)}
+        {c.suspects.map(s => <Line key={s.id} who={sus(s.id).name} voice={s.id} en={s.en} pt={s.pt} />)}
         {c.clues.map((k, i) => <Line key={i} who={`Pista ${i + 1}`} en={k.en} pt={k.pt} />)}
       </details>
       <div className="g-accuse">

@@ -8,3 +8,6 @@ public/sounds/kenney/
 # projeto do vídeo
 video/node_modules/
 video/out/
+
+# prints de testes que falharam
+tests/e2e/falhou-*.png

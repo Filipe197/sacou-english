@@ -8,7 +8,9 @@ import pictures from './data/pictures.json';
 import cast from './data/cast.json';
 
 export { cast };
-export const EPISODES = episodes.episodes;
+// na ordem da trilha (cada episódio libera com uma unidade)
+const unitRank = (id) => UNITS.findIndex(u => u.id === id);
+export const EPISODES = [...episodes.episodes].sort((a, b) => unitRank(a.unlock) - unitRank(b.unlock));
 export const SERIES = { title: episodes.series, about: episodes.about };
 export const CASES = mysteries.cases;
 export const MISSIONS = city.missions;

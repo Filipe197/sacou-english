@@ -49,7 +49,7 @@ function Player({ ep, first }) {
     if (step && isLine(step) && lastSaid.current !== step) {
       lastSaid.current = step;
       setLog(l => [...l, step]);
-      if (canSpeak()) speakAsync(step.en);
+      if (canSpeak()) speakAsync(step.en, { who: step.who });
     }
   }, [step]);
   useEffect(() => { logEnd.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, [log.length, feedback]);
@@ -80,7 +80,7 @@ function Player({ ep, first }) {
     if (ok && step.pick) {
       const line = { who: step.who, en: step.answer, pt: step.pt };
       setLog(l => [...l, line]);
-      if (canSpeak()) speakAsync(step.answer);
+      if (canSpeak()) speakAsync(step.answer, { who: step.who });
     }
   }
 
@@ -128,7 +128,7 @@ function Player({ ep, first }) {
       <main className="lesson-main g-main">
         <Stage place={scene.place} cast={scene.cast} looks={looks} speaking={speaking} height={220} />
         <div className="g-log" aria-live="polite">
-          {log.map((l, i) => <Line key={i} en={l.en} pt={l.pt} who={looks[l.who]?.name} big={i === log.length - 1} />)}
+          {log.map((l, i) => <Line key={i} en={l.en} pt={l.pt} who={looks[l.who]?.name} voice={l.who} big={i === log.length - 1} />)}
           {step?.ask && <p className="q-label" style={{ marginTop: 8 }}>Pergunta: {step.ask}</p>}
           {step?.pick && <p className="q-label" style={{ marginTop: 8 }}>{step.pick} <span className="muted">({looks[step.who]?.name} fala)</span></p>}
           {step?.branch && <p className="q-label" style={{ marginTop: 8 }}>{step.branch} <span className="muted">Você decide!</span></p>}

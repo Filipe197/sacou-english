@@ -1,18 +1,213 @@
 {
-  "ana": { "name": "Ana", "look": { "skin": "c", "hair": "curly", "hairColor": "#2B1D16", "shirt": "#5B3DF5" } },
-  "tom": { "name": "Tom", "look": { "skin": "a", "hair": "short", "hairColor": "#B7791F", "shirt": "#0EA5E9" } },
-  "officer": { "name": "Officer", "look": { "skin": "b", "hair": "short", "hairColor": "#3F2A1D", "shirt": "#1E3A8A", "extra": ["cap"] } },
-  "laura": { "name": "Laura", "look": { "skin": "a", "hair": "bun", "hairColor": "#9CA3AF", "shirt": "#E11D74", "extra": ["glasses"] } },
-  "nina": { "name": "Nina", "look": { "skin": "a", "hair": "ponytail", "hairColor": "#B7791F", "shirt": "#F97316", "extra": ["bow"] } },
-  "sam": { "name": "Sam", "look": { "skin": "d", "hair": "spiky", "hairColor": "#111827", "shirt": "#10B981", "extra": ["apron"] } },
-  "ben": { "name": "Ben", "look": { "skin": "e", "hair": "short", "hairColor": "#111827", "shirt": "#F59E0B", "extra": ["beard"] } },
-  "leo": { "name": "Leo", "look": { "skin": "b", "hair": "spiky", "hairColor": "#3F2A1D", "shirt": "#22C55E" } },
-  "paula": { "name": "Paula", "look": { "skin": "c", "hair": "long", "hairColor": "#111827", "shirt": "#7C3AED", "extra": ["tie"] } },
-  "marcos": { "name": "Marcos", "look": { "skin": "b", "hair": "short", "hairColor": "#111827", "shirt": "#334155", "extra": ["glasses"] } },
-  "rita": { "name": "Rita", "look": { "skin": "d", "hair": "bun", "hairColor": "#111827", "shirt": "#0F766E", "extra": ["apron"] } },
-  "john": { "name": "John", "look": { "skin": "a", "hair": "bald", "hairColor": "#9CA3AF", "shirt": "#1F2937", "extra": ["glasses", "beard"] } },
-  "clara": { "name": "Clara", "look": { "skin": "b", "hair": "long", "hairColor": "#7C2D12", "shirt": "#DC2626" } },
-  "bruno": { "name": "Bruno", "look": { "skin": "c", "hair": "short", "hairColor": "#111827", "shirt": "#2563EB", "extra": ["tie"] } },
-  "driver": { "name": "Driver", "look": { "skin": "e", "hair": "short", "hairColor": "#111827", "shirt": "#FACC15", "extra": ["cap"] } },
-  "clerk": { "name": "Clerk", "look": { "skin": "a", "hair": "ponytail", "hairColor": "#B91C1C", "shirt": "#10B981" } }
+ "ana": {
+  "name": "Ana",
+  "look": {
+   "skin": "c",
+   "hair": "curly",
+   "hairColor": "#2B1D16",
+   "shirt": "#5B3DF5"
+  }
+ },
+ "tom": {
+  "name": "Tom",
+  "look": {
+   "skin": "a",
+   "hair": "short",
+   "hairColor": "#B7791F",
+   "shirt": "#0EA5E9"
+  }
+ },
+ "officer": {
+  "name": "Officer",
+  "look": {
+   "skin": "b",
+   "hair": "short",
+   "hairColor": "#3F2A1D",
+   "shirt": "#1E3A8A",
+   "extra": [
+    "cap"
+   ]
+  }
+ },
+ "laura": {
+  "name": "Laura",
+  "look": {
+   "skin": "a",
+   "hair": "bun",
+   "hairColor": "#9CA3AF",
+   "shirt": "#E11D74",
+   "extra": [
+    "glasses"
+   ]
+  }
+ },
+ "nina": {
+  "name": "Nina",
+  "look": {
+   "skin": "a",
+   "hair": "ponytail",
+   "hairColor": "#B7791F",
+   "shirt": "#F97316",
+   "extra": [
+    "bow"
+   ]
+  }
+ },
+ "sam": {
+  "name": "Sam",
+  "look": {
+   "skin": "d",
+   "hair": "spiky",
+   "hairColor": "#111827",
+   "shirt": "#10B981",
+   "extra": [
+    "apron"
+   ]
+  }
+ },
+ "ben": {
+  "name": "Ben",
+  "look": {
+   "skin": "e",
+   "hair": "short",
+   "hairColor": "#111827",
+   "shirt": "#F59E0B",
+   "extra": [
+    "beard"
+   ]
+  }
+ },
+ "leo": {
+  "name": "Leo",
+  "look": {
+   "skin": "b",
+   "hair": "spiky",
+   "hairColor": "#3F2A1D",
+   "shirt": "#22C55E"
+  }
+ },
+ "paula": {
+  "name": "Paula",
+  "look": {
+   "skin": "c",
+   "hair": "long",
+   "hairColor": "#111827",
+   "shirt": "#7C3AED",
+   "extra": [
+    "tie"
+   ]
+  }
+ },
+ "marcos": {
+  "name": "Marcos",
+  "look": {
+   "skin": "b",
+   "hair": "short",
+   "hairColor": "#111827",
+   "shirt": "#334155",
+   "extra": [
+    "glasses"
+   ]
+  }
+ },
+ "rita": {
+  "name": "Rita",
+  "look": {
+   "skin": "d",
+   "hair": "bun",
+   "hairColor": "#111827",
+   "shirt": "#0F766E",
+   "extra": [
+    "apron"
+   ]
+  }
+ },
+ "john": {
+  "name": "John",
+  "look": {
+   "skin": "a",
+   "hair": "bald",
+   "hairColor": "#9CA3AF",
+   "shirt": "#1F2937",
+   "extra": [
+    "glasses",
+    "beard"
+   ]
+  }
+ },
+ "clara": {
+  "name": "Clara",
+  "look": {
+   "skin": "b",
+   "hair": "long",
+   "hairColor": "#7C2D12",
+   "shirt": "#DC2626"
+  }
+ },
+ "bruno": {
+  "name": "Bruno",
+  "look": {
+   "skin": "c",
+   "hair": "short",
+   "hairColor": "#111827",
+   "shirt": "#2563EB",
+   "extra": [
+    "tie"
+   ]
+  }
+ },
+ "driver": {
+  "name": "Driver",
+  "look": {
+   "skin": "e",
+   "hair": "short",
+   "hairColor": "#111827",
+   "shirt": "#FACC15",
+   "extra": [
+    "cap"
+   ]
+  }
+ },
+ "clerk": {
+  "name": "Clerk",
+  "look": {
+   "skin": "a",
+   "hair": "ponytail",
+   "hairColor": "#B91C1C",
+   "shirt": "#10B981"
+  }
+ },
+ "emma": {
+  "name": "Emma",
+  "look": {
+   "skin": "a",
+   "hair": "long",
+   "hairColor": "#E8B04B",
+   "shirt": "#0EA5E9"
+  }
+ },
+ "maria": {
+  "name": "Maria",
+  "look": {
+   "skin": "c",
+   "hair": "bun",
+   "hairColor": "#2B1D16",
+   "shirt": "#F97316",
+   "extra": [
+    "glasses"
+   ]
+  }
+ },
+ "sarah": {
+  "name": "Sarah",
+  "look": {
+   "skin": "d",
+   "hair": "long",
+   "hairColor": "#111827",
+   "shirt": "#7C3AED",
+   "extra": [
+    "glasses"
+   ]
+  }
+ }
 }

@@ -31,7 +31,7 @@ function Mission({ m, first }) {
   const opts = useMemo(() => (s ? shuffle(s.options) : []), [s]);
   const npc = cast[m.npc];
 
-  useEffect(() => { if (s && canSpeak()) { const t = setTimeout(() => speak(s.en), 250); return () => clearTimeout(t); } }, [s]);
+  useEffect(() => { if (s && canSpeak()) { const t = setTimeout(() => speak(s.en, { who: m.npc }), 250); return () => clearTimeout(t); } }, [s]);
 
   function answer(label) {
     const ok = label === s.answer;
@@ -79,7 +79,7 @@ function Mission({ m, first }) {
       <GameTop progress={(i / m.steps.length) * 100} label={m.title} right={<span style={{ fontWeight: 700, color: 'var(--violet-dd)', fontSize: 15 }}>{i + 1}/{m.steps.length}</span>} />
       <main className="lesson-main g-main" key={i}>
         <Stage place={m.place} cast={[m.npc]} looks={cast} speaking={feedback?.ok ? null : m.npc} height={200} />
-        <Line who={npc.name} en={s.en} pt={s.pt} big />
+        <Line who={npc.name} voice={m.npc} en={s.en} pt={s.pt} big />
         <p className="q-label" style={{ marginTop: 14 }}>O que você responde?</p>
         <Choices options={opts} answer={s.answer} english picked={picked} locked={feedback?.ok} onAnswer={answer} />
         {feedback && <Why ok={feedback.ok} text={feedback.text} />}

@@ -1,0 +1,30 @@
+# Roda a checagem do conteúdo, o build e os testes de tela a cada envio para o GitHub.
+# Se algo falhar, aparece um X vermelho no commit (e o GitHub manda e-mail).
+name: Testes
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Conteúdo, servidor e build
+        run: npm run build
+      - name: Testes de tela
+        run: npm test
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+      - name: Prints das telas que falharam
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: telas-com-falha
+          path: tests/e2e/falhou-*.png
+          if-no-files-found: ignore

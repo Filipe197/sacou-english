@@ -58,5 +58,20 @@ export default async function handler(req, res) {
       else console.error('push', e.statusCode, e.body);
     }
   }));
-  send(res, 200, { sent, removed: gone });
+  // aviso para os administradores: erros do site nas últimas 24 h (008_erros.sql)
+  let alerts = 0;
+  const since = new Date(Date.now() - 864e5).toISOString();
+  const { count: errs } = await sb.from('app_errors').select('id', { count: 'exact', head: true }).gte('created_at', since);
+  if (errs > 0) {
+    const { data: admins } = await sb.from('admins').select('user_id');
+    const ids = new Set((admins || []).map(a => a.user_id));
+    for (const s of subs.filter(x => ids.has(x.user_id))) {
+      try {
+        await webpush.sendNotification({ endpoint: s.endpoint, keys: { p256dh: s.p256dh, auth: s.auth } },
+          JSON.stringify({ title: `⚠️ ${errs} ${errs === 1 ? 'erro' : 'erros'} no Sacou English`, body: 'Aconteceram nas últimas 24 horas. Veja os detalhes no painel Admin.', url: '/admin' }), { TTL: 12 * 3600 });
+        alerts++;
+      } catch (e) { console.error('push admin', e.statusCode); }
+    }
+  }
+  send(res, 200, { sent, removed: gone, alerts });
 }

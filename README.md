@@ -18,7 +18,7 @@ npm run dev
    `supabase/004_ia.sql` (limite diário do professor de IA) e `supabase/005_turmas_missoes.sql`
    (missões, turmas, lembretes, treino com IA e lição feita sem internet) e `supabase/006_admin_alunos.sql`
    (lista de alunos com nome e e-mail no painel Admin; só administradores veem) e `supabase/007_jogos.sql`
-   (jogos e histórias: missão da semana de jogos).
+   (jogos e histórias: missão da semana de jogos). Por último, `supabase/008_erros.sql` (aviso automático de erros).
 2. **Login:** Supabase → Authentication → URL Configuration → *Site URL* = endereço do site na Vercel
    e, em *Redirect URLs*, adicione `https://SEU-SITE.vercel.app/**` e `http://localhost:5173/**`.
 3. **Vercel:** importe o repositório e cadastre as variáveis `VITE_SUPABASE_URL` e
@@ -62,6 +62,19 @@ npm run dev
 - Conteúdo em `src/games/data/`. Episódios, casos e missões liberam ao terminar a unidade indicada em `unlock`.
   `scripts/validate-games.mjs` confere todo o inglês na CEFR-J (roda no build).
 - Ilustrações próprias em SVG (`src/games/art.jsx`): personagens montáveis e cenários.
+
+## Erros, testes e voz
+
+- **Aviso automático de erros:** quando algo quebra no aparelho de um aluno, o site grava em `app_errors`
+  (`src/lib/errors.js`). Os erros aparecem no painel Admin, e os administradores recebem um aviso no celular
+  junto do lembrete diário se houver erros nas últimas 24 h.
+- **Checagens no build:** conteúdo das lições, conteúdo dos jogos e `scripts/check-api.mjs` (todas as funções de
+  `api/` precisam carregar). Se algo falhar, a Vercel não publica.
+- **Testes de tela:** `npm test` abre o site com dados de demonstração no Chrome/Edge e passa pelas telas principais
+  (`tests/e2e/`). O GitHub roda tudo a cada envio (`.github/workflows/testes.yml`).
+- **Voz natural:** `public/audio/` tem um MP3 por frase, gerado com a Kokoro (voz neural, Apache 2.0), com voz
+  feminina ou masculina conforme o personagem (`src/lib/voices.json`). Depois de criar conteúdo novo, rode
+  `python scripts/gen-audio.py` (instruções no topo do arquivo). Frases sem áudio usam a voz do aparelho.
 
 ## Conteúdo
 

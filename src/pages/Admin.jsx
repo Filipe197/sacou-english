@@ -111,6 +111,58 @@ function Students() {
   );
 }
 
+const KIND = { js: 'Erro de código', promise: 'Erro de código', react: 'Tela quebrou', api: 'Servidor / IA' };
+const ago = (d) => { const m = Math.round((Date.now() - new Date(d)) / 60000); return m < 60 ? `há ${m} min` : m < 1440 ? `há ${Math.round(m / 60)} h` : `há ${Math.round(m / 1440)} d`; };
+
+// Erros que aconteceram no aparelho dos alunos (aviso automático, 008_erros.sql)
+function SiteErrors() {
+  const [groups, setGroups] = useState(null);
+  const [err, setErr] = useState('');
+  const load = useCallback(async () => {
+    const { data, error } = await supabase.from('app_errors').select('id,kind,message,detail,page,ua,created_at,user_id').order('created_at', { ascending: false }).limit(400);
+    if (error) { setErr(/app_errors|schema cache|does not exist/i.test(error.message) ? 'Falta rodar o arquivo supabase/008_erros.sql no Supabase para ligar o aviso de erros.' : 'Não consegui carregar os erros agora.'); setGroups([]); return; }
+    const map = new Map();
+    for (const r of data) {
+      const k = r.kind + '|' + r.message;
+      const g = map.get(k) || { key: k, kind: r.kind, message: r.message, count: 0, users: new Set(), last: r, pages: new Set() };
+      g.count++; if (r.user_id) g.users.add(r.user_id); if (r.page) g.pages.add(r.page.split('?')[0]);
+      map.set(k, g);
+    }
+    setErr(''); setGroups([...map.values()]);
+  }, []);
+  useEffect(() => { load(); }, [load]);
+  async function resolve(g) {
+    await supabase.from('app_errors').delete().eq('kind', g.kind).eq('message', g.message);
+    load();
+  }
+  return (
+    <div className="card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 12 }}>
+        <div>
+          <h2 style={{ fontSize: 20, margin: 0 }}>Erros do site</h2>
+          <p className="muted" style={{ fontSize: 14, margin: '4px 0 0' }}>Registrados automaticamente quando algo quebra no aparelho de um aluno. Marque como resolvido depois de corrigir.</p>
+        </div>
+        <button className="btn btn-out" style={{ minHeight: 36, padding: '0 12px', fontSize: 14 }} onClick={load}>Atualizar</button>
+      </div>
+      {err ? <div className="alert" role="alert">{err}</div> : groups == null ? <p className="muted">Carregando…</p> : groups.length === 0 ? <p className="muted">Nenhum erro registrado. 🎉</p> : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {groups.map(g => (
+            <div key={g.key} style={{ border: '1px solid var(--line)', borderRadius: 14, padding: 14, display: 'flex', gap: 12, justifyContent: 'space-between', flexWrap: 'wrap' }}>
+              <div style={{ flex: '1 1 320px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                <span style={{ fontSize: 12, fontWeight: 700, color: g.kind === 'api' ? 'var(--bad)' : 'var(--violet)', textTransform: 'uppercase', letterSpacing: .5 }}>{KIND[g.kind] || g.kind}</span>
+                <b style={{ overflowWrap: 'anywhere' }}>{g.message}</b>
+                <span className="muted" style={{ fontSize: 13 }}>{g.count}× · {g.users.size} {g.users.size === 1 ? 'aluno' : 'alunos'} · último {ago(g.last.created_at)} · {[...g.pages].slice(0, 3).join(', ')}</span>
+                {g.last.detail && <details style={{ fontSize: 12 }}><summary className="muted" style={{ cursor: 'pointer' }}>Detalhes técnicos</summary><pre style={{ whiteSpace: 'pre-wrap', overflowWrap: 'anywhere', margin: '6px 0 0', maxHeight: 200, overflow: 'auto' }}>{g.last.detail}{'\n\n'}{g.last.ua}</pre></details>}
+              </div>
+              <button className="btn btn-out" style={{ minHeight: 40, fontSize: 14, alignSelf: 'flex-start' }} onClick={() => resolve(g)}>Marcar resolvido</button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Admin() {
   const { isAdmin } = useAuth();
   const [stats, setStats] = useState(null);
@@ -165,6 +217,7 @@ export default function Admin() {
           ))}
         </div>
 
+        {!err && <SiteErrors />}
         {!err && <Students />}
 
         {stats && (

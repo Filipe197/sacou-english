@@ -1,0 +1,5 @@
+{
+  "_sobre": "Gênero da voz de cada personagem (f = feminina, m = masculina). Usado pelo site e por scripts/gen-audio.py. Diálogos A/B: A = f, B = m. Sem personagem: f.",
+  "f": ["ana", "julia", "sofia", "emma", "laura", "rita", "nina", "paula", "clara", "maria", "sarah", "mãe", "mae", "professora", "grandma", "guide", "clerk", "a"],
+  "m": ["tom", "lucas", "mike", "pedro", "ben", "leo", "bruno", "marcos", "carlos", "john", "sam", "max", "vendedor", "professor", "garçom", "garcom", "officer", "driver", "b"]
+}
