@@ -1,0 +1,452 @@
+{
+ "id": "a1-u1",
+ "level": "A1",
+ "order": 1,
+ "title": "Primeiros contatos",
+ "subtitle": "Cumprimentar, se despedir e ser educado.",
+ "can_do": {
+  "text": "Consigo cumprimentar, me despedir e usar as formas educadas mais simples: por favor, obrigado e desculpe.",
+  "source": "CEFR (Conselho da Europa) — Adequação sociolinguística, nível A1"
+ },
+ "core_inventory": [
+  "Functions: greetings",
+  "Functions: leave-taking",
+  "Functions: politeness (please, thank you, sorry)"
+ ],
+ "extra_vocab": [
+  {
+   "word": "goodbye",
+   "reason": "Forma completa de \"bye\" (A1 na CEFR-J); aparece em todos os livros A1 como cumprimento de despedida."
+  }
+ ],
+ "words": [
+  [
+   "hello",
+   "olá"
+  ],
+  [
+   "hi",
+   "oi"
+  ],
+  [
+   "bye",
+   "tchau"
+  ],
+  [
+   "goodbye",
+   "adeus / tchau"
+  ],
+  [
+   "good morning",
+   "bom dia"
+  ],
+  [
+   "good afternoon",
+   "boa tarde"
+  ],
+  [
+   "good evening",
+   "boa noite (ao chegar)"
+  ],
+  [
+   "good night",
+   "boa noite (ao sair ou dormir)"
+  ],
+  [
+   "please",
+   "por favor"
+  ],
+  [
+   "thank you",
+   "obrigado(a)"
+  ],
+  [
+   "thanks",
+   "valeu / obrigado"
+  ],
+  [
+   "sorry",
+   "desculpe"
+  ],
+  [
+   "excuse me",
+   "com licença"
+  ],
+  [
+   "how are you?",
+   "como você está?"
+  ],
+  [
+   "I'm fine",
+   "estou bem"
+  ],
+  [
+   "see you",
+   "até mais"
+  ]
+ ],
+ "guide": {
+  "title": "Como cumprimentar em inglês",
+  "intro": "Em inglês, o jeito de cumprimentar muda conforme a hora do dia e o quanto você conhece a pessoa. A boa notícia: são poucas expressões e elas se repetem o tempo todo.",
+  "points": [
+   {
+    "en": "Hello / Hi",
+    "pt": "Olá / Oi",
+    "note": "\"Hello\" serve para qualquer situação. \"Hi\" é mais informal, para amigos e colegas."
+   },
+   {
+    "en": "Good morning / Good afternoon",
+    "pt": "Bom dia / Boa tarde",
+    "note": "Morning vai até o meio-dia; afternoon, do meio-dia até umas 18h."
+   },
+   {
+    "en": "Good evening / Good night",
+    "pt": "Boa noite / Boa noite",
+    "note": "Atenção: \"good evening\" é para CHEGAR à noite. \"Good night\" é só para se DESPEDIR ou ir dormir."
+   },
+   {
+    "en": "Thank you / Thanks",
+    "pt": "Obrigado(a) / Valeu",
+    "note": "Em inglês não muda com o gênero: homem e mulher dizem \"thank you\"."
+   },
+   {
+    "en": "Sorry / Excuse me",
+    "pt": "Desculpe / Com licença",
+    "note": "\"Sorry\" é para pedir desculpas. \"Excuse me\" é para chamar a atenção ou pedir passagem."
+   }
+  ],
+  "tips": [
+   "Na dúvida, use \"Hello\": nunca está errado.",
+   "\"How are you?\" quase sempre é respondido com \"I'm fine, thanks\"."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "a1-u1-l1",
+   "title": "Olá e tchau",
+   "items": [
+    {
+     "id": "a1u1l1-1",
+     "type": "meaning",
+     "en": "Hello!",
+     "options": [
+      "Olá!",
+      "Tchau!",
+      "Obrigado!"
+     ],
+     "answer": "Olá!",
+     "why": "\"Hello\" é o cumprimento mais comum em inglês e serve para qualquer pessoa, a qualquer hora."
+    },
+    {
+     "id": "a1u1l1-2",
+     "type": "meaning",
+     "en": "Bye!",
+     "options": [
+      "Oi!",
+      "Tchau!",
+      "Desculpe!"
+     ],
+     "answer": "Tchau!",
+     "why": "\"Bye\" é a forma curta e informal de se despedir. A forma completa é \"goodbye\"."
+    },
+    {
+     "id": "a1u1l1-3",
+     "type": "match",
+     "pairs": [
+      [
+       "hello",
+       "olá"
+      ],
+      [
+       "hi",
+       "oi"
+      ],
+      [
+       "bye",
+       "tchau"
+      ],
+      [
+       "goodbye",
+       "adeus / tchau"
+      ]
+     ],
+     "why": "\"Hello\" e \"hi\" são para chegar; \"bye\" e \"goodbye\" para sair. \"Hi\" e \"bye\" são as versões mais informais."
+    },
+    {
+     "id": "a1u1l1-4",
+     "type": "listen",
+     "en": "Hi!",
+     "options": [
+      "Oi!",
+      "Tchau!",
+      "Por favor!"
+     ],
+     "answer": "Oi!",
+     "why": "\"Hi\" se pronuncia como \"rái\". É o \"oi\" do inglês, usado com amigos e colegas."
+    },
+    {
+     "id": "a1u1l1-5",
+     "type": "choice",
+     "prompt": "Você está saindo de uma festa. O que diz?",
+     "en": "___!",
+     "options": [
+      "Hello",
+      "Goodbye",
+      "Hi"
+     ],
+     "answer": "Goodbye",
+     "why": "Ao sair, você se despede: \"goodbye\" (ou \"bye\"). \"Hello\" e \"hi\" são para quando você chega.",
+     "wrong": {
+      "Hello": "\"Hello\" é para chegar, não para sair.",
+      "Hi": "\"Hi\" é um \"oi\" — serve para chegar."
+     }
+    },
+    {
+     "id": "a1u1l1-6",
+     "type": "build",
+     "pt": "Olá, Pedro!",
+     "answer": "Hello Pedro",
+     "extra": [
+      "bye",
+      "good"
+     ],
+     "why": "Primeiro o cumprimento, \"hello\" (olá), e depois o nome da pessoa — igual ao português.",
+     "display": "Hello, Pedro!"
+    }
+   ]
+  },
+  {
+   "id": "a1-u1-l2",
+   "title": "Bom dia, boa tarde, boa noite",
+   "items": [
+    {
+     "id": "a1u1l2-1",
+     "type": "meaning",
+     "en": "Good morning!",
+     "options": [
+      "Bom dia!",
+      "Boa tarde!",
+      "Boa noite!"
+     ],
+     "answer": "Bom dia!",
+     "why": "\"Morning\" é manhã. \"Good morning\" = bom dia, usado até mais ou menos meio-dia."
+    },
+    {
+     "id": "a1u1l2-2",
+     "type": "meaning",
+     "en": "Good afternoon!",
+     "options": [
+      "Bom dia!",
+      "Boa tarde!",
+      "Boa noite!"
+     ],
+     "answer": "Boa tarde!",
+     "why": "\"Afternoon\" é a tarde — literalmente \"depois do meio-dia\" (after + noon)."
+    },
+    {
+     "id": "a1u1l2-3",
+     "type": "choice",
+     "prompt": "São 20h e você CHEGA a um restaurante. O que diz?",
+     "en": "Good ___!",
+     "options": [
+      "evening",
+      "night",
+      "morning"
+     ],
+     "answer": "evening",
+     "why": "Para chegar à noite usamos \"good evening\". \"Good night\" é só para ir embora ou dormir.",
+     "wrong": {
+      "night": "\"Good night\" é despedida — você diria ao sair do restaurante.",
+      "morning": "\"Morning\" é a manhã; às 20h já é noite."
+     }
+    },
+    {
+     "id": "a1u1l2-4",
+     "type": "choice",
+     "prompt": "Você vai dormir. O que diz para sua família?",
+     "en": "Good ___!",
+     "options": [
+      "evening",
+      "night",
+      "afternoon"
+     ],
+     "answer": "night",
+     "why": "Na hora de dormir ou de ir embora à noite, o certo é \"good night\".",
+     "wrong": {
+      "evening": "\"Good evening\" é para chegar à noite, não para dormir."
+     }
+    },
+    {
+     "id": "a1u1l2-5",
+     "type": "match",
+     "pairs": [
+      [
+       "good morning",
+       "bom dia"
+      ],
+      [
+       "good afternoon",
+       "boa tarde"
+      ],
+      [
+       "good evening",
+       "boa noite (ao chegar)"
+      ],
+      [
+       "good night",
+       "boa noite (ao sair ou dormir)"
+      ]
+     ],
+     "why": "O português tem um só \"boa noite\", mas o inglês tem dois: \"good evening\" (chegando) e \"good night\" (saindo)."
+    },
+    {
+     "id": "a1u1l2-6",
+     "type": "listen",
+     "en": "Good night!",
+     "options": [
+      "Bom dia!",
+      "Boa tarde!",
+      "Boa noite!"
+     ],
+     "answer": "Boa noite!",
+     "why": "\"Night\" se pronuncia \"náit\". \"Good night\" é a despedida da noite."
+    },
+    {
+     "id": "a1u1l2-7",
+     "type": "build",
+     "pt": "Bom dia, Ana!",
+     "answer": "Good morning Ana",
+     "extra": [
+      "night",
+      "afternoon"
+     ],
+     "why": "O cumprimento vem primeiro e o nome da pessoa depois, igual ao português.",
+     "display": "Good morning, Ana!"
+    }
+   ]
+  },
+  {
+   "id": "a1-u1-l3",
+   "title": "Por favor, obrigado, desculpe",
+   "items": [
+    {
+     "id": "a1u1l3-1",
+     "type": "meaning",
+     "en": "Thank you!",
+     "options": [
+      "Obrigado!",
+      "Por favor!",
+      "Desculpe!"
+     ],
+     "answer": "Obrigado!",
+     "why": "\"Thank you\" = obrigado ou obrigada. Em inglês a forma é a mesma para homens e mulheres."
+    },
+    {
+     "id": "a1u1l3-2",
+     "type": "match",
+     "pairs": [
+      [
+       "please",
+       "por favor"
+      ],
+      [
+       "thank you",
+       "obrigado(a)"
+      ],
+      [
+       "sorry",
+       "desculpe"
+      ],
+      [
+       "excuse me",
+       "com licença"
+      ]
+     ],
+     "why": "Essas quatro expressões são a base da educação em inglês — você vai usar todos os dias."
+    },
+    {
+     "id": "a1u1l3-3",
+     "type": "choice",
+     "prompt": "Você quer passar no meio das pessoas. O que diz?",
+     "en": "___ me!",
+     "options": [
+      "Excuse",
+      "Sorry",
+      "Thank"
+     ],
+     "answer": "Excuse",
+     "why": "\"Excuse me\" é \"com licença\": para pedir passagem ou chamar a atenção de alguém.",
+     "wrong": {
+      "Sorry": "\"Sorry\" é para pedir desculpas depois de um erro, e não vem com \"me\".",
+      "Thank": "\"Thank\" é agradecer — o certo seria \"thank you\"."
+     }
+    },
+    {
+     "id": "a1u1l3-4",
+     "type": "meaning",
+     "en": "How are you?",
+     "options": [
+      "Como você está?",
+      "Qual é o seu nome?",
+      "Onde você está?"
+     ],
+     "answer": "Como você está?",
+     "why": "\"How\" = como, \"are you\" = você está. É a pergunta mais comum depois de \"hello\"."
+    },
+    {
+     "id": "a1u1l3-5",
+     "type": "build",
+     "pt": "Estou bem, obrigado.",
+     "answer": "I'm fine thank you",
+     "extra": [
+      "please",
+      "sorry"
+     ],
+     "why": "\"I'm\" é a forma curta de \"I am\" (eu estou). \"Fine\" = bem. Depois agradecemos: \"thank you\".",
+     "display": "I'm fine, thank you."
+    },
+    {
+     "id": "a1u1l3-6",
+     "type": "listen",
+     "en": "Sorry!",
+     "options": [
+      "Desculpe!",
+      "Obrigado!",
+      "Por favor!"
+     ],
+     "answer": "Desculpe!",
+     "why": "\"Sorry\" se pronuncia mais ou menos \"sóri\". Usamos para pedir desculpas."
+    },
+    {
+     "id": "a1u1l3-7",
+     "type": "choice",
+     "prompt": "Complete a resposta educada:",
+     "en": "I'm fine, ___!",
+     "options": [
+      "thanks",
+      "sorry",
+      "please"
+     ],
+     "answer": "thanks",
+     "why": "Depois de dizer que está bem, o natural é agradecer: \"I'm fine, thanks!\" (Estou bem, valeu!).",
+     "wrong": {
+      "sorry": "\"Sorry\" pede desculpas — não faz sentido aqui.",
+      "please": "\"Please\" é para pedir algo."
+     }
+    },
+    {
+     "id": "a1u1l3-8",
+     "type": "build",
+     "pt": "Tchau! Até mais!",
+     "answer": "Bye see you",
+     "extra": [
+      "hello",
+      "please"
+     ],
+     "why": "\"See you\" é literalmente \"vejo você\" — o nosso \"até mais\".",
+     "display": "Bye! See you!"
+    }
+   ]
+  }
+ ]
+}
