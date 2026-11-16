@@ -105,7 +105,7 @@ button{font-family:inherit}
 
 /* ---------- área do aluno ---------- */
 .shell{display:flex;flex-wrap:wrap;min-height:100vh}
-.side{flex:1 1 240px;max-width:280px;padding:24px 16px;border-right:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:6px}
+.side{flex:1 1 240px;max-width:280px;padding:24px 16px;border-right:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;align-self:flex-start;height:100vh;height:100dvh;overflow-y:auto}
 .side .nav-a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;color:#3A3E5A;text-decoration:none;font-weight:600;font-size:15px;min-height:44px}
 .side .nav-a:hover{background:var(--track);color:var(--ink)}
 .side .nav-a.active{background:var(--violet);color:#fff}
@@ -113,13 +113,13 @@ button{font-family:inherit}
 .side .nav-a.active .badge{background:#fff;color:var(--violet)}
 .side-foot{margin-top:auto;display:flex;flex-direction:column;gap:4px;padding-top:16px}
 .content{flex:999 1 520px;min-width:0;padding:32px 24px 64px}
-.rail{flex:1 1 300px;max-width:380px;padding:32px 24px;display:flex;flex-direction:column;gap:18px}
+.rail{flex:1 1 300px;max-width:380px;padding:32px 24px;display:flex;flex-direction:column;gap:18px;position:sticky;top:0;align-self:flex-start;max-height:100vh;max-height:100dvh;overflow-y:auto;scrollbar-width:thin}
 @media (max-width:860px){
   /* celular: menu vira uma barra fixa no rodapé, como em apps */
   .shell{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
   .side{display:none}
   .content{padding:20px 16px 32px}
-  .rail{max-width:none;padding:16px 16px 0;order:-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .rail{position:static;max-height:none;max-width:none;padding:16px 16px 0;order:-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 }
 .nav-plain,.nav-install{background:none;border:0;cursor:pointer;font:inherit;text-align:left;width:100%}
 .side .nav-install,.sheet-list .nav-install{background:var(--lime);color:var(--ink)}
