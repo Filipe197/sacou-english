@@ -18,7 +18,7 @@ export default function Placement() {
   const units = UNITS.filter(u => LEVEL_ORDER.indexOf(u.level) <= upTo);
   const entries = useMemo(() => units.flatMap(u => {
     const per = upTo > 0 && u.level === 'A1' ? 2 : 3; // no teste longo, menos perguntas do básico
-    return shuffle(u.lessons.flatMap(l => l.items.filter(i => i.type !== 'match').map(item => ({ item, lessonId: l.id, unit: u })))).slice(0, per);
+    return shuffle(u.lessons.flatMap(l => l.items.filter(i => i.type !== 'match' && i.type !== 'speak').map(item => ({ item, lessonId: l.id, unit: u })))).slice(0, per);
   }), [upTo]);
 
   if (!started) {

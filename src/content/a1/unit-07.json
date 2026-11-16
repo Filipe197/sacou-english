@@ -1,67 +1,631 @@
 {
-  "id": "a1-u7",
-  "level": "A1",
-  "order": 7,
-  "title": "Comida e bebida",
-  "subtitle": "Like / don't like, perguntas com do e pedidos educados.",
-  "can_do": {
-    "text": "Consigo dizer do que gosto e não gosto de comer e pedir comida e bebida de forma simples.",
-    "source": "CEFR (Conselho da Europa) — Transações para obter bens e serviços, nível A1"
-  },
-  "core_inventory": ["Grammar: like + noun", "Grammar: present simple questions (Do you...?) and short answers", "Functions: expressing likes and dislikes", "Functions: ordering food and drink (I'd like...)", "Vocabulary: food and drink"],
-  "words": [
-    ["bread", "pão"], ["rice", "arroz"], ["chicken", "frango"], ["fish", "peixe"], ["egg", "ovo"], ["cheese", "queijo"],
-    ["apple", "maçã"], ["coffee", "café"], ["tea", "chá"], ["water", "água"], ["milk", "leite"], ["juice", "suco"],
-    ["I like", "eu gosto de"], ["I don't like", "eu não gosto de"], ["I'd like", "eu gostaria de"]
+ "id": "a1-u7",
+ "level": "A1",
+ "order": 7,
+ "title": "Comida e bebida",
+ "subtitle": "Like / don't like, perguntas com do e pedidos educados.",
+ "can_do": {
+  "text": "Consigo dizer do que gosto e não gosto de comer e pedir comida e bebida de forma simples.",
+  "source": "CEFR (Conselho da Europa) — Transações para obter bens e serviços, nível A1"
+ },
+ "core_inventory": [
+  "Grammar: like + noun",
+  "Grammar: present simple questions (Do you...?) and short answers",
+  "Functions: expressing likes and dislikes",
+  "Functions: ordering food and drink (I'd like...)",
+  "Vocabulary: food and drink"
+ ],
+ "words": [
+  [
+   "bread",
+   "pão"
   ],
-  "guide": {
-    "title": "Gostar de comida e pedir educadamente",
-    "intro": "Em inglês, \"like\" já significa \"gostar de\" — não precisa de preposição. E para pedir algo de forma educada, usamos \"I'd like\".",
-    "points": [
-      { "en": "I like coffee.", "pt": "Eu gosto de café.", "note": "Não existe \"like of\": é só like + coisa." },
-      { "en": "She likes fish.", "pt": "Ela gosta de peixe.", "note": "Com he/she, like ganha -s: likes." },
-      { "en": "Do you like cheese? Yes, I do. / No, I don't.", "pt": "Você gosta de queijo? Sim. / Não.", "note": "Pergunta com \"Do\" no começo. Resposta curta: Yes, I do / No, I don't." },
-      { "en": "I'd like a coffee, please.", "pt": "Eu gostaria de um café, por favor.", "note": "\"I'd like\" (I would like) é o jeito educado de pedir. \"I want\" pode soar grosseiro." },
-      { "en": "an apple / an egg", "pt": "uma maçã / um ovo", "note": "Lembre: \"an\" antes de som de vogal." }
-    ],
-    "tips": ["Em um restaurante, sempre termine o pedido com \"please\".", "\"Juice\" se pronuncia \"djus\"."]
-  },
-  "lessons": [
-    {
-      "id": "a1-u7-l1",
-      "title": "Comidas e bebidas",
-      "items": [
-        { "id": "a1u7l1-1", "type": "match", "pairs": [["bread", "pão"], ["rice", "arroz"], ["chicken", "frango"], ["fish", "peixe"]], "why": "Comidas básicas do dia a dia. \"Fish\" não muda no plural na maioria dos casos." },
-        { "id": "a1u7l1-2", "type": "match", "pairs": [["coffee", "café"], ["tea", "chá"], ["water", "água"], ["milk", "leite"], ["juice", "suco"]], "why": "Bebidas mais comuns. \"Water\" se pronuncia mais ou menos \"uóter\"." },
-        { "id": "a1u7l1-3", "type": "choice", "prompt": "Complete:", "en": "I have ___ apple.", "options": ["an", "a", "two"], "answer": "an", "why": "\"Apple\" começa com som de vogal, então usamos \"an\": an apple.", "wrong": { "a": "\"A\" vem antes de som de consoante. \"Apple\" começa com vogal.", "two": "Com \"two\" a palavra iria para o plural: two apples." } },
-        { "id": "a1u7l1-4", "type": "meaning", "en": "Eggs and cheese", "options": ["Ovos e queijo", "Ovos e leite", "Pão e queijo"], "answer": "Ovos e queijo", "why": "\"Eggs\" = ovos (plural com -s). \"Cheese\" = queijo." },
-        { "id": "a1u7l1-5", "type": "listen", "en": "Water, please.", "options": ["Água, por favor.", "Suco, por favor.", "Café, por favor."], "answer": "Água, por favor.", "why": "Em inglês, \"water\" tem o \"t\" quase como um \"d\" no inglês americano: \"uóder\"." },
-        { "id": "a1u7l1-6", "type": "build", "pt": "Eu como arroz e frango.", "answer": "I eat rice and chicken", "extra": ["fish", "eats"], "display": "I eat rice and chicken.", "why": "I + eat + rice and chicken. Com \"I\" o verbo não leva -s." }
-      ]
-    },
-    {
-      "id": "a1-u7-l2",
-      "title": "Eu gosto, eu não gosto",
-      "items": [
-        { "id": "a1u7l2-1", "type": "meaning", "en": "I like coffee.", "options": ["Eu gosto de café.", "Eu quero café.", "Eu não gosto de café."], "answer": "Eu gosto de café.", "why": "\"Like\" = gostar de. Não precisa de nenhuma palavra para o \"de\"." },
-        { "id": "a1u7l2-2", "type": "choice", "prompt": "Complete:", "en": "My sister ___ fish.", "options": ["likes", "like", "like of"], "answer": "likes", "why": "\"My sister\" = she, então o verbo ganha -s: likes.", "wrong": { "like": "Falta o -s: com she é \"likes\".", "like of": "Em inglês não existe \"like of\". É só like + coisa." } },
-        { "id": "a1u7l2-3", "type": "build", "pt": "Eu não gosto de leite.", "answer": "I don't like milk", "extra": ["doesn't", "of"], "display": "I don't like milk.", "why": "I + don't + like + milk. Sem \"of\"!" },
-        { "id": "a1u7l2-4", "type": "meaning", "en": "Do you like cheese?", "options": ["Você gosta de queijo?", "Você tem queijo?", "Você quer queijo?"], "answer": "Você gosta de queijo?", "why": "Perguntas no presente simples começam com \"Do\": Do you like...?" },
-        { "id": "a1u7l2-5", "type": "choice", "prompt": "Responda: Do you like tea?", "en": "Yes, I ___.", "options": ["do", "like", "am"], "answer": "do", "why": "A resposta curta repete o \"do\" da pergunta: Yes, I do. / No, I don't.", "wrong": { "like": "Em inglês a resposta curta usa o auxiliar: Yes, I do.", "am": "\"Am\" responde perguntas com \"Are you...?\", não com \"Do you...?\"." } },
-        { "id": "a1u7l2-6", "type": "listen", "en": "He doesn't like eggs.", "options": ["Ele não gosta de ovos.", "Ele gosta de ovos.", "Ela não gosta de ovos."], "answer": "Ele não gosta de ovos.", "why": "\"Doesn't like\" = não gosta (com he/she). Depois de doesn't, \"like\" fica sem -s." }
-      ]
-    },
-    {
-      "id": "a1-u7-l3",
-      "title": "Pedindo no café",
-      "items": [
-        { "id": "a1u7l3-1", "type": "meaning", "en": "I'd like a tea, please.", "options": ["Eu gostaria de um chá, por favor.", "Eu gosto de chá, por favor.", "Eu tenho um chá, por favor."], "answer": "Eu gostaria de um chá, por favor.", "why": "\"I'd like\" = I would like = eu gostaria. É o jeito educado de pedir." },
-        { "id": "a1u7l3-2", "type": "choice", "prompt": "Qual é o pedido mais educado?", "en": "___ a coffee, please.", "options": ["I'd like", "I like", "I have"], "answer": "I'd like", "why": "Para pedir algo, use \"I'd like\" (eu gostaria). \"I like\" é só dizer que você gosta.", "wrong": { "I like": "\"I like a coffee\" significa \"eu gosto de um café\" — não é um pedido.", "I have": "\"I have\" = eu tenho." } },
-        { "id": "a1u7l3-3", "type": "build", "pt": "Eu gostaria de uma água, por favor.", "answer": "I'd like a water please", "extra": ["want", "an"], "display": "I'd like a water, please.", "why": "I'd like + o que você quer + please. Em restaurantes, \"a water\" = um copo/garrafa de água." },
-        { "id": "a1u7l3-4", "type": "listen", "en": "Would you like a sandwich?", "options": ["Você gostaria de um sanduíche?", "Você gosta de sanduíche?", "Você tem um sanduíche?"], "answer": "Você gostaria de um sanduíche?", "why": "\"Would you like...?\" = você gostaria de...? É como se oferece algo com educação." },
-        { "id": "a1u7l3-5", "type": "choice", "prompt": "Complete o pedido:", "en": "An orange juice, ___.", "options": ["please", "sorry", "hello"], "answer": "please", "why": "Pedido educado termina com \"please\" (por favor).", "wrong": { "sorry": "\"Sorry\" é pedir desculpas.", "hello": "\"Hello\" é cumprimento." } },
-        { "id": "a1u7l3-6", "type": "build", "pt": "Você gostaria de um café?", "answer": "Would you like a coffee", "extra": ["do", "likes"], "display": "Would you like a coffee?", "why": "Would + you + like + a coffee? É a forma educada de oferecer." }
-      ]
-    }
+  [
+   "rice",
+   "arroz"
+  ],
+  [
+   "chicken",
+   "frango"
+  ],
+  [
+   "fish",
+   "peixe"
+  ],
+  [
+   "egg",
+   "ovo"
+  ],
+  [
+   "cheese",
+   "queijo"
+  ],
+  [
+   "apple",
+   "maçã"
+  ],
+  [
+   "coffee",
+   "café"
+  ],
+  [
+   "tea",
+   "chá"
+  ],
+  [
+   "water",
+   "água"
+  ],
+  [
+   "milk",
+   "leite"
+  ],
+  [
+   "juice",
+   "suco"
+  ],
+  [
+   "I like",
+   "eu gosto de"
+  ],
+  [
+   "I don't like",
+   "eu não gosto de"
+  ],
+  [
+   "I'd like",
+   "eu gostaria de"
   ]
+ ],
+ "guide": {
+  "title": "Gostar de comida e pedir educadamente",
+  "intro": "Em inglês, \"like\" já significa \"gostar de\" — não precisa de preposição. E para pedir algo de forma educada, usamos \"I'd like\".",
+  "points": [
+   {
+    "en": "I like coffee.",
+    "pt": "Eu gosto de café.",
+    "note": "Não existe \"like of\": é só like + coisa."
+   },
+   {
+    "en": "She likes fish.",
+    "pt": "Ela gosta de peixe.",
+    "note": "Com he/she, like ganha -s: likes."
+   },
+   {
+    "en": "Do you like cheese? Yes, I do. / No, I don't.",
+    "pt": "Você gosta de queijo? Sim. / Não.",
+    "note": "Pergunta com \"Do\" no começo. Resposta curta: Yes, I do / No, I don't."
+   },
+   {
+    "en": "I'd like a coffee, please.",
+    "pt": "Eu gostaria de um café, por favor.",
+    "note": "\"I'd like\" (I would like) é o jeito educado de pedir. \"I want\" pode soar grosseiro."
+   },
+   {
+    "en": "an apple / an egg",
+    "pt": "uma maçã / um ovo",
+    "note": "Lembre: \"an\" antes de som de vogal."
+   }
+  ],
+  "tips": [
+   "Em um restaurante, sempre termine o pedido com \"please\".",
+   "\"Juice\" se pronuncia \"djus\"."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "a1-u7-l1",
+   "title": "Comidas e bebidas",
+   "items": [
+    {
+     "id": "a1u7l1-1",
+     "type": "match",
+     "pairs": [
+      [
+       "bread",
+       "pão"
+      ],
+      [
+       "rice",
+       "arroz"
+      ],
+      [
+       "chicken",
+       "frango"
+      ],
+      [
+       "fish",
+       "peixe"
+      ]
+     ],
+     "why": "Comidas básicas do dia a dia. \"Fish\" não muda no plural na maioria dos casos."
+    },
+    {
+     "id": "a1u7l1-2",
+     "type": "match",
+     "pairs": [
+      [
+       "coffee",
+       "café"
+      ],
+      [
+       "tea",
+       "chá"
+      ],
+      [
+       "water",
+       "água"
+      ],
+      [
+       "milk",
+       "leite"
+      ],
+      [
+       "juice",
+       "suco"
+      ]
+     ],
+     "why": "Bebidas mais comuns. \"Water\" se pronuncia mais ou menos \"uóter\"."
+    },
+    {
+     "id": "a1u7l1-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I have ___ apple.",
+     "options": [
+      "an",
+      "a",
+      "two"
+     ],
+     "answer": "an",
+     "why": "\"Apple\" começa com som de vogal, então usamos \"an\": an apple.",
+     "wrong": {
+      "a": "\"A\" vem antes de som de consoante. \"Apple\" começa com vogal.",
+      "two": "Com \"two\" a palavra iria para o plural: two apples."
+     }
+    },
+    {
+     "id": "a1u7l1-4",
+     "type": "meaning",
+     "en": "Eggs and cheese",
+     "options": [
+      "Ovos e queijo",
+      "Ovos e leite",
+      "Pão e queijo"
+     ],
+     "answer": "Ovos e queijo",
+     "why": "\"Eggs\" = ovos (plural com -s). \"Cheese\" = queijo."
+    },
+    {
+     "id": "a1u7l1-5",
+     "type": "listen",
+     "en": "Water, please.",
+     "options": [
+      "Água, por favor.",
+      "Suco, por favor.",
+      "Café, por favor."
+     ],
+     "answer": "Água, por favor.",
+     "why": "Em inglês, \"water\" tem o \"t\" quase como um \"d\" no inglês americano: \"uóder\"."
+    },
+    {
+     "id": "a1u7l1-6",
+     "type": "build",
+     "pt": "Eu como arroz e frango.",
+     "answer": "I eat rice and chicken",
+     "extra": [
+      "fish",
+      "eats"
+     ],
+     "display": "I eat rice and chicken.",
+     "why": "I + eat + rice and chicken. Com \"I\" o verbo não leva -s."
+    }
+   ]
+  },
+  {
+   "id": "a1-u7-l2",
+   "title": "Eu gosto, eu não gosto",
+   "items": [
+    {
+     "id": "a1u7l2-1",
+     "type": "meaning",
+     "en": "I like coffee.",
+     "options": [
+      "Eu gosto de café.",
+      "Eu quero café.",
+      "Eu não gosto de café."
+     ],
+     "answer": "Eu gosto de café.",
+     "why": "\"Like\" = gostar de. Não precisa de nenhuma palavra para o \"de\"."
+    },
+    {
+     "id": "a1u7l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "My sister ___ fish.",
+     "options": [
+      "likes",
+      "like",
+      "like of"
+     ],
+     "answer": "likes",
+     "why": "\"My sister\" = she, então o verbo ganha -s: likes.",
+     "wrong": {
+      "like": "Falta o -s: com she é \"likes\".",
+      "like of": "Em inglês não existe \"like of\". É só like + coisa."
+     }
+    },
+    {
+     "id": "a1u7l2-3",
+     "type": "build",
+     "pt": "Eu não gosto de leite.",
+     "answer": "I don't like milk",
+     "extra": [
+      "doesn't",
+      "of"
+     ],
+     "display": "I don't like milk.",
+     "why": "I + don't + like + milk. Sem \"of\"!"
+    },
+    {
+     "id": "a1u7l2-4",
+     "type": "meaning",
+     "en": "Do you like cheese?",
+     "options": [
+      "Você gosta de queijo?",
+      "Você tem queijo?",
+      "Você quer queijo?"
+     ],
+     "answer": "Você gosta de queijo?",
+     "why": "Perguntas no presente simples começam com \"Do\": Do you like...?"
+    },
+    {
+     "id": "a1u7l2-5",
+     "type": "choice",
+     "prompt": "Responda: Do you like tea?",
+     "en": "Yes, I ___.",
+     "options": [
+      "do",
+      "like",
+      "am"
+     ],
+     "answer": "do",
+     "why": "A resposta curta repete o \"do\" da pergunta: Yes, I do. / No, I don't.",
+     "wrong": {
+      "like": "Em inglês a resposta curta usa o auxiliar: Yes, I do.",
+      "am": "\"Am\" responde perguntas com \"Are you...?\", não com \"Do you...?\"."
+     }
+    },
+    {
+     "id": "a1u7l2-6",
+     "type": "listen",
+     "en": "He doesn't like eggs.",
+     "options": [
+      "Ele não gosta de ovos.",
+      "Ele gosta de ovos.",
+      "Ela não gosta de ovos."
+     ],
+     "answer": "Ele não gosta de ovos.",
+     "why": "\"Doesn't like\" = não gosta (com he/she). Depois de doesn't, \"like\" fica sem -s."
+    }
+   ]
+  },
+  {
+   "id": "a1-u7-l3",
+   "title": "Pedindo no café",
+   "items": [
+    {
+     "id": "a1u7l3-1",
+     "type": "meaning",
+     "en": "I'd like a tea, please.",
+     "options": [
+      "Eu gostaria de um chá, por favor.",
+      "Eu gosto de chá, por favor.",
+      "Eu tenho um chá, por favor."
+     ],
+     "answer": "Eu gostaria de um chá, por favor.",
+     "why": "\"I'd like\" = I would like = eu gostaria. É o jeito educado de pedir."
+    },
+    {
+     "id": "a1u7l3-2",
+     "type": "choice",
+     "prompt": "Qual é o pedido mais educado?",
+     "en": "___ a coffee, please.",
+     "options": [
+      "I'd like",
+      "I like",
+      "I have"
+     ],
+     "answer": "I'd like",
+     "why": "Para pedir algo, use \"I'd like\" (eu gostaria). \"I like\" é só dizer que você gosta.",
+     "wrong": {
+      "I like": "\"I like a coffee\" significa \"eu gosto de um café\" — não é um pedido.",
+      "I have": "\"I have\" = eu tenho."
+     }
+    },
+    {
+     "id": "a1u7l3-3",
+     "type": "build",
+     "pt": "Eu gostaria de uma água, por favor.",
+     "answer": "I'd like a water please",
+     "extra": [
+      "want",
+      "an"
+     ],
+     "display": "I'd like a water, please.",
+     "why": "I'd like + o que você quer + please. Em restaurantes, \"a water\" = um copo/garrafa de água."
+    },
+    {
+     "id": "a1u7l3-4",
+     "type": "listen",
+     "en": "Would you like a sandwich?",
+     "options": [
+      "Você gostaria de um sanduíche?",
+      "Você gosta de sanduíche?",
+      "Você tem um sanduíche?"
+     ],
+     "answer": "Você gostaria de um sanduíche?",
+     "why": "\"Would you like...?\" = você gostaria de...? É como se oferece algo com educação."
+    },
+    {
+     "id": "a1u7l3-5",
+     "type": "choice",
+     "prompt": "Complete o pedido:",
+     "en": "An orange juice, ___.",
+     "options": [
+      "please",
+      "sorry",
+      "hello"
+     ],
+     "answer": "please",
+     "why": "Pedido educado termina com \"please\" (por favor).",
+     "wrong": {
+      "sorry": "\"Sorry\" é pedir desculpas.",
+      "hello": "\"Hello\" é cumprimento."
+     }
+    },
+    {
+     "id": "a1u7l3-6",
+     "type": "build",
+     "pt": "Você gostaria de um café?",
+     "answer": "Would you like a coffee",
+     "extra": [
+      "do",
+      "likes"
+     ],
+     "display": "Would you like a coffee?",
+     "why": "Would + you + like + a coffee? É a forma educada de oferecer."
+    }
+   ]
+  },
+  {
+   "id": "a1-u7-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "a1u7l4-1",
+     "type": "type",
+     "pt": "Eu gosto de café.",
+     "answer": "I like coffee.",
+     "why": "\"Like\" já é \"gostar de\": sem \"of\"."
+    },
+    {
+     "id": "a1u7l4-2",
+     "type": "type",
+     "pt": "Ela não gosta de peixe.",
+     "answer": "She doesn't like fish.",
+     "accept": [
+      "She does not like fish."
+     ],
+     "why": "Com she: doesn't like."
+    },
+    {
+     "id": "a1u7l4-3",
+     "type": "dictation",
+     "en": "Do you like cheese?",
+     "why": "Pergunta no presente simples começa com \"Do\"."
+    },
+    {
+     "id": "a1u7l4-4",
+     "type": "type",
+     "pt": "Eu gostaria de uma água, por favor.",
+     "answer": "I'd like a water, please.",
+     "accept": [
+      "I would like a water, please.",
+      "I'd like some water, please.",
+      "I would like some water, please."
+     ],
+     "why": "\"I'd like\" = eu gostaria. Também vale \"some water\"."
+    },
+    {
+     "id": "a1u7l4-5",
+     "type": "dictation",
+     "en": "I don't like milk.",
+     "why": "\"Don't like\" = não gosto."
+    },
+    {
+     "id": "a1u7l4-6",
+     "type": "type",
+     "pt": "Você gosta de frango?",
+     "answer": "Do you like chicken?",
+     "why": "Do + you + like + chicken?"
+    }
+   ]
+  },
+  {
+   "id": "a1-u7-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "a1u7l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Hi! What would you like?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'd like a coffee, please.",
+      "I like coffee.",
+      "I'm a coffee."
+     ],
+     "answer": "I'd like a coffee, please.",
+     "why": "No café, \"What would you like?\" pede o seu pedido: I'd like..., please.",
+     "prompt": "Você está numa cafeteria."
+    },
+    {
+     "id": "a1u7l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Would you like milk?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, thank you.",
+      "No, I don't like.",
+      "No, I'm not."
+     ],
+     "answer": "No, thank you.",
+     "why": "Para recusar com educação: No, thank you. \"I don't like\" sozinho está incompleto."
+    },
+    {
+     "id": "a1u7l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you like pizza?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I love it!",
+      "Yes, I like.",
+      "Yes, I am."
+     ],
+     "answer": "Yes, I love it!",
+     "why": "\"Like\" e \"love\" precisam de complemento: I love it / I like it. \"Yes, I like\" sozinho está errado."
+    },
+    {
+     "id": "a1u7l5-4",
+     "type": "speak",
+     "en": "I'd like a tea, please.",
+     "pt": "Eu gostaria de um chá, por favor.",
+     "why": "\"I'd\" soa como \"áid\". Fale devagar e sorria, o \"please\" ajuda!"
+    },
+    {
+     "id": "a1u7l5-5",
+     "type": "speak",
+     "en": "I don't like fish.",
+     "pt": "Eu não gosto de peixe.",
+     "why": "\"Don't\" soa como \"dônt\"."
+    },
+    {
+     "id": "a1u7l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Here you are. Your coffee."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Thank you!",
+      "Sorry!",
+      "Hello!"
+     ],
+     "answer": "Thank you!",
+     "why": "Quando alguém te entrega algo: Thank you!"
+    }
+   ]
+  },
+  {
+   "id": "a1-u7-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "a1u7l6-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "My father ___ rice and fish.",
+     "options": [
+      "likes",
+      "like",
+      "liking"
+     ],
+     "answer": "likes",
+     "why": "\"My father\" = he: likes.",
+     "wrong": {
+      "like": "Com he, like ganha -s.",
+      "liking": "Sem \"is\", \"liking\" não forma frase."
+     }
+    },
+    {
+     "id": "a1u7l6-2",
+     "type": "type",
+     "pt": "Eu como pão no café da manhã.",
+     "answer": "I eat bread for breakfast.",
+     "accept": [
+      "I have bread for breakfast."
+     ],
+     "why": "\"For breakfast\" = no café da manhã (como refeição)."
+    },
+    {
+     "id": "a1u7l6-3",
+     "type": "meaning",
+     "en": "I'm hungry.",
+     "options": [
+      "Estou com fome.",
+      "Estou cansado.",
+      "Estou feliz."
+     ],
+     "answer": "Estou com fome.",
+     "why": "\"Hungry\" = com fome. Em inglês você \"é/está\" com fome: I'm hungry."
+    },
+    {
+     "id": "a1u7l6-4",
+     "type": "listen",
+     "en": "Two orange juices, please.",
+     "options": [
+      "Dois sucos de laranja, por favor.",
+      "Duas laranjas, por favor.",
+      "Um suco de laranja, por favor."
+     ],
+     "answer": "Dois sucos de laranja, por favor.",
+     "why": "\"Orange juice\" = suco de laranja. Num pedido, dá para dizer \"two juices\"."
+    },
+    {
+     "id": "a1u7l6-5",
+     "type": "dictation",
+     "en": "Would you like a sandwich?",
+     "why": "\"Would you like...?\" = você gostaria de...?"
+    },
+    {
+     "id": "a1u7l6-6",
+     "type": "speak",
+     "en": "Water, please.",
+     "pt": "Água, por favor.",
+     "why": "\"Water\" soa como \"UÓ-ter\" (ou \"UÓ-der\" no inglês americano)."
+    }
+   ]
+  }
+ ]
 }

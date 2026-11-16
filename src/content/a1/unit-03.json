@@ -1,68 +1,688 @@
 {
-  "id": "a1-u3",
-  "level": "A1",
-  "order": 3,
-  "title": "Números e idade",
-  "subtitle": "Contar até 20, dizer a idade e o telefone.",
-  "can_do": {
-    "text": "Consigo entender e dizer números, perguntar e dizer a idade.",
-    "source": "CEFR (Conselho da Europa) — Troca de informações, nível A1"
-  },
-  "core_inventory": ["Grammar: cardinal numbers 1–20", "Functions: giving personal information (age, phone number)", "Grammar: how old + to be"],
-  "words": [
-    ["one", "um"], ["two", "dois"], ["three", "três"], ["four", "quatro"], ["five", "cinco"],
-    ["six", "seis"], ["seven", "sete"], ["eight", "oito"], ["nine", "nove"], ["ten", "dez"],
-    ["eleven", "onze"], ["twelve", "doze"], ["thirteen", "treze"], ["fifteen", "quinze"], ["twenty", "vinte"],
-    ["how old are you?", "quantos anos você tem?"], ["years old", "anos de idade"], ["phone number", "número de telefone"]
+ "id": "a1-u3",
+ "level": "A1",
+ "order": 3,
+ "title": "Números e idade",
+ "subtitle": "Contar até 20, dizer a idade e o telefone.",
+ "can_do": {
+  "text": "Consigo entender e dizer números, perguntar e dizer a idade.",
+  "source": "CEFR (Conselho da Europa) — Troca de informações, nível A1"
+ },
+ "core_inventory": [
+  "Grammar: cardinal numbers 1–20",
+  "Functions: giving personal information (age, phone number)",
+  "Grammar: how old + to be"
+ ],
+ "words": [
+  [
+   "one",
+   "um"
   ],
-  "guide": {
-    "title": "Números e idade",
-    "intro": "Os números de 13 a 19 terminam em \"-teen\" (thirteen, fourteen...). E atenção: para falar a idade o inglês usa o verbo SER/ESTAR (to be), e não \"ter\".",
-    "points": [
-      { "en": "thirteen, fourteen, fifteen", "pt": "treze, catorze, quinze", "note": "De 13 a 19, todos terminam em \"-teen\". O som forte fica no final: thir-TEEN." },
-      { "en": "How old are you?", "pt": "Quantos anos você tem?", "note": "Literalmente: \"quão velho você é?\"." },
-      { "en": "I am 20 years old.", "pt": "Eu tenho 20 anos.", "note": "Em inglês você \"É\" a idade: I am 20. Nunca diga \"I have 20 years\"." },
-      { "en": "What is your phone number?", "pt": "Qual é o seu telefone?", "note": "Telefone se fala número por número: five, five, two..." }
-    ],
-    "tips": ["\"Years old\" pode ser omitido: \"I'm 20\" já está certo.", "Cuidado com thirteen (13) e thirty (30): o som forte muda de lugar."]
-  },
-  "lessons": [
-    {
-      "id": "a1-u3-l1",
-      "title": "De 1 a 10",
-      "items": [
-        { "id": "a1u3l1-1", "type": "match", "pairs": [["one", "1"], ["two", "2"], ["three", "3"], ["four", "4"], ["five", "5"]], "why": "Estes são os números mais usados. \"Two\" se pronuncia \"tchú\", e \"three\" tem o som do \"th\" com a língua entre os dentes." },
-        { "id": "a1u3l1-2", "type": "match", "pairs": [["six", "6"], ["seven", "7"], ["eight", "8"], ["nine", "9"], ["ten", "10"]], "why": "\"Eight\" (8) se pronuncia \"êit\" — o \"gh\" é mudo." },
-        { "id": "a1u3l1-3", "type": "listen", "en": "Seven", "options": ["7", "6", "9"], "answer": "7", "why": "\"Seven\" = 7. Se pronuncia \"séven\"." },
-        { "id": "a1u3l1-4", "type": "meaning", "en": "Three", "options": ["3", "2", "8"], "answer": "3", "why": "\"Three\" = 3. Não confunda com \"two\" (2)." },
-        { "id": "a1u3l1-5", "type": "choice", "prompt": "Quanto é 2 + 2?", "en": "Two and two is ___.", "options": ["four", "five", "six"], "answer": "four", "why": "2 + 2 = 4, \"four\". Em inglês podemos dizer \"two and two is four\".", "wrong": { "five": "\"Five\" é 5.", "six": "\"Six\" é 6." } },
-        { "id": "a1u3l1-6", "type": "listen", "en": "Eight", "options": ["8", "3", "10"], "answer": "8", "why": "\"Eight\" = 8. O \"gh\" não é pronunciado." }
-      ]
-    },
-    {
-      "id": "a1-u3-l2",
-      "title": "De 11 a 20",
-      "items": [
-        { "id": "a1u3l2-1", "type": "match", "pairs": [["eleven", "11"], ["twelve", "12"], ["thirteen", "13"], ["fifteen", "15"], ["twenty", "20"]], "why": "11 e 12 têm nomes próprios (eleven, twelve). A partir do 13, quase todos terminam em \"-teen\"." },
-        { "id": "a1u3l2-2", "type": "meaning", "en": "Fourteen", "options": ["14", "40", "4"], "answer": "14", "why": "\"Four\" + \"teen\" = 14. O final \"-teen\" indica os números de 13 a 19." },
-        { "id": "a1u3l2-3", "type": "listen", "en": "Twelve", "options": ["12", "20", "2"], "answer": "12", "why": "\"Twelve\" = 12. Não confunda com \"twenty\" (20)." },
-        { "id": "a1u3l2-4", "type": "choice", "prompt": "Quanto é 10 + 6?", "en": "Ten and six is ___.", "options": ["sixteen", "six", "seventeen"], "answer": "sixteen", "why": "10 + 6 = 16: \"six\" + \"teen\" = sixteen.", "wrong": { "six": "\"Six\" é só 6.", "seventeen": "\"Seventeen\" é 17." } },
-        { "id": "a1u3l2-5", "type": "listen", "en": "Nineteen", "options": ["19", "9", "90"], "answer": "19", "why": "\"Nine\" + \"teen\" = 19. O som forte fica no final: nine-TEEN." },
-        { "id": "a1u3l2-6", "type": "meaning", "en": "Eighteen", "options": ["18", "8", "80"], "answer": "18", "why": "\"Eighteen\" = 18. Repare que \"eight\" + \"teen\" fica com um \"t\" só." }
-      ]
-    },
-    {
-      "id": "a1-u3-l3",
-      "title": "Quantos anos você tem?",
-      "items": [
-        { "id": "a1u3l3-1", "type": "meaning", "en": "How old are you?", "options": ["Quantos anos você tem?", "Como você está?", "De onde você é?"], "answer": "Quantos anos você tem?", "why": "\"How old\" = quão velho. É assim que se pergunta a idade em inglês." },
-        { "id": "a1u3l3-2", "type": "choice", "prompt": "Complete:", "en": "I ___ twenty years old.", "options": ["am", "have", "is"], "answer": "am", "why": "Em inglês a idade usa o verbo to be: I AM twenty. Com \"I\", o to be é \"am\".", "wrong": { "have": "Erro muito comum de brasileiro! Em inglês não se \"tem\" idade: diga \"I am twenty\".", "is": "\"Is\" é para he, she, it; com \"I\" use \"am\"." } },
-        { "id": "a1u3l3-3", "type": "build", "pt": "Quantos anos você tem?", "answer": "How old are you", "extra": ["have", "is"], "display": "How old are you?", "why": "How old + are + you. Nada de \"have\": a idade usa o verbo to be." },
-        { "id": "a1u3l3-4", "type": "build", "pt": "Ela tem quinze anos.", "answer": "She is fifteen years old", "extra": ["has", "are"], "display": "She is fifteen years old.", "why": "\"She is\" + idade + \"years old\". Lembre: ela \"É\" quinze anos, nunca \"has\"." },
-        { "id": "a1u3l3-5", "type": "listen", "en": "He is twelve.", "options": ["Ele tem doze anos.", "Ele tem vinte anos.", "Ela tem doze anos."], "answer": "Ele tem doze anos.", "why": "\"He\" = ele, \"twelve\" = 12. Dá para omitir \"years old\" quando o assunto já é idade." },
-        { "id": "a1u3l3-6", "type": "meaning", "en": "What is your phone number?", "options": ["Qual é o seu telefone?", "Qual é o seu nome?", "Quantos anos você tem?"], "answer": "Qual é o seu telefone?", "why": "\"Phone number\" = número de telefone. Na resposta, falamos número por número." },
-        { "id": "a1u3l3-7", "type": "choice", "prompt": "Complete:", "en": "How old ___ you?", "options": ["are", "is", "am"], "answer": "are", "why": "Com \"you\" o verbo to be é \"are\" — inclusive nas perguntas.", "wrong": { "is": "\"Is\" é para he, she, it.", "am": "\"Am\" é só para \"I\"." } }
-      ]
-    }
+  [
+   "two",
+   "dois"
+  ],
+  [
+   "three",
+   "três"
+  ],
+  [
+   "four",
+   "quatro"
+  ],
+  [
+   "five",
+   "cinco"
+  ],
+  [
+   "six",
+   "seis"
+  ],
+  [
+   "seven",
+   "sete"
+  ],
+  [
+   "eight",
+   "oito"
+  ],
+  [
+   "nine",
+   "nove"
+  ],
+  [
+   "ten",
+   "dez"
+  ],
+  [
+   "eleven",
+   "onze"
+  ],
+  [
+   "twelve",
+   "doze"
+  ],
+  [
+   "thirteen",
+   "treze"
+  ],
+  [
+   "fifteen",
+   "quinze"
+  ],
+  [
+   "twenty",
+   "vinte"
+  ],
+  [
+   "how old are you?",
+   "quantos anos você tem?"
+  ],
+  [
+   "years old",
+   "anos de idade"
+  ],
+  [
+   "phone number",
+   "número de telefone"
   ]
+ ],
+ "guide": {
+  "title": "Números e idade",
+  "intro": "Os números de 13 a 19 terminam em \"-teen\" (thirteen, fourteen...). E atenção: para falar a idade o inglês usa o verbo SER/ESTAR (to be), e não \"ter\".",
+  "points": [
+   {
+    "en": "thirteen, fourteen, fifteen",
+    "pt": "treze, catorze, quinze",
+    "note": "De 13 a 19, todos terminam em \"-teen\". O som forte fica no final: thir-TEEN."
+   },
+   {
+    "en": "How old are you?",
+    "pt": "Quantos anos você tem?",
+    "note": "Literalmente: \"quão velho você é?\"."
+   },
+   {
+    "en": "I am 20 years old.",
+    "pt": "Eu tenho 20 anos.",
+    "note": "Em inglês você \"É\" a idade: I am 20. Nunca diga \"I have 20 years\"."
+   },
+   {
+    "en": "What is your phone number?",
+    "pt": "Qual é o seu telefone?",
+    "note": "Telefone se fala número por número: five, five, two..."
+   }
+  ],
+  "tips": [
+   "\"Years old\" pode ser omitido: \"I'm 20\" já está certo.",
+   "Cuidado com thirteen (13) e thirty (30): o som forte muda de lugar."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "a1-u3-l1",
+   "title": "De 1 a 10",
+   "items": [
+    {
+     "id": "a1u3l1-1",
+     "type": "match",
+     "pairs": [
+      [
+       "one",
+       "1"
+      ],
+      [
+       "two",
+       "2"
+      ],
+      [
+       "three",
+       "3"
+      ],
+      [
+       "four",
+       "4"
+      ],
+      [
+       "five",
+       "5"
+      ]
+     ],
+     "why": "Estes são os números mais usados. \"Two\" se pronuncia \"tchú\", e \"three\" tem o som do \"th\" com a língua entre os dentes."
+    },
+    {
+     "id": "a1u3l1-2",
+     "type": "match",
+     "pairs": [
+      [
+       "six",
+       "6"
+      ],
+      [
+       "seven",
+       "7"
+      ],
+      [
+       "eight",
+       "8"
+      ],
+      [
+       "nine",
+       "9"
+      ],
+      [
+       "ten",
+       "10"
+      ]
+     ],
+     "why": "\"Eight\" (8) se pronuncia \"êit\" — o \"gh\" é mudo."
+    },
+    {
+     "id": "a1u3l1-3",
+     "type": "listen",
+     "en": "Seven",
+     "options": [
+      "7",
+      "6",
+      "9"
+     ],
+     "answer": "7",
+     "why": "\"Seven\" = 7. Se pronuncia \"séven\"."
+    },
+    {
+     "id": "a1u3l1-4",
+     "type": "meaning",
+     "en": "Three",
+     "options": [
+      "3",
+      "2",
+      "8"
+     ],
+     "answer": "3",
+     "why": "\"Three\" = 3. Não confunda com \"two\" (2)."
+    },
+    {
+     "id": "a1u3l1-5",
+     "type": "choice",
+     "prompt": "Quanto é 2 + 2?",
+     "en": "Two and two is ___.",
+     "options": [
+      "four",
+      "five",
+      "six"
+     ],
+     "answer": "four",
+     "why": "2 + 2 = 4, \"four\". Em inglês podemos dizer \"two and two is four\".",
+     "wrong": {
+      "five": "\"Five\" é 5.",
+      "six": "\"Six\" é 6."
+     }
+    },
+    {
+     "id": "a1u3l1-6",
+     "type": "listen",
+     "en": "Eight",
+     "options": [
+      "8",
+      "3",
+      "10"
+     ],
+     "answer": "8",
+     "why": "\"Eight\" = 8. O \"gh\" não é pronunciado."
+    }
+   ]
+  },
+  {
+   "id": "a1-u3-l2",
+   "title": "De 11 a 20",
+   "items": [
+    {
+     "id": "a1u3l2-1",
+     "type": "match",
+     "pairs": [
+      [
+       "eleven",
+       "11"
+      ],
+      [
+       "twelve",
+       "12"
+      ],
+      [
+       "thirteen",
+       "13"
+      ],
+      [
+       "fifteen",
+       "15"
+      ],
+      [
+       "twenty",
+       "20"
+      ]
+     ],
+     "why": "11 e 12 têm nomes próprios (eleven, twelve). A partir do 13, quase todos terminam em \"-teen\"."
+    },
+    {
+     "id": "a1u3l2-2",
+     "type": "meaning",
+     "en": "Fourteen",
+     "options": [
+      "14",
+      "40",
+      "4"
+     ],
+     "answer": "14",
+     "why": "\"Four\" + \"teen\" = 14. O final \"-teen\" indica os números de 13 a 19."
+    },
+    {
+     "id": "a1u3l2-3",
+     "type": "listen",
+     "en": "Twelve",
+     "options": [
+      "12",
+      "20",
+      "2"
+     ],
+     "answer": "12",
+     "why": "\"Twelve\" = 12. Não confunda com \"twenty\" (20)."
+    },
+    {
+     "id": "a1u3l2-4",
+     "type": "choice",
+     "prompt": "Quanto é 10 + 6?",
+     "en": "Ten and six is ___.",
+     "options": [
+      "sixteen",
+      "six",
+      "seventeen"
+     ],
+     "answer": "sixteen",
+     "why": "10 + 6 = 16: \"six\" + \"teen\" = sixteen.",
+     "wrong": {
+      "six": "\"Six\" é só 6.",
+      "seventeen": "\"Seventeen\" é 17."
+     }
+    },
+    {
+     "id": "a1u3l2-5",
+     "type": "listen",
+     "en": "Nineteen",
+     "options": [
+      "19",
+      "9",
+      "90"
+     ],
+     "answer": "19",
+     "why": "\"Nine\" + \"teen\" = 19. O som forte fica no final: nine-TEEN."
+    },
+    {
+     "id": "a1u3l2-6",
+     "type": "meaning",
+     "en": "Eighteen",
+     "options": [
+      "18",
+      "8",
+      "80"
+     ],
+     "answer": "18",
+     "why": "\"Eighteen\" = 18. Repare que \"eight\" + \"teen\" fica com um \"t\" só."
+    }
+   ]
+  },
+  {
+   "id": "a1-u3-l3",
+   "title": "Quantos anos você tem?",
+   "items": [
+    {
+     "id": "a1u3l3-1",
+     "type": "meaning",
+     "en": "How old are you?",
+     "options": [
+      "Quantos anos você tem?",
+      "Como você está?",
+      "De onde você é?"
+     ],
+     "answer": "Quantos anos você tem?",
+     "why": "\"How old\" = quão velho. É assim que se pergunta a idade em inglês."
+    },
+    {
+     "id": "a1u3l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ twenty years old.",
+     "options": [
+      "am",
+      "have",
+      "is"
+     ],
+     "answer": "am",
+     "why": "Em inglês a idade usa o verbo to be: I AM twenty. Com \"I\", o to be é \"am\".",
+     "wrong": {
+      "have": "Erro muito comum de brasileiro! Em inglês não se \"tem\" idade: diga \"I am twenty\".",
+      "is": "\"Is\" é para he, she, it; com \"I\" use \"am\"."
+     }
+    },
+    {
+     "id": "a1u3l3-3",
+     "type": "build",
+     "pt": "Quantos anos você tem?",
+     "answer": "How old are you",
+     "extra": [
+      "have",
+      "is"
+     ],
+     "display": "How old are you?",
+     "why": "How old + are + you. Nada de \"have\": a idade usa o verbo to be."
+    },
+    {
+     "id": "a1u3l3-4",
+     "type": "build",
+     "pt": "Ela tem quinze anos.",
+     "answer": "She is fifteen years old",
+     "extra": [
+      "has",
+      "are"
+     ],
+     "display": "She is fifteen years old.",
+     "why": "\"She is\" + idade + \"years old\". Lembre: ela \"É\" quinze anos, nunca \"has\"."
+    },
+    {
+     "id": "a1u3l3-5",
+     "type": "listen",
+     "en": "He is twelve.",
+     "options": [
+      "Ele tem doze anos.",
+      "Ele tem vinte anos.",
+      "Ela tem doze anos."
+     ],
+     "answer": "Ele tem doze anos.",
+     "why": "\"He\" = ele, \"twelve\" = 12. Dá para omitir \"years old\" quando o assunto já é idade."
+    },
+    {
+     "id": "a1u3l3-6",
+     "type": "meaning",
+     "en": "What is your phone number?",
+     "options": [
+      "Qual é o seu telefone?",
+      "Qual é o seu nome?",
+      "Quantos anos você tem?"
+     ],
+     "answer": "Qual é o seu telefone?",
+     "why": "\"Phone number\" = número de telefone. Na resposta, falamos número por número."
+    },
+    {
+     "id": "a1u3l3-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "How old ___ you?",
+     "options": [
+      "are",
+      "is",
+      "am"
+     ],
+     "answer": "are",
+     "why": "Com \"you\" o verbo to be é \"are\" — inclusive nas perguntas.",
+     "wrong": {
+      "is": "\"Is\" é para he, she, it.",
+      "am": "\"Am\" é só para \"I\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u3-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "a1u3l4-1",
+     "type": "type",
+     "pt": "Eu tenho vinte anos.",
+     "answer": "I am twenty years old.",
+     "accept": [
+      "I am twenty years old.",
+      "I am twenty.",
+      "I am 20 years old.",
+      "I am 20.",
+      "I'm twenty years old.",
+      "I'm twenty.",
+      "I'm 20 years old.",
+      "I'm 20."
+     ],
+     "why": "Em inglês você \"é\" a idade: I am twenty. \"Years old\" pode ser omitido."
+    },
+    {
+     "id": "a1u3l4-2",
+     "type": "dictation",
+     "en": "fifteen",
+     "accept": [
+      "15"
+     ],
+     "why": "\"Fifteen\" = 15. O som forte fica no final: fif-TEEN."
+    },
+    {
+     "id": "a1u3l4-3",
+     "type": "type",
+     "pt": "Quantos anos você tem?",
+     "answer": "How old are you?",
+     "why": "How old (quão velho) + are you? Nada de \"have\"."
+    },
+    {
+     "id": "a1u3l4-4",
+     "type": "dictation",
+     "en": "twelve",
+     "accept": [
+      "12"
+     ],
+     "why": "\"Twelve\" = 12. Não confunda com \"twenty\" (20)."
+    },
+    {
+     "id": "a1u3l4-5",
+     "type": "type",
+     "pt": "Ele tem dez anos.",
+     "answer": "He is ten years old.",
+     "accept": [
+      "He is ten years old.",
+      "He is ten.",
+      "He is 10 years old.",
+      "He is 10.",
+      "He's ten years old.",
+      "He's ten.",
+      "He's 10 years old.",
+      "He's 10."
+     ],
+     "why": "He is + idade. Pode escrever com número também."
+    },
+    {
+     "id": "a1u3l4-6",
+     "type": "dictation",
+     "en": "Three and four is seven.",
+     "accept": [
+      "3 and 4 is 7."
+     ],
+     "why": "3 + 4 = 7. \"And\" pode significar \"mais\" em contas simples."
+    }
+   ]
+  },
+  {
+   "id": "a1-u3-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "a1u3l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How old are you?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'm nineteen.",
+      "I'm fine.",
+      "I'm from Brazil."
+     ],
+     "answer": "I'm nineteen.",
+     "why": "\"How old...?\" pergunta a idade: I'm + número."
+    },
+    {
+     "id": "a1u3l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What's your phone number?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It's nine eight seven, six five four.",
+      "I'm twenty.",
+      "My name is Tom."
+     ],
+     "answer": "It's nine eight seven, six five four.",
+     "why": "Telefone em inglês se fala número por número."
+    },
+    {
+     "id": "a1u3l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How old is your teacher?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "She's thirty.",
+      "She's a teacher.",
+      "She's fine."
+     ],
+     "answer": "She's thirty.",
+     "why": "A pergunta é sobre idade, então a resposta tem um número: thirty = 30."
+    },
+    {
+     "id": "a1u3l5-4",
+     "type": "speak",
+     "en": "I am twenty years old.",
+     "pt": "Eu tenho vinte anos.",
+     "why": "\"Twenty\" soa como \"tuênti\" (ou \"tuêni\" no inglês americano rápido)."
+    },
+    {
+     "id": "a1u3l5-5",
+     "type": "speak",
+     "en": "How old are you?",
+     "pt": "Quantos anos você tem?",
+     "why": "Na fala, as palavras se juntam: \"hau-ÔLD-ar-iu\"."
+    },
+    {
+     "id": "a1u3l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is she eighteen?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, she is.",
+      "Yes, I am.",
+      "Yes, she has."
+     ],
+     "answer": "Yes, she is.",
+     "why": "Resposta curta repete o sujeito e o verbo: Yes, she is."
+    }
+   ]
+  },
+  {
+   "id": "a1-u3-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "a1u3l6-1",
+     "type": "choice",
+     "prompt": "Quanto é 10 + 10?",
+     "en": "Ten and ten is ___.",
+     "options": [
+      "twenty",
+      "twelve",
+      "two"
+     ],
+     "answer": "twenty",
+     "why": "10 + 10 = 20: twenty.",
+     "wrong": {
+      "twelve": "\"Twelve\" é 12.",
+      "two": "\"Two\" é 2."
+     }
+    },
+    {
+     "id": "a1u3l6-2",
+     "type": "meaning",
+     "en": "thirteen",
+     "options": [
+      "13",
+      "30",
+      "3"
+     ],
+     "answer": "13",
+     "why": "\"Thirteen\" = 13. \"Thirty\" seria 30."
+    },
+    {
+     "id": "a1u3l6-3",
+     "type": "type",
+     "pt": "Ela tem dezesseis anos.",
+     "answer": "She is sixteen years old.",
+     "accept": [
+      "She is sixteen years old.",
+      "She is sixteen.",
+      "She is 16 years old.",
+      "She is 16.",
+      "She's sixteen years old.",
+      "She's sixteen.",
+      "She's 16 years old.",
+      "She's 16."
+     ],
+     "why": "She is + idade. Nunca \"she has sixteen years\"."
+    },
+    {
+     "id": "a1u3l6-4",
+     "type": "listen",
+     "en": "eleven",
+     "options": [
+      "11",
+      "7",
+      "17"
+     ],
+     "answer": "11",
+     "why": "\"Eleven\" = 11. Soa como \"i-LÉ-ven\"."
+    },
+    {
+     "id": "a1u3l6-5",
+     "type": "dictation",
+     "en": "How old is he?",
+     "why": "\"How old is he?\" = quantos anos ele tem? Com he, o to be é \"is\"."
+    },
+    {
+     "id": "a1u3l6-6",
+     "type": "speak",
+     "en": "My phone number is nine eight seven.",
+     "pt": "Meu telefone é nove oito sete.",
+     "why": "Fale número por número, com calma: nine, eight, seven."
+    }
+   ]
+  }
+ ]
 }

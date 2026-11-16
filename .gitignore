@@ -2,3 +2,5 @@ node_modules
 dist
 .env
 .env.local
+# pacote original do Kenney (os 5 sons usados ficam em public/sounds)
+public/sounds/kenney/

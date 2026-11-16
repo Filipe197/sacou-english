@@ -1,72 +1,674 @@
 {
-  "id": "a1-u2",
-  "level": "A1",
-  "order": 2,
-  "title": "Fale sobre você",
-  "subtitle": "Verbo to be, nome, de onde você é e profissões.",
-  "can_do": {
-    "text": "Consigo me apresentar e apresentar outra pessoa: dizer o nome, de onde é e o que faz.",
-    "source": "CEFR (Conselho da Europa) — Escala global, nível A1"
-  },
-  "core_inventory": ["Grammar: verb to be (affirmative)", "Grammar: personal pronouns", "Grammar: possessive adjectives (my, your)", "Grammar: articles a / an", "Functions: giving personal information"],
-  "words": [
-    ["my name is", "meu nome é"], ["what is your name?", "qual é o seu nome?"], ["I am", "eu sou / eu estou"], ["you are", "você é / você está"],
-    ["he is", "ele é"], ["she is", "ela é"], ["from", "de (origem)"], ["where", "onde"],
-    ["student", "estudante"], ["teacher", "professor(a)"], ["doctor", "médico(a)"], ["engineer", "engenheiro(a)"], ["nurse", "enfermeiro(a)"],
-    ["nice to meet you", "prazer em te conhecer"]
+ "id": "a1-u2",
+ "level": "A1",
+ "order": 2,
+ "title": "Fale sobre você",
+ "subtitle": "Verbo to be, nome, de onde você é e profissões.",
+ "can_do": {
+  "text": "Consigo me apresentar e apresentar outra pessoa: dizer o nome, de onde é e o que faz.",
+  "source": "CEFR (Conselho da Europa) — Escala global, nível A1"
+ },
+ "core_inventory": [
+  "Grammar: verb to be (affirmative)",
+  "Grammar: personal pronouns",
+  "Grammar: possessive adjectives (my, your)",
+  "Grammar: articles a / an",
+  "Functions: giving personal information"
+ ],
+ "words": [
+  [
+   "my name is",
+   "meu nome é"
   ],
-  "guide": {
-    "title": "O verbo \"to be\" (ser / estar)",
-    "intro": "\"To be\" é o verbo mais importante do inglês. Ele significa SER e ESTAR ao mesmo tempo, e muda conforme a pessoa. No começo ele só tem três formas: am, is e are.",
-    "points": [
-      { "en": "I am (I'm)", "pt": "eu sou / estou", "note": "\"Am\" só aparece com \"I\" (eu)." },
-      { "en": "You are (you're)", "pt": "você é / está", "note": "\"You\" serve para você e para vocês." },
-      { "en": "He is / She is", "pt": "ele é / ela é", "note": "Uma pessoa que não é \"eu\" nem \"você\" usa \"is\"." },
-      { "en": "I am a student. She is an engineer.", "pt": "Eu sou estudante. Ela é engenheira.", "note": "Antes de profissão o inglês SEMPRE usa \"a\" ou \"an\". Use \"an\" quando a palavra começa com som de vogal (an engineer)." },
-      { "en": "I am from Brazil.", "pt": "Eu sou do Brasil.", "note": "\"From\" indica origem: de onde você é." }
-    ],
-    "tips": ["No dia a dia falamos a forma curta: I'm, you're, he's, she's.", "Em inglês o sujeito nunca some: diga \"I am a student\", não só \"am a student\"."]
-  },
-  "lessons": [
-    {
-      "id": "a1-u2-l1",
-      "title": "Meu nome é...",
-      "items": [
-        { "id": "a1u2l1-1", "type": "meaning", "en": "My name is Ana.", "options": ["Meu nome é Ana.", "Seu nome é Ana.", "Eu sou da Ana."], "answer": "Meu nome é Ana.", "why": "\"My\" = meu/minha, \"name\" = nome, \"is\" = é. A ordem é igual ao português." },
-        { "id": "a1u2l1-2", "type": "meaning", "en": "What is your name?", "options": ["Qual é o seu nome?", "Como você está?", "De onde você é?"], "answer": "Qual é o seu nome?", "why": "\"What\" = o que/qual, \"your\" = seu/sua. Repare que \"is\" vem antes de \"your name\" porque é uma pergunta." },
-        { "id": "a1u2l1-3", "type": "choice", "prompt": "Complete:", "en": "I ___ Pedro.", "options": ["am", "is", "are"], "answer": "am", "why": "Com \"I\" (eu) o verbo to be é sempre \"am\": I am Pedro = Eu sou o Pedro.", "wrong": { "is": "\"Is\" é para he, she, it — uma pessoa que não é você.", "are": "\"Are\" é para you, we e they." } },
-        { "id": "a1u2l1-4", "type": "build", "pt": "Meu nome é Lucas.", "answer": "My name is Lucas", "extra": ["your", "am"], "why": "\"My name is...\" é a forma mais comum de dizer seu nome. \"Is\" porque o sujeito é \"my name\" (uma coisa só)." },
-        { "id": "a1u2l1-5", "type": "match", "pairs": [["my", "meu / minha"], ["your", "seu / sua"], ["name", "nome"], ["what", "o que / qual"]], "why": "\"My\" e \"your\" não mudam com masculino ou feminino: my name, my car, my friend." },
-        { "id": "a1u2l1-6", "type": "listen", "en": "Nice to meet you!", "options": ["Prazer em te conhecer!", "Até mais!", "Muito obrigado!"], "answer": "Prazer em te conhecer!", "why": "\"Meet\" = conhecer (alguém). Dizemos \"nice to meet you\" logo depois de ouvir o nome da pessoa." },
-        { "id": "a1u2l1-7", "type": "choice", "prompt": "Complete a pergunta:", "en": "What is ___ name?", "options": ["your", "you", "I"], "answer": "your", "why": "Antes de um substantivo (name) usamos \"your\" (seu). \"You\" sozinho é \"você\".", "wrong": { "you": "\"You\" é \"você\"; para dizer \"seu nome\" use \"your name\".", "I": "\"I\" é \"eu\" e não vem antes de \"name\"." } }
-      ]
-    },
-    {
-      "id": "a1-u2-l2",
-      "title": "De onde você é?",
-      "items": [
-        { "id": "a1u2l2-1", "type": "meaning", "en": "I am from Brazil.", "options": ["Eu sou do Brasil.", "Eu moro no Brasil.", "Eu gosto do Brasil."], "answer": "Eu sou do Brasil.", "why": "\"From\" indica origem. \"I am from...\" = eu sou de..." },
-        { "id": "a1u2l2-2", "type": "meaning", "en": "Where are you from?", "options": ["De onde você é?", "Onde você está?", "Quem é você?"], "answer": "De onde você é?", "why": "\"Where\" = onde. Em inglês o \"from\" vai para o FINAL da pergunta: Where are you from?" },
-        { "id": "a1u2l2-3", "type": "choice", "prompt": "Complete:", "en": "You ___ from Japan.", "options": ["are", "am", "is"], "answer": "are", "why": "Com \"you\" o verbo to be é sempre \"are\", tanto para \"você\" quanto para \"vocês\".", "wrong": { "am": "\"Am\" é só para \"I\".", "is": "\"Is\" é para he, she, it." } },
-        { "id": "a1u2l2-4", "type": "build", "pt": "De onde você é?", "answer": "Where are you from", "extra": ["is", "what"], "display": "Where are you from?", "why": "Na pergunta o verbo \"are\" vem antes de \"you\", e o \"from\" fica no final." },
-        { "id": "a1u2l2-5", "type": "build", "pt": "Eu sou de Portugal.", "answer": "I am from Portugal", "extra": ["is", "where"], "display": "I am from Portugal.", "why": "Sujeito (I) + verbo (am) + from + lugar. Também pode dizer \"I'm from Portugal\"." },
-        { "id": "a1u2l2-6", "type": "listen", "en": "She is from London.", "options": ["Ela é de Londres.", "Ele é de Londres.", "Ela mora em Londres."], "answer": "Ela é de Londres.", "why": "\"She\" = ela (\"he\" seria ele). \"Is from\" = é de." },
-        { "id": "a1u2l2-7", "type": "choice", "prompt": "Complete:", "en": "Tom ___ from England.", "options": ["is", "are", "am"], "answer": "is", "why": "Tom é uma pessoa só (ele = he), então usamos \"is\".", "wrong": { "are": "\"Are\" é para you, we, they.", "am": "\"Am\" é só para \"I\"." } }
-      ]
-    },
-    {
-      "id": "a1-u2-l3",
-      "title": "Profissões: a ou an?",
-      "items": [
-        { "id": "a1u2l3-1", "type": "match", "pairs": [["student", "estudante"], ["teacher", "professor(a)"], ["doctor", "médico(a)"], ["nurse", "enfermeiro(a)"]], "why": "Em inglês as profissões não mudam com o gênero: \"teacher\" é professor e professora." },
-        { "id": "a1u2l3-2", "type": "choice", "prompt": "Complete:", "en": "She is ___ engineer.", "options": ["an", "a", "the"], "answer": "an", "why": "\"Engineer\" começa com som de vogal, então usamos \"an\": an engineer.", "wrong": { "a": "\"A\" vem antes de som de consoante (a doctor). \"Engineer\" começa com vogal.", "the": "\"The\" é \"o/a\" de algo específico; para profissão usamos a/an." } },
-        { "id": "a1u2l3-3", "type": "choice", "prompt": "Complete:", "en": "I am ___ student.", "options": ["a", "an", "the"], "answer": "a", "why": "\"Student\" começa com som de consoante (s), então usamos \"a\". Em português não usamos artigo aqui, mas em inglês é obrigatório.", "wrong": { "an": "\"An\" é só antes de som de vogal (an engineer).", "the": "\"The\" seria \"o estudante\" específico — não é o caso." } },
-        { "id": "a1u2l3-4", "type": "build", "pt": "Ele é médico.", "answer": "He is a doctor", "extra": ["she", "an"], "display": "He is a doctor.", "why": "\"He\" = ele. E não esqueça o \"a\" antes da profissão: a doctor." },
-        { "id": "a1u2l3-5", "type": "meaning", "en": "She is a teacher.", "options": ["Ela é professora.", "Ele é professor.", "Ela é estudante."], "answer": "Ela é professora.", "why": "\"She\" = ela e \"teacher\" = professora. O \"a\" não aparece na tradução para o português." },
-        { "id": "a1u2l3-6", "type": "listen", "en": "I am a nurse.", "options": ["Eu sou enfermeira.", "Eu sou médica.", "Eu sou professora."], "answer": "Eu sou enfermeira.", "why": "\"Nurse\" = enfermeiro(a). Se pronuncia mais ou menos \"nârs\"." },
-        { "id": "a1u2l3-7", "type": "choice", "prompt": "Complete:", "en": "He ___ a teacher.", "options": ["is", "am", "are"], "answer": "is", "why": "Com \"he\" (ele) e \"she\" (ela) o verbo to be é \"is\".", "wrong": { "am": "\"Am\" é só para \"I\".", "are": "\"Are\" é para you, we e they." } },
-        { "id": "a1u2l3-8", "type": "build", "pt": "Eu sou engenheira.", "answer": "I am an engineer", "extra": ["a", "is"], "display": "I am an engineer.", "why": "\"An\" porque \"engineer\" começa com som de vogal. E com \"I\" usamos \"am\"." }
-      ]
-    }
+  [
+   "what is your name?",
+   "qual é o seu nome?"
+  ],
+  [
+   "I am",
+   "eu sou / eu estou"
+  ],
+  [
+   "you are",
+   "você é / você está"
+  ],
+  [
+   "he is",
+   "ele é"
+  ],
+  [
+   "she is",
+   "ela é"
+  ],
+  [
+   "from",
+   "de (origem)"
+  ],
+  [
+   "where",
+   "onde"
+  ],
+  [
+   "student",
+   "estudante"
+  ],
+  [
+   "teacher",
+   "professor(a)"
+  ],
+  [
+   "doctor",
+   "médico(a)"
+  ],
+  [
+   "engineer",
+   "engenheiro(a)"
+  ],
+  [
+   "nurse",
+   "enfermeiro(a)"
+  ],
+  [
+   "nice to meet you",
+   "prazer em te conhecer"
   ]
+ ],
+ "guide": {
+  "title": "O verbo \"to be\" (ser / estar)",
+  "intro": "\"To be\" é o verbo mais importante do inglês. Ele significa SER e ESTAR ao mesmo tempo, e muda conforme a pessoa. No começo ele só tem três formas: am, is e are.",
+  "points": [
+   {
+    "en": "I am (I'm)",
+    "pt": "eu sou / estou",
+    "note": "\"Am\" só aparece com \"I\" (eu)."
+   },
+   {
+    "en": "You are (you're)",
+    "pt": "você é / está",
+    "note": "\"You\" serve para você e para vocês."
+   },
+   {
+    "en": "He is / She is",
+    "pt": "ele é / ela é",
+    "note": "Uma pessoa que não é \"eu\" nem \"você\" usa \"is\"."
+   },
+   {
+    "en": "I am a student. She is an engineer.",
+    "pt": "Eu sou estudante. Ela é engenheira.",
+    "note": "Antes de profissão o inglês SEMPRE usa \"a\" ou \"an\". Use \"an\" quando a palavra começa com som de vogal (an engineer)."
+   },
+   {
+    "en": "I am from Brazil.",
+    "pt": "Eu sou do Brasil.",
+    "note": "\"From\" indica origem: de onde você é."
+   }
+  ],
+  "tips": [
+   "No dia a dia falamos a forma curta: I'm, you're, he's, she's.",
+   "Em inglês o sujeito nunca some: diga \"I am a student\", não só \"am a student\"."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "a1-u2-l1",
+   "title": "Meu nome é...",
+   "items": [
+    {
+     "id": "a1u2l1-1",
+     "type": "meaning",
+     "en": "My name is Ana.",
+     "options": [
+      "Meu nome é Ana.",
+      "Seu nome é Ana.",
+      "Eu sou da Ana."
+     ],
+     "answer": "Meu nome é Ana.",
+     "why": "\"My\" = meu/minha, \"name\" = nome, \"is\" = é. A ordem é igual ao português."
+    },
+    {
+     "id": "a1u2l1-2",
+     "type": "meaning",
+     "en": "What is your name?",
+     "options": [
+      "Qual é o seu nome?",
+      "Como você está?",
+      "De onde você é?"
+     ],
+     "answer": "Qual é o seu nome?",
+     "why": "\"What\" = o que/qual, \"your\" = seu/sua. Repare que \"is\" vem antes de \"your name\" porque é uma pergunta."
+    },
+    {
+     "id": "a1u2l1-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ Pedro.",
+     "options": [
+      "am",
+      "is",
+      "are"
+     ],
+     "answer": "am",
+     "why": "Com \"I\" (eu) o verbo to be é sempre \"am\": I am Pedro = Eu sou o Pedro.",
+     "wrong": {
+      "is": "\"Is\" é para he, she, it — uma pessoa que não é você.",
+      "are": "\"Are\" é para you, we e they."
+     }
+    },
+    {
+     "id": "a1u2l1-4",
+     "type": "build",
+     "pt": "Meu nome é Lucas.",
+     "answer": "My name is Lucas",
+     "extra": [
+      "your",
+      "am"
+     ],
+     "why": "\"My name is...\" é a forma mais comum de dizer seu nome. \"Is\" porque o sujeito é \"my name\" (uma coisa só)."
+    },
+    {
+     "id": "a1u2l1-5",
+     "type": "match",
+     "pairs": [
+      [
+       "my",
+       "meu / minha"
+      ],
+      [
+       "your",
+       "seu / sua"
+      ],
+      [
+       "name",
+       "nome"
+      ],
+      [
+       "what",
+       "o que / qual"
+      ]
+     ],
+     "why": "\"My\" e \"your\" não mudam com masculino ou feminino: my name, my car, my friend."
+    },
+    {
+     "id": "a1u2l1-6",
+     "type": "listen",
+     "en": "Nice to meet you!",
+     "options": [
+      "Prazer em te conhecer!",
+      "Até mais!",
+      "Muito obrigado!"
+     ],
+     "answer": "Prazer em te conhecer!",
+     "why": "\"Meet\" = conhecer (alguém). Dizemos \"nice to meet you\" logo depois de ouvir o nome da pessoa."
+    },
+    {
+     "id": "a1u2l1-7",
+     "type": "choice",
+     "prompt": "Complete a pergunta:",
+     "en": "What is ___ name?",
+     "options": [
+      "your",
+      "you",
+      "I"
+     ],
+     "answer": "your",
+     "why": "Antes de um substantivo (name) usamos \"your\" (seu). \"You\" sozinho é \"você\".",
+     "wrong": {
+      "you": "\"You\" é \"você\"; para dizer \"seu nome\" use \"your name\".",
+      "I": "\"I\" é \"eu\" e não vem antes de \"name\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u2-l2",
+   "title": "De onde você é?",
+   "items": [
+    {
+     "id": "a1u2l2-1",
+     "type": "meaning",
+     "en": "I am from Brazil.",
+     "options": [
+      "Eu sou do Brasil.",
+      "Eu moro no Brasil.",
+      "Eu gosto do Brasil."
+     ],
+     "answer": "Eu sou do Brasil.",
+     "why": "\"From\" indica origem. \"I am from...\" = eu sou de..."
+    },
+    {
+     "id": "a1u2l2-2",
+     "type": "meaning",
+     "en": "Where are you from?",
+     "options": [
+      "De onde você é?",
+      "Onde você está?",
+      "Quem é você?"
+     ],
+     "answer": "De onde você é?",
+     "why": "\"Where\" = onde. Em inglês o \"from\" vai para o FINAL da pergunta: Where are you from?"
+    },
+    {
+     "id": "a1u2l2-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "You ___ from Japan.",
+     "options": [
+      "are",
+      "am",
+      "is"
+     ],
+     "answer": "are",
+     "why": "Com \"you\" o verbo to be é sempre \"are\", tanto para \"você\" quanto para \"vocês\".",
+     "wrong": {
+      "am": "\"Am\" é só para \"I\".",
+      "is": "\"Is\" é para he, she, it."
+     }
+    },
+    {
+     "id": "a1u2l2-4",
+     "type": "build",
+     "pt": "De onde você é?",
+     "answer": "Where are you from",
+     "extra": [
+      "is",
+      "what"
+     ],
+     "display": "Where are you from?",
+     "why": "Na pergunta o verbo \"are\" vem antes de \"you\", e o \"from\" fica no final."
+    },
+    {
+     "id": "a1u2l2-5",
+     "type": "build",
+     "pt": "Eu sou de Portugal.",
+     "answer": "I am from Portugal",
+     "extra": [
+      "is",
+      "where"
+     ],
+     "display": "I am from Portugal.",
+     "why": "Sujeito (I) + verbo (am) + from + lugar. Também pode dizer \"I'm from Portugal\"."
+    },
+    {
+     "id": "a1u2l2-6",
+     "type": "listen",
+     "en": "She is from London.",
+     "options": [
+      "Ela é de Londres.",
+      "Ele é de Londres.",
+      "Ela mora em Londres."
+     ],
+     "answer": "Ela é de Londres.",
+     "why": "\"She\" = ela (\"he\" seria ele). \"Is from\" = é de."
+    },
+    {
+     "id": "a1u2l2-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Tom ___ from England.",
+     "options": [
+      "is",
+      "are",
+      "am"
+     ],
+     "answer": "is",
+     "why": "Tom é uma pessoa só (ele = he), então usamos \"is\".",
+     "wrong": {
+      "are": "\"Are\" é para you, we, they.",
+      "am": "\"Am\" é só para \"I\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u2-l3",
+   "title": "Profissões: a ou an?",
+   "items": [
+    {
+     "id": "a1u2l3-1",
+     "type": "match",
+     "pairs": [
+      [
+       "student",
+       "estudante"
+      ],
+      [
+       "teacher",
+       "professor(a)"
+      ],
+      [
+       "doctor",
+       "médico(a)"
+      ],
+      [
+       "nurse",
+       "enfermeiro(a)"
+      ]
+     ],
+     "why": "Em inglês as profissões não mudam com o gênero: \"teacher\" é professor e professora."
+    },
+    {
+     "id": "a1u2l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She is ___ engineer.",
+     "options": [
+      "an",
+      "a",
+      "the"
+     ],
+     "answer": "an",
+     "why": "\"Engineer\" começa com som de vogal, então usamos \"an\": an engineer.",
+     "wrong": {
+      "a": "\"A\" vem antes de som de consoante (a doctor). \"Engineer\" começa com vogal.",
+      "the": "\"The\" é \"o/a\" de algo específico; para profissão usamos a/an."
+     }
+    },
+    {
+     "id": "a1u2l3-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I am ___ student.",
+     "options": [
+      "a",
+      "an",
+      "the"
+     ],
+     "answer": "a",
+     "why": "\"Student\" começa com som de consoante (s), então usamos \"a\". Em português não usamos artigo aqui, mas em inglês é obrigatório.",
+     "wrong": {
+      "an": "\"An\" é só antes de som de vogal (an engineer).",
+      "the": "\"The\" seria \"o estudante\" específico — não é o caso."
+     }
+    },
+    {
+     "id": "a1u2l3-4",
+     "type": "build",
+     "pt": "Ele é médico.",
+     "answer": "He is a doctor",
+     "extra": [
+      "she",
+      "an"
+     ],
+     "display": "He is a doctor.",
+     "why": "\"He\" = ele. E não esqueça o \"a\" antes da profissão: a doctor."
+    },
+    {
+     "id": "a1u2l3-5",
+     "type": "meaning",
+     "en": "She is a teacher.",
+     "options": [
+      "Ela é professora.",
+      "Ele é professor.",
+      "Ela é estudante."
+     ],
+     "answer": "Ela é professora.",
+     "why": "\"She\" = ela e \"teacher\" = professora. O \"a\" não aparece na tradução para o português."
+    },
+    {
+     "id": "a1u2l3-6",
+     "type": "listen",
+     "en": "I am a nurse.",
+     "options": [
+      "Eu sou enfermeira.",
+      "Eu sou médica.",
+      "Eu sou professora."
+     ],
+     "answer": "Eu sou enfermeira.",
+     "why": "\"Nurse\" = enfermeiro(a). Se pronuncia mais ou menos \"nârs\"."
+    },
+    {
+     "id": "a1u2l3-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He ___ a teacher.",
+     "options": [
+      "is",
+      "am",
+      "are"
+     ],
+     "answer": "is",
+     "why": "Com \"he\" (ele) e \"she\" (ela) o verbo to be é \"is\".",
+     "wrong": {
+      "am": "\"Am\" é só para \"I\".",
+      "are": "\"Are\" é para you, we e they."
+     }
+    },
+    {
+     "id": "a1u2l3-8",
+     "type": "build",
+     "pt": "Eu sou engenheira.",
+     "answer": "I am an engineer",
+     "extra": [
+      "a",
+      "is"
+     ],
+     "display": "I am an engineer.",
+     "why": "\"An\" porque \"engineer\" começa com som de vogal. E com \"I\" usamos \"am\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u2-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "a1u2l4-1",
+     "type": "type",
+     "pt": "Meu nome é Ana.",
+     "answer": "My name is Ana.",
+     "accept": [
+      "My name's Ana."
+     ],
+     "why": "My (meu) + name (nome) + is (é)."
+    },
+    {
+     "id": "a1u2l4-2",
+     "type": "type",
+     "pt": "Eu sou do Brasil.",
+     "answer": "I am from Brazil.",
+     "why": "\"From\" indica origem. Também vale \"I'm from Brazil\"."
+    },
+    {
+     "id": "a1u2l4-3",
+     "type": "dictation",
+     "en": "Where are you from?",
+     "why": "\"Where are you from?\" = de onde você é? O \"from\" fica no final."
+    },
+    {
+     "id": "a1u2l4-4",
+     "type": "type",
+     "pt": "Ela é professora.",
+     "answer": "She is a teacher.",
+     "why": "Não esqueça o \"a\" antes da profissão: a teacher."
+    },
+    {
+     "id": "a1u2l4-5",
+     "type": "dictation",
+     "en": "Nice to meet you.",
+     "why": "\"Nice to meet you\" = prazer em te conhecer."
+    },
+    {
+     "id": "a1u2l4-6",
+     "type": "type",
+     "pt": "Ele é engenheiro.",
+     "answer": "He is an engineer.",
+     "why": "\"An\" porque \"engineer\" começa com som de vogal."
+    }
+   ]
+  },
+  {
+   "id": "a1-u2-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "a1u2l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Hi! What's your name?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "My name is Lucas.",
+      "I am fine.",
+      "I'm from Brazil."
+     ],
+     "answer": "My name is Lucas.",
+     "why": "\"What's your name?\" pergunta o nome. Responda com \"My name is...\" ou \"I'm...\"."
+    },
+    {
+     "id": "a1u2l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Where are you from?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'm from Brazil.",
+      "I'm a student.",
+      "I'm fine, thanks."
+     ],
+     "answer": "I'm from Brazil.",
+     "why": "\"Where are you from?\" pergunta a origem: I'm from + lugar."
+    },
+    {
+     "id": "a1u2l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I'm Sofia. Nice to meet you!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Nice to meet you too!",
+      "Good night!",
+      "Sorry!"
+     ],
+     "answer": "Nice to meet you too!",
+     "why": "Devolvemos a gentileza com \"too\" (também): Nice to meet you too!"
+    },
+    {
+     "id": "a1u2l5-4",
+     "type": "speak",
+     "en": "I am from Brazil.",
+     "pt": "Eu sou do Brasil.",
+     "why": "\"Brazil\" em inglês se fala \"bra-ZIL\", com o som forte no final."
+    },
+    {
+     "id": "a1u2l5-5",
+     "type": "speak",
+     "en": "Nice to meet you.",
+     "pt": "Prazer em te conhecer.",
+     "why": "Na fala rápida, \"meet you\" soa como \"mítchu\"."
+    },
+    {
+     "id": "a1u2l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Are you a teacher?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, I'm a student.",
+      "No, I'm from Brazil.",
+      "Yes, I'm fine."
+     ],
+     "answer": "No, I'm a student.",
+     "why": "A pergunta é sobre profissão, então a resposta fala da profissão: No, I'm a student. Repare que na pergunta o \"are\" vem antes do \"you\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u2-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "a1u2l6-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Ana and Pedro ___ from Brazil.",
+     "options": [
+      "are",
+      "is",
+      "am"
+     ],
+     "answer": "are",
+     "why": "Duas pessoas (they = eles) usam \"are\".",
+     "wrong": {
+      "is": "\"Is\" é para uma pessoa só.",
+      "am": "\"Am\" é só para I."
+     }
+    },
+    {
+     "id": "a1u2l6-2",
+     "type": "type",
+     "pt": "Você é do Japão?",
+     "answer": "Are you from Japan?",
+     "why": "Na pergunta, \"are\" vem antes de \"you\"."
+    },
+    {
+     "id": "a1u2l6-3",
+     "type": "meaning",
+     "en": "He's a doctor from London.",
+     "options": [
+      "Ele é um médico de Londres.",
+      "Ela é médica em Londres.",
+      "Ele é professor de Londres."
+     ],
+     "answer": "Ele é um médico de Londres.",
+     "why": "He's = he is. \"Doctor\" = médico. \"From London\" = de Londres."
+    },
+    {
+     "id": "a1u2l6-4",
+     "type": "dictation",
+     "en": "I'm a student.",
+     "accept": [
+      "I am a student."
+     ],
+     "why": "\"I'm\" = I am. \"Student\" = estudante, com \"a\" antes."
+    },
+    {
+     "id": "a1u2l6-5",
+     "type": "build",
+     "pt": "Qual é o seu nome?",
+     "answer": "What is your name",
+     "extra": [
+      "are",
+      "my"
+     ],
+     "display": "What is your name?",
+     "why": "What + is + your name? \"Your\" = seu/sua."
+    },
+    {
+     "id": "a1u2l6-6",
+     "type": "speak",
+     "en": "She is a nurse.",
+     "pt": "Ela é enfermeira.",
+     "why": "\"Nurse\" soa como \"nârs\", com o r suave."
+    }
+   ]
+  }
+ ]
 }

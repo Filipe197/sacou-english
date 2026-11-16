@@ -447,6 +447,242 @@
      "display": "Bye! See you!"
     }
    ]
+  },
+  {
+   "id": "a1-u1-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "a1u1l4-1",
+     "type": "type",
+     "pt": "Olá!",
+     "answer": "Hello!",
+     "accept": [
+      "Hi!"
+     ],
+     "why": "\"Hello\" é o cumprimento que serve para qualquer pessoa. \"Hi\" também vale, mais informal."
+    },
+    {
+     "id": "a1u1l4-2",
+     "type": "type",
+     "pt": "Bom dia!",
+     "answer": "Good morning!",
+     "why": "Good + morning (manhã). Usado até mais ou menos meio-dia."
+    },
+    {
+     "id": "a1u1l4-3",
+     "type": "dictation",
+     "en": "Thank you!",
+     "accept": [
+      "Thanks!"
+     ],
+     "why": "\"Thank you\" = obrigado(a). O \"th\" se faz com a língua entre os dentes."
+    },
+    {
+     "id": "a1u1l4-4",
+     "type": "type",
+     "pt": "Estou bem, obrigado.",
+     "answer": "I'm fine, thank you.",
+     "accept": [
+      "I'm fine, thanks.",
+      "I am fine, thanks."
+     ],
+     "why": "\"I'm\" = I am (eu estou). Também vale \"I'm fine, thanks\"."
+    },
+    {
+     "id": "a1u1l4-5",
+     "type": "dictation",
+     "en": "Good night!",
+     "why": "\"Good night\" é a despedida da noite ou na hora de dormir."
+    },
+    {
+     "id": "a1u1l4-6",
+     "type": "type",
+     "pt": "Com licença!",
+     "answer": "Excuse me!",
+     "why": "\"Excuse me\" é para pedir passagem ou chamar a atenção de alguém."
+    }
+   ]
+  },
+  {
+   "id": "a1-u1-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "a1u1l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Hello! How are you?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'm fine, thanks. And you?",
+      "Good night!",
+      "Excuse me."
+     ],
+     "answer": "I'm fine, thanks. And you?",
+     "why": "Quando alguém pergunta \"How are you?\", o natural é responder e devolver a pergunta: \"And you?\" (E você?)."
+    },
+    {
+     "id": "a1u1l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Thank you!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "You're welcome!",
+      "Sorry!",
+      "Goodbye!"
+     ],
+     "answer": "You're welcome!",
+     "why": "\"You're welcome\" = de nada. É a resposta padrão para \"thank you\"."
+    },
+    {
+     "id": "a1u1l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Good morning, Ana!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Good morning!",
+      "Good night!",
+      "See you!"
+     ],
+     "answer": "Good morning!",
+     "why": "Responda o cumprimento com o mesmo cumprimento: Good morning!"
+    },
+    {
+     "id": "a1u1l5-4",
+     "type": "speak",
+     "en": "Good morning!",
+     "pt": "Bom dia!",
+     "why": "Fale \"gud MÓR-ning\". O \"r\" do inglês é suave, com a língua sem encostar no céu da boca."
+    },
+    {
+     "id": "a1u1l5-5",
+     "type": "speak",
+     "en": "I'm fine, thanks.",
+     "pt": "Estou bem, valeu.",
+     "why": "\"I'm\" soa como \"áim\". \"Thanks\" tem o \"th\" com a língua entre os dentes."
+    },
+    {
+     "id": "a1u1l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Sorry!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "That's OK.",
+      "Thank you!",
+      "Hello!"
+     ],
+     "answer": "That's OK.",
+     "why": "Quando alguém pede desculpas, respondemos \"That's OK\" ou \"No problem\" (tudo bem)."
+    }
+   ]
+  },
+  {
+   "id": "a1-u1-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "a1u1l6-1",
+     "type": "meaning",
+     "en": "See you later!",
+     "options": [
+      "Até mais tarde!",
+      "Bom dia!",
+      "Desculpe!"
+     ],
+     "answer": "Até mais tarde!",
+     "why": "\"See you later\" = até mais tarde. \"Later\" = mais tarde."
+    },
+    {
+     "id": "a1u1l6-2",
+     "type": "type",
+     "pt": "Boa tarde!",
+     "answer": "Good afternoon!",
+     "why": "\"Afternoon\" = tarde (depois do meio-dia)."
+    },
+    {
+     "id": "a1u1l6-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Bye! See you tomorrow!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Bye!",
+      "Hello!",
+      "Please!"
+     ],
+     "answer": "Bye!",
+     "why": "Alguém se despediu, então você se despede também: Bye! \"Tomorrow\" = amanhã."
+    },
+    {
+     "id": "a1u1l6-4",
+     "type": "dictation",
+     "en": "How are you?",
+     "why": "\"How are you?\" = como você está? É a pergunta mais comum depois do cumprimento."
+    },
+    {
+     "id": "a1u1l6-5",
+     "type": "choice",
+     "prompt": "Você esbarrou em alguém sem querer. O que diz?",
+     "en": "___!",
+     "options": [
+      "Sorry",
+      "Thanks",
+      "Hello"
+     ],
+     "answer": "Sorry",
+     "why": "Para pedir desculpas por um erro ou esbarrão: Sorry!",
+     "wrong": {
+      "Thanks": "\"Thanks\" é para agradecer.",
+      "Hello": "\"Hello\" é cumprimento."
+     }
+    },
+    {
+     "id": "a1u1l6-6",
+     "type": "speak",
+     "en": "Thank you very much!",
+     "pt": "Muito obrigado!",
+     "why": "\"Very much\" = muito. \"Thank you very much\" é um agradecimento mais forte."
+    }
+   ]
   }
  ]
 }

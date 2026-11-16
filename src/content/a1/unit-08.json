@@ -1,70 +1,647 @@
 {
-  "id": "a1-u8",
-  "level": "A1",
-  "order": 8,
-  "title": "Lugares na cidade",
-  "subtitle": "There is / there are, lugares e onde as coisas estão.",
-  "can_do": {
-    "text": "Consigo dizer o que existe na minha cidade e perguntar e explicar onde fica um lugar.",
-    "source": "CEFR (Conselho da Europa) — Escala global, nível A1"
-  },
-  "core_inventory": ["Grammar: there is / there are", "Grammar: prepositions of place (in, on, under, near, next to, behind, between)", "Functions: asking for and giving directions (simple)", "Vocabulary: places in town"],
-  "extra_vocab": [
-    { "word": "next", "reason": "Usada só na expressão \"next to\" (ao lado de), que o Core Inventory lista entre as preposições de lugar do A1; a CEFR-J classifica \"next\" sozinho como A2." }
+ "id": "a1-u8",
+ "level": "A1",
+ "order": 8,
+ "title": "Lugares na cidade",
+ "subtitle": "There is / there are, lugares e onde as coisas estão.",
+ "can_do": {
+  "text": "Consigo dizer o que existe na minha cidade e perguntar e explicar onde fica um lugar.",
+  "source": "CEFR (Conselho da Europa) — Escala global, nível A1"
+ },
+ "core_inventory": [
+  "Grammar: there is / there are",
+  "Grammar: prepositions of place (in, on, under, near, next to, behind, between)",
+  "Functions: asking for and giving directions (simple)",
+  "Vocabulary: places in town"
+ ],
+ "extra_vocab": [
+  {
+   "word": "next",
+   "reason": "Usada só na expressão \"next to\" (ao lado de), que o Core Inventory lista entre as preposições de lugar do A1; a CEFR-J classifica \"next\" sozinho como A2."
+  }
+ ],
+ "words": [
+  [
+   "bank",
+   "banco"
   ],
-  "words": [
-    ["bank", "banco"], ["supermarket", "supermercado"], ["park", "parque"], ["school", "escola"], ["hospital", "hospital"],
-    ["restaurant", "restaurante"], ["station", "estação"], ["street", "rua"], ["there is", "há / tem (um)"], ["there are", "há / tem (vários)"],
-    ["in", "dentro de / em"], ["on", "sobre / em cima de"], ["under", "embaixo de"], ["near", "perto de"], ["next to", "ao lado de"], ["behind", "atrás de"]
+  [
+   "supermarket",
+   "supermercado"
   ],
-  "guide": {
-    "title": "There is / there are e onde as coisas estão",
-    "intro": "Para dizer que algo EXISTE em um lugar, o inglês usa \"there is\" (um) e \"there are\" (vários). É o nosso \"tem\" ou \"há\".",
-    "points": [
-      { "en": "There is a bank in my street.", "pt": "Tem um banco na minha rua.", "note": "\"There is\" + uma coisa. Forma curta: there's." },
-      { "en": "There are two parks in my city.", "pt": "Tem dois parques na minha cidade.", "note": "\"There are\" + várias coisas." },
-      { "en": "Is there a hospital near here?", "pt": "Tem um hospital aqui perto?", "note": "Na pergunta, \"is\" vem primeiro: Is there...? / Are there...?" },
-      { "en": "The bank is next to the park.", "pt": "O banco fica ao lado do parque.", "note": "Next to = ao lado de, near = perto de, behind = atrás de, between = entre." },
-      { "en": "The key is on the table. The cat is under the chair.", "pt": "A chave está em cima da mesa. O gato está embaixo da cadeira.", "note": "On = em cima de (encostado), under = embaixo de, in = dentro de." }
-    ],
-    "tips": ["Não traduza \"tem\" por \"have\" quando a ideia é existir: \"There is a bank\", e não \"Have a bank\".", "\"Where is the station?\" é a pergunta mais útil para quem viaja."]
-  },
-  "lessons": [
-    {
-      "id": "a1-u8-l1",
-      "title": "Lugares da cidade",
-      "items": [
-        { "id": "a1u8l1-1", "type": "match", "pairs": [["bank", "banco"], ["supermarket", "supermercado"], ["park", "parque"], ["school", "escola"]], "why": "Muitos lugares em inglês são parecidos com o português. Cuidado: \"bank\" é o banco de dinheiro, não o de sentar (que é \"bench\")." },
-        { "id": "a1u8l1-2", "type": "match", "pairs": [["hospital", "hospital"], ["restaurant", "restaurante"], ["station", "estação"], ["street", "rua"]], "why": "\"Hospital\" se escreve igual, mas o \"h\" é pronunciado: \"rós-pi-tal\"." },
-        { "id": "a1u8l1-3", "type": "listen", "en": "Where is the station?", "options": ["Onde fica a estação?", "Onde fica o banco?", "Tem uma estação aqui?"], "answer": "Onde fica a estação?", "why": "\"Where is...?\" = onde fica...? É a pergunta mais útil quando você está na rua." },
-        { "id": "a1u8l1-4", "type": "meaning", "en": "The supermarket is near my house.", "options": ["O supermercado fica perto da minha casa.", "O supermercado fica longe da minha casa.", "O supermercado fica atrás da minha casa."], "answer": "O supermercado fica perto da minha casa.", "why": "\"Near\" = perto de. \"House\" = casa." },
-        { "id": "a1u8l1-5", "type": "build", "pt": "Onde fica o hospital?", "answer": "Where is the hospital", "extra": ["what", "are"], "display": "Where is the hospital?", "why": "Where + is + the hospital? Uma coisa só, então \"is\"." },
-        { "id": "a1u8l1-6", "type": "choice", "prompt": "Você quer comer. Para onde vai?", "en": "I go to the ___.", "options": ["restaurant", "bank", "station"], "answer": "restaurant", "why": "Para comer, você vai ao restaurante: restaurant.", "wrong": { "bank": "\"Bank\" é banco, lugar de dinheiro.", "station": "\"Station\" é estação de trem ou ônibus." } }
-      ]
-    },
-    {
-      "id": "a1-u8-l2",
-      "title": "There is, there are",
-      "items": [
-        { "id": "a1u8l2-1", "type": "meaning", "en": "There is a park in my city.", "options": ["Tem um parque na minha cidade.", "O parque é a minha cidade.", "Tem dois parques na minha cidade."], "answer": "Tem um parque na minha cidade.", "why": "\"There is\" = tem/há (uma coisa). É o jeito de dizer que algo existe em um lugar." },
-        { "id": "a1u8l2-2", "type": "choice", "prompt": "Complete:", "en": "There ___ two banks in my street.", "options": ["are", "is", "have"], "answer": "are", "why": "Duas coisas (plural) = \"there are\".", "wrong": { "is": "\"There is\" é para UMA coisa. Aqui são dois bancos.", "have": "Para dizer que algo existe usamos \"there are\", não \"have\"." } },
-        { "id": "a1u8l2-3", "type": "choice", "prompt": "Complete:", "en": "There ___ a school near here.", "options": ["is", "are", "has"], "answer": "is", "why": "Uma escola (singular) = \"there is\".", "wrong": { "are": "\"Are\" é para várias coisas.", "has": "Erro comum de brasileiro: para \"tem\" no sentido de existir, use \"there is\"." } },
-        { "id": "a1u8l2-4", "type": "build", "pt": "Tem um hospital aqui perto?", "answer": "Is there a hospital near here", "extra": ["are", "have"], "display": "Is there a hospital near here?", "why": "Na pergunta, \"is\" vai para o começo: Is there...? \"Near here\" = aqui perto." },
-        { "id": "a1u8l2-5", "type": "listen", "en": "There are three restaurants in this street.", "options": ["Tem três restaurantes nesta rua.", "Tem um restaurante nesta rua.", "Tem três restaurantes naquela rua."], "answer": "Tem três restaurantes nesta rua.", "why": "\"There are\" + plural. \"This street\" = esta rua." },
-        { "id": "a1u8l2-6", "type": "build", "pt": "Tem dois parques na minha cidade.", "answer": "There are two parks in my city", "extra": ["is", "have"], "display": "There are two parks in my city.", "why": "There are (plural) + two parks + in my city." }
-      ]
-    },
-    {
-      "id": "a1-u8-l3",
-      "title": "Onde está?",
-      "items": [
-        { "id": "a1u8l3-1", "type": "match", "pairs": [["in", "dentro de"], ["on", "em cima de"], ["under", "embaixo de"], ["behind", "atrás de"]], "why": "Essas palavras mostram a posição das coisas. \"On\" é em cima e encostado: on the table." },
-        { "id": "a1u8l3-2", "type": "choice", "prompt": "A chave está em cima da mesa. Complete:", "en": "The key is ___ the table.", "options": ["on", "in", "under"], "answer": "on", "why": "Em cima de uma superfície = \"on\": on the table.", "wrong": { "in": "\"In\" é dentro de algo, como in the bag.", "under": "\"Under\" é embaixo de." } },
-        { "id": "a1u8l3-3", "type": "meaning", "en": "The bank is next to the supermarket.", "options": ["O banco fica ao lado do supermercado.", "O banco fica dentro do supermercado.", "O banco fica longe do supermercado."], "answer": "O banco fica ao lado do supermercado.", "why": "\"Next to\" = ao lado de. É uma das expressões de lugar mais usadas." },
-        { "id": "a1u8l3-4", "type": "build", "pt": "Meu celular está na minha bolsa.", "answer": "My phone is in my bag", "extra": ["on", "under"], "display": "My phone is in my bag.", "why": "Dentro de algo = \"in\": in my bag." },
-        { "id": "a1u8l3-5", "type": "listen", "en": "The park is behind the school.", "options": ["O parque fica atrás da escola.", "O parque fica ao lado da escola.", "A escola fica atrás do parque."], "answer": "O parque fica atrás da escola.", "why": "\"Behind\" = atrás de. A ordem importa: quem está atrás é o parque." },
-        { "id": "a1u8l3-6", "type": "choice", "prompt": "O gato está embaixo da cadeira. Complete:", "en": "The cat is ___ the chair.", "options": ["under", "on", "behind"], "answer": "under", "why": "Embaixo de = \"under\".", "wrong": { "on": "\"On\" é em cima.", "behind": "\"Behind\" é atrás." } }
-      ]
-    }
+  [
+   "park",
+   "parque"
+  ],
+  [
+   "school",
+   "escola"
+  ],
+  [
+   "hospital",
+   "hospital"
+  ],
+  [
+   "restaurant",
+   "restaurante"
+  ],
+  [
+   "station",
+   "estação"
+  ],
+  [
+   "street",
+   "rua"
+  ],
+  [
+   "there is",
+   "há / tem (um)"
+  ],
+  [
+   "there are",
+   "há / tem (vários)"
+  ],
+  [
+   "in",
+   "dentro de / em"
+  ],
+  [
+   "on",
+   "sobre / em cima de"
+  ],
+  [
+   "under",
+   "embaixo de"
+  ],
+  [
+   "near",
+   "perto de"
+  ],
+  [
+   "next to",
+   "ao lado de"
+  ],
+  [
+   "behind",
+   "atrás de"
   ]
+ ],
+ "guide": {
+  "title": "There is / there are e onde as coisas estão",
+  "intro": "Para dizer que algo EXISTE em um lugar, o inglês usa \"there is\" (um) e \"there are\" (vários). É o nosso \"tem\" ou \"há\".",
+  "points": [
+   {
+    "en": "There is a bank in my street.",
+    "pt": "Tem um banco na minha rua.",
+    "note": "\"There is\" + uma coisa. Forma curta: there's."
+   },
+   {
+    "en": "There are two parks in my city.",
+    "pt": "Tem dois parques na minha cidade.",
+    "note": "\"There are\" + várias coisas."
+   },
+   {
+    "en": "Is there a hospital near here?",
+    "pt": "Tem um hospital aqui perto?",
+    "note": "Na pergunta, \"is\" vem primeiro: Is there...? / Are there...?"
+   },
+   {
+    "en": "The bank is next to the park.",
+    "pt": "O banco fica ao lado do parque.",
+    "note": "Next to = ao lado de, near = perto de, behind = atrás de, between = entre."
+   },
+   {
+    "en": "The key is on the table. The cat is under the chair.",
+    "pt": "A chave está em cima da mesa. O gato está embaixo da cadeira.",
+    "note": "On = em cima de (encostado), under = embaixo de, in = dentro de."
+   }
+  ],
+  "tips": [
+   "Não traduza \"tem\" por \"have\" quando a ideia é existir: \"There is a bank\", e não \"Have a bank\".",
+   "\"Where is the station?\" é a pergunta mais útil para quem viaja."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "a1-u8-l1",
+   "title": "Lugares da cidade",
+   "items": [
+    {
+     "id": "a1u8l1-1",
+     "type": "match",
+     "pairs": [
+      [
+       "bank",
+       "banco"
+      ],
+      [
+       "supermarket",
+       "supermercado"
+      ],
+      [
+       "park",
+       "parque"
+      ],
+      [
+       "school",
+       "escola"
+      ]
+     ],
+     "why": "Muitos lugares em inglês são parecidos com o português. Cuidado: \"bank\" é o banco de dinheiro, não o de sentar (que é \"bench\")."
+    },
+    {
+     "id": "a1u8l1-2",
+     "type": "match",
+     "pairs": [
+      [
+       "hospital",
+       "hospital"
+      ],
+      [
+       "restaurant",
+       "restaurante"
+      ],
+      [
+       "station",
+       "estação"
+      ],
+      [
+       "street",
+       "rua"
+      ]
+     ],
+     "why": "\"Hospital\" se escreve igual, mas o \"h\" é pronunciado: \"rós-pi-tal\"."
+    },
+    {
+     "id": "a1u8l1-3",
+     "type": "listen",
+     "en": "Where is the station?",
+     "options": [
+      "Onde fica a estação?",
+      "Onde fica o banco?",
+      "Tem uma estação aqui?"
+     ],
+     "answer": "Onde fica a estação?",
+     "why": "\"Where is...?\" = onde fica...? É a pergunta mais útil quando você está na rua."
+    },
+    {
+     "id": "a1u8l1-4",
+     "type": "meaning",
+     "en": "The supermarket is near my house.",
+     "options": [
+      "O supermercado fica perto da minha casa.",
+      "O supermercado fica longe da minha casa.",
+      "O supermercado fica atrás da minha casa."
+     ],
+     "answer": "O supermercado fica perto da minha casa.",
+     "why": "\"Near\" = perto de. \"House\" = casa."
+    },
+    {
+     "id": "a1u8l1-5",
+     "type": "build",
+     "pt": "Onde fica o hospital?",
+     "answer": "Where is the hospital",
+     "extra": [
+      "what",
+      "are"
+     ],
+     "display": "Where is the hospital?",
+     "why": "Where + is + the hospital? Uma coisa só, então \"is\"."
+    },
+    {
+     "id": "a1u8l1-6",
+     "type": "choice",
+     "prompt": "Você quer comer. Para onde vai?",
+     "en": "I go to the ___.",
+     "options": [
+      "restaurant",
+      "bank",
+      "station"
+     ],
+     "answer": "restaurant",
+     "why": "Para comer, você vai ao restaurante: restaurant.",
+     "wrong": {
+      "bank": "\"Bank\" é banco, lugar de dinheiro.",
+      "station": "\"Station\" é estação de trem ou ônibus."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u8-l2",
+   "title": "There is, there are",
+   "items": [
+    {
+     "id": "a1u8l2-1",
+     "type": "meaning",
+     "en": "There is a park in my city.",
+     "options": [
+      "Tem um parque na minha cidade.",
+      "O parque é a minha cidade.",
+      "Tem dois parques na minha cidade."
+     ],
+     "answer": "Tem um parque na minha cidade.",
+     "why": "\"There is\" = tem/há (uma coisa). É o jeito de dizer que algo existe em um lugar."
+    },
+    {
+     "id": "a1u8l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There ___ two banks in my street.",
+     "options": [
+      "are",
+      "is",
+      "have"
+     ],
+     "answer": "are",
+     "why": "Duas coisas (plural) = \"there are\".",
+     "wrong": {
+      "is": "\"There is\" é para UMA coisa. Aqui são dois bancos.",
+      "have": "Para dizer que algo existe usamos \"there are\", não \"have\"."
+     }
+    },
+    {
+     "id": "a1u8l2-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There ___ a school near here.",
+     "options": [
+      "is",
+      "are",
+      "has"
+     ],
+     "answer": "is",
+     "why": "Uma escola (singular) = \"there is\".",
+     "wrong": {
+      "are": "\"Are\" é para várias coisas.",
+      "has": "Erro comum de brasileiro: para \"tem\" no sentido de existir, use \"there is\"."
+     }
+    },
+    {
+     "id": "a1u8l2-4",
+     "type": "build",
+     "pt": "Tem um hospital aqui perto?",
+     "answer": "Is there a hospital near here",
+     "extra": [
+      "are",
+      "have"
+     ],
+     "display": "Is there a hospital near here?",
+     "why": "Na pergunta, \"is\" vai para o começo: Is there...? \"Near here\" = aqui perto."
+    },
+    {
+     "id": "a1u8l2-5",
+     "type": "listen",
+     "en": "There are three restaurants in this street.",
+     "options": [
+      "Tem três restaurantes nesta rua.",
+      "Tem um restaurante nesta rua.",
+      "Tem três restaurantes naquela rua."
+     ],
+     "answer": "Tem três restaurantes nesta rua.",
+     "why": "\"There are\" + plural. \"This street\" = esta rua."
+    },
+    {
+     "id": "a1u8l2-6",
+     "type": "build",
+     "pt": "Tem dois parques na minha cidade.",
+     "answer": "There are two parks in my city",
+     "extra": [
+      "is",
+      "have"
+     ],
+     "display": "There are two parks in my city.",
+     "why": "There are (plural) + two parks + in my city."
+    }
+   ]
+  },
+  {
+   "id": "a1-u8-l3",
+   "title": "Onde está?",
+   "items": [
+    {
+     "id": "a1u8l3-1",
+     "type": "match",
+     "pairs": [
+      [
+       "in",
+       "dentro de"
+      ],
+      [
+       "on",
+       "em cima de"
+      ],
+      [
+       "under",
+       "embaixo de"
+      ],
+      [
+       "behind",
+       "atrás de"
+      ]
+     ],
+     "why": "Essas palavras mostram a posição das coisas. \"On\" é em cima e encostado: on the table."
+    },
+    {
+     "id": "a1u8l3-2",
+     "type": "choice",
+     "prompt": "A chave está em cima da mesa. Complete:",
+     "en": "The key is ___ the table.",
+     "options": [
+      "on",
+      "in",
+      "under"
+     ],
+     "answer": "on",
+     "why": "Em cima de uma superfície = \"on\": on the table.",
+     "wrong": {
+      "in": "\"In\" é dentro de algo, como in the bag.",
+      "under": "\"Under\" é embaixo de."
+     }
+    },
+    {
+     "id": "a1u8l3-3",
+     "type": "meaning",
+     "en": "The bank is next to the supermarket.",
+     "options": [
+      "O banco fica ao lado do supermercado.",
+      "O banco fica dentro do supermercado.",
+      "O banco fica longe do supermercado."
+     ],
+     "answer": "O banco fica ao lado do supermercado.",
+     "why": "\"Next to\" = ao lado de. É uma das expressões de lugar mais usadas."
+    },
+    {
+     "id": "a1u8l3-4",
+     "type": "build",
+     "pt": "Meu celular está na minha bolsa.",
+     "answer": "My phone is in my bag",
+     "extra": [
+      "on",
+      "under"
+     ],
+     "display": "My phone is in my bag.",
+     "why": "Dentro de algo = \"in\": in my bag."
+    },
+    {
+     "id": "a1u8l3-5",
+     "type": "listen",
+     "en": "The park is behind the school.",
+     "options": [
+      "O parque fica atrás da escola.",
+      "O parque fica ao lado da escola.",
+      "A escola fica atrás do parque."
+     ],
+     "answer": "O parque fica atrás da escola.",
+     "why": "\"Behind\" = atrás de. A ordem importa: quem está atrás é o parque."
+    },
+    {
+     "id": "a1u8l3-6",
+     "type": "choice",
+     "prompt": "O gato está embaixo da cadeira. Complete:",
+     "en": "The cat is ___ the chair.",
+     "options": [
+      "under",
+      "on",
+      "behind"
+     ],
+     "answer": "under",
+     "why": "Embaixo de = \"under\".",
+     "wrong": {
+      "on": "\"On\" é em cima.",
+      "behind": "\"Behind\" é atrás."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u8-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "a1u8l4-1",
+     "type": "type",
+     "pt": "Onde fica o banco?",
+     "answer": "Where is the bank?",
+     "accept": [
+      "Where's the bank?"
+     ],
+     "why": "Where + is + the bank?"
+    },
+    {
+     "id": "a1u8l4-2",
+     "type": "type",
+     "pt": "Tem um parque perto da minha casa.",
+     "answer": "There is a park near my house.",
+     "accept": [
+      "There's a park near my house."
+     ],
+     "why": "There is (tem/há) + a park + near my house."
+    },
+    {
+     "id": "a1u8l4-3",
+     "type": "dictation",
+     "en": "There are two schools in my street.",
+     "why": "Plural: there are."
+    },
+    {
+     "id": "a1u8l4-4",
+     "type": "type",
+     "pt": "O livro está em cima da mesa.",
+     "answer": "The book is on the table.",
+     "why": "Em cima de = on."
+    },
+    {
+     "id": "a1u8l4-5",
+     "type": "dictation",
+     "en": "The station is next to the hotel.",
+     "why": "\"Next to\" = ao lado de."
+    },
+    {
+     "id": "a1u8l4-6",
+     "type": "type",
+     "pt": "Tem um supermercado aqui perto?",
+     "answer": "Is there a supermarket near here?",
+     "why": "Pergunta: Is there...? \"Near here\" = aqui perto."
+    }
+   ]
+  },
+  {
+   "id": "a1-u8-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "a1u8l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Excuse me, where is the station?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It's next to the park.",
+      "It's at seven o'clock.",
+      "Yes, there is."
+     ],
+     "answer": "It's next to the park.",
+     "why": "\"Where...?\" pergunta lugar: responda com a posição (next to = ao lado de).",
+     "prompt": "Você está na rua e alguém pede uma informação."
+    },
+    {
+     "id": "a1u8l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is there a bank near here?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, there is. It's in this street.",
+      "Yes, it is.",
+      "Yes, I am."
+     ],
+     "answer": "Yes, there is. It's in this street.",
+     "why": "Pergunta com \"Is there...?\" tem resposta curta \"Yes, there is\"."
+    },
+    {
+     "id": "a1u8l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Where are my keys?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "They're on the table.",
+      "It's on the table.",
+      "There is on the table."
+     ],
+     "answer": "They're on the table.",
+     "why": "\"Keys\" é plural: they're."
+    },
+    {
+     "id": "a1u8l5-4",
+     "type": "speak",
+     "en": "Excuse me, where is the hospital?",
+     "pt": "Com licença, onde fica o hospital?",
+     "why": "Lembre: o \"h\" de hospital é pronunciado, como um \"r\" suave: \"RÓS-pi-tal\"."
+    },
+    {
+     "id": "a1u8l5-5",
+     "type": "speak",
+     "en": "There is a park near my house.",
+     "pt": "Tem um parque perto da minha casa.",
+     "why": "\"There is\" na fala vira \"there's\": \"dérz\"."
+    },
+    {
+     "id": "a1u8l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Thank you very much!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "You're welcome!",
+      "Me too!",
+      "There is."
+     ],
+     "answer": "You're welcome!",
+     "why": "Resposta para agradecimento: You're welcome (de nada)."
+    }
+   ]
+  },
+  {
+   "id": "a1-u8-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "a1u8l6-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There ___ a cinema in my town.",
+     "options": [
+      "is",
+      "are",
+      "have"
+     ],
+     "answer": "is",
+     "why": "Um cinema (singular): there is.",
+     "wrong": {
+      "are": "\"Are\" é para várias coisas.",
+      "have": "Para \"tem\" no sentido de existir use there is."
+     }
+    },
+    {
+     "id": "a1u8l6-2",
+     "type": "type",
+     "pt": "O gato está embaixo da cama.",
+     "answer": "The cat is under the bed.",
+     "why": "Embaixo de = under."
+    },
+    {
+     "id": "a1u8l6-3",
+     "type": "meaning",
+     "en": "The bank is between the shop and the hotel.",
+     "options": [
+      "O banco fica entre a loja e o hotel.",
+      "O banco fica atrás da loja.",
+      "O banco fica perto do hotel."
+     ],
+     "answer": "O banco fica entre a loja e o hotel.",
+     "why": "\"Between\" = entre (duas coisas)."
+    },
+    {
+     "id": "a1u8l6-4",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "My phone is ___ my bag.",
+     "options": [
+      "in",
+      "on",
+      "under"
+     ],
+     "answer": "in",
+     "why": "Dentro de algo = in.",
+     "wrong": {
+      "on": "\"On\" é em cima.",
+      "under": "\"Under\" é embaixo."
+     }
+    },
+    {
+     "id": "a1u8l6-5",
+     "type": "dictation",
+     "en": "Is there a hospital near here?",
+     "why": "Is there + a hospital + near here?"
+    },
+    {
+     "id": "a1u8l6-6",
+     "type": "speak",
+     "en": "The school is behind the park.",
+     "pt": "A escola fica atrás do parque.",
+     "why": "\"Behind\" soa como \"bi-RÁIND\"."
+    }
+   ]
+  }
+ ]
 }

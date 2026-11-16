@@ -57,7 +57,7 @@ const CONTRACTIONS = {
   "where's": ['where', 'is'], "who's": ['who', 'is'], "that's": ['that', 'is'], "name's": ['name', 'is'],
   "isn't": ['is', 'not'], "aren't": ['are', 'not'], "don't": ['do', 'not'], "doesn't": ['does', 'not'],
   "can't": ['can', 'not'], "i'd": ['i', 'would'], "you'd": ['you', 'would'],
-  "didn't": ['did', 'not'], "wasn't": ['was', 'not'], "weren't": ['were', 'not'], "won't": ['will', 'not'],
+  "didn't": ['did', 'not'], "there's": ['there', 'is'], "who's": ['who', 'is'], "here's": ['here', 'is'], "wasn't": ['was', 'not'], "weren't": ['were', 'not'], "won't": ['will', 'not'],
   "i'll": ['i', 'will'], "she'll": ['she', 'will'], "he'll": ['he', 'will'], "they'll": ['they', 'will'], "you'll": ['you', 'will'], "we'll": ['we', 'will'], "it'll": ['it', 'will'], "couldn't": ['could', 'not'],
   "haven't": ['have', 'not'], "hasn't": ['has', 'not'], "shouldn't": ['should', 'not'], "mustn't": ['must', 'not'], "i've": ['i', 'have'], "let's": ['let', 'us'],
 };
@@ -99,7 +99,7 @@ const warn = (where, msg) => warnings.push(`${where}: ${msg}`);
 const files = fs.readdirSync(CONTENT_DIR).filter(d => /^[abc][12]$/.test(d))
   .flatMap(d => fs.readdirSync(path.join(CONTENT_DIR, d)).filter(f => f.endsWith('.json')).map(f => `${d}/${f}`)).sort();
 const ids = new Set();
-const TYPES = new Set(['choice', 'build', 'match', 'listen', 'meaning']);
+const TYPES = new Set(['choice', 'build', 'match', 'listen', 'meaning', 'type', 'dictation', 'speak', 'dialogue']);
 let itemCount = 0; let wordCount = 0;
 const introduced = new Map(); // palavra -> ordem da unidade
 
@@ -168,6 +168,29 @@ for (const { f, u, rank } of units) {
           if (!Array.isArray(it.pairs) || it.pairs.length < 3 || it.pairs.length > 5) err(L, 'match precisa de 3 a 5 pares');
           it.pairs?.forEach(([en, pt]) => { checkEn(L, en); if (!pt) err(L, `par "${en}" sem tradução`); });
           if (new Set(it.pairs?.map(p => p[1])).size !== it.pairs?.length) err(L, 'traduções repetidas no match');
+          break;
+        case 'type':
+          if (!it.pt) err(L, 'type precisa do texto em português "pt"');
+          if (!it.answer) err(L, 'type precisa de "answer"');
+          checkEn(L, it.answer); (it.accept || []).forEach(a => checkEn(L, a));
+          break;
+        case 'dictation':
+          if (!it.en) err(L, 'dictation precisa de "en"');
+          checkEn(L, it.en); (it.accept || []).forEach(a => checkEn(L, a));
+          break;
+        case 'speak':
+          if (!it.en || !it.pt) err(L, 'speak precisa de "en" e "pt"');
+          if (it.en && it.en.split(' ').length > 9) err(L, 'frase de fala longa demais (máx. 9 palavras)');
+          checkEn(L, it.en);
+          break;
+        case 'dialogue':
+          if (!Array.isArray(it.lines) || it.lines.length < 2 || it.lines.length > 4) err(L, 'dialogue precisa de 2 a 4 falas');
+          if ((it.lines || []).filter(([, t]) => t === '___').length !== 1) err(L, 'dialogue precisa de exatamente uma fala "___"');
+          (it.lines || []).forEach(([who, t]) => { if (!['A', 'B'].includes(who)) err(L, `falante inválido "${who}"`); if (t !== '___') checkEn(L, t); });
+          if (!it.options?.includes(it.answer)) err(L, 'resposta não está nas opções');
+          if (new Set(it.options).size !== it.options?.length) err(L, 'opções repetidas');
+          it.options?.forEach(o => checkEn(L, o));
+          for (const o of Object.keys(it.wrong || {})) if (!it.options.includes(o)) err(L, `"wrong" cita opção inexistente "${o}"`);
           break;
         case 'listen':
         case 'meaning':

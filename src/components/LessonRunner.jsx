@@ -6,7 +6,36 @@ import { shuffle } from '../lib/content.js';
 import { supabase } from '../lib/supabase.js';
 
 const PRAISE = ['Mandou bem!', 'Isso mesmo!', 'Perfeito!', 'Sacou!', 'Muito bom!'];
-const norm = (s) => String(s).toLowerCase().replace(/[’]/g, "'").replace(/[.,!?]/g, '').replace(/\s+/g, ' ').trim();
+const norm = (s) => String(s).toLowerCase().replace(/[’]/g, "'").replace(/[.,!?;:"]/g, '').replace(/\s+/g, ' ').trim();
+const CONTR = { "i'm": 'i am', "you're": 'you are', "he's": 'he is', "she's": 'she is', "it's": 'it is', "we're": 'we are', "they're": 'they are',
+  "that's": 'that is', "what's": 'what is', "where's": 'where is', "who's": 'who is', "there's": 'there is', "name's": 'name is',
+  "isn't": 'is not', "aren't": 'are not', "don't": 'do not', "doesn't": 'does not', "didn't": 'did not', "wasn't": 'was not', "weren't": 'were not',
+  "can't": 'cannot', "won't": 'will not', "i'd": 'i would', "you'd": 'you would', "i'll": 'i will', "you'll": 'you will', "we'll": 'we will',
+  "she'll": 'she will', "he'll": 'he will', "they'll": 'they will', colour: 'color', ok: 'okay' };
+// Normaliza para comparar respostas digitadas: ignora maiúsculas, pontuação e contrações (I'm = I am)
+const normFull = (s) => norm(s).split(' ').flatMap(w => (CONTR[w] || w).split(' ')).join(' ');
+function lev(a, b) {
+  const d = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 1; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++)
+    d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return d[a.length][b.length];
+}
+// 'ok' = certo, 'typo' = certo com 1 letra trocada (frases maiores), null = errado
+export function matchTyped(typed, answers) {
+  const t = normFull(typed);
+  if (!t) return null;
+  const cands = answers.map(normFull);
+  if (cands.includes(t)) return 'ok';
+  if (cands.some(c => c.length > 6 && lev(t, c) <= 1)) return 'typo';
+  return null;
+}
+// Fala: quantas palavras do alvo apareceram no que foi reconhecido
+function speechScore(heard, target) {
+  const h = new Set(normFull(heard).split(' '));
+  const t = normFull(target).split(' ');
+  return t.filter(w => h.has(w)).length / t.length;
+}
 
 // ---------- tipos de exercício ----------
 function Options({ options, value, onPick, locked, answer, english }) {
@@ -129,6 +158,98 @@ function Match({ item, onDone, locked }) {
   );
 }
 
+function TypeIn({ item, value, setValue, locked, dictation }) {
+  useEffect(() => { if (dictation) { const t = setTimeout(() => speak(item.en), 350); return () => clearTimeout(t); } }, [item.id]);
+  return (
+    <>
+      <p className="q-label">{dictation ? 'Ouça e escreva em inglês' : 'Escreva em inglês'}</p>
+      {dictation ? (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <button type="button" className="audio-btn big" aria-label="Ouvir de novo" onClick={() => speak(item.en)}><Icon name="sound" size={40} color="#fff" stroke={2.2} /></button>
+          <button type="button" className="audio-btn slow" aria-label="Ouvir devagar" onClick={() => speak(item.en, { slow: true })}><Icon name="turtle" size={22} color="var(--violet)" /></button>
+          {locked && <h1 className="q" lang="en">{item.en}</h1>}
+        </div>
+      ) : <h1 className="q">{item.pt}</h1>}
+      <input className="type-in" lang="en" value={value || ''} disabled={locked} autoFocus autoComplete="off" autoCapitalize="off" spellCheck={false}
+        aria-label="Sua resposta em inglês" placeholder="Digite aqui em inglês" onChange={e => setValue(e.target.value)} />
+      <p className="muted" style={{ fontSize: 13, marginTop: 8 }}>Não precisa se preocupar com maiúsculas e pontuação. Contrações como I'm ou I am valem igual.</p>
+    </>
+  );
+}
+
+function Dialogue({ item, value, setValue, locked }) {
+  const opts = useMemo(() => shuffle(item.options), [item.id]);
+  return (
+    <>
+      <p className="q-label">Complete a conversa</p>
+      {item.prompt && <p className="muted" style={{ margin: '0 0 12px', fontSize: 16 }}>{item.prompt}</p>}
+      <div className="chat">
+        {item.lines.map(([who, text], i) => {
+          const gap = text === '___';
+          const shown = gap ? (locked ? item.answer : value) : text;
+          return (
+            <div key={i} className={'bubble ' + (who === 'B' ? 'me' : 'other') + (gap ? ' gap' : '')}>
+              <span className="who">{who === 'B' ? 'Você' : 'Pessoa'}</span>
+              <span lang="en">{shown || '...'}</span>
+              {!gap && canSpeak() && <button type="button" className="icon-btn" style={{ width: 32, height: 32 }} aria-label="Ouvir" onClick={() => speak(text)}><Icon name="sound" size={16} /></button>}
+            </div>
+          );
+        })}
+      </div>
+      <Options options={opts} value={value} onPick={setValue} locked={locked} answer={item.answer} english />
+    </>
+  );
+}
+
+function Speak({ item, locked, onDone }) {
+  const SR = typeof window !== 'undefined' && (window.SpeechRecognition || window.webkitSpeechRecognition);
+  const [listening, setListening] = useState(false);
+  const [heard, setHeard] = useState('');
+  const [msg, setMsg] = useState('');
+  const tries = useRef(0);
+  const rec = useRef(null);
+  useEffect(() => () => rec.current?.abort?.(), []);
+  function start() {
+    if (!SR || locked) return;
+    setMsg(''); setHeard('');
+    const r = new SR(); rec.current = r;
+    r.lang = 'en-US'; r.interimResults = false; r.maxAlternatives = 3;
+    r.onresult = (e) => {
+      const alts = [...e.results[0]].map(a => a.transcript);
+      setHeard(alts[0]);
+      const best = Math.max(...alts.map(a => speechScore(a, item.en)));
+      tries.current += 1;
+      if (best >= 0.75) onDone(true);
+      else if (tries.current >= 3) onDone(false, alts[0]);
+      else setMsg('Quase! Ouça o áudio de novo e tente mais uma vez.');
+    };
+    r.onerror = (e) => setMsg(e.error === 'not-allowed' ? 'Permita o uso do microfone no navegador para praticar a fala.' : 'Não consegui ouvir. Toque no microfone e fale de novo.');
+    r.onend = () => setListening(false);
+    r.start(); setListening(true);
+  }
+  return (
+    <>
+      <p className="q-label">Fale em inglês</p>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+        {canSpeak() && <button type="button" className="audio-btn" aria-label="Ouvir como se fala" onClick={() => speak(item.en)}><Icon name="sound" size={26} color="#fff" stroke={2.2} /></button>}
+        <h1 className="q" lang="en">{item.en}</h1>
+      </div>
+      <p className="muted" style={{ margin: '10px 0 0', fontSize: 16 }}>{item.pt}</p>
+      {SR ? (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, marginTop: 32 }}>
+          <button type="button" className={'mic' + (listening ? ' on' : '')} disabled={locked || listening} onClick={start} aria-label="Falar">
+            <Icon name="mic" size={40} color="#fff" stroke={2.2} />
+          </button>
+          <span className="muted" style={{ fontSize: 15 }}>{listening ? 'Ouvindo... fale agora' : 'Toque no microfone e leia a frase em voz alta'}</span>
+          {heard && <span style={{ fontSize: 15 }}>Ouvi: <b lang="en">“{heard}”</b></span>}
+          {msg && <span className="alert" role="status">{msg}</span>}
+        </div>
+      ) : <div className="note" style={{ marginTop: 24 }}>Seu navegador não reconhece fala. No computador, use Chrome ou Edge para praticar a pronúncia.</div>}
+      {!locked && <button type="button" className="link-btn" style={{ marginTop: 16 }} onClick={() => onDone(true, null, true)}>Não posso falar agora</button>}
+    </>
+  );
+}
+
 function ReportBox({ itemId, onClose }) {
   const [msg, setMsg] = useState('');
   const [sent, setSent] = useState(false);
@@ -160,6 +281,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [value, setValue] = useState(null);
   const [status, setStatus] = useState('answering'); // answering | correct | wrong
   const [matchMisses, setMatchMisses] = useState(0);
+  const [note, setNote] = useState(null); // observação extra no feedback (grafia, fala pulada...)
   const [help, setHelp] = useState(false);
   const [report, setReport] = useState(false);
   const [result, setResult] = useState(null);
@@ -175,6 +297,11 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const isCorrect = useCallback(() => {
     if (!item) return false;
     if (item.type === 'build') return norm((value || []).map(t => t.w).join(' ')) === norm(item.answer);
+    if (item.type === 'type' || item.type === 'dictation') {
+      const m = matchTyped(value || '', [item.type === 'type' ? item.answer : item.en, ...(item.accept || [])]);
+      if (m === 'typo') setNote(`Quase perfeito! Atenção à grafia: “${item.type === 'type' ? item.answer : item.en}”.`);
+      return !!m;
+    }
     return value === item.answer;
   }, [item, value]);
 
@@ -183,13 +310,15 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     fx.play(ok ? 'correct' : 'wrong');
     if (!firstTry.current.has(item.id)) firstTry.current.set(item.id, ok);
     onItemResult?.(cur, ok);
-    if (!ok && retryWrong && item.type !== 'match') setQueue(q => [...q, cur]);
-    if (item.type === 'build' || item.type === 'choice') speak(item.type === 'build' ? item.answer : item.en.replace('___', item.answer));
+    if (!ok && retryWrong && item.type !== 'match' && item.type !== 'speak') setQueue(q => [...q, cur]);
+    if (item.type === 'build' || item.type === 'type') speak(item.answer);
+    else if (item.type === 'choice') speak(item.en.replace('___', item.answer));
+    else if (item.type === 'dialogue') speak(item.answer);
     setTimeout(() => ctaRef.current?.focus(), 50);
   }, [item, cur, onItemResult, retryWrong]);
 
   const check = () => { if (!locked && hasAnswer()) settle(isCorrect()); };
-  const hasAnswer = () => item?.type === 'build' ? (value || []).length > 0 : value != null;
+  const hasAnswer = () => item?.type === 'build' ? (value || []).length > 0 : typeof value === 'string' ? value.trim().length > 0 : value != null;
 
   const next = async () => {
     if (idx + 1 >= queue.length) {
@@ -200,7 +329,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       setResult({ score, ...(res || {}) });
       return;
     }
-    setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0);
+    setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0); setNote(null);
   };
 
   // teclado: Enter verifica/continua, 1-4 escolhem opções
@@ -241,7 +370,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const guide = cur.unit?.guide;
   const ok = status === 'correct';
   const wrongNote = status === 'wrong' && item.wrong?.[value];
-  const display = item.display || (item.type === 'choice' ? item.en.replace('___', item.answer) : item.answer);
+  const display = item.display || (item.type === 'choice' ? item.en.replace('___', item.answer) : item.type === 'dictation' || item.type === 'speak' ? item.en : item.answer);
 
   return (
     <div className="lesson">
@@ -257,6 +386,13 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         {item.type === 'listen' && <Meaning item={item} value={value} setValue={setValue} locked={locked} listen />}
         {item.type === 'build' && <Build item={item} value={value} setValue={setValue} locked={locked} />}
         {item.type === 'match' && <Match item={item} locked={locked} onDone={(m) => { setMatchMisses(m); settle(m === 0); }} />}
+        {item.type === 'type' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} />}
+        {item.type === 'dictation' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} dictation />}
+        {item.type === 'dialogue' && <Dialogue item={item} value={value} setValue={setValue} locked={locked} />}
+        {item.type === 'speak' && <Speak item={item} locked={locked} onDone={(ok, heard, skipped) => {
+          setNote(skipped ? 'Sem problema! Quando puder, pratique a fala em voz alta — é o que mais destrava a conversa.' : heard ? `Ouvi: “${heard}”.` : null);
+          settle(ok);
+        }} />}
 
         {guide && !locked && (
           <div style={{ marginTop: 24 }}>
@@ -284,8 +420,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       <footer className={'bar' + (status === 'correct' ? ' ok' : status === 'wrong' ? ' bad' : '')}>
         <div className="bar-in" aria-live="polite">
           {status === 'answering' && <>
-            <span className="muted" style={{ fontSize: 15 }}>{item.type === 'match' ? 'Combine todos os pares para continuar.' : item.type === 'build' ? 'Toque nas palavras na ordem certa.' : 'Escolha uma opção e toque em Verificar.'}</span>
-            {item.type !== 'match' && <button className="btn btn-violet btn-3d btn-lg cta" disabled={!hasAnswer()} onClick={check}>Verificar</button>}
+            <span className="muted" style={{ fontSize: 15 }}>{item.type === 'match' ? 'Combine todos os pares para continuar.' : item.type === 'build' ? 'Toque nas palavras na ordem certa.' : item.type === 'speak' ? 'Fale a frase para continuar.' : item.type === 'type' || item.type === 'dictation' ? 'Escreva e aperte Enter ou Verificar.' : 'Escolha uma opção e toque em Verificar.'}</span>
+            {item.type !== 'match' && item.type !== 'speak' && <button className="btn btn-violet btn-3d btn-lg cta" disabled={!hasAnswer()} onClick={check}>Verificar</button>}
           </>}
           {status !== 'answering' && <>
             <div className="fb">
@@ -295,9 +431,9 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
                   {ok ? PRAISE[idx % PRAISE.length] : item.type === 'match' ? `Quase! Você trocou ${matchMisses} ${matchMisses === 1 ? 'par' : 'pares'}.` : <>Quase! Resposta certa: <span lang="en">“{display}”</span></>}
                 </h3>
                 <p style={{ color: ok ? '#234238' : '#4A2A1C' }}>
-                  {wrongNote && <>{wrongNote} </>}<b>Por quê?</b> {item.why}
+                  {note && <>{note} </>}{wrongNote && <>{wrongNote} </>}<b>Por quê?</b> {item.why}
                 </p>
-                {!ok && retryWrong && item.type !== 'match' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela vai aparecer de novo no fim da lição e também na sua revisão.</p>}
+                {!ok && retryWrong && item.type !== 'match' && item.type !== 'speak' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela vai aparecer de novo no fim da lição e também na sua revisão.</p>}
                 <button type="button" className="link-btn" style={{ fontSize: 13, color: 'var(--text3)' }} onClick={() => setReport(true)}><Icon name="flag" size={14} /> Reportar erro neste exercício</button>
               </div>
             </div>

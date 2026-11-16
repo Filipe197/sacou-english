@@ -149,7 +149,7 @@ export default function Landing() {
           <div className="grid4">
             {[
               ['clock', 'Lições curtas', 'De 5 a 10 minutos. Cabe no intervalo do almoço.'],
-              ['sound', 'Ouça cada frase', 'Áudio em inglês em todos os exercícios, também em velocidade lenta.'],
+              ['mic', 'Ouça, fale e escreva', 'Áudio em todas as frases, ditado, exercícios de escrita e de pronúncia com o microfone.'],
               ['review', 'Revisão dos erros', 'O que você erra fica guardado para você praticar até acertar.'],
               ['trophy', 'Metas e sequência', 'Meta diária, XP e sequência de dias para manter o ritmo.'],
             ].map(([ic, t, d]) => (
