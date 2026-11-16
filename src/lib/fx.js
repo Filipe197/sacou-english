@@ -6,6 +6,7 @@ const SOUNDS = {
   wrong: '/sounds/wrong.ogg',
   complete: '/sounds/complete.ogg',
   click: '/sounds/click.ogg',
+  streak: '/sounds/streak.ogg',
 };
 
 const cache = {};

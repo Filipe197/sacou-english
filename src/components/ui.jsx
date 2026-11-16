@@ -57,19 +57,30 @@ export function Spinner() {
   return <div className="center-page" role="status" aria-label="Carregando"><div className="spinner" /></div>;
 }
 
-// Animação Lottie pronta (arquivo em /public/animations). Se não existir, não mostra nada.
-const exists = {};
+// Animação pronta em /public/animations: tenta <nome>.lottie e depois <nome>.gif.
+// Se nenhum arquivo existir, não mostra nada (o site funciona igual).
+const found = {};
+async function probe(url) {
+  try {
+    const r = await fetch(url, { method: 'HEAD' });
+    return r.ok && !(r.headers.get('content-type') || '').includes('text/html');
+  } catch { return false; }
+}
 export function Anim({ name, size = 180, loop = false }) {
-  const src = `/animations/${name}.lottie`;
-  const [ok, setOk] = useState(exists[src]);
+  const [src, setSrc] = useState(found[name]);
   useEffect(() => {
-    if (exists[src] !== undefined) return;
-    fetch(src, { method: 'HEAD' })
-      .then(r => { exists[src] = r.ok && !(r.headers.get('content-type') || '').includes('text/html'); setOk(exists[src]); })
-      .catch(() => { exists[src] = false; setOk(false); });
-  }, [src]);
-  if (!ok) return null;
+    if (found[name] !== undefined) return;
+    (async () => {
+      for (const ext of ['lottie', 'gif']) {
+        const url = `/animations/${name}.${ext}`;
+        if (await probe(url)) { found[name] = url; setSrc(url); return; }
+      }
+      found[name] = null; setSrc(null);
+    })();
+  }, [name]);
+  if (!src) return null;
   const reduce = typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  if (src.endsWith('.gif')) return reduce ? null : <img src={src} width={size} height={size} alt="" style={{ objectFit: 'contain' }} />;
   return <div style={{ width: size, height: size }} aria-hidden="true"><Suspense fallback={null}><DotLottieReact src={src} autoplay={!reduce} loop={loop} /></Suspense></div>;
 }
 

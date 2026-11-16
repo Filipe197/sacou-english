@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../lib/auth.jsx';
-import { Icon, Logo } from '../components/ui.jsx';
+import { Icon, Logo, Anim } from '../components/ui.jsx';
 
 const LEVELS = [
   { title: 'Nunca estudei inglês', desc: 'Vou começar do zero, sem problema.', out: 'Você começa no nível A1, Unidade 1: cumprimentos e palavras do dia a dia. Tudo explicado passo a passo.', cta: 'Começar do zero', test: false },
   { title: 'Sei algumas palavras', desc: 'Entendo coisas como “hello”, cores e números.', out: 'Você faz um teste rápido (cerca de 3 minutos). As unidades que você já domina são marcadas como concluídas e você começa no ponto certo.', cta: 'Fazer teste rápido', test: true },
-  { title: 'Consigo conversas simples', desc: 'Me apresento e falo da minha rotina.', out: 'O teste vai conferir o que você já sabe do A1. Hoje o site tem o nível A1 completo em construção — você será avisado quando o A2 chegar.', cta: 'Fazer teste de nível', test: true },
+  { title: 'Consigo conversas simples', desc: 'Me apresento e falo da minha rotina.', out: 'O teste vai conferir o que você já sabe do A1. Hoje o site tem o nível A1 completo; o A2 está sendo preparado.', cta: 'Fazer teste de nível', test: true },
   { title: 'Sou intermediário ou mais', desc: 'Leio textos e assisto séries com legenda.', out: 'Por enquanto o site cobre o nível A1. Você pode fazer o teste para pular o que já sabe e revisar a base enquanto preparamos os próximos níveis.', cta: 'Fazer teste de nível', test: true },
 ];
 const GOALS = [{ min: 5, xp: 15, label: 'Leve' }, { min: 10, xp: 30, label: 'Regular' }, { min: 15, xp: 45, label: 'Firme' }, { min: 20, xp: 60, label: 'Intenso' }];
@@ -37,6 +37,7 @@ export default function Onboarding() {
         <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text3)' }}>2 de 2</span>
       </header>
       <main style={{ maxWidth: 920, margin: '0 auto', padding: '16px 24px 64px' }}>
+        <Anim name="welcome" size={120} loop />
         <h1 style={{ fontSize: 'clamp(32px,4vw,44px)', margin: '0 0 10px', lineHeight: 1.08 }}>
           {profile?.display_name ? `${profile.display_name.split(' ')[0]}, quanto inglês você já sabe?` : 'Quanto inglês você já sabe?'}
         </h1>

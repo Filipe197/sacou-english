@@ -11,7 +11,7 @@ export default function LessonPage() {
   const { id } = useParams();
   const lesson = getLesson(id);
   const prog = useProgress();
-  const { setProfile } = useAuth();
+  const { profile, setProfile } = useAuth();
 
   const entries = useMemo(() => lesson ? lesson.items.map(item => ({ item, lessonId: lesson.id, unit: lesson.unit })) : [], [lesson]);
 
@@ -31,7 +31,14 @@ export default function LessonPage() {
         const { data, error } = await supabase.rpc('complete_lesson', { p_lesson_id: lesson.id, p_score: score, p_xp: xp });
         if (error) return { xp: null, error: 'Não conseguimos salvar seu progresso agora (sem conexão?). Refaça a lição mais tarde para registrar.' };
         if (data) setProfile(data);
-        return { xp, streak: data?.streak, title: repeat ? 'Treino concluído!' : undefined };
+        // primeira lição do dia: a sequência subiu
+        const streakUp = data && profile && profile.last_active !== data.last_active;
+        return {
+          xp, streak: data?.streak,
+          anim: streakUp ? 'streak' : undefined,
+          title: streakUp ? (data.streak === 1 ? 'Sequência iniciada!' : `${data.streak} dias seguidos!`) : repeat ? 'Treino concluído!' : undefined,
+          message: streakUp ? 'Você estudou hoje e sua sequência está garantida. Volte amanhã para continuar.' : undefined,
+        };
       }}
     />
   );

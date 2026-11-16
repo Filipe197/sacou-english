@@ -1,0 +1,8 @@
+Sons do Sacou English (Kenney "Interface Sounds", licença CC0 - kenney.nl)
+O site procura estes nomes exatos:
+  correct.ogg   -> acerto
+  wrong.ogg     -> erro
+  complete.ogg  -> fim de lição
+  streak.ogg    -> sequência de dias subiu
+  click.ogg     -> toque em peças/pares
+Se algum faltar, o site funciona normalmente sem aquele som.

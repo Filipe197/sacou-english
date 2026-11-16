@@ -1,0 +1,67 @@
+{
+  "id": "a1-u5",
+  "level": "A1",
+  "order": 5,
+  "title": "Objetos e cores",
+  "subtitle": "This, that, these, those, plural e cores.",
+  "can_do": {
+    "text": "Consigo nomear objetos do dia a dia, dizer a cor e mostrar se estão perto ou longe.",
+    "source": "CEFR (Conselho da Europa) — Alcance vocabular, nível A1"
+  },
+  "core_inventory": ["Grammar: demonstratives (this, that, these, those)", "Grammar: plurals (regular)", "Grammar: adjectives (colours) before nouns", "Vocabulary: everyday objects"],
+  "words": [
+    ["book", "livro"], ["pen", "caneta"], ["bag", "bolsa / mochila"], ["phone", "celular / telefone"], ["key", "chave"],
+    ["table", "mesa"], ["chair", "cadeira"], ["car", "carro"], ["this / that", "este / aquele"], ["these / those", "estes / aqueles"],
+    ["red", "vermelho"], ["blue", "azul"], ["green", "verde"], ["yellow", "amarelo"], ["black", "preto"], ["white", "branco"]
+  ],
+  "guide": {
+    "title": "This, that, these, those e as cores",
+    "intro": "Em inglês, a palavra para \"este\" e \"aquele\" muda conforme a distância e a quantidade. E as cores vêm ANTES da coisa, ao contrário do português.",
+    "points": [
+      { "en": "this book / these books", "pt": "este livro / estes livros", "note": "Perto de você. \"This\" para um, \"these\" para vários." },
+      { "en": "that car / those cars", "pt": "aquele carro / aqueles carros", "note": "Longe de você. \"That\" para um, \"those\" para vários." },
+      { "en": "a red car", "pt": "um carro vermelho", "note": "A cor vem ANTES: red car. E a cor nunca vai para o plural: red cars." },
+      { "en": "one key, two keys", "pt": "uma chave, duas chaves", "note": "O plural mais comum é só colocar -s no final." },
+      { "en": "What color is it?", "pt": "De que cor é?", "note": "Resposta: It's blue. (É azul.)" }
+    ],
+    "tips": ["No inglês britânico se escreve \"colour\"; no americano, \"color\". As duas estão certas.", "\"An\" antes de som de vogal também vale para objetos: an apple, an umbrella."]
+  },
+  "lessons": [
+    {
+      "id": "a1-u5-l1",
+      "title": "Objetos do dia a dia",
+      "items": [
+        { "id": "a1u5l1-1", "type": "match", "pairs": [["book", "livro"], ["pen", "caneta"], ["bag", "bolsa / mochila"], ["key", "chave"]], "why": "São objetos que você usa todo dia. \"Bag\" serve para bolsa, mochila ou sacola." },
+        { "id": "a1u5l1-2", "type": "match", "pairs": [["table", "mesa"], ["chair", "cadeira"], ["phone", "celular / telefone"], ["car", "carro"]], "why": "\"Phone\" é a forma curta de \"telephone\" e também é usada para celular." },
+        { "id": "a1u5l1-3", "type": "meaning", "en": "This is my bag.", "options": ["Esta é a minha bolsa.", "Aquela é a minha bolsa.", "Esta é a sua bolsa."], "answer": "Esta é a minha bolsa.", "why": "\"This\" = este/esta (perto). \"My bag\" = minha bolsa." },
+        { "id": "a1u5l1-4", "type": "choice", "prompt": "Complete:", "en": "Two ___, please.", "options": ["pens", "pen", "a pen"], "answer": "pens", "why": "Mais de um = plural com -s: two pens.", "wrong": { "pen": "Com \"two\" a palavra precisa ir para o plural: pens.", "a pen": "\"A pen\" é só uma caneta; aqui são duas." } },
+        { "id": "a1u5l1-5", "type": "listen", "en": "Where is my phone?", "options": ["Onde está meu celular?", "Este é meu celular.", "De quem é o celular?"], "answer": "Onde está meu celular?", "why": "\"Where is\" = onde está. Muito útil no dia a dia!" },
+        { "id": "a1u5l1-6", "type": "build", "pt": "Este é o meu livro.", "answer": "This is my book", "extra": ["that", "your"], "display": "This is my book.", "why": "This (este, perto) + is + my book." }
+      ]
+    },
+    {
+      "id": "a1-u5-l2",
+      "title": "This, that, these, those",
+      "items": [
+        { "id": "a1u5l2-1", "type": "choice", "prompt": "O carro está longe. Complete:", "en": "___ is a car.", "options": ["That", "This", "These"], "answer": "That", "why": "Uma coisa longe = \"that\" (aquele).", "wrong": { "This": "\"This\" é para coisas perto de você.", "These": "\"These\" é para várias coisas perto." } },
+        { "id": "a1u5l2-2", "type": "choice", "prompt": "As chaves estão na sua mão. Complete:", "en": "___ are my keys.", "options": ["These", "This", "That"], "answer": "These", "why": "Várias coisas perto = \"these\" (estes/estas). Repare que o verbo também vai para o plural: are.", "wrong": { "This": "\"This\" é para UMA coisa. Aqui são várias chaves.", "That": "\"That\" é para uma coisa longe." } },
+        { "id": "a1u5l2-3", "type": "meaning", "en": "Those books are new.", "options": ["Aqueles livros são novos.", "Estes livros são novos.", "Aquele livro é novo."], "answer": "Aqueles livros são novos.", "why": "\"Those\" = aqueles (vários, longe). \"Books\" está no plural." },
+        { "id": "a1u5l2-4", "type": "match", "pairs": [["this", "este (perto)"], ["that", "aquele (longe)"], ["these", "estes (perto)"], ["those", "aqueles (longe)"]], "why": "Pense em duas perguntas: está perto ou longe? É um ou vários? A resposta escolhe a palavra." },
+        { "id": "a1u5l2-5", "type": "build", "pt": "Estas são as minhas chaves.", "answer": "These are my keys", "extra": ["this", "is"], "display": "These are my keys.", "why": "These (várias, perto) + are (plural) + my keys." },
+        { "id": "a1u5l2-6", "type": "listen", "en": "Is that your car?", "options": ["Aquele é o seu carro?", "Este é o meu carro?", "Onde está o seu carro?"], "answer": "Aquele é o seu carro?", "why": "Na pergunta, \"is\" vem primeiro: Is that...? = Aquele é...?" }
+      ]
+    },
+    {
+      "id": "a1-u5-l3",
+      "title": "As cores",
+      "items": [
+        { "id": "a1u5l3-1", "type": "match", "pairs": [["red", "vermelho"], ["blue", "azul"], ["green", "verde"], ["yellow", "amarelo"]], "why": "As cores em inglês não mudam com masculino, feminino ou plural: red car, red cars, red bag." },
+        { "id": "a1u5l3-2", "type": "meaning", "en": "a black bag", "options": ["uma bolsa preta", "uma bolsa branca", "um preto bolsa"], "answer": "uma bolsa preta", "why": "Em inglês a cor vem ANTES da coisa: black bag. Em português, depois: bolsa preta." },
+        { "id": "a1u5l3-3", "type": "build", "pt": "Eu tenho um carro branco.", "answer": "I have a white car", "extra": ["black", "an"], "display": "I have a white car.", "why": "A cor (white) vem antes do objeto (car)." },
+        { "id": "a1u5l3-4", "type": "choice", "prompt": "Qual está certo?", "en": "I have two ___.", "options": ["red bags", "reds bags", "bags red"], "answer": "red bags", "why": "A cor vem antes e NUNCA vai para o plural: red bags.", "wrong": { "reds bags": "As cores não têm plural em inglês: red bags.", "bags red": "Em inglês a cor vem antes da coisa." } },
+        { "id": "a1u5l3-5", "type": "listen", "en": "What color is your phone?", "options": ["De que cor é o seu celular?", "Onde está o seu celular?", "Esse é o seu celular?"], "answer": "De que cor é o seu celular?", "why": "\"What color\" = que cor. Resposta: It's black. (É preto.)" },
+        { "id": "a1u5l3-6", "type": "meaning", "en": "The table is green and the chairs are yellow.", "options": ["A mesa é verde e as cadeiras são amarelas.", "A mesa é amarela e as cadeiras são verdes.", "As mesas são verdes e a cadeira é amarela."], "answer": "A mesa é verde e as cadeiras são amarelas.", "why": "\"Table\" (singular) usa \"is\"; \"chairs\" (plural) usa \"are\"." }
+      ]
+    }
+  ]
+}

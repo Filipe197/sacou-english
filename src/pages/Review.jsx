@@ -5,7 +5,7 @@ import { getItem } from '../lib/content.js';
 import { useProgress } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { supabase } from '../lib/supabase.js';
-import { Shell, Spinner, Icon } from '../components/ui.jsx';
+import { Shell, Spinner, Icon, Anim } from '../components/ui.jsx';
 
 export default function Review() {
   const prog = useProgress();
@@ -46,6 +46,7 @@ export default function Review() {
         {prog.error && <div className="alert" role="alert">{prog.error}</div>}
         {!entries.length ? (
           <div className="card" style={{ textAlign: 'center', padding: 40 }}>
+            <div style={{ display: 'flex', justifyContent: 'center' }}><Anim name="all-clear" size={140} loop /></div>
             <Icon name="check" size={40} color="var(--ok)" stroke={2.5} />
             <h2 style={{ margin: '12px 0 8px' }}>Nada para revisar agora</h2>
             <p className="muted" style={{ margin: '0 0 20px' }}>Você não tem erros pendentes. Continue a trilha!</p>

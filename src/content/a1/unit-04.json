@@ -1,0 +1,70 @@
+{
+  "id": "a1-u4",
+  "level": "A1",
+  "order": 4,
+  "title": "Família",
+  "subtitle": "Membros da família, his/her e o 's de posse.",
+  "can_do": {
+    "text": "Consigo apresentar pessoas da minha família e dizer de quem é alguma coisa.",
+    "source": "CEFR (Conselho da Europa) — Escala global, nível A1"
+  },
+  "core_inventory": ["Grammar: possessive adjectives (his, her, our, their)", "Grammar: possessive 's", "Grammar: have (affirmative)", "Vocabulary: family"],
+  "words": [
+    ["mother", "mãe"], ["father", "pai"], ["mom / dad", "mamãe / papai"], ["brother", "irmão"], ["sister", "irmã"],
+    ["son", "filho"], ["daughter", "filha"], ["husband", "marido"], ["wife", "esposa"], ["parents", "pais (pai e mãe)"],
+    ["grandmother", "avó"], ["grandfather", "avô"], ["his", "dele"], ["her", "dela"], ["I have", "eu tenho"]
+  ],
+  "guide": {
+    "title": "Família e posse: his, her e 's",
+    "intro": "Para falar da família, você vai usar três coisas: as palavras da família, \"his/her\" (dele/dela) e o 's, que mostra de quem é alguma coisa.",
+    "points": [
+      { "en": "This is my mother.", "pt": "Esta é a minha mãe.", "note": "\"This is...\" é o jeito mais comum de apresentar alguém." },
+      { "en": "His name is Tom. Her name is Ana.", "pt": "O nome dele é Tom. O nome dela é Ana.", "note": "\"His\" é para homem (dele) e \"her\" para mulher (dela). Depende de QUEM é o dono, não da coisa." },
+      { "en": "Ana's brother", "pt": "o irmão da Ana", "note": "O 's vem depois do dono: Ana's brother = o irmão da Ana. A ordem é contrária à do português." },
+      { "en": "I have two sisters.", "pt": "Eu tenho duas irmãs.", "note": "\"Have\" = ter. Com he/she vira \"has\": She has a brother." },
+      { "en": "parents", "pt": "pais (pai e mãe)", "note": "Cuidado: \"parents\" NÃO é \"parentes\". Parentes em geral é \"relatives\"." }
+    ],
+    "tips": ["\"Mom\" e \"dad\" são as formas carinhosas de mother e father.", "Em inglês não se usa artigo antes de my/his/her: \"my mother\", nunca \"the my mother\"."]
+  },
+  "lessons": [
+    {
+      "id": "a1-u4-l1",
+      "title": "Minha família",
+      "items": [
+        { "id": "a1u4l1-1", "type": "match", "pairs": [["mother", "mãe"], ["father", "pai"], ["brother", "irmão"], ["sister", "irmã"]], "why": "Estas quatro palavras são a base da família. Repare: brother e sister não mudam com a idade (irmão mais velho = older brother)." },
+        { "id": "a1u4l1-2", "type": "meaning", "en": "This is my sister.", "options": ["Esta é a minha irmã.", "Esta é a minha mãe.", "Este é o meu irmão."], "answer": "Esta é a minha irmã.", "why": "\"This is\" apresenta alguém que está perto: \"esta é\". \"Sister\" = irmã." },
+        { "id": "a1u4l1-3", "type": "match", "pairs": [["son", "filho"], ["daughter", "filha"], ["husband", "marido"], ["wife", "esposa"]], "why": "\"Daughter\" se pronuncia mais ou menos \"dóter\" — o \"gh\" não tem som." },
+        { "id": "a1u4l1-4", "type": "build", "pt": "Este é o meu pai.", "answer": "This is my father", "extra": ["mother", "your"], "display": "This is my father.", "why": "This is + my + pessoa. Em inglês não há artigo antes de \"my\": nada de \"the my father\"." },
+        { "id": "a1u4l1-5", "type": "listen", "en": "My parents are from Brazil.", "options": ["Meus pais são do Brasil.", "Meus parentes são do Brasil.", "Meus filhos são do Brasil."], "answer": "Meus pais são do Brasil.", "why": "\"Parents\" = pai e mãe. É um falso amigo: parece \"parentes\", mas não é. E \"are\" porque são duas pessoas." },
+        { "id": "a1u4l1-6", "type": "meaning", "en": "Grandmother", "options": ["Avó", "Avô", "Tia"], "answer": "Avó", "why": "Grand + mother = avó. Do mesmo jeito, grand + father = avô." },
+        { "id": "a1u4l1-7", "type": "choice", "prompt": "Complete:", "en": "Maria is my ___. She is my mother's daughter.", "options": ["sister", "brother", "father"], "answer": "sister", "why": "A filha da sua mãe (que não é você) é a sua irmã: sister.", "wrong": { "brother": "\"Brother\" é irmão — Maria é mulher.", "father": "\"Father\" é pai." } }
+      ]
+    },
+    {
+      "id": "a1-u4-l2",
+      "title": "His, her e 's",
+      "items": [
+        { "id": "a1u4l2-1", "type": "choice", "prompt": "Pedro tem um carro. Complete:", "en": "___ car is red.", "options": ["His", "Her", "My"], "answer": "His", "why": "O dono é Pedro, um homem, então usamos \"his\" (dele).", "wrong": { "Her": "\"Her\" é dela. O dono é o Pedro.", "My": "\"My\" seria o seu carro, não o do Pedro." } },
+        { "id": "a1u4l2-2", "type": "choice", "prompt": "Ana tem um irmão. Complete:", "en": "___ brother is a doctor.", "options": ["Her", "His", "Your"], "answer": "Her", "why": "O dono é Ana, uma mulher, então usamos \"her\" (dela) — mesmo que o irmão seja homem.", "wrong": { "His": "Erro comum! O que decide é o dono (Ana), não o irmão. Por isso é \"her\"." } },
+        { "id": "a1u4l2-3", "type": "meaning", "en": "Ana's brother", "options": ["O irmão da Ana", "A irmã da Ana", "A Ana do irmão"], "answer": "O irmão da Ana", "why": "O 's indica posse: primeiro o dono (Ana), depois a coisa (brother)." },
+        { "id": "a1u4l2-4", "type": "build", "pt": "A mãe do Tom é professora.", "answer": "Tom's mother is a teacher", "extra": ["his", "an"], "display": "Tom's mother is a teacher.", "why": "Tom's mother = a mãe do Tom. E lembre do \"a\" antes da profissão: a teacher." },
+        { "id": "a1u4l2-5", "type": "listen", "en": "Her name is Julia.", "options": ["O nome dela é Julia.", "O nome dele é Julia.", "Meu nome é Julia."], "answer": "O nome dela é Julia.", "why": "\"Her\" = dela. Se fosse \"his name\", seria \"o nome dele\"." },
+        { "id": "a1u4l2-6", "type": "build", "pt": "O nome dele é Carlos.", "answer": "His name is Carlos", "extra": ["her", "my"], "display": "His name is Carlos.", "why": "\"His\" = dele. A frase é igual a \"my name is\", só trocando o dono." },
+        { "id": "a1u4l2-7", "type": "match", "pairs": [["my", "meu / minha"], ["your", "seu / sua"], ["his", "dele"], ["her", "dela"]], "why": "Esses possessivos nunca mudam com masculino/feminino ou plural da coisa: my car, my cars, my sister." }
+      ]
+    },
+    {
+      "id": "a1-u4-l3",
+      "title": "Eu tenho...",
+      "items": [
+        { "id": "a1u4l3-1", "type": "meaning", "en": "I have two brothers.", "options": ["Eu tenho dois irmãos.", "Eu sou dois irmãos.", "Eu tenho duas irmãs."], "answer": "Eu tenho dois irmãos.", "why": "\"Have\" = ter. \"Brothers\" com -s no final = irmãos (plural)." },
+        { "id": "a1u4l3-2", "type": "choice", "prompt": "Complete:", "en": "She ___ a son.", "options": ["has", "have", "is"], "answer": "has", "why": "Com he, she e it, \"have\" vira \"has\": She has a son.", "wrong": { "have": "\"Have\" é para I, you, we, they. Com she é \"has\".", "is": "\"Is\" é ser/estar; aqui a ideia é TER um filho." } },
+        { "id": "a1u4l3-3", "type": "choice", "prompt": "Complete:", "en": "We ___ a big family.", "options": ["have", "has", "are"], "answer": "have", "why": "Com \"we\" (nós) usamos \"have\".", "wrong": { "has": "\"Has\" é só para he, she, it.", "are": "\"Are\" é ser/estar; aqui é TER uma família grande." } },
+        { "id": "a1u4l3-4", "type": "build", "pt": "Eu tenho uma filha.", "answer": "I have a daughter", "extra": ["has", "son"], "display": "I have a daughter.", "why": "I + have + a + daughter. Antes de uma pessoa ou coisa no singular usamos \"a\"." },
+        { "id": "a1u4l3-5", "type": "listen", "en": "He has two children.", "options": ["Ele tem dois filhos.", "Ela tem dois filhos.", "Ele tem duas crianças pequenas."], "answer": "Ele tem dois filhos.", "why": "\"Children\" é o plural irregular de \"child\" (filho/criança). Quando falamos da família, \"children\" = filhos." },
+        { "id": "a1u4l3-6", "type": "build", "pt": "Ela tem um irmão.", "answer": "She has a brother", "extra": ["have", "sister"], "display": "She has a brother.", "why": "Com \"she\" o verbo é \"has\". \"Brother\" = irmão." },
+        { "id": "a1u4l3-7", "type": "meaning", "en": "My wife and I have a baby.", "options": ["Minha esposa e eu temos um bebê.", "Meu marido e eu temos um bebê.", "Minha irmã e eu temos um bebê."], "answer": "Minha esposa e eu temos um bebê.", "why": "\"Wife\" = esposa. Em inglês dizemos \"my wife and I\" — a outra pessoa vem primeiro, por educação." }
+      ]
+    }
+  ]
+}

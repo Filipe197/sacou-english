@@ -54,7 +54,7 @@ const CONTRACTIONS = {
   "he's": ['he', 'is'], "she's": ['she', 'is'], "it's": ['it', 'is'], "what's": ['what', 'is'],
   "where's": ['where', 'is'], "who's": ['who', 'is'], "that's": ['that', 'is'], "name's": ['name', 'is'],
   "isn't": ['is', 'not'], "aren't": ['are', 'not'], "don't": ['do', 'not'], "doesn't": ['does', 'not'],
-  "can't": ['can', 'not'], "i've": ['i', 'have'], "let's": ['let', 'us'],
+  "can't": ['can', 'not'], "i'd": ['i', 'would'], "you'd": ['you', 'would'], "i've": ['i', 'have'], "let's": ['let', 'us'],
 };
 const IRREG = { is: 'be', am: 'be', are: 'be', was: 'be', were: 'be', has: 'have', does: 'do', did: 'do',
   went: 'go', men: 'man', women: 'woman', children: 'child', people: 'person', us: 'we', him: 'he', her: 'she', them: 'they' };
@@ -104,6 +104,7 @@ for (const { f, u } of units) {
   const extra = new Map((u.extra_vocab || []).map(e => [e.word.toLowerCase(), e.reason]));
   for (const [w, reason] of extra) if (!reason) err(W, `extra_vocab "${w}" sem justificativa`);
   const extraSet = new Set(extra.keys());
+  const early = new Set();
 
   const checkEn = (where, text) => {
     for (const t of tokens(text)) {
@@ -112,7 +113,7 @@ for (const { f, u } of units) {
       if (k === null) err(where, `palavra fora do A1 (CEFR-J): "${t}" em "${text}"`);
       else if (k === 'extra') warn(where, `palavra extra "${t}" (justificativa: ${extra.get(t) || 'ver extra_vocab'})`);
       const intro = introduced.get(t);
-      if (intro && intro > u.order) warn(where, `"${t}" usada antes de ser apresentada (unidade ${intro})`);
+      if (intro && intro > u.order) early.add(`${t} (U${intro})`);
     }
   };
 
@@ -158,6 +159,7 @@ for (const { f, u } of units) {
       }
     }
   }
+  if (early.size) warn(W, `usa palavras de unidades seguintes (todas A1): ${[...early].join(', ')}`);
 }
 
 console.log(`\nConteúdo: ${units.length} unidades, ${ids.size} ids, ${itemCount} exercícios, ${wordCount} palavras checadas contra a CEFR-J (A1: ${A1.size} entradas).`);

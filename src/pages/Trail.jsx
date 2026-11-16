@@ -98,10 +98,11 @@ export default function Trail() {
         <div className="card" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
           {allDone && <Anim name="trophy" size={90} />}
           <div>
-            <b style={{ display: 'block', fontSize: 17, marginBottom: 4 }}>{allDone ? 'Você concluiu todas as unidades disponíveis!' : 'Próximas unidades do A1'}</b>
+            <b style={{ display: 'block', fontSize: 17, marginBottom: 4 }}>{allDone ? 'Você concluiu o nível A1!' : UNITS.length >= PLANNED_A1_UNITS ? 'Depois do A1 vem o A2' : 'Próximas unidades do A1'}</b>
             <p className="muted" style={{ margin: 0, fontSize: 15, lineHeight: 1.55 }}>
-              {UNITS.length} de {PLANNED_A1_UNITS} unidades do A1 já estão no ar. As próximas (família, objetos e cores, rotina, comida e lugares) estão sendo preparadas e validadas.
-              {allDone && ' Enquanto isso, use a revisão e refaça lições para fixar.'}
+              {UNITS.length >= PLANNED_A1_UNITS
+                ? 'O nível A2 (Básico) está sendo preparado e validado. Enquanto isso, use a revisão e refaça lições para fixar.'
+                : `${UNITS.length} de ${PLANNED_A1_UNITS} unidades do A1 já estão no ar. As próximas estão sendo preparadas e validadas.`}
             </p>
           </div>
         </div>

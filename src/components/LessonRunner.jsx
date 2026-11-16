@@ -195,8 +195,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     if (idx + 1 >= queue.length) {
       const vals = [...firstTry.current.values()];
       const score = Math.round((vals.filter(Boolean).length / Math.max(1, vals.length)) * 100);
-      fx.play('complete');
       const res = await onFinish?.({ score, firstTry: firstTry.current });
+      fx.play(res?.anim === 'streak' ? 'streak' : 'complete');
       setResult({ score, ...(res || {}) });
       return;
     }
@@ -221,7 +221,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     const great = result.score >= 80;
     return (
       <div className="finish">
-        <Anim name="celebrate" size={200} />
+        <Anim name={result.anim || (result.score >= 80 ? 'celebrate' : 'keep-going')} size={200} />
         <h1 style={{ fontSize: 'clamp(32px,5vw,44px)', margin: '8px 0 0' }}>{result.title || (great ? 'Lição concluída!' : 'Concluída — e com aprendizado!')}</h1>
         <p className="muted" style={{ fontSize: 17, maxWidth: 520, lineHeight: 1.6 }}>
           {result.message || (great ? 'Você acertou quase tudo de primeira. Continue assim!' : 'As frases que você errou foram para a sua revisão. Praticar de novo ajuda a fixar.')}

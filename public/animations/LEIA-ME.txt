@@ -1,0 +1,9 @@
+Animações do Sacou English (LottieFiles - animações gratuitas, Lottie Simple License)
+Formato preferido: .lottie (mais leve e nítido). Também aceita .gif com o mesmo nome.
+  celebrate   -> fim de lição com 80% ou mais (confete)
+  keep-going  -> fim de lição abaixo de 80% (incentivo, joinha)
+  streak      -> primeira lição do dia (fogo / chama)
+  welcome     -> tela de boas-vindas (aceno / mão dando oi)
+  all-clear   -> revisão sem erros pendentes (check / tudo certo)
+  trophy      -> concluiu todas as unidades (troféu)
+Se algum faltar, o site funciona normalmente sem aquela animação.
