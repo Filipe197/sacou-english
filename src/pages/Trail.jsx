@@ -82,7 +82,7 @@ export default function Trail() {
                         {st === 'current' && <svg width="34" height="34" viewBox="0 0 24 24" fill="#0B0D1A" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>}
                         {st === 'locked' && <Icon name="lock" size={28} color="#6A6E88" stroke={2.2} />}
                       </span>
-                      {st === 'current' && <span className="start">Começar · +15 XP</span>}
+                      {st === 'current' && <span className="start">Começar · até +15 XP</span>}
                       <span className="nlabel">{l.title}</span>
                     </>
                   );

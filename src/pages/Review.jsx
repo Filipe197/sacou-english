@@ -26,7 +26,7 @@ export default function Review() {
         exitTo="/revisao"
         retryWrong={false}
         finishCta="Voltar"
-        onItemResult={(e, ok) => supabase.rpc(ok ? 'resolve_mistake' : 'record_mistake', ok ? { p_item_id: e.item.id } : { p_item_id: e.item.id, p_lesson_id: e.lessonId })}
+        onItemResult={(e, ok) => { supabase.rpc(ok ? 'resolve_mistake' : 'record_mistake', ok ? { p_item_id: e.item.id } : { p_item_id: e.item.id, p_lesson_id: e.lessonId }).then(({ error }) => error && console.error(error)); }}
         onFinish={async ({ score }) => {
           const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'review', p_score: score, p_xp: 5 });
           if (data) setProfile(data);

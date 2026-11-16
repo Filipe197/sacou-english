@@ -25,7 +25,7 @@ export default function LessonPage() {
     <LessonRunner
       entries={entries}
       title={`${lesson.unit.title} — ${lesson.title}`}
-      onItemResult={(e, ok) => { if (!ok) supabase.rpc('record_mistake', { p_item_id: e.item.id, p_lesson_id: e.lessonId }); }}
+      onItemResult={(e, ok) => { if (!ok) supabase.rpc('record_mistake', { p_item_id: e.item.id, p_lesson_id: e.lessonId }).then(({ error }) => error && console.error(error)); }}
       onFinish={async ({ score }) => {
         const xp = repeat ? 5 : 10 + (score >= 90 ? 5 : 0);
         const { data, error } = await supabase.rpc('complete_lesson', { p_lesson_id: lesson.id, p_score: score, p_xp: xp });
