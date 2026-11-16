@@ -5,6 +5,7 @@ import App from './App.jsx';
 import { AuthProvider } from './lib/auth.jsx';
 import './styles.css';
 import './notebook.css';
+import './ai.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

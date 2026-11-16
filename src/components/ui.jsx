@@ -1,4 +1,4 @@
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { lazy, Suspense, useEffect, useState } from 'react';
 
 const DotLottieReact = lazy(() => import('@lottiefiles/dotlottie-react').then(m => ({ default: m.DotLottieReact })));
@@ -48,6 +48,8 @@ const P = {
   expand: <><path d="M14 4h6v6" /><path d="M10 20H4v-6" /><path d="M20 4l-7 7" /><path d="M4 20l7-7" /></>,
   sparkle: <><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" /></>,
   flip: <><path d="M4 12a8 8 0 0 1 14-5" /><path d="M18 3v4h-4" /><path d="M20 12a8 8 0 0 1-14 5" /><path d="M6 21v-4h4" /></>,
+  grid: <><rect x="4" y="4" width="6.5" height="6.5" rx="1.5" /><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5" /><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5" /><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5" /></>,
+  chat: <><path d="M4 5h16v11H9l-5 4z" /><path d="M8 9h8" /><path d="M8 12h5" /></>,
   mic: <><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0" /><path d="M12 18v3" /></>,
 };
 export function Icon({ name, size = 20, color = 'currentColor', stroke = 2, label }) {
@@ -107,21 +109,56 @@ export function Anim({ name, size = 180, loop = false }) {
   return <div style={{ width: size, height: size }} aria-hidden="true"><Suspense fallback={null}><DotLottieReact src={src} autoplay={!reduce} loop={loop} /></Suspense></div>;
 }
 
-// Layout da área do aluno (menu lateral)
+// Layout da área do aluno: menu lateral no computador; no celular, barra de
+// abas no rodapé (5 itens, como nos apps) e uma gaveta "Mais" com o resto.
 export function Shell({ children, rail, mistakesCount = 0 }) {
   const { signOut, profile, updateProfile, isAdmin } = useAuth();
   const nav = useNavigate();
+  const loc = useLocation();
   const inst = useInstall();
   const [iosTip, setIosTip] = useState(false);
+  const [more, setMore] = useState(false);
   const items = [
     ['/aprender', 'home', 'Aprender'],
     ['/praticar', 'bolt', 'Praticar'],
+    ['/conversar', 'chat', 'Conversar'],
     ['/revisao', 'review', 'Revisar erros', mistakesCount],
     ['/caderno', 'notebook', 'Caderno'],
     ['/guia', 'book', 'Guia de gramática'],
     ['/progresso', 'user', 'Meu progresso'],
     ...(isAdmin ? [['/admin', 'chart', 'Administração']] : []),
   ];
+  const TABS = ['/aprender', '/praticar', '/conversar', '/caderno'];
+  const tabs = items.filter(i => TABS.includes(i[0]));
+  const rest = items.filter(i => !TABS.includes(i[0]));
+  const inRest = rest.some(([to]) => loc.pathname.startsWith(to));
+
+  useEffect(() => { setMore(false); }, [loc.pathname]);
+  useEffect(() => {
+    if (!more) return;
+    const onKey = (e) => { if (e.key === 'Escape') setMore(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [more]);
+
+  const extras = (
+    <>
+      {inst.canInstall && (
+        <button className="nav-a nav-install" onClick={inst.install}><Icon name="download" />Instalar app</button>
+      )}
+      {!inst.canInstall && inst.iosHint && (
+        <button className="nav-a nav-plain" onClick={() => setIosTip(v => !v)} aria-expanded={iosTip}><Icon name="download" />Instalar no iPhone</button>
+      )}
+      {iosTip && <p className="note" style={{ margin: 0, fontSize: 13 }}>No Safari, toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>}
+      <button className="nav-a nav-plain" onClick={() => updateProfile({ sound_on: !profile?.sound_on })} aria-pressed={!!profile?.sound_on}>
+        <Icon name={profile?.sound_on ? 'sound' : 'mute'} />{profile?.sound_on ? 'Som ligado' : 'Som desligado'}
+      </button>
+      <button className="nav-a nav-plain" onClick={async () => { await signOut(); nav('/'); }}>
+        <Icon name="logout" />Sair
+      </button>
+    </>
+  );
+
   return (
     <div className="shell">
       <nav className="side" aria-label="Menu do aluno">
@@ -131,30 +168,37 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
             <Icon name={ic} />{label}{badge > 0 && <span className="badge" aria-label={`${badge} pendentes`}>{badge}</span>}
           </NavLink>
         ))}
-        <div className="side-foot">
-          {inst.canInstall && (
-            <button className="nav-a" style={{ background: 'var(--lime)', border: 0, cursor: 'pointer', color: 'var(--ink)' }} onClick={inst.install}>
-              <Icon name="download" />Instalar app
-            </button>
-          )}
-          {!inst.canInstall && inst.iosHint && (
-            <button className="nav-a" style={{ background: 'none', border: 0, cursor: 'pointer' }} onClick={() => setIosTip(v => !v)} aria-expanded={iosTip}>
-              <Icon name="download" />Instalar no iPhone
-            </button>
-          )}
-          {iosTip && <p className="note" style={{ margin: 0, fontSize: 13 }}>No Safari, toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>}
-          <button className="nav-a" style={{ background: 'none', border: 0, cursor: 'pointer' }}
-            onClick={() => updateProfile({ sound_on: !profile?.sound_on })} aria-pressed={!!profile?.sound_on}>
-            <Icon name={profile?.sound_on ? 'sound' : 'mute'} />{profile?.sound_on ? 'Som ligado' : 'Som desligado'}
-          </button>
-          <button className="nav-a" style={{ background: 'none', border: 0, cursor: 'pointer' }}
-            onClick={async () => { await signOut(); nav('/'); }}>
-            <Icon name="logout" />Sair
-          </button>
-        </div>
+        <div className="side-foot">{extras}</div>
       </nav>
+
       <main className="content">{children}</main>
       {rail && <aside className="rail">{rail}</aside>}
+
+      {/* celular */}
+      <nav className="tabbar" aria-label="Menu principal">
+        {tabs.map(([to, ic, label]) => (
+          <NavLink key={to} to={to} className={({ isActive }) => 'tab' + (isActive && !more ? ' active' : '')}>
+            <span className="tab-ic"><Icon name={ic} size={22} /></span><span className="tab-l">{label}</span>
+          </NavLink>
+        ))}
+        <button type="button" className={'tab' + (more || inRest ? ' active' : '')} aria-expanded={more} aria-controls="more-sheet" onClick={() => setMore(v => !v)}>
+          <span className="tab-ic"><Icon name="grid" size={22} />{mistakesCount > 0 && <span className="tab-dot" aria-label={`${mistakesCount} erros para revisar`}>{mistakesCount > 9 ? '9+' : mistakesCount}</span>}</span>
+          <span className="tab-l">Mais</span>
+        </button>
+      </nav>
+      {more && <div className="sheet-bg" onClick={() => setMore(false)} aria-hidden="true" />}
+      <div id="more-sheet" className={'sheet' + (more ? ' open' : '')} role="dialog" aria-label="Mais opções" aria-hidden={!more} inert={more ? undefined : ''}>
+        <div className="sheet-grip" aria-hidden="true" />
+        <div className="sheet-grid">
+          {rest.map(([to, ic, label, badge]) => (
+            <NavLink key={to} to={to} className={({ isActive }) => 'sheet-a' + (isActive ? ' active' : '')}>
+              <span className="sheet-ic"><Icon name={ic} size={24} />{badge > 0 && <span className="tab-dot">{badge > 9 ? '9+' : badge}</span>}</span>
+              {label}
+            </NavLink>
+          ))}
+        </div>
+        <div className="sheet-list">{extras}</div>
+      </div>
     </div>
   );
 }

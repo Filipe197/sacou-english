@@ -7,7 +7,10 @@ import { supabase } from '../lib/supabase.js';
 import Hinted from './Hinted.jsx';
 import { getNewWords } from '../lib/hints.js';
 import { LessonCtx, SaveItemButton } from './LessonNotes.jsx';
+import { PronWords, WordCoach, useListen, getSR } from './Pronounce.jsx';
+import { alignSpeech } from '../lib/pronounce.js';
 const NotebookDrawer = lazy(() => import('./NotebookDrawer.jsx'));
+const Tutor = lazy(() => import('./Tutor.jsx'));
 
 const PRAISE = ['Mandou bem!', 'Isso mesmo!', 'Perfeito!', 'Sacou!', 'Muito bom!'];
 const norm = (s) => String(s).toLowerCase().replace(/[’]/g, "'").replace(/[.,!?;:"]/g, '').replace(/\s+/g, ' ').trim();
@@ -34,13 +37,6 @@ export function matchTyped(typed, answers) {
   if (cands.some(c => c.length > 6 && lev(t, c) <= 1)) return 'typo';
   return null;
 }
-// Fala: quantas palavras do alvo apareceram no que foi reconhecido
-function speechScore(heard, target) {
-  const h = new Set(normFull(heard).split(' '));
-  const t = normFull(target).split(' ');
-  return t.filter(w => h.has(w)).length / t.length;
-}
-
 // ---------- tipos de exercício ----------
 function Options({ options, value, onPick, locked, answer, english }) {
   return (
@@ -206,48 +202,49 @@ function Dialogue({ item, value, setValue, locked, newKeys }) {
 }
 
 function Speak({ item, locked, onDone, newKeys }) {
-  const SR = typeof window !== 'undefined' && (window.SpeechRecognition || window.webkitSpeechRecognition);
-  const [listening, setListening] = useState(false);
+  const { listening, listen } = useListen();
   const [heard, setHeard] = useState('');
   const [msg, setMsg] = useState('');
+  const [words, setWords] = useState(null); // resultado palavra por palavra
+  const [picked, setPicked] = useState(null);
   const tries = useRef(0);
-  const rec = useRef(null);
-  useEffect(() => () => rec.current?.abort?.(), []);
   function start() {
-    if (!SR || locked) return;
-    setMsg(''); setHeard('');
-    const r = new SR(); rec.current = r;
-    r.lang = 'en-US'; r.interimResults = false; r.maxAlternatives = 3;
-    r.onresult = (e) => {
-      const alts = [...e.results[0]].map(a => a.transcript);
-      setHeard(alts[0]);
-      const best = Math.max(...alts.map(a => speechScore(a, item.en)));
-      tries.current += 1;
-      if (best >= 0.75) onDone(true);
-      else if (tries.current >= 3) onDone(false, alts[0]);
-      else setMsg('Quase! Ouça o áudio de novo e tente mais uma vez.');
-    };
-    r.onerror = (e) => setMsg(e.error === 'not-allowed' ? 'Permita o uso do microfone no navegador para praticar a fala.' : 'Não consegui ouvir. Toque no microfone e fale de novo.');
-    r.onend = () => setListening(false);
-    r.start(); setListening(true);
+    if (!getSR() || locked) return;
+    setMsg(''); setHeard(''); setPicked(null);
+    listen({
+      onResult: (alts) => {
+        const best = alignSpeech(item.en, alts);
+        setHeard(best.heard); setWords(best.words);
+        tries.current += 1;
+        if (best.score >= 0.75) onDone(true, best.heard);
+        else if (tries.current >= 3) onDone(false, best.heard);
+        else setMsg('Quase! As palavras em laranja não saíram claras. Toque nelas para treinar e tente de novo.');
+      },
+      onError: setMsg,
+    });
   }
   return (
     <>
       <p className="q-label">Fale em inglês</p>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
         {canSpeak() && <button type="button" className="audio-btn" aria-label="Ouvir como se fala" onClick={() => speak(item.en)}><Icon name="sound" size={26} color="#fff" stroke={2.2} /></button>}
-        <h1 className="q" lang="en"><Hinted text={item.en} newKeys={newKeys} /></h1>
+        {canSpeak() && <button type="button" className="audio-btn slow" aria-label="Ouvir devagar" onClick={() => speak(item.en, { slow: true })}><Icon name="turtle" size={22} color="var(--violet)" /></button>}
+        {!words && <h1 className="q" lang="en"><Hinted text={item.en} newKeys={newKeys} /></h1>}
       </div>
+      {words && <PronWords words={words} picked={picked} onPick={(i) => setPicked(p => p === i ? null : i)} />}
+      {picked != null && words?.[picked] && <WordCoach word={words[picked].w} onClose={() => setPicked(null)} />}
       <p className="muted" style={{ margin: '10px 0 0', fontSize: 16 }}>{item.pt}</p>
-      {SR ? (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, marginTop: 32 }}>
-          <button type="button" className={'mic' + (listening ? ' on' : '')} disabled={locked || listening} onClick={start} aria-label="Falar">
-            <Icon name="mic" size={40} color="#fff" stroke={2.2} />
-          </button>
-          <span className="muted" style={{ fontSize: 15 }}>{listening ? 'Ouvindo... fale agora' : 'Toque no microfone e leia a frase em voz alta'}</span>
-          {heard && <span style={{ fontSize: 15 }}>Ouvi: <b lang="en">“{heard}”</b></span>}
-          {msg && <span className="alert" role="status">{msg}</span>}
-        </div>
+      {getSR() ? (
+        !locked && (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, marginTop: 28 }}>
+            <button type="button" className={'mic' + (listening ? ' on' : '')} disabled={listening} onClick={start} aria-label="Falar">
+              <Icon name="mic" size={40} color="#fff" stroke={2.2} />
+            </button>
+            <span className="muted" style={{ fontSize: 15 }}>{listening ? 'Ouvindo... fale agora' : words ? 'Toque no microfone para tentar de novo' : 'Toque no microfone e leia a frase em voz alta'}</span>
+            {heard && <span style={{ fontSize: 15 }}>Ouvi: <b lang="en">“{heard}”</b></span>}
+            {msg && <span className="alert" role="status">{msg}</span>}
+          </div>
+        )
       ) : <div className="note" style={{ marginTop: 24 }}>Seu navegador não reconhece fala. No computador, use Chrome ou Edge para praticar a pronúncia.</div>}
       {!locked && (
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 20 }}>
@@ -417,6 +414,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [report, setReport] = useState(false);
   const [result, setResult] = useState(null);
   const [notesOpen, setNotesOpen] = useState(false);
+  const [tutor, setTutor] = useState(false);
+  const [heard, setHeard] = useState('');
   const firstTry = useRef(new Map()); // itemId -> correct na 1ª tentativa
   const ctaRef = useRef(null);
 
@@ -461,13 +460,13 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       setResult({ score, ...(res || {}) });
       return;
     }
-    setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0); setNote(null);
+    setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0); setNote(null); setTutor(false); setHeard('');
   };
 
   // teclado: Enter verifica/continua, 1-4 escolhem opções
   useEffect(() => {
     const onKey = (e) => {
-      if (result || notesOpen || e.target.tagName === 'TEXTAREA' || e.target.closest?.('[contenteditable="true"],.nb-drawer,.nb-modal')) return;
+      if (result || notesOpen || e.target.tagName === 'TEXTAREA' || e.target.closest?.('[contenteditable="true"],.nb-drawer,.nb-modal,.tutor')) return;
       if (e.key === 'Enter') { e.preventDefault(); locked ? next() : check(); }
       else if (!locked && /^[1-5]$/.test(e.key) && item?.options && item.type !== 'build') {
         const btns = document.querySelectorAll('.options .option');
@@ -510,6 +509,9 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const display = item.display || (item.type === 'choice' ? item.en.replace('___', item.answer) : item.type === 'dictation' || item.type === 'speak' ? item.en : item.answer);
 
   const noteCtx = { lessonId: cur.lessonId, unitId: cur.unit?.id || null, itemId: item.id };
+  const level = cur.unit?.level || (/^a2/i.test(cur.lessonId || item.id || '') ? 'A2' : 'A1');
+  const answerText = item.type === 'build' ? (value || []).map(t => t.w).join(' ') : item.type === 'speak' ? heard : typeof value === 'string' ? value : '';
+  const canTutor = status === 'wrong' && !['match', 'story'].includes(item.type);
   return (
     <LessonCtx.Provider value={noteCtx}>
     <div className="lesson">
@@ -558,6 +560,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         {item.type === 'quiz' && <Quiz item={item} story={cur.story} value={value} setValue={setValue} locked={locked} />}
         {item.type === 'speak' && <Speak item={item} locked={locked} newKeys={newKeys} onDone={(ok, heard, skipped) => {
           setNote(skipped ? 'Sem problema! Quando puder, pratique a fala em voz alta — é o que mais destrava a conversa.' : heard ? `Ouvi: “${heard}”.` : null);
+          setHeard(heard || '');
           settle(ok);
         }} />}
 
@@ -581,6 +584,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
             )}
           </div>
         )}
+        {tutor && <Suspense fallback={null}><Tutor item={item} answer={answerText} correct={display} level={level} ctx={noteCtx} onClose={() => setTutor(false)} /></Suspense>}
         {report && <ReportBox itemId={item.id} onClose={() => setReport(false)} />}
       </main>
 
@@ -602,6 +606,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
                 </p>
                 {!ok && retryWrong && item.type !== 'match' && item.type !== 'speak' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela vai aparecer de novo no fim da lição e também na sua revisão.</p>}
                 <span style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+                  {canTutor && <button type="button" className="tutor-btn" onClick={() => setTutor(true)} disabled={tutor}><Icon name="sparkle" size={16} />{tutor ? 'Professor abaixo' : 'Por que errei? Pergunte ao professor'}</button>}
                   <SaveItemButton item={item} />
                   <button type="button" className="link-btn" style={{ fontSize: 13, color: 'var(--text3)' }} onClick={() => setReport(true)}><Icon name="flag" size={14} /> Reportar erro neste exercício</button>
                 </span>

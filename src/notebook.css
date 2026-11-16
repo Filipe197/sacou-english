@@ -183,3 +183,5 @@ select.chip{appearance:auto;padding-right:6px}
   .nb-drawer{top:auto;width:100vw;height:82vh;border-radius:22px 22px 0 0;animation:nbsheet .25s cubic-bezier(.2,.8,.2,1)}
   .fc-card{min-height:250px}
 }
+
+@media (max-width:860px){.nb-toast{bottom:calc(84px + env(safe-area-inset-bottom))}}

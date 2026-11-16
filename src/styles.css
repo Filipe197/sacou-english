@@ -116,16 +116,50 @@ button{font-family:inherit}
 .rail{flex:1 1 300px;max-width:380px;padding:32px 24px;display:flex;flex-direction:column;gap:18px}
 @media (max-width:860px){
   /* celular: menu vira uma barra fixa no rodapé, como em apps */
-  .shell{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
-  .side{position:fixed;left:0;right:0;bottom:0;z-index:30;max-width:none;flex-direction:row;justify-content:space-around;gap:2px;
-    padding:6px 4px calc(6px + env(safe-area-inset-bottom));border-right:0;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(11,13,26,.06)}
-  .side > div:first-child,.side-foot{display:none!important}
-  .side .nav-a{flex:1;flex-direction:column;justify-content:center;gap:2px;padding:6px 2px;min-height:54px;font-size:11px;text-align:center;line-height:1.15;position:relative}
-  .side .nav-a.active{background:var(--violet-l);color:var(--violet-dd)}
-  .side .badge{position:absolute;top:2px;right:calc(50% - 22px);margin:0;font-size:10px;padding:1px 6px}
+  .shell{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .side{display:none}
   .content{padding:20px 16px 32px}
   .rail{max-width:none;padding:16px 16px 0;order:-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 }
+.nav-plain,.nav-install{background:none;border:0;cursor:pointer;font:inherit;text-align:left;width:100%}
+.side .nav-install,.sheet-list .nav-install{background:var(--lime);color:var(--ink)}
+
+/* celular: barra de abas + gaveta "Mais" */
+.tabbar,.sheet,.sheet-bg{display:none}
+@media (max-width:860px){
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:40;
+    padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);
+    border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(11,13,26,.06)}
+  .tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:56px;padding:4px 2px;border:0;background:none;
+    color:var(--text3);text-decoration:none;font:inherit;font-size:12px;font-weight:600;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .tab-ic{position:relative;display:flex;align-items:center;justify-content:center;width:52px;height:30px;border-radius:99px;transition:background .2s,color .2s}
+  .tab-l{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tab.active{color:var(--violet-dd);font-weight:800}
+  .tab.active .tab-ic{background:var(--violet-l);color:var(--violet)}
+  .tab:active .tab-ic{transform:scale(.92)}
+  .tab-dot{position:absolute;top:-4px;right:4px;min-width:18px;height:18px;padding:0 5px;border-radius:99px;background:var(--bad);color:#fff;font-size:11px;font-weight:800;line-height:18px;text-align:center;border:2px solid #fff;box-sizing:content-box}
+  .sheet-bg{display:block;position:fixed;inset:0;z-index:38;background:rgba(11,13,26,.38);animation:fade-in .2s ease}
+  .sheet{display:block;position:fixed;left:0;right:0;bottom:calc(68px + env(safe-area-inset-bottom));z-index:39;max-height:calc(100dvh - 140px);overflow-y:auto;
+    background:#fff;border-radius:26px 26px 0 0;padding:8px 16px 16px;box-shadow:0 -16px 40px rgba(11,13,26,.18);
+    transform:translateY(calc(100% + 80px));visibility:hidden;transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility 0s .28s}
+  .sheet.open{transform:none;visibility:visible;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+  .sheet-grip{width:44px;height:5px;border-radius:99px;background:var(--line2);margin:4px auto 14px}
+  .sheet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .sheet-a{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 6px;border-radius:18px;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:700;font-size:13px;text-align:center;line-height:1.2}
+  .sheet-a.active{background:var(--violet-l);color:var(--violet-dd)}
+  .sheet-ic{position:relative;width:46px;height:46px;border-radius:14px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--violet)}
+  .sheet-list{display:flex;flex-direction:column;gap:2px;margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}
+  .sheet-list .nav-a{display:flex;align-items:center;gap:12px;padding:12px 10px;border-radius:14px;color:#3A3E5A;font-weight:600;font-size:15px;min-height:48px}
+}
+@media (max-width:640px){
+  /* painel lateral vira um carrossel de cartões para a trilha aparecer logo */
+  .rail{display:flex;flex-direction:row;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding:12px 16px 4px;scrollbar-width:none;overscroll-behavior-x:contain}
+  .rail::-webkit-scrollbar{display:none}
+  .rail > *{flex:0 0 86%;scroll-snap-align:center;min-width:0}
+  .rail > .card{padding:16px}
+}
+@keyframes fade-in{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.sheet,.sheet.open{transition:none}.sheet-bg{animation:none}}
 
 /* trilha */
 .unit-banner{background:var(--violet);color:#fff;border-radius:24px;padding:24px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}

@@ -1,4 +1,31 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig({ plugins: [react()] });
+// No PC (npm run dev), serve as funções de api/ do mesmo jeito que a Vercel faz.
+function apiDev() {
+  return {
+    name: 'sacou-api-dev',
+    configureServer(server) {
+      server.middlewares.use('/api', async (req, res, next) => {
+        const name = (req.url || '').split('?')[0].replace(/^\/+/, '');
+        if (!/^[a-z-]+$/.test(name)) return next();
+        try {
+          const mod = await server.ssrLoadModule(`/api/${name}.js`);
+          let raw = '';
+          for await (const chunk of req) raw += chunk;
+          req.body = raw ? JSON.parse(raw) : {};
+          await mod.default(req, res);
+        } catch (e) {
+          server.config.logger.error(String(e?.stack || e));
+          res.statusCode = 500; res.end(JSON.stringify({ error: 'Erro na função local.' }));
+        }
+      });
+    },
+  };
+}
+
+export default defineConfig(({ mode }) => {
+  // variáveis sem VITE_ (como ANTHROPIC_API_KEY) ficam só no servidor local
+  Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
+  return { plugins: [react(), apiDev()] };
+});
