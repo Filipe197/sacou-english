@@ -151,7 +151,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     ['/aprender', 'home', 'Aprender'],
     ['/praticar', 'bolt', 'Praticar'],
     ['/conversar', 'chat', 'Conversar'],
-    ['/jogos', 'game', 'Jogos e histórias'],
+    ['/jogos', 'game', 'Jogos e histórias', 0, 'Jogos'],
     ['/revisao', 'review', 'Revisar erros', mistakesCount],
     ['/fone', 'headphones', 'Modo fone'],
     ['/caderno', 'notebook', 'Caderno'],
@@ -160,10 +160,12 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     ['/turmas', 'users', 'Turmas'],
     ...(isAdmin ? [['/admin', 'chart', 'Administração']] : []),
   ];
-  const TABS = ['/aprender', '/praticar', '/conversar', '/caderno'];
-  const tabs = items.filter(i => TABS.includes(i[0]));
-  const rest = items.filter(i => !TABS.includes(i[0]));
+  const TABS = ['/aprender', '/praticar', '/jogos', '/conversar'];
+  const IN_PRACTICE = ['/revisao', '/fone']; // no celular ficam dentro de Praticar
+  const tabs = TABS.map(t => items.find(i => i[0] === t)).filter(Boolean);
+  const rest = items.filter(i => !TABS.includes(i[0]) && !IN_PRACTICE.includes(i[0]));
   const inRest = rest.some(([to]) => loc.pathname.startsWith(to));
+  const inPractice = IN_PRACTICE.some(t => loc.pathname.startsWith(t));
 
   useEffect(() => { setMore(false); }, [loc.pathname]);
   useEffect(() => {
@@ -208,13 +210,13 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
 
       {/* celular */}
       <nav className="tabbar" aria-label="Menu principal">
-        {tabs.map(([to, ic, label]) => (
-          <NavLink key={to} to={to} className={({ isActive }) => 'tab' + (isActive && !more ? ' active' : '')}>
-            <span className="tab-ic"><Icon name={ic} size={22} /></span><span className="tab-l">{label}</span>
+        {tabs.map(([to, ic, label, , short]) => (
+          <NavLink key={to} to={to} className={({ isActive }) => 'tab' + ((isActive || (to === '/praticar' && inPractice)) && !more ? ' active' : '')}>
+            <span className="tab-ic"><Icon name={ic} size={22} />{to === '/praticar' && mistakesCount > 0 && <span className="tab-dot" aria-label={`${mistakesCount} erros para revisar`}>{mistakesCount > 9 ? '9+' : mistakesCount}</span>}</span><span className="tab-l">{short || label}</span>
           </NavLink>
         ))}
         <button type="button" className={'tab' + (more || inRest ? ' active' : '')} aria-expanded={more} aria-controls="more-sheet" onClick={() => setMore(v => !v)}>
-          <span className="tab-ic"><Icon name="grid" size={22} />{mistakesCount > 0 && <span className="tab-dot" aria-label={`${mistakesCount} erros para revisar`}>{mistakesCount > 9 ? '9+' : mistakesCount}</span>}</span>
+          <span className="tab-ic"><Icon name="grid" size={22} /></span>
           <span className="tab-l">Mais</span>
         </button>
       </nav>

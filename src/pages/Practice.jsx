@@ -74,6 +74,23 @@ export default function Practice() {
             <button className="btn btn-lime btn-lg" onClick={() => setStarted(n => n + 1)}><Icon name="review" size={18} />Começar treino</button>
           </div>
         )}
+
+        <h2 style={{ fontSize: 20, margin: '32px 0 12px' }}>Mais formas de praticar</h2>
+        <div className="pr-grid">
+          <Link to="/revisao" className="pr-card">
+            <span className="pr-ic" style={{ background: 'var(--bad-bg)', color: 'var(--bad)' }}><Icon name="review" size={24} /></span>
+            <span><b>Revisar erros</b><span className="muted">{prog.mistakes.length ? `${prog.mistakes.length} ${prog.mistakes.length === 1 ? 'exercício' : 'exercícios'} para refazer, e treino infinito com IA.` : 'Nenhum erro pendente. Mandou bem!'}</span></span>
+            {prog.mistakes.length > 0 && <span className="pr-badge">{prog.mistakes.length > 9 ? '9+' : prog.mistakes.length}</span>}
+          </Link>
+          <Link to="/fone" className="pr-card">
+            <span className="pr-ic" style={{ background: '#E0F2FE', color: '#0369A1' }}><Icon name="headphones" size={24} /></span>
+            <span><b>Modo fone</b><span className="muted">Ouça e repita frases sem olhar a tela. Ótimo no ônibus ou caminhando.</span></span>
+          </Link>
+          <Link to="/jogos" className="pr-card">
+            <span className="pr-ic" style={{ background: 'var(--violet-l)', color: 'var(--violet)' }}><Icon name="game" size={24} /></span>
+            <span><b>Jogos e podcast</b><span className="muted">Palavra Relâmpago, histórias da Ana, detetive e o podcast.</span></span>
+          </Link>
+        </div>
       </div>
     </Shell>
   );

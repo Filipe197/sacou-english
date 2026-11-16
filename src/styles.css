@@ -160,6 +160,8 @@ button{font-family:inherit}
   /* missões no carrossel: só o resumo (a lista completa deixava o topo alto demais) */
   .rail .missions .ms-list,.rail .missions .ms-perfect{display:none}
   .rail .missions .ms-mini{display:flex}
+  /* no celular: só o aviso mais importante e sem o cartão de nível (está em Meu progresso) */
+  .rail .rail-opt,.rail .rail-alert ~ .rail-alert{display:none}
   .rail > .card:has(.btn-block) p{display:none}
   .rail > .card:has(.btn-block) b{margin-bottom:12px!important}
 }
@@ -377,3 +379,11 @@ button{font-family:inherit}
 .ach-toast{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;border-color:#FED7AA;background:#FFF7ED}
 .ach-toast .ach-ic{width:46px;height:46px;font-size:24px}
 .ach-toast span:last-child{display:flex;flex-direction:column;gap:2px;font-size:14px}
+/* central de prática */
+.pr-grid{display:flex;flex-direction:column;gap:10px}
+.pr-card{position:relative;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.pr-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(11,13,26,.08)}
+.pr-card>span:nth-child(2){display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.pr-card b{font-size:17px}.pr-card .muted{font-size:14px;line-height:1.45}
+.pr-ic{flex:none;width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+.pr-badge{flex:none;min-width:26px;height:26px;padding:0 8px;border-radius:99px;background:var(--bad);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}

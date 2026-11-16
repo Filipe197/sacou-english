@@ -21,12 +21,12 @@ export function Rail({ prog }) {
         <div className="card" style={{ flex: 1, padding: 16, display: 'flex', alignItems: 'center', gap: 10 }}><Fire size={26} /><div><b style={{ display: 'block', fontSize: 20, fontFamily: 'var(--head)' }}>{streak}</b><span style={{ fontSize: 12, color: 'var(--text3)' }}>{streak === 1 ? 'dia seguido' : 'dias seguidos'}</span>{profile?.streak_freezes > 0 && <span className="shield-pill" title="Escudos: protegem a sequência num dia sem estudo">🛡️ {profile.streak_freezes} {profile.streak_freezes === 1 ? 'escudo' : 'escudos'}</span>}</div></div>
         <div className="card" style={{ flex: 1, padding: 16, display: 'flex', alignItems: 'center', gap: 10 }}><Bolt size={26} /><div><b style={{ display: 'block', fontSize: 20, fontFamily: 'var(--head)' }}>{(profile?.xp_total || 0).toLocaleString('pt-BR')}</b><span style={{ fontSize: 12, color: 'var(--text3)' }}>XP total</span></div></div>
       </div>
-      <NewAchievement prog={prog} />
       {profile?.freeze_used_on === todayBR() ? (
-        <div className="card shield-card"><b>🛡️ Seu escudo salvou a sequência!</b><span>Você ficou um dia sem estudar, mas seus {streak} dias seguidos continuam.</span></div>
+        <div className="card shield-card rail-alert"><b>🛡️ Seu escudo salvou a sequência!</b><span>Você ficou um dia sem estudar, mas seus {streak} dias seguidos continuam.</span></div>
       ) : shieldCovering(profile) > 0 && (
-        <div className="card shield-card"><b>🛡️ Sua sequência está protegida</b><span>Um escudo cobre o dia que você perdeu. Faça uma lição hoje para manter os {streak} dias.</span></div>
+        <div className="card shield-card rail-alert"><b>🛡️ Sua sequência está protegida</b><span>Um escudo cobre o dia que você perdeu. Faça uma lição hoje para manter os {streak} dias.</span></div>
       )}
+      <NewAchievement prog={prog} />
       <div className="card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 12 }}><b>Meta de hoje</b><span style={{ fontSize: 14, color: 'var(--text3)' }}>{Math.min(todayXp, goal)} / {goal} XP</span></div>
         <div className="track" style={{ height: 14 }}><div className="fill" style={{ width: Math.min(100, (todayXp / goal) * 100) + '%' }} /></div>
@@ -34,7 +34,7 @@ export function Rail({ prog }) {
           {todayXp >= goal ? 'Meta batida! Sua sequência de hoje está garantida.' : todayXp > 0 ? `Faltam ${goal - todayXp} XP para bater a meta. Cada lição nova vale 10 a 15 XP.` : 'Faça uma lição hoje para manter sua sequência de dias.'}
         </p>
       </div>
-      <div className="card">
+      <div className="card rail-opt">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 12 }}><b>Seu nível</b><span style={{ fontSize: 14, fontWeight: 700, color: 'var(--violet)' }}>{level} · {pct}%</span></div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,minmax(0,1fr))', gap: 6 }}>
           {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map((l, i) => <span key={l} style={{ height: 10, borderRadius: 99, background: i < li ? 'var(--violet)' : i === li ? `linear-gradient(90deg,var(--violet) ${pct}%,var(--track) ${pct}%)` : 'var(--track)' }} />)}
@@ -42,18 +42,18 @@ export function Rail({ prog }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,minmax(0,1fr))', gap: 6, marginTop: 6, fontSize: 12, fontWeight: 600, color: 'var(--text3)', textAlign: 'center' }}>{['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(l => <span key={l}>{l}</span>)}</div>
       </div>
       <Missions compact />
-      {dueLessonIds(prog.scores).length > 0 && (
-        <div className="card" style={{ borderColor: 'var(--violet-ring)' }}>
-          <b style={{ display: 'block', marginBottom: 6 }}>Hora de relembrar</b>
-          <p className="muted" style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5 }}>{dueLessonIds(prog.scores).length} {dueLessonIds(prog.scores).length === 1 ? 'lição chegou' : 'lições chegaram'} no dia certo de revisar. Um treino rápido fixa na memória.</p>
-          <Link className="btn btn-violet btn-block" to="/praticar">Fazer o treino</Link>
-        </div>
-      )}
       {prog.mistakes.length > 0 && (
-        <div className="card" style={{ background: 'var(--ink)', borderColor: 'var(--ink)', color: '#fff' }}>
+        <div className="card rail-alert" style={{ background: 'var(--ink)', borderColor: 'var(--ink)', color: '#fff' }}>
           <b style={{ display: 'block', marginBottom: 6 }}>{prog.mistakes.length} {prog.mistakes.length === 1 ? 'erro' : 'erros'} para revisar</b>
           <p style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5, color: 'var(--on-dark)' }}>Revisar o que você errou ajuda a fixar mais rápido. Leva uns 3 minutos.</p>
           <Link className="btn btn-lime btn-block" to="/revisao">Revisar agora</Link>
+        </div>
+      )}
+      {dueLessonIds(prog.scores).length > 0 && (
+        <div className="card rail-alert" style={{ borderColor: 'var(--violet-ring)' }}>
+          <b style={{ display: 'block', marginBottom: 6 }}>Hora de relembrar</b>
+          <p className="muted" style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5 }}>{dueLessonIds(prog.scores).length} {dueLessonIds(prog.scores).length === 1 ? 'lição chegou' : 'lições chegaram'} no dia certo de revisar. Um treino rápido fixa na memória.</p>
+          <Link className="btn btn-violet btn-block" to="/praticar">Fazer o treino</Link>
         </div>
       )}
     </>

@@ -59,7 +59,7 @@ export function NewAchievement({ prog }) {
   if (!fresh.length) return null;
   const a = fresh[fresh.length - 1];
   return (
-    <Link to="/progresso#conquistas" className="card ach-toast">
+    <Link to="/progresso#conquistas" className="card ach-toast rail-alert">
       <span className="ach-ic" aria-hidden="true">{a.icon}</span>
       <span><b>Nova conquista: {a.title}</b><span className="muted">{fresh.length > 1 ? `E mais ${fresh.length - 1}. ` : ''}Toque para ver.</span></span>
     </Link>
