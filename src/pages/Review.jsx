@@ -21,6 +21,7 @@ export default function Review() {
   if (started && entries.length) {
     return (
       <LessonRunner
+        introduceWords={false}
         entries={entries}
         title="Revisão dos seus erros"
         exitTo="/revisao"

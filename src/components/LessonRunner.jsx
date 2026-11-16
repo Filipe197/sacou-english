@@ -4,6 +4,8 @@ import { Icon, Anim, Bolt } from './ui.jsx';
 import { fx, speak, canSpeak } from '../lib/fx.js';
 import { shuffle } from '../lib/content.js';
 import { supabase } from '../lib/supabase.js';
+import Hinted from './Hinted.jsx';
+import { getNewWords } from '../lib/hints.js';
 
 const PRAISE = ['Mandou bem!', 'Isso mesmo!', 'Perfeito!', 'Sacou!', 'Muito bom!'];
 const norm = (s) => String(s).toLowerCase().replace(/[’]/g, "'").replace(/[.,!?;:"]/g, '').replace(/\s+/g, ' ').trim();
@@ -56,7 +58,7 @@ function Options({ options, value, onPick, locked, answer, english }) {
   );
 }
 
-function Choice({ item, value, setValue, locked }) {
+function Choice({ item, value, setValue, locked, newKeys }) {
   const opts = useMemo(() => shuffle(item.options), [item.id]);
   const [before, after] = item.en.split('___');
   return (
@@ -64,14 +66,14 @@ function Choice({ item, value, setValue, locked }) {
       <p className="q-label">{item.prompt || 'Complete a frase'}</p>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
         {canSpeak() && <button type="button" className="audio-btn" aria-label="Ouvir a frase" onClick={() => speak(item.en.replace('___', value || item.answer))}><Icon name="sound" size={26} color="#fff" stroke={2.2} /></button>}
-        <h1 className="q" lang="en">{before}<span className="blank">{value || ' '}</span>{after}</h1>
+        <h1 className="q" lang="en"><Hinted text={before} newKeys={newKeys} /><span className="blank">{value || ' '}</span><Hinted text={after} newKeys={newKeys} /></h1>
       </div>
       <Options options={opts} value={value} onPick={setValue} locked={locked} answer={item.answer} english />
     </>
   );
 }
 
-function Meaning({ item, value, setValue, locked, listen }) {
+function Meaning({ item, value, setValue, locked, listen, newKeys }) {
   const opts = useMemo(() => shuffle(item.options), [item.id]);
   useEffect(() => { const t = setTimeout(() => speak(item.en), 350); return () => clearTimeout(t); }, [item.id]);
   return (
@@ -80,21 +82,21 @@ function Meaning({ item, value, setValue, locked, listen }) {
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
         {canSpeak() && <button type="button" className={'audio-btn' + (listen ? ' big' : '')} aria-label="Ouvir de novo" onClick={() => speak(item.en)}><Icon name="sound" size={listen ? 40 : 26} color="#fff" stroke={2.2} /></button>}
         {listen && canSpeak() && <button type="button" className="audio-btn slow" aria-label="Ouvir devagar" onClick={() => speak(item.en, { slow: true })}><Icon name="turtle" size={22} color="var(--violet)" /></button>}
-        {(!listen || locked || !canSpeak()) && <h1 className="q" lang="en">{item.en}</h1>}
+        {(!listen || locked || !canSpeak()) && <h1 className="q" lang="en">{listen ? item.en : <Hinted text={item.en} newKeys={newKeys} />}</h1>}
       </div>
       <Options options={opts} value={value} onPick={setValue} locked={locked} answer={item.answer} />
     </>
   );
 }
 
-function Build({ item, value, setValue, locked }) {
+function Build({ item, value, setValue, locked, newKeys }) {
   const tiles = useMemo(() => shuffle([...item.answer.split(' '), ...(item.extra || [])].map((w, i) => ({ w, i }))), [item.id]);
   const chosen = value || [];
   const used = new Set(chosen.map(t => t.i));
   return (
     <>
       <p className="q-label">Monte a frase em inglês</p>
-      <h1 className="q">{item.pt}</h1>
+      <h1 className="q"><Hinted text={item.pt} lang="pt" newKeys={newKeys} /></h1>
       <div className="build-line" aria-label="Sua resposta" aria-live="polite">
         {chosen.map(t => (
           <button key={t.i} type="button" className="tile" disabled={locked} lang="en"
@@ -158,7 +160,7 @@ function Match({ item, onDone, locked }) {
   );
 }
 
-function TypeIn({ item, value, setValue, locked, dictation }) {
+function TypeIn({ item, value, setValue, locked, dictation, newKeys }) {
   useEffect(() => { if (dictation) { const t = setTimeout(() => speak(item.en), 350); return () => clearTimeout(t); } }, [item.id]);
   return (
     <>
@@ -169,7 +171,7 @@ function TypeIn({ item, value, setValue, locked, dictation }) {
           <button type="button" className="audio-btn slow" aria-label="Ouvir devagar" onClick={() => speak(item.en, { slow: true })}><Icon name="turtle" size={22} color="var(--violet)" /></button>
           {locked && <h1 className="q" lang="en">{item.en}</h1>}
         </div>
-      ) : <h1 className="q">{item.pt}</h1>}
+      ) : <h1 className="q"><Hinted text={item.pt} lang="pt" newKeys={newKeys} /></h1>}
       <input className="type-in" lang="en" value={value || ''} disabled={locked} autoFocus autoComplete="off" autoCapitalize="off" spellCheck={false}
         aria-label="Sua resposta em inglês" placeholder="Digite aqui em inglês" onChange={e => setValue(e.target.value)} />
       <p className="muted" style={{ fontSize: 13, marginTop: 8 }}>Não precisa se preocupar com maiúsculas e pontuação. Contrações como I'm ou I am valem igual.</p>
@@ -177,7 +179,7 @@ function TypeIn({ item, value, setValue, locked, dictation }) {
   );
 }
 
-function Dialogue({ item, value, setValue, locked }) {
+function Dialogue({ item, value, setValue, locked, newKeys }) {
   const opts = useMemo(() => shuffle(item.options), [item.id]);
   return (
     <>
@@ -190,7 +192,7 @@ function Dialogue({ item, value, setValue, locked }) {
           return (
             <div key={i} className={'bubble ' + (who === 'B' ? 'me' : 'other') + (gap ? ' gap' : '')}>
               <span className="who">{who === 'B' ? 'Você' : 'Pessoa'}</span>
-              <span lang="en">{shown || '...'}</span>
+              <span lang="en">{gap ? (shown || '...') : <Hinted text={text} newKeys={newKeys} />}</span>
               {!gap && canSpeak() && <button type="button" className="icon-btn" style={{ width: 32, height: 32 }} aria-label="Ouvir" onClick={() => speak(text)}><Icon name="sound" size={16} /></button>}
             </div>
           );
@@ -201,7 +203,7 @@ function Dialogue({ item, value, setValue, locked }) {
   );
 }
 
-function Speak({ item, locked, onDone }) {
+function Speak({ item, locked, onDone, newKeys }) {
   const SR = typeof window !== 'undefined' && (window.SpeechRecognition || window.webkitSpeechRecognition);
   const [listening, setListening] = useState(false);
   const [heard, setHeard] = useState('');
@@ -232,7 +234,7 @@ function Speak({ item, locked, onDone }) {
       <p className="q-label">Fale em inglês</p>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
         {canSpeak() && <button type="button" className="audio-btn" aria-label="Ouvir como se fala" onClick={() => speak(item.en)}><Icon name="sound" size={26} color="#fff" stroke={2.2} /></button>}
-        <h1 className="q" lang="en">{item.en}</h1>
+        <h1 className="q" lang="en"><Hinted text={item.en} newKeys={newKeys} /></h1>
       </div>
       <p className="muted" style={{ margin: '10px 0 0', fontSize: 16 }}>{item.pt}</p>
       {SR ? (
@@ -279,7 +281,7 @@ function StoryText({ story, compact }) {
 
 // História no estilo Duolingo: as falas aparecem uma a uma, com áudio;
 // em alguns momentos o aluno completa a frase ou responde uma pergunta para seguir.
-function Story({ story, locked, onDone, onProgress }) {
+function Story({ story, locked, onDone, onProgress, newKeys }) {
   const steps = story.lines;
   const [pos, setPos] = useState(0);
   const [solved, setSolved] = useState({});
@@ -332,7 +334,7 @@ function Story({ story, locked, onDone, onProgress }) {
             {canSpeak() && <button type="button" className="icon-btn" style={{ width: 36, height: 36, flex: 'none' }} aria-label="Ouvir esta fala" onClick={() => speak(ln.gap && !solved[i] ? ln.en.replace('___', '') : lineText(ln, i))}><Icon name="sound" size={18} /></button>}
             <button type="button" className="story-text" onClick={() => setShowPt(o => ({ ...o, [i]: !o[i] }))} aria-expanded={!!showPt[i]}>
               {ln.who && <b className="story-who">{ln.who}</b>}
-              <span lang="en">{lineText(ln, i)}</span>
+              <span lang="en">{ln.gap && !solved[i] ? lineText(ln, i) : <Hinted text={lineText(ln, i)} newKeys={newKeys} />}</span>
               {showPt[i] && (!ln.gap || solved[i]) && <span className="story-pt">{ln.pt}</span>}
             </button>
           </div>
@@ -400,7 +402,7 @@ function ReportBox({ itemId, onClose }) {
 
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
-export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar' }) {
+export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true }) {
   const [queue, setQueue] = useState(entries);
   const [idx, setIdx] = useState(0);
   const [value, setValue] = useState(null);
@@ -498,6 +500,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   if (!item) return null;
 
   const guide = cur.unit?.guide;
+  const newWords = introduceWords && idx < entries.length ? getNewWords(item.id) : [];
+  const newKeys = new Set(newWords.map(w => w.key));
   const ok = status === 'correct';
   const wrongNote = status === 'wrong' && item.wrong?.[value];
   const display = item.display || (item.type === 'choice' ? item.en.replace('___', item.answer) : item.type === 'dictation' || item.type === 'speak' ? item.en : item.answer);
@@ -523,19 +527,29 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         </div>
       )}
       <main className="lesson-main" key={idx}>
-        {item.type === 'choice' && <Choice item={item} value={value} setValue={setValue} locked={locked} />}
-        {item.type === 'meaning' && <Meaning item={item} value={value} setValue={setValue} locked={locked} />}
+        {newWords.length > 0 && (
+          <div className="new-words" aria-label="Palavras novas neste exercício">
+            <span className="nw-tag">{newWords.length > 1 ? 'Palavras novas' : 'Palavra nova'}</span>
+            {newWords.map(w => (
+              <button key={w.key} type="button" className="nw" onClick={() => speak(w.en)} aria-label={`Ouvir ${w.en}: ${w.pt}`}>
+                <b lang="en">{w.en}</b><span> = {w.pt}</span><Icon name="sound" size={16} />
+              </button>
+            ))}
+          </div>
+        )}
+        {item.type === 'choice' && <Choice item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {item.type === 'meaning' && <Meaning item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {item.type === 'listen' && <Meaning item={item} value={value} setValue={setValue} locked={locked} listen />}
-        {item.type === 'build' && <Build item={item} value={value} setValue={setValue} locked={locked} />}
+        {item.type === 'build' && <Build item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {item.type === 'match' && <Match item={item} locked={locked} onDone={(m) => { setMatchMisses(m); settle(m === 0); }} />}
-        {item.type === 'type' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} />}
+        {item.type === 'type' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {item.type === 'dictation' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} dictation />}
-        {item.type === 'dialogue' && <Dialogue item={item} value={value} setValue={setValue} locked={locked} />}
-        {item.type === 'story' && cur.story && <Story story={cur.story} locked={locked} onProgress={setStoryFrac} onDone={(ok, total) => {
+        {item.type === 'dialogue' && <Dialogue item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {item.type === 'story' && cur.story && <Story story={cur.story} locked={locked} newKeys={newKeys} onProgress={setStoryFrac} onDone={(ok, total) => {
           setNote(`Você acertou ${ok} de ${total} interações da história de primeira.`); settle(true);
         }} />}
         {item.type === 'quiz' && <Quiz item={item} story={cur.story} value={value} setValue={setValue} locked={locked} />}
-        {item.type === 'speak' && <Speak item={item} locked={locked} onDone={(ok, heard, skipped) => {
+        {item.type === 'speak' && <Speak item={item} locked={locked} newKeys={newKeys} onDone={(ok, heard, skipped) => {
           setNote(skipped ? 'Sem problema! Quando puder, pratique a fala em voz alta — é o que mais destrava a conversa.' : heard ? `Ouvi: “${heard}”.` : null);
           settle(ok);
         }} />}

@@ -46,6 +46,7 @@ export default function Placement() {
 
   return (
     <LessonRunner
+        introduceWords={false}
       entries={entries}
       title="Teste de nível"
       exitTo="/bem-vindo"

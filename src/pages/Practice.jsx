@@ -31,6 +31,7 @@ export default function Practice() {
   if (started && entries.length) {
     return (
       <LessonRunner
+        introduceWords={false}
         key={started}
         entries={entries}
         title="Treino"
