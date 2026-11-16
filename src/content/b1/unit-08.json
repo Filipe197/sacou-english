@@ -1,0 +1,729 @@
+{
+ "id": "b1-u8",
+ "level": "B1",
+ "order": 8,
+ "title": "Na minha opinião",
+ "subtitle": "Who, which, that, where e como dar sua opinião.",
+ "can_do": {
+  "text": "Consigo descrever pessoas, coisas e lugares com mais detalhes e dar minha opinião com educação.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: discutir e opinar, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: defining relative clauses (who / which / that / where)",
+  "Functions: giving opinions (I think, In my opinion)",
+  "Functions: agreeing and disagreeing",
+  "Lexis: describing people and places"
+ ],
+ "extra_vocab": [
+  {
+   "word": "born",
+   "reason": "Expressão fixa \"be born\" (nascer), usada desde o A1 em datas de nascimento."
+  }
+ ],
+ "words": [
+  [
+   "who",
+   "que (pessoas)"
+  ],
+  [
+   "which",
+   "que (coisas)"
+  ],
+  [
+   "that",
+   "que (pessoas ou coisas)"
+  ],
+  [
+   "where",
+   "onde"
+  ],
+  [
+   "opinion",
+   "opinião"
+  ],
+  [
+   "agree",
+   "concordar"
+  ],
+  [
+   "disagree",
+   "discordar"
+  ],
+  [
+   "believe",
+   "acreditar"
+  ],
+  [
+   "point",
+   "ponto / argumento"
+  ],
+  [
+   "honest",
+   "honesto"
+  ]
+ ],
+ "guide": {
+  "title": "Who, which, that, where e opiniões",
+  "intro": "Para juntar informações sobre alguém ou algo, use who (pessoas), which (coisas), that (os dois) e where (lugares). E para opinar: I think, In my opinion, I agree, I don't agree.",
+  "points": [
+   {
+    "en": "She is the teacher who helped me.",
+    "pt": "Ela é a professora que me ajudou.",
+    "note": "Who = que, para pessoas."
+   },
+   {
+    "en": "This is the book which I told you about.",
+    "pt": "Este é o livro sobre o qual te falei.",
+    "note": "Which = que, para coisas."
+   },
+   {
+    "en": "This is the restaurant where we met.",
+    "pt": "Este é o restaurante onde nos conhecemos.",
+    "note": "Where = onde, para lugares."
+   },
+   {
+    "en": "In my opinion, the film was too long.",
+    "pt": "Na minha opinião, o filme foi longo demais.",
+    "note": "Dando opinião com educação."
+   },
+   {
+    "en": "I agree with you. / I don't agree.",
+    "pt": "Concordo com você. / Não concordo.",
+    "note": "\"I agree\", nunca \"I am agree\"."
+   }
+  ],
+  "tips": [
+   "Erro clássico: \"I am agree\". O certo é \"I agree\".",
+   "\"That\" serve para pessoas e coisas, e é o mais usado na fala."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b1-u8-l1",
+   "title": "Who, which e where",
+   "items": [
+    {
+     "id": "b1u8l1-1",
+     "type": "meaning",
+     "en": "He is the man who lives next door.",
+     "options": [
+      "Ele é o homem que mora ao lado.",
+      "Ele mora ao lado de um homem.",
+      "Quem mora ao lado?"
+     ],
+     "answer": "Ele é o homem que mora ao lado.",
+     "why": "Who = que (pessoa)."
+    },
+    {
+     "id": "b1u8l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I have a friend ___ speaks five languages.",
+     "options": [
+      "who",
+      "which",
+      "where"
+     ],
+     "answer": "who",
+     "why": "Para pessoas, use who (ou that)."
+    },
+    {
+     "id": "b1u8l1-3",
+     "type": "choice",
+     "en": "This is the phone ___ I bought yesterday.",
+     "options": [
+      "which",
+      "who",
+      "where"
+     ],
+     "answer": "which",
+     "why": "Para coisas, use which (ou that)."
+    },
+    {
+     "id": "b1u8l1-4",
+     "type": "build",
+     "pt": "Esta é a casa onde eu cresci.",
+     "answer": "This is the house where I grew up",
+     "extra": [
+      "which",
+      "who"
+     ],
+     "display": "This is the house where I grew up.",
+     "why": "Para lugares, use where (= onde)."
+    },
+    {
+     "id": "b1u8l1-5",
+     "type": "choice",
+     "en": "The film ___ we watched was very funny.",
+     "options": [
+      "that",
+      "who",
+      "where"
+     ],
+     "answer": "that",
+     "why": "That serve para coisas (e pessoas)."
+    },
+    {
+     "id": "b1u8l1-6",
+     "type": "listen",
+     "en": "The woman who called you is my aunt.",
+     "options": [
+      "A mulher que te ligou é minha tia.",
+      "Minha tia te ligou ontem.",
+      "Quem é a sua tia?"
+     ],
+     "answer": "A mulher que te ligou é minha tia.",
+     "why": "Who called you = que te ligou."
+    }
+   ]
+  },
+  {
+   "id": "b1-u8-l2",
+   "title": "Dando opinião",
+   "items": [
+    {
+     "id": "b1u8l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "In my ___, this is the best restaurant in town.",
+     "options": [
+      "opinion",
+      "think",
+      "agree"
+     ],
+     "answer": "opinion",
+     "why": "In my opinion = na minha opinião."
+    },
+    {
+     "id": "b1u8l2-2",
+     "type": "meaning",
+     "en": "I don't think it's a good idea.",
+     "options": [
+      "Não acho que seja uma boa ideia.",
+      "Acho uma ótima ideia.",
+      "Não sei qual é a ideia."
+     ],
+     "answer": "Não acho que seja uma boa ideia.",
+     "why": "Em inglês o \"não\" vai no think: I don't think..."
+    },
+    {
+     "id": "b1u8l2-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ with you. You are right.",
+     "options": [
+      "agree",
+      "am agree",
+      "agrees"
+     ],
+     "answer": "agree",
+     "why": "\"I agree\", nunca \"I am agree\".",
+     "wrong": {
+      "am agree": "\"Agree\" já é verbo: I agree. \"I am agree\" é erro comum de brasileiro."
+     }
+    },
+    {
+     "id": "b1u8l2-4",
+     "type": "build",
+     "pt": "Na minha opinião, o filme foi ótimo.",
+     "answer": "In my opinion the film was great",
+     "extra": [
+      "think",
+      "is"
+     ],
+     "display": "In my opinion, the film was great.",
+     "why": "In my opinion + frase."
+    },
+    {
+     "id": "b1u8l2-5",
+     "type": "listen",
+     "en": "I see your point, but I don't agree.",
+     "options": [
+      "Entendo seu ponto, mas não concordo.",
+      "Concordo totalmente com você.",
+      "Não entendi o que você disse."
+     ],
+     "answer": "Entendo seu ponto, mas não concordo.",
+     "why": "I see your point = entendo seu argumento."
+    },
+    {
+     "id": "b1u8l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "agree",
+       "concordar"
+      ],
+      [
+       "disagree",
+       "discordar"
+      ],
+      [
+       "opinion",
+       "opinião"
+      ],
+      [
+       "believe",
+       "acreditar"
+      ],
+      [
+       "honest",
+       "honesto"
+      ]
+     ],
+     "why": "Palavras para conversar e debater."
+    }
+   ]
+  },
+  {
+   "id": "b1-u8-l3",
+   "title": "Descrevendo melhor",
+   "items": [
+    {
+     "id": "b1u8l3-1",
+     "type": "meaning",
+     "en": "That is the coffee shop where we first met.",
+     "options": [
+      "Aquela é a cafeteria onde nos conhecemos.",
+      "Vamos nos encontrar naquela cafeteria.",
+      "Não conheço aquela cafeteria."
+     ],
+     "answer": "Aquela é a cafeteria onde nos conhecemos.",
+     "why": "Where = onde, para falar de lugares."
+    },
+    {
+     "id": "b1u8l3-2",
+     "type": "choice",
+     "en": "People ___ work at night are often tired.",
+     "options": [
+      "who",
+      "which",
+      "where"
+     ],
+     "answer": "who",
+     "why": "Para pessoas, use who (ou that)."
+    },
+    {
+     "id": "b1u8l3-3",
+     "type": "choice",
+     "en": "I don't think she ___ come.",
+     "options": [
+      "will",
+      "won't",
+      "doesn't"
+     ],
+     "answer": "will",
+     "why": "I don't think + afirmativa (will). O negativo já está no think."
+    },
+    {
+     "id": "b1u8l3-4",
+     "type": "build",
+     "pt": "Não concordo com essa ideia.",
+     "answer": "I don't agree with that idea",
+     "extra": [
+      "am",
+      "not"
+     ],
+     "display": "I don't agree with that idea.",
+     "why": "I don't agree with + algo."
+    },
+    {
+     "id": "b1u8l3-5",
+     "type": "listen",
+     "en": "Is there a shop near here which sells phones?",
+     "options": [
+      "Tem uma loja aqui perto que vende celulares?",
+      "Onde você comprou seu celular?",
+      "A loja não vende celulares."
+     ],
+     "answer": "Tem uma loja aqui perto que vende celulares?",
+     "why": "Which sells = que vende."
+    },
+    {
+     "id": "b1u8l3-6",
+     "type": "choice",
+     "en": "To be ___, I didn't like the food.",
+     "options": [
+      "honest",
+      "opinion",
+      "agree"
+     ],
+     "answer": "honest",
+     "why": "\"To be honest\" = para ser sincero."
+    }
+   ]
+  },
+  {
+   "id": "b1-u8-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b1u8l4-1",
+     "type": "type",
+     "pt": "Ela é a professora que me ajudou.",
+     "answer": "She is the teacher who helped me",
+     "accept": [
+      "She is the teacher that helped me",
+      "She's the teacher who helped me"
+     ],
+     "why": "Who para pessoas."
+    },
+    {
+     "id": "b1u8l4-2",
+     "type": "type",
+     "pt": "Concordo com você.",
+     "answer": "I agree with you",
+     "why": "\"I agree\", sem am."
+    },
+    {
+     "id": "b1u8l4-3",
+     "type": "dictation",
+     "en": "This is the restaurant where we met.",
+     "why": "Where = onde, para falar de lugares."
+    },
+    {
+     "id": "b1u8l4-4",
+     "type": "type",
+     "pt": "Na minha opinião, é caro demais.",
+     "answer": "In my opinion it's too expensive",
+     "accept": [
+      "In my opinion, it's too expensive",
+      "In my opinion, it is too expensive",
+      "In my opinion it is too expensive"
+     ],
+     "why": "In my opinion + frase."
+    },
+    {
+     "id": "b1u8l4-5",
+     "type": "dictation",
+     "en": "I don't think it's a good idea.",
+     "why": "I don't think = acho que não."
+    },
+    {
+     "id": "b1u8l4-6",
+     "type": "type",
+     "pt": "O livro que eu li foi ótimo.",
+     "answer": "The book that I read was great",
+     "accept": [
+      "The book which I read was great",
+      "The book I read was great"
+     ],
+     "why": "That (ou which) para coisas."
+    }
+   ]
+  },
+  {
+   "id": "b1-u8-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b1u8l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I think people should work only four days a week."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I agree. We would have more time for our families.",
+      "I am agree. We would have more time for our families.",
+      "I agrees. We would have more time for our families."
+     ],
+     "answer": "I agree. We would have more time for our families.",
+     "why": "Concordando: I agree."
+    },
+    {
+     "id": "b1u8l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "This is the best pizza in the city!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Really? To be honest, I don't think so.",
+      "Really? To be honest, I think not so.",
+      "Really? To be honest, I am not agree."
+     ],
+     "answer": "Really? To be honest, I don't think so.",
+     "why": "Discordando com educação: I don't think so."
+    },
+    {
+     "id": "b1u8l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Who is that man?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "He's the doctor who helped my mother.",
+      "He's the doctor which helped my mother.",
+      "He's the doctor where helped my mother."
+     ],
+     "answer": "He's the doctor who helped my mother.",
+     "why": "Para pessoas, use who (ou that)."
+    },
+    {
+     "id": "b1u8l5-4",
+     "type": "speak",
+     "en": "In my opinion, it was too long.",
+     "pt": "Na minha opinião, foi longo demais.",
+     "why": "\"Opinion\" soa \"o-PÍ-nion\"."
+    },
+    {
+     "id": "b1u8l5-5",
+     "type": "speak",
+     "en": "I see your point, but I don't agree.",
+     "pt": "Entendo seu ponto, mas não concordo.",
+     "why": "\"Agree\" tem força no fim: \"a-GRÍ\"."
+    },
+    {
+     "id": "b1u8l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you know a good place to eat?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, there is a restaurant where you can eat great fish.",
+      "Yes, there is a restaurant which you can eat great fish.",
+      "Yes, there is a restaurant who you can eat great fish."
+     ],
+     "answer": "Yes, there is a restaurant where you can eat great fish.",
+     "why": "Para lugares, use where (= onde)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u8-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b1u8l6-1",
+     "type": "choice",
+     "en": "My sister is the person ___ I trust most.",
+     "options": [
+      "who",
+      "which",
+      "where"
+     ],
+     "answer": "who",
+     "why": "Pessoa: who (ou that)."
+    },
+    {
+     "id": "b1u8l6-2",
+     "type": "type",
+     "pt": "Não acho que ele venha.",
+     "answer": "I don't think he will come",
+     "accept": [
+      "I don't think he'll come"
+     ],
+     "why": "I don't think + afirmativa."
+    },
+    {
+     "id": "b1u8l6-3",
+     "type": "meaning",
+     "en": "Do you agree with me?",
+     "options": [
+      "Você concorda comigo?",
+      "Você está comigo?",
+      "Você gosta de mim?"
+     ],
+     "answer": "Você concorda comigo?",
+     "why": "Agree with = concordar com."
+    },
+    {
+     "id": "b1u8l6-4",
+     "type": "choice",
+     "en": "This is the town ___ my father was born.",
+     "options": [
+      "where",
+      "which",
+      "who"
+     ],
+     "answer": "where",
+     "why": "Para lugares, use where (= onde)."
+    },
+    {
+     "id": "b1u8l6-5",
+     "type": "dictation",
+     "en": "She is the teacher who helped me.",
+     "why": "Who = que (pessoa)."
+    },
+    {
+     "id": "b1u8l6-6",
+     "type": "speak",
+     "en": "To be honest, I didn't like it.",
+     "pt": "Para ser sincero, não gostei.",
+     "why": "\"Honest\" começa sem som de h: \"Ó-nest\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u8-l7",
+   "title": "História: O clube do livro",
+   "story": {
+    "title": "O clube do livro",
+    "lines": [
+     {
+      "who": "Ana",
+      "en": "So, what did you think of the book?",
+      "pt": "E aí, o que vocês acharam do livro?"
+     },
+     {
+      "who": "Carlos",
+      "en": "In my ___, it was fantastic. I loved the main character.",
+      "pt": "Na minha opinião, foi fantástico. Amei o personagem principal.",
+      "gap": {
+       "answer": "opinion",
+       "options": [
+        "opinion",
+        "think",
+        "idea"
+       ]
+      }
+     },
+     {
+      "who": "Julia",
+      "en": "Really? I don't ___. I thought it was boring.",
+      "pt": "Sério? Não concordo. Achei chato.",
+      "gap": {
+       "answer": "agree",
+       "options": [
+        "agree",
+        "am agree",
+        "agrees"
+       ]
+      }
+     },
+     {
+      "ask": "O que a Julia achou do livro?",
+      "options": [
+       "Chato",
+       "Fantástico",
+       "Engraçado"
+      ],
+      "answer": "Chato",
+      "why": "\"I thought it was boring\"."
+     },
+     {
+      "who": "Carlos",
+      "en": "Boring? The part ___ he finds his father is amazing!",
+      "pt": "Chato? A parte em que ele encontra o pai é incrível!",
+      "gap": {
+       "answer": "where",
+       "options": [
+        "where",
+        "who",
+        "which"
+       ]
+      }
+     },
+     {
+      "who": "Julia",
+      "en": "I see your point, but the story was too slow for me.",
+      "pt": "Entendo seu ponto, mas a história foi lenta demais para mim."
+     },
+     {
+      "who": "Ana",
+      "en": "Well, I liked the woman ___ helps him in the city.",
+      "pt": "Bom, eu gostei da mulher que o ajuda na cidade.",
+      "gap": {
+       "answer": "who",
+       "options": [
+        "who",
+        "which",
+        "where"
+       ]
+      }
+     },
+     {
+      "who": "Carlos",
+      "en": "Yes! She is the best character in the book.",
+      "pt": "Sim! Ela é a melhor personagem do livro."
+     },
+     {
+      "who": "Ana",
+      "en": "OK. Next month, Julia chooses the book!",
+      "pt": "Combinado. No mês que vem, a Julia escolhe o livro!"
+     },
+     {
+      "ask": "Quem vai escolher o próximo livro?",
+      "options": [
+       "A Julia",
+       "O Carlos",
+       "A Ana"
+      ],
+      "answer": "A Julia",
+      "why": "\"Next month, Julia chooses the book!\""
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u8l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u8l7-2",
+     "type": "quiz",
+     "q": "Do que o Carlos mais gostou?",
+     "options": [
+      "Do personagem principal",
+      "Do final",
+      "De nada"
+     ],
+     "answer": "Do personagem principal",
+     "why": "\"I loved the main character\"."
+    },
+    {
+     "id": "b1u8l7-3",
+     "type": "quiz",
+     "q": "Por que a Julia não gostou?",
+     "options": [
+      "A história foi lenta demais",
+      "O livro era muito curto",
+      "Ela não leu"
+     ],
+     "answer": "A história foi lenta demais",
+     "why": "\"the story was too slow for me\"."
+    },
+    {
+     "id": "b1u8l7-4",
+     "type": "quiz",
+     "q": "De qual personagem a Ana gostou?",
+     "options": [
+      "Da mulher que ajuda o personagem na cidade",
+      "Do pai",
+      "Do personagem principal"
+     ],
+     "answer": "Da mulher que ajuda o personagem na cidade",
+     "why": "\"I liked the woman who helps him in the city\"."
+    }
+   ]
+  }
+ ]
+}

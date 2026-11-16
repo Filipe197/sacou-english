@@ -17,6 +17,8 @@ import Credits from './pages/Credits.jsx';
 import Admin from './pages/Admin.jsx';
 const Notebook = lazy(() => import('./pages/Notebook.jsx'));
 const Conversation = lazy(() => import('./pages/Conversation.jsx'));
+const Headphones = lazy(() => import('./pages/Headphones.jsx'));
+const Classes = lazy(() => import('./pages/Classes.jsx'));
 
 function Private({ children, allowNotOnboarded = false }) {
   const { session, profile, loading } = useAuth();
@@ -57,6 +59,9 @@ export default function App() {
         <Route path="/caderno" element={<Private><Suspense fallback={<Spinner />}><Notebook /></Suspense></Private>} />
         <Route path="/caderno/:id" element={<Private><Suspense fallback={<Spinner />}><Notebook /></Suspense></Private>} />
         <Route path="/conversar" element={<Private><Suspense fallback={<Spinner />}><Conversation /></Suspense></Private>} />
+        <Route path="/fone" element={<Private><Suspense fallback={<Spinner />}><Headphones /></Suspense></Private>} />
+        <Route path="/turmas" element={<Private><Suspense fallback={<Spinner />}><Classes /></Suspense></Private>} />
+        <Route path="/turmas/entrar/:code" element={<Private><Suspense fallback={<Spinner />}><Classes /></Suspense></Private>} />
         <Route path="/progresso" element={<Private><Progress /></Private>} />
         <Route path="/admin" element={<Private><Admin /></Private>} />
         <Route path="*" element={<Navigate to="/" replace />} />

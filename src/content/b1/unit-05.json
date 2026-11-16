@@ -1,0 +1,712 @@
+{
+ "id": "b1-u5",
+ "level": "B1",
+ "order": 5,
+ "title": "E se…?",
+ "subtitle": "Second conditional: situações imaginárias e conselhos.",
+ "can_do": {
+  "text": "Consigo imaginar situações diferentes da realidade e dar conselhos com \"se eu fosse você\".",
+  "source": "CEFR (Conselho da Europa) — Interação oral: trocar opiniões, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: second conditional (if + past, would)",
+  "Grammar: If I were you...",
+  "Grammar: would / wouldn't",
+  "Functions: giving advice, imagining"
+ ],
+ "words": [
+  [
+   "would",
+   "faria / iria (futuro do pretérito)"
+  ],
+  [
+   "If I were you",
+   "Se eu fosse você"
+  ],
+  [
+   "rich",
+   "rico"
+  ],
+  [
+   "lottery",
+   "loteria"
+  ],
+  [
+   "island",
+   "ilha"
+  ],
+  [
+   "afraid",
+   "com medo"
+  ],
+  [
+   "quit",
+   "largar / pedir demissão"
+  ],
+  [
+   "advice",
+   "conselho"
+  ],
+  [
+   "choose",
+   "escolher"
+  ],
+  [
+   "wish",
+   "desejo / desejar"
+  ]
+ ],
+ "guide": {
+  "title": "Second conditional: o mundo do \"se\"",
+  "intro": "Para imaginar algo que não é real agora (ou é improvável), o inglês usa if + passado e would no resultado: \"If I had money, I would travel\" = se eu tivesse dinheiro, viajaria.",
+  "points": [
+   {
+    "en": "If I had more time, I would learn to play the guitar.",
+    "pt": "Se eu tivesse mais tempo, aprenderia a tocar violão.",
+    "note": "If + passado (had), would + verbo."
+   },
+   {
+    "en": "If I won the lottery, I would buy a house.",
+    "pt": "Se eu ganhasse na loteria, compraria uma casa.",
+    "note": "Situação improvável: passado + would."
+   },
+   {
+    "en": "If I were you, I would talk to her.",
+    "pt": "Se eu fosse você, falaria com ela.",
+    "note": "Para conselhos: If I were you. \"Were\" vale para todas as pessoas."
+   },
+   {
+    "en": "I wouldn't do that.",
+    "pt": "Eu não faria isso.",
+    "note": "Wouldn't = would not."
+   },
+   {
+    "en": "What would you do if you lived abroad?",
+    "pt": "O que você faria se morasse no exterior?",
+    "note": "Pergunta: What would you do if...?"
+   }
+  ],
+  "tips": [
+   "Compare: \"If it rains, I'll stay\" (possível) × \"If I were rich, I'd travel\" (imaginário).",
+   "Na fala, would vira 'd: I'd, she'd, we'd."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b1-u5-l1",
+   "title": "Se eu tivesse…",
+   "items": [
+    {
+     "id": "b1u5l1-1",
+     "type": "meaning",
+     "en": "If I had more money, I would travel.",
+     "options": [
+      "Se eu tivesse mais dinheiro, viajaria.",
+      "Tenho dinheiro e vou viajar.",
+      "Quando tenho dinheiro, viajo."
+     ],
+     "answer": "Se eu tivesse mais dinheiro, viajaria.",
+     "why": "If + passado, would: situação imaginária."
+    },
+    {
+     "id": "b1u5l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If I ___ rich, I would buy a big house.",
+     "options": [
+      "were",
+      "am",
+      "will be"
+     ],
+     "answer": "were",
+     "why": "Second conditional: if + passado. Com be, usamos \"were\"."
+    },
+    {
+     "id": "b1u5l1-3",
+     "type": "choice",
+     "en": "If she had a car, she ___ drive to work.",
+     "options": [
+      "would",
+      "will",
+      "does"
+     ],
+     "answer": "would",
+     "why": "Resultado imaginário: would + verbo."
+    },
+    {
+     "id": "b1u5l1-4",
+     "type": "build",
+     "pt": "Se eu ganhasse na loteria, compraria uma ilha.",
+     "answer": "If I won the lottery I would buy an island",
+     "extra": [
+      "win",
+      "will"
+     ],
+     "display": "If I won the lottery, I would buy an island.",
+     "why": "If + passado (won), would + verbo."
+    },
+    {
+     "id": "b1u5l1-5",
+     "type": "choice",
+     "en": "What would you do if you ___ a million dollars?",
+     "options": [
+      "had",
+      "have",
+      "would have"
+     ],
+     "answer": "had",
+     "why": "Depois do if, use o passado: had."
+    },
+    {
+     "id": "b1u5l1-6",
+     "type": "listen",
+     "en": "I'd help you if I could.",
+     "options": [
+      "Eu te ajudaria se pudesse.",
+      "Eu te ajudei porque pude.",
+      "Eu vou te ajudar amanhã."
+     ],
+     "answer": "Eu te ajudaria se pudesse.",
+     "why": "I'd = I would. Could = pudesse."
+    }
+   ]
+  },
+  {
+   "id": "b1-u5-l2",
+   "title": "Se eu fosse você",
+   "items": [
+    {
+     "id": "b1u5l2-1",
+     "type": "choice",
+     "prompt": "Dê um conselho:",
+     "en": "If I ___ you, I would talk to her.",
+     "options": [
+      "were",
+      "was",
+      "am"
+     ],
+     "answer": "were",
+     "why": "Conselho: If I were you (forma mais usada)."
+    },
+    {
+     "id": "b1u5l2-2",
+     "type": "meaning",
+     "en": "If I were you, I wouldn't buy that phone.",
+     "options": [
+      "Se eu fosse você, não compraria esse celular.",
+      "Eu não comprei esse celular.",
+      "Você não quer comprar esse celular."
+     ],
+     "answer": "Se eu fosse você, não compraria esse celular.",
+     "why": "Wouldn't = would not."
+    },
+    {
+     "id": "b1u5l2-3",
+     "type": "choice",
+     "en": "I ___ quit my job. I like it!",
+     "options": [
+      "wouldn't",
+      "won't to",
+      "don't would"
+     ],
+     "answer": "wouldn't",
+     "why": "Wouldn't + verbo."
+    },
+    {
+     "id": "b1u5l2-4",
+     "type": "build",
+     "pt": "Se eu fosse você, eu iria ao médico.",
+     "answer": "If I were you I would see a doctor",
+     "extra": [
+      "was",
+      "will"
+     ],
+     "display": "If I were you, I would see a doctor.",
+     "why": "Conselho com If I were you + would."
+    },
+    {
+     "id": "b1u5l2-5",
+     "type": "listen",
+     "en": "What would you do in my situation?",
+     "options": [
+      "O que você faria na minha situação?",
+      "O que você fez na minha situação?",
+      "O que você faz na minha situação?"
+     ],
+     "answer": "O que você faria na minha situação?",
+     "why": "What would you do = o que você faria."
+    },
+    {
+     "id": "b1u5l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "would",
+       "faria"
+      ],
+      [
+       "wouldn't",
+       "não faria"
+      ],
+      [
+       "advice",
+       "conselho"
+      ],
+      [
+       "afraid",
+       "com medo"
+      ],
+      [
+       "rich",
+       "rico"
+      ]
+     ],
+     "why": "Palavras do mundo do \"se\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u5-l3",
+   "title": "Real ou imaginário?",
+   "items": [
+    {
+     "id": "b1u5l3-1",
+     "type": "meaning",
+     "en": "If it rains tomorrow, we'll stay at home.",
+     "options": [
+      "Se chover amanhã, vamos ficar em casa.",
+      "Se chovesse amanhã, ficaríamos em casa.",
+      "Choveu e ficamos em casa."
+     ],
+     "answer": "Se chover amanhã, vamos ficar em casa.",
+     "why": "If + presente + will = possibilidade real (first conditional)."
+    },
+    {
+     "id": "b1u5l3-2",
+     "type": "choice",
+     "prompt": "Imaginário ou real?",
+     "en": "If I lived near the beach, I ___ swim every day.",
+     "options": [
+      "would",
+      "will",
+      "am"
+     ],
+     "answer": "would",
+     "why": "Situação imaginária (não moro): would."
+    },
+    {
+     "id": "b1u5l3-3",
+     "type": "choice",
+     "en": "If you ___ tired, go to bed.",
+     "options": [
+      "are",
+      "were",
+      "would be"
+     ],
+     "answer": "are",
+     "why": "Situação real agora: presente."
+    },
+    {
+     "id": "b1u5l3-4",
+     "type": "build",
+     "pt": "Eu não faria isso se fosse você.",
+     "answer": "I wouldn't do that if I were you",
+     "extra": [
+      "will",
+      "was"
+     ],
+     "display": "I wouldn't do that if I were you.",
+     "why": "A ordem pode inverter: o if no fim, sem vírgula."
+    },
+    {
+     "id": "b1u5l3-5",
+     "type": "listen",
+     "en": "If we had a garden, we'd have a dog.",
+     "options": [
+      "Se tivéssemos um jardim, teríamos um cachorro.",
+      "Temos um jardim e um cachorro.",
+      "Vamos ter um cachorro."
+     ],
+     "answer": "Se tivéssemos um jardim, teríamos um cachorro.",
+     "why": "We'd = we would."
+    },
+    {
+     "id": "b1u5l3-6",
+     "type": "choice",
+     "en": "She would be happier if she ___ less.",
+     "options": [
+      "worked",
+      "works",
+      "will work"
+     ],
+     "answer": "worked",
+     "why": "Depois do if (imaginário): passado."
+    }
+   ]
+  },
+  {
+   "id": "b1-u5-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b1u5l4-1",
+     "type": "type",
+     "pt": "Se eu fosse rico, viajaria pelo mundo.",
+     "answer": "If I were rich I would travel around the world",
+     "accept": [
+      "If I were rich, I would travel around the world",
+      "If I was rich, I would travel around the world",
+      "If I were rich, I'd travel around the world"
+     ],
+     "why": "If + were, would."
+    },
+    {
+     "id": "b1u5l4-2",
+     "type": "type",
+     "pt": "Se eu fosse você, eu falaria com ele.",
+     "answer": "If I were you I would talk to him",
+     "accept": [
+      "If I were you, I would talk to him",
+      "If I were you, I'd talk to him"
+     ],
+     "why": "Conselho: If I were you."
+    },
+    {
+     "id": "b1u5l4-3",
+     "type": "dictation",
+     "en": "I'd buy a house if I had the money.",
+     "why": "I'd é a forma curta de I would."
+    },
+    {
+     "id": "b1u5l4-4",
+     "type": "type",
+     "pt": "Eu não faria isso.",
+     "answer": "I wouldn't do that",
+     "accept": [
+      "I would not do that"
+     ],
+     "why": "Wouldn't + verbo."
+    },
+    {
+     "id": "b1u5l4-5",
+     "type": "dictation",
+     "en": "What would you do if you were me?",
+     "why": "Were me = fosse eu."
+    },
+    {
+     "id": "b1u5l4-6",
+     "type": "type",
+     "pt": "Se eu tivesse tempo, eu te ajudaria.",
+     "answer": "If I had time I would help you",
+     "accept": [
+      "If I had time, I would help you",
+      "If I had time, I'd help you"
+     ],
+     "why": "If + had, would."
+    }
+   ]
+  },
+  {
+   "id": "b1-u5-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b1u5l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I don't know what to do. My boss is always angry with me."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "If I were you, I would look for another job.",
+      "If I am you, I will look for another job.",
+      "If I were you, I look for another job."
+     ],
+     "answer": "If I were you, I would look for another job.",
+     "why": "Conselho: If I were you, I would..."
+    },
+    {
+     "id": "b1u5l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What would you do if you won the lottery?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'd travel around the world.",
+      "I'll travel around the world.",
+      "I travel around the world."
+     ],
+     "answer": "I'd travel around the world.",
+     "why": "Resposta imaginária: would (I'd)."
+    },
+    {
+     "id": "b1u5l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Would you like to live on an island?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Maybe, but I would miss my family.",
+      "Maybe, but I will miss my family yesterday.",
+      "Maybe, but I miss my family would."
+     ],
+     "answer": "Maybe, but I would miss my family.",
+     "why": "Would + miss = sentiria falta."
+    },
+    {
+     "id": "b1u5l5-4",
+     "type": "speak",
+     "en": "If I were you, I would rest.",
+     "pt": "Se eu fosse você, eu descansaria.",
+     "why": "\"I were\" soa \"ai-uêr\"."
+    },
+    {
+     "id": "b1u5l5-5",
+     "type": "speak",
+     "en": "I'd love to travel more.",
+     "pt": "Eu adoraria viajar mais.",
+     "why": "\"I'd love\" soa \"aid-lâv\"."
+    },
+    {
+     "id": "b1u5l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I'm afraid of flying, but I want to visit my sister."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "If I were you, I'd take the bus.",
+      "If I am you, I take the bus.",
+      "If I were you, I will take the bus."
+     ],
+     "answer": "If I were you, I'd take the bus.",
+     "why": "If I were you + would ('d)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u5-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b1u5l6-1",
+     "type": "choice",
+     "en": "If I ___ more time, I would read more books.",
+     "options": [
+      "had",
+      "have",
+      "will have"
+     ],
+     "answer": "had",
+     "why": "If + passado (had)."
+    },
+    {
+     "id": "b1u5l6-2",
+     "type": "type",
+     "pt": "O que você faria?",
+     "answer": "What would you do",
+     "why": "What + would you + verbo."
+    },
+    {
+     "id": "b1u5l6-3",
+     "type": "meaning",
+     "en": "She'd come if you asked her.",
+     "options": [
+      "Ela viria se você a convidasse.",
+      "Ela veio porque você convidou.",
+      "Ela vai vir amanhã."
+     ],
+     "answer": "Ela viria se você a convidasse.",
+     "why": "She'd = she would."
+    },
+    {
+     "id": "b1u5l6-4",
+     "type": "choice",
+     "en": "If I were you, I ___ worry.",
+     "options": [
+      "wouldn't",
+      "won't",
+      "don't"
+     ],
+     "answer": "wouldn't",
+     "why": "Conselho negativo: wouldn't."
+    },
+    {
+     "id": "b1u5l6-5",
+     "type": "dictation",
+     "en": "If I lived abroad, I would miss Brazilian food.",
+     "why": "Miss = sentir falta."
+    },
+    {
+     "id": "b1u5l6-6",
+     "type": "speak",
+     "en": "What would you do if you were rich?",
+     "pt": "O que você faria se fosse rico?",
+     "why": "\"What would you\" fica \"uót-uúd-iu\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u5-l7",
+   "title": "História: O bilhete da loteria",
+   "story": {
+    "title": "O bilhete da loteria",
+    "lines": [
+     {
+      "who": "Paula",
+      "en": "Look! I bought a lottery ticket.",
+      "pt": "Olha! Comprei um bilhete da loteria."
+     },
+     {
+      "who": "Bruno",
+      "en": "Really? What would you do if you won?",
+      "pt": "Sério? O que você faria se ganhasse?"
+     },
+     {
+      "who": "Paula",
+      "en": "If I won, I ___ quit my job and travel.",
+      "pt": "Se eu ganhasse, largaria meu emprego e viajaria.",
+      "gap": {
+       "answer": "would",
+       "options": [
+        "would",
+        "will",
+        "am"
+       ]
+      }
+     },
+     {
+      "who": "Bruno",
+      "en": "Where would you go first?",
+      "pt": "Para onde você iria primeiro?"
+     },
+     {
+      "who": "Paula",
+      "en": "I would go to Japan. If I ___ there, I would eat a lot!",
+      "pt": "Eu iria ao Japão. Se eu estivesse lá, comeria muito!",
+      "gap": {
+       "answer": "were",
+       "options": [
+        "were",
+        "am",
+        "will be"
+       ]
+      }
+     },
+     {
+      "ask": "Para onde a Paula iria primeiro?",
+      "options": [
+       "Japão",
+       "Itália",
+       "Ela ficaria no Brasil"
+      ],
+      "answer": "Japão",
+      "why": "\"I would go to Japan\"."
+     },
+     {
+      "who": "Bruno",
+      "en": "And if I were you, I'd give some money to your best friend…",
+      "pt": "E se eu fosse você, daria um pouco de dinheiro para seu melhor amigo…"
+     },
+     {
+      "who": "Paula",
+      "en": "Ha ha! Don't worry, I ___ forget you.",
+      "pt": "Ha ha! Não se preocupe, eu não te esqueceria.",
+      "gap": {
+       "answer": "wouldn't",
+       "options": [
+        "wouldn't",
+        "won't to",
+        "don't would"
+       ]
+      }
+     },
+     {
+      "who": "Bruno",
+      "en": "Good! Now we just have to wait for Saturday.",
+      "pt": "Ótimo! Agora é só esperar o sábado."
+     },
+     {
+      "ask": "O Bruno quer que a Paula…",
+      "options": [
+       "Dê um pouco de dinheiro para ele",
+       "Não compre o bilhete",
+       "Viaje com ele para o Japão"
+      ],
+      "answer": "Dê um pouco de dinheiro para ele",
+      "why": "\"I'd give some money to your best friend\" — ele mesmo!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u5l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u5l7-2",
+     "type": "quiz",
+     "q": "O que a Paula comprou?",
+     "options": [
+      "Um bilhete da loteria",
+      "Uma passagem para o Japão",
+      "Um presente"
+     ],
+     "answer": "Um bilhete da loteria",
+     "why": "\"I bought a lottery ticket\"."
+    },
+    {
+     "id": "b1u5l7-3",
+     "type": "quiz",
+     "q": "O que a Paula faria com o emprego?",
+     "options": [
+      "Largaria",
+      "Continuaria trabalhando",
+      "Mudaria de cidade"
+     ],
+     "answer": "Largaria",
+     "why": "\"I would quit my job\"."
+    },
+    {
+     "id": "b1u5l7-4",
+     "type": "quiz",
+     "q": "Quando sai o resultado?",
+     "options": [
+      "No sábado",
+      "Amanhã",
+      "Hoje à noite"
+     ],
+     "answer": "No sábado",
+     "why": "\"wait for Saturday\"."
+    }
+   ]
+  }
+ ]
+}

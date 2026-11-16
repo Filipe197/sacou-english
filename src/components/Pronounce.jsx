@@ -12,7 +12,7 @@ export function useListen() {
   const [listening, setListening] = useState(false);
   const rec = useRef(null);
   useEffect(() => () => rec.current?.abort?.(), []);
-  function listen({ onResult, onError, interim }) {
+  function listen({ onResult, onError, interim, onEnd }) {
     const SR = getSR();
     if (!SR) return;
     rec.current?.abort?.();
@@ -24,7 +24,7 @@ export function useListen() {
       onResult([...res].map(a => a.transcript));
     };
     r.onerror = (e) => onError?.(e.error === 'not-allowed' ? 'Permita o uso do microfone no navegador para praticar a fala.' : e.error === 'no-speech' ? 'Não ouvi nada. Toque no microfone e fale perto do aparelho.' : 'Não consegui ouvir. Toque no microfone e fale de novo.');
-    r.onend = () => setListening(false);
+    r.onend = () => { setListening(false); onEnd?.(); };
     r.start(); setListening(true);
   }
   const stop = () => rec.current?.stop?.();

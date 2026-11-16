@@ -1,0 +1,720 @@
+{
+ "id": "b1-u1",
+ "level": "B1",
+ "order": 1,
+ "title": "Você já…?",
+ "subtitle": "Present perfect: experiências da vida, ever e never.",
+ "can_do": {
+  "text": "Consigo falar sobre experiências que já tive (ou nunca tive) e perguntar sobre as dos outros.",
+  "source": "CEFR (Conselho da Europa) — Interação oral geral, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: present perfect (experience)",
+  "Grammar: ever / never",
+  "Grammar: past participles (regular and irregular)",
+  "Functions: talking about experiences"
+ ],
+ "words": [
+  [
+   "have been",
+   "já fui / já estive"
+  ],
+  [
+   "ever",
+   "alguma vez"
+  ],
+  [
+   "never",
+   "nunca"
+  ],
+  [
+   "seen",
+   "visto (de see)"
+  ],
+  [
+   "eaten",
+   "comido (de eat)"
+  ],
+  [
+   "tried",
+   "experimentado (de try)"
+  ],
+  [
+   "met",
+   "conhecido (de meet)"
+  ],
+  [
+   "experience",
+   "experiência"
+  ],
+  [
+   "abroad",
+   "no exterior"
+  ],
+  [
+   "once",
+   "uma vez"
+  ]
+ ],
+ "guide": {
+  "title": "Present perfect: o que você já fez na vida",
+  "intro": "Para falar de experiências (sem dizer quando), o inglês usa have/has + particípio: \"I have been to Chile\" = já fui ao Chile. O momento exato não importa, só que aconteceu.",
+  "points": [
+   {
+    "en": "I have been to Argentina.",
+    "pt": "Eu já fui à Argentina.",
+    "note": "have + particípio. Com he/she/it: has."
+   },
+   {
+    "en": "Have you ever eaten Japanese food?",
+    "pt": "Você já comeu comida japonesa?",
+    "note": "Pergunta: Have you ever + particípio?"
+   },
+   {
+    "en": "She has never seen the sea.",
+    "pt": "Ela nunca viu o mar.",
+    "note": "\"Never\" já é negativo: não use \"not\" junto."
+   },
+   {
+    "en": "I've met a famous singer once.",
+    "pt": "Já conheci um cantor famoso uma vez.",
+    "note": "Na fala, have vira 've e has vira 's."
+   },
+   {
+    "en": "I went there in 2019.",
+    "pt": "Fui lá em 2019.",
+    "note": "Se disser QUANDO, use o passado simples (went), não o present perfect."
+   }
+  ],
+  "tips": [
+   "Particípios irregulares mais comuns: been, seen, eaten, done, gone, made, met, read, written, bought.",
+   "\"Been to\" = já foi e voltou. \"Gone to\" = foi e ainda está lá."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b1-u1-l1",
+   "title": "Já fui, nunca fui",
+   "items": [
+    {
+     "id": "b1u1l1-1",
+     "type": "meaning",
+     "en": "I have been to Argentina.",
+     "options": [
+      "Eu já fui à Argentina.",
+      "Eu vou à Argentina.",
+      "Eu estava na Argentina."
+     ],
+     "answer": "Eu já fui à Argentina.",
+     "why": "\"Have been to\" fala de uma experiência: já fui (sem dizer quando)."
+    },
+    {
+     "id": "b1u1l1-2",
+     "type": "choice",
+     "prompt": "Complete a experiência:",
+     "en": "I have ___ to Chile twice.",
+     "options": [
+      "been",
+      "be",
+      "was"
+     ],
+     "answer": "been",
+     "why": "Present perfect = have + particípio. O particípio de be é \"been\"."
+    },
+    {
+     "id": "b1u1l1-3",
+     "type": "choice",
+     "en": "She ___ never seen the sea.",
+     "options": [
+      "has",
+      "have",
+      "is"
+     ],
+     "answer": "has",
+     "why": "Com she/he/it usamos \"has\" + particípio."
+    },
+    {
+     "id": "b1u1l1-4",
+     "type": "build",
+     "pt": "Você já comeu comida japonesa?",
+     "answer": "Have you ever eaten Japanese food",
+     "extra": [
+      "ate",
+      "did"
+     ],
+     "display": "Have you ever eaten Japanese food?",
+     "why": "Pergunta de experiência: Have you ever + particípio (eaten)."
+    },
+    {
+     "id": "b1u1l1-5",
+     "type": "choice",
+     "en": "We have never ___ a famous person.",
+     "options": [
+      "met",
+      "meet",
+      "meeting"
+     ],
+     "answer": "met",
+     "why": "Particípio de meet é \"met\"."
+    },
+    {
+     "id": "b1u1l1-6",
+     "type": "listen",
+     "en": "Have you ever been to London?",
+     "options": [
+      "Você já foi a Londres?",
+      "Você vai a Londres?",
+      "Você estava em Londres?"
+     ],
+     "answer": "Você já foi a Londres?",
+     "why": "Have you ever been...? = Você já foi...?"
+    }
+   ]
+  },
+  {
+   "id": "b1-u1-l2",
+   "title": "Particípios do dia a dia",
+   "items": [
+    {
+     "id": "b1u1l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I have ___ this film three times.",
+     "options": [
+      "seen",
+      "saw",
+      "see"
+     ],
+     "answer": "seen",
+     "why": "Particípio de see: seen. \"Saw\" é o passado simples.",
+     "wrong": {
+      "saw": "\"Saw\" é passado simples: I saw it yesterday. Com have, use seen."
+     }
+    },
+    {
+     "id": "b1u1l2-2",
+     "type": "choice",
+     "en": "Has he ever ___ a book?",
+     "options": [
+      "written",
+      "wrote",
+      "write"
+     ],
+     "answer": "written",
+     "why": "Particípio de write: written."
+    },
+    {
+     "id": "b1u1l2-3",
+     "type": "meaning",
+     "en": "They have never tried Brazilian food.",
+     "options": [
+      "Eles nunca experimentaram comida brasileira.",
+      "Eles não gostam de comida brasileira.",
+      "Eles sempre comem comida brasileira."
+     ],
+     "answer": "Eles nunca experimentaram comida brasileira.",
+     "why": "\"Have never tried\" = nunca experimentaram."
+    },
+    {
+     "id": "b1u1l2-4",
+     "type": "build",
+     "pt": "Eu nunca fui ao exterior.",
+     "answer": "I have never been abroad",
+     "extra": [
+      "not",
+      "went"
+     ],
+     "display": "I have never been abroad.",
+     "why": "\"Never\" já é negativo. \"Abroad\" = no exterior (sem \"to\")."
+    },
+    {
+     "id": "b1u1l2-5",
+     "type": "listen",
+     "en": "She has lost her keys again.",
+     "options": [
+      "Ela perdeu as chaves de novo.",
+      "Ela achou as chaves de novo.",
+      "Ela vai perder as chaves."
+     ],
+     "answer": "Ela perdeu as chaves de novo.",
+     "why": "\"Has lost\" = perdeu (o resultado importa agora: está sem as chaves)."
+    },
+    {
+     "id": "b1u1l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "seen",
+       "visto"
+      ],
+      [
+       "eaten",
+       "comido"
+      ],
+      [
+       "written",
+       "escrito"
+      ],
+      [
+       "bought",
+       "comprado"
+      ],
+      [
+       "made",
+       "feito"
+      ]
+     ],
+     "why": "Esses são particípios irregulares muito usados."
+    }
+   ]
+  },
+  {
+   "id": "b1-u1-l3",
+   "title": "Ever, never e quando",
+   "items": [
+    {
+     "id": "b1u1l3-1",
+     "type": "meaning",
+     "en": "I've never driven a car.",
+     "options": [
+      "Eu nunca dirigi um carro.",
+      "Eu não dirijo carros.",
+      "Eu dirigi um carro ontem."
+     ],
+     "answer": "Eu nunca dirigi um carro.",
+     "why": "I've = I have. Never driven = nunca dirigi."
+    },
+    {
+     "id": "b1u1l3-2",
+     "type": "choice",
+     "prompt": "Atenção à data:",
+     "en": "I ___ to Paris in 2018.",
+     "options": [
+      "went",
+      "have been",
+      "have gone"
+     ],
+     "answer": "went",
+     "why": "Com uma data (in 2018), use o passado simples: went.",
+     "wrong": {
+      "have been": "Quando você diz QUANDO aconteceu, o inglês usa o passado simples, não o present perfect."
+     }
+    },
+    {
+     "id": "b1u1l3-3",
+     "type": "choice",
+     "en": "Have you ___ been to Rio?",
+     "options": [
+      "ever",
+      "never",
+      "yet"
+     ],
+     "answer": "ever",
+     "why": "\"Ever\" nas perguntas = alguma vez."
+    },
+    {
+     "id": "b1u1l3-4",
+     "type": "build",
+     "pt": "Ela já conheceu o presidente.",
+     "answer": "She has met the president",
+     "extra": [
+      "meet",
+      "have"
+     ],
+     "display": "She has met the president.",
+     "why": "She + has + particípio (met)."
+    },
+    {
+     "id": "b1u1l3-5",
+     "type": "listen",
+     "en": "He's never been on a plane.",
+     "options": [
+      "Ele nunca andou de avião.",
+      "Ele está num avião.",
+      "Ele sempre anda de avião."
+     ],
+     "answer": "Ele nunca andou de avião.",
+     "why": "He's aqui = he has (seguido de been)."
+    },
+    {
+     "id": "b1u1l3-6",
+     "type": "choice",
+     "en": "My parents ___ visited Europe.",
+     "options": [
+      "have never",
+      "never have",
+      "has never"
+     ],
+     "answer": "have never",
+     "why": "Ordem: have + never + particípio. Parents = they → have."
+    }
+   ]
+  },
+  {
+   "id": "b1-u1-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b1u1l4-1",
+     "type": "type",
+     "pt": "Eu já fui ao Chile.",
+     "answer": "I have been to Chile",
+     "accept": [
+      "I've been to Chile"
+     ],
+     "why": "Experiência sem data: have been to."
+    },
+    {
+     "id": "b1u1l4-2",
+     "type": "type",
+     "pt": "Você já viu neve?",
+     "answer": "Have you ever seen snow",
+     "why": "Have you ever + seen (particípio de see)."
+    },
+    {
+     "id": "b1u1l4-3",
+     "type": "dictation",
+     "en": "She has never eaten fish.",
+     "accept": [
+      "She's never eaten fish."
+     ],
+     "why": "\"Has never eaten\" = nunca comeu."
+    },
+    {
+     "id": "b1u1l4-4",
+     "type": "type",
+     "pt": "Nós nunca conhecemos o pai dele.",
+     "answer": "We have never met his father",
+     "accept": [
+      "We've never met his father"
+     ],
+     "why": "Have never met = nunca conhecemos."
+    },
+    {
+     "id": "b1u1l4-5",
+     "type": "dictation",
+     "en": "I have seen this film before.",
+     "accept": [
+      "I've seen this film before."
+     ],
+     "why": "\"Before\" no fim = antes (alguma vez)."
+    },
+    {
+     "id": "b1u1l4-6",
+     "type": "type",
+     "pt": "Ele perdeu o telefone.",
+     "answer": "He has lost his phone",
+     "accept": [
+      "He's lost his phone"
+     ],
+     "why": "Has lost: perdeu e ainda está sem o telefone."
+    }
+   ]
+  },
+  {
+   "id": "b1-u1-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b1u1l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Have you ever been to Salvador?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I have. I went there last year.",
+      "Yes, I have. I have gone there last year.",
+      "Yes, I did. I have been there last year."
+     ],
+     "answer": "Yes, I have. I went there last year.",
+     "why": "Resposta curta: Yes, I have. Depois, com a data (last year), passado simples."
+    },
+    {
+     "id": "b1u1l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Have you ever tried açaí?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, I haven't. Is it good?",
+      "No, I didn't. Is it good?",
+      "No, I don't. Is it good?"
+     ],
+     "answer": "No, I haven't. Is it good?",
+     "why": "Pergunta com have → resposta com have: No, I haven't."
+    },
+    {
+     "id": "b1u1l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What's the best place you've ever visited?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Probably Lisbon. It's beautiful.",
+      "Probably Lisbon. It has beautiful.",
+      "Probably Lisbon. I have visit it."
+     ],
+     "answer": "Probably Lisbon. It's beautiful.",
+     "why": "Resposta simples e natural: Probably Lisbon."
+    },
+    {
+     "id": "b1u1l5-4",
+     "type": "speak",
+     "en": "I've never been abroad.",
+     "pt": "Eu nunca fui ao exterior.",
+     "why": "\"Abroad\" soa \"a-BRÓD\", com força no fim."
+    },
+    {
+     "id": "b1u1l5-5",
+     "type": "speak",
+     "en": "Have you ever met a famous person?",
+     "pt": "Você já conheceu uma pessoa famosa?",
+     "why": "\"Have you ever\" na fala fica \"hav-iu-É-ver\"."
+    },
+    {
+     "id": "b1u1l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I've lost my wallet!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Oh no! Where did you last see it?",
+      "Oh no! Where have you last seen it?",
+      "Oh no! Where do you last see it?"
+     ],
+     "answer": "Oh no! Where did you last see it?",
+     "why": "Perguntando QUANDO/ONDE algo aconteceu: passado simples (did you see)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u1-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b1u1l6-1",
+     "type": "choice",
+     "en": "Have you ever ___ a horse?",
+     "options": [
+      "ridden",
+      "rode",
+      "ride"
+     ],
+     "answer": "ridden",
+     "why": "Particípio de ride: ridden."
+    },
+    {
+     "id": "b1u1l6-2",
+     "type": "type",
+     "pt": "Eu nunca comi comida japonesa.",
+     "answer": "I have never eaten Japanese food",
+     "accept": [
+      "I've never eaten Japanese food"
+     ],
+     "why": "Have never + eaten."
+    },
+    {
+     "id": "b1u1l6-3",
+     "type": "meaning",
+     "en": "We have already met.",
+     "options": [
+      "Nós já nos conhecemos.",
+      "Nós nunca nos conhecemos.",
+      "Nós vamos nos conhecer."
+     ],
+     "answer": "Nós já nos conhecemos.",
+     "why": "\"Already\" = já."
+    },
+    {
+     "id": "b1u1l6-4",
+     "type": "choice",
+     "en": "She ___ to Japan last summer.",
+     "options": [
+      "went",
+      "has been",
+      "has gone"
+     ],
+     "answer": "went",
+     "why": "\"Last summer\" é um momento definido: passado simples."
+    },
+    {
+     "id": "b1u1l6-5",
+     "type": "dictation",
+     "en": "Have you ever been abroad?",
+     "why": "\"Abroad\" = no exterior, sem \"to\" antes."
+    },
+    {
+     "id": "b1u1l6-6",
+     "type": "speak",
+     "en": "She has seen this film twice.",
+     "pt": "Ela já viu esse filme duas vezes.",
+     "why": "\"Twice\" = duas vezes. Soa \"tuáis\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u1-l7",
+   "title": "História: A lista de desejos",
+   "story": {
+    "title": "A lista de desejos",
+    "lines": [
+     {
+      "who": "Laura",
+      "en": "Look at this list. These are things I want to do in my life.",
+      "pt": "Olha essa lista. São coisas que eu quero fazer na vida."
+     },
+     {
+      "who": "Ben",
+      "en": "Interesting! Have you ever been to another country?",
+      "pt": "Interessante! Você já foi a outro país?"
+     },
+     {
+      "who": "Laura",
+      "en": "Yes, I have. I've ___ to Peru and Chile.",
+      "pt": "Sim, já. Já fui ao Peru e ao Chile.",
+      "gap": {
+       "answer": "been",
+       "options": [
+        "been",
+        "gone",
+        "went"
+       ]
+      }
+     },
+     {
+      "who": "Ben",
+      "en": "Wow! I've never been abroad.",
+      "pt": "Uau! Eu nunca fui ao exterior."
+     },
+     {
+      "ask": "O Ben já foi ao exterior?",
+      "options": [
+       "Não, nunca foi",
+       "Sim, ao Peru",
+       "Sim, ao Chile"
+      ],
+      "answer": "Não, nunca foi",
+      "why": "\"I've never been abroad\" = nunca fui ao exterior."
+     },
+     {
+      "who": "Laura",
+      "en": "Number three: swim with dolphins. I've never ___ that.",
+      "pt": "Número três: nadar com golfinhos. Nunca fiz isso.",
+      "gap": {
+       "answer": "done",
+       "options": [
+        "done",
+        "did",
+        "do"
+       ]
+      }
+     },
+     {
+      "who": "Ben",
+      "en": "I did that last year in Bahia!",
+      "pt": "Eu fiz isso no ano passado, na Bahia!"
+     },
+     {
+      "who": "Laura",
+      "en": "Really? Was it difficult?",
+      "pt": "Sério? Foi difícil?"
+     },
+     {
+      "who": "Ben",
+      "en": "Not at all. It was the best experience I've ever ___.",
+      "pt": "Nem um pouco. Foi a melhor experiência que já tive.",
+      "gap": {
+       "answer": "had",
+       "options": [
+        "had",
+        "have",
+        "having"
+       ]
+      }
+     },
+     {
+      "ask": "Quando o Ben nadou com golfinhos?",
+      "options": [
+       "No ano passado",
+       "Nunca nadou",
+       "Na semana passada"
+      ],
+      "answer": "No ano passado",
+      "why": "\"I did that last year\" = no ano passado."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u1l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u1l7-2",
+     "type": "quiz",
+     "q": "Em quais países a Laura já esteve?",
+     "options": [
+      "Peru e Chile",
+      "Argentina e Chile",
+      "Nenhum"
+     ],
+     "answer": "Peru e Chile",
+     "why": "\"I've been to Peru and Chile\"."
+    },
+    {
+     "id": "b1u1l7-3",
+     "type": "quiz",
+     "q": "O que é o número três da lista?",
+     "options": [
+      "Nadar com golfinhos",
+      "Ir ao Peru",
+      "Aprender a dirigir"
+     ],
+     "answer": "Nadar com golfinhos",
+     "why": "\"Number three: swim with dolphins\"."
+    },
+    {
+     "id": "b1u1l7-4",
+     "type": "quiz",
+     "q": "Como foi a experiência do Ben?",
+     "options": [
+      "A melhor que ele já teve",
+      "Muito difícil",
+      "Chata"
+     ],
+     "answer": "A melhor que ele já teve",
+     "why": "\"the best experience I've ever had\"."
+    }
+   ]
+  }
+ ]
+}

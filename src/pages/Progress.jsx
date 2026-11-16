@@ -5,6 +5,9 @@ import { useAuth } from '../lib/auth.jsx';
 import { useInstall } from '../lib/install.js';
 import { useNavigate } from 'react-router-dom';
 import { Shell, Spinner, Icon, Fire, Bolt } from '../components/ui.jsx';
+import { Missions } from '../components/Missions.jsx';
+import { ShareButton, progressCard } from '../components/ShareCard.jsx';
+import Reminder from '../components/Reminder.jsx';
 
 export default function Progress() {
   const prog = useProgress();
@@ -40,13 +43,18 @@ export default function Progress() {
             <h1 style={{ margin: '0 0 4px', fontSize: 32 }}>{profile?.display_name || 'Meu progresso'}</h1>
             <p style={{ margin: 0, color: 'var(--on-dark)' }}>Estudando desde {since} · Meta diária: {goal} XP</p>
           </div>
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--on-dark)' }}><Icon name="cloud" color="var(--lime)" />Progresso salvo na nuvem</span>
+          <ShareButton card={progressCard({ xp: profile?.xp_total || 0, streak: liveStreak(profile), level, lessons: lessonsDone })} name={profile?.display_name?.split(' ')[0]} label="Compartilhar progresso" className="btn btn-lime" />
         </div>
 
         <div className="stats4">
           {stats.map(([ic, v, l]) => (
             <div key={l} className="card">{ic}<b style={{ display: 'block', fontFamily: 'var(--head)', fontSize: 32, margin: '10px 0 2px' }}>{v}</b><span className="muted" style={{ fontSize: 14 }}>{l}</span></div>
           ))}
+        </div>
+
+        <div className="two">
+          <Missions />
+          <Reminder />
         </div>
 
         <div className="two">

@@ -50,3 +50,25 @@ export function speak(text, { slow = false } = {}) {
   u.rate = slow ? 0.6 : 0.9;
   window.speechSynthesis.speak(u);
 }
+
+// Fala e espera terminar (para o modo fone). lang 'pt' usa uma voz em português.
+let ptVoice = null;
+export function speakAsync(text, { slow = false, lang = 'en' } = {}) {
+  return new Promise((resolve) => {
+    if (!canSpeak()) { setTimeout(resolve, 600); return; }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    if (lang === 'pt') {
+      ptVoice ||= (window.speechSynthesis.getVoices() || []).find(v => /pt-BR/i.test(v.lang)) || null;
+      u.lang = 'pt-BR'; if (ptVoice) u.voice = ptVoice; u.rate = 1;
+    } else {
+      u.lang = 'en-US'; if (voice) u.voice = voice; u.rate = slow ? 0.6 : 0.9;
+    }
+    let done = false;
+    const end = () => { if (!done) { done = true; resolve(); } };
+    u.onend = end; u.onerror = end;
+    // segurança: alguns navegadores não disparam onend
+    setTimeout(end, 1500 + text.length * (slow ? 140 : 90));
+    window.speechSynthesis.speak(u);
+  });
+}

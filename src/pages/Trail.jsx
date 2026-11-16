@@ -4,6 +4,7 @@ import { UNITS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, NEXT_LEVEL, unitsOf, lessonSta
 import { useProgress, liveStreak, todayBR, dueLessonIds } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { Shell, Spinner, Icon, Fire, Bolt, Anim } from '../components/ui.jsx';
+import { Missions } from '../components/Missions.jsx';
 
 export function Rail({ prog }) {
   const { profile } = useAuth();
@@ -33,6 +34,7 @@ export function Rail({ prog }) {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,minmax(0,1fr))', gap: 6, marginTop: 6, fontSize: 12, fontWeight: 600, color: 'var(--text3)', textAlign: 'center' }}>{['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(l => <span key={l}>{l}</span>)}</div>
       </div>
+      <Missions compact />
       {dueLessonIds(prog.scores).length > 0 && (
         <div className="card" style={{ borderColor: 'var(--violet-ring)' }}>
           <b style={{ display: 'block', marginBottom: 6 }}>Hora de relembrar</b>

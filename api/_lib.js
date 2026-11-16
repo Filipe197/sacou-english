@@ -38,7 +38,7 @@ export async function guard(req, kind) {
   if (req.method !== 'POST') throw new HttpError(405, 'Use POST.');
   const token = (req.headers.authorization || '').replace(/^Bearer\s+/i, '');
   if (!token) throw new HttpError(401, 'Entre na sua conta para usar o professor.');
-  if (MOCK) return { user: { id: 'mock' }, left: 99 };
+  if (MOCK) return { user: { id: 'mock' }, left: 99, sb: null };
   const url = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   const key = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
   if (!url || !key) throw new HttpError(500, 'Servidor sem configuração do Supabase.');
@@ -54,7 +54,7 @@ export async function guard(req, kind) {
     throw new HttpError(500, 'Não consegui verificar seu limite agora. Tente de novo.');
   }
   if (left < 0) throw new HttpError(429, 'Você chegou ao limite de hoje do professor de IA. Amanhã tem mais!');
-  return { user: u.user, left };
+  return { user: u.user, left, sb };
 }
 
 export function readBody(req) {

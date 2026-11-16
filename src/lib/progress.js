@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { supabase } from './supabase.js';
 import { useAuth } from './auth.jsx';
+import { queuedLessonIds } from './offline.js';
 
 export function todayBR() {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date());
@@ -23,7 +24,7 @@ export function useProgress() {
     setState({
       loading: false,
       error: err ? 'Não foi possível carregar seu progresso. Verifique a conexão.' : null,
-      done: new Set((lp.data || []).map(r => r.lesson_id)),
+      done: new Set([...(lp.data || []).map(r => r.lesson_id), ...queuedLessonIds(user.id)]),
       scores: Object.fromEntries((lp.data || []).map(r => [r.lesson_id, r])),
       mistakes: mk.data || [],
       week: dx.data || [],

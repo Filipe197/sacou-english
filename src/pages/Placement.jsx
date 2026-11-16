@@ -14,10 +14,10 @@ export default function Placement() {
   const { updateProfile } = useAuth();
   const [started, setStarted] = useState(false);
   const [params] = useSearchParams();
-  const upTo = LEVEL_ORDER.indexOf(params.get('ate') === 'A2' ? 'A2' : 'A1');
+  const upTo = LEVEL_ORDER.indexOf(['A2', 'B1'].includes(params.get('ate')) ? params.get('ate') : 'A1');
   const units = UNITS.filter(u => LEVEL_ORDER.indexOf(u.level) <= upTo);
   const entries = useMemo(() => units.flatMap(u => {
-    const per = upTo > 0 && u.level === 'A1' ? 2 : 3; // no teste longo, menos perguntas do básico
+    const per = upTo > 0 && LEVEL_ORDER.indexOf(u.level) < upTo ? 2 : 3; // no teste longo, menos perguntas dos níveis de baixo
     return shuffle(u.lessons.flatMap(l => l.items.filter(i => !['match', 'speak', 'story', 'quiz'].includes(i.type)).map(item => ({ item, lessonId: l.id, unit: u })))).slice(0, per);
   }), [upTo]);
 
@@ -28,7 +28,7 @@ export default function Placement() {
         <div className="card" style={{ maxWidth: 560, padding: 32 }}>
           <h1 style={{ fontSize: 32, margin: '0 0 12px' }}>Teste de nível</h1>
           <p className="muted" style={{ fontSize: 17, lineHeight: 1.6, margin: '0 0 16px' }}>
-            São {entries.length} perguntas rápidas sobre o conteúdo {upTo > 0 ? 'dos níveis A1 e A2' : 'do nível A1'}. Não tem problema errar: o teste só serve para descobrir <b>por onde você começa</b>.
+            São {entries.length} perguntas rápidas sobre o conteúdo {upTo === 2 ? 'dos níveis A1, A2 e B1' : upTo === 1 ? 'dos níveis A1 e A2' : 'do nível A1'}. Não tem problema errar: o teste só serve para descobrir <b>por onde você começa</b>.
           </p>
           <ul style={{ margin: '0 0 24px', paddingLeft: 20, lineHeight: 1.8, color: 'var(--text2)' }}>
             <li>Cada unidade em que você acertar pelo menos 2 de cada 3 perguntas é marcada como concluída (a partir da primeira).</li>

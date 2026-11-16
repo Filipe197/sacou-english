@@ -15,7 +15,8 @@ npm run dev
 
 1. **Banco:** Supabase → SQL Editor → cole `supabase/schema.sql` → Run. Depois rode também
    `supabase/002_admin.sql` (painel), `supabase/003_caderno.sql` (caderno digital) e
-   `supabase/004_ia.sql` (limite diário do professor de IA).
+   `supabase/004_ia.sql` (limite diário do professor de IA) e `supabase/005_turmas_missoes.sql`
+   (missões, turmas, lembretes, treino com IA e lição feita sem internet).
 2. **Login:** Supabase → Authentication → URL Configuration → *Site URL* = endereço do site na Vercel
    e, em *Redirect URLs*, adicione `https://SEU-SITE.vercel.app/**` e `http://localhost:5173/**`.
 3. **Vercel:** importe o repositório e cadastre as variáveis `VITE_SUPABASE_URL` e
@@ -29,6 +30,11 @@ npm run dev
    Se as duas chaves existirem, `AI_PROVIDER=deepseek` ou `AI_PROVIDER=anthropic` escolhe qual usar
    (sem isso, vale a DeepSeek). Para usar no PC, coloque as mesmas variáveis no `.env`.
 
+5. **Lembretes no celular (opcional):** na Vercel, cadastre `VITE_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`
+   e `CRON_SECRET` (os valores estão no seu `.env`, gerados uma vez) e `SUPABASE_SERVICE_ROLE_KEY`
+   (Supabase → Project Settings → API Keys → secret / service_role). A Vercel chama `api/lembrete.js`
+   todo dia às 19h de Brasília (`vercel.json` → `crons`).
+
 ## Professor de IA e conversa
 
 - **Por que errei?** No feedback de um erro, o aluno pede ao professor uma explicação do erro *dele*
@@ -39,6 +45,11 @@ npm run dev
   não entendeu e dá dicas para os sons difíceis para brasileiros. Roda no navegador, sem custo de IA
   (`src/lib/pronounce.js`, `src/components/Pronounce.jsx`).
 - Limite por aluno por dia (em `supabase/004_ia.sql`): 40 explicações, 60 falas na conversa e 8 resumos.
+- **Treino infinito** (`api/treino.js`): na revisão, a IA cria exercícios novos sobre os erros do aluno; cada
+  frase passa pela mesma checagem CEFR-J do build (`scripts/cefr.mjs`) e o que não passar é descartado.
+- **Professor que lembra:** a explicação do erro considera os erros que o aluno mais repete.
+- **Modo fone** (`/fone`), **missões da semana**, **card para o story**, **turmas** (`/turmas`) e
+  **lição sem internet** (fica salva no aparelho e sobe quando a conexão volta: `src/lib/offline.js`).
 - Teste local sem gastar: `AI_MOCK=1` no `.env` devolve respostas de exemplo (não funciona em produção).
 
 ## Conteúdo

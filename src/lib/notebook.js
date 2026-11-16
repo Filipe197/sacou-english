@@ -99,6 +99,21 @@ async function flush() {
   if (!err && Object.keys(pending).length) scheduleFlush();
 }
 
+// Ao sair da conta: tenta enviar o que falta (até 3 s) e apaga o caderno deste aparelho,
+// para quem usar o celular depois não ver as anotações de outra pessoa.
+export async function clearNotebookCache() {
+  try { await Promise.race([flush(), new Promise(r => setTimeout(r, 3000))]); } catch { /* segue */ }
+  try {
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith('sacou-caderno:')) localStorage.removeItem(k);
+    }
+  } catch { /* sem acesso ao armazenamento */ }
+  clearTimeout(flushTimer); clearTimeout(retryTimer);
+  uid = null; notes = []; pending = {}; loaded = false; sync = 'idle';
+  emit();
+}
+
 if (typeof window !== 'undefined') {
   window.addEventListener('online', () => flush());
   window.addEventListener('beforeunload', () => { if (Object.keys(pending).length) flush(); });

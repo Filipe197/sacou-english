@@ -129,7 +129,7 @@ export default function Landing() {
         <div className="wrap">
           <p className="eyebrow">Sua jornada</p>
           <h2 style={{ marginBottom: 16 }}>Seis níveis, do “hello” à fluência.</h2>
-          <p className="muted" style={{ margin: '0 0 40px', fontSize: 18, lineHeight: 1.6, maxWidth: 680 }}>Seguimos o Quadro Europeu Comum de Referência (CEFR), o mesmo padrão usado por escolas e certificados internacionais. Os níveis A1 e A2 já estão disponíveis; os próximos estão em produção.</p>
+          <p className="muted" style={{ margin: '0 0 40px', fontSize: 18, lineHeight: 1.6, maxWidth: 680 }}>Seguimos o Quadro Europeu Comum de Referência (CEFR), o mesmo padrão usado por escolas e certificados internacionais. Os níveis A1, A2 e B1 já estão disponíveis; os próximos estão em produção.</p>
           <div className="grid6">
             {LEVELS.map(([c, n, d], i) => (
               <div key={c} className="card" style={{ display: 'flex', flexDirection: 'column', gap: 8, borderRadius: 20, background: i === 5 ? 'var(--ink)' : '#fff', color: i === 5 ? '#fff' : undefined }}>

@@ -9,6 +9,7 @@ import { getNewWords } from '../lib/hints.js';
 import { LessonCtx, SaveItemButton } from './LessonNotes.jsx';
 import { PronWords, WordCoach, useListen, getSR } from './Pronounce.jsx';
 import { alignSpeech } from '../lib/pronounce.js';
+import { ShareButton } from './ShareCard.jsx';
 const NotebookDrawer = lazy(() => import('./NotebookDrawer.jsx'));
 const Tutor = lazy(() => import('./Tutor.jsx'));
 
@@ -492,6 +493,13 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
           {result.streak != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Sequência</span><b>{result.streak} {result.streak === 1 ? 'dia' : 'dias'}</b></div>}
         </div>
         {result.error && <div className="alert" role="alert" style={{ maxWidth: 480 }}>{result.error}</div>}
+        {result.share && (
+          <div className="share-cta">
+            <b>Conquista desbloqueada! 🎉</b>
+            <span className="muted">Gere uma imagem para o seu story e mostre para os amigos.</span>
+            <ShareButton card={result.share.card} name={result.share.name} className="btn btn-lime btn-lg btn-3d" />
+          </div>
+        )}
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
           {result.next && <Link className="btn btn-violet btn-lg btn-3d" to={`/licao/${result.next.id}`} autoFocus>Próxima lição: {result.next.title}</Link>}
           <Link className={'btn btn-lg ' + (result.next ? 'btn-out' : 'btn-violet btn-3d')} to={result.to || exitTo} autoFocus={!result.next}>{result.next ? 'Voltar para a trilha' : finishCta}</Link>

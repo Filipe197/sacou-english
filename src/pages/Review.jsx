@@ -1,22 +1,63 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import LessonRunner from '../components/LessonRunner.jsx';
-import { getItem } from '../lib/content.js';
+import { getItem, getUnit, getLesson } from '../lib/content.js';
+import { askAI } from '../lib/ai.js';
 import { useProgress } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { supabase } from '../lib/supabase.js';
+import { logActivity } from '../lib/offline.js';
 import { Shell, Spinner, Icon, Anim } from '../components/ui.jsx';
 
 export default function Review() {
   const prog = useProgress();
-  const { setProfile } = useAuth();
+  const { user, setProfile } = useAuth();
   const [started, setStarted] = useState(false);
+  const [ai, setAi] = useState(null); // treino gerado pela IA
+  const [aiBusy, setAiBusy] = useState(false);
+  const [aiErr, setAiErr] = useState('');
+  const [aiRun, setAiRun] = useState(0);
+
+  // "Voltar" no fim do treino abre /revisao de novo: sai do treino
+  const loc = useLocation();
+  useEffect(() => { setAi(null); setStarted(false); }, [loc.key]);
+
+  async function startAI() {
+    setAiBusy(true); setAiErr('');
+    try {
+      const r = await askAI('treino', {});
+      const list = r.items.map(it => ({ item: it, lessonId: it.lessonId, unit: getUnit(it.unitId), story: getLesson(it.lessonId)?.story })).filter(e => e.unit);
+      if (!list.length) throw new Error('Não consegui montar o treino agora. Tente de novo.');
+      setAi(list); setAiRun(n => n + 1);
+    } catch (e) { setAiErr(e.message); }
+    setAiBusy(false);
+  }
 
   const entries = useMemo(() => prog.mistakes
     .map(m => { const f = getItem(m.item_id); return f && f.item.type !== 'story' && { item: f.item, lessonId: f.lesson.id, unit: f.lesson.unit, story: f.lesson.story, times: m.times }; })
     .filter(Boolean).slice(0, 10), [prog.mistakes]);
 
   if (prog.loading) return <Spinner />;
+
+  if (ai) {
+    return (
+      <LessonRunner
+        key={aiRun}
+        introduceWords={false}
+        entries={ai}
+        title="Treino infinito"
+        exitTo="/revisao"
+        retryWrong
+        finishCta="Voltar"
+        onFinish={async ({ score }) => {
+          const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'treino-ia', p_score: score, p_xp: 5 });
+          if (data) setProfile(data);
+          logActivity(user?.id, 'treino');
+          return { xp: 5, streak: data?.streak, title: 'Treino concluído!', message: 'Exercícios novos, feitos sob medida para os seus erros. Quer mais? Gere outro treino quando quiser.', to: '/revisao' };
+        }}
+      />
+    );
+  }
 
   if (started && entries.length) {
     return (
@@ -31,6 +72,7 @@ export default function Review() {
         onFinish={async ({ score }) => {
           const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'review', p_score: score, p_xp: 5 });
           if (data) setProfile(data);
+          logActivity(user?.id, 'review');
           return { xp: 5, streak: data?.streak, title: 'Revisão concluída!', message: 'O que você acertou saiu da lista. O que errou de novo continua aqui para a próxima revisão.', to: '/aprender' };
         }}
       />
@@ -61,6 +103,15 @@ export default function Review() {
                 <p style={{ margin: '4px 0 0', color: 'var(--on-dark)' }}>Uma sessão tem até 10 exercícios e leva uns 3 minutos.</p>
               </div>
               <button className="btn btn-lime btn-lg" onClick={() => setStarted(true)}>Começar revisão</button>
+            </div>
+            <div className="card ai-train">
+              <div>
+                <span className="ai-tag"><Icon name="sparkle" size={14} />Treino infinito</span>
+                <b style={{ display: 'block', fontSize: 19, margin: '8px 0 4px' }}>Exercícios novos sobre os seus erros</b>
+                <p className="muted" style={{ margin: 0, fontSize: 15, lineHeight: 1.5 }}>O professor cria frases diferentes treinando as mesmas regras em que você tropeçou. Cada treino é único, e todas as palavras são conferidas na lista oficial do seu nível.</p>
+                {aiErr && <div className="alert" role="alert" style={{ marginTop: 10 }}>{aiErr}</div>}
+              </div>
+              <button className="btn btn-violet btn-lg" onClick={startAI} disabled={aiBusy}><Icon name="sparkle" size={18} color="#fff" />{aiBusy ? 'Criando seu treino…' : 'Gerar treino'}</button>
             </div>
             <h2 style={{ fontSize: 20, margin: '32px 0 12px' }}>O que você vai revisar</h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>

@@ -1,0 +1,713 @@
+{
+ "id": "b1-u2",
+ "level": "B1",
+ "order": 2,
+ "title": "Desde quando?",
+ "subtitle": "Present perfect com for, since, already, yet e just.",
+ "can_do": {
+  "text": "Consigo dizer há quanto tempo algo acontece e o que já fiz ou ainda não fiz hoje.",
+  "source": "CEFR (Conselho da Europa) — Troca de informações, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: present perfect with for / since",
+  "Grammar: already / yet / just",
+  "Grammar: How long have you...?",
+  "Functions: describing duration"
+ ],
+ "words": [
+  [
+   "for",
+   "há (tempo) / durante"
+  ],
+  [
+   "since",
+   "desde"
+  ],
+  [
+   "already",
+   "já"
+  ],
+  [
+   "yet",
+   "ainda (em negativas) / já (em perguntas)"
+  ],
+  [
+   "just",
+   "acabei de"
+  ],
+  [
+   "how long",
+   "há quanto tempo"
+  ],
+  [
+   "known",
+   "conhecido (de know)"
+  ],
+  [
+   "lived",
+   "morado"
+  ],
+  [
+   "finished",
+   "terminado"
+  ],
+  [
+   "recently",
+   "recentemente"
+  ]
+ ],
+ "guide": {
+  "title": "For, since, already, yet e just",
+  "intro": "O present perfect também liga o passado ao agora: algo que começou antes e continua (\"moro aqui há 5 anos\") ou que acabou de acontecer. Em português usamos o presente; em inglês, o present perfect.",
+  "points": [
+   {
+    "en": "I have lived here for five years.",
+    "pt": "Moro aqui há cinco anos.",
+    "note": "For + quantidade de tempo (five years, two days)."
+   },
+   {
+    "en": "She has worked here since 2020.",
+    "pt": "Ela trabalha aqui desde 2020.",
+    "note": "Since + ponto de início (2020, Monday, I was a child)."
+   },
+   {
+    "en": "How long have you known him?",
+    "pt": "Há quanto tempo você o conhece?",
+    "note": "Nunca \"How long do you know him?\"."
+   },
+   {
+    "en": "I've already finished. I haven't eaten yet.",
+    "pt": "Já terminei. Ainda não comi.",
+    "note": "Already (já) no meio; yet (ainda) no fim, em negativas e perguntas."
+   },
+   {
+    "en": "He's just arrived.",
+    "pt": "Ele acabou de chegar.",
+    "note": "Just = acabou de. Fica entre have/has e o particípio."
+   }
+  ],
+  "tips": [
+   "Erro clássico de brasileiro: \"I live here for five years\". O certo é \"I have lived here for five years\".",
+   "\"Yet\" só vai no fim: \"Have you finished yet?\" / \"I haven't finished yet\"."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b1-u2-l1",
+   "title": "For e since",
+   "items": [
+    {
+     "id": "b1u2l1-1",
+     "type": "meaning",
+     "en": "I have lived in Rio for ten years.",
+     "options": [
+      "Moro no Rio há dez anos.",
+      "Morei no Rio dez anos atrás.",
+      "Vou morar no Rio por dez anos."
+     ],
+     "answer": "Moro no Rio há dez anos.",
+     "why": "Present perfect + for: algo que começou e continua. Em português: \"moro há\"."
+    },
+    {
+     "id": "b1u2l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She has worked here ___ 2019.",
+     "options": [
+      "since",
+      "for",
+      "ago"
+     ],
+     "answer": "since",
+     "why": "Since + ponto de início (2019).",
+     "wrong": {
+      "for": "\"For\" vai com quantidade de tempo (for four years), não com o ano."
+     }
+    },
+    {
+     "id": "b1u2l1-3",
+     "type": "choice",
+     "en": "We have known each other ___ six months.",
+     "options": [
+      "for",
+      "since",
+      "during"
+     ],
+     "answer": "for",
+     "why": "For + quantidade de tempo (six months)."
+    },
+    {
+     "id": "b1u2l1-4",
+     "type": "build",
+     "pt": "Há quanto tempo você mora aqui?",
+     "answer": "How long have you lived here",
+     "extra": [
+      "do",
+      "live"
+     ],
+     "display": "How long have you lived here?",
+     "why": "How long + have you + particípio."
+    },
+    {
+     "id": "b1u2l1-5",
+     "type": "choice",
+     "en": "I ___ this car since I was twenty.",
+     "options": [
+      "have had",
+      "have",
+      "had"
+     ],
+     "answer": "have had",
+     "why": "Algo que começou no passado e continua: have had."
+    },
+    {
+     "id": "b1u2l1-6",
+     "type": "listen",
+     "en": "He's been a teacher for a long time.",
+     "options": [
+      "Ele é professor há muito tempo.",
+      "Ele foi professor há muito tempo.",
+      "Ele vai ser professor."
+     ],
+     "answer": "Ele é professor há muito tempo.",
+     "why": "He's been = he has been: é (e continua sendo) há muito tempo."
+    }
+   ]
+  },
+  {
+   "id": "b1-u2-l2",
+   "title": "Already, yet e just",
+   "items": [
+    {
+     "id": "b1u2l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I've ___ finished my homework.",
+     "options": [
+      "already",
+      "yet",
+      "ever"
+     ],
+     "answer": "already",
+     "why": "\"Already\" = já, no meio da frase."
+    },
+    {
+     "id": "b1u2l2-2",
+     "type": "choice",
+     "en": "She hasn't called me ___.",
+     "options": [
+      "yet",
+      "already",
+      "just"
+     ],
+     "answer": "yet",
+     "why": "\"Yet\" em negativas = ainda, sempre no fim."
+    },
+    {
+     "id": "b1u2l2-3",
+     "type": "meaning",
+     "en": "They've just left.",
+     "options": [
+      "Eles acabaram de sair.",
+      "Eles saíram faz tempo.",
+      "Eles vão sair."
+     ],
+     "answer": "Eles acabaram de sair.",
+     "why": "\"Just\" = acabou de."
+    },
+    {
+     "id": "b1u2l2-4",
+     "type": "build",
+     "pt": "Você já terminou?",
+     "answer": "Have you finished yet",
+     "extra": [
+      "already",
+      "did"
+     ],
+     "display": "Have you finished yet?",
+     "why": "Em perguntas, \"yet\" no fim = já."
+    },
+    {
+     "id": "b1u2l2-5",
+     "type": "listen",
+     "en": "I've just had lunch.",
+     "options": [
+      "Acabei de almoçar.",
+      "Ainda não almocei.",
+      "Vou almoçar agora."
+     ],
+     "answer": "Acabei de almoçar.",
+     "why": "\"Just had lunch\" = acabei de almoçar."
+    },
+    {
+     "id": "b1u2l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "already",
+       "já"
+      ],
+      [
+       "yet",
+       "ainda (negativa)"
+      ],
+      [
+       "just",
+       "acabou de"
+      ],
+      [
+       "since",
+       "desde"
+      ],
+      [
+       "for",
+       "há (tempo)"
+      ]
+     ],
+     "why": "Palavras-chave do present perfect."
+    }
+   ]
+  },
+  {
+   "id": "b1-u2-l3",
+   "title": "O que já foi feito",
+   "items": [
+    {
+     "id": "b1u2l3-1",
+     "type": "meaning",
+     "en": "We haven't decided yet.",
+     "options": [
+      "Ainda não decidimos.",
+      "Já decidimos.",
+      "Nunca decidimos."
+     ],
+     "answer": "Ainda não decidimos.",
+     "why": "\"Haven't ... yet\" = ainda não."
+    },
+    {
+     "id": "b1u2l3-2",
+     "type": "choice",
+     "en": "How long ___ you had this phone?",
+     "options": [
+      "have",
+      "do",
+      "are"
+     ],
+     "answer": "have",
+     "why": "How long + have you + particípio."
+    },
+    {
+     "id": "b1u2l3-3",
+     "type": "choice",
+     "en": "I've been here ___ two o'clock.",
+     "options": [
+      "since",
+      "for",
+      "at"
+     ],
+     "answer": "since",
+     "why": "Two o'clock é um ponto de início: since."
+    },
+    {
+     "id": "b1u2l3-4",
+     "type": "build",
+     "pt": "Ele acabou de chegar.",
+     "answer": "He has just arrived",
+     "extra": [
+      "arrive",
+      "yet"
+     ],
+     "display": "He has just arrived.",
+     "why": "Has + just + particípio."
+    },
+    {
+     "id": "b1u2l3-5",
+     "type": "listen",
+     "en": "I haven't seen her since Monday.",
+     "options": [
+      "Não a vejo desde segunda.",
+      "Vou vê-la na segunda.",
+      "Eu a vi na segunda."
+     ],
+     "answer": "Não a vejo desde segunda.",
+     "why": "\"Since Monday\" = desde segunda."
+    },
+    {
+     "id": "b1u2l3-6",
+     "type": "choice",
+     "en": "My sister has ___ bought a new house.",
+     "options": [
+      "just",
+      "yet",
+      "ever"
+     ],
+     "answer": "just",
+     "why": "Just = acabou de (entre has e o particípio)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u2-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b1u2l4-1",
+     "type": "type",
+     "pt": "Moro aqui há três anos.",
+     "answer": "I have lived here for three years",
+     "accept": [
+      "I've lived here for three years"
+     ],
+     "why": "Present perfect + for (não \"I live here for\")."
+    },
+    {
+     "id": "b1u2l4-2",
+     "type": "type",
+     "pt": "Ela trabalha lá desde 2021.",
+     "answer": "She has worked there since 2021",
+     "accept": [
+      "She's worked there since 2021"
+     ],
+     "why": "Since + o ano em que começou (2021)."
+    },
+    {
+     "id": "b1u2l4-3",
+     "type": "dictation",
+     "en": "I haven't finished yet.",
+     "accept": [
+      "I have not finished yet."
+     ],
+     "why": "\"Yet\" no fim da negativa = ainda."
+    },
+    {
+     "id": "b1u2l4-4",
+     "type": "type",
+     "pt": "Já fiz o jantar.",
+     "answer": "I have already made dinner",
+     "accept": [
+      "I've already made dinner"
+     ],
+     "why": "Already no meio: have already + particípio."
+    },
+    {
+     "id": "b1u2l4-5",
+     "type": "dictation",
+     "en": "How long have you known him?",
+     "why": "Há quanto tempo você o conhece?"
+    },
+    {
+     "id": "b1u2l4-6",
+     "type": "type",
+     "pt": "Eles acabaram de sair.",
+     "answer": "They have just left",
+     "accept": [
+      "They've just left"
+     ],
+     "why": "Just + particípio (left)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u2-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b1u2l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How long have you studied English?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "For about two years.",
+      "Since about two years.",
+      "About two years ago."
+     ],
+     "answer": "For about two years.",
+     "why": "Quantidade de tempo: for."
+    },
+    {
+     "id": "b1u2l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Have you done the shopping yet?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I've already done it.",
+      "Yes, I've done it yet.",
+      "Yes, I do it already."
+     ],
+     "answer": "Yes, I've already done it.",
+     "why": "Resposta positiva: already (no meio)."
+    },
+    {
+     "id": "b1u2l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is Paulo here?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, he's just left. You missed him!",
+      "No, he just leaves. You missed him!",
+      "No, he's leave just. You missed him!"
+     ],
+     "answer": "No, he's just left. You missed him!",
+     "why": "He's just left = acabou de sair."
+    },
+    {
+     "id": "b1u2l5-4",
+     "type": "speak",
+     "en": "I've lived here since 2015.",
+     "pt": "Moro aqui desde 2015.",
+     "why": "\"Since\" soa \"sins\"."
+    },
+    {
+     "id": "b1u2l5-5",
+     "type": "speak",
+     "en": "I haven't had breakfast yet.",
+     "pt": "Ainda não tomei café da manhã.",
+     "why": "\"Yet\" no final, bem curto."
+    },
+    {
+     "id": "b1u2l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How long have you had your dog?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Since I was a child.",
+      "For I was a child.",
+      "Since five years."
+     ],
+     "answer": "Since I was a child.",
+     "why": "Since + um momento (I was a child)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u2-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b1u2l6-1",
+     "type": "choice",
+     "en": "I've known Ana ___ we were at school.",
+     "options": [
+      "since",
+      "for",
+      "when"
+     ],
+     "answer": "since",
+     "why": "Since + um momento no passado."
+    },
+    {
+     "id": "b1u2l6-2",
+     "type": "type",
+     "pt": "Você já comeu?",
+     "answer": "Have you eaten yet",
+     "why": "Pergunta: yet no fim."
+    },
+    {
+     "id": "b1u2l6-3",
+     "type": "meaning",
+     "en": "She has worked here for a long time.",
+     "options": [
+      "Ela trabalha aqui há muito tempo.",
+      "Ela trabalhou aqui faz tempo.",
+      "Ela vai trabalhar aqui."
+     ],
+     "answer": "Ela trabalha aqui há muito tempo.",
+     "why": "Present perfect + for: continua até hoje."
+    },
+    {
+     "id": "b1u2l6-4",
+     "type": "choice",
+     "en": "The film has ___ started. Sit down!",
+     "options": [
+      "just",
+      "yet",
+      "since"
+     ],
+     "answer": "just",
+     "why": "Acabou de começar: just."
+    },
+    {
+     "id": "b1u2l6-5",
+     "type": "dictation",
+     "en": "We have been friends for twenty years.",
+     "why": "For + twenty years."
+    },
+    {
+     "id": "b1u2l6-6",
+     "type": "speak",
+     "en": "I've just finished my work.",
+     "pt": "Acabei de terminar meu trabalho.",
+     "why": "\"Just\" bem rápido, sem \"i\" no final."
+    }
+   ]
+  },
+  {
+   "id": "b1-u2-l7",
+   "title": "História: O novo vizinho",
+   "story": {
+    "title": "O novo vizinho",
+    "lines": [
+     {
+      "who": "Rita",
+      "en": "Hi! I'm Rita. I live next door.",
+      "pt": "Oi! Sou a Rita. Moro na casa ao lado."
+     },
+     {
+      "who": "Tom",
+      "en": "Nice to meet you! I'm Tom. I've just moved here.",
+      "pt": "Prazer! Sou o Tom. Acabei de me mudar para cá."
+     },
+     {
+      "who": "Rita",
+      "en": "Welcome! How long have you ___ in Brazil?",
+      "pt": "Bem-vindo! Há quanto tempo você está no Brasil?",
+      "gap": {
+       "answer": "been",
+       "options": [
+        "been",
+        "be",
+        "was"
+       ]
+      }
+     },
+     {
+      "who": "Tom",
+      "en": "I've been here ___ three months.",
+      "pt": "Estou aqui há três meses.",
+      "gap": {
+       "answer": "for",
+       "options": [
+        "for",
+        "since",
+        "ago"
+       ]
+      }
+     },
+     {
+      "ask": "Há quanto tempo o Tom está no Brasil?",
+      "options": [
+       "Três meses",
+       "Três anos",
+       "Desde criança"
+      ],
+      "answer": "Três meses",
+      "why": "\"for three months\"."
+     },
+     {
+      "who": "Rita",
+      "en": "Have you found a job yet?",
+      "pt": "Você já arranjou emprego?"
+     },
+     {
+      "who": "Tom",
+      "en": "Yes, I've ___ started at a school. I teach English.",
+      "pt": "Sim, acabei de começar numa escola. Ensino inglês.",
+      "gap": {
+       "answer": "just",
+       "options": [
+        "just",
+        "yet",
+        "ever"
+       ]
+      }
+     },
+     {
+      "who": "Rita",
+      "en": "Great! I've wanted to practise my English for a long time.",
+      "pt": "Que ótimo! Faz tempo que quero praticar meu inglês."
+     },
+     {
+      "who": "Tom",
+      "en": "And I haven't learned much Portuguese yet. Let's help each other!",
+      "pt": "E eu ainda não aprendi muito português. Vamos nos ajudar!"
+     },
+     {
+      "ask": "O que o Tom e a Rita decidiram?",
+      "options": [
+       "Ajudar um ao outro com os idiomas",
+       "Trabalhar na mesma escola",
+       "Mudar de casa"
+      ],
+      "answer": "Ajudar um ao outro com os idiomas",
+      "why": "\"Let's help each other!\""
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u2l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u2l7-2",
+     "type": "quiz",
+     "q": "Onde a Rita mora?",
+     "options": [
+      "Na casa ao lado do Tom",
+      "Na escola",
+      "Longe do Tom"
+     ],
+     "answer": "Na casa ao lado do Tom",
+     "why": "\"I live next door\"."
+    },
+    {
+     "id": "b1u2l7-3",
+     "type": "quiz",
+     "q": "Qual é o trabalho do Tom?",
+     "options": [
+      "Professor de inglês",
+      "Estudante",
+      "Ainda não tem trabalho"
+     ],
+     "answer": "Professor de inglês",
+     "why": "\"I teach English\"."
+    },
+    {
+     "id": "b1u2l7-4",
+     "type": "quiz",
+     "q": "O Tom já aprendeu muito português?",
+     "options": [
+      "Ainda não",
+      "Sim, muito",
+      "Ele já fala bem"
+     ],
+     "answer": "Ainda não",
+     "why": "\"I haven't learned much Portuguese yet\"."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,709 @@
+{
+ "id": "b1-u4",
+ "level": "B1",
+ "order": 4,
+ "title": "Se isso acontecer…",
+ "subtitle": "First conditional, will, might e planos com condições.",
+ "can_do": {
+  "text": "Consigo falar de possibilidades reais no futuro e do que vai acontecer se algo acontecer.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: planejar, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: first conditional (if + present, will)",
+  "Grammar: might / may for possibility",
+  "Grammar: unless",
+  "Functions: making plans and predictions"
+ ],
+ "words": [
+  [
+   "if",
+   "se"
+  ],
+  [
+   "unless",
+   "a menos que"
+  ],
+  [
+   "might",
+   "talvez / pode ser que"
+  ],
+  [
+   "probably",
+   "provavelmente"
+  ],
+  [
+   "miss",
+   "perder (ônibus, voo)"
+  ],
+  [
+   "late",
+   "atrasado"
+  ],
+  [
+   "umbrella",
+   "guarda-chuva"
+  ],
+  [
+   "get wet",
+   "se molhar"
+  ],
+  [
+   "pass",
+   "passar (em prova)"
+  ],
+  [
+   "as soon as",
+   "assim que"
+  ]
+ ],
+ "guide": {
+  "title": "First conditional: se isso acontecer, aquilo vai acontecer",
+  "intro": "Para possibilidades reais no futuro, use if + presente e will no resultado. Diferente do português, depois do \"if\" NÃO se usa will: \"If it rains\" (se chover), não \"if it will rain\".",
+  "points": [
+   {
+    "en": "If it rains, I will stay at home.",
+    "pt": "Se chover, vou ficar em casa.",
+    "note": "If + presente (rains), will + verbo."
+   },
+   {
+    "en": "You'll miss the bus if you don't hurry.",
+    "pt": "Você vai perder o ônibus se não se apressar.",
+    "note": "A ordem pode inverter. Sem vírgula quando o if vem no meio."
+   },
+   {
+    "en": "I might go to the beach.",
+    "pt": "Talvez eu vá à praia.",
+    "note": "Might = possibilidade menor que will. Sem \"to\" depois."
+   },
+   {
+    "en": "We won't go unless it stops raining.",
+    "pt": "Não vamos a menos que pare de chover.",
+    "note": "Unless = if not."
+   },
+   {
+    "en": "I'll call you as soon as I arrive.",
+    "pt": "Te ligo assim que chegar.",
+    "note": "Depois de when / as soon as também vai presente."
+   }
+  ],
+  "tips": [
+   "Erro clássico: \"If I will have time\". O certo é \"If I have time\".",
+   "\"Will\" na fala vira 'll: I'll, you'll, it'll."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b1-u4-l1",
+   "title": "Se chover…",
+   "items": [
+    {
+     "id": "b1u4l1-1",
+     "type": "meaning",
+     "en": "If it rains, we will stay at home.",
+     "options": [
+      "Se chover, vamos ficar em casa.",
+      "Choveu e ficamos em casa.",
+      "Quando chove, ficamos em casa."
+     ],
+     "answer": "Se chover, vamos ficar em casa.",
+     "why": "If + presente, will + verbo: possibilidade real no futuro."
+    },
+    {
+     "id": "b1u4l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If you ___ hard, you will pass the exam.",
+     "options": [
+      "study",
+      "will study",
+      "studied"
+     ],
+     "answer": "study",
+     "why": "Depois do if, use o presente (não will).",
+     "wrong": {
+      "will study": "Depois de \"if\" o inglês não usa will. Pense em \"se você estudar\" → if you study."
+     }
+    },
+    {
+     "id": "b1u4l1-3",
+     "type": "choice",
+     "en": "If I have time, I ___ help you.",
+     "options": [
+      "will",
+      "am",
+      "do"
+     ],
+     "answer": "will",
+     "why": "O resultado usa will."
+    },
+    {
+     "id": "b1u4l1-4",
+     "type": "build",
+     "pt": "Se você se apressar, vai pegar o ônibus.",
+     "answer": "If you hurry you will catch the bus",
+     "extra": [
+      "hurries",
+      "catches"
+     ],
+     "display": "If you hurry, you will catch the bus.",
+     "why": "If + presente, will + verbo."
+    },
+    {
+     "id": "b1u4l1-5",
+     "type": "choice",
+     "en": "She'll be angry if you ___ late again.",
+     "options": [
+      "are",
+      "will be",
+      "were"
+     ],
+     "answer": "are",
+     "why": "Parte do if: presente (are)."
+    },
+    {
+     "id": "b1u4l1-6",
+     "type": "listen",
+     "en": "If I see him, I'll tell him.",
+     "options": [
+      "Se eu o vir, vou contar a ele.",
+      "Eu o vi e contei.",
+      "Eu nunca conto nada a ele."
+     ],
+     "answer": "Se eu o vir, vou contar a ele.",
+     "why": "I'll é a forma curta de I will."
+    }
+   ]
+  },
+  {
+   "id": "b1-u4-l2",
+   "title": "Will, might e unless",
+   "items": [
+    {
+     "id": "b1u4l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Take an umbrella. It ___ rain later.",
+     "options": [
+      "might",
+      "might to",
+      "mights"
+     ],
+     "answer": "might",
+     "why": "Might + verbo, sem \"to\" e sem \"s\"."
+    },
+    {
+     "id": "b1u4l2-2",
+     "type": "meaning",
+     "en": "I might not come to the party.",
+     "options": [
+      "Talvez eu não vá à festa.",
+      "Eu não fui à festa.",
+      "Eu vou à festa com certeza."
+     ],
+     "answer": "Talvez eu não vá à festa.",
+     "why": "Might not = talvez não."
+    },
+    {
+     "id": "b1u4l2-3",
+     "type": "choice",
+     "en": "We won't go ___ it stops raining.",
+     "options": [
+      "unless",
+      "if",
+      "when"
+     ],
+     "answer": "unless",
+     "why": "Unless = a menos que (if not)."
+    },
+    {
+     "id": "b1u4l2-4",
+     "type": "build",
+     "pt": "Talvez eu viaje no mês que vem.",
+     "answer": "I might travel next month",
+     "extra": [
+      "will",
+      "to"
+     ],
+     "display": "I might travel next month.",
+     "why": "Might + verbo (sem to)."
+    },
+    {
+     "id": "b1u4l2-5",
+     "type": "listen",
+     "en": "I'll call you as soon as I arrive.",
+     "options": [
+      "Te ligo assim que chegar.",
+      "Te liguei quando cheguei.",
+      "Nunca te ligo."
+     ],
+     "answer": "Te ligo assim que chegar.",
+     "why": "As soon as = assim que (+ presente)."
+    },
+    {
+     "id": "b1u4l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "unless",
+       "a menos que"
+      ],
+      [
+       "might",
+       "talvez"
+      ],
+      [
+       "probably",
+       "provavelmente"
+      ],
+      [
+       "as soon as",
+       "assim que"
+      ],
+      [
+       "late",
+       "atrasado"
+      ]
+     ],
+     "why": "Palavras para falar de possibilidades."
+    }
+   ]
+  },
+  {
+   "id": "b1-u4-l3",
+   "title": "Planos e previsões",
+   "items": [
+    {
+     "id": "b1u4l3-1",
+     "type": "meaning",
+     "en": "You'll get wet if you don't take an umbrella.",
+     "options": [
+      "Você vai se molhar se não levar guarda-chuva.",
+      "Você se molhou sem guarda-chuva.",
+      "Você nunca leva guarda-chuva."
+     ],
+     "answer": "Você vai se molhar se não levar guarda-chuva.",
+     "why": "Get wet = se molhar."
+    },
+    {
+     "id": "b1u4l3-2",
+     "type": "choice",
+     "en": "If she ___ the bus, she will be late.",
+     "options": [
+      "misses",
+      "miss",
+      "will miss"
+     ],
+     "answer": "misses",
+     "why": "She + presente: misses."
+    },
+    {
+     "id": "b1u4l3-3",
+     "type": "choice",
+     "en": "I'll text you when I ___ home.",
+     "options": [
+      "get",
+      "will get",
+      "got"
+     ],
+     "answer": "get",
+     "why": "Depois de when (futuro) também vai presente."
+    },
+    {
+     "id": "b1u4l3-4",
+     "type": "build",
+     "pt": "Não vou sair a menos que você venha comigo.",
+     "answer": "I won't go out unless you come with me",
+     "extra": [
+      "will",
+      "if"
+     ],
+     "display": "I won't go out unless you come with me.",
+     "why": "Unless = a menos que. Won't = will not."
+    },
+    {
+     "id": "b1u4l3-5",
+     "type": "listen",
+     "en": "It will probably be sunny tomorrow.",
+     "options": [
+      "Provavelmente vai fazer sol amanhã.",
+      "Fez sol ontem.",
+      "Nunca faz sol aqui."
+     ],
+     "answer": "Provavelmente vai fazer sol amanhã.",
+     "why": "Will probably = provavelmente vai."
+    },
+    {
+     "id": "b1u4l3-6",
+     "type": "choice",
+     "en": "If you heat ice, it ___.",
+     "options": [
+      "melts",
+      "will melts",
+      "melted"
+     ],
+     "answer": "melts",
+     "why": "Fatos sempre verdadeiros: if + presente, presente."
+    }
+   ]
+  },
+  {
+   "id": "b1-u4-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b1u4l4-1",
+     "type": "type",
+     "pt": "Se chover, vou ficar em casa.",
+     "answer": "If it rains I will stay at home",
+     "accept": [
+      "If it rains, I'll stay at home",
+      "If it rains I will stay home",
+      "If it rains, I'll stay home"
+     ],
+     "why": "If + presente, will."
+    },
+    {
+     "id": "b1u4l4-2",
+     "type": "type",
+     "pt": "Talvez eu vá à praia.",
+     "answer": "I might go to the beach",
+     "why": "Might + verbo, sem to: talvez."
+    },
+    {
+     "id": "b1u4l4-3",
+     "type": "dictation",
+     "en": "You'll miss the bus if you don't hurry.",
+     "why": "Don't hurry = não se apressar."
+    },
+    {
+     "id": "b1u4l4-4",
+     "type": "type",
+     "pt": "Te ligo assim que chegar.",
+     "answer": "I will call you as soon as I arrive",
+     "accept": [
+      "I'll call you as soon as I arrive",
+      "I'll call you as soon as I get there"
+     ],
+     "why": "As soon as + presente."
+    },
+    {
+     "id": "b1u4l4-5",
+     "type": "dictation",
+     "en": "We might go out tonight.",
+     "why": "Might = talvez."
+    },
+    {
+     "id": "b1u4l4-6",
+     "type": "type",
+     "pt": "Se você estudar, vai passar.",
+     "answer": "If you study you will pass",
+     "accept": [
+      "If you study, you'll pass",
+      "If you study, you will pass"
+     ],
+     "why": "If + study (presente)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u4-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b1u4l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Are you coming to the beach on Saturday?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I might. It depends on the weather.",
+      "I might to. It depends on the weather.",
+      "I'm might. It depends on the weather."
+     ],
+     "answer": "I might. It depends on the weather.",
+     "why": "Might sozinho como resposta: \"I might\"."
+    },
+    {
+     "id": "b1u4l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What will you do if it rains?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "If it rains, we'll go to the cinema.",
+      "If it will rain, we go to the cinema.",
+      "If it rained, we go to the cinema."
+     ],
+     "answer": "If it rains, we'll go to the cinema.",
+     "why": "If + presente, will."
+    },
+    {
+     "id": "b1u4l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I'm worried about the exam."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Don't worry. If you study, you'll pass.",
+      "Don't worry. If you will study, you pass.",
+      "Don't worry. If you studied, you pass."
+     ],
+     "answer": "Don't worry. If you study, you'll pass.",
+     "why": "Encorajando: if you study, you'll pass."
+    },
+    {
+     "id": "b1u4l5-4",
+     "type": "speak",
+     "en": "If I have time, I'll help you.",
+     "pt": "Se eu tiver tempo, vou te ajudar.",
+     "why": "\"I'll\" soa \"ail\"."
+    },
+    {
+     "id": "b1u4l5-5",
+     "type": "speak",
+     "en": "It might rain this afternoon.",
+     "pt": "Pode ser que chova hoje à tarde.",
+     "why": "\"Might\" soa \"máit\", t bem leve."
+    },
+    {
+     "id": "b1u4l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Can you call me later?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Sure. I'll call you as soon as I finish work.",
+      "Sure. I'll call you as soon as I will finish work.",
+      "Sure. I call you as soon as I finished work."
+     ],
+     "answer": "Sure. I'll call you as soon as I finish work.",
+     "why": "As soon as + presente."
+    }
+   ]
+  },
+  {
+   "id": "b1-u4-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b1u4l6-1",
+     "type": "choice",
+     "en": "If you don't eat, you ___ hungry later.",
+     "options": [
+      "will be",
+      "are",
+      "were"
+     ],
+     "answer": "will be",
+     "why": "Resultado no futuro: will be."
+    },
+    {
+     "id": "b1u4l6-2",
+     "type": "type",
+     "pt": "Não vamos a menos que pare de chover.",
+     "answer": "We won't go unless it stops raining",
+     "accept": [
+      "We will not go unless it stops raining"
+     ],
+     "why": "Unless + presente."
+    },
+    {
+     "id": "b1u4l6-3",
+     "type": "meaning",
+     "en": "She might be at home.",
+     "options": [
+      "Pode ser que ela esteja em casa.",
+      "Ela está em casa com certeza.",
+      "Ela estava em casa."
+     ],
+     "answer": "Pode ser que ela esteja em casa.",
+     "why": "Might be = pode ser que esteja."
+    },
+    {
+     "id": "b1u4l6-4",
+     "type": "choice",
+     "en": "I'll buy a car if I ___ enough money.",
+     "options": [
+      "save",
+      "will save",
+      "saved"
+     ],
+     "answer": "save",
+     "why": "Depois do if: presente."
+    },
+    {
+     "id": "b1u4l6-5",
+     "type": "dictation",
+     "en": "If it's sunny, we'll have lunch outside.",
+     "why": "Have lunch outside = almoçar ao ar livre."
+    },
+    {
+     "id": "b1u4l6-6",
+     "type": "speak",
+     "en": "I'll text you when I get home.",
+     "pt": "Te mando mensagem quando chegar em casa.",
+     "why": "\"Text\" aqui é verbo: mandar mensagem."
+    }
+   ]
+  },
+  {
+   "id": "b1-u4-l7",
+   "title": "História: O plano do fim de semana",
+   "story": {
+    "title": "O plano do fim de semana",
+    "lines": [
+     {
+      "who": "Julia",
+      "en": "What are you doing this weekend?",
+      "pt": "O que você vai fazer neste fim de semana?"
+     },
+     {
+      "who": "Marcos",
+      "en": "I'm not sure. If the weather is good, I ___ go to the beach.",
+      "pt": "Não sei. Se o tempo estiver bom, vou à praia.",
+      "gap": {
+       "answer": "will",
+       "options": [
+        "will",
+        "am",
+        "did"
+       ]
+      }
+     },
+     {
+      "who": "Julia",
+      "en": "The weather forecast says it might rain on Saturday.",
+      "pt": "A previsão do tempo diz que pode chover no sábado."
+     },
+     {
+      "who": "Marcos",
+      "en": "Oh no. If it ___, I will stay at home and watch films.",
+      "pt": "Ah, não. Se chover, vou ficar em casa vendo filmes.",
+      "gap": {
+       "answer": "rains",
+       "options": [
+        "rains",
+        "will rain",
+        "rained"
+       ]
+      }
+     },
+     {
+      "ask": "O que o Marcos vai fazer se chover?",
+      "options": [
+       "Ficar em casa vendo filmes",
+       "Ir à praia mesmo assim",
+       "Ir ao shopping"
+      ],
+      "answer": "Ficar em casa vendo filmes",
+      "why": "\"I will stay at home and watch films\"."
+     },
+     {
+      "who": "Julia",
+      "en": "Why don't we go to the new museum? It's inside!",
+      "pt": "Por que não vamos ao museu novo? É num lugar fechado!"
+     },
+     {
+      "who": "Marcos",
+      "en": "Good idea! I'll buy the tickets online.",
+      "pt": "Boa ideia! Vou comprar os ingressos pela internet."
+     },
+     {
+      "who": "Julia",
+      "en": "Great. I'll call you as soon as I ___ up on Saturday.",
+      "pt": "Ótimo. Te ligo assim que acordar no sábado.",
+      "gap": {
+       "answer": "wake",
+       "options": [
+        "wake",
+        "will wake",
+        "woke"
+       ]
+      }
+     },
+     {
+      "ask": "Quem vai comprar os ingressos?",
+      "options": [
+       "O Marcos",
+       "A Julia",
+       "Ninguém"
+      ],
+      "answer": "O Marcos",
+      "why": "\"I'll buy the tickets online\" — fala do Marcos."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u4l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u4l7-2",
+     "type": "quiz",
+     "q": "O que diz a previsão do tempo?",
+     "options": [
+      "Pode chover no sábado",
+      "Vai fazer sol o fim de semana todo",
+      "Vai nevar"
+     ],
+     "answer": "Pode chover no sábado",
+     "why": "\"it might rain on Saturday\"."
+    },
+    {
+     "id": "b1u4l7-3",
+     "type": "quiz",
+     "q": "Qual é a ideia da Julia?",
+     "options": [
+      "Ir ao museu novo",
+      "Ir à praia",
+      "Ver filmes em casa"
+     ],
+     "answer": "Ir ao museu novo",
+     "why": "\"Why don't we go to the new museum?\""
+    },
+    {
+     "id": "b1u4l7-4",
+     "type": "quiz",
+     "q": "Quando a Julia vai ligar?",
+     "options": [
+      "Assim que acordar no sábado",
+      "Na sexta à noite",
+      "Depois do museu"
+     ],
+     "answer": "Assim que acordar no sábado",
+     "why": "\"as soon as I wake up on Saturday\"."
+    }
+   ]
+  }
+ ]
+}

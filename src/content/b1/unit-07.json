@@ -1,0 +1,711 @@
+{
+ "id": "b1-u7",
+ "level": "B1",
+ "order": 7,
+ "title": "Feito no Brasil",
+ "subtitle": "Voz passiva: o que é feito, quem fez e quando.",
+ "can_do": {
+  "text": "Consigo explicar como algo é feito e contar fatos sobre lugares e objetos, sem dizer quem fez.",
+  "source": "CEFR (Conselho da Europa) — Produção escrita: relatar fatos, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: present simple passive",
+  "Grammar: past simple passive",
+  "Grammar: by + agent",
+  "Functions: describing processes and facts"
+ ],
+ "extra_vocab": [
+  {
+   "word": "cocoa",
+   "reason": "Tema da história (fábrica de chocolate); palavra parecida com cacau."
+  }
+ ],
+ "words": [
+  [
+   "is made",
+   "é feito"
+  ],
+  [
+   "was built",
+   "foi construído"
+  ],
+  [
+   "by",
+   "por (quem fez)"
+  ],
+  [
+   "produce",
+   "produzir"
+  ],
+  [
+   "grow",
+   "plantar / cultivar"
+  ],
+  [
+   "invent",
+   "inventar"
+  ],
+  [
+   "sell",
+   "vender"
+  ],
+  [
+   "paint",
+   "pintar"
+  ],
+  [
+   "speak",
+   "falar (idioma)"
+  ],
+  [
+   "steal",
+   "roubar"
+  ]
+ ],
+ "guide": {
+  "title": "Voz passiva: o foco é no que aconteceu",
+  "intro": "Quando o importante é a ação ou o objeto (e não quem fez), o inglês usa be + particípio: \"Coffee is grown in Brazil\" = o café é cultivado no Brasil.",
+  "points": [
+   {
+    "en": "Coffee is grown in Brazil.",
+    "pt": "O café é cultivado no Brasil.",
+    "note": "Presente: is/are + particípio."
+   },
+   {
+    "en": "Portuguese is spoken in eight countries.",
+    "pt": "O português é falado em oito países.",
+    "note": "Plural: are. \"Is spoken\" = é falado."
+   },
+   {
+    "en": "This house was built in 1950.",
+    "pt": "Esta casa foi construída em 1950.",
+    "note": "Passado: was/were + particípio."
+   },
+   {
+    "en": "The phone was invented by Bell.",
+    "pt": "O telefone foi inventado por Bell.",
+    "note": "By = por (quem fez), quando importa."
+   },
+   {
+    "en": "My bike was stolen yesterday.",
+    "pt": "Minha bicicleta foi roubada ontem.",
+    "note": "Quem roubou? Não sabemos: passiva."
+   }
+  ],
+  "tips": [
+   "O particípio é a mesma forma do present perfect: made, built, spoken, written, sold.",
+   "Em português muitas vezes usamos \"se\": \"Aqui se fala inglês\" = English is spoken here."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b1-u7-l1",
+   "title": "É feito, foi feito",
+   "items": [
+    {
+     "id": "b1u7l1-1",
+     "type": "meaning",
+     "en": "Coffee is grown in Brazil.",
+     "options": [
+      "O café é cultivado no Brasil.",
+      "O Brasil bebe muito café.",
+      "O café cresce sozinho."
+     ],
+     "answer": "O café é cultivado no Brasil.",
+     "why": "Is grown = é cultivado (voz passiva)."
+    },
+    {
+     "id": "b1u7l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "These shoes ___ made in Italy.",
+     "options": [
+      "are",
+      "is",
+      "were be"
+     ],
+     "answer": "are",
+     "why": "Plural no presente: are + particípio."
+    },
+    {
+     "id": "b1u7l1-3",
+     "type": "choice",
+     "en": "This bridge was ___ in 1990.",
+     "options": [
+      "built",
+      "build",
+      "building"
+     ],
+     "answer": "built",
+     "why": "Passiva: was + particípio (built)."
+    },
+    {
+     "id": "b1u7l1-4",
+     "type": "build",
+     "pt": "O inglês é falado no mundo todo.",
+     "answer": "English is spoken all over the world",
+     "extra": [
+      "speaks",
+      "are"
+     ],
+     "display": "English is spoken all over the world.",
+     "why": "Is + spoken (particípio de speak)."
+    },
+    {
+     "id": "b1u7l1-5",
+     "type": "choice",
+     "en": "My car ___ stolen last night.",
+     "options": [
+      "was",
+      "is",
+      "were"
+     ],
+     "answer": "was",
+     "why": "Passado, singular: was + particípio."
+    },
+    {
+     "id": "b1u7l1-6",
+     "type": "listen",
+     "en": "The tickets are sold online.",
+     "options": [
+      "Os ingressos são vendidos pela internet.",
+      "Eu vendi os ingressos.",
+      "Os ingressos acabaram."
+     ],
+     "answer": "Os ingressos são vendidos pela internet.",
+     "why": "Are sold = são vendidos."
+    }
+   ]
+  },
+  {
+   "id": "b1-u7-l2",
+   "title": "Quem fez? By…",
+   "items": [
+    {
+     "id": "b1u7l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The film was directed ___ a Brazilian woman.",
+     "options": [
+      "by",
+      "for",
+      "from"
+     ],
+     "answer": "by",
+     "why": "By = por (quem fez a ação)."
+    },
+    {
+     "id": "b1u7l2-2",
+     "type": "meaning",
+     "en": "This picture was painted by my grandmother.",
+     "options": [
+      "Este quadro foi pintado pela minha avó.",
+      "Minha avó comprou este quadro.",
+      "Este quadro vai ser pintado."
+     ],
+     "answer": "Este quadro foi pintado pela minha avó.",
+     "why": "Was painted by = foi pintado por."
+    },
+    {
+     "id": "b1u7l2-3",
+     "type": "choice",
+     "en": "The light bulb was ___ by Edison.",
+     "options": [
+      "invented",
+      "invent",
+      "inventing"
+     ],
+     "answer": "invented",
+     "why": "Was + particípio (invented)."
+    },
+    {
+     "id": "b1u7l2-4",
+     "type": "build",
+     "pt": "Este livro foi escrito por uma brasileira.",
+     "answer": "This book was written by a Brazilian woman",
+     "extra": [
+      "wrote",
+      "from"
+     ],
+     "display": "This book was written by a Brazilian woman.",
+     "why": "Was written by."
+    },
+    {
+     "id": "b1u7l2-5",
+     "type": "listen",
+     "en": "The windows are cleaned every week.",
+     "options": [
+      "As janelas são limpas toda semana.",
+      "Limpei as janelas ontem.",
+      "As janelas nunca são limpas."
+     ],
+     "answer": "As janelas são limpas toda semana.",
+     "why": "Are cleaned = são limpas (rotina)."
+    },
+    {
+     "id": "b1u7l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "made",
+       "feito"
+      ],
+      [
+       "built",
+       "construído"
+      ],
+      [
+       "sold",
+       "vendido"
+      ],
+      [
+       "stolen",
+       "roubado"
+      ],
+      [
+       "spoken",
+       "falado"
+      ]
+     ],
+     "why": "Particípios usados na voz passiva."
+    }
+   ]
+  },
+  {
+   "id": "b1-u7-l3",
+   "title": "Fatos e processos",
+   "items": [
+    {
+     "id": "b1u7l3-1",
+     "type": "meaning",
+     "en": "Rice is grown in many countries.",
+     "options": [
+      "Arroz é cultivado em muitos países.",
+      "Muitos países comem arroz.",
+      "Arroz não cresce em muitos países."
+     ],
+     "answer": "Arroz é cultivado em muitos países.",
+     "why": "Is grown = é cultivado."
+    },
+    {
+     "id": "b1u7l3-2",
+     "type": "choice",
+     "en": "Many houses ___ destroyed by the storm.",
+     "options": [
+      "were",
+      "was",
+      "are been"
+     ],
+     "answer": "were",
+     "why": "Plural no passado: were + particípio."
+    },
+    {
+     "id": "b1u7l3-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Spanish ___ in Argentina.",
+     "options": [
+      "is spoken",
+      "speaks",
+      "is speaking"
+     ],
+     "answer": "is spoken",
+     "why": "O idioma \"é falado\": passiva.",
+     "wrong": {
+      "speaks": "\"Spanish speaks\" diria que o idioma fala! O certo é \"is spoken\"."
+     }
+    },
+    {
+     "id": "b1u7l3-4",
+     "type": "build",
+     "pt": "A janela foi quebrada ontem.",
+     "answer": "The window was broken yesterday",
+     "extra": [
+      "is",
+      "broke"
+     ],
+     "display": "The window was broken yesterday.",
+     "why": "Was + broken (particípio de break)."
+    },
+    {
+     "id": "b1u7l3-5",
+     "type": "listen",
+     "en": "When was this church built?",
+     "options": [
+      "Quando esta igreja foi construída?",
+      "Quem construiu esta igreja?",
+      "Onde fica esta igreja?"
+     ],
+     "answer": "Quando esta igreja foi construída?",
+     "why": "Pergunta na passiva: When was ... built?"
+    },
+    {
+     "id": "b1u7l3-6",
+     "type": "choice",
+     "en": "Cars ___ produced in this factory.",
+     "options": [
+      "are",
+      "is",
+      "were be"
+     ],
+     "answer": "are",
+     "why": "Plural, presente: are + particípio."
+    }
+   ]
+  },
+  {
+   "id": "b1-u7-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b1u7l4-1",
+     "type": "type",
+     "pt": "O café é cultivado no Brasil.",
+     "answer": "Coffee is grown in Brazil",
+     "why": "Passiva no presente: is + grown."
+    },
+    {
+     "id": "b1u7l4-2",
+     "type": "type",
+     "pt": "Esta casa foi construída em 1950.",
+     "answer": "This house was built in 1950",
+     "why": "Passiva no passado: was + built."
+    },
+    {
+     "id": "b1u7l4-3",
+     "type": "dictation",
+     "en": "My bike was stolen yesterday.",
+     "why": "Was stolen = foi roubada."
+    },
+    {
+     "id": "b1u7l4-4",
+     "type": "type",
+     "pt": "O português é falado em Portugal.",
+     "answer": "Portuguese is spoken in Portugal",
+     "why": "Passiva no presente: is + spoken."
+    },
+    {
+     "id": "b1u7l4-5",
+     "type": "dictation",
+     "en": "This song was written by my brother.",
+     "why": "Was written by = foi escrita por."
+    },
+    {
+     "id": "b1u7l4-6",
+     "type": "type",
+     "pt": "Os ingressos são vendidos aqui.",
+     "answer": "The tickets are sold here",
+     "accept": [
+      "Tickets are sold here"
+     ],
+     "why": "Plural na passiva: are + sold."
+    }
+   ]
+  },
+  {
+   "id": "b1-u7-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b1u7l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What a beautiful bag! Where did you buy it?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Thanks! It was made by a friend of mine.",
+      "Thanks! It made by a friend of mine.",
+      "Thanks! It was make by a friend of mine."
+     ],
+     "answer": "Thanks! It was made by a friend of mine.",
+     "why": "Was + made + by."
+    },
+    {
+     "id": "b1u7l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why are you walking? Where is your bike?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It was stolen last week.",
+      "It stole last week.",
+      "It is steal last week."
+     ],
+     "answer": "It was stolen last week.",
+     "why": "Não sabemos quem roubou: passiva (was stolen)."
+    },
+    {
+     "id": "b1u7l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is English spoken in your company?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, it is. We work with people from many countries.",
+      "Yes, it speaks. We work with people from many countries.",
+      "Yes, it does. We work with people from many countries."
+     ],
+     "answer": "Yes, it is. We work with people from many countries.",
+     "why": "Pergunta com is → resposta com is."
+    },
+    {
+     "id": "b1u7l5-4",
+     "type": "speak",
+     "en": "Coffee is grown in Brazil.",
+     "pt": "O café é cultivado no Brasil.",
+     "why": "\"Grown\" soa \"grôun\"."
+    },
+    {
+     "id": "b1u7l5-5",
+     "type": "speak",
+     "en": "This house was built in 1950.",
+     "pt": "Esta casa foi construída em 1950.",
+     "why": "\"Built\" soa \"bilt\", sem \"u\"."
+    },
+    {
+     "id": "b1u7l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Who painted this picture?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I don't know. It was painted a long time ago.",
+      "I don't know. It painted a long time ago.",
+      "I don't know. It is paint a long time ago."
+     ],
+     "answer": "I don't know. It was painted a long time ago.",
+     "why": "Sem saber quem fez: passiva no passado."
+    }
+   ]
+  },
+  {
+   "id": "b1-u7-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b1u7l6-1",
+     "type": "choice",
+     "en": "The museum ___ opened in 2015.",
+     "options": [
+      "was",
+      "is",
+      "were"
+     ],
+     "answer": "was",
+     "why": "Passado, singular: was."
+    },
+    {
+     "id": "b1u7l6-2",
+     "type": "type",
+     "pt": "Minha bicicleta foi roubada.",
+     "answer": "My bike was stolen",
+     "accept": [
+      "My bicycle was stolen"
+     ],
+     "why": "Passiva no passado: was + stolen."
+    },
+    {
+     "id": "b1u7l6-3",
+     "type": "meaning",
+     "en": "These cars are made in Japan.",
+     "options": [
+      "Estes carros são fabricados no Japão.",
+      "O Japão compra estes carros.",
+      "Estes carros foram vendidos no Japão."
+     ],
+     "answer": "Estes carros são fabricados no Japão.",
+     "why": "Are made = são feitos/fabricados."
+    },
+    {
+     "id": "b1u7l6-4",
+     "type": "choice",
+     "en": "The letter was ___ by hand.",
+     "options": [
+      "written",
+      "wrote",
+      "write"
+     ],
+     "answer": "written",
+     "why": "Particípio de write: written."
+    },
+    {
+     "id": "b1u7l6-5",
+     "type": "dictation",
+     "en": "Portuguese is spoken in Brazil.",
+     "why": "Is spoken = é falado."
+    },
+    {
+     "id": "b1u7l6-6",
+     "type": "speak",
+     "en": "The window was broken by the ball.",
+     "pt": "A janela foi quebrada pela bola.",
+     "why": "\"Broken\" soa \"brôu-ken\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u7-l7",
+   "title": "História: A visita à fábrica",
+   "story": {
+    "title": "A visita à fábrica",
+    "lines": [
+     {
+      "who": "Guide",
+      "en": "Welcome to our chocolate factory!",
+      "pt": "Bem-vindos à nossa fábrica de chocolate!"
+     },
+     {
+      "who": "Guide",
+      "en": "This factory was ___ in 1920 by a family from Bahia.",
+      "pt": "Esta fábrica foi construída em 1920 por uma família da Bahia.",
+      "gap": {
+       "answer": "built",
+       "options": [
+        "built",
+        "build",
+        "building"
+       ]
+      }
+     },
+     {
+      "who": "Lucas",
+      "en": "Where does the cocoa come from?",
+      "pt": "De onde vem o cacau?"
+     },
+     {
+      "who": "Guide",
+      "en": "Our cocoa is ___ in the south of Bahia.",
+      "pt": "Nosso cacau é cultivado no sul da Bahia.",
+      "gap": {
+       "answer": "grown",
+       "options": [
+        "grown",
+        "grow",
+        "grew"
+       ]
+      }
+     },
+     {
+      "ask": "Onde o cacau é cultivado?",
+      "options": [
+       "No sul da Bahia",
+       "No Japão",
+       "Na própria fábrica"
+      ],
+      "answer": "No sul da Bahia",
+      "why": "\"Our cocoa is grown in the south of Bahia\"."
+     },
+     {
+      "who": "Lucas",
+      "en": "How many chocolates are made every day?",
+      "pt": "Quantos chocolates são feitos por dia?"
+     },
+     {
+      "who": "Guide",
+      "en": "About ten thousand chocolates ___ made here every day.",
+      "pt": "Cerca de dez mil chocolates são feitos aqui por dia.",
+      "gap": {
+       "answer": "are",
+       "options": [
+        "are",
+        "is",
+        "was"
+       ]
+      }
+     },
+     {
+      "who": "Lucas",
+      "en": "Wow! And are they sold in other countries?",
+      "pt": "Uau! E eles são vendidos em outros países?"
+     },
+     {
+      "who": "Guide",
+      "en": "Yes, they are sold all over the world. And now… you can try one!",
+      "pt": "Sim, são vendidos no mundo todo. E agora… vocês podem provar um!"
+     },
+     {
+      "ask": "Os chocolates são vendidos…",
+      "options": [
+       "No mundo todo",
+       "Só na Bahia",
+       "Só na fábrica"
+      ],
+      "answer": "No mundo todo",
+      "why": "\"they are sold all over the world\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u7l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u7l7-2",
+     "type": "quiz",
+     "q": "Quando a fábrica foi construída?",
+     "options": [
+      "Em 1920",
+      "Em 2020",
+      "No ano passado"
+     ],
+     "answer": "Em 1920",
+     "why": "\"built in 1920\"."
+    },
+    {
+     "id": "b1u7l7-3",
+     "type": "quiz",
+     "q": "Quantos chocolates são feitos por dia?",
+     "options": [
+      "Cerca de dez mil",
+      "Cerca de mil",
+      "Cem"
+     ],
+     "answer": "Cerca de dez mil",
+     "why": "\"About ten thousand chocolates\"."
+    },
+    {
+     "id": "b1u7l7-4",
+     "type": "quiz",
+     "q": "O que acontece no fim da visita?",
+     "options": [
+      "Os visitantes podem provar um chocolate",
+      "A fábrica fecha",
+      "Eles compram cacau"
+     ],
+     "answer": "Os visitantes podem provar um chocolate",
+     "why": "\"now… you can try one!\""
+    }
+   ]
+  }
+ ]
+}

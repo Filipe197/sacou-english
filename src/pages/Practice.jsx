@@ -5,13 +5,14 @@ import { LESSONS, shuffle } from '../lib/content.js';
 import { useProgress, dueLessonIds } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { supabase } from '../lib/supabase.js';
+import { logActivity } from '../lib/offline.js';
 import { Shell, Spinner, Icon } from '../components/ui.jsx';
 
 // Treino livre: 12 exercícios sorteados das lições que o aluno já concluiu.
 // As lições recentes pesam mais, para fixar o que acabou de aprender.
 export default function Practice() {
   const prog = useProgress();
-  const { setProfile } = useAuth();
+  const { user, setProfile } = useAuth();
   const [started, setStarted] = useState(0);
 
   const done = LESSONS.filter(l => prog.done.has(l.id));
@@ -43,6 +44,7 @@ export default function Practice() {
           const xp = score >= 90 ? 10 : 5;
           const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'practice', p_score: score, p_xp: xp });
           if (data) setProfile(data);
+          logActivity(user?.id, 'practice');
           return { xp, streak: data?.streak, title: 'Treino concluído!', message: 'O que você errou foi para a revisão. Treinar um pouco todo dia é o que faz o inglês ficar.', to: '/praticar' };
         }}
       />

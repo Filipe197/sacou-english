@@ -9,6 +9,8 @@ import { SCENARIOS, MAX_TURNS, MAX_CHARS } from '../lib/scenarios.js';
 import { speak, canSpeak, fx } from '../lib/fx.js';
 import { askAI } from '../lib/ai.js';
 import { useNotebook, saveWord } from '../lib/notebook.js';
+import { useAuth } from '../lib/auth.jsx';
+import { logActivity } from '../lib/offline.js';
 
 export default function Conversation() {
   const [sc, setSc] = useState(null);
@@ -47,6 +49,7 @@ function Chat({ sc, onExit, onAgain }) {
   const [summary, setSummary] = useState(null);
   const [sumBusy, setSumBusy] = useState(false);
   const { listening, listen, stop } = useListen();
+  const { user } = useAuth();
   const endRef = useRef(null);
   const turns = lines.filter(l => l.role === 'user').length;
   const over = finished || turns >= MAX_TURNS;
@@ -86,6 +89,7 @@ function Chat({ sc, onExit, onAgain }) {
     setSumBusy(true); setErr('');
     try {
       setSummary(await askAI('conversa', { scenario: sc.id, mode: 'summary', messages: lines.map(({ role, text }) => ({ role, text })) }));
+      logActivity(user?.id, 'conversa');
       fx.play('complete');
     } catch (e) { setErr(e.message); }
     setSumBusy(false);

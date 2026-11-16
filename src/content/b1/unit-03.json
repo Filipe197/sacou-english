@@ -1,0 +1,702 @@
+{
+ "id": "b1-u3",
+ "level": "B1",
+ "order": 3,
+ "title": "Contando histórias",
+ "subtitle": "Past continuous, when e while para narrar o que aconteceu.",
+ "can_do": {
+  "text": "Consigo contar uma história ou um acontecimento, dizendo o que estava acontecendo quando algo aconteceu.",
+  "source": "CEFR (Conselho da Europa) — Produção oral: narrar, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: past continuous",
+  "Grammar: past continuous vs past simple",
+  "Grammar: when / while",
+  "Functions: narrating past events"
+ ],
+ "words": [
+  [
+   "was doing",
+   "estava fazendo"
+  ],
+  [
+   "while",
+   "enquanto"
+  ],
+  [
+   "suddenly",
+   "de repente"
+  ],
+  [
+   "happen",
+   "acontecer"
+  ],
+  [
+   "accident",
+   "acidente"
+  ],
+  [
+   "fall",
+   "cair"
+  ],
+  [
+   "break",
+   "quebrar"
+  ],
+  [
+   "noise",
+   "barulho"
+  ],
+  [
+   "storm",
+   "tempestade"
+  ],
+  [
+   "in the end",
+   "no final"
+  ]
+ ],
+ "guide": {
+  "title": "Past continuous: o que estava acontecendo",
+  "intro": "Para contar histórias, o inglês usa dois passados: o past continuous (was/were + -ing) para o \"cenário\", o que estava acontecendo, e o past simple para a ação que interrompe.",
+  "points": [
+   {
+    "en": "I was cooking at eight o'clock.",
+    "pt": "Eu estava cozinhando às oito.",
+    "note": "Was/were + verbo com -ing."
+   },
+   {
+    "en": "They were watching TV.",
+    "pt": "Eles estavam vendo TV.",
+    "note": "I/he/she/it → was. You/we/they → were."
+   },
+   {
+    "en": "I was walking home when it started to rain.",
+    "pt": "Eu estava indo para casa quando começou a chover.",
+    "note": "Ação longa (was walking) + ação curta que interrompe (started)."
+   },
+   {
+    "en": "While she was sleeping, someone called.",
+    "pt": "Enquanto ela dormia, alguém ligou.",
+    "note": "While + ação longa."
+   },
+   {
+    "en": "What were you doing?",
+    "pt": "O que você estava fazendo?",
+    "note": "Pergunta: was/were antes do sujeito."
+   }
+  ],
+  "tips": [
+   "Verbos de estado (know, like, want) quase nunca vão para -ing: \"I knew\", não \"I was knowing\".",
+   "Truque: \"estava + -ndo\" em português quase sempre vira was/were + -ing."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "b1-u3-l1",
+   "title": "O que estava acontecendo",
+   "items": [
+    {
+     "id": "b1u3l1-1",
+     "type": "meaning",
+     "en": "I was cooking when you called.",
+     "options": [
+      "Eu estava cozinhando quando você ligou.",
+      "Eu cozinhei quando você ligou.",
+      "Eu vou cozinhar quando você ligar."
+     ],
+     "answer": "Eu estava cozinhando quando você ligou.",
+     "why": "Was cooking = estava cozinhando (ação longa)."
+    },
+    {
+     "id": "b1u3l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "They ___ playing football at five o'clock.",
+     "options": [
+      "were",
+      "was",
+      "are"
+     ],
+     "answer": "were",
+     "why": "They → were + -ing."
+    },
+    {
+     "id": "b1u3l1-3",
+     "type": "choice",
+     "en": "She was ___ a book.",
+     "options": [
+      "reading",
+      "read",
+      "reads"
+     ],
+     "answer": "reading",
+     "why": "Past continuous: was + verbo com -ing."
+    },
+    {
+     "id": "b1u3l1-4",
+     "type": "build",
+     "pt": "O que você estava fazendo?",
+     "answer": "What were you doing",
+     "extra": [
+      "did",
+      "was"
+     ],
+     "display": "What were you doing?",
+     "why": "Pergunta: What + were you + -ing."
+    },
+    {
+     "id": "b1u3l1-5",
+     "type": "choice",
+     "en": "It ___ raining all morning.",
+     "options": [
+      "was",
+      "were",
+      "is"
+     ],
+     "answer": "was",
+     "why": "Com it, o passado de be é was."
+    },
+    {
+     "id": "b1u3l1-6",
+     "type": "listen",
+     "en": "We were having dinner when the lights went out.",
+     "options": [
+      "Estávamos jantando quando a luz acabou.",
+      "Jantamos e depois a luz acabou.",
+      "Vamos jantar quando a luz voltar."
+     ],
+     "answer": "Estávamos jantando quando a luz acabou.",
+     "why": "Ação longa (were having) interrompida (went out)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u3-l2",
+   "title": "When e while",
+   "items": [
+    {
+     "id": "b1u3l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I was sleeping ___ the phone rang.",
+     "options": [
+      "when",
+      "while",
+      "during"
+     ],
+     "answer": "when",
+     "why": "When + ação curta que interrompe."
+    },
+    {
+     "id": "b1u3l2-2",
+     "type": "choice",
+     "en": "___ I was walking, I saw an old friend.",
+     "options": [
+      "While",
+      "When",
+      "During"
+     ],
+     "answer": "While",
+     "why": "While + ação longa (was walking)."
+    },
+    {
+     "id": "b1u3l2-3",
+     "type": "meaning",
+     "en": "He fell while he was running.",
+     "options": [
+      "Ele caiu enquanto corria.",
+      "Ele corria e não caiu.",
+      "Ele vai cair se correr."
+     ],
+     "answer": "Ele caiu enquanto corria.",
+     "why": "While = enquanto."
+    },
+    {
+     "id": "b1u3l2-4",
+     "type": "build",
+     "pt": "Começou a chover quando eu saí.",
+     "answer": "It started to rain when I left",
+     "extra": [
+      "was",
+      "while"
+     ],
+     "display": "It started to rain when I left.",
+     "why": "Duas ações curtas: past simple nas duas."
+    },
+    {
+     "id": "b1u3l2-5",
+     "type": "listen",
+     "en": "Suddenly, we heard a strange noise.",
+     "options": [
+      "De repente, ouvimos um barulho estranho.",
+      "Ouvimos um barulho bonito.",
+      "Não ouvimos nenhum barulho."
+     ],
+     "answer": "De repente, ouvimos um barulho estranho.",
+     "why": "Suddenly = de repente."
+    },
+    {
+     "id": "b1u3l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "suddenly",
+       "de repente"
+      ],
+      [
+       "while",
+       "enquanto"
+      ],
+      [
+       "noise",
+       "barulho"
+      ],
+      [
+       "storm",
+       "tempestade"
+      ],
+      [
+       "accident",
+       "acidente"
+      ]
+     ],
+     "why": "Palavras para contar histórias."
+    }
+   ]
+  },
+  {
+   "id": "b1-u3-l3",
+   "title": "Duas ações no passado",
+   "items": [
+    {
+     "id": "b1u3l3-1",
+     "type": "meaning",
+     "en": "What were you doing at midnight?",
+     "options": [
+      "O que você estava fazendo à meia-noite?",
+      "O que você fez à meia-noite?",
+      "O que você vai fazer à meia-noite?"
+     ],
+     "answer": "O que você estava fazendo à meia-noite?",
+     "why": "Were you doing = estava fazendo."
+    },
+    {
+     "id": "b1u3l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ a shower when you arrived.",
+     "options": [
+      "was having",
+      "had",
+      "have"
+     ],
+     "answer": "was having",
+     "why": "Ação longa interrompida: was having.",
+     "wrong": {
+      "had": "\"I had a shower when you arrived\" sugere que o banho começou depois que você chegou."
+     }
+    },
+    {
+     "id": "b1u3l3-3",
+     "type": "choice",
+     "en": "While they were driving, the car ___.",
+     "options": [
+      "broke down",
+      "was breaking down",
+      "breaks down"
+     ],
+     "answer": "broke down",
+     "why": "A ação curta que interrompe fica no past simple."
+    },
+    {
+     "id": "b1u3l3-4",
+     "type": "build",
+     "pt": "Eu estava trabalhando o dia todo.",
+     "answer": "I was working all day",
+     "extra": [
+      "were",
+      "worked"
+     ],
+     "display": "I was working all day.",
+     "why": "I → was + -ing."
+    },
+    {
+     "id": "b1u3l3-5",
+     "type": "listen",
+     "en": "She broke her arm while she was skiing.",
+     "options": [
+      "Ela quebrou o braço enquanto esquiava.",
+      "Ela esquiou e não se machucou.",
+      "Ela vai esquiar amanhã."
+     ],
+     "answer": "Ela quebrou o braço enquanto esquiava.",
+     "why": "Broke (curta) + was skiing (longa)."
+    },
+    {
+     "id": "b1u3l3-6",
+     "type": "choice",
+     "en": "We ___ know the answer, so we asked the teacher.",
+     "options": [
+      "didn't",
+      "weren't",
+      "wasn't"
+     ],
+     "answer": "didn't",
+     "why": "\"Know\" é verbo de estado: past simple (didn't know), não -ing."
+    }
+   ]
+  },
+  {
+   "id": "b1-u3-l4",
+   "title": "Escrevendo",
+   "items": [
+    {
+     "id": "b1u3l4-1",
+     "type": "type",
+     "pt": "Eu estava dormindo.",
+     "answer": "I was sleeping",
+     "why": "I → was + -ing."
+    },
+    {
+     "id": "b1u3l4-2",
+     "type": "type",
+     "pt": "Eles estavam jogando futebol.",
+     "answer": "They were playing football",
+     "accept": [
+      "They were playing soccer"
+     ],
+     "why": "They → were + -ing."
+    },
+    {
+     "id": "b1u3l4-3",
+     "type": "dictation",
+     "en": "It was raining when I left.",
+     "why": "Was raining (cenário) + left (ação curta)."
+    },
+    {
+     "id": "b1u3l4-4",
+     "type": "type",
+     "pt": "O que você estava fazendo?",
+     "answer": "What were you doing",
+     "why": "Pergunta com were."
+    },
+    {
+     "id": "b1u3l4-5",
+     "type": "dictation",
+     "en": "While I was cooking, the phone rang.",
+     "why": "While + ação longa; rang = tocou (de ring)."
+    },
+    {
+     "id": "b1u3l4-6",
+     "type": "type",
+     "pt": "Ela estava lendo quando eu cheguei.",
+     "answer": "She was reading when I arrived",
+     "why": "Was reading + when + arrived."
+    }
+   ]
+  },
+  {
+   "id": "b1-u3-l5",
+   "title": "Conversa de verdade",
+   "items": [
+    {
+     "id": "b1u3l5-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why didn't you answer my call?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Sorry, I was having a shower.",
+      "Sorry, I had a shower now.",
+      "Sorry, I am having a shower yesterday."
+     ],
+     "answer": "Sorry, I was having a shower.",
+     "why": "Explicando o que estava fazendo: was having."
+    },
+    {
+     "id": "b1u3l5-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How did you break your phone?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It fell while I was running.",
+      "It was falling while I ran.",
+      "It falls while I was running."
+     ],
+     "answer": "It fell while I was running.",
+     "why": "Ação curta (fell) + while + ação longa."
+    },
+    {
+     "id": "b1u3l5-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What were you doing when the storm started?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I was driving home.",
+      "I drove home every day.",
+      "I am driving home."
+     ],
+     "answer": "I was driving home.",
+     "why": "Pergunta com were doing → resposta com was + -ing."
+    },
+    {
+     "id": "b1u3l5-4",
+     "type": "speak",
+     "en": "I was walking home when it started to rain.",
+     "pt": "Eu ia para casa quando começou a chover.",
+     "why": "\"Was walking\" soa \"uóz-uóking\"."
+    },
+    {
+     "id": "b1u3l5-5",
+     "type": "speak",
+     "en": "What were you doing last night?",
+     "pt": "O que você estava fazendo ontem à noite?",
+     "why": "\"Were you\" fica \"uêr-iu\"."
+    },
+    {
+     "id": "b1u3l5-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you see the accident?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes! I was waiting for the bus when it happened.",
+      "Yes! I waited for the bus when it was happening.",
+      "Yes! I wait for the bus when it happened."
+     ],
+     "answer": "Yes! I was waiting for the bus when it happened.",
+     "why": "Cenário (was waiting) + o que aconteceu (happened)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u3-l6",
+   "title": "Desafio da unidade",
+   "items": [
+    {
+     "id": "b1u3l6-1",
+     "type": "choice",
+     "en": "We ___ watching a film when the lights went out.",
+     "options": [
+      "were",
+      "was",
+      "did"
+     ],
+     "answer": "were",
+     "why": "Com we, o passado de be é were."
+    },
+    {
+     "id": "b1u3l6-2",
+     "type": "type",
+     "pt": "Eu estava esperando o ônibus.",
+     "answer": "I was waiting for the bus",
+     "why": "Wait for = esperar."
+    },
+    {
+     "id": "b1u3l6-3",
+     "type": "meaning",
+     "en": "While I was studying, my brother was playing music.",
+     "options": [
+      "Enquanto eu estudava, meu irmão tocava música.",
+      "Eu estudei e depois meu irmão tocou.",
+      "Meu irmão vai tocar enquanto eu estudo."
+     ],
+     "answer": "Enquanto eu estudava, meu irmão tocava música.",
+     "why": "Duas ações longas ao mesmo tempo: while + was/were -ing."
+    },
+    {
+     "id": "b1u3l6-4",
+     "type": "choice",
+     "en": "He ___ his leg while he was playing football.",
+     "options": [
+      "hurt",
+      "was hurting",
+      "hurts"
+     ],
+     "answer": "hurt",
+     "why": "Ação curta: past simple (hurt)."
+    },
+    {
+     "id": "b1u3l6-5",
+     "type": "dictation",
+     "en": "Suddenly, I heard a noise.",
+     "why": "Suddenly = de repente."
+    },
+    {
+     "id": "b1u3l6-6",
+     "type": "speak",
+     "en": "She was sleeping when I arrived.",
+     "pt": "Ela estava dormindo quando cheguei.",
+     "why": "Ligue as palavras: \"shi-uóz-slí-ping\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u3-l7",
+   "title": "História: A noite da tempestade",
+   "story": {
+    "title": "A noite da tempestade",
+    "lines": [
+     {
+      "who": "Nina",
+      "en": "Did you hear the storm last night?",
+      "pt": "Você ouviu a tempestade ontem à noite?"
+     },
+     {
+      "who": "Leo",
+      "en": "Yes! I was ___ a film when the lights went out.",
+      "pt": "Sim! Eu estava vendo um filme quando a luz acabou.",
+      "gap": {
+       "answer": "watching",
+       "options": [
+        "watching",
+        "watched",
+        "watch"
+       ]
+      }
+     },
+     {
+      "who": "Nina",
+      "en": "Same here! I was cooking dinner.",
+      "pt": "Aqui também! Eu estava fazendo o jantar."
+     },
+     {
+      "ask": "O que a Nina estava fazendo quando a luz acabou?",
+      "options": [
+       "Fazendo o jantar",
+       "Vendo um filme",
+       "Dormindo"
+      ],
+      "answer": "Fazendo o jantar",
+      "why": "\"I was cooking dinner\"."
+     },
+     {
+      "who": "Leo",
+      "en": "___ I was looking for a candle, I heard a loud noise.",
+      "pt": "Enquanto eu procurava uma vela, ouvi um barulho alto.",
+      "gap": {
+       "answer": "While",
+       "options": [
+        "While",
+        "When",
+        "During"
+       ]
+      }
+     },
+     {
+      "who": "Nina",
+      "en": "Really? What was it?",
+      "pt": "Sério? O que era?"
+     },
+     {
+      "who": "Leo",
+      "en": "A big tree ___ on my street!",
+      "pt": "Uma árvore grande caiu na minha rua!",
+      "gap": {
+       "answer": "fell",
+       "options": [
+        "fell",
+        "was falling",
+        "falls"
+       ]
+      }
+     },
+     {
+      "who": "Nina",
+      "en": "Oh no! Was anyone hurt?",
+      "pt": "Ah, não! Alguém se machucou?"
+     },
+     {
+      "who": "Leo",
+      "en": "No, luckily nobody was walking there at that time.",
+      "pt": "Não, por sorte ninguém estava passando lá naquela hora."
+     },
+     {
+      "ask": "Alguém se machucou?",
+      "options": [
+       "Não, ninguém",
+       "Sim, o Leo",
+       "Sim, um vizinho"
+      ],
+      "answer": "Não, ninguém",
+      "why": "\"nobody was walking there\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u3l7-1",
+     "type": "story",
+     "why": "Histórias mostram o inglês em uso de verdade. Ouça cada fala, complete as lacunas e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u3l7-2",
+     "type": "quiz",
+     "q": "O que o Leo estava fazendo quando a luz acabou?",
+     "options": [
+      "Vendo um filme",
+      "Fazendo o jantar",
+      "Andando na rua"
+     ],
+     "answer": "Vendo um filme",
+     "why": "\"I was watching a film\"."
+    },
+    {
+     "id": "b1u3l7-3",
+     "type": "quiz",
+     "q": "O que o Leo estava procurando?",
+     "options": [
+      "Uma vela",
+      "O celular",
+      "A chave"
+     ],
+     "answer": "Uma vela",
+     "why": "\"While I was looking for a candle\"."
+    },
+    {
+     "id": "b1u3l7-4",
+     "type": "quiz",
+     "q": "O que fez o barulho alto?",
+     "options": [
+      "Uma árvore que caiu",
+      "Um carro",
+      "A tempestade na janela"
+     ],
+     "answer": "Uma árvore que caiu",
+     "why": "\"A big tree fell on my street\"."
+    }
+   ]
+  }
+ ]
+}
