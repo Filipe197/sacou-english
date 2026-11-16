@@ -59,8 +59,7 @@ export default async function handler(req, res) {
       ? `
 
 Pontos em que este aluno já errou outras vezes:
-${past.map(m => `- ${m.found.unit.title} (${m.times}x): ${describeItem(m.found.item)}`).join('
-')}`
+${past.map(m => `- ${m.found.unit.title} (${m.times}x): ${describeItem(m.found.item)}`).join('\n')}`
       : '';
     const first = `Exercício (${ex.tipo}, nível ${ex.nivel}):
 ${JSON.stringify(ex, null, 1)}
