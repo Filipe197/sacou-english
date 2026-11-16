@@ -1,0 +1,67 @@
+{
+  "id": "a2-u2",
+  "level": "A2",
+  "order": 2,
+  "title": "O que você fez?",
+  "subtitle": "Passado simples dos verbos regulares e o did.",
+  "can_do": {
+    "text": "Consigo contar o que fiz em um dia ou fim de semana, com verbos regulares.",
+    "source": "CEFR (Conselho da Europa) — Monólogo sustentado: descrever experiências, nível A2"
+  },
+  "core_inventory": ["Grammar: past simple regular verbs (-ed)", "Grammar: past simple negative and questions (did / didn't)", "Functions: describing past experiences"],
+  "words": [
+    ["worked", "trabalhei / trabalhou"], ["played", "joguei / tocou"], ["watched", "assisti / assistiu"], ["visited", "visitei / visitou"],
+    ["cooked", "cozinhei / cozinhou"], ["called", "liguei / ligou"], ["walked", "caminhei / andou"], ["stayed", "fiquei / ficou"],
+    ["studied", "estudei / estudou"], ["did", "fez (e auxiliar do passado)"], ["didn't", "não (no passado)"]
+  ],
+  "guide": {
+    "title": "Passado simples: -ed e did",
+    "intro": "Para a maioria dos verbos, o passado é só colocar -ED no final. E a melhor parte: é igual para todas as pessoas (I worked, she worked, they worked).",
+    "points": [
+      { "en": "I worked yesterday.", "pt": "Eu trabalhei ontem.", "note": "work → worked. A mesma forma para todo mundo." },
+      { "en": "She studied. We stopped.", "pt": "Ela estudou. Nós paramos.", "note": "Consoante + y vira -ied (study → studied). Algumas palavras dobram a consoante (stop → stopped)." },
+      { "en": "I didn't work on Sunday.", "pt": "Eu não trabalhei no domingo.", "note": "Negativa: didn't + verbo NORMAL (sem -ed)." },
+      { "en": "Did you watch the game?", "pt": "Você assistiu ao jogo?", "note": "Pergunta: Did + pessoa + verbo NORMAL. O \"did\" já mostra que é passado." },
+      { "en": "Yes, I did. / No, I didn't.", "pt": "Sim. / Não.", "note": "Resposta curta com did." }
+    ],
+    "tips": ["O -ed pode soar como \"t\" (worked = \"uôrkt\"), \"d\" (played) ou \"id\" (visited = \"vízitid\").", "Depois de did/didn't, o verbo nunca leva -ed: \"Did you worked\" está errado."]
+  },
+  "lessons": [
+    {
+      "id": "a2-u2-l1",
+      "title": "Verbos com -ed",
+      "items": [
+        { "id": "a2u2l1-1", "type": "match", "pairs": [["worked", "trabalhou"], ["watched", "assistiu"], ["visited", "visitou"], ["cooked", "cozinhou"]], "why": "Todos terminam em -ed: esse é o passado dos verbos regulares." },
+        { "id": "a2u2l1-2", "type": "choice", "prompt": "Complete:", "en": "I ___ TV last night.", "options": ["watched", "watch", "watching"], "answer": "watched", "why": "\"Last night\" é passado, então: watch + ed = watched.", "wrong": { "watch": "\"Watch\" é presente. Com \"last night\" precisa do passado: watched.", "watching": "\"Watching\" indica ação em andamento e precisa de was/were antes." } },
+        { "id": "a2u2l1-3", "type": "meaning", "en": "She visited her grandmother on Sunday.", "options": ["Ela visitou a avó dela no domingo.", "Ela visita a avó dela no domingo.", "Ela visitou a avó dele no domingo."], "answer": "Ela visitou a avó dela no domingo.", "why": "\"Visited\" = visitou (passado). \"Her grandmother\" = a avó dela." },
+        { "id": "a2u2l1-4", "type": "build", "pt": "Nós jogamos futebol ontem.", "answer": "We played football yesterday", "extra": ["play", "did"], "display": "We played football yesterday.", "why": "play + ed = played. \"Yesterday\" vai no final." },
+        { "id": "a2u2l1-5", "type": "choice", "prompt": "Complete:", "en": "Tom ___ English for two years.", "options": ["studied", "studyed", "studies"], "answer": "studied", "why": "Verbo terminado em consoante + y: o y vira -ied. study → studied.", "wrong": { "studyed": "Quase! Com consoante + y, troca por -ied: studied.", "studies": "\"Studies\" é presente; \"for two years\" aqui fala de algo que já acabou." } },
+        { "id": "a2u2l1-6", "type": "listen", "en": "I called my mother.", "options": ["Eu liguei para minha mãe.", "Eu chamo minha mãe.", "Eu visitei minha mãe."], "answer": "Eu liguei para minha mãe.", "why": "\"Call\" pode ser ligar (telefone) ou chamar. Aqui, \"called\" = liguei." }
+      ]
+    },
+    {
+      "id": "a2-u2-l2",
+      "title": "Didn't",
+      "items": [
+        { "id": "a2u2l2-1", "type": "meaning", "en": "I didn't work yesterday.", "options": ["Eu não trabalhei ontem.", "Eu não trabalho ontem.", "Eu trabalhei ontem."], "answer": "Eu não trabalhei ontem.", "why": "\"Didn't\" + verbo = negação no passado." },
+        { "id": "a2u2l2-2", "type": "choice", "prompt": "Qual está certo?", "en": "She didn't ___ dinner.", "options": ["cook", "cooked", "cooks"], "answer": "cook", "why": "Depois de didn't o verbo volta à forma normal, sem -ed.", "wrong": { "cooked": "Erro muito comum! O \"didn't\" já mostra o passado; o verbo fica \"cook\".", "cooks": "Depois de didn't nunca vem -s." } },
+        { "id": "a2u2l2-3", "type": "build", "pt": "Eles não ficaram em casa.", "answer": "They didn't stay at home", "extra": ["stayed", "weren't"], "display": "They didn't stay at home.", "why": "They + didn't + stay (sem -ed) + at home." },
+        { "id": "a2u2l2-4", "type": "listen", "en": "We didn't walk to school.", "options": ["Nós não fomos a pé para a escola.", "Nós fomos a pé para a escola.", "Nós não estudamos na escola."], "answer": "Nós não fomos a pé para a escola.", "why": "\"Walk\" = andar/ir a pé. \"Didn't walk\" = não fomos a pé." },
+        { "id": "a2u2l2-5", "type": "choice", "prompt": "Complete:", "en": "I ___ like the film. It was boring.", "options": ["didn't", "wasn't", "don't"], "answer": "didn't", "why": "\"Like\" é um verbo comum (não é o to be), então a negativa no passado usa didn't.", "wrong": { "wasn't": "\"Wasn't\" é só com o verbo to be.", "don't": "\"Don't\" é presente; a frase fala do passado (It was boring)." } },
+        { "id": "a2u2l2-6", "type": "build", "pt": "Eu não assisti ao jogo.", "answer": "I didn't watch the game", "extra": ["watched", "don't"], "display": "I didn't watch the game.", "why": "I + didn't + watch (forma normal) + the game." }
+      ]
+    },
+    {
+      "id": "a2-u2-l3",
+      "title": "Did you...?",
+      "items": [
+        { "id": "a2u2l3-1", "type": "meaning", "en": "Did you watch the film?", "options": ["Você assistiu ao filme?", "Você assiste filmes?", "Você vai assistir ao filme?"], "answer": "Você assistiu ao filme?", "why": "\"Did\" no começo = pergunta no passado." },
+        { "id": "a2u2l3-2", "type": "choice", "prompt": "Complete a pergunta:", "en": "___ she call you?", "options": ["Did", "Was", "Does"], "answer": "Did", "why": "Pergunta com verbo comum no passado: Did + pessoa + verbo.", "wrong": { "Was": "\"Was\" é para o to be (Was she at home?).", "Does": "\"Does\" é presente." } },
+        { "id": "a2u2l3-3", "type": "choice", "prompt": "Responda: Did you study yesterday?", "en": "Yes, I ___.", "options": ["did", "was", "studied"], "answer": "did", "why": "A resposta curta repete o auxiliar: Yes, I did. / No, I didn't.", "wrong": { "was": "A pergunta usou \"did\", então a resposta usa \"did\".", "studied": "Na resposta curta não repetimos o verbo principal." } },
+        { "id": "a2u2l3-4", "type": "build", "pt": "Você trabalhou no sábado?", "answer": "Did you work on Saturday", "extra": ["worked", "were"], "display": "Did you work on Saturday?", "why": "Did + you + work (sem -ed) + on Saturday?" },
+        { "id": "a2u2l3-5", "type": "listen", "en": "What did you do last weekend?", "options": ["O que você fez no fim de semana passado?", "O que você faz no fim de semana?", "Onde você estava no fim de semana passado?"], "answer": "O que você fez no fim de semana passado?", "why": "\"What did you do?\" = o que você fez? O primeiro \"did\" é auxiliar e o \"do\" é o verbo fazer." },
+        { "id": "a2u2l3-6", "type": "build", "pt": "Onde vocês moravam?", "answer": "Where did you live", "extra": ["lived", "were"], "display": "Where did you live?", "why": "Palavra de pergunta + did + pessoa + verbo normal: Where did you live?" }
+      ]
+    }
+  ]
+}

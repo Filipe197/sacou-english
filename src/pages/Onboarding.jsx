@@ -6,8 +6,8 @@ import { Icon, Logo, Anim } from '../components/ui.jsx';
 const LEVELS = [
   { title: 'Nunca estudei inglês', desc: 'Vou começar do zero, sem problema.', out: 'Você começa no nível A1, Unidade 1: cumprimentos e palavras do dia a dia. Tudo explicado passo a passo.', cta: 'Começar do zero', test: false },
   { title: 'Sei algumas palavras', desc: 'Entendo coisas como “hello”, cores e números.', out: 'Você faz um teste rápido (cerca de 3 minutos). As unidades que você já domina são marcadas como concluídas e você começa no ponto certo.', cta: 'Fazer teste rápido', test: true },
-  { title: 'Consigo conversas simples', desc: 'Me apresento e falo da minha rotina.', out: 'O teste vai conferir o que você já sabe do A1. Hoje o site tem o nível A1 completo; o A2 está sendo preparado.', cta: 'Fazer teste de nível', test: true },
-  { title: 'Sou intermediário ou mais', desc: 'Leio textos e assisto séries com legenda.', out: 'Por enquanto o site cobre o nível A1. Você pode fazer o teste para pular o que já sabe e revisar a base enquanto preparamos os próximos níveis.', cta: 'Fazer teste de nível', test: true },
+  { title: 'Consigo conversas simples', desc: 'Me apresento e falo da minha rotina.', out: 'O teste vai conferir o que você já sabe do A1 e do A2 (cerca de 6 minutos) e te colocar no ponto certo da trilha.', cta: 'Fazer teste de nível', test: true },
+  { title: 'Sou intermediário ou mais', desc: 'Leio textos e assisto séries com legenda.', out: 'Por enquanto o site cobre os níveis A1 e A2. O teste pula o que você já sabe; o B1 está sendo preparado.', cta: 'Fazer teste de nível', test: true },
 ];
 const GOALS = [{ min: 5, xp: 15, label: 'Leve' }, { min: 10, xp: 30, label: 'Regular' }, { min: 15, xp: 45, label: 'Firme' }, { min: 20, xp: 60, label: 'Intenso' }];
 
@@ -26,7 +26,7 @@ export default function Onboarding() {
     const { error } = await updateProfile({ daily_goal_xp: GOALS[goal].xp, start_level: 'A1', onboarded: !L.test });
     setBusy(false);
     if (error) return setErr('Não foi possível salvar. Verifique sua conexão e tente de novo.');
-    nav(L.test ? '/nivelamento' : '/aprender', { replace: true });
+    nav(L.test ? `/nivelamento?ate=${level >= 2 ? 'A2' : 'A1'}` : '/aprender', { replace: true });
   }
 
   return (

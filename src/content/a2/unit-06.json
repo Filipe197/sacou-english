@@ -1,0 +1,370 @@
+{
+ "id": "a2-u6",
+ "level": "A2",
+ "order": 6,
+ "title": "Planos para o futuro",
+ "subtitle": "Going to para planos e will para decisões e previsões.",
+ "can_do": {
+  "text": "Consigo falar dos meus planos para o fim de semana, as férias e o futuro próximo.",
+  "source": "CEFR (Conselho da Europa) — Monólogo sustentado: descrever experiências (planos e combinados), nível A2"
+ },
+ "core_inventory": [
+  "Grammar: going to (plans and intentions)",
+  "Grammar: will (decisions at the moment, predictions)",
+  "Grammar: future time expressions (tomorrow, next week)"
+ ],
+ "words": [
+  [
+   "I'm going to...",
+   "eu vou (planejei)..."
+  ],
+  [
+   "will",
+   "vai / vou (decidi agora, previsão)"
+  ],
+  [
+   "tomorrow",
+   "amanhã"
+  ],
+  [
+   "next week",
+   "semana que vem"
+  ],
+  [
+   "next year",
+   "ano que vem"
+  ],
+  [
+   "plan",
+   "plano / planejar"
+  ],
+  [
+   "visit",
+   "visitar"
+  ],
+  [
+   "travel",
+   "viajar"
+  ],
+  [
+   "maybe",
+   "talvez"
+  ],
+  [
+   "probably",
+   "provavelmente"
+  ]
+ ],
+ "guide": {
+  "title": "Going to e will",
+  "intro": "O inglês tem dois jeitos principais de falar do futuro. GOING TO é para planos que você já decidiu. WILL é para decisões tomadas na hora e para previsões.",
+  "points": [
+   {
+    "en": "I'm going to visit my parents next week.",
+    "pt": "Vou visitar meus pais semana que vem.",
+    "note": "Plano já decidido: am/is/are + going to + verbo."
+   },
+   {
+    "en": "Are you going to travel? No, I'm not.",
+    "pt": "Você vai viajar? Não.",
+    "note": "Pergunta: are/is vai para o começo."
+   },
+   {
+    "en": "It's hot. I'll open the window.",
+    "pt": "Está quente. Vou abrir a janela.",
+    "note": "Decisão na hora: will (forma curta 'll)."
+   },
+   {
+    "en": "I think it will rain tomorrow.",
+    "pt": "Acho que vai chover amanhã.",
+    "note": "Previsão/opinião sobre o futuro: will."
+   },
+   {
+    "en": "I won't be late.",
+    "pt": "Não vou me atrasar.",
+    "note": "Negativa de will: won't (will not)."
+   }
+  ],
+  "tips": [
+   "\"Next\" = que vem: next week (semana que vem), next year (ano que vem).",
+   "Depois de \"going to\" e de \"will\" o verbo fica na forma normal: going to visit, will open."
+  ]
+ },
+ "lessons": [
+  {
+   "id": "a2-u6-l1",
+   "title": "Going to: meus planos",
+   "items": [
+    {
+     "id": "a2u6l1-1",
+     "type": "meaning",
+     "en": "I'm going to study tonight.",
+     "options": [
+      "Vou estudar hoje à noite.",
+      "Estou estudando agora.",
+      "Estudei ontem à noite."
+     ],
+     "answer": "Vou estudar hoje à noite.",
+     "why": "\"Going to\" + verbo = plano para o futuro. \"Tonight\" = hoje à noite."
+    },
+    {
+     "id": "a2u6l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She ___ going to buy a new phone.",
+     "options": [
+      "is",
+      "are",
+      "will"
+     ],
+     "answer": "is",
+     "why": "Going to precisa do to be: she is going to.",
+     "wrong": {
+      "are": "Com she é \"is\".",
+      "will": "\"Will going to\" não existe."
+     }
+    },
+    {
+     "id": "a2u6l1-3",
+     "type": "build",
+     "pt": "Nós vamos viajar ano que vem.",
+     "answer": "We're going to travel next year",
+     "extra": [
+      "will",
+      "last"
+     ],
+     "display": "We're going to travel next year.",
+     "why": "We're + going to + travel. \"Next year\" = ano que vem (\"last year\" seria ano passado)."
+    },
+    {
+     "id": "a2u6l1-4",
+     "type": "listen",
+     "en": "What are you going to do tomorrow?",
+     "options": [
+      "O que você vai fazer amanhã?",
+      "O que você fez ontem?",
+      "O que você está fazendo agora?"
+     ],
+     "answer": "O que você vai fazer amanhã?",
+     "why": "Pergunta com going to: What + are you + going to do?"
+    },
+    {
+     "id": "a2u6l1-5",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm going to ___ my grandmother on Sunday.",
+     "options": [
+      "visit",
+      "visiting",
+      "visited"
+     ],
+     "answer": "visit",
+     "why": "Depois de \"going to\" o verbo fica na forma normal.",
+     "wrong": {
+      "visiting": "Depois de \"to\" vem a forma básica: visit.",
+      "visited": "\"Visited\" é passado."
+     }
+    },
+    {
+     "id": "a2u6l1-6",
+     "type": "build",
+     "pt": "Eles não vão trabalhar amanhã.",
+     "answer": "They aren't going to work tomorrow",
+     "extra": [
+      "don't",
+      "will"
+     ],
+     "display": "They aren't going to work tomorrow.",
+     "why": "Negativa: aren't + going to + work."
+    }
+   ]
+  },
+  {
+   "id": "a2-u6-l2",
+   "title": "Will: decisão e previsão",
+   "items": [
+    {
+     "id": "a2u6l2-1",
+     "type": "meaning",
+     "en": "I'm hungry. I'll make a sandwich.",
+     "options": [
+      "Estou com fome. Vou fazer um sanduíche.",
+      "Eu estava com fome e fiz um sanduíche.",
+      "Estou com fome. Fiz um sanduíche."
+     ],
+     "answer": "Estou com fome. Vou fazer um sanduíche.",
+     "why": "Decisão tomada na hora = will. I'll = I will."
+    },
+    {
+     "id": "a2u6l2-2",
+     "type": "choice",
+     "prompt": "O telefone está tocando. Você diz:",
+     "en": "I ___ answer it.",
+     "options": [
+      "will",
+      "am",
+      "did"
+     ],
+     "answer": "will",
+     "why": "Você decidiu naquele momento, então usamos will: I will (I'll) answer it.",
+     "wrong": {
+      "am": "\"I am answer\" não existe; e going to é para planos feitos antes.",
+      "did": "\"Did\" é passado."
+     }
+    },
+    {
+     "id": "a2u6l2-3",
+     "type": "build",
+     "pt": "Acho que vai chover amanhã.",
+     "answer": "I think it will rain tomorrow",
+     "extra": [
+      "going",
+      "rains"
+     ],
+     "display": "I think it will rain tomorrow.",
+     "why": "Previsão/opinião: I think + will + verbo."
+    },
+    {
+     "id": "a2u6l2-4",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Don't worry, I ___ be late.",
+     "options": [
+      "won't",
+      "not will",
+      "don't"
+     ],
+     "answer": "won't",
+     "why": "A negativa de will é won't (will not).",
+     "wrong": {
+      "not will": "A negativa de will é won't (will not), e \"not\" vem depois: will not.",
+      "don't": "\"Don't be late\" é uma ordem; aqui é uma promessa: I won't be late."
+     }
+    },
+    {
+     "id": "a2u6l2-5",
+     "type": "listen",
+     "en": "Maybe she'll come to the party.",
+     "options": [
+      "Talvez ela venha à festa.",
+      "Ela veio à festa.",
+      "Ela não vai à festa."
+     ],
+     "answer": "Talvez ela venha à festa.",
+     "why": "\"Maybe\" = talvez. She'll = she will."
+    },
+    {
+     "id": "a2u6l2-6",
+     "type": "match",
+     "pairs": [
+      [
+       "tomorrow",
+       "amanhã"
+      ],
+      [
+       "next week",
+       "semana que vem"
+      ],
+      [
+       "tonight",
+       "hoje à noite"
+      ],
+      [
+       "next year",
+       "ano que vem"
+      ]
+     ],
+     "why": "Expressões que indicam futuro. Combine com going to ou will."
+    }
+   ]
+  },
+  {
+   "id": "a2-u6-l3",
+   "title": "Planos de férias",
+   "items": [
+    {
+     "id": "a2u6l3-1",
+     "type": "meaning",
+     "en": "We're going to stay at a hotel near the beach.",
+     "options": [
+      "Vamos ficar num hotel perto da praia.",
+      "Ficamos num hotel perto da praia.",
+      "Estamos num hotel longe da praia."
+     ],
+     "answer": "Vamos ficar num hotel perto da praia.",
+     "why": "\"Going to stay\" = vamos ficar (plano). \"Near the beach\" = perto da praia."
+    },
+    {
+     "id": "a2u6l3-2",
+     "type": "choice",
+     "prompt": "Plano decidido há um mês. Complete:",
+     "en": "I'm ___ to visit Paris in July.",
+     "options": [
+      "going",
+      "will",
+      "go"
+     ],
+     "answer": "going",
+     "why": "Plano já decidido = going to.",
+     "wrong": {
+      "will": "\"I'm will\" não existe.",
+      "go": "A estrutura é \"am going to\"."
+     }
+    },
+    {
+     "id": "a2u6l3-3",
+     "type": "build",
+     "pt": "Você vai pegar o avião?",
+     "answer": "Are you going to take the plane",
+     "extra": [
+      "will",
+      "do"
+     ],
+     "display": "Are you going to take the plane?",
+     "why": "Pergunta: Are + you + going to + take..."
+    },
+    {
+     "id": "a2u6l3-4",
+     "type": "listen",
+     "en": "It will probably be hot in December.",
+     "options": [
+      "Provavelmente vai fazer calor em dezembro.",
+      "Fez calor em dezembro.",
+      "Nunca faz calor em dezembro."
+     ],
+     "answer": "Provavelmente vai fazer calor em dezembro.",
+     "why": "Previsão com will. \"Probably\" = provavelmente."
+    },
+    {
+     "id": "a2u6l3-5",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "They're going to ___ a car.",
+     "options": [
+      "rent",
+      "renting",
+      "rented"
+     ],
+     "answer": "rent",
+     "why": "Depois de \"going to\", forma normal do verbo. \"Rent\" = alugar.",
+     "wrong": {
+      "renting": "Depois de \"to\", use a forma básica.",
+      "rented": "\"Rented\" é passado."
+     }
+    },
+    {
+     "id": "a2u6l3-6",
+     "type": "build",
+     "pt": "Eu vou te ligar amanhã.",
+     "answer": "I'll call you tomorrow",
+     "extra": [
+      "calling",
+      "going"
+     ],
+     "display": "I'll call you tomorrow.",
+     "why": "Promessa/decisão: I'll (I will) + call + you."
+    }
+   ]
+  }
+ ]
+}

@@ -25,6 +25,7 @@ const P = {
   cloud: <path d="M7 18a5 5 0 0 1-.5-10 6 6 0 0 1 11.5 2 4 4 0 0 1 0 8z" />,
   trophy: <><path d="M8 21h8" /><path d="M12 17v4" /><path d="M7 4h10v5a5 5 0 0 1-10 0z" /><path d="M17 5h3v2a3 3 0 0 1-3 3" /><path d="M7 5H4v2a3 3 0 0 0 3 3" /></>,
   clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
+  bolt: <path d="M13 2L4 14h7l-1 8 9-12h-7z" />,
   mic: <><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0" /><path d="M12 18v3" /></>,
 };
 export function Icon({ name, size = 20, color = 'currentColor', stroke = 2, label }) {
@@ -90,6 +91,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
   const nav = useNavigate();
   const items = [
     ['/aprender', 'home', 'Aprender'],
+    ['/praticar', 'bolt', 'Praticar'],
     ['/revisao', 'review', 'Revisar erros', mistakesCount],
     ['/guia', 'book', 'Guia de gramática'],
     ['/progresso', 'user', 'Meu progresso'],

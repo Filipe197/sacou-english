@@ -1,0 +1,67 @@
+{
+  "id": "a2-u3",
+  "level": "A2",
+  "order": 3,
+  "title": "Fim de semana e viagens",
+  "subtitle": "Passado dos verbos irregulares mais usados.",
+  "can_do": {
+    "text": "Consigo contar uma viagem ou um passeio usando os verbos irregulares mais comuns.",
+    "source": "CEFR (Conselho da Europa) — Monólogo sustentado: descrever experiências, nível A2"
+  },
+  "core_inventory": ["Grammar: past simple irregular verbs", "Functions: narrating past events (simple)", "Vocabulary: travel and free time"],
+  "words": [
+    ["went (go)", "fui / foi (ir)"], ["had (have)", "tive / teve"], ["saw (see)", "vi / viu"], ["ate (eat)", "comi / comeu"],
+    ["bought (buy)", "comprei / comprou"], ["got (get)", "consegui / recebi / cheguei"], ["made (make)", "fiz / fez"], ["came (come)", "vim / veio"],
+    ["took (take)", "peguei / levei"], ["met (meet)", "conheci / encontrei"], ["holiday", "férias / feriado"], ["trip", "viagem"]
+  ],
+  "guide": {
+    "title": "Verbos irregulares no passado",
+    "intro": "Alguns verbos muito usados não seguem a regra do -ed: eles mudam de forma. Não tem segredo, tem que praticar. Mas a boa notícia é que a negativa e a pergunta continuam com did + verbo normal.",
+    "points": [
+      { "en": "I went to the beach.", "pt": "Eu fui à praia.", "note": "go → went. Nunca \"goed\"." },
+      { "en": "We had a good time.", "pt": "Nós nos divertimos.", "note": "have → had. \"Have a good time\" = se divertir." },
+      { "en": "She saw a film and ate a pizza.", "pt": "Ela viu um filme e comeu uma pizza.", "note": "see → saw, eat → ate." },
+      { "en": "Did you go? No, I didn't go.", "pt": "Você foi? Não, eu não fui.", "note": "Com did/didn't, volta para a forma normal: go, não went." },
+      { "en": "I met my friends.", "pt": "Eu encontrei meus amigos.", "note": "meet → met. \"Meet\" pode ser conhecer ou encontrar alguém." }
+    ],
+    "tips": ["Aprenda os irregulares em grupos: go/went, have/had, see/saw, eat/ate, buy/bought.", "\"Did you went?\" está errado: depois de did, sempre a forma normal."]
+  },
+  "lessons": [
+    {
+      "id": "a2-u3-l1",
+      "title": "Go, have, see, eat",
+      "items": [
+        { "id": "a2u3l1-1", "type": "match", "pairs": [["go", "went"], ["have", "had"], ["see", "saw"], ["eat", "ate"]], "why": "Esses quatro verbos são irregulares: o passado deles não termina em -ed." },
+        { "id": "a2u3l1-2", "type": "choice", "prompt": "Complete:", "en": "I ___ to the beach last summer.", "options": ["went", "goed", "go"], "answer": "went", "why": "O passado de \"go\" é \"went\".", "wrong": { "goed": "\"Go\" é irregular: o passado é \"went\".", "go": "\"Last summer\" pede passado: went." } },
+        { "id": "a2u3l1-3", "type": "meaning", "en": "We had a great time.", "options": ["Nós nos divertimos muito.", "Nós tivemos pouco tempo.", "Nós temos muito tempo."], "answer": "Nós nos divertimos muito.", "why": "\"Have a great time\" é uma expressão: se divertir muito. \"Had\" é o passado de \"have\"." },
+        { "id": "a2u3l1-4", "type": "build", "pt": "Ela comeu uma pizza.", "answer": "She ate a pizza", "extra": ["eated", "eats"], "display": "She ate a pizza.", "why": "eat → ate. Não existe \"eated\"." },
+        { "id": "a2u3l1-5", "type": "listen", "en": "I saw your brother at the station.", "options": ["Eu vi seu irmão na estação.", "Eu vejo seu irmão na estação.", "Eu vi sua irmã na estação."], "answer": "Eu vi seu irmão na estação.", "why": "\"Saw\" é o passado de \"see\" (ver)." },
+        { "id": "a2u3l1-6", "type": "choice", "prompt": "Complete:", "en": "Did you ___ to the party?", "options": ["go", "went", "going"], "answer": "go", "why": "Depois de \"did\", o verbo volta à forma normal: Did you go?", "wrong": { "went": "O \"did\" já indica passado; o verbo fica \"go\".", "going": "Depois de did vem a forma básica: go." } }
+      ]
+    },
+    {
+      "id": "a2-u3-l2",
+      "title": "Buy, make, get, come",
+      "items": [
+        { "id": "a2u3l2-1", "type": "match", "pairs": [["buy", "bought"], ["make", "made"], ["get", "got"], ["come", "came"]], "why": "Mais quatro irregulares muito usados. \"Bought\" se pronuncia \"bót\"." },
+        { "id": "a2u3l2-2", "type": "choice", "prompt": "Complete:", "en": "My father ___ a new car last month.", "options": ["bought", "buyed", "buy"], "answer": "bought", "why": "O passado de \"buy\" é \"bought\".", "wrong": { "buyed": "\"Buy\" é irregular: bought.", "buy": "\"Last month\" pede passado." } },
+        { "id": "a2u3l2-3", "type": "meaning", "en": "I made a cake for her birthday.", "options": ["Eu fiz um bolo para o aniversário dela.", "Eu comprei um bolo para o aniversário dela.", "Eu faço um bolo no aniversário dela."], "answer": "Eu fiz um bolo para o aniversário dela.", "why": "\"Made\" é o passado de \"make\" (fazer, preparar). \"Birthday\" = aniversário." },
+        { "id": "a2u3l2-4", "type": "build", "pt": "Eles vieram para o jantar.", "answer": "They came to dinner", "extra": ["come", "comed"], "display": "They came to dinner.", "why": "come → came. \"Come to dinner\" = vir jantar." },
+        { "id": "a2u3l2-5", "type": "listen", "en": "We got home at eleven o'clock.", "options": ["Nós chegamos em casa às onze horas.", "Nós saímos de casa às onze horas.", "Nós ficamos em casa até as onze."], "answer": "Nós chegamos em casa às onze horas.", "why": "\"Get home\" = chegar em casa. \"Got\" é o passado de \"get\"." },
+        { "id": "a2u3l2-6", "type": "choice", "prompt": "Complete:", "en": "She didn't ___ anything at the shop.", "options": ["buy", "bought", "buys"], "answer": "buy", "why": "Depois de didn't, o verbo fica na forma normal: buy.", "wrong": { "bought": "Com didn't, o verbo não vai para o passado.", "buys": "Depois de didn't nunca vem -s." } }
+      ]
+    },
+    {
+      "id": "a2-u3-l3",
+      "title": "Contando uma viagem",
+      "items": [
+        { "id": "a2u3l3-1", "type": "meaning", "en": "Last year I went to Rio on holiday.", "options": ["Ano passado eu fui ao Rio nas férias.", "Ano que vem eu vou ao Rio nas férias.", "Ano passado eu morei no Rio."], "answer": "Ano passado eu fui ao Rio nas férias.", "why": "\"Went\" = fui. \"On holiday\" = de férias (no inglês britânico; no americano, \"on vacation\")." },
+        { "id": "a2u3l3-2", "type": "choice", "prompt": "Complete:", "en": "We ___ the bus to the museum.", "options": ["took", "taked", "take"], "answer": "took", "why": "\"Take the bus\" = pegar o ônibus. O passado de \"take\" é \"took\".", "wrong": { "taked": "\"Take\" é irregular: took.", "take": "A frase conta algo que já aconteceu: took." } },
+        { "id": "a2u3l3-3", "type": "build", "pt": "Eu conheci pessoas novas.", "answer": "I met new people", "extra": ["meet", "meeted"], "display": "I met new people.", "why": "meet → met. \"People\" = pessoas (já é plural)." },
+        { "id": "a2u3l3-4", "type": "listen", "en": "Did you have a good trip?", "options": ["Você fez uma boa viagem?", "Você vai fazer uma boa viagem?", "Você gostou da comida?"], "answer": "Você fez uma boa viagem?", "why": "\"Have a good trip\" = fazer uma boa viagem. Na pergunta: Did + you + have." },
+        { "id": "a2u3l3-5", "type": "build", "pt": "Nós não vimos o mar.", "answer": "We didn't see the sea", "extra": ["saw", "wasn't"], "display": "We didn't see the sea.", "why": "Didn't + see (forma normal). \"Sea\" = mar." },
+        { "id": "a2u3l3-6", "type": "match", "pairs": [["took", "pegou / levou"], ["met", "conheceu"], ["bought", "comprou"], ["went", "foi"]], "why": "Revise os irregulares: cada um tem seu próprio passado." }
+      ]
+    }
+  ]
+}

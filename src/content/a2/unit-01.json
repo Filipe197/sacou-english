@@ -1,0 +1,67 @@
+{
+  "id": "a2-u1",
+  "level": "A2",
+  "order": 1,
+  "title": "Onde você estava?",
+  "subtitle": "Passado do verbo to be: was e were.",
+  "can_do": {
+    "text": "Consigo dizer onde estava e como me sentia em momentos do passado.",
+    "source": "CEFR (Conselho da Europa) — Monólogo sustentado: descrever experiências, nível A2"
+  },
+  "core_inventory": ["Grammar: past simple of to be (was / were)", "Grammar: time expressions (yesterday, last, ago)", "Vocabulary: feelings and adjectives"],
+  "words": [
+    ["was", "era / estava (I, he, she, it)"], ["were", "era / estava (you, we, they)"], ["yesterday", "ontem"], ["last week", "semana passada"],
+    ["last night", "ontem à noite"], ["two days ago", "dois dias atrás"], ["tired", "cansado(a)"], ["happy", "feliz"], ["busy", "ocupado(a)"],
+    ["ill", "doente"], ["weather", "tempo (clima)"], ["cold / hot", "frio / quente"]
+  ],
+  "guide": {
+    "title": "O passado do to be: was e were",
+    "intro": "Lembra do am, is, are? No passado eles viram só duas formas: WAS e WERE. É o nosso \"era/estava\" e \"foi\".",
+    "points": [
+      { "en": "I was at home yesterday.", "pt": "Eu estava em casa ontem.", "note": "I, he, she, it → was." },
+      { "en": "They were tired.", "pt": "Eles estavam cansados.", "note": "You, we, they → were." },
+      { "en": "I wasn't at work. Were you at school?", "pt": "Eu não estava no trabalho. Você estava na escola?", "note": "Negativa: wasn't / weren't. Pergunta: was/were vai para o começo." },
+      { "en": "last week / two days ago", "pt": "semana passada / dois dias atrás", "note": "\"Last\" = passado(a). \"Ago\" vem DEPOIS do tempo: two days ago." },
+      { "en": "It was cold yesterday.", "pt": "Estava frio ontem.", "note": "Para o tempo/clima usamos \"it\" como sujeito." }
+    ],
+    "tips": ["Truque: se no presente é \"is\" ou \"am\", no passado é \"was\". Se é \"are\", vira \"were\".", "Não diga \"last yesterday\": yesterday já é passado sozinho."]
+  },
+  "lessons": [
+    {
+      "id": "a2-u1-l1",
+      "title": "Was e were",
+      "items": [
+        { "id": "a2u1l1-1", "type": "meaning", "en": "I was at home yesterday.", "options": ["Eu estava em casa ontem.", "Eu estou em casa hoje.", "Eu fui para casa ontem."], "answer": "Eu estava em casa ontem.", "why": "\"Was\" é o passado de \"am\" e \"is\". \"Yesterday\" = ontem." },
+        { "id": "a2u1l1-2", "type": "choice", "prompt": "Complete:", "en": "We ___ at the park last Sunday.", "options": ["were", "was", "are"], "answer": "were", "why": "Com \"we\" (nós) o passado do to be é \"were\".", "wrong": { "was": "\"Was\" é para I, he, she, it. Com we é \"were\".", "are": "\"Are\" é presente; \"last Sunday\" pede passado." } },
+        { "id": "a2u1l1-3", "type": "choice", "prompt": "Complete:", "en": "My mother ___ a teacher.", "options": ["was", "were", "is been"], "answer": "was", "why": "\"My mother\" = she, então o passado é \"was\".", "wrong": { "were": "\"Were\" é para you, we, they.", "is been": "Essa forma não existe em inglês." } },
+        { "id": "a2u1l1-4", "type": "build", "pt": "Eles estavam cansados.", "answer": "They were tired", "extra": ["was", "are"], "display": "They were tired.", "why": "They + were + tired. Com they, o passado do to be é \"were\"." },
+        { "id": "a2u1l1-5", "type": "listen", "en": "She was very happy.", "options": ["Ela estava muito feliz.", "Ela está muito feliz.", "Ele estava muito feliz."], "answer": "Ela estava muito feliz.", "why": "\"Was\" indica passado. \"Very happy\" = muito feliz." },
+        { "id": "a2u1l1-6", "type": "match", "pairs": [["tired", "cansado(a)"], ["happy", "feliz"], ["busy", "ocupado(a)"], ["ill", "doente"]], "why": "São adjetivos para dizer como alguém está ou estava. Eles não mudam com masculino/feminino." }
+      ]
+    },
+    {
+      "id": "a2-u1-l2",
+      "title": "Ontem, semana passada, atrás",
+      "items": [
+        { "id": "a2u1l2-1", "type": "match", "pairs": [["yesterday", "ontem"], ["last week", "semana passada"], ["last night", "ontem à noite"], ["two days ago", "dois dias atrás"]], "why": "Essas expressões mostram que a frase está no passado." },
+        { "id": "a2u1l2-2", "type": "choice", "prompt": "Complete:", "en": "I was in London three years ___.", "options": ["ago", "last", "before"], "answer": "ago", "why": "\"Ago\" = atrás, e vem DEPOIS do tempo: three years ago.", "wrong": { "last": "\"Last\" vem antes: last year. Não combina com \"three years\".", "before": "\"Before\" = antes de algo; para \"atrás\" usamos \"ago\"." } },
+        { "id": "a2u1l2-3", "type": "meaning", "en": "Where were you last night?", "options": ["Onde você estava ontem à noite?", "Onde você está hoje à noite?", "Onde você foi semana passada?"], "answer": "Onde você estava ontem à noite?", "why": "Na pergunta, \"were\" vem antes de \"you\". \"Last night\" = ontem à noite." },
+        { "id": "a2u1l2-4", "type": "build", "pt": "Eu estava doente semana passada.", "answer": "I was ill last week", "extra": ["were", "ago"], "display": "I was ill last week.", "why": "I + was + ill + last week. A expressão de tempo costuma ir no final." },
+        { "id": "a2u1l2-5", "type": "listen", "en": "It was cold yesterday.", "options": ["Estava frio ontem.", "Está frio hoje.", "Estava quente ontem."], "answer": "Estava frio ontem.", "why": "Para o clima usamos \"it\": It was cold = estava frio." },
+        { "id": "a2u1l2-6", "type": "choice", "prompt": "Complete:", "en": "The weather was hot ___ Saturday.", "options": ["last", "ago", "yesterday"], "answer": "last", "why": "\"Last\" + dia/semana/mês/ano: last Saturday = sábado passado.", "wrong": { "ago": "\"Ago\" vem depois de um período: two days ago.", "yesterday": "\"Yesterday Saturday\" não existe." } }
+      ]
+    },
+    {
+      "id": "a2-u1-l3",
+      "title": "Wasn't, weren't e perguntas",
+      "items": [
+        { "id": "a2u1l3-1", "type": "choice", "prompt": "Complete:", "en": "I ___ at work yesterday. I was ill.", "options": ["wasn't", "weren't", "didn't"], "answer": "wasn't", "why": "Negativa do was: was not = wasn't.", "wrong": { "weren't": "\"Weren't\" é para you, we, they.", "didn't": "\"Didn't\" é para outros verbos no passado, não para o to be." } },
+        { "id": "a2u1l3-2", "type": "choice", "prompt": "Complete a pergunta:", "en": "___ they at the party?", "options": ["Were", "Was", "Did"], "answer": "Were", "why": "Pergunta com to be no passado: Were + they...?", "wrong": { "Was": "Com they é \"were\".", "Did": "Com o verbo to be não usamos \"did\"." } },
+        { "id": "a2u1l3-3", "type": "meaning", "en": "Was it expensive?", "options": ["Foi caro?", "É caro?", "Era barato?"], "answer": "Foi caro?", "why": "\"Was it...?\" = foi/era...? \"Expensive\" = caro." },
+        { "id": "a2u1l3-4", "type": "build", "pt": "Nós não estávamos em casa.", "answer": "We weren't at home", "extra": ["wasn't", "didn't"], "display": "We weren't at home.", "why": "Com we, a negativa é weren't (were not)." },
+        { "id": "a2u1l3-5", "type": "choice", "prompt": "Responda: Were you busy?", "en": "Yes, I ___.", "options": ["was", "were", "did"], "answer": "was", "why": "Na resposta curta o sujeito é \"I\", então: Yes, I was. / No, I wasn't.", "wrong": { "were": "A pergunta usa \"you\", mas a resposta é sobre \"I\": I was.", "did": "Com to be a resposta repete o to be." } },
+        { "id": "a2u1l3-6", "type": "listen", "en": "The film wasn't very good.", "options": ["O filme não era muito bom.", "O filme era muito bom.", "O filme não é bom."], "answer": "O filme não era muito bom.", "why": "\"Wasn't\" = não era/não foi. \"Film\" = filme." }
+      ]
+    }
+  ]
+}

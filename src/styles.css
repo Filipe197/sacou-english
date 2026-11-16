@@ -131,6 +131,7 @@ button{font-family:inherit}
 .node:hover .circ{transform:translateY(-2px)}
 .node.done .circ{background:var(--violet);box-shadow:0 6px 0 var(--violet-dd)}
 .node.current .circ{background:var(--lime);box-shadow:0 6px 0 #9DBF14,0 0 0 8px #EFFFC2;width:88px;height:88px;animation:pulse 2s infinite}
+.node.done.skipped .circ{background:var(--violet-ring);box-shadow:0 6px 0 #C9C0FB}
 .node.locked{cursor:not-allowed}
 .node.locked .circ{background:var(--line);box-shadow:0 6px 0 #C7C9DA}
 .node .nlabel{font-size:13px;font-weight:600;color:#3A3E5A;text-align:center;max-width:150px}

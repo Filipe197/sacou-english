@@ -1,0 +1,67 @@
+{
+  "id": "a2-u7",
+  "level": "A2",
+  "order": 7,
+  "title": "Fazendo compras",
+  "subtitle": "Some/any, much/many, how much e preços.",
+  "can_do": {
+    "text": "Consigo perguntar preços, quantidades e fazer compras simples numa loja ou mercado.",
+    "source": "CEFR (Conselho da Europa) — Transações para obter bens e serviços, nível A2"
+  },
+  "core_inventory": ["Grammar: countable and uncountable nouns", "Grammar: some / any", "Grammar: how much / how many, much / many / a lot of", "Functions: shopping and asking about prices"],
+  "words": [
+    ["some", "alguns / um pouco de"], ["any", "nenhum / algum (em perguntas)"], ["how much?", "quanto? (preço, incontável)"], ["how many?", "quantos?"],
+    ["a lot of", "muito(s)"], ["price", "preço"], ["cost", "custar"], ["pay", "pagar"], ["cash", "dinheiro (em espécie)"], ["card", "cartão"],
+    ["bottle", "garrafa"], ["size", "tamanho"]
+  ],
+  "guide": {
+    "title": "Contáveis, incontáveis e preços",
+    "intro": "Em inglês algumas coisas são contáveis (one apple, two apples) e outras não (water, money, rice). Isso muda as palavras que usamos para quantidade.",
+    "points": [
+      { "en": "There are some apples. Is there any milk?", "pt": "Tem algumas maçãs. Tem leite?", "note": "\"Some\" em frases afirmativas; \"any\" em perguntas e negativas." },
+      { "en": "How many eggs? How much milk?", "pt": "Quantos ovos? Quanto leite?", "note": "\"Many\" com contáveis (eggs); \"much\" com incontáveis (milk, money)." },
+      { "en": "How much is this shirt? It's 20 dollars.", "pt": "Quanto custa esta camisa? Custa 20 dólares.", "note": "Para preço: How much is...? / How much are...?" },
+      { "en": "We don't have any bread.", "pt": "Não temos pão nenhum.", "note": "Negativa + any = nenhum." },
+      { "en": "a lot of money / a lot of people", "pt": "muito dinheiro / muitas pessoas", "note": "\"A lot of\" funciona com os dois tipos." }
+    ],
+    "tips": ["\"Money\" é incontável: \"much money\", nunca \"many moneys\".", "Para oferecer algo, use \"some\" mesmo na pergunta: Would you like some coffee?"]
+  },
+  "lessons": [
+    {
+      "id": "a2-u7-l1",
+      "title": "Some e any",
+      "items": [
+        { "id": "a2u7l1-1", "type": "choice", "prompt": "Complete:", "en": "There are ___ apples on the table.", "options": ["some", "any", "a"], "answer": "some", "why": "Frase afirmativa com plural: some (algumas).", "wrong": { "any": "\"Any\" é para perguntas e negativas.", "a": "\"A\" é para uma coisa só; \"apples\" está no plural." } },
+        { "id": "a2u7l1-2", "type": "choice", "prompt": "Complete:", "en": "Is there ___ milk in the fridge?", "options": ["any", "some", "many"], "answer": "any", "why": "Em perguntas normalmente usamos \"any\".", "wrong": { "some": "\"Some\" em perguntas só quando oferecemos algo (Would you like some...?).", "many": "\"Milk\" é incontável: não usa \"many\"." } },
+        { "id": "a2u7l1-3", "type": "meaning", "en": "We don't have any bread.", "options": ["Não temos pão nenhum.", "Temos um pouco de pão.", "Temos muito pão."], "answer": "Não temos pão nenhum.", "why": "Negativa + any = nenhum." },
+        { "id": "a2u7l1-4", "type": "build", "pt": "Eu preciso de alguns ovos.", "answer": "I need some eggs", "extra": ["any", "much"], "display": "I need some eggs.", "why": "Frase afirmativa: some + eggs." },
+        { "id": "a2u7l1-5", "type": "listen", "en": "Would you like some coffee?", "options": ["Você gostaria de um pouco de café?", "Você tem café?", "Você não tem café?"], "answer": "Você gostaria de um pouco de café?", "why": "Para oferecer, usamos \"some\" mesmo na pergunta." },
+        { "id": "a2u7l1-6", "type": "choice", "prompt": "Complete:", "en": "There aren't ___ chairs in the room.", "options": ["any", "some", "much"], "answer": "any", "why": "Negativa (aren't) + any.", "wrong": { "some": "Em negativas usamos \"any\".", "much": "\"Chairs\" é contável: não usa \"much\"." } }
+      ]
+    },
+    {
+      "id": "a2-u7-l2",
+      "title": "How much, how many",
+      "items": [
+        { "id": "a2u7l2-1", "type": "choice", "prompt": "Complete:", "en": "How ___ brothers do you have?", "options": ["many", "much", "lot"], "answer": "many", "why": "\"Brothers\" é contável (dá para contar), então: how many.", "wrong": { "much": "\"Much\" é para incontáveis, como water e money.", "lot": "\"Lot\" aparece em \"a lot of\", não em perguntas assim." } },
+        { "id": "a2u7l2-2", "type": "choice", "prompt": "Complete:", "en": "How ___ water do you drink?", "options": ["much", "many", "some"], "answer": "much", "why": "\"Water\" é incontável: how much.", "wrong": { "many": "\"Many\" é só para coisas que se contam.", "some": "\"How some\" não existe." } },
+        { "id": "a2u7l2-3", "type": "meaning", "en": "How much is this bag?", "options": ["Quanto custa esta bolsa?", "Quantas bolsas tem?", "De quem é esta bolsa?"], "answer": "Quanto custa esta bolsa?", "why": "\"How much is...?\" é a forma mais comum de perguntar o preço." },
+        { "id": "a2u7l2-4", "type": "build", "pt": "Quanto custam estes sapatos?", "answer": "How much are these shoes", "extra": ["many", "is"], "display": "How much are these shoes?", "why": "\"Shoes\" está no plural, então usamos \"are\": How much are...?" },
+        { "id": "a2u7l2-5", "type": "listen", "en": "I don't have much money.", "options": ["Eu não tenho muito dinheiro.", "Eu tenho muito dinheiro.", "Eu não tenho nenhum dinheiro."], "answer": "Eu não tenho muito dinheiro.", "why": "\"Money\" é incontável: much money. Em negativas, \"not much\" = não muito." },
+        { "id": "a2u7l2-6", "type": "match", "pairs": [["how much", "quanto (incontável/preço)"], ["how many", "quantos (contável)"], ["a lot of", "muito(s)"], ["any", "nenhum (negativa)"]], "why": "Pergunte-se: dá para contar? Se sim, many. Se não, much. \"A lot of\" serve para os dois." }
+      ]
+    },
+    {
+      "id": "a2-u7-l3",
+      "title": "Na loja",
+      "items": [
+        { "id": "a2u7l3-1", "type": "meaning", "en": "Can I pay by card?", "options": ["Posso pagar com cartão?", "Posso pagar em dinheiro?", "Quanto custa o cartão?"], "answer": "Posso pagar com cartão?", "why": "\"Pay by card\" = pagar com cartão. \"In cash\" = em dinheiro." },
+        { "id": "a2u7l3-2", "type": "choice", "prompt": "Complete:", "en": "It ___ 50 reais.", "options": ["costs", "cost", "costing"], "answer": "costs", "why": "\"It\" é terceira pessoa: o verbo ganha -s. It costs = custa.", "wrong": { "cost": "Com it, presente simples leva -s: costs.", "costing": "Sem is antes, \"costing\" não forma frase." } },
+        { "id": "a2u7l3-3", "type": "build", "pt": "Você tem um tamanho maior?", "answer": "Do you have a bigger size", "extra": ["more", "biggest"], "display": "Do you have a bigger size?", "why": "Do you have + a bigger size? \"Bigger\" = maior (comparativo)." },
+        { "id": "a2u7l3-4", "type": "listen", "en": "Two bottles of water, please.", "options": ["Duas garrafas de água, por favor.", "Duas águas grandes, por favor.", "Uma garrafa de água, por favor."], "answer": "Duas garrafas de água, por favor.", "why": "\"Water\" é incontável, então contamos o recipiente: two bottles of water." },
+        { "id": "a2u7l3-5", "type": "choice", "prompt": "Complete:", "en": "I'd like a ___ of bread, please.", "options": ["piece", "many", "few"], "answer": "piece", "why": "\"Bread\" é incontável: a piece of bread = um pedaço de pão.", "wrong": { "many": "\"A many\" não existe.", "few": "\"A few\" é para contáveis no plural (a few eggs)." } },
+        { "id": "a2u7l3-6", "type": "build", "pt": "Eu vou pagar em dinheiro.", "answer": "I'll pay in cash", "extra": ["by", "paying"], "display": "I'll pay in cash.", "why": "\"In cash\" = em dinheiro. I'll = decisão na hora." }
+      ]
+    }
+  ]
+}

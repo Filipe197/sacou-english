@@ -9,6 +9,7 @@ import Onboarding from './pages/Onboarding.jsx';
 import Trail from './pages/Trail.jsx';
 import LessonPage from './pages/LessonPage.jsx';
 import Review from './pages/Review.jsx';
+import Practice from './pages/Practice.jsx';
 import Placement from './pages/Placement.jsx';
 import Guide from './pages/Guide.jsx';
 import Progress from './pages/Progress.jsx';
@@ -44,6 +45,7 @@ export default function App() {
         <Route path="/aprender" element={<Private><Trail /></Private>} />
         <Route path="/licao/:id" element={<Private><LessonPage /></Private>} />
         <Route path="/revisao" element={<Private><Review /></Private>} />
+        <Route path="/praticar" element={<Private><Practice /></Private>} />
         <Route path="/guia" element={<Private><Guide /></Private>} />
         <Route path="/guia/:unitId" element={<Private><Guide /></Private>} />
         <Route path="/progresso" element={<Private><Progress /></Private>} />

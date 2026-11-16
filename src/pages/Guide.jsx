@@ -19,7 +19,7 @@ export default function Guide() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {UNITS.map(u => (
                 <Link key={u.id} to={`/guia/${u.id}`} className="card" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16 }}>
-                  <div><span style={{ fontSize: 13, fontWeight: 700, color: 'var(--violet)' }}>A1 · UNIDADE {u.order}</span><h2 style={{ margin: '4px 0', fontSize: 22 }}>{u.guide.title}</h2><span className="muted" style={{ fontSize: 15 }}>{u.title}</span></div>
+                  <div><span style={{ fontSize: 13, fontWeight: 700, color: 'var(--violet)' }}>{u.level} · UNIDADE {u.order}</span><h2 style={{ margin: '4px 0', fontSize: 22 }}>{u.guide.title}</h2><span className="muted" style={{ fontSize: 15 }}>{u.title}</span></div>
                   <Icon name="arrow" />
                 </Link>
               ))}
@@ -28,7 +28,7 @@ export default function Guide() {
         ) : (
           <>
             <Link to="/guia" className="link-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}><Icon name="back" size={16} />Todos os guias</Link>
-            <p className="eyebrow" style={{ marginTop: 16 }}>A1 · Unidade {unit.order} · {unit.title}</p>
+            <p className="eyebrow" style={{ marginTop: 16 }}>{unit.level} · Unidade {unit.order} · {unit.title}</p>
             <h1 style={{ fontSize: 'clamp(30px,4vw,40px)', margin: '0 0 12px' }}>{unit.guide.title}</h1>
             <p style={{ fontSize: 18, lineHeight: 1.65, margin: '0 0 24px', color: 'var(--text2)' }}>{unit.guide.intro}</p>
 
@@ -65,7 +65,7 @@ export default function Guide() {
                 </div>
               ))}
             </div>
-            <p className="muted" style={{ fontSize: 13, marginTop: 16 }}>Referência: {unit.can_do.source}. Vocabulário conferido com a CEFR-J Wordlist (nível A1).</p>
+            <p className="muted" style={{ fontSize: 13, marginTop: 16 }}>Referência: {unit.can_do.source}. Vocabulário conferido com a CEFR-J Wordlist (até o nível {unit.level}).</p>
           </>
         )}
       </div>

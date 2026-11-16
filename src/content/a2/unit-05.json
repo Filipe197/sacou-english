@@ -1,0 +1,67 @@
+{
+  "id": "a2-u5",
+  "level": "A2",
+  "order": 5,
+  "title": "Comparando coisas",
+  "subtitle": "Comparativos e superlativos: bigger, more expensive, the best.",
+  "can_do": {
+    "text": "Consigo comparar pessoas, lugares e objetos de forma simples.",
+    "source": "CEFR (Conselho da Europa) — Monólogo sustentado: descrever experiências, nível A2"
+  },
+  "core_inventory": ["Grammar: comparative adjectives (-er, more, than)", "Grammar: superlative adjectives (the -est, the most)", "Grammar: irregular comparatives (good/better/best, bad/worse/worst)"],
+  "words": [
+    ["big / bigger / the biggest", "grande / maior / o maior"], ["cheap / cheaper", "barato / mais barato"], ["old / older", "velho / mais velho"],
+    ["expensive / more expensive", "caro / mais caro"], ["good / better / the best", "bom / melhor / o melhor"], ["bad / worse / the worst", "ruim / pior / o pior"],
+    ["than", "do que"], ["tall", "alto"], ["fast", "rápido"], ["easy", "fácil"], ["difficult", "difícil"]
+  ],
+  "guide": {
+    "title": "Comparativo e superlativo",
+    "intro": "Para comparar duas coisas, o inglês usa -ER ou MORE + THAN. Para dizer qual é o maior de todos, usa THE -EST ou THE MOST.",
+    "points": [
+      { "en": "My car is bigger than your car.", "pt": "Meu carro é maior do que o seu.", "note": "Palavra curta + er + than. Algumas dobram a consoante: big → bigger." },
+      { "en": "This phone is more expensive.", "pt": "Este celular é mais caro.", "note": "Palavra longa (3 sílabas ou mais) usa \"more\": more expensive, more interesting." },
+      { "en": "It's the tallest building in the city.", "pt": "É o prédio mais alto da cidade.", "note": "Superlativo: the + -est (curtas) ou the most (longas)." },
+      { "en": "easy → easier → the easiest", "pt": "fácil → mais fácil → o mais fácil", "note": "Terminou em consoante + y: y vira -ier / -iest." },
+      { "en": "good → better → the best", "pt": "bom → melhor → o melhor", "note": "Irregulares: good/better/best e bad/worse/worst." }
+    ],
+    "tips": ["Nunca use \"more\" e \"-er\" juntos: \"more bigger\" está errado.", "\"Than\" (do que) é diferente de \"then\" (então)."]
+  },
+  "lessons": [
+    {
+      "id": "a2-u5-l1",
+      "title": "Maior, menor, mais barato",
+      "items": [
+        { "id": "a2u5l1-1", "type": "meaning", "en": "My brother is older than me.", "options": ["Meu irmão é mais velho do que eu.", "Meu irmão é mais novo do que eu.", "Meu irmão é velho."], "answer": "Meu irmão é mais velho do que eu.", "why": "old + er = older (mais velho). \"Than\" = do que." },
+        { "id": "a2u5l1-2", "type": "choice", "prompt": "Complete:", "en": "London is ___ than my city.", "options": ["bigger", "more big", "biger"], "answer": "bigger", "why": "\"Big\" é curta e termina em consoante-vogal-consoante: dobra o g → bigger.", "wrong": { "more big": "Palavras curtas usam -er, não \"more\".", "biger": "Dobra a consoante: bigger." } },
+        { "id": "a2u5l1-3", "type": "choice", "prompt": "Complete:", "en": "The bus is ___ than the train.", "options": ["cheaper", "more cheap", "cheapest"], "answer": "cheaper", "why": "cheap + er = cheaper (mais barato). Com \"than\" usamos o comparativo.", "wrong": { "more cheap": "\"Cheap\" é curta: cheaper.", "cheapest": "\"Cheapest\" é o superlativo (o mais barato de todos)." } },
+        { "id": "a2u5l1-4", "type": "build", "pt": "Ela é mais alta do que eu.", "answer": "She is taller than me", "extra": ["more", "then"], "display": "She is taller than me.", "why": "tall + er + than. Cuidado: \"than\" (do que), não \"then\"." },
+        { "id": "a2u5l1-5", "type": "choice", "prompt": "Complete:", "en": "English is ___ than Chinese.", "options": ["easier", "easyer", "more easy"], "answer": "easier", "why": "Consoante + y: o y vira -ier. easy → easier.", "wrong": { "easyer": "Troca o y por -ier: easier.", "more easy": "\"Easy\" usa -ier, não \"more\"." } },
+        { "id": "a2u5l1-6", "type": "listen", "en": "This street is quieter than my street.", "options": ["Esta rua é mais tranquila do que a minha.", "Esta rua é mais barulhenta do que a minha.", "Esta rua é tão tranquila quanto a minha."], "answer": "Esta rua é mais tranquila do que a minha.", "why": "\"Quiet\" = tranquilo, silencioso. \"Quieter than\" = mais tranquilo do que." }
+      ]
+    },
+    {
+      "id": "a2-u5-l2",
+      "title": "More expensive, better, worse",
+      "items": [
+        { "id": "a2u5l2-1", "type": "choice", "prompt": "Complete:", "en": "This bag is ___ than that one.", "options": ["more expensive", "expensiver", "most expensive"], "answer": "more expensive", "why": "\"Expensive\" é longa (3 sílabas): usamos more + adjetivo.", "wrong": { "expensiver": "Palavras longas não levam -er.", "most expensive": "\"The most expensive\" é o superlativo; aqui é comparação entre duas coisas." } },
+        { "id": "a2u5l2-2", "type": "choice", "prompt": "Complete:", "en": "Your English is ___ than mine.", "options": ["better", "gooder", "more good"], "answer": "better", "why": "\"Good\" é irregular: good → better → the best.", "wrong": { "gooder": "\"Good\" é irregular: better.", "more good": "Use \"better\"." } },
+        { "id": "a2u5l2-3", "type": "meaning", "en": "The weather today is worse than yesterday.", "options": ["O tempo hoje está pior do que ontem.", "O tempo hoje está melhor do que ontem.", "O tempo está ruim ontem."], "answer": "O tempo hoje está pior do que ontem.", "why": "\"Bad\" é irregular: bad → worse (pior) → the worst." },
+        { "id": "a2u5l2-4", "type": "build", "pt": "Este livro é mais interessante.", "answer": "This book is more interesting", "extra": ["interestinger", "most"], "display": "This book is more interesting.", "why": "\"Interesting\" é longa: more interesting." },
+        { "id": "a2u5l2-5", "type": "listen", "en": "Trains are faster than buses.", "options": ["Trens são mais rápidos do que ônibus.", "Ônibus são mais rápidos do que trens.", "Trens são tão rápidos quanto ônibus."], "answer": "Trens são mais rápidos do que ônibus.", "why": "fast + er = faster (mais rápido)." },
+        { "id": "a2u5l2-6", "type": "match", "pairs": [["better", "melhor"], ["worse", "pior"], ["bigger", "maior"], ["cheaper", "mais barato"]], "why": "Comparativos: dizem qual de DUAS coisas é mais alguma coisa." }
+      ]
+    },
+    {
+      "id": "a2-u5-l3",
+      "title": "O maior de todos",
+      "items": [
+        { "id": "a2u5l3-1", "type": "meaning", "en": "It's the biggest city in Brazil.", "options": ["É a maior cidade do Brasil.", "É uma cidade grande no Brasil.", "É maior do que o Brasil."], "answer": "É a maior cidade do Brasil.", "why": "the + big + est = the biggest (o/a maior de todos)." },
+        { "id": "a2u5l3-2", "type": "choice", "prompt": "Complete:", "en": "This is the ___ restaurant in town.", "options": ["best", "better", "goodest"], "answer": "best", "why": "Superlativo de \"good\" é \"the best\" (o melhor).", "wrong": { "better": "\"Better\" compara duas coisas; aqui é o melhor de todos.", "goodest": "\"Good\" é irregular: the best." } },
+        { "id": "a2u5l3-3", "type": "choice", "prompt": "Complete:", "en": "It's the ___ hotel in the city.", "options": ["most expensive", "expensivest", "more expensive"], "answer": "most expensive", "why": "Palavra longa no superlativo: the most + adjetivo.", "wrong": { "expensivest": "Palavras longas usam \"the most\".", "more expensive": "\"More\" é comparativo; com \"the\" e \"in the city\" é superlativo." } },
+        { "id": "a2u5l3-4", "type": "build", "pt": "Ele é o aluno mais alto da escola.", "answer": "He is the tallest student in the school", "extra": ["taller", "more"], "display": "He is the tallest student in the school.", "why": "the + tall + est. Em inglês dizemos \"in the school\" (não \"of the school\")." },
+        { "id": "a2u5l3-5", "type": "listen", "en": "That was the worst day of my life.", "options": ["Aquele foi o pior dia da minha vida.", "Aquele foi o melhor dia da minha vida.", "Aquele foi um dia ruim."], "answer": "Aquele foi o pior dia da minha vida.", "why": "\"The worst\" = o pior (superlativo de bad)." },
+        { "id": "a2u5l3-6", "type": "choice", "prompt": "Complete:", "en": "Summer is the ___ time of the year.", "options": ["hottest", "hotter", "hotest"], "answer": "hottest", "why": "\"Hot\" dobra o t: the hottest (o mais quente).", "wrong": { "hotter": "\"Hotter\" é comparativo; com \"the\" é superlativo.", "hotest": "Dobra o t: hottest." } }
+      ]
+    }
+  ]
+}

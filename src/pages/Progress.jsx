@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { UNITS, LESSONS, levelPercent } from '../lib/content.js';
+import { UNITS, LESSONS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, levelPercent, currentLevel } from '../lib/content.js';
 import { useProgress, lastSevenDays, liveStreak } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { Shell, Spinner, Icon, Fire, Bolt } from '../components/ui.jsx';
@@ -15,7 +15,8 @@ export default function Progress() {
   const hit = days.filter(d => d.xp >= goal).length;
   const lessonsDone = LESSONS.filter(l => prog.done.has(l.id)).length;
   const wordsLearned = UNITS.filter(u => u.lessons.every(l => prog.done.has(l.id))).reduce((n, u) => n + u.words.length, 0);
-  const pct = levelPercent(prog.done);
+  const level = currentLevel(prog.done);
+  const pct = levelPercent(prog.done, level);
   const initials = (profile?.display_name || user?.email || '?').split(/\s+/).map(s => s[0]).join('').slice(0, 2).toUpperCase();
   const since = user?.created_at ? new Date(user.created_at).toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }) : '';
 
@@ -64,10 +65,10 @@ export default function Progress() {
           </div>
 
           <div className="card">
-            <h2 style={{ margin: '0 0 6px', fontSize: 22 }}>Unidades do A1</h2>
+            <h2 style={{ margin: '0 0 6px', fontSize: 22 }}>Unidades do {level}</h2>
             <p className="muted" style={{ margin: '0 0 20px', fontSize: 14 }}>Quanto de cada unidade você já concluiu.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              {UNITS.map(u => {
+              {UNITS.filter(u => u.level === level).map(u => {
                 const d = u.lessons.filter(l => prog.done.has(l.id)).length;
                 const p = Math.round((d / u.lessons.length) * 100);
                 return (
@@ -84,16 +85,20 @@ export default function Progress() {
         <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12, flexWrap: 'wrap', marginBottom: 18 }}>
             <h2 style={{ margin: 0, fontSize: 22 }}>Caminho até a fluência</h2>
-            <span className="muted" style={{ fontSize: 14 }}>Você está no A1 · {pct}% do conteúdo disponível</span>
+            <span className="muted" style={{ fontSize: 14 }}>Você está no {level} · {pct}% concluído</span>
           </div>
           <div className="grid6">
-            {[['A1', 'Iniciante'], ['A2', 'Básico'], ['B1', 'Intermediário'], ['B2', 'Independente'], ['C1', 'Avançado'], ['C2', 'Fluente']].map(([c, n], i) => (
-              <div key={c} style={{ borderRadius: 16, padding: 16, background: i === 0 ? 'var(--violet)' : 'var(--bg)', color: i === 0 ? '#fff' : '#3A3E5A' }}>
-                <b style={{ fontFamily: 'var(--head)', fontSize: 24, display: 'block' }}>{c}</b>
-                <span style={{ fontSize: 13 }}>{n}{i === 0 ? ' · em curso' : ' · em breve'}</span>
-                {i === 0 && <div style={{ height: 6, background: 'var(--violet-dd)', borderRadius: 99, marginTop: 12, overflow: 'hidden' }}><div style={{ width: pct + '%', height: '100%', background: 'var(--lime)' }} /></div>}
-              </div>
-            ))}
+            {LEVEL_ORDER.map((c) => {
+              const st = LEVEL_ORDER.indexOf(c) < LEVEL_ORDER.indexOf(level) || (c === level && pct === 100) ? 'done' : c === level ? 'cur' : LEVELS.includes(c) ? 'open' : 'soon';
+              const dark = st === 'cur';
+              return (
+                <div key={c} style={{ borderRadius: 16, padding: 16, background: dark ? 'var(--violet)' : st === 'done' ? 'var(--violet-l)' : 'var(--bg)', color: dark ? '#fff' : '#3A3E5A' }}>
+                  <b style={{ fontFamily: 'var(--head)', fontSize: 24, display: 'block' }}>{c}</b>
+                  <span style={{ fontSize: 13 }}>{LEVEL_NAMES[c]} · {st === 'done' ? 'concluído' : st === 'cur' ? 'em curso' : st === 'open' ? 'disponível' : 'em breve'}</span>
+                  {dark && <div style={{ height: 6, background: 'var(--violet-dd)', borderRadius: 99, marginTop: 12, overflow: 'hidden' }}><div style={{ width: pct + '%', height: '100%', background: 'var(--lime)' }} /></div>}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

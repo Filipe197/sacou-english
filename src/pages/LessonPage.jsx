@@ -19,7 +19,7 @@ export default function LessonPage() {
   if (prog.loading) return <Spinner />;
   const st = lessonStates(prog.done).find(s => s.lesson.id === id)?.state;
   if (st === 'locked') return <Navigate to="/aprender" replace />;
-  const repeat = st === 'done';
+  const repeat = st === 'done' && prog.scores[id]?.times_done > 0; // pulada no teste conta como nova
 
   return (
     <LessonRunner
