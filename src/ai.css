@@ -153,3 +153,58 @@
 .cl-table tr.idle td{color:var(--text3)}
 .cl-table td.warn{color:var(--bad);font-weight:700}
 @media (max-width:640px){.cl-row{flex-direction:column}.cl-in.code{max-width:none}}
+
+/* ---------- Aula falada com o Professor Rabugento ---------- */
+.aula-setup{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+.aula-hero{display:flex;gap:22px;align-items:center}
+.aula-hero svg{flex:none}
+.aula-hero h1{font-size:32px;margin:4px 0 8px;line-height:1.15}
+.aula-hero p.muted{font-size:16px;line-height:1.6;margin:0}
+.aula-pick h2{font-size:18px;margin:4px 0 10px}
+.aula-pick h2:not(:first-child){margin-top:20px}
+.aula-chips{display:flex;flex-wrap:wrap;gap:8px}
+.aula-chip{border:1.5px solid var(--line2);background:#fff;border-radius:99px;padding:9px 16px;font:inherit;font-weight:700;font-size:15px;color:var(--ink);cursor:pointer}
+.aula-chip:hover{border-color:var(--violet)}
+.aula-chip.on{background:var(--violet);border-color:var(--violet);color:#fff}
+.aula-go{margin-top:24px;width:100%;gap:10px}
+.aula .lesson-top{gap:12px;flex-wrap:wrap}
+.aula-voice{margin-left:auto;display:inline-flex;align-items:center;gap:6px;border:0;cursor:pointer;font:inherit;font-size:13px;font-weight:700;color:var(--text2)}
+.aula-voice[aria-pressed="false"]{opacity:.65;text-decoration:line-through}
+.aula-main{flex:1;max-width:680px;width:100%;margin:0 auto;padding:8px 20px 24px;display:flex;flex-direction:column;gap:16px}
+.aula-prof{display:flex;align-items:flex-end;gap:12px}
+.aula-prof svg{flex:none}
+.aula-bubble{position:relative;flex:1;background:var(--bg);border-radius:20px;border-bottom-left-radius:6px;padding:14px 16px;font-size:17px;line-height:1.45;display:flex;flex-direction:column;gap:6px;align-items:flex-start;animation:tutor-in .25s ease}
+.aula-bubble.typing{flex:none;flex-direction:row;align-items:center;gap:5px;padding:16px 18px}
+.aula-bubble .link-btn{font-size:13px;padding:0}
+.aula-task{display:flex;flex-direction:column;gap:8px;border:2px solid var(--violet-ring)}
+.aula-task.ask{border-color:#FFE1A3;background:#FFFBF0}
+.aula-target{font-family:var(--head);font-size:26px;line-height:1.25;color:var(--ink)}
+.aula-task .pron-line .pron-w{font-size:24px}
+.aula-acts{display:flex;flex-wrap:wrap;gap:8px}
+.aula-acts .chip{display:inline-flex;align-items:center;gap:5px;border:0;cursor:pointer;font:inherit;font-size:14px;font-weight:700;color:var(--violet-dd)}
+.aula-heard{font-size:14px}
+.aula-fix{align-self:stretch;max-width:none}
+.aula-rep{max-width:680px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+.aula-rep .mic{grid-column:2}
+.aula-rep .aula-hint{grid-column:1;grid-row:1;font-size:13px;text-align:right}
+.aula-rep .link-btn{grid-column:3;grid-row:1;justify-self:start}
+.crab .crab-stache{transform-origin:80px 110px}
+.crab.talking .crab-stache{animation:crab-talk .28s ease-in-out infinite alternate}
+@keyframes crab-talk{from{transform:translateY(0) scaleY(1)}to{transform:translateY(2px) scaleY(.9)}}
+.conv-promo{display:flex;align-items:center;gap:16px;background:var(--violet);color:#fff;border-radius:22px;padding:16px 20px;margin:0 0 24px;text-decoration:none;box-shadow:0 6px 0 var(--violet-dd)}
+.conv-promo:hover{filter:brightness(1.05)}
+.conv-promo svg{flex:none}
+.conv-promo b{display:block;font-family:var(--head);font-size:21px}
+.conv-promo span{opacity:.9;font-size:15px;line-height:1.45}
+.conv-promo .btn{margin-left:auto;flex:none;background:var(--lime);color:var(--ink)}
+@media (max-width:640px){
+  .aula-hero{flex-direction:column;text-align:center}
+  .aula-hero h1{font-size:26px}
+  .aula-main{padding:6px 12px 16px}
+  .aula-target{font-size:22px}
+  .aula-task .pron-line .pron-w{font-size:20px}
+  .aula-rep .mic{width:76px;height:76px}
+  .conv-promo{flex-wrap:wrap}
+  .conv-promo .btn{margin-left:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){.crab.talking .crab-stache,.aula-bubble{animation:none}}

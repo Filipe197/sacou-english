@@ -47,6 +47,10 @@ npm run dev
   não entendeu e dá dicas para os sons difíceis para brasileiros. Roda no navegador, sem custo de IA
   (`src/lib/pronounce.js`, `src/components/Pronounce.jsx`).
 - Limite por aluno por dia (em `supabase/004_ia.sql`): 40 explicações, 60 falas na conversa e 8 resumos.
+- **Aula falada** (`/aula`): o Professor Rabugento (Mr. Crabtree) fala uma frase, o aluno repete e o site confere
+  palavra por palavra no navegador (sem custo de IA); se não sair, ele pede de novo. Depois faz perguntas para o aluno
+  responder. A IA só cria o próximo passo (`api/aula.js`, `src/pages/Aula.jsx`, `src/lib/aula.js`); conta no limite
+  de falas da conversa. As respostas dele usam a voz do aparelho.
 - **Treino infinito** (`api/treino.js`): na revisão, a IA cria exercícios novos sobre os erros do aluno; cada
   frase passa pela mesma checagem CEFR-J do build (`scripts/cefr.mjs`) e o que não passar é descartado.
 - **Professor que lembra:** a explicação do erro considera os erros que o aluno mais repete.

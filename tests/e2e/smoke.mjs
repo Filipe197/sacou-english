@@ -105,6 +105,21 @@ await test('jogos: podcast toca e mostra a transcrição', async () => {
   if (!(await page.$('audio'))) throw new Error('o player de áudio não apareceu');
 });
 
+await test('aula falada: repetir, responder e resumo', async () => {
+  await open('/aula');
+  await wait(1200);
+  await page.evaluate(() => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Fechar')?.click());
+  await click('Começar a aula');
+  await expectText('Good morning, teacher.');
+  await click('Pular');
+  await expectText('What do you eat for breakfast?');
+  await page.type('.conv-in input', 'I eat bread and drink cafe');
+  await page.click('.conv-in button[type=submit]');
+  await expectText('Café em inglês é "coffee".');
+  await click('Terminar');
+  await expectText('Resumo da aula');
+});
+
 await browser.close();
 await server.close();
 

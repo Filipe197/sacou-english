@@ -4,6 +4,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shell, Icon } from '../components/ui.jsx';
+import Crabtree from '../components/Crabtree.jsx';
 import { useListen, getSR } from '../components/Pronounce.jsx';
 import { SCENARIOS, MAX_TURNS, MAX_CHARS } from '../lib/scenarios.js';
 import { speak, canSpeak, fx } from '../lib/fx.js';
@@ -24,6 +25,15 @@ export default function Conversation() {
           Pratique uma conversa de verdade, falando em voz alta. O personagem responde em inglês simples, do seu nível, e quando você errar,
           o professor mostra a forma certa na hora. No fim, você recebe um resumo e pode salvar as frases como flashcards.
         </p>
+        <Link to="/aula" className="conv-promo">
+          <Crabtree mood="grumpy" size={72} />
+          <div>
+            <b>Aula falada com o Professor Rabugento</b>
+            <span>Ele fala, você repete, e se não sair ele pede de novo, resmungando. Reclama de tudo, mas nunca desiste de você.</span>
+          </div>
+          <span className="btn">Começar</span>
+        </Link>
+        <h2 style={{ fontSize: 20, margin: '0 0 12px' }}>Situações do dia a dia</h2>
         <div className="sc-grid">
           {SCENARIOS.map(s => (
             <button key={s.id} type="button" className="sc-card" onClick={() => setSc(s)}>
@@ -164,7 +174,7 @@ function Chat({ sc, onExit, onAgain }) {
   );
 }
 
-function Summary({ sc, s, onExit, onAgain }) {
+export function Summary({ sc, s, onExit, onAgain, kicker = 'Resumo da conversa', againLabel = 'Conversar de novo', exitLabel = 'Outra situação' }) {
   const { notes } = useNotebook();
   const [saved, setSaved] = useState(null);
   function saveAll() {
@@ -175,7 +185,7 @@ function Summary({ sc, s, onExit, onAgain }) {
   return (
     <div className="conv-sum">
       <div className="card">
-        <p className="q-label" style={{ margin: 0 }}>Resumo da conversa · {sc.title}</p>
+        <p className="q-label" style={{ margin: 0 }}>{kicker} · {sc.title}</p>
         <h1 style={{ fontSize: 30, margin: '6px 0 10px' }}>Mandou bem por praticar!</h1>
         <p style={{ fontSize: 17, lineHeight: 1.6, margin: 0 }}>{s.resumo_pt}</p>
       </div>
@@ -214,8 +224,8 @@ function Summary({ sc, s, onExit, onAgain }) {
         </div>
       )}
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
-        <button type="button" className="btn btn-violet btn-lg btn-3d" onClick={onAgain}>Conversar de novo</button>
-        <button type="button" className="btn btn-out btn-lg" onClick={onExit}>Outra situação</button>
+        <button type="button" className="btn btn-violet btn-lg btn-3d" onClick={onAgain}>{againLabel}</button>
+        <button type="button" className="btn btn-out btn-lg" onClick={onExit}>{exitLabel}</button>
       </div>
     </div>
   );

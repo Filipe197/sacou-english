@@ -160,6 +160,7 @@ function example(sc) {
   if (sc.type === 'object') return Object.fromEntries(Object.entries(sc.properties).map(([k, v]) => [k, example(v)]));
   if (sc.type === 'array') return [example(sc.items)];
   if (sc.type === 'boolean') return false;
+  if (sc.enum) return sc.enum.join(' | ');
   return '...';
 }
 // Ajusta a resposta ao schema: campos que faltam viram vazios, extras somem.
@@ -175,6 +176,7 @@ function fit(sc, v) {
   }
   if (sc.type === 'array') return Array.isArray(v) ? v.map(x => fit(sc.items, x)).filter(x => x != null) : null;
   if (sc.type === 'boolean') return typeof v === 'boolean' ? v : v === 'true' ? true : v === 'false' ? false : null;
+  if (sc.enum) return sc.enum.includes(v) ? v : sc.enum[0];
   return typeof v === 'string' ? v : typeof v === 'number' ? String(v) : null;
 }
 // Resposta sem nenhum texto útil (o modo JSON às vezes devolve tudo vazio).
