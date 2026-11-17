@@ -88,12 +88,12 @@
    {
     "en": "His name is Tom. Her name is Ana.",
     "pt": "O nome dele é Tom. O nome dela é Ana.",
-    "note": "\"His\" é para homem (dele) e \"her\" para mulher (dela). Depende de QUEM é o dono, não da coisa."
+    "note": "\"His\" = dele (de um homem) e \"her\" = dela (de uma mulher). Olhe para a pessoa de quem se fala, não para a coisa."
    },
    {
     "en": "Ana's brother",
     "pt": "o irmão da Ana",
-    "note": "O 's vem depois do dono: Ana's brother = o irmão da Ana. A ordem é contrária à do português."
+    "note": "O 's vem depois da pessoa: Ana's brother = o irmão da Ana. A ordem é contrária à do português."
    },
    {
     "en": "I have two sisters.",
@@ -244,9 +244,9 @@
       "My"
      ],
      "answer": "His",
-     "why": "O dono é Pedro, um homem, então usamos \"his\" (dele).",
+     "why": "Pedro é homem, então usamos \"his\" (dele).",
      "wrong": {
-      "Her": "\"Her\" é dela. O dono é o Pedro.",
+      "Her": "\"Her\" é dela, para mulher. Pedro é homem: \"his\".",
       "My": "\"My\" seria o seu carro, não o do Pedro."
      }
     },
@@ -261,9 +261,9 @@
       "Your"
      ],
      "answer": "Her",
-     "why": "O dono é Ana, uma mulher, então usamos \"her\" (dela) — mesmo que o irmão seja homem.",
+     "why": "Ana é mulher, então usamos \"her\" (dela) — mesmo que o irmão seja homem.",
      "wrong": {
-      "His": "Erro comum! O que decide é o dono (Ana), não o irmão. Por isso é \"her\"."
+      "His": "Erro comum! É o irmão DELA, da Ana. Quem decide é a Ana, não o irmão. Por isso é \"her\"."
      }
     },
     {
@@ -276,7 +276,7 @@
       "A Ana do irmão"
      ],
      "answer": "O irmão da Ana",
-     "why": "O 's indica posse: primeiro o dono (Ana), depois a coisa (brother)."
+     "why": "O 's indica de quem é: primeiro a pessoa (Ana), depois a coisa (brother)."
     },
     {
      "id": "a1u4l2-4",
@@ -312,7 +312,7 @@
       "my"
      ],
      "display": "His name is Carlos.",
-     "why": "\"His\" = dele. A frase é igual a \"my name is\", só trocando o dono."
+     "why": "\"His\" = dele. A frase é igual a \"my name is\", só trocando \"my\" (meu) por \"his\" (dele)."
     },
     {
      "id": "a1u4l2-7",
@@ -474,7 +474,7 @@
      "accept": [
       "His name's Pedro."
      ],
-     "why": "\"His\" = dele. O dono é um homem (Pedro)."
+     "why": "\"His\" = dele. Pedro é homem: o nome dele = his name."
     },
     {
      "id": "a1u4l4-5",
@@ -612,7 +612,7 @@
      "answer": "his",
      "why": "A esposa é do Pedro (homem), então: his wife.",
      "wrong": {
-      "her": "\"Her\" seria \"dela\". O dono é o Pedro.",
+      "her": "\"Her\" seria \"dela\". Pedro é homem, então é \"his\".",
       "he": "\"He\" é \"ele\", não \"dele\"."
      }
     },

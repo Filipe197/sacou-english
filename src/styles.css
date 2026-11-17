@@ -453,8 +453,8 @@ button{font-family:inherit}
 .tr-bubble{position:absolute;bottom:calc(100% + 18px);z-index:2;background:#fff;color:var(--violet);border:2px solid var(--line);font-weight:800;font-size:14px;letter-spacing:.8px;text-transform:uppercase;padding:9px 14px;border-radius:12px;white-space:nowrap;animation:tr-bob 1.6s ease-in-out infinite;pointer-events:none}
 .tr-bubble::after{content:"";position:absolute;left:50%;top:100%;width:12px;height:12px;background:#fff;border-right:2px solid var(--line);border-bottom:2px solid var(--line);transform:translate(-50%,-6px) rotate(45deg)}
 @keyframes tr-bob{50%{transform:translateY(-5px)}}
-.tr-pop{position:absolute;top:calc(100% + 16px);z-index:20;width:min(300px,calc(100vw - 32px));background:var(--violet);color:#fff;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:6px;box-shadow:0 14px 30px rgba(11,13,26,.22);text-align:left;cursor:default}
-.tr-pop::before{content:"";position:absolute;left:50%;bottom:100%;border:10px solid transparent;border-bottom-color:var(--violet);transform:translateX(-50%)}
+.tr-pop{position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(calc(-50% - var(--x) * var(--amp)));z-index:20;width:min(300px,calc(100vw - 32px));background:var(--violet);color:#fff;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:6px;box-shadow:0 14px 30px rgba(11,13,26,.22);text-align:left;cursor:default}
+.tr-pop::before{content:"";position:absolute;left:calc(50% + var(--x) * var(--amp));bottom:100%;border:10px solid transparent;border-bottom-color:var(--violet);transform:translateX(-50%)}
 .tr-pop b{font-size:18px;font-family:var(--head)}
 .tr-pop-k{font-size:12px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;opacity:.8}
 .tr-pop-t{font-size:14px;opacity:.9;line-height:1.45}
