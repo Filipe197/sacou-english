@@ -110,6 +110,14 @@ npm run dev
 - `public/animations/`: `celebrate.lottie`, `trophy.lottie` — LottieFiles (Lottie Simple License).
 - Se um arquivo não existir, o site funciona normalmente, só sem aquele efeito.
 
+## Ilustrações da trilha
+
+- `public/art/pessoas/`: personagens do **Humaaans**, de Pablo Stanley (CC0, humaaans.com), com as roupas
+  recoloridas para o roxo, o limão e o laranja do Sacou.
+- `src/art/objetos.js`: objetos de cada tema (paleta, bolo, caneca…), desenhados para o Sacou.
+- `src/components/TrailScene.jsx`: qual personagem e qual objeto aparecem em cada unidade.
+- O pacote original fica em `arte-fonte/` (fora do git).
+
 ## Fontes
 
 Ver página `/creditos` no site: CEFR (Conselho da Europa), British Council/EAQUALS Core Inventory,

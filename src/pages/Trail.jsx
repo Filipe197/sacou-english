@@ -1,11 +1,67 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { UNITS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, NEXT_LEVEL, unitsOf, lessonStates, levelPercent, currentLevel } from '../lib/content.js';
 import { useProgress, liveStreak, todayBR, dueLessonIds, shieldCovering } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { Shell, Spinner, Icon, Fire, Bolt, Anim } from '../components/ui.jsx';
 import { NewAchievement } from '../components/Achievements.jsx';
 import { Missions } from '../components/Missions.jsx';
+import TrailScene from '../components/TrailScene.jsx';
+
+// Caminho em zigue-zague (deslocamento de cada bolinha, de -1 a 1)
+const WAVE = [0, 0.6, 1, 0.6, 0, -0.6, -1, -0.6];
+// Ícone de cada tipo de lição
+function kindOf(l) {
+  const t = l.title || '';
+  if (l.story || /^História/.test(t)) return { icon: 'story', label: 'História' };
+  if (/^Escrevendo/.test(t)) return { icon: 'edit', label: 'Escrita' };
+  if (/^Conversa/.test(t)) return { icon: 'chat', label: 'Conversa' };
+  if (/^Desafio/.test(t)) return { icon: 'trophy', label: 'Desafio' };
+  return { icon: 'star', label: 'Lição' };
+}
+
+function Chest({ open, fresh }) {
+  // gold: baú liberado; gray: ainda bloqueado
+  const k = open
+    ? { top: '#FFD45C', body: '#F5A623', dark: '#C46F0A', band: '#B5610A', plate: '#FFF3C4', deep: '#8A4508' }
+    : { top: '#E9EAF2', body: '#D3D5E3', dark: '#AEB1C6', band: '#A3A6BD', plate: '#F6F7FB', deep: '#7F8299' };
+  const id = open ? 'cg' : 'cl';
+  return (
+    <svg width="84" height="78" viewBox="0 0 100 92" aria-hidden="true">
+      <defs>
+        <linearGradient id={id + 'b'} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={k.body} /><stop offset="1" stopColor={k.dark} /></linearGradient>
+        <linearGradient id={id + 't'} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={k.top} /><stop offset="1" stopColor={k.body} /></linearGradient>
+        <radialGradient id={id + 'g'} cx="50%" cy="100%" r="70%"><stop offset="0" stopColor="#FFF6C2" stopOpacity=".95" /><stop offset="1" stopColor="#FFE27A" stopOpacity="0" /></radialGradient>
+      </defs>
+      <ellipse cx="50" cy="86" rx="36" ry="5" fill="rgba(11,13,26,.14)" />
+      {open ? (
+        <>
+          {fresh && <path d="M50 44 L26 0 H74 Z" fill={`url(#${id}g)`} />}
+          <path d="M14 40 L20 14 Q21 10 25 10 H75 Q79 10 80 14 L86 40 Z" fill={k.dark} />
+          <path d="M20 16 Q21 13 25 13 H75 Q79 13 80 16 L84 36 H16 Z" fill={`url(#${id}t)`} />
+          <rect x="16" y="34" width="68" height="10" rx="3" fill={k.deep} />
+          <circle cx="36" cy="38" r="5" fill="#FFE27A" /><circle cx="50" cy="36" r="6" fill="#FFD23F" /><circle cx="63" cy="38" r="5" fill="#FFE27A" />
+        </>
+      ) : (
+        <>
+          <path d="M12 44 V30 Q12 14 30 14 H70 Q88 14 88 30 V44 Z" fill={`url(#${id}t)`} />
+          <path d="M20 22 Q24 18 32 18 H52" stroke="#fff" strokeOpacity=".55" strokeWidth="4" strokeLinecap="round" fill="none" />
+          <rect x="24" y="14" width="9" height="30" fill={k.band} opacity=".55" />
+          <rect x="67" y="14" width="9" height="30" fill={k.band} opacity=".55" />
+        </>
+      )}
+      <rect x="12" y="42" width="76" height="40" rx="8" fill={`url(#${id}b)`} />
+      <rect x="12" y="42" width="76" height="6" fill={k.deep} opacity=".35" />
+      <rect x="24" y="42" width="9" height="40" fill={k.band} opacity=".6" />
+      <rect x="67" y="42" width="9" height="40" fill={k.band} opacity=".6" />
+      <rect x="12" y="74" width="76" height="8" rx="4" fill={k.deep} opacity=".35" />
+      <rect x="40" y={open ? 44 : 36} width="20" height="22" rx="6" fill={k.plate} />
+      <circle cx="50" cy={open ? 53 : 45} r="3.2" fill={k.deep} />
+      <rect x="48.6" y={open ? 54 : 46} width="2.8" height="6" rx="1.4" fill={k.deep} />
+      {open && fresh && <g fill="#FFD23F"><path d="M14 8 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" /><path d="M86 4 l1.5 3.5 3.5 1.5 -3.5 1.5 -1.5 3.5 -1.5 -3.5 -3.5 -1.5 3.5 -1.5z" /></g>}
+    </svg>
+  );
+}
 
 export function Rail({ prog }) {
   const { profile } = useAuth();
@@ -64,6 +120,21 @@ export default function Trail() {
   const prog = useProgress();
   const { profile } = useAuth();
   const curRef = useRef(null);
+  const [open, setOpen] = useState(null); // bolinha com o balão aberto
+  const [games, setGames] = useState(null); // personagens e jogos (carregados à parte, não atrasam a trilha)
+  useEffect(() => {
+    let alive = true;
+    import('../games/lib.js').then((g) => { if (alive) setGames({ g }); }).catch(() => {});
+    return () => { alive = false; };
+  }, []);
+  useEffect(() => {
+    if (!open) return;
+    const close = () => setOpen(null);
+    const esc = (e) => { if (e.key === 'Escape') setOpen(null); };
+    document.addEventListener('click', close);
+    document.addEventListener('keydown', esc);
+    return () => { document.removeEventListener('click', close); document.removeEventListener('keydown', esc); };
+  }, [open]);
   // Leva a tela até a lição atual (onde o aluno parou)
   useEffect(() => {
     if (prog.loading) return;
@@ -81,80 +152,100 @@ export default function Trail() {
   const doneCount = states.filter(s => s.state === 'done').length;
   const skippedCount = states.filter(s => s.state === 'done' && isSkipped(s.lesson.id)).length;
   const allDone = states.every(s => s.state === 'done');
+  const extras = games && {
+    rewardsOf: (unitId) => {
+      const { g } = games;
+      return [
+        ...g.PODCASTS.filter(x => x.unlock === unitId).map(x => ({ to: `/jogos/podcast/${x.id}`, icon: '🎙️', kind: 'Podcast', title: x.title, played: g.played(prog.scores, x.id) })),
+        ...g.EPISODES.filter(x => x.unlock === unitId).map(x => ({ to: `/jogos/episodio/${x.id}`, icon: '📖', kind: 'Episódio', title: x.title, played: g.played(prog.scores, x.id) })),
+        ...g.CASES.filter(x => x.unlock === unitId).map(x => ({ to: `/jogos/detetive/${x.id}`, icon: '🕵️', kind: 'Detetive', title: x.title, played: g.played(prog.scores, x.id) })),
+        ...g.MISSIONS.filter(x => x.unlock === unitId).map(x => ({ to: `/jogos/missao/${x.id}`, icon: '🗺️', kind: 'Missão', title: x.title, played: g.played(prog.scores, x.id) })),
+      ];
+    },
+  };
 
   return (
     <Shell mistakesCount={prog.mistakes.length} rail={<Rail prog={prog} />}>
-      <div style={{ maxWidth: 640, margin: '0 auto' }}>
-        {profile?.display_name && <p className="muted" style={{ margin: '0 0 16px', fontSize: 16 }}>Olá, <b style={{ color: 'var(--ink)' }}>{profile.display_name.split(' ')[0]}</b>!</p>}
-        {current && (
-          <div className="card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', marginBottom: 24, borderColor: 'var(--violet-ring)' }}>
-            <div>
-              <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--violet)', letterSpacing: 1, textTransform: 'uppercase' }}>Você parou aqui</span>
-              <b style={{ display: 'block', fontSize: 19, margin: '4px 0 2px' }}>{current.title}</b>
-              <span className="muted" style={{ fontSize: 14 }}>Nível {current.unit.level} · Unidade {current.unit.order}: {current.unit.title} · lição {current.index + 1} de {current.unit.lessons.length}</span>
-            </div>
-            <Link className="btn btn-violet" to={`/licao/${current.id}`}>Continuar <Icon name="arrow" size={18} stroke={2.5} /></Link>
-          </div>
-        )}
-        {doneCount > 0 && (
-          <p className="muted" style={{ fontSize: 13, margin: '0 0 16px', display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 14, borderRadius: 99, background: 'var(--ok)' }} />Lição concluída</span>
-            {skippedCount > 0 && <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}><span style={{ width: 14, height: 14, borderRadius: 99, background: '#CDEFDD' }} />Pulada pelo teste de nível</span>}
-          </p>
-        )}
+      <div className="trail">
         {prog.error && <div className="alert" role="alert" style={{ marginBottom: 16 }}>{prog.error}</div>}
 
         {LEVELS.map(lv => (
           <div key={lv}>
-            <h2 style={{ fontSize: 15, letterSpacing: 1, textTransform: 'uppercase', color: 'var(--text3)', margin: '8px 0 12px', fontFamily: 'Inter, sans-serif' }}>Nível {lv} · {LEVEL_NAMES[lv]}</h2>
-        {unitsOf(lv).map((u) => {
-          const unitStates = u.lessons.map(l => stateOf[l.id]);
-          const unitDone = unitStates.filter(x => x === 'done').length;
-          const complete = unitDone === u.lessons.length;
-          const unlocked = unitStates.some(s => s !== 'locked');
-          return (
-            <section key={u.id} aria-labelledby={u.id} style={{ marginBottom: 16 }}>
-              <div className={'unit-banner' + (complete ? ' complete' : unlocked ? '' : ' locked')}>
-                <div>
-                  <p style={{ margin: '0 0 4px', fontSize: 13, fontWeight: 700, color: unlocked ? 'var(--lime)' : 'var(--text3)', letterSpacing: 1, textTransform: 'uppercase' }}>Nível {u.level} · Unidade {u.order}</p>
-                  <h2 id={u.id} style={{ margin: 0, fontSize: 26, display: 'flex', alignItems: 'center', gap: 10 }}>{complete && <Icon name="check" size={26} color="var(--lime)" stroke={3} />}{u.title}</h2>
-                  <p style={{ margin: '6px 0 0', fontSize: 15, color: complete ? '#D8F5E6' : unlocked ? 'var(--violet-ring)' : 'var(--text2)' }}>{u.subtitle}</p>
-                  {unlocked && (
-                    <div className="unit-progress">
-                      <div className="track" role="progressbar" aria-valuenow={unitDone} aria-valuemin={0} aria-valuemax={u.lessons.length} aria-label={`${unitDone} de ${u.lessons.length} lições`}><div className="fill" style={{ width: (unitDone / u.lessons.length) * 100 + '%' }} /></div>
-                      <span style={{ fontSize: 14, fontWeight: 700 }}>{complete ? 'Unidade concluída!' : `${unitDone} de ${u.lessons.length} lições`}</span>
+            <div className="tr-level"><span>Nível {lv} · {LEVEL_NAMES[lv]}</span></div>
+            {unitsOf(lv).map((u) => {
+              const unitStates = u.lessons.map(l => stateOf[l.id]);
+              const unitDone = unitStates.filter(x => x === 'done').length;
+              const complete = unitDone === u.lessons.length;
+              const unlocked = unitStates.some(s => s !== 'locked');
+              const tone = complete ? ' complete' : unlocked ? '' : ' locked';
+              const rewards = extras ? extras.rewardsOf(u.id) : [];
+              const left = u.order % 2 === 1;
+              return (
+                <section key={u.id} aria-labelledby={u.id} className={'tr-unit' + tone}>
+                  <div className={'tr-head' + tone}>
+                    <div style={{ minWidth: 0 }}>
+                      <span className="tr-kick">{complete && <Icon name="check" size={15} stroke={3} />}Nível {u.level} · Unidade {u.order}{unlocked && !complete ? ` · ${unitDone} de ${u.lessons.length}` : ''}</span>
+                      <h2 id={u.id} title={u.subtitle}>{u.title}</h2>
                     </div>
-                  )}
-                </div>
-                <Link className="btn" to={`/guia/${u.id}`} style={{ background: unlocked ? '#fff' : 'var(--violet-l)', color: 'var(--violet-dd)', minHeight: 44, fontSize: 15 }}>
-                  <Icon name="book" size={18} />Ler a explicação
-                </Link>
-              </div>
-              <div className="path">
-                {u.lessons.map((l, i) => {
-                  const st = stateOf[l.id];
-                  const skipped = st === 'done' && isSkipped(l.id);
-                  const off = 'off' + ((u.order * 2 + i) % 8);
-                  const label = `${l.title} — ${skipped ? 'pulada pelo teste de nível, toque para fazer' : st === 'done' ? 'concluída, toque para treinar de novo' : st === 'current' ? 'começar' : 'bloqueada: conclua a lição anterior'}`;
-                  const inner = (
-                    <>
-                      <span className="circ">
-                        {st === 'done' && <Icon name="check" size={32} color={skipped ? 'var(--ok-d)' : '#fff'} stroke={3} />}
-                        {st === 'current' && <svg width="34" height="34" viewBox="0 0 24 24" fill="#0B0D1A" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>}
-                        {st === 'locked' && <Icon name="lock" size={28} color="#6A6E88" stroke={2.2} />}
-                      </span>
-                      {st === 'current' && <span className="start">Começar · até +15 XP</span>}
-                      <span className="nlabel">{l.title}</span>
-                    </>
-                  );
-                  return st === 'locked'
-                    ? <span key={l.id} className={`node locked ${off}`} aria-label={label} role="img">{inner}</span>
-                    : <Link key={l.id} ref={st === 'current' ? curRef : undefined} to={`/licao/${l.id}`} className={`node ${st}${skipped ? ' skipped' : ''} ${off}`} aria-label={label}>{inner}</Link>;
-                })}
-              </div>
-            </section>
-          );
-        })}
+                    <Link className="tr-guide" to={`/guia/${u.id}`} aria-label={`Guia da unidade ${u.order}: ${u.title}`}><Icon name="book" size={18} /><span>Guia</span></Link>
+                  </div>
+                  <div className="tr-path">
+                    <TrailScene unitId={u.id} side={left ? 'left' : 'right'} off={!unlocked} top={left ? 150 : 446} />
+                    {u.lessons.map((l, i) => {
+                      const st = stateOf[l.id];
+                      const skipped = st === 'done' && isSkipped(l.id);
+                      const key = l.id;
+                      const status = skipped ? 'Pulada pelo teste de nível' : st === 'done' ? 'Concluída' : st === 'current' ? 'Próxima lição' : 'Bloqueada';
+                      return (
+                        <div key={key} className={'tr-slot' + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[i % WAVE.length] }}>
+                          {st === 'current' && <span className="tr-bubble" aria-hidden="true">Começar</span>}
+                          <button type="button" ref={st === 'current' ? curRef : undefined}
+                            className={`tr-node ${st}${skipped ? ' skipped' : ''}${open === key ? ' open' : ''}`}
+                            aria-expanded={open === key} aria-label={`${l.title}: ${status}`}
+                            onClick={(e) => { e.stopPropagation(); setOpen(o => (o === key ? null : key)); }}>
+                            <span className={'tr-face i-' + kindOf(l).icon}><Icon name={kindOf(l).icon} size={30} stroke={2.4} /></span>
+                          </button>
+                          {open === key && (
+                            <div className="tr-pop" onClick={e => e.stopPropagation()}>
+                              <span className="tr-pop-k">{kindOf(l).label} · {status}</span>
+                              <b>{l.title}</b>
+                              {st === 'locked'
+                                ? <span className="tr-pop-t">Conclua as lições anteriores para liberar esta.</span>
+                                : <Link className="btn btn-3d tr-pop-go" to={`/licao/${l.id}`}>{st === 'current' ? 'Começar · até +15 XP' : skipped ? 'Fazer a lição' : 'Treinar de novo'}</Link>}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                    {rewards.length > 0 && (() => {
+                      const key = u.id + '-bau';
+                      const fresh = complete && rewards.some(r => !r.played);
+                      return (
+                        <div className={'tr-slot' + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[u.lessons.length % WAVE.length] }}>
+                          <button type="button" className={'tr-chest' + (complete ? ' on' : '') + (fresh ? ' fresh' : '')}
+                            aria-expanded={open === key} aria-label={complete ? 'Baú da unidade: recompensas liberadas' : 'Baú da unidade: bloqueado'}
+                            onClick={(e) => { e.stopPropagation(); setOpen(o => (o === key ? null : key)); }}>
+                            <Chest open={complete} fresh={fresh} />
+                          </button>
+                          {open === key && (
+                            <div className="tr-pop" onClick={e => e.stopPropagation()}>
+                              <span className="tr-pop-k">Baú da unidade</span>
+                              <b>{complete ? 'Recompensas liberadas!' : 'Termine a unidade para abrir'}</b>
+                              <span className="tr-pop-t">{complete ? 'Treine o que aprendeu de um jeito divertido:' : 'Dentro do baú:'}</span>
+                              <div className="tr-rewards">
+                                {rewards.map(r => complete
+                                  ? <Link key={r.to} to={r.to} className="tr-rw">{r.icon} <span><small>{r.kind}</small>{r.title}</span>{r.played && <Icon name="check" size={16} stroke={3} />}</Link>
+                                  : <span key={r.to} className="tr-rw off">{r.icon} <span><small>{r.kind}</small>{r.title}</span><Icon name="lock" size={16} /></span>)}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
+                  </div>
+                </section>
+              );
+            })}
           </div>
         ))}
 
