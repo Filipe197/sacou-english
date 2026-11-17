@@ -63,6 +63,19 @@ function Chest({ open, fresh }) {
   );
 }
 
+// Barra fixa no topo com a unidade que está na tela (como no Duolingo)
+function UnitHead({ u, unitDone, complete, unlocked, tone }) {
+  return (
+    <div className={'tr-head' + tone}>
+      <div style={{ minWidth: 0 }}>
+        <span className="tr-kick">{complete && <Icon name="check" size={15} stroke={3} />}Nível {u.level} · Unidade {u.order}{unlocked && !complete ? ` · ${unitDone} de ${u.lessons.length}` : ''}</span>
+        <b className="tr-title" title={u.subtitle}>{u.title}</b>
+      </div>
+      <Link className="tr-guide" to={`/guia/${u.id}`} aria-label={`Guia da unidade ${u.order}: ${u.title}`}><Icon name="book" size={18} /><span>Guia</span></Link>
+    </div>
+  );
+}
+
 export function Rail({ prog }) {
   const { profile } = useAuth();
   const todayXp = prog.week.find(w => w.day === todayBR())?.xp || 0;
@@ -121,6 +134,7 @@ export default function Trail() {
   const { profile } = useAuth();
   const curRef = useRef(null);
   const [open, setOpen] = useState(null); // bolinha com o balão aberto
+  const [stuck, setStuck] = useState(null); // unidade mostrada na barra fixa do topo
   const [games, setGames] = useState(null); // personagens e jogos (carregados à parte, não atrasam a trilha)
   useEffect(() => {
     let alive = true;
@@ -135,6 +149,25 @@ export default function Trail() {
     document.addEventListener('keydown', esc);
     return () => { document.removeEventListener('click', close); document.removeEventListener('keydown', esc); };
   }, [open]);
+  // Barra única no topo: mostra a unidade cujo cabeçalho já passou para baixo dela
+  useEffect(() => {
+    if (prog.loading) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      let id = null;
+      const limit = (document.querySelector('.tr-stick')?.getBoundingClientRect().bottom || 90) + 8;
+      for (const sec of document.querySelectorAll('.tr-unit[data-u]')) {
+        if (id === null || sec.getBoundingClientRect().top < limit) id = sec.dataset.u; else break;
+      }
+      setStuck(id);
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); if (raf) cancelAnimationFrame(raf); };
+  }, [prog.loading]);
   // Leva a tela até a lição atual (onde o aluno parou)
   useEffect(() => {
     if (prog.loading) return;
@@ -164,30 +197,33 @@ export default function Trail() {
     },
   };
 
+  const infoOf = (u) => {
+    const unitStates = u.lessons.map(l => stateOf[l.id]);
+    const unitDone = unitStates.filter(x => x === 'done').length;
+    const complete = unitDone === u.lessons.length;
+    const unlocked = unitStates.some(x => x !== 'locked');
+    return { u, unitDone, complete, unlocked, tone: complete ? ' complete' : unlocked ? '' : ' locked' };
+  };
+  const stuckUnit = stuck && UNITS.find(x => x.id === stuck);
+
   return (
     <Shell mistakesCount={prog.mistakes.length} rail={<Rail prog={prog} />}>
       <div className="trail">
+        <div className="tr-stick">{stuckUnit && <UnitHead {...infoOf(stuckUnit)} />}</div>
         {prog.error && <div className="alert" role="alert" style={{ marginBottom: 16 }}>{prog.error}</div>}
 
         {LEVELS.map(lv => (
           <div key={lv}>
             <div className="tr-level"><span>Nível {lv} · {LEVEL_NAMES[lv]}</span></div>
             {unitsOf(lv).map((u) => {
-              const unitStates = u.lessons.map(l => stateOf[l.id]);
-              const unitDone = unitStates.filter(x => x === 'done').length;
-              const complete = unitDone === u.lessons.length;
-              const unlocked = unitStates.some(s => s !== 'locked');
-              const tone = complete ? ' complete' : unlocked ? '' : ' locked';
+              const info = infoOf(u);
+              const { unitDone, complete, unlocked, tone } = info;
               const rewards = extras ? extras.rewardsOf(u.id) : [];
               const left = u.order % 2 === 1;
               return (
-                <section key={u.id} aria-labelledby={u.id} className={'tr-unit' + tone}>
-                  <div className={'tr-head' + tone}>
-                    <div style={{ minWidth: 0 }}>
-                      <span className="tr-kick">{complete && <Icon name="check" size={15} stroke={3} />}Nível {u.level} · Unidade {u.order}{unlocked && !complete ? ` · ${unitDone} de ${u.lessons.length}` : ''}</span>
-                      <h2 id={u.id} title={u.subtitle}>{u.title}</h2>
-                    </div>
-                    <Link className="tr-guide" to={`/guia/${u.id}`} aria-label={`Guia da unidade ${u.order}: ${u.title}`}><Icon name="book" size={18} /><span>Guia</span></Link>
+                <section key={u.id} aria-labelledby={u.id} className={'tr-unit' + tone} data-u={u.id}>
+                  <div className={'tr-div' + tone}>
+                    <h2 id={u.id} title={u.subtitle}>{complete && <Icon name="check" size={16} stroke={3} />}Unidade {u.order} · {u.title}</h2>
                   </div>
                   <div className="tr-path">
                     <TrailScene unitId={u.id} side={left ? 'left' : 'right'} off={!unlocked} top={left ? 150 : 446} />
@@ -197,7 +233,7 @@ export default function Trail() {
                       const key = l.id;
                       const status = skipped ? 'Pulada pelo teste de nível' : st === 'done' ? 'Concluída' : st === 'current' ? 'Próxima lição' : 'Bloqueada';
                       return (
-                        <div key={key} className={'tr-slot' + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[i % WAVE.length] }}>
+                        <div key={key} className={'tr-slot' + (st === 'current' ? ' cur' : '') + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[i % WAVE.length] }}>
                           {st === 'current' && <span className="tr-bubble" aria-hidden="true">Começar</span>}
                           <button type="button" ref={st === 'current' ? curRef : undefined}
                             className={`tr-node ${st}${skipped ? ' skipped' : ''}${open === key ? ' open' : ''}`}
