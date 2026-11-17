@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Shell, Icon } from '../components/ui.jsx';
-import Crabtree from '../components/Crabtree.jsx';
+import Juvenal from '../components/Juvenal.jsx';
 import { useListen, getSR } from '../components/Pronounce.jsx';
 import { SCENARIOS, MAX_TURNS, MAX_CHARS } from '../lib/scenarios.js';
 import { speak, canSpeak, fx } from '../lib/fx.js';
@@ -26,10 +26,10 @@ export default function Conversation() {
           o professor mostra a forma certa na hora. No fim, você recebe um resumo e pode salvar as frases como flashcards.
         </p>
         <Link to="/aula" className="conv-promo">
-          <Crabtree mood="grumpy" size={72} />
+          <Juvenal mood="grumpy" size={72} />
           <div>
-            <b>Aula falada com o Professor Rabugento</b>
-            <span>Ele fala, você repete, e se não sair ele pede de novo, resmungando. Reclama de tudo, mas nunca desiste de você.</span>
+            <b>Aula falada com o Professor Juvenal</b>
+            <span>O professor mais ranzinza do Brasil: ele fala, você repete, e se não sair ele pede de novo, reclamando. Mas nunca desiste de você.</span>
           </div>
           <span className="btn">Começar</span>
         </Link>

@@ -1,9 +1,9 @@
-// Aula falada com o Professor Rabugento (Mr. Crabtree): ele comenta, no personagem,
+// Aula falada com o Professor Juvenal, o mais ranzinza do Brasil: ele comenta, no personagem,
 // e pede para o aluno repetir uma frase ou responder uma pergunta. A repetição é
 // conferida no navegador, palavra por palavra; se não sair, ele pede de novo.
 import { useEffect, useRef, useState } from 'react';
 import { Shell, Icon } from '../components/ui.jsx';
-import Crabtree from '../components/Crabtree.jsx';
+import Juvenal from '../components/Juvenal.jsx';
 import { useListen, getSR, PronWords, WordCoach } from '../components/Pronounce.jsx';
 import { Summary } from './Conversation.jsx';
 import { alignSpeech } from '../lib/pronounce.js';
@@ -37,14 +37,15 @@ function Setup({ onStart }) {
     <Shell>
       <div className="aula-setup">
         <div className="aula-hero">
-          <Crabtree mood="grumpy" size={132} />
+          <Juvenal mood="grumpy" size={132} />
           <div>
             <p className="q-label" style={{ margin: 0 }}>Aula falada</p>
-            <h1>{TEACHER.name}, o {TEACHER.nick}</h1>
+            <h1>{TEACHER.full}</h1>
+            <p className="aula-tag">{TEACHER.tag}</p>
             <p className="muted">
-              Professor de inglês há 40 anos. Reclama do tempo, do chá frio e do gato Winston, mas nunca desiste de você:
-              ele fala uma frase, você repete em voz alta, e se não sair, ele pede de novo (resmungando). Depois faz perguntas
-              para você responder com as suas palavras.
+              Dá aula de inglês desde a época da fita VHS. Reclama do calor, do vizinho que reforma a casa há três anos e do
+              cafezinho que esfriou, mas não desiste de você de jeito nenhum: ele fala uma frase, você repete em voz alta e,
+              se não sair, ele pede de novo (reclamando, claro). Depois faz perguntas para você responder do seu jeito.
             </p>
           </div>
         </div>
@@ -57,7 +58,7 @@ function Setup({ onStart }) {
             ))}
           </div>
           <p className="muted" style={{ fontSize: 14, margin: '6px 0 0' }}>
-            {commentInPt(lvl) ? 'No A1 e no A2, ele resmunga em português e ensina em inglês.' : 'No B1 e no B2, ele resmunga em inglês (com tradução, se precisar).'}
+            {commentInPt(lvl) ? 'No A1 e no A2, ele reclama em português e ensina em inglês.' : 'No B1 e no B2, ele reclama em inglês (com tradução, se precisar).'}
           </p>
           <h2>Assunto</h2>
           <div className="aula-chips" role="radiogroup" aria-label="Assunto da aula">
@@ -206,7 +207,7 @@ function Lesson({ cfg, onExit, onAgain }) {
   }
 
   if (summary) {
-    return <Summary sc={{ title: `${TEACHER.name} · ${topic.title}` }} s={summary} onExit={onExit} onAgain={onAgain}
+    return <Summary sc={{ title: `${TEACHER.full} · ${topic.title}` }} s={summary} onExit={onExit} onAgain={onAgain}
       kicker="Resumo da aula" againLabel="Outra aula" exitLabel="Trocar assunto" />;
   }
 
@@ -220,7 +221,7 @@ function Lesson({ cfg, onExit, onAgain }) {
       <header className="lesson-top">
         <button type="button" className="icon-btn" aria-label="Sair da aula" onClick={onExit}><Icon name="x" size={24} stroke={2.4} /></button>
         <div style={{ minWidth: 0 }}>
-          <b style={{ display: 'block' }}>Aula com {TEACHER.name}</b>
+          <b style={{ display: 'block' }}>Aula com o {TEACHER.full}</b>
           <span className="muted" style={{ fontSize: 13 }}>{level} · {topic.title} · {Math.min(asks, MAX_STEPS)}/{MAX_STEPS}</span>
         </div>
         <button type="button" className="chip aula-voice" onClick={toggleVoice} aria-pressed={voice}>
@@ -240,7 +241,7 @@ function Lesson({ cfg, onExit, onAgain }) {
         )}
 
         <div className="aula-prof">
-          <Crabtree mood={mood} talking={talking} size={112} />
+          <Juvenal mood={mood} talking={talking} size={112} />
           <div className={'aula-bubble' + (waiting ? ' typing' : '')} role={waiting ? 'status' : undefined} aria-label={waiting ? `${TEACHER.name} está pensando` : undefined}>
             {waiting ? <><span /><span /><span /></> : (
               <>
@@ -302,7 +303,7 @@ function Lesson({ cfg, onExit, onAgain }) {
                 placeholder={listening ? 'Ouvindo… fale em inglês' : getSR() ? 'Fale no microfone ou escreva em inglês' : 'Escreva em inglês'} aria-label="Sua resposta em inglês" autoComplete="off" />
               <button type="submit" className="btn btn-violet" disabled={!input.trim() || waiting} aria-label="Enviar"><Icon name="arrow" size={20} color="#fff" /></button>
             </form>
-            <p className="muted conv-hint">Travou? Escreva em português que ele ajuda (resmungando).</p>
+            <p className="muted conv-hint">Travou? Escreva em português que ele ajuda (reclamando).</p>
           </>
         )}
       </footer>

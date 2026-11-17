@@ -1,4 +1,4 @@
-// Rosto do Mr. Crabtree, o Professor Rabugento (desenho próprio do Sacou).
+// Rosto do Professor Juvenal, o professor mais ranzinza do Brasil (desenho próprio do Sacou).
 // mood: grumpy | annoyed | surprised | proud. talking: o bigode mexe enquanto ele fala.
 const BROWS = {
   grumpy: ['M44 60 L74 70', 'M86 70 L116 60'],
@@ -15,7 +15,7 @@ const MOUTH = {
   thinking: <path d="M71 124 L89 124" fill="none" stroke="#7A2E1F" strokeWidth="3.5" strokeLinecap="round" />,
 };
 
-export default function Crabtree({ mood = 'grumpy', talking = false, size = 120 }) {
+export default function Juvenal({ mood = 'grumpy', talking = false, size = 120 }) {
   const m = BROWS[mood] ? mood : 'grumpy';
   const eye = m === 'surprised' ? 4.6 : 3.4;
   return (

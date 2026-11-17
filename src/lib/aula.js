@@ -1,9 +1,9 @@
-// Aula falada com o Professor Rabugento. Usado no site (tela /aula) e na função do
+// Aula falada com o Professor Juvenal. Usado no site (tela /aula) e na função do
 // servidor (api/aula.js): o navegador manda só o id do tema e o nível, nunca o texto do papel.
 export const AULA_LEVELS = ['A1', 'A2', 'B1', 'B2'];
 
 export const TOPICS = [
-  { id: 'surpresa', title: 'Surpresa', en: 'any everyday topic you like (the weather, tea, your cat Winston, the student\'s day)' },
+  { id: 'surpresa', title: 'Surpresa', en: "any everyday topic you like (the heat, your noisy neighbour, coffee, the student's day)" },
   { id: 'apresentar', title: 'Se apresentar', en: 'introducing yourself: name, age, city, job' },
   { id: 'comida', title: 'Comida', en: 'food, meals and cooking' },
   { id: 'rotina', title: 'Rotina', en: 'daily routine and free time' },
@@ -14,7 +14,7 @@ export const TOPICS = [
 ];
 export const topicById = (id) => TOPICS.find(t => t.id === id) || null;
 
-export const TEACHER = { name: 'Mr. Crabtree', nick: 'Professor Rabugento', who: 'professor' };
+export const TEACHER = { name: 'Juvenal', full: 'Professor Juvenal', tag: 'o professor mais ranzinza do Brasil', who: 'professor' };
 
 // Limites da aula (iguais no site e no servidor)
 export const MAX_STEPS = 16;   // vezes que o professor pede algo novo
@@ -25,14 +25,16 @@ export const MAX_TRIES = 3;    // tentativas de repetir antes de seguir em frent
 export const commentInPt = (level) => level === 'A1' || level === 'A2';
 
 // Reações prontas quando a repetição não sai (não gastam IA). [pt, en]
+// Sem "hmm", "hmph" e afins: a voz lê o texto e não sabe falar esses sons.
 export const RETRY = [
-  ['Hmph. Quase. Meu gato Winston fala melhor, e ele só mia. De novo.', 'Hmph. Almost. My cat Winston speaks better, and he only says meow. Again.'],
-  ['Não, não, não. Ouça de novo, com calma. Eu tenho o dia todo... infelizmente.', 'No, no, no. Listen again, slowly. I have all day... unfortunately.'],
-  ['Perto. Mas perto só vale em jogo de bocha. Mais uma vez.', 'Close. But close only counts in horseshoes. Once more.'],
-  ['Oh dear. As palavras em vermelho fugiram. Vamos buscar elas. De novo.', 'Oh dear. The red words ran away. Let\'s go and get them. Again.'],
-  ['Meu chá esfriou esperando essa frase. Tente de novo, sem pressa.', 'My tea went cold waiting for that sentence. Try again, no rush.'],
+  ['Quase! Mas quase não é gol. De novo.', 'Almost! But almost is not a goal. Again.'],
+  ['Misericórdia! Até o papagaio da minha vizinha fala melhor. Bora, mais uma.', "My neighbour's parrot speaks better than that. Come on, one more time."],
+  ['Calma, criatura. Respira, toma uma água e repete comigo. Eu tenho a tarde toda... infelizmente.', 'Relax. Breathe, drink some water and repeat after me. I have all afternoon... unfortunately.'],
+  ['Eita. As palavras em vermelho fugiram que nem gato em dia de banho. Vamos buscar.', "The red words ran away like a cat on bath day. Let's go and get them."],
+  ['Meu cafezinho esfriou esperando essa frase. Mais uma vez, sem pressa.', 'My coffee got cold waiting for that sentence. Once more, no rush.'],
+  ['Tá de brincadeira comigo? Ouve de novo, devagarinho, e repete.', 'Are you kidding me? Listen again, slowly, and repeat.'],
 ];
 export const GIVE_UP = [
-  'Tá bom, tá bom. Vou fingir que não ouvi. A gente volta nisso depois.',
-  'Fine, fine. I\'ll pretend I didn\'t hear that. We\'ll come back to it later.',
+  'Tá bom, tá bom. Vou fingir que não ouvi. Depois a gente volta nisso.',
+  "Fine, fine. I'll pretend I didn't hear that. We'll come back to it later.",
 ];
