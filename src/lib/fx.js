@@ -214,12 +214,21 @@ export function speak(text, { slow = false, who } = {}) {
 }
 
 // Fala e espera terminar (para o modo fone e os episódios). lang 'pt' usa uma voz em português.
+// voice: áudio pronto de um personagem com voz própria (ex.: 'jp'/'je' = Professor Juvenal).
 let ptVoice = null;
-export function speakAsync(text, { slow = false, lang = 'en', who } = {}) {
+export function speakAsync(text, { slow = false, lang = 'en', who, voice } = {}) {
   return new Promise((resolve) => {
     if (!canSpeak()) { setTimeout(resolve, 600); return; }
     let done = false;
     const end = () => { if (!done) { done = true; resolve(); } };
+    const own = voice && clips && text ? clipKey(voice, text) : null;
+    if (own && clips.has(own)) {
+      setTimeout(end, 6000 + text.length * 160); // segurança
+      playClip(`/audio/${own}.mp3`, false).then(ok => { if (ok) end(); else fallback(); });
+      return;
+    }
+    fallback();
+    function fallback() {
     if (slow && lang !== 'pt') { slowSpeak(text, who).then(end, end); return; }
     if (lang !== 'pt') {
       const url = clipFor(text, who);
@@ -242,5 +251,6 @@ export function speakAsync(text, { slow = false, lang = 'en', who } = {}) {
     // segurança: alguns navegadores não disparam onend
     setTimeout(end, 1500 + text.length * (slow ? 140 : 90));
     window.speechSynthesis.speak(u);
+    }
   });
 }

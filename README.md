@@ -50,7 +50,9 @@ npm run dev
 - **Aula falada** (`/aula`): o Professor Juvenal (o mais ranzinza do Brasil) fala uma frase, o aluno repete e o site confere
   palavra por palavra no navegador (sem custo de IA); se não sair, ele pede de novo. Depois faz perguntas para o aluno
   responder. A IA só cria o próximo passo (`api/aula.js`, `src/pages/Aula.jsx`, `src/lib/aula.js`); conta no limite
-  de falas da conversa. As respostas dele usam a voz do aparelho.
+  de falas da conversa. As falas prontas dele (`RETRY`, `GIVE_UP`, `INTRO` em `src/lib/aula.js`) têm voz natural
+  da Kokoro (`pm_santa` em português, `am_santa` em inglês), gerada pelo `gen-audio.py`; as respostas criadas pela IA
+  usam a voz do aparelho (aviso de "voz em fase beta" na tela).
 - **Treino infinito** (`api/treino.js`): na revisão, a IA cria exercícios novos sobre os erros do aluno; cada
   frase passa pela mesma checagem CEFR-J do build (`scripts/cefr.mjs`) e o que não passar é descartado.
 - **Professor que lembra:** a explicação do erro considera os erros que o aluno mais repete.

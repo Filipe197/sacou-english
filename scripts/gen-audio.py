@@ -14,7 +14,8 @@ import glob, json, os, re, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'public', 'audio')
-VOICE_ID = {'f': 'af_heart', 'm': 'am_michael'}
+VOICE_ID = {'f': 'af_heart', 'm': 'am_michael', 'jp': 'pm_santa', 'je': 'am_santa'}  # jp/je: Professor Juvenal (português/inglês)
+VOICE_LANG = {'jp': 'pt-br'}
 SPEED = 0.92
 
 G = json.load(open(os.path.join(ROOT, 'src/lib/voices.json'), encoding='utf-8'))
@@ -128,6 +129,15 @@ for w in json.load(open(os.path.join(GD, 'pictures.json'), encoding='utf-8'))['w
 for t in ['Great!', 'Nice!', 'Perfect!', 'Well done!', 'Again, slowly.']:
     add(t)
 
+# ---------- falas prontas do Professor Juvenal (src/lib/aula.js) ----------
+import subprocess
+falas = json.loads(subprocess.run(
+    ['node', '-e', "import('./src/lib/aula.js').then(m => console.log(JSON.stringify({ r: m.RETRY, g: m.GIVE_UP, i: m.INTRO })))"],
+    cwd=ROOT, capture_output=True, text=True, encoding='utf-8', check=True).stdout)
+for pt, en in falas['r'] + [falas['g'], falas['i']]:
+    entries[key('jp', norm(pt))] = ('jp', norm(pt))
+    entries[key('je', norm(en))] = ('je', norm(en))
+
 # ---------- geração ----------
 os.makedirs(OUT, exist_ok=True)
 todo = [(h, v, t) for h, (v, t) in entries.items() if not os.path.exists(os.path.join(OUT, h + '.mp3'))]
@@ -140,7 +150,7 @@ if todo:
     t0 = time.time()
     for i, (h, v, t) in enumerate(todo):
         try:
-            audio, sr = k.create(t, voice=VOICE_ID[v], speed=SPEED, lang='en-us')
+            audio, sr = k.create(t, voice=VOICE_ID[v], speed=SPEED, lang=VOICE_LANG.get(v, 'en-us'))
             sf.write(os.path.join(OUT, h + '.mp3'), audio, sr, format='MP3', compression_level=0.9)
         except Exception as e:  # uma frase com problema não para as outras
             print('falhou:', t, e, flush=True)
@@ -169,6 +179,8 @@ WOUT = os.path.join(OUT, 'w')
 os.makedirs(WOUT, exist_ok=True)
 wentries = {}
 for v, t in entries.values():
+    if v in ('jp', 'je'):  # falas do professor não precisam do modo lento
+        continue
     for w in split_words(t):
         wentries[key('w' + v, w)] = (v, w)
 wtodo = [(h, v, w) for h, (v, w) in wentries.items() if not os.path.exists(os.path.join(WOUT, h + '.mp3'))]

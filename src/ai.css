@@ -209,3 +209,6 @@
   .conv-promo .btn{margin-left:0;width:100%}
 }
 @media (prefers-reduced-motion:reduce){.crab.talking .crab-stache,.aula-bubble{animation:none}}
+.aula-hear{display:inline-flex;align-items:center;gap:6px;border:0;cursor:pointer;font:inherit;font-size:14px;font-weight:700;color:var(--violet-dd);background:var(--violet-l);margin:0 0 12px}
+.aula-beta{margin:14px 0 0;font-size:13px;line-height:1.5;color:var(--text2);background:var(--bg);border-radius:12px;padding:10px 12px}
+.aula-beta b{color:var(--ink)}

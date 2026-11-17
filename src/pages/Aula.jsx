@@ -13,7 +13,7 @@ import { useAuth } from '../lib/auth.jsx';
 import { useProgress } from '../lib/progress.js';
 import { currentLevel } from '../lib/content.js';
 import { logActivity } from '../lib/offline.js';
-import { AULA_LEVELS, TOPICS, topicById, TEACHER, MAX_STEPS, MAX_CHARS, MAX_TRIES, RETRY, GIVE_UP, commentInPt } from '../lib/aula.js';
+import { AULA_LEVELS, TOPICS, topicById, TEACHER, MAX_STEPS, MAX_CHARS, MAX_TRIES, RETRY, GIVE_UP, INTRO, commentInPt } from '../lib/aula.js';
 
 const PASS = 0.8; // parte das palavras que precisa sair para valer a repetição
 const VOICE_KEY = 'sacou-aula-voz';
@@ -42,6 +42,11 @@ function Setup({ onStart }) {
             <p className="q-label" style={{ margin: 0 }}>Aula falada</p>
             <h1>{TEACHER.full}</h1>
             <p className="aula-tag">{TEACHER.tag}</p>
+            {canSpeak() && (
+              <button type="button" className="chip aula-hear" onClick={() => speakAsync(INTRO[0], { lang: 'pt', who: TEACHER.who, voice: 'jp' })}>
+                <Icon name="sound" size={15} />Ouvir o Juvenal
+              </button>
+            )}
             <p className="muted">
               Dá aula de inglês desde a época da fita VHS. Reclama do calor, do vizinho que reforma a casa há três anos e do
               cafezinho que esfriou, mas não desiste de você de jeito nenhum: ele fala uma frase, você repete em voz alta e,
@@ -69,6 +74,10 @@ function Setup({ onStart }) {
           <button type="button" className="btn btn-violet btn-lg btn-3d aula-go" onClick={() => onStart({ level: lvl, topic })}>
             <Icon name="mic" size={20} color="#fff" />Começar a aula
           </button>
+          <p className="aula-beta">
+            <b>Voz em fase beta.</b> Por enquanto, só algumas falas do Juvenal têm voz natural; o resto usa a voz do seu
+            celular, que é mais robótica. Em breve ele ganha uma voz mais natural em tudo.
+          </p>
           {!getSR() && <p className="note" style={{ marginTop: 14 }}>Seu navegador não reconhece fala. Dá para fazer a aula escrevendo, mas o melhor é usar o Chrome ou o Edge para falar.</p>}
         </div>
       </div>
@@ -117,9 +126,9 @@ function Lesson({ cfg, onExit, onAgain }) {
     const my = ++talkId.current;
     if (!voiceRef.current || !canSpeak()) return;
     setTalking(true);
-    for (const [text, lang] of parts) {
+    for (const [text, lang, own] of parts) {
       if (my !== talkId.current || !alive.current) break;
-      if (text) await speakAsync(text, { lang, who: TEACHER.who });
+      if (text) await speakAsync(text, { lang, who: TEACHER.who, voice: own });
     }
     if (my === talkId.current && alive.current) setTalking(false);
   }
@@ -163,14 +172,14 @@ function Lesson({ cfg, onExit, onAgain }) {
     if (t >= MAX_TRIES) {
       const line = pt ? GIVE_UP[0] : GIVE_UP[1];
       setLocal(line);
-      say([[line, pt ? 'pt' : 'en']]);
+      say([[line, pt ? 'pt' : 'en', pt ? 'jp' : 'je']]);
       setTimeout(() => { if (alive.current) advance({ role: 'student', kind: 'hard', text: r.heard, tries: t, missed }); }, 2600);
       return;
     }
     const [lp, le] = pick(RETRY);
     const line = pt ? lp : le;
     setLocal(line);
-    say([[line, pt ? 'pt' : 'en'], [cur.target_en, 'en']]);
+    say([[line, pt ? 'pt' : 'en', pt ? 'jp' : 'je'], [cur.target_en, 'en']]);
   }
 
   function mic() {
@@ -225,7 +234,7 @@ function Lesson({ cfg, onExit, onAgain }) {
           <span className="muted" style={{ fontSize: 13 }}>{level} · {topic.title} · {Math.min(asks, MAX_STEPS)}/{MAX_STEPS}</span>
         </div>
         <button type="button" className="chip aula-voice" onClick={toggleVoice} aria-pressed={voice}>
-          <Icon name="sound" size={14} />{voice ? 'Voz ligada' : 'Voz desligada'}
+          <Icon name="sound" size={14} />{voice ? 'Voz (beta)' : 'Voz desligada'}
         </button>
         {answered && <button type="button" className="btn btn-out" style={{ minHeight: 40 }} onClick={() => finish()} disabled={waiting}>{sumBusy ? 'Preparando…' : 'Terminar'}</button>}
       </header>

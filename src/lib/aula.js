@@ -24,6 +24,12 @@ export const MAX_TRIES = 3;    // tentativas de repetir antes de seguir em frent
 // O comentário do professor sai em português no A1 e A2 e em inglês no B1 e B2.
 export const commentInPt = (level) => level === 'A1' || level === 'A2';
 
+// Apresentação do professor (botão "Ouvir o Juvenal"). [pt, en]
+export const INTRO = [
+  'Eita, mais um aluno! Eu sou o Professor Juvenal. Senta aí, que o meu cafezinho já esfriou e a aula vai começar.',
+  "Well, well, another student! I'm Professor Juvenal. Sit down, my coffee is already cold and the lesson is starting.",
+];
+
 // Reações prontas quando a repetição não sai (não gastam IA). [pt, en]
 // Sem "hmm", "hmph" e afins: a voz lê o texto e não sabe falar esses sons.
 export const RETRY = [
