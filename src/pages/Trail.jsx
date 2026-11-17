@@ -133,6 +133,7 @@ export default function Trail() {
   const prog = useProgress();
   const { profile } = useAuth();
   const curRef = useRef(null);
+  const [jump, setJump] = useState(null); // 'up' | 'down' quando a lição atual está fora da tela
   const [open, setOpen] = useState(null); // bolinha com o balão aberto
   const [stuck, setStuck] = useState(null); // unidade mostrada na barra fixa do topo
   const [games, setGames] = useState(null); // personagens e jogos (carregados à parte, não atrasam a trilha)
@@ -168,6 +169,19 @@ export default function Trail() {
     window.addEventListener('resize', onScroll);
     return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); if (raf) cancelAnimationFrame(raf); };
   }, [prog.loading]);
+  // Botão "Onde parei": aparece quando a lição atual sai da tela
+  useEffect(() => {
+    if (prog.loading || !curRef.current || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(([e]) => {
+      setJump(e.isIntersecting ? null : e.boundingClientRect.top < 0 ? 'up' : 'down');
+    }, { rootMargin: '-90px 0px -80px 0px' });
+    io.observe(curRef.current);
+    return () => io.disconnect();
+  }, [prog.loading]);
+  const goCurrent = () => {
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    curRef.current?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+  };
   // Leva a tela até a lição atual (onde o aluno parou)
   useEffect(() => {
     if (prog.loading) return;
@@ -222,7 +236,7 @@ export default function Trail() {
               const left = u.order % 2 === 1;
               return (
                 <section key={u.id} aria-labelledby={u.id} className={'tr-unit' + tone} data-u={u.id}>
-                  <div className={'tr-div' + tone}>
+                  <div className={'tr-div' + tone + (u.id === UNITS[0].id ? ' sr-only' : '')}>
                     <h2 id={u.id} title={u.subtitle}>{complete && <Icon name="check" size={16} stroke={3} />}Unidade {u.order} · {u.title}</h2>
                   </div>
                   <div className="tr-path">
@@ -253,7 +267,7 @@ export default function Trail() {
                         </div>
                       );
                     })}
-                    {rewards.length > 0 && (() => {
+                    {(() => {
                       const key = u.id + '-bau';
                       const fresh = complete && rewards.some(r => !r.played);
                       return (
@@ -294,6 +308,12 @@ export default function Trail() {
             </p>
           </div>
         </div>
+        <div className="tr-jump-wrap">{jump && (
+          <button type="button" className="tr-jump" onClick={goCurrent} aria-label="Ir para a lição onde você parou">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ transform: jump === 'up' ? 'rotate(180deg)' : 'none' }}><path d="M12 5v14M5 12l7 7 7-7" /></svg>
+            <span>Onde parei</span>
+          </button>
+        )}</div>
       </div>
     </Shell>
   );
