@@ -113,6 +113,20 @@ await test('aula falada: repetir, responder e resumo', async () => {
   await expectText('Resumo da aula');
 });
 
+await test('caderno na lição: consultar guias e anotações', async () => {
+  await open('/licao/a1-u1-l1');
+  await expectText('O que significa?');
+  await page.click('.nb-open');
+  await expectText('Esta lição');
+  await click('Consultar');
+  await page.type('.nb-find input', 'those');
+  await expectText('This, that, these, those e as cores');
+  await click('This, that, these, those e as cores');
+  await expectText('aquele carro / aqueles carros');
+  await page.click('.nb-drawer [aria-label="Fechar caderno"]');
+  await expectText('O que significa?');
+});
+
 await test('tirar dúvidas: pergunta, resposta e salvar', async () => {
   await open('/duvidas');
   await wait(800);

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from './ui.jsx';
 import NoteEditor from './NoteEditor.jsx';
+import NotebookSearch from './NotebookSearch.jsx';
 import { useNotebook, notebook } from '../lib/notebook.js';
 import { getLesson } from '../lib/content.js';
 import { speak } from '../lib/fx.js';
@@ -16,6 +17,7 @@ export default function NotebookDrawer({ lessonId, unit, onClose }) {
   const [draftId] = useState(newId);
   const note = existing || { id: draftId, content: null, plain: '', title: '' };
   const words = notes.filter(n => n.kind === 'word' && n.lesson_id === lessonId);
+  const [tab, setTab] = useState('lesson'); // lesson: anotar · find: consultar todo o caderno
 
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
@@ -42,9 +44,15 @@ export default function NotebookDrawer({ lessonId, unit, onClose }) {
             <button type="button" className="icon-btn" aria-label="Fechar caderno" onClick={onClose}><Icon name="x" size={22} /></button>
           </div>
         </div>
+        <div className="nb-tabs nb-drawer-tabs" role="tablist">
+          <button type="button" role="tab" aria-selected={tab === 'lesson'} className={tab === 'lesson' ? 'on' : ''} onClick={() => setTab('lesson')}><Icon name="edit" size={16} />Esta lição</button>
+          <button type="button" role="tab" aria-selected={tab === 'find'} className={tab === 'find' ? 'on' : ''} onClick={() => setTab('find')}><Icon name="search" size={16} />Consultar</button>
+        </div>
+        {tab === 'find' ? <NotebookSearch unit={unit} lessonId={lessonId} /> : <>
         <NoteEditor key={note.id} note={note} compact unit={unit} autofocus placeholder="Anote aqui o que está aprendendo nesta lição..." onSave={save} />
         <p className="muted" style={{ fontSize: 13, margin: '8px 0 0' }}>Salva sozinho enquanto você escreve. Tudo fica em <b>Caderno</b>, no menu.</p>
-        {words.length > 0 && (
+        </>}
+        {tab === 'lesson' && words.length > 0 && (
           <div style={{ marginTop: 16 }}>
             <b style={{ fontSize: 14 }}>Palavras salvas nesta lição</b>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 8 }}>
