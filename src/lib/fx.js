@@ -94,20 +94,23 @@ function stopAll() {
 }
 // Toca o áudio pronto num player novo a cada vez (reaproveitar o mesmo player travava
 // em alguns navegadores). Termina com true ao acabar, ou false se não começar a tocar.
+// O motivo da falha fica em lastClipFail: 'blocked' (o navegador barrou o som automático,
+// antes de a pessoa tocar na página), 'timeout' (não começou em 4 s), 'load:N' ou 'play:Nome'.
+let lastClipFail = '';
 function playClip(url, slow) {
   return new Promise((resolve) => {
     stopAll();
     const a = new Audio(url);
     player = a;
     let started = false, done = false;
-    const finish = (ok) => { if (done) return; done = true; clearTimeout(guard); resolve(ok); };
+    const finish = (ok, why = '') => { if (done) return; done = true; clearTimeout(guard); lastClipFail = ok ? '' : why; resolve(ok); };
     a.playbackRate = slow ? 0.7 : 1;
     try { a.preservesPitch = true; } catch { /* navegadores antigos */ }
     a.onplaying = () => { started = true; };
     a.onended = () => finish(true);
-    a.onerror = () => finish(false);
-    const guard = setTimeout(() => { if (!started && player === a) { stopAll(); finish(false); } }, 2500);
-    a.play().catch((e) => { if (e?.name !== 'AbortError') finish(false); });
+    a.onerror = () => finish(false, `load:${a.error?.code || '?'}`);
+    const guard = setTimeout(() => { if (!started && player === a) { stopAll(); finish(false, 'timeout'); } }, 4000);
+    a.play().catch((e) => { if (e?.name !== 'AbortError') finish(false, e?.name === 'NotAllowedError' ? 'blocked' : `play:${e?.name || '?'}`); });
   });
 }
 // voz do aparelho (plano B): tenta uma voz masculina para personagens homens
@@ -209,7 +212,12 @@ export function speak(text, { slow = false, who } = {}) {
   if (!canSpeak() || !text) return;
   if (slow) { slowSpeak(text, who); return; }
   const url = clipFor(text, who);
-  if (url) playClip(url, slow).then(ok => { if (!ok) { reportError('js', 'Áudio pronto não tocou (usou a voz do aparelho)', `${url} ${navigator.userAgent}`); ttsSpeak(text, { slow, who }); } });
+  if (url) playClip(url, slow).then(ok => {
+    if (ok) return;
+    // som barrado antes de a pessoa tocar na página não é defeito: o botão de som resolve
+    if (lastClipFail !== 'blocked') reportError('js', `Áudio pronto não tocou (${lastClipFail || 'motivo desconhecido'}); usou a voz do aparelho`, `${url} ${navigator.userAgent}`);
+    ttsSpeak(text, { slow, who });
+  });
   else { stopAll(); ttsSpeak(text, { slow, who }); }
 }
 
