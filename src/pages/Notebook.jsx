@@ -3,7 +3,15 @@ import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { Shell, Spinner, Icon } from '../components/ui.jsx';
 import NoteEditor from '../components/NoteEditor.jsx';
 import { useNotebook, notebook, COLORS, COLOR_NAMES, snippet, relTime, exportMarkdown, isDue, gradeCard, findWord, BOX_DAYS } from '../lib/notebook.js';
-import { getUnit, shuffle } from '../lib/content.js';
+import { getUnit, getItem, shuffle } from '../lib/content.js';
+
+// Tradução do exercício de onde a frase saiu, só se o cartão for a própria frase (não uma palavra salva nas dicas)
+function exercisePt(card) {
+  const it = card.item_id && getItem(card.item_id)?.item;
+  if (!it?.pt) return null;
+  const full = it.type === 'choice' ? it.en.replace('___', it.answer) : it.type === 'dialogue' ? it.answer : null;
+  return full && full.trim() === String(card.en || '').trim() ? it.pt : null;
+}
 import { suggestPT } from '../lib/hints.js';
 import { speak, canSpeak, fx } from '../lib/fx.js';
 
@@ -187,7 +195,13 @@ function Flashcards({ words }) {
   const [s, setS] = useState(null);
 
   function start(list) {
-    setS({ queue: shuffle(list).slice(0, 20), idx: 0, flipped: false, right: 0, wrong: 0, again: new Set() });
+    // Cartões antigos de exercícios de completar e diálogo foram salvos sem tradução: busca no exercício e guarda
+    const withPt = list.map(c => {
+      const pt = c.pt || exercisePt(c);
+      if (pt && !c.pt) notebook.update(c.id, { pt });
+      return pt === c.pt ? c : { ...c, pt };
+    });
+    setS({ queue: shuffle(withPt).slice(0, 20), idx: 0, flipped: false, right: 0, wrong: 0, again: new Set() });
   }
   const card = s && s.queue[s.idx];
   const front = card && (dir === 'en' ? card.en : (card.pt || card.en));

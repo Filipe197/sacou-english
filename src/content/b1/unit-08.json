@@ -119,6 +119,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I have a friend ___ speaks five languages.",
+     "pt": "Eu tenho um amigo que fala cinco línguas.",
      "options": [
       "who",
       "which",
@@ -131,6 +132,7 @@
      "id": "b1u8l1-3",
      "type": "choice",
      "en": "This is the phone ___ I bought yesterday.",
+     "pt": "Este é o celular que eu comprei ontem.",
      "options": [
       "which",
       "who",
@@ -155,6 +157,7 @@
      "id": "b1u8l1-5",
      "type": "choice",
      "en": "The film ___ we watched was very funny.",
+     "pt": "O filme que nós assistimos era muito engraçado.",
      "options": [
       "that",
       "who",
@@ -186,6 +189,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "In my ___, this is the best restaurant in town.",
+     "pt": "Na minha opinião, este é o melhor restaurante da cidade.",
      "options": [
       "opinion",
       "think",
@@ -211,6 +215,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ with you. You are right.",
+     "pt": "Eu concordo com você. Você está certo.",
      "options": [
       "agree",
       "am agree",
@@ -295,6 +300,7 @@
      "id": "b1u8l3-2",
      "type": "choice",
      "en": "People ___ work at night are often tired.",
+     "pt": "Pessoas que trabalham à noite muitas vezes ficam cansadas.",
      "options": [
       "who",
       "which",
@@ -307,6 +313,7 @@
      "id": "b1u8l3-3",
      "type": "choice",
      "en": "I don't think she ___ come.",
+     "pt": "Eu acho que ela não vem.",
      "options": [
       "will",
       "won't",
@@ -343,6 +350,7 @@
      "id": "b1u8l3-6",
      "type": "choice",
      "en": "To be ___, I didn't like the food.",
+     "pt": "Para ser sincero, eu não gostei da comida.",
      "options": [
       "honest",
       "opinion",
@@ -435,6 +443,7 @@
       "I agrees. We would have more time for our families."
      ],
      "answer": "I agree. We would have more time for our families.",
+     "pt": "Concordo. Teríamos mais tempo para nossas famílias.",
      "why": "Concordando: I agree."
     },
     {
@@ -456,6 +465,7 @@
       "Really? To be honest, I am not agree."
      ],
      "answer": "Really? To be honest, I don't think so.",
+     "pt": "Sério? Para ser sincero, acho que não.",
      "why": "Discordando com educação: I don't think so."
     },
     {
@@ -477,6 +487,7 @@
       "He's the doctor where helped my mother."
      ],
      "answer": "He's the doctor who helped my mother.",
+     "pt": "É o médico que ajudou a minha mãe.",
      "why": "Para pessoas, use who (ou that)."
     },
     {
@@ -512,6 +523,7 @@
       "Yes, there is a restaurant who you can eat great fish."
      ],
      "answer": "Yes, there is a restaurant where you can eat great fish.",
+     "pt": "Sim, tem um restaurante onde dá para comer um peixe ótimo.",
      "why": "Para lugares, use where (= onde)."
     }
    ]
@@ -524,6 +536,7 @@
      "id": "b1u8l6-1",
      "type": "choice",
      "en": "My sister is the person ___ I trust most.",
+     "pt": "Minha irmã é a pessoa em quem eu mais confio.",
      "options": [
       "who",
       "which",
@@ -558,6 +571,7 @@
      "id": "b1u8l6-4",
      "type": "choice",
      "en": "This is the town ___ my father was born.",
+     "pt": "Esta é a cidade onde meu pai nasceu.",
      "options": [
       "where",
       "which",

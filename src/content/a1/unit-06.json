@@ -169,6 +169,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I go to work ___ eight o'clock.",
+     "pt": "Eu vou para o trabalho às oito horas.",
      "options": [
       "at",
       "on",
@@ -216,6 +217,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She ___ in a hospital.",
+     "pt": "Ela trabalha em um hospital.",
      "options": [
       "works",
       "work",
@@ -233,6 +235,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Tom ___ English at school.",
+     "pt": "O Tom estuda inglês na escola.",
      "options": [
       "studies",
       "studys",
@@ -286,6 +289,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "They ___ at night.",
+     "pt": "Eles dormem à noite.",
      "options": [
       "sleep",
       "sleeps",
@@ -332,6 +336,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I go to the park ___ Sunday.",
+     "pt": "Eu vou ao parque no domingo.",
      "options": [
       "on",
       "at",
@@ -361,6 +366,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She ___ eat meat.",
+     "pt": "Ela não come carne.",
      "options": [
       "doesn't",
       "don't",
@@ -481,6 +487,7 @@
       "I'm seven."
      ],
      "answer": "I get up at seven.",
+     "pt": "Eu me levanto às sete.",
      "why": "\"What time...?\" pergunta a hora: at + hora."
     },
     {
@@ -502,6 +509,7 @@
       "No, I doesn't."
      ],
      "answer": "No, I don't.",
+     "pt": "Não, não trabalho.",
      "why": "Pergunta com \"Do\" tem resposta curta com do/don't."
     },
     {
@@ -523,6 +531,7 @@
       "She is work in a bank."
      ],
      "answer": "She works in a bank.",
+     "pt": "Ela trabalha em um banco.",
      "why": "\"What does she do?\" pergunta a profissão/trabalho. Com she: works."
     },
     {
@@ -558,6 +567,7 @@
       "Yes, I do."
      ],
      "answer": "Every day after work.",
+     "pt": "Todo dia depois do trabalho.",
      "why": "\"When\" = quando. A resposta fala do tempo: every day after work (todo dia depois do trabalho)."
     }
    ]
@@ -571,6 +581,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My brother ___ TV every night.",
+     "pt": "Meu irmão assiste TV toda noite.",
      "options": [
       "watches",
       "watch",
@@ -612,6 +623,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She ___ meat.",
+     "pt": "Ela não come carne.",
      "options": [
       "doesn't eat",
       "don't eat",

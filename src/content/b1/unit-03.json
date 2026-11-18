@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "They ___ playing football at five o'clock.",
+     "pt": "Eles estavam jogando futebol às cinco horas.",
      "options": [
       "were",
       "was",
@@ -125,6 +126,7 @@
      "id": "b1u3l1-3",
      "type": "choice",
      "en": "She was ___ a book.",
+     "pt": "Ela estava lendo um livro.",
      "options": [
       "reading",
       "read",
@@ -149,6 +151,7 @@
      "id": "b1u3l1-5",
      "type": "choice",
      "en": "It ___ raining all morning.",
+     "pt": "Choveu a manhã toda.",
      "options": [
       "was",
       "were",
@@ -180,6 +183,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I was sleeping ___ the phone rang.",
+     "pt": "Eu estava dormindo quando o telefone tocou.",
      "options": [
       "when",
       "while",
@@ -192,6 +196,7 @@
      "id": "b1u3l2-2",
      "type": "choice",
      "en": "___ I was walking, I saw an old friend.",
+     "pt": "Enquanto eu caminhava, vi um velho amigo.",
      "options": [
       "While",
       "When",
@@ -286,6 +291,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ a shower when you arrived.",
+     "pt": "Eu estava tomando banho quando você chegou.",
      "options": [
       "was having",
       "had",
@@ -301,6 +307,7 @@
      "id": "b1u3l3-3",
      "type": "choice",
      "en": "While they were driving, the car ___.",
+     "pt": "Enquanto eles dirigiam, o carro quebrou.",
      "options": [
       "broke down",
       "was breaking down",
@@ -337,6 +344,7 @@
      "id": "b1u3l3-6",
      "type": "choice",
      "en": "We ___ know the answer, so we asked the teacher.",
+     "pt": "Nós não sabíamos a resposta, então perguntamos ao professor.",
      "options": [
       "didn't",
       "weren't",
@@ -419,6 +427,7 @@
       "Sorry, I am having a shower yesterday."
      ],
      "answer": "Sorry, I was having a shower.",
+     "pt": "Desculpe, eu estava tomando banho.",
      "why": "Explicando o que estava fazendo: was having."
     },
     {
@@ -440,6 +449,7 @@
       "It falls while I was running."
      ],
      "answer": "It fell while I was running.",
+     "pt": "Caiu enquanto eu estava correndo.",
      "why": "Ação curta (fell) + while + ação longa."
     },
     {
@@ -461,6 +471,7 @@
       "I am driving home."
      ],
      "answer": "I was driving home.",
+     "pt": "Eu estava dirigindo para casa.",
      "why": "Pergunta com were doing → resposta com was + -ing."
     },
     {
@@ -496,6 +507,7 @@
       "Yes! I wait for the bus when it happened."
      ],
      "answer": "Yes! I was waiting for the bus when it happened.",
+     "pt": "Sim! Eu estava esperando o ônibus quando aconteceu.",
      "why": "Cenário (was waiting) + o que aconteceu (happened)."
     }
    ]
@@ -508,6 +520,7 @@
      "id": "b1u3l6-1",
      "type": "choice",
      "en": "We ___ watching a film when the lights went out.",
+     "pt": "Nós estávamos assistindo a um filme quando a luz acabou.",
      "options": [
       "were",
       "was",
@@ -539,6 +552,7 @@
      "id": "b1u3l6-4",
      "type": "choice",
      "en": "He ___ his leg while he was playing football.",
+     "pt": "Ele machucou a perna enquanto jogava futebol.",
      "options": [
       "hurt",
       "was hurting",

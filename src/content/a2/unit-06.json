@@ -112,6 +112,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She ___ going to buy a new phone.",
+     "pt": "Ela vai comprar um celular novo.",
      "options": [
       "is",
       "are",
@@ -153,6 +154,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I'm going to ___ my grandmother on Sunday.",
+     "pt": "Eu vou visitar minha avó no domingo.",
      "options": [
       "visit",
       "visiting",
@@ -200,6 +202,7 @@
      "type": "choice",
      "prompt": "O telefone está tocando. Você diz:",
      "en": "I ___ answer it.",
+     "pt": "Eu atendo.",
      "options": [
       "will",
       "am",
@@ -229,6 +232,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Don't worry, I ___ be late.",
+     "pt": "Não se preocupe, eu não vou me atrasar.",
      "options": [
       "won't",
       "not will",
@@ -299,6 +303,7 @@
      "type": "choice",
      "prompt": "Plano decidido há um mês. Complete:",
      "en": "I'm ___ to visit Paris in July.",
+     "pt": "Eu vou visitar Paris em julho.",
      "options": [
       "going",
       "will",
@@ -340,6 +345,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "They're going to ___ a car.",
+     "pt": "Eles vão alugar um carro.",
      "options": [
       "rent",
       "renting",
@@ -449,6 +455,7 @@
       "I'm visit my grandmother."
      ],
      "answer": "I'm going to visit my grandmother.",
+     "pt": "Eu vou visitar minha avó.",
      "why": "Plano para o futuro: going to."
     },
     {
@@ -470,6 +477,7 @@
       "I'm open the window."
      ],
      "answer": "I'll open the window.",
+     "pt": "Eu abro a janela.",
      "why": "Decisão na hora: I'll."
     },
     {
@@ -491,6 +499,7 @@
       "No, I won't came."
      ],
      "answer": "Maybe. I'll call you later.",
+     "pt": "Talvez. Eu ligo para você mais tarde.",
      "why": "\"Maybe\" = talvez. I'll call = vou ligar."
     },
     {
@@ -526,6 +535,7 @@
       "No, it is raining."
      ],
      "answer": "No, I think it will be sunny.",
+     "pt": "Não, acho que vai fazer sol.",
      "why": "Previsão: will be."
     }
    ]
@@ -539,6 +549,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Next year I ___ going to learn to drive.",
+     "pt": "No ano que vem eu vou aprender a dirigir.",
      "options": [
       "am",
       "will",
@@ -578,6 +589,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Don't worry. I ___ forget.",
+     "pt": "Não se preocupe. Eu não vou esquecer.",
      "options": [
       "won't",
       "don't",

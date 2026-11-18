@@ -120,6 +120,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "We ___ at the park last Sunday.",
+     "pt": "Nós estávamos no parque no domingo passado.",
      "options": [
       "were",
       "was",
@@ -137,6 +138,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My mother ___ a teacher.",
+     "pt": "Minha mãe era professora.",
      "options": [
       "was",
       "were",
@@ -230,6 +232,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I was in London three years ___.",
+     "pt": "Eu estive em Londres três anos atrás.",
      "options": [
       "ago",
       "last",
@@ -283,6 +286,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "The weather was hot ___ Saturday.",
+     "pt": "O tempo estava quente no sábado passado.",
      "options": [
       "last",
       "ago",
@@ -306,6 +310,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ at work yesterday. I was ill.",
+     "pt": "Eu não estava no trabalho ontem. Eu estava doente.",
      "options": [
       "wasn't",
       "weren't",
@@ -323,6 +328,7 @@
      "type": "choice",
      "prompt": "Complete a pergunta:",
      "en": "___ they at the party?",
+     "pt": "Eles estavam na festa?",
      "options": [
       "Were",
       "Was",
@@ -364,6 +370,7 @@
      "type": "choice",
      "prompt": "Responda: Were you busy?",
      "en": "Yes, I ___.",
+     "pt": "Sim, eu estava.",
      "options": [
       "was",
       "were",
@@ -462,6 +469,7 @@
       "I were at the beach."
      ],
      "answer": "I was at the beach.",
+     "pt": "Eu estava na praia.",
      "why": "Pergunta no passado, resposta no passado: I was."
     },
     {
@@ -483,6 +491,7 @@
       "Yes, I was."
      ],
      "answer": "Yes, it was great!",
+     "pt": "Sim, foi ótimo!",
      "why": "\"The film\" = it, e no passado: it was."
     },
     {
@@ -504,6 +513,7 @@
       "No, I wasn't."
      ],
      "answer": "No, they weren't.",
+     "pt": "Não, não estavam.",
      "why": "\"Your parents\" = they → weren't."
     },
     {
@@ -539,6 +549,7 @@
       "I were ill."
      ],
      "answer": "I was ill.",
+     "pt": "Eu estava doente.",
      "why": "Responda no passado com I + was."
     }
    ]
@@ -552,6 +563,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My brothers ___ at the party.",
+     "pt": "Meus irmãos estavam na festa.",
      "options": [
       "were",
       "was",

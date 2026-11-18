@@ -183,6 +183,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Two ___, please.",
+     "pt": "Duas canetas, por favor.",
      "options": [
       "pens",
       "pen",
@@ -230,6 +231,7 @@
      "type": "choice",
      "prompt": "O carro está longe. Complete:",
      "en": "___ is a car.",
+     "pt": "Aquilo é um carro.",
      "options": [
       "That",
       "This",
@@ -247,6 +249,7 @@
      "type": "choice",
      "prompt": "As chaves estão na sua mão. Complete:",
      "en": "___ are my keys.",
+     "pt": "Estas são as minhas chaves.",
      "options": [
       "These",
       "This",
@@ -376,6 +379,7 @@
      "type": "choice",
      "prompt": "Qual está certo?",
      "en": "I have two ___.",
+     "pt": "Eu tenho duas bolsas vermelhas.",
      "options": [
       "red bags",
       "reds bags",
@@ -489,6 +493,7 @@
       "Yes, they are."
      ],
      "answer": "Yes, it is. Thank you!",
+     "pt": "Sim, é. Obrigado!",
      "why": "A pergunta é sobre uma coisa (this bag = it): Yes, it is."
     },
     {
@@ -510,6 +515,7 @@
       "They're black."
      ],
      "answer": "It's black.",
+     "pt": "É preto.",
      "why": "Uma coisa só: It's + cor."
     },
     {
@@ -531,6 +537,7 @@
       "No, I'm not."
      ],
      "answer": "No, they aren't.",
+     "pt": "Não, não são.",
      "why": "\"These keys\" é plural (they): No, they aren't."
     },
     {
@@ -566,6 +573,7 @@
       "Good night."
      ],
      "answer": "Sure. Here you are.",
+     "pt": "Claro. Aqui está.",
      "why": "\"Here you are\" = aqui está. É o que se diz ao entregar algo para alguém."
     }
    ]
@@ -579,6 +587,7 @@
      "type": "choice",
      "prompt": "Os livros estão na sua mão. Complete:",
      "en": "___ are my books.",
+     "pt": "Estes são os meus livros.",
      "options": [
       "These",
       "This",
@@ -615,6 +624,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I have an ___.",
+     "pt": "Eu tenho um guarda-chuva.",
      "options": [
       "umbrella",
       "bag",

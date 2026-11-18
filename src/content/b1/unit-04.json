@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "If you ___ hard, you will pass the exam.",
+     "pt": "Se você estudar bastante, vai passar na prova.",
      "options": [
       "study",
       "will study",
@@ -128,6 +129,7 @@
      "id": "b1u4l1-3",
      "type": "choice",
      "en": "If I have time, I ___ help you.",
+     "pt": "Se eu tiver tempo, eu te ajudo.",
      "options": [
       "will",
       "am",
@@ -152,6 +154,7 @@
      "id": "b1u4l1-5",
      "type": "choice",
      "en": "She'll be angry if you ___ late again.",
+     "pt": "Ela vai ficar brava se você se atrasar de novo.",
      "options": [
       "are",
       "will be",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Take an umbrella. It ___ rain later.",
+     "pt": "Leve um guarda-chuva. Pode chover mais tarde.",
      "options": [
       "might",
       "might to",
@@ -207,6 +211,7 @@
      "id": "b1u4l2-3",
      "type": "choice",
      "en": "We won't go ___ it stops raining.",
+     "pt": "Nós não vamos, a não ser que pare de chover.",
      "options": [
       "unless",
       "if",
@@ -288,6 +293,7 @@
      "id": "b1u4l3-2",
      "type": "choice",
      "en": "If she ___ the bus, she will be late.",
+     "pt": "Se ela perder o ônibus, vai se atrasar.",
      "options": [
       "misses",
       "miss",
@@ -300,6 +306,7 @@
      "id": "b1u4l3-3",
      "type": "choice",
      "en": "I'll text you when I ___ home.",
+     "pt": "Eu te mando mensagem quando chegar em casa.",
      "options": [
       "get",
       "will get",
@@ -336,6 +343,7 @@
      "id": "b1u4l3-6",
      "type": "choice",
      "en": "If you heat ice, it ___.",
+     "pt": "Se você esquenta o gelo, ele derrete.",
      "options": [
       "melts",
       "will melts",
@@ -428,6 +436,7 @@
       "I'm might. It depends on the weather."
      ],
      "answer": "I might. It depends on the weather.",
+     "pt": "Talvez. Depende do tempo.",
      "why": "Might sozinho como resposta: \"I might\"."
     },
     {
@@ -449,6 +458,7 @@
       "If it rained, we go to the cinema."
      ],
      "answer": "If it rains, we'll go to the cinema.",
+     "pt": "Se chover, vamos ao cinema.",
      "why": "If + presente, will."
     },
     {
@@ -470,6 +480,7 @@
       "Don't worry. If you studied, you pass."
      ],
      "answer": "Don't worry. If you study, you'll pass.",
+     "pt": "Não se preocupe. Se você estudar, vai passar.",
      "why": "Encorajando: if you study, you'll pass."
     },
     {
@@ -505,6 +516,7 @@
       "Sure. I call you as soon as I finished work."
      ],
      "answer": "Sure. I'll call you as soon as I finish work.",
+     "pt": "Claro. Eu te ligo assim que terminar o trabalho.",
      "why": "As soon as + presente."
     }
    ]
@@ -517,6 +529,7 @@
      "id": "b1u4l6-1",
      "type": "choice",
      "en": "If you don't eat, you ___ hungry later.",
+     "pt": "Se você não comer, vai ficar com fome mais tarde.",
      "options": [
       "will be",
       "are",
@@ -551,6 +564,7 @@
      "id": "b1u4l6-4",
      "type": "choice",
      "en": "I'll buy a car if I ___ enough money.",
+     "pt": "Eu vou comprar um carro se juntar dinheiro suficiente.",
      "options": [
       "save",
       "will save",

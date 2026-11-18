@@ -127,6 +127,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ TV last night.",
+     "pt": "Eu assisti TV ontem à noite.",
      "options": [
       "watched",
       "watch",
@@ -168,6 +169,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Tom ___ English for two years.",
+     "pt": "O Tom estudou inglês por dois anos.",
      "options": [
       "studied",
       "studyed",
@@ -215,6 +217,7 @@
      "type": "choice",
      "prompt": "Qual está certo?",
      "en": "She didn't ___ dinner.",
+     "pt": "Ela não fez o jantar.",
      "options": [
       "cook",
       "cooked",
@@ -256,6 +259,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ like the film. It was boring.",
+     "pt": "Eu não gostei do filme. Foi chato.",
      "options": [
       "didn't",
       "wasn't",
@@ -303,6 +307,7 @@
      "type": "choice",
      "prompt": "Complete a pergunta:",
      "en": "___ she call you?",
+     "pt": "Ela ligou para você?",
      "options": [
       "Did",
       "Was",
@@ -320,6 +325,7 @@
      "type": "choice",
      "prompt": "Responda: Did you study yesterday?",
      "en": "Yes, I ___.",
+     "pt": "Sim, estudei.",
      "options": [
       "did",
       "was",
@@ -443,6 +449,7 @@
       "I'm visiting my friends."
      ],
      "answer": "I visited my friends.",
+     "pt": "Eu visitei meus amigos.",
      "why": "A pergunta é sobre o passado: visited."
     },
     {
@@ -464,6 +471,7 @@
       "Yes, I was."
      ],
      "answer": "Yes, I did. It was great!",
+     "pt": "Sim, assisti. Foi ótimo!",
      "why": "Resposta curta com did: Yes, I did."
     },
     {
@@ -485,6 +493,7 @@
       "No, she wasn't."
      ],
      "answer": "No, she didn't.",
+     "pt": "Não, ela não ligou.",
      "why": "Pergunta com did → resposta com did/didn't."
     },
     {
@@ -520,6 +529,7 @@
       "We did stayed at a hotel."
      ],
      "answer": "We stayed at a small hotel.",
+     "pt": "Nós ficamos em um hotel pequeno.",
      "why": "Na resposta afirmativa não usamos did: we stayed."
     }
    ]
@@ -533,6 +543,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "They ___ in London for two years.",
+     "pt": "Eles moraram em Londres por dois anos.",
      "options": [
       "lived",
       "live",
@@ -572,6 +583,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Did you ___ the museum?",
+     "pt": "Você visitou o museu?",
      "options": [
       "visit",
       "visited",

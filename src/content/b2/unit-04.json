@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "He ___ be at work. His car isn't here.",
+     "pt": "Ele não pode estar no trabalho. O carro dele não está aqui.",
      "options": [
       "can't",
       "mustn't",
@@ -128,6 +129,7 @@
      "id": "b2u4l1-3",
      "type": "choice",
      "en": "Someone is at the door. It ___ be the pizza!",
+     "pt": "Tem alguém na porta. Pode ser a pizza!",
      "options": [
       "might",
       "can't",
@@ -152,6 +154,7 @@
      "id": "b2u4l1-5",
      "type": "choice",
      "en": "They have three cars and a big house. They ___ be rich.",
+     "pt": "Eles têm três carros e uma casa grande. Devem ser ricos.",
      "options": [
       "must",
       "can't",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "The street is wet. It ___ rained last night.",
+     "pt": "A rua está molhada. Deve ter chovido ontem à noite.",
      "options": [
       "must have",
       "can't have",
@@ -207,6 +211,7 @@
      "id": "b2u4l2-3",
      "type": "choice",
      "en": "He ___ have seen me. He was looking the other way.",
+     "pt": "Ele não pode ter me visto. Estava olhando para o outro lado.",
      "options": [
       "can't",
       "must",
@@ -288,6 +293,7 @@
      "id": "b2u4l3-2",
      "type": "choice",
      "en": "I'm so tired. I ___ gone to bed so late.",
+     "pt": "Estou tão cansado. Eu não devia ter ido dormir tão tarde.",
      "options": [
       "shouldn't have",
       "mustn't have",
@@ -300,6 +306,7 @@
      "id": "b2u4l3-3",
      "type": "choice",
      "en": "The window is broken. Someone ___ thrown a ball.",
+     "pt": "A janela está quebrada. Alguém deve ter jogado uma bola.",
      "options": [
       "must have",
       "should have",
@@ -336,6 +343,7 @@
      "id": "b2u4l3-6",
      "type": "choice",
      "en": "Where is Tom? He ___ be in a meeting.",
+     "pt": "Cadê o Tom? Ele pode estar em uma reunião.",
      "options": [
       "could",
       "must have",
@@ -430,6 +438,7 @@
       "He mights be asleep. It's very late."
      ],
      "answer": "He might be asleep. It's very late.",
+     "pt": "Ele pode estar dormindo. Está muito tarde.",
      "why": "Might be = talvez esteja. Depois de modal, o verbo vem sem \"to\" e sem -s."
     },
     {
@@ -451,6 +460,7 @@
       "Wow, you mustn't be really tired!"
      ],
      "answer": "Wow, you must be really tired!",
+     "pt": "Nossa, você deve estar muito cansado!",
      "why": "Conclusão lógica: must be tired."
     },
     {
@@ -472,6 +482,7 @@
       "She must had been sick. She never misses class."
      ],
      "answer": "She must have been sick. She never misses class.",
+     "pt": "Ela deve ter ficado doente. Ela nunca falta.",
      "why": "Must have + particípio (been)."
     },
     {
@@ -507,6 +518,7 @@
       "Well, you should studied!"
      ],
      "answer": "Well, you should have studied!",
+     "pt": "Bom, você devia ter estudado!",
      "why": "Crítica sobre o passado: should have studied."
     }
    ]
@@ -519,6 +531,7 @@
      "id": "b2u4l6-1",
      "type": "choice",
      "en": "The shop is closed. They ___ have gone home.",
+     "pt": "A loja está fechada. Eles devem ter ido para casa.",
      "options": [
       "must",
       "can't",
@@ -555,6 +568,7 @@
      "id": "b2u4l6-4",
      "type": "choice",
      "en": "We ___ have left the door open. Look, the cat ran away!",
+     "pt": "A gente não devia ter deixado a porta aberta. Olha, o gato fugiu!",
      "options": [
       "shouldn't",
       "can't",

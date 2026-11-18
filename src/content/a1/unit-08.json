@@ -213,6 +213,7 @@
      "type": "choice",
      "prompt": "Você quer comer. Para onde vai?",
      "en": "I go to the ___.",
+     "pt": "Eu vou ao restaurante.",
      "options": [
       "restaurant",
       "bank",
@@ -248,6 +249,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "There ___ two banks in my street.",
+     "pt": "Tem dois bancos na minha rua.",
      "options": [
       "are",
       "is",
@@ -265,6 +267,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "There ___ a school near here.",
+     "pt": "Tem uma escola perto daqui.",
      "options": [
       "is",
       "are",
@@ -347,6 +350,7 @@
      "type": "choice",
      "prompt": "A chave está em cima da mesa. Complete:",
      "en": "The key is ___ the table.",
+     "pt": "A chave está em cima da mesa.",
      "options": [
       "on",
       "in",
@@ -400,6 +404,7 @@
      "type": "choice",
      "prompt": "O gato está embaixo da cadeira. Complete:",
      "en": "The cat is ___ the chair.",
+     "pt": "O gato está embaixo da cadeira.",
      "options": [
       "under",
       "on",
@@ -489,6 +494,7 @@
       "Yes, there is."
      ],
      "answer": "It's next to the park.",
+     "pt": "Fica ao lado do parque.",
      "why": "\"Where...?\" pergunta lugar: responda com a posição (next to = ao lado de).",
      "prompt": "Você está na rua e alguém pede uma informação."
     },
@@ -511,6 +517,7 @@
       "Yes, I am."
      ],
      "answer": "Yes, there is. It's in this street.",
+     "pt": "Sim, tem. Fica nesta rua.",
      "why": "Pergunta com \"Is there...?\" tem resposta curta \"Yes, there is\"."
     },
     {
@@ -532,6 +539,7 @@
       "There is on the table."
      ],
      "answer": "They're on the table.",
+     "pt": "Estão em cima da mesa.",
      "why": "\"Keys\" é plural: they're."
     },
     {
@@ -567,6 +575,7 @@
       "There is."
      ],
      "answer": "You're welcome!",
+     "pt": "De nada!",
      "why": "Resposta para agradecimento: You're welcome (de nada)."
     }
    ]
@@ -580,6 +589,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "There ___ a cinema in my town.",
+     "pt": "Tem um cinema na minha cidade.",
      "options": [
       "is",
       "are",
@@ -616,6 +626,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My phone is ___ my bag.",
+     "pt": "Meu celular está na minha bolsa.",
      "options": [
       "in",
       "on",

@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Yesterday Tom said he ___ hungry, so we ordered a pizza.",
+     "pt": "Ontem o Tom disse que estava com fome, então pedimos uma pizza.",
      "options": [
       "was",
       "is",
@@ -125,6 +126,7 @@
      "id": "b2u3l1-3",
      "type": "choice",
      "en": "She ___ me that she was moving to Canada.",
+     "pt": "Ela me disse que ia se mudar para o Canadá.",
      "options": [
       "told",
       "said",
@@ -152,6 +154,7 @@
      "id": "b2u3l1-5",
      "type": "choice",
      "en": "Last week Ana said she ___ finished the report.",
+     "pt": "Semana passada a Ana disse que tinha terminado o relatório.",
      "options": [
       "had",
       "has",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She asked me where I ___.",
+     "pt": "Ela me perguntou onde eu morava.",
      "options": [
       "lived",
       "do live",
@@ -210,6 +214,7 @@
      "id": "b2u3l2-3",
      "type": "choice",
      "en": "The teacher asked ___ we had finished.",
+     "pt": "O professor perguntou se a gente tinha terminado.",
      "options": [
       "whether",
       "that",
@@ -291,6 +296,7 @@
      "id": "b2u3l3-2",
      "type": "choice",
      "en": "My mother asked me ___ the dishes.",
+     "pt": "Minha mãe me pediu para lavar a louça.",
      "options": [
       "to wash",
       "wash",
@@ -303,6 +309,7 @@
      "id": "b2u3l3-3",
      "type": "choice",
      "en": "He told us ___ late again.",
+     "pt": "Ele nos disse para não nos atrasarmos de novo.",
      "options": [
       "not to be",
       "to not being",
@@ -339,6 +346,7 @@
      "id": "b2u3l3-6",
      "type": "choice",
      "en": "She explained that the shop ___ closed on Sundays.",
+     "pt": "Ela explicou que a loja fechava aos domingos.",
      "options": [
       "was",
       "were",
@@ -434,6 +442,7 @@
       "He told he couldn't come because he was sick."
      ],
      "answer": "He said he couldn't come because he was sick.",
+     "pt": "Ele disse que não podia vir porque estava doente.",
      "why": "Said + frase, ou told + pessoa. \"Said me\" e \"told he\" estão errados."
     },
     {
@@ -455,6 +464,7 @@
       "Yes, she asked do we can send the documents today."
      ],
      "answer": "Yes, she asked if we could send the documents today.",
+     "pt": "Sim, ela perguntou se a gente podia mandar os documentos hoje.",
      "why": "Pergunta relatada: asked if + ordem normal (we could)."
     },
     {
@@ -476,6 +486,7 @@
       "My dad said me not to use his car."
      ],
      "answer": "My dad told me not to use his car.",
+     "pt": "Meu pai me disse para não usar o carro dele.",
      "why": "Ordem negativa: told me not to + verbo."
     },
     {
@@ -511,6 +522,7 @@
       "Yes, I said her you would call tonight."
      ],
      "answer": "Yes, I told her you would call tonight.",
+     "pt": "Sim, eu disse a ela que você ia ligar hoje à noite.",
      "why": "Told her + would call."
     }
    ]
@@ -523,6 +535,7 @@
      "id": "b2u3l6-1",
      "type": "choice",
      "en": "He asked me what time the film ___.",
+     "pt": "Ele me perguntou a que horas o filme começava.",
      "options": [
       "started",
       "did start",
@@ -554,6 +567,7 @@
      "id": "b2u3l6-4",
      "type": "choice",
      "en": "Laura ___ that she had lost her keys.",
+     "pt": "A Laura comentou que tinha perdido as chaves.",
      "options": [
       "mentioned",
       "told",

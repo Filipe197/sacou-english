@@ -114,7 +114,7 @@ export default function Review() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {entries.map(e => (
                 <div key={e.item.id} className="card" style={{ padding: 16, display: 'flex', justifyContent: 'space-between', gap: 12 }}>
-                  <span lang="en" style={{ fontWeight: 600 }}>{e.item.en || e.item.pt || e.item.lines?.map(l => l[1]).join(' / ') || e.item.pairs?.map(p => p[0]).join(', ')}</span>
+                  <span lang="en" style={{ fontWeight: 600 }}>{e.item.en || e.item.lines?.map(l => l[1]).join(' / ') || e.item.pt || e.item.pairs?.map(p => p[0]).join(', ')}</span>
                   <span className="muted" style={{ fontSize: 14, whiteSpace: 'nowrap' }}>{e.unit.title} · errou {e.times}x</span>
                 </div>
               ))}

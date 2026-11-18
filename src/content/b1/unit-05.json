@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "If I ___ rich, I would buy a big house.",
+     "pt": "Se eu fosse rico, compraria uma casa grande.",
      "options": [
       "were",
       "am",
@@ -125,6 +126,7 @@
      "id": "b1u5l1-3",
      "type": "choice",
      "en": "If she had a car, she ___ drive to work.",
+     "pt": "Se ela tivesse carro, iria de carro para o trabalho.",
      "options": [
       "would",
       "will",
@@ -149,6 +151,7 @@
      "id": "b1u5l1-5",
      "type": "choice",
      "en": "What would you do if you ___ a million dollars?",
+     "pt": "O que você faria se tivesse um milhão de dólares?",
      "options": [
       "had",
       "have",
@@ -180,6 +183,7 @@
      "type": "choice",
      "prompt": "Dê um conselho:",
      "en": "If I ___ you, I would talk to her.",
+     "pt": "Se eu fosse você, falaria com ela.",
      "options": [
       "were",
       "was",
@@ -204,6 +208,7 @@
      "id": "b1u5l2-3",
      "type": "choice",
      "en": "I ___ quit my job. I like it!",
+     "pt": "Eu não largaria meu emprego. Eu gosto dele!",
      "options": [
       "wouldn't",
       "won't to",
@@ -286,6 +291,7 @@
      "type": "choice",
      "prompt": "Imaginário ou real?",
      "en": "If I lived near the beach, I ___ swim every day.",
+     "pt": "Se eu morasse perto da praia, nadaria todo dia.",
      "options": [
       "would",
       "will",
@@ -298,6 +304,7 @@
      "id": "b1u5l3-3",
      "type": "choice",
      "en": "If you ___ tired, go to bed.",
+     "pt": "Se você está cansado, vá dormir.",
      "options": [
       "are",
       "were",
@@ -334,6 +341,7 @@
      "id": "b1u5l3-6",
      "type": "choice",
      "en": "She would be happier if she ___ less.",
+     "pt": "Ela seria mais feliz se trabalhasse menos.",
      "options": [
       "worked",
       "works",
@@ -429,6 +437,7 @@
       "If I were you, I look for another job."
      ],
      "answer": "If I were you, I would look for another job.",
+     "pt": "Se eu fosse você, procuraria outro emprego.",
      "why": "Conselho: If I were you, I would..."
     },
     {
@@ -450,6 +459,7 @@
       "I travel around the world."
      ],
      "answer": "I'd travel around the world.",
+     "pt": "Eu viajaria pelo mundo.",
      "why": "Resposta imaginária: would (I'd)."
     },
     {
@@ -471,6 +481,7 @@
       "Maybe, but I miss my family would."
      ],
      "answer": "Maybe, but I would miss my family.",
+     "pt": "Talvez, mas eu sentiria falta da minha família.",
      "why": "Would + miss = sentiria falta."
     },
     {
@@ -506,6 +517,7 @@
       "If I were you, I will take the bus."
      ],
      "answer": "If I were you, I'd take the bus.",
+     "pt": "Se eu fosse você, iria de ônibus.",
      "why": "If I were you + would ('d)."
     }
    ]
@@ -518,6 +530,7 @@
      "id": "b1u5l6-1",
      "type": "choice",
      "en": "If I ___ more time, I would read more books.",
+     "pt": "Se eu tivesse mais tempo, leria mais livros.",
      "options": [
       "had",
       "have",
@@ -549,6 +562,7 @@
      "id": "b1u5l6-4",
      "type": "choice",
      "en": "If I were you, I ___ worry.",
+     "pt": "Se eu fosse você, não me preocuparia.",
      "options": [
       "wouldn't",
       "won't",

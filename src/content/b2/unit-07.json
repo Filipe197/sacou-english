@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I need someone to ___ my dog while I'm away.",
+     "pt": "Preciso de alguém para cuidar do meu cachorro enquanto eu estiver fora.",
      "options": [
       "look after",
       "look for",
@@ -128,6 +129,7 @@
      "id": "b2u7l1-3",
      "type": "choice",
      "en": "How did you ___ about the party?",
+     "pt": "Como você ficou sabendo da festa?",
      "options": [
       "find out",
       "find up",
@@ -152,6 +154,7 @@
      "id": "b2u7l1-5",
      "type": "choice",
      "en": "We had to ___ the meeting until next week.",
+     "pt": "Tivemos que adiar a reunião para a semana que vem.",
      "options": [
       "put off",
       "put on",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "The music is too loud. Can you turn ___?",
+     "pt": "A música está alta demais. Você pode abaixar?",
      "options": [
       "it down",
       "down it",
@@ -210,6 +214,7 @@
      "id": "b2u7l2-3",
      "type": "choice",
      "en": "Take ___ your shoes before you come in.",
+     "pt": "Tire os sapatos antes de entrar.",
      "options": [
       "off",
       "out",
@@ -291,6 +296,7 @@
      "id": "b2u7l3-2",
      "type": "choice",
      "en": "I get on well ___ my colleagues.",
+     "pt": "Eu me dou bem com meus colegas.",
      "options": [
       "with",
       "to",
@@ -303,6 +309,7 @@
      "id": "b2u7l3-3",
      "type": "choice",
      "en": "I'm looking forward to ___ you next week.",
+     "pt": "Estou ansioso para te ver na semana que vem.",
      "options": [
       "seeing",
       "see",
@@ -339,6 +346,7 @@
      "id": "b2u7l3-6",
      "type": "choice",
      "en": "My grandmother brought me ___ in a small town.",
+     "pt": "Minha avó me criou numa cidade pequena.",
      "options": [
       "up",
       "out",
@@ -430,6 +438,7 @@
       "No, I turned it off. It was too far from home."
      ],
      "answer": "No, I turned it down. It was too far from home.",
+     "pt": "Não, recusei. Era longe demais de casa.",
      "why": "Turn down = recusar. Com pronome: turned it down."
     },
     {
@@ -451,6 +460,7 @@
       "Sure. Let's try to come up a solution."
      ],
      "answer": "Sure. Let's try to come up with a solution.",
+     "pt": "Claro. Vamos tentar encontrar uma solução.",
      "why": "Come up with = encontrar (uma solução, uma ideia)."
     },
     {
@@ -472,6 +482,7 @@
       "Oh no! I think we've run off of fuel."
      ],
      "answer": "Oh no! I think we've run out of fuel.",
+     "pt": "Ah, não! Acho que acabou a gasolina.",
      "why": "Run out of = ficar sem."
     },
     {
@@ -507,6 +518,7 @@
       "She gets up very early."
      ],
      "answer": "Very well. She's really nice.",
+     "pt": "Muito bem. Ela é muito legal.",
      "why": "Get on with someone = se dar bem com alguém. Get on the bus = subir no ônibus."
     }
    ]
@@ -519,6 +531,7 @@
      "id": "b2u7l6-1",
      "type": "choice",
      "en": "Please ___ the form and give it to the teacher.",
+     "pt": "Por favor, preencha o formulário e entregue ao professor.",
      "options": [
       "fill in",
       "fill up",
@@ -553,6 +566,7 @@
      "id": "b2u7l6-4",
      "type": "choice",
      "en": "I'll pick you ___ at seven.",
+     "pt": "Eu te busco às sete.",
      "options": [
       "up",
       "on",

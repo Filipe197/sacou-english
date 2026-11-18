@@ -212,3 +212,26 @@
 .aula-hear{display:inline-flex;align-items:center;gap:6px;border:0;cursor:pointer;font:inherit;font-size:14px;font-weight:700;color:var(--violet-dd);background:var(--violet-l);margin:0 0 12px}
 .aula-beta{margin:14px 0 0;font-size:13px;line-height:1.5;color:var(--text2);background:var(--bg);border-radius:12px;padding:10px 12px}
 .aula-beta b{color:var(--ink)}
+
+/* Tirar dúvidas (/duvidas) */
+.dv{max-width:760px;margin:0 auto;display:flex;flex-direction:column;min-height:calc(100dvh - 104px)}
+.dv-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.dv-head-text{flex:1;min-width:0}
+.dv-head h1{font-size:clamp(28px,5vw,36px);margin:0 0 6px}
+.dv-head p{margin:0;font-size:16px;line-height:1.55}
+.dv-ic{width:48px;height:48px;border-radius:14px;margin-top:4px}
+.dv-ideas{margin-bottom:12px}
+.dv-ideas .chip{text-align:left;white-space:normal;line-height:1.35}
+.dv-thread{flex:1}
+.dv-turn+.dv-turn{margin-top:8px}
+.dv-a{background:linear-gradient(180deg,#F6F3FF,#fff);border:1.5px solid var(--violet-ring);border-radius:4px 18px 18px 18px;padding:12px 16px;margin-top:8px}
+.dv-save{display:inline-flex;align-items:center;gap:6px;margin-top:10px}
+.dv-save:disabled{color:var(--ok-d);cursor:default;text-decoration:none}
+.dv-bar{position:sticky;bottom:0;z-index:5;background:var(--bg);padding:12px 0 8px;margin-top:16px;display:flex;flex-direction:column;gap:6px}
+.dv-bar .tutor-ask .btn{flex:none;padding:0 18px;min-height:46px}
+.dv-new{flex:none;min-height:40px;padding:0 14px;font-size:14px}
+.dv-bar .tutor-ask{flex-direction:row}
+.dv-full{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.dv-head .dv-note{margin:6px 0 0;font-size:12.5px;line-height:1.4;color:var(--text3)}
+@media(max-width:860px){.dv{min-height:auto}.dv-bar{bottom:calc(70px + env(safe-area-inset-bottom))}.dv-head{gap:12px;flex-wrap:wrap}.dv-ic{width:40px;height:40px}.dv-head-text{flex-basis:calc(100% - 52px)}.dv-head .dv-new{margin-left:52px}}
+@media(max-width:420px){.dv-bar .tutor-ask .btn{padding:0 14px}}

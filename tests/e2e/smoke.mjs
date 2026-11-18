@@ -113,6 +113,19 @@ await test('aula falada: repetir, responder e resumo', async () => {
   await expectText('Resumo da aula');
 });
 
+await test('tirar dúvidas: pergunta, resposta e salvar', async () => {
+  await open('/duvidas');
+  await wait(800);
+  await page.evaluate(() => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Fechar')?.click());
+  await expectText('Experimente perguntar');
+  await page.type('.dv-bar input', 'Qual a diferença entre these e those?');
+  await page.click('.dv-bar button[type=submit]');
+  await expectText('Estes sapatos são novos.');
+  await click('Salvar no caderno');
+  await expectText('Salvo no caderno');
+  if (!await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)) throw new Error('rolagem lateral na tela de dúvidas');
+});
+
 await browser.close();
 await server.close();
 

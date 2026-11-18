@@ -29,10 +29,10 @@ export function itemCards(item) {
   const fill = (en) => en.replace('___', item.answer);
   switch (item.type) {
     case 'meaning': case 'listen': return [{ en: item.en, pt: item.answer, plain: why }];
-    case 'choice': return [{ en: fill(item.en), pt: null, plain: why }];
+    case 'choice': return [{ en: fill(item.en), pt: item.pt, plain: why }];
     case 'build': case 'type': return [{ en: item.answer, pt: item.pt, plain: why }];
     case 'dictation': return [{ en: item.en, pt: suggestPT(item.en), plain: why }];
-    case 'dialogue': return [{ en: item.answer, pt: null, plain: why }];
+    case 'dialogue': return [{ en: item.answer, pt: item.pt, plain: why }];
     case 'speak': return [{ en: item.en, pt: item.pt, plain: why }];
     case 'match': return item.pairs.filter(([, pt]) => !/^\d+$/.test(pt)).map(([en, pt]) => ({ en, pt, plain: '' }));
     default: return [];

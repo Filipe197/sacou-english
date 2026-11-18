@@ -189,6 +189,7 @@
      "type": "choice",
      "prompt": "Você está saindo de uma festa. O que diz?",
      "en": "___!",
+     "pt": "Tchau!",
      "options": [
       "Hello",
       "Goodbye",
@@ -248,6 +249,7 @@
      "type": "choice",
      "prompt": "São 20h e você CHEGA a um restaurante. O que diz?",
      "en": "Good ___!",
+     "pt": "Boa noite! (ao chegar)",
      "options": [
       "evening",
       "night",
@@ -265,6 +267,7 @@
      "type": "choice",
      "prompt": "Você vai dormir. O que diz para sua família?",
      "en": "Good ___!",
+     "pt": "Boa noite! (ao sair ou dormir)",
      "options": [
       "evening",
       "night",
@@ -369,6 +372,7 @@
      "type": "choice",
      "prompt": "Você quer passar no meio das pessoas. O que diz?",
      "en": "___ me!",
+     "pt": "Com licença!",
      "options": [
       "Excuse",
       "Sorry",
@@ -422,6 +426,7 @@
      "type": "choice",
      "prompt": "Complete a resposta educada:",
      "en": "I'm fine, ___!",
+     "pt": "Estou bem, obrigado!",
      "options": [
       "thanks",
       "sorry",
@@ -527,6 +532,7 @@
       "Excuse me."
      ],
      "answer": "I'm fine, thanks. And you?",
+     "pt": "Estou bem, obrigado. E você?",
      "why": "Quando alguém pergunta \"How are you?\", o natural é responder e devolver a pergunta: \"And you?\" (E você?)."
     },
     {
@@ -548,6 +554,7 @@
       "Goodbye!"
      ],
      "answer": "You're welcome!",
+     "pt": "De nada!",
      "why": "\"You're welcome\" = de nada. É a resposta padrão para \"thank you\"."
     },
     {
@@ -569,6 +576,7 @@
       "See you!"
      ],
      "answer": "Good morning!",
+     "pt": "Bom dia!",
      "why": "Responda o cumprimento com o mesmo cumprimento: Good morning!"
     },
     {
@@ -604,6 +612,7 @@
       "Hello!"
      ],
      "answer": "That's OK.",
+     "pt": "Tudo bem.",
      "why": "Quando alguém pede desculpas, respondemos \"That's OK\" ou \"No problem\" (tudo bem)."
     }
    ]
@@ -650,6 +659,7 @@
       "Please!"
      ],
      "answer": "Bye!",
+     "pt": "Tchau!",
      "why": "Alguém se despediu, então você se despede também: Bye! \"Tomorrow\" = amanhã."
     },
     {
@@ -663,6 +673,7 @@
      "type": "choice",
      "prompt": "Você esbarrou em alguém sem querer. O que diz?",
      "en": "___!",
+     "pt": "Desculpe!",
      "options": [
       "Sorry",
       "Thanks",

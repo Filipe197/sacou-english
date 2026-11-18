@@ -53,6 +53,10 @@ npm run dev
   de falas da conversa. As falas prontas dele (`RETRY`, `GIVE_UP`, `INTRO` em `src/lib/aula.js`) têm voz natural
   da Kokoro (`pm_santa` em português, `am_santa` em inglês), gerada pelo `gen-audio.py`; as respostas criadas pela IA
   usam a voz do aparelho (aviso de "voz em fase beta" na tela).
+- **Tirar dúvidas** (`/duvidas`): o aluno pergunta qualquer coisa sobre inglês (ex.: these × those) e o professor responde
+  em português, com exemplos para ouvir e botão para salvar no caderno. Até 10 perguntas por conversa; perguntas fora de
+  inglês são recusadas com gentileza (`api/duvidas.js`, `src/pages/Duvidas.jsx`). Conta no mesmo limite diário das
+  explicações de erro (40 por dia), então não precisa de SQL novo.
 - **Treino infinito** (`api/treino.js`): na revisão, a IA cria exercícios novos sobre os erros do aluno; cada
   frase passa pela mesma checagem CEFR-J do build (`scripts/cefr.mjs`) e o que não passar é descartado.
 - **Professor que lembra:** a explicação do erro considera os erros que o aluno mais repete.

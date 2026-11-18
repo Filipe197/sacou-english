@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "When we arrived, the film ___ already started.",
+     "pt": "Quando chegamos, o filme já tinha começado.",
      "options": [
       "had",
       "has",
@@ -128,6 +129,7 @@
      "id": "b2u1l1-3",
      "type": "choice",
      "en": "She was tired because she ___ all night.",
+     "pt": "Ela estava cansada porque tinha trabalhado a noite toda.",
      "options": [
       "had worked",
       "has worked",
@@ -152,6 +154,7 @@
      "id": "b2u1l1-5",
      "type": "choice",
      "en": "I couldn't pay because I ___ my wallet at home.",
+     "pt": "Eu não consegui pagar porque tinha esquecido a carteira em casa.",
      "options": [
       "had left",
       "have left",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "By the time I woke up, my parents ___ for work.",
+     "pt": "Quando eu acordei, meus pais já tinham ido trabalhar.",
      "options": [
       "had gone",
       "have gone",
@@ -207,6 +211,7 @@
      "id": "b2u1l2-3",
      "type": "choice",
      "en": "After she ___ the email, she turned off the computer.",
+     "pt": "Depois de enviar o e-mail, ela desligou o computador.",
      "options": [
       "had sent",
       "has sent",
@@ -288,6 +293,7 @@
      "id": "b2u1l3-2",
      "type": "choice",
      "en": "___ she got to the airport, the plane had already left.",
+     "pt": "Quando ela chegou ao aeroporto, o avião já tinha partido.",
      "options": [
       "By the time",
       "Since",
@@ -300,6 +306,7 @@
      "id": "b2u1l3-3",
      "type": "choice",
      "en": "He was nervous because he ___ flown before.",
+     "pt": "Ele estava nervoso porque nunca tinha andado de avião.",
      "options": [
       "had never",
       "has never",
@@ -336,6 +343,7 @@
      "id": "b2u1l3-6",
      "type": "choice",
      "en": "I recognized him because I ___ him on TV.",
+     "pt": "Eu o reconheci porque já tinha visto ele na TV.",
      "options": [
       "had seen",
       "have seen",
@@ -433,6 +441,7 @@
       "My bus breaks down, so I had to walk."
      ],
      "answer": "My bus had broken down, so I had to walk.",
+     "pt": "Meu ônibus tinha quebrado, então tive que ir a pé.",
      "why": "O ônibus quebrou ANTES do atraso: had broken down."
     },
     {
@@ -454,6 +463,7 @@
       "Not really. I had expect something better."
      ],
      "answer": "Not really. I had expected something better.",
+     "pt": "Não muito. Eu esperava algo melhor.",
      "why": "Had expected = tinha esperado. A expectativa veio antes do show."
     },
     {
@@ -475,6 +485,7 @@
       "No, she already go home when I got there."
      ],
      "answer": "No, she had already gone home when I got there.",
+     "pt": "Não, ela já tinha ido para casa quando eu cheguei.",
      "why": "Ela foi embora antes de eu chegar: had already gone."
     },
     {
@@ -510,6 +521,7 @@
       "Strange! I never had worked in such a big office."
      ],
      "answer": "Strange! I had never worked in such a big office.",
+     "pt": "Estranho! Eu nunca tinha trabalhado num escritório tão grande.",
      "why": "Had never worked = nunca tinha trabalhado (antes daquele dia)."
     }
    ]
@@ -522,6 +534,7 @@
      "id": "b2u1l6-1",
      "type": "choice",
      "en": "When I opened the fridge, someone ___ all the cake.",
+     "pt": "Quando abri a geladeira, alguém tinha comido o bolo todo.",
      "options": [
       "had eaten",
       "has eaten",
@@ -558,6 +571,7 @@
      "id": "b2u1l6-4",
      "type": "choice",
      "en": "They ___ each other before the trip.",
+     "pt": "Eles não se conheciam antes da viagem.",
      "options": [
       "hadn't met",
       "haven't met",

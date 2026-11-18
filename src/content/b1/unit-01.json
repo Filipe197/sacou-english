@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete a experiência:",
      "en": "I have ___ to Chile twice.",
+     "pt": "Eu já fui ao Chile duas vezes.",
      "options": [
       "been",
       "be",
@@ -125,6 +126,7 @@
      "id": "b1u1l1-3",
      "type": "choice",
      "en": "She ___ never seen the sea.",
+     "pt": "Ela nunca viu o mar.",
      "options": [
       "has",
       "have",
@@ -149,6 +151,7 @@
      "id": "b1u1l1-5",
      "type": "choice",
      "en": "We have never ___ a famous person.",
+     "pt": "Nós nunca conhecemos uma pessoa famosa.",
      "options": [
       "met",
       "meet",
@@ -180,6 +183,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I have ___ this film three times.",
+     "pt": "Eu já vi este filme três vezes.",
      "options": [
       "seen",
       "saw",
@@ -195,6 +199,7 @@
      "id": "b1u1l2-2",
      "type": "choice",
      "en": "Has he ever ___ a book?",
+     "pt": "Ele já escreveu algum livro?",
      "options": [
       "written",
       "wrote",
@@ -289,6 +294,7 @@
      "type": "choice",
      "prompt": "Atenção à data:",
      "en": "I ___ to Paris in 2018.",
+     "pt": "Eu fui a Paris em 2018.",
      "options": [
       "went",
       "have been",
@@ -304,6 +310,7 @@
      "id": "b1u1l3-3",
      "type": "choice",
      "en": "Have you ___ been to Rio?",
+     "pt": "Você já foi ao Rio?",
      "options": [
       "ever",
       "never",
@@ -340,6 +347,7 @@
      "id": "b1u1l3-6",
      "type": "choice",
      "en": "My parents ___ visited Europe.",
+     "pt": "Meus pais nunca visitaram a Europa.",
      "options": [
       "have never",
       "never have",
@@ -434,6 +442,7 @@
       "Yes, I did. I have been there last year."
      ],
      "answer": "Yes, I have. I went there last year.",
+     "pt": "Sim, já fui. Fui lá no ano passado.",
      "why": "Resposta curta: Yes, I have. Depois, com a data (last year), passado simples."
     },
     {
@@ -455,6 +464,7 @@
       "No, I don't. Is it good?"
      ],
      "answer": "No, I haven't. Is it good?",
+     "pt": "Não, nunca provei. É bom?",
      "why": "Pergunta com have → resposta com have: No, I haven't."
     },
     {
@@ -476,6 +486,7 @@
       "Probably Lisbon. I have visit it."
      ],
      "answer": "Probably Lisbon. It's beautiful.",
+     "pt": "Acho que Lisboa. É linda.",
      "why": "Resposta simples e natural: Probably Lisbon."
     },
     {
@@ -511,6 +522,7 @@
       "Oh no! Where do you last see it?"
      ],
      "answer": "Oh no! Where did you last see it?",
+     "pt": "Ah, não! Onde você viu ela pela última vez?",
      "why": "Perguntando QUANDO/ONDE algo aconteceu: passado simples (did you see)."
     }
    ]
@@ -523,6 +535,7 @@
      "id": "b1u1l6-1",
      "type": "choice",
      "en": "Have you ever ___ a horse?",
+     "pt": "Você já andou a cavalo?",
      "options": [
       "ridden",
       "rode",
@@ -557,6 +570,7 @@
      "id": "b1u1l6-4",
      "type": "choice",
      "en": "She ___ to Japan last summer.",
+     "pt": "Ela foi ao Japão no verão passado.",
      "options": [
       "went",
       "has been",

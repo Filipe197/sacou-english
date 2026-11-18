@@ -109,6 +109,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "If she had left earlier, she ___ the bus.",
+     "pt": "Se ela tivesse saído mais cedo, teria pegado o ônibus.",
      "options": [
       "would have caught",
       "will catch",
@@ -121,6 +122,7 @@
      "id": "b2u2l1-3",
      "type": "choice",
      "en": "If we ___ the map, we wouldn't have got lost.",
+     "pt": "Se tivéssemos olhado o mapa, não teríamos nos perdido.",
      "options": [
       "had checked",
       "have checked",
@@ -148,6 +150,7 @@
      "id": "b2u2l1-5",
      "type": "choice",
      "en": "He would have won if he ___ harder.",
+     "pt": "Ele teria ganhado se tivesse treinado mais.",
      "options": [
       "had trained",
       "trained",
@@ -179,6 +182,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I wish I ___ more time to travel.",
+     "pt": "Eu queria ter mais tempo para viajar.",
      "options": [
       "had",
       "have",
@@ -206,6 +210,7 @@
      "id": "b2u2l2-3",
      "type": "choice",
      "en": "If only I ___ said that! Now she is angry.",
+     "pt": "Quem me dera eu não tivesse dito aquilo! Agora ela está brava.",
      "options": [
       "hadn't",
       "haven't",
@@ -287,6 +292,7 @@
      "id": "b2u2l3-2",
      "type": "choice",
      "en": "I ___ I had saved more money when I was younger.",
+     "pt": "Eu queria ter guardado mais dinheiro quando era mais novo.",
      "options": [
       "wish",
       "hope",
@@ -299,6 +305,7 @@
      "id": "b2u2l3-3",
      "type": "choice",
      "en": "We would have arrived on time if the train ___ late.",
+     "pt": "Teríamos chegado na hora se o trem não tivesse atrasado.",
      "options": [
       "hadn't been",
       "wasn't",
@@ -335,6 +342,7 @@
      "id": "b2u2l3-6",
      "type": "choice",
      "en": "If I ___ you, I would apologize.",
+     "pt": "Se eu fosse você, pediria desculpas.",
      "options": [
       "were",
       "had been",
@@ -432,6 +440,7 @@
       "Oh no! If you would have practiced more, you passed."
      ],
      "answer": "Oh no! If you had practiced more, you would have passed.",
+     "pt": "Ah, não! Se você tivesse praticado mais, teria passado.",
      "why": "Passado imaginário: if + had practiced, would have passed."
     },
     {
@@ -453,6 +462,7 @@
       "It's OK, but I wish it will be bigger."
      ],
      "answer": "It's OK, but I wish it were bigger.",
+     "pt": "É legal, mas eu queria que fosse maior.",
      "why": "Wish + were = queria que fosse. No dia a dia também se ouve \"I wish it was bigger\"."
     },
     {
@@ -474,6 +484,7 @@
       "Nobody told me! If I have known, I would come."
      ],
      "answer": "Nobody told me! If I had known, I would have come.",
+     "pt": "Ninguém me avisou! Se eu soubesse, teria ido.",
      "why": "If I had known, I would have come = se eu tivesse sabido, teria vindo."
     },
     {
@@ -509,6 +520,7 @@
       "Really? I hope you hadn't sold it. It was beautiful."
      ],
      "answer": "Really? I wish you hadn't sold it. It was beautiful.",
+     "pt": "Sério? Queria que você não tivesse vendido. Era linda.",
      "why": "Arrependimento sobre o passado: wish + hadn't + particípio."
     }
    ]
@@ -521,6 +533,7 @@
      "id": "b2u2l6-1",
      "type": "choice",
      "en": "If he had asked me, I ___ him my car.",
+     "pt": "Se ele tivesse me pedido, eu teria emprestado meu carro.",
      "options": [
       "would have lent",
       "will lend",
@@ -557,6 +570,7 @@
      "id": "b2u2l6-4",
      "type": "choice",
      "en": "I wish you ___ here with me now.",
+     "pt": "Eu queria que você estivesse aqui comigo agora.",
      "options": [
       "were",
       "are",

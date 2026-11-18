@@ -205,6 +205,7 @@
      "type": "choice",
      "prompt": "Quanto é 2 + 2?",
      "en": "Two and two is ___.",
+     "pt": "Dois mais dois são quatro.",
      "options": [
       "four",
       "five",
@@ -291,6 +292,7 @@
      "type": "choice",
      "prompt": "Quanto é 10 + 6?",
      "en": "Ten and six is ___.",
+     "pt": "Dez mais seis são dezesseis.",
      "options": [
       "sixteen",
       "six",
@@ -350,6 +352,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ twenty years old.",
+     "pt": "Eu tenho vinte anos.",
      "options": [
       "am",
       "have",
@@ -415,6 +418,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "How old ___ you?",
+     "pt": "Quantos anos você tem?",
      "options": [
       "are",
       "is",
@@ -526,6 +530,7 @@
       "I'm from Brazil."
      ],
      "answer": "I'm nineteen.",
+     "pt": "Eu tenho dezenove anos.",
      "why": "\"How old...?\" pergunta a idade: I'm + número."
     },
     {
@@ -547,6 +552,7 @@
       "My name is Tom."
      ],
      "answer": "It's nine eight seven, six five four.",
+     "pt": "É nove oito sete, seis cinco quatro.",
      "why": "Telefone em inglês se fala número por número."
     },
     {
@@ -568,6 +574,7 @@
       "She's fine."
      ],
      "answer": "She's thirty.",
+     "pt": "Ela tem trinta anos.",
      "why": "A pergunta é sobre idade, então a resposta tem um número: thirty = 30."
     },
     {
@@ -603,6 +610,7 @@
       "Yes, she has."
      ],
      "answer": "Yes, she is.",
+     "pt": "Sim, ela tem.",
      "why": "Resposta curta repete o sujeito e o verbo: Yes, she is."
     }
    ]
@@ -616,6 +624,7 @@
      "type": "choice",
      "prompt": "Quanto é 10 + 10?",
      "en": "Ten and ten is ___.",
+     "pt": "Dez mais dez são vinte.",
      "options": [
       "twenty",
       "twelve",

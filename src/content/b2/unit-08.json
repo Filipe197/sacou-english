@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "___ the traffic, we arrived on time.",
+     "pt": "Apesar do trânsito, chegamos na hora.",
      "options": [
       "Despite",
       "Although",
@@ -128,6 +129,7 @@
      "id": "b2u8l1-3",
      "type": "choice",
      "en": "___ she studied a lot, she failed the test.",
+     "pt": "Embora tenha estudado muito, ela foi reprovada na prova.",
      "options": [
       "Although",
       "Despite",
@@ -152,6 +154,7 @@
      "id": "b2u8l1-5",
      "type": "choice",
      "en": "He went to work despite ___ sick.",
+     "pt": "Ele foi trabalhar apesar de estar se sentindo mal.",
      "options": [
       "feeling",
       "he felt",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "The hotel was beautiful. ___, the food was terrible.",
+     "pt": "O hotel era lindo. Mas a comida era péssima.",
      "options": [
       "However",
       "Therefore",
@@ -207,6 +211,7 @@
      "id": "b2u8l2-3",
      "type": "choice",
      "en": "The course is cheap. ___, it's online, so you can study at home.",
+     "pt": "O curso é barato. Além disso, é online, então dá para estudar em casa.",
      "options": [
       "Moreover",
       "However",
@@ -288,6 +293,7 @@
      "id": "b2u8l3-2",
      "type": "choice",
      "en": "One ___ of working from home is that you don't waste time in traffic.",
+     "pt": "Uma vantagem de trabalhar de casa é que você não perde tempo no trânsito.",
      "options": [
       "advantage",
       "disadvantage",
@@ -300,6 +306,7 @@
      "id": "b2u8l3-3",
      "type": "choice",
      "en": "I'm saving money ___ I can travel next year.",
+     "pt": "Estou guardando dinheiro para poder viajar no ano que vem.",
      "options": [
       "so that",
       "although",
@@ -336,6 +343,7 @@
      "id": "b2u8l3-6",
      "type": "choice",
      "en": "The streets were closed ___ the festival.",
+     "pt": "As ruas estavam fechadas por causa do festival.",
      "options": [
       "because of",
       "because",
@@ -439,6 +447,7 @@
       "I don't think so. However phones are useful, they distract students."
      ],
      "answer": "I don't think so. Although phones are useful, they distract students.",
+     "pt": "Acho que não. Embora o celular seja útil, ele distrai os alunos.",
      "why": "Although + frase completa. Despite não aceita frase completa."
     },
     {
@@ -460,6 +469,7 @@
       "On one side, buying is safer. On another side, it's expensive."
      ],
      "answer": "On the one hand, buying is safer. On the other hand, it's expensive.",
+     "pt": "Por um lado, comprar é mais seguro. Por outro, é caro.",
      "why": "A expressão fixa é on the one hand / on the other hand."
     },
     {
@@ -481,6 +491,7 @@
       "Despite the weather. It was really cold."
      ],
      "answer": "Because of the weather. It was really cold.",
+     "pt": "Por causa do tempo. Estava muito frio.",
      "why": "Because of + substantivo (the weather)."
     },
     {
@@ -516,6 +527,7 @@
       "For sum up, the advantages are bigger than the disadvantages."
      ],
      "answer": "To sum up, the advantages are bigger than the disadvantages.",
+     "pt": "Em resumo, as vantagens são maiores que as desvantagens.",
      "why": "A expressão completa é \"to sum up\" (resumindo)."
     }
    ]
@@ -528,6 +540,7 @@
      "id": "b2u8l6-1",
      "type": "choice",
      "en": "She got the job ___ having no experience.",
+     "pt": "Ela conseguiu o emprego apesar de não ter experiência.",
      "options": [
       "despite",
       "although",
@@ -565,6 +578,7 @@
      "id": "b2u8l6-4",
      "type": "choice",
      "en": "The bus was late. ___, I missed the start of the film.",
+     "pt": "O ônibus atrasou. Por isso, perdi o começo do filme.",
      "options": [
       "As a result",
       "Despite",

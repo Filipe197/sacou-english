@@ -111,6 +111,7 @@ for (const { f, u, rank } of units) {
       switch (it.type) {
         case 'choice':
           if (!it.en?.includes('___')) err(L, 'choice precisa de "___" na frase');
+          if (!it.pt) err(L, 'choice precisa da frase completa em português "pt" (vira o verso do cartão)');
           if (!it.options?.includes(it.answer)) err(L, 'resposta não está nas opções');
           if (new Set(it.options).size !== it.options?.length) err(L, 'opções repetidas');
           checkEn(L, it.en); it.options?.forEach(o => checkEn(L, o));
@@ -144,6 +145,7 @@ for (const { f, u, rank } of units) {
         case 'dialogue':
           if (!Array.isArray(it.lines) || it.lines.length < 2 || it.lines.length > 4) err(L, 'dialogue precisa de 2 a 4 falas');
           if ((it.lines || []).filter(([, t]) => t === '___').length !== 1) err(L, 'dialogue precisa de exatamente uma fala "___"');
+          if (!it.pt) err(L, 'dialogue precisa da resposta em português "pt" (vira o verso do cartão)');
           (it.lines || []).forEach(([who, t]) => { if (!['A', 'B'].includes(who)) err(L, `falante inválido "${who}"`); if (t !== '___') checkEn(L, t); });
           if (!it.options?.includes(it.answer)) err(L, 'resposta não está nas opções');
           if (new Set(it.options).size !== it.options?.length) err(L, 'opções repetidas');

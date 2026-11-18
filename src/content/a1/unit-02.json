@@ -142,6 +142,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ Pedro.",
+     "pt": "Eu sou o Pedro.",
      "options": [
       "am",
       "is",
@@ -205,6 +206,7 @@
      "type": "choice",
      "prompt": "Complete a pergunta:",
      "en": "What is ___ name?",
+     "pt": "Qual é o seu nome?",
      "options": [
       "your",
       "you",
@@ -252,6 +254,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "You ___ from Japan.",
+     "pt": "Você é do Japão.",
      "options": [
       "are",
       "am",
@@ -305,6 +308,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Tom ___ from England.",
+     "pt": "O Tom é da Inglaterra.",
      "options": [
       "is",
       "are",
@@ -351,6 +355,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She is ___ engineer.",
+     "pt": "Ela é engenheira.",
      "options": [
       "an",
       "a",
@@ -368,6 +373,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I am ___ student.",
+     "pt": "Eu sou estudante.",
      "options": [
       "a",
       "an",
@@ -421,6 +427,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "He ___ a teacher.",
+     "pt": "Ele é professor.",
      "options": [
       "is",
       "am",
@@ -519,6 +526,7 @@
       "I'm from Brazil."
      ],
      "answer": "My name is Lucas.",
+     "pt": "Meu nome é Lucas.",
      "why": "\"What's your name?\" pergunta o nome. Responda com \"My name is...\" ou \"I'm...\"."
     },
     {
@@ -540,6 +548,7 @@
       "I'm fine, thanks."
      ],
      "answer": "I'm from Brazil.",
+     "pt": "Eu sou do Brasil.",
      "why": "\"Where are you from?\" pergunta a origem: I'm from + lugar."
     },
     {
@@ -561,6 +570,7 @@
       "Sorry!"
      ],
      "answer": "Nice to meet you too!",
+     "pt": "Prazer em conhecer você também!",
      "why": "Devolvemos a gentileza com \"too\" (também): Nice to meet you too!"
     },
     {
@@ -596,6 +606,7 @@
       "Yes, I'm fine."
      ],
      "answer": "No, I'm a student.",
+     "pt": "Não, eu sou estudante.",
      "why": "A pergunta é sobre profissão, então a resposta fala da profissão: No, I'm a student. Repare que na pergunta o \"are\" vem antes do \"you\"."
     }
    ]
@@ -609,6 +620,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Ana and Pedro ___ from Brazil.",
+     "pt": "A Ana e o Pedro são do Brasil.",
      "options": [
       "are",
       "is",

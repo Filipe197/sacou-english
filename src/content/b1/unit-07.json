@@ -119,6 +119,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "These shoes ___ made in Italy.",
+     "pt": "Estes sapatos são feitos na Itália.",
      "options": [
       "are",
       "is",
@@ -131,6 +132,7 @@
      "id": "b1u7l1-3",
      "type": "choice",
      "en": "This bridge was ___ in 1990.",
+     "pt": "Esta ponte foi construída em 1990.",
      "options": [
       "built",
       "build",
@@ -155,6 +157,7 @@
      "id": "b1u7l1-5",
      "type": "choice",
      "en": "My car ___ stolen last night.",
+     "pt": "Meu carro foi roubado ontem à noite.",
      "options": [
       "was",
       "is",
@@ -186,6 +189,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "The film was directed ___ a Brazilian woman.",
+     "pt": "O filme foi dirigido por uma brasileira.",
      "options": [
       "by",
       "for",
@@ -210,6 +214,7 @@
      "id": "b1u7l2-3",
      "type": "choice",
      "en": "The light bulb was ___ by Edison.",
+     "pt": "A lâmpada foi inventada por Edison.",
      "options": [
       "invented",
       "invent",
@@ -291,6 +296,7 @@
      "id": "b1u7l3-2",
      "type": "choice",
      "en": "Many houses ___ destroyed by the storm.",
+     "pt": "Muitas casas foram destruídas pela tempestade.",
      "options": [
       "were",
       "was",
@@ -304,6 +310,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Spanish ___ in Argentina.",
+     "pt": "Fala-se espanhol na Argentina.",
      "options": [
       "is spoken",
       "speaks",
@@ -343,6 +350,7 @@
      "id": "b1u7l3-6",
      "type": "choice",
      "en": "Cars ___ produced in this factory.",
+     "pt": "Carros são produzidos nesta fábrica.",
      "options": [
       "are",
       "is",
@@ -425,6 +433,7 @@
       "Thanks! It was make by a friend of mine."
      ],
      "answer": "Thanks! It was made by a friend of mine.",
+     "pt": "Obrigada! Foi feita por uma amiga minha.",
      "why": "Was + made + by."
     },
     {
@@ -446,6 +455,7 @@
       "It is steal last week."
      ],
      "answer": "It was stolen last week.",
+     "pt": "Foi roubada na semana passada.",
      "why": "Não sabemos quem roubou: passiva (was stolen)."
     },
     {
@@ -467,6 +477,7 @@
       "Yes, it does. We work with people from many countries."
      ],
      "answer": "Yes, it is. We work with people from many countries.",
+     "pt": "Sim, fala-se. Trabalhamos com pessoas de muitos países.",
      "why": "Pergunta com is → resposta com is."
     },
     {
@@ -502,6 +513,7 @@
       "I don't know. It is paint a long time ago."
      ],
      "answer": "I don't know. It was painted a long time ago.",
+     "pt": "Não sei. Foi pintado há muito tempo.",
      "why": "Sem saber quem fez: passiva no passado."
     }
    ]
@@ -514,6 +526,7 @@
      "id": "b1u7l6-1",
      "type": "choice",
      "en": "The museum ___ opened in 2015.",
+     "pt": "O museu foi inaugurado em 2015.",
      "options": [
       "was",
       "is",
@@ -548,6 +561,7 @@
      "id": "b1u7l6-4",
      "type": "choice",
      "en": "The letter was ___ by hand.",
+     "pt": "A carta foi escrita à mão.",
      "options": [
       "written",
       "wrote",

@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My sister can ___ three languages.",
+     "pt": "Minha irmã sabe falar três línguas.",
      "options": [
       "speak",
       "speaks",
@@ -130,6 +131,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "He ___ drive. He doesn't have a car.",
+     "pt": "Ele não sabe dirigir. Ele não tem carro.",
      "options": [
       "can't",
       "doesn't can",
@@ -212,6 +214,7 @@
      "type": "choice",
      "prompt": "Pedindo permissão. Complete:",
      "en": "___ I use your phone?",
+     "pt": "Posso usar o seu celular?",
      "options": [
       "Can",
       "Do",
@@ -253,6 +256,7 @@
      "type": "choice",
      "prompt": "Qual é o mais educado?",
      "en": "___ speak slowly, please?",
+     "pt": "Você poderia falar devagar, por favor?",
      "options": [
       "Could you",
       "You",
@@ -300,6 +304,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She ___ to get up early.",
+     "pt": "Ela tem que acordar cedo.",
      "options": [
       "has",
       "have",
@@ -341,6 +346,7 @@
      "type": "choice",
      "prompt": "Complete a pergunta:",
      "en": "___ you have to wear a uniform?",
+     "pt": "Você tem que usar uniforme?",
      "options": [
       "Do",
       "Have",
@@ -443,6 +449,7 @@
       "Yes, I swim can."
      ],
      "answer": "Yes, I can.",
+     "pt": "Sim, sei.",
      "why": "Pergunta com can → resposta com can."
     },
     {
@@ -464,6 +471,7 @@
       "No, I don't open."
      ],
      "answer": "Sure, no problem.",
+     "pt": "Claro, sem problema.",
      "why": "Resposta comum a um pedido: Sure, no problem."
     },
     {
@@ -485,6 +493,7 @@
       "Sorry, I don't can."
      ],
      "answer": "Sorry, I can't. I have to study.",
+     "pt": "Desculpe, não posso. Eu tenho que estudar.",
      "why": "Com I: have to."
     },
     {
@@ -520,6 +529,7 @@
       "No, you haven't to."
      ],
      "answer": "No, you don't have to. It's free.",
+     "pt": "Não, não precisa. É de graça.",
      "why": "Não é necessário = don't have to."
     }
    ]
@@ -533,6 +543,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "When I was a child, I ___ swim.",
+     "pt": "Quando eu era criança, eu não sabia nadar.",
      "options": [
       "couldn't",
       "can't",
@@ -569,6 +580,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "We ___ to wear a uniform at school.",
+     "pt": "Nós temos que usar uniforme na escola.",
      "options": [
       "have",
       "has",

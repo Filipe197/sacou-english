@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "When I was a child, I ___ to play football every day.",
+     "pt": "Quando eu era criança, jogava futebol todo dia.",
      "options": [
       "used",
       "use",
@@ -126,6 +127,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "He didn't ___ to like vegetables.",
+     "pt": "Ele não gostava de verduras.",
      "options": [
       "use",
       "used",
@@ -153,6 +155,7 @@
      "id": "b1u6l1-5",
      "type": "choice",
      "en": "___ you use to watch cartoons?",
+     "pt": "Você costumava assistir a desenhos?",
      "options": [
       "Did",
       "Do",
@@ -184,6 +187,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I don't eat meat ___.",
+     "pt": "Eu não como mais carne.",
      "options": [
       "any more",
       "yet",
@@ -208,6 +212,7 @@
      "id": "b1u6l2-3",
      "type": "choice",
      "en": "She used to have long hair, but now it ___ short.",
+     "pt": "Ela tinha cabelo comprido, mas agora é curto.",
      "options": [
       "is",
       "used to be",
@@ -289,6 +294,7 @@
      "id": "b1u6l3-2",
      "type": "choice",
      "en": "In my childhood, people ___ to know all their neighbours.",
+     "pt": "Na minha infância, as pessoas conheciam todos os vizinhos.",
      "options": [
       "used",
       "were used",
@@ -301,6 +307,7 @@
      "id": "b1u6l3-3",
      "type": "choice",
      "en": "We used to go to the beach every summer, but we ___ any more.",
+     "pt": "A gente ia à praia todo verão, mas não vai mais.",
      "options": [
       "don't",
       "didn't",
@@ -337,6 +344,7 @@
      "id": "b1u6l3-6",
      "type": "choice",
      "en": "My father ___ to smoke, but he stopped ten years ago.",
+     "pt": "Meu pai fumava, mas parou há dez anos.",
      "options": [
       "used",
       "uses",
@@ -425,6 +433,7 @@
       "Yes, I used play volleyball at school."
      ],
      "answer": "Yes, I used to play volleyball at school.",
+     "pt": "Sim, eu jogava vôlei na escola.",
      "why": "Used to + verbo."
     },
     {
@@ -446,6 +455,7 @@
       "No, not already. I moved out last year."
      ],
      "answer": "No, not any more. I moved out last year.",
+     "pt": "Não, não mais. Eu saí de casa no ano passado.",
      "why": "Not any more = não mais."
     },
     {
@@ -467,6 +477,7 @@
       "It was used to be very quiet. Now it's really busy."
      ],
      "answer": "It used to be very quiet. Now it's really busy.",
+     "pt": "Era bem tranquila. Agora é muito movimentada.",
      "why": "It used to be = era (antigamente)."
     },
     {
@@ -502,6 +513,7 @@
       "Thanks! I use to swimming a lot when I was a child."
      ],
      "answer": "Thanks! I used to swim a lot when I was a child.",
+     "pt": "Obrigado! Eu nadava muito quando era criança.",
      "why": "Explicando com um hábito antigo: used to swim."
     }
    ]
@@ -514,6 +526,7 @@
      "id": "b1u6l6-1",
      "type": "choice",
      "en": "My brother ___ to be very shy.",
+     "pt": "Meu irmão era muito tímido.",
      "options": [
       "used",
       "uses",
@@ -548,6 +561,7 @@
      "id": "b1u6l6-4",
      "type": "choice",
      "en": "___ your parents use to work on Saturdays?",
+     "pt": "Seus pais costumavam trabalhar aos sábados?",
      "options": [
       "Did",
       "Do",

@@ -154,6 +154,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     ['/aprender', 'home', 'Aprender'],
     ['/praticar', 'bolt', 'Praticar'],
     ['/conversar', 'chat', 'Conversar'],
+    ['/duvidas', 'sparkle', 'Tirar dúvidas'],
     ['/jogos', 'game', 'Jogos e histórias', 0, 'Jogos'],
     ['/revisao', 'review', 'Revisar erros', mistakesCount],
     ['/fone', 'headphones', 'Modo fone'],

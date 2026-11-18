@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She has worked here ___ 2019.",
+     "pt": "Ela trabalha aqui desde 2019.",
      "options": [
       "since",
       "for",
@@ -128,6 +129,7 @@
      "id": "b1u2l1-3",
      "type": "choice",
      "en": "We have known each other ___ six months.",
+     "pt": "Nós nos conhecemos há seis meses.",
      "options": [
       "for",
       "since",
@@ -152,6 +154,7 @@
      "id": "b1u2l1-5",
      "type": "choice",
      "en": "I ___ this car since I was twenty.",
+     "pt": "Eu tenho este carro desde os vinte anos.",
      "options": [
       "have had",
       "have",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I've ___ finished my homework.",
+     "pt": "Eu já terminei minha lição de casa.",
      "options": [
       "already",
       "yet",
@@ -195,6 +199,7 @@
      "id": "b1u2l2-2",
      "type": "choice",
      "en": "She hasn't called me ___.",
+     "pt": "Ela ainda não me ligou.",
      "options": [
       "yet",
       "already",
@@ -288,6 +293,7 @@
      "id": "b1u2l3-2",
      "type": "choice",
      "en": "How long ___ you had this phone?",
+     "pt": "Há quanto tempo você tem este celular?",
      "options": [
       "have",
       "do",
@@ -300,6 +306,7 @@
      "id": "b1u2l3-3",
      "type": "choice",
      "en": "I've been here ___ two o'clock.",
+     "pt": "Estou aqui desde as duas horas.",
      "options": [
       "since",
       "for",
@@ -336,6 +343,7 @@
      "id": "b1u2l3-6",
      "type": "choice",
      "en": "My sister has ___ bought a new house.",
+     "pt": "Minha irmã acabou de comprar uma casa nova.",
      "options": [
       "just",
       "yet",
@@ -430,6 +438,7 @@
       "About two years ago."
      ],
      "answer": "For about two years.",
+     "pt": "Há uns dois anos.",
      "why": "Quantidade de tempo: for."
     },
     {
@@ -451,6 +460,7 @@
       "Yes, I do it already."
      ],
      "answer": "Yes, I've already done it.",
+     "pt": "Sim, já fiz.",
      "why": "Resposta positiva: already (no meio)."
     },
     {
@@ -472,6 +482,7 @@
       "No, he's leave just. You missed him!"
      ],
      "answer": "No, he's just left. You missed him!",
+     "pt": "Não, ele acabou de sair. Você não o encontrou por pouco!",
      "why": "He's just left = acabou de sair."
     },
     {
@@ -507,6 +518,7 @@
       "Since five years."
      ],
      "answer": "Since I was a child.",
+     "pt": "Desde que eu era criança.",
      "why": "Since + um momento (I was a child)."
     }
    ]
@@ -519,6 +531,7 @@
      "id": "b1u2l6-1",
      "type": "choice",
      "en": "I've known Ana ___ we were at school.",
+     "pt": "Eu conheço a Ana desde a época da escola.",
      "options": [
       "since",
       "for",
@@ -550,6 +563,7 @@
      "id": "b1u2l6-4",
      "type": "choice",
      "en": "The film has ___ started. Sit down!",
+     "pt": "O filme acabou de começar. Senta aí!",
      "options": [
       "just",
       "yet",

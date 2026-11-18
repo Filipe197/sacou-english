@@ -131,6 +131,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ to the beach last summer.",
+     "pt": "Eu fui à praia no verão passado.",
      "options": [
       "went",
       "goed",
@@ -184,6 +185,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Did you ___ to the party?",
+     "pt": "Você foi à festa?",
      "options": [
       "go",
       "went",
@@ -230,6 +232,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My father ___ a new car last month.",
+     "pt": "Meu pai comprou um carro novo no mês passado.",
      "options": [
       "bought",
       "buyed",
@@ -283,6 +286,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She didn't ___ anything at the shop.",
+     "pt": "Ela não comprou nada na loja.",
      "options": [
       "buy",
       "bought",
@@ -318,6 +322,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "We ___ the bus to the museum.",
+     "pt": "Nós pegamos o ônibus para o museu.",
      "options": [
       "took",
       "taked",
@@ -466,6 +471,7 @@
       "It was great! We goed to Rio."
      ],
      "answer": "It was great! We went to Rio.",
+     "pt": "Foram ótimas! Nós fomos para o Rio.",
      "why": "Passado: was e went (passado de go)."
     },
     {
@@ -487,6 +493,7 @@
       "I buy a new bag yesterday."
      ],
      "answer": "I bought a new bag.",
+     "pt": "Eu comprei uma bolsa nova.",
      "why": "buy é irregular: o passado é bought."
     },
     {
@@ -508,6 +515,7 @@
       "Yes, we did saw it."
      ],
      "answer": "Yes, we saw it every day!",
+     "pt": "Sim, nós vimos o mar todo dia!",
      "why": "see → saw. Na afirmativa, sem did."
     },
     {
@@ -543,6 +551,7 @@
       "I got home on eleven."
      ],
      "answer": "I got home at eleven.",
+     "pt": "Eu cheguei em casa às onze.",
      "why": "get → got. Horas com \"at\"."
     }
    ]
@@ -556,6 +565,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Last year we ___ a car.",
+     "pt": "No ano passado nós compramos um carro.",
      "options": [
       "bought",
       "buyed",
@@ -592,6 +602,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "We didn't ___ the film.",
+     "pt": "Nós não vimos o filme.",
      "options": [
       "see",
       "saw",

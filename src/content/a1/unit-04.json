@@ -215,6 +215,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Maria is my ___. She is my mother's daughter.",
+     "pt": "A Maria é minha irmã. Ela é filha da minha mãe.",
      "options": [
       "sister",
       "brother",
@@ -238,6 +239,7 @@
      "type": "choice",
      "prompt": "Pedro tem um carro. Complete:",
      "en": "___ car is red.",
+     "pt": "O carro dele é vermelho.",
      "options": [
       "His",
       "Her",
@@ -255,6 +257,7 @@
      "type": "choice",
      "prompt": "Ana tem um irmão. Complete:",
      "en": "___ brother is a doctor.",
+     "pt": "O irmão dela é médico.",
      "options": [
       "Her",
       "His",
@@ -360,6 +363,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She ___ a son.",
+     "pt": "Ela tem um filho.",
      "options": [
       "has",
       "have",
@@ -377,6 +381,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "We ___ a big family.",
+     "pt": "Nós temos uma família grande.",
      "options": [
       "have",
       "has",
@@ -514,6 +519,7 @@
       "I'm fine, thanks."
      ],
      "answer": "That's my sister, Julia.",
+     "pt": "Aquela é a minha irmã, Julia.",
      "why": "\"Who is that?\" = quem é aquela pessoa? Responda com \"That's...\" (aquela é...)."
     },
     {
@@ -535,6 +541,7 @@
       "Yes, he has."
      ],
      "answer": "Yes, I have one brother.",
+     "pt": "Sim, eu tenho um irmão.",
      "why": "A pergunta usa \"have\" (ter), então a resposta também: I have one brother. Perguntas com \"Do you...?\" você vai ver em detalhe na unidade 7."
     },
     {
@@ -556,6 +563,7 @@
       "No, I'm my cousin."
      ],
      "answer": "No, he's my cousin.",
+     "pt": "Não, ele é meu primo.",
      "why": "Tom é homem: he. \"Cousin\" = primo(a)."
     },
     {
@@ -591,6 +599,7 @@
       "My name is Ana."
      ],
      "answer": "Her name is Ana.",
+     "pt": "O nome dela é Ana.",
      "why": "A mãe é mulher, então \"her name\" (o nome dela)."
     }
    ]
@@ -604,6 +613,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Pedro and ___ wife are from Rio.",
+     "pt": "O Pedro e a esposa dele são do Rio.",
      "options": [
       "his",
       "her",

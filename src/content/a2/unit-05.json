@@ -116,6 +116,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "London is ___ than my city.",
+     "pt": "Londres é maior que a minha cidade.",
      "options": [
       "bigger",
       "more big",
@@ -133,6 +134,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "The bus is ___ than the train.",
+     "pt": "O ônibus é mais barato que o trem.",
      "options": [
       "cheaper",
       "more cheap",
@@ -162,6 +164,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "English is ___ than Chinese.",
+     "pt": "Inglês é mais fácil que chinês.",
      "options": [
       "easier",
       "easyer",
@@ -197,6 +200,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "This bag is ___ than that one.",
+     "pt": "Esta bolsa é mais cara que aquela.",
      "options": [
       "more expensive",
       "expensiver",
@@ -214,6 +218,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Your English is ___ than mine.",
+     "pt": "Seu inglês é melhor que o meu.",
      "options": [
       "better",
       "gooder",
@@ -308,6 +313,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "This is the ___ restaurant in town.",
+     "pt": "Este é o melhor restaurante da cidade.",
      "options": [
       "best",
       "better",
@@ -325,6 +331,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "It's the ___ hotel in the city.",
+     "pt": "É o hotel mais caro da cidade.",
      "options": [
       "most expensive",
       "expensivest",
@@ -366,6 +373,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Summer is the ___ time of the year.",
+     "pt": "O verão é a época mais quente do ano.",
      "options": [
       "hottest",
       "hotter",
@@ -455,6 +463,7 @@
       "The black one. It's fastest."
      ],
      "answer": "The black one. It's faster.",
+     "pt": "O preto. Ele é mais rápido.",
      "why": "Comparando dois: faster."
     },
     {
@@ -476,6 +485,7 @@
       "Yes, it bigger."
      ],
      "answer": "Yes, it is.",
+     "pt": "Sim, é.",
      "why": "Pergunta com is → resposta com is."
     },
     {
@@ -497,6 +507,7 @@
       "My father is more tall."
      ],
      "answer": "My father is the tallest.",
+     "pt": "Meu pai é o mais alto.",
      "why": "O mais de todos: the tallest."
     },
     {
@@ -532,6 +543,7 @@
       "Yes, but it's the most cheap."
      ],
      "answer": "Yes, but the other hotel is more expensive.",
+     "pt": "Sim, mas o outro hotel é mais caro.",
      "why": "Palavra longa: more expensive."
     }
    ]
@@ -545,6 +557,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Summer is ___ than winter.",
+     "pt": "O verão é mais quente que o inverno.",
      "options": [
       "hotter",
       "hoter",
@@ -584,6 +597,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "This is the ___ film of the year.",
+     "pt": "Este é o pior filme do ano.",
      "options": [
       "worst",
       "worse",

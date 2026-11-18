@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Sorry, the room is ___ cleaned right now.",
+     "pt": "Desculpe, o quarto está sendo limpo agora.",
      "options": [
       "being",
       "been",
@@ -125,6 +126,7 @@
      "id": "b2u5l1-3",
      "type": "choice",
      "en": "My bike ___ stolen! I can't find it anywhere.",
+     "pt": "Minha bicicleta foi roubada! Não encontro em lugar nenhum.",
      "options": [
       "has been",
       "has being",
@@ -149,6 +151,7 @@
      "id": "b2u5l1-5",
      "type": "choice",
      "en": "All the tickets ___ sold. There are none left.",
+     "pt": "Todos os ingressos foram vendidos. Não sobrou nenhum.",
      "options": [
       "have been",
       "has been",
@@ -180,6 +183,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I ___ my hair cut every month.",
+     "pt": "Eu corto o cabelo todo mês.",
      "options": [
       "have",
       "make",
@@ -204,6 +208,7 @@
      "id": "b2u5l2-3",
      "type": "choice",
      "en": "I need to get my phone ___. The screen is broken.",
+     "pt": "Preciso mandar consertar meu celular. A tela quebrou.",
      "options": [
       "repaired",
       "repair",
@@ -285,6 +290,7 @@
      "id": "b2u5l3-2",
      "type": "choice",
      "en": "Phones can't ___ during the exam.",
+     "pt": "Não é permitido usar celular durante a prova.",
      "options": [
       "be used",
       "use",
@@ -297,6 +303,7 @@
      "id": "b2u5l3-3",
      "type": "choice",
      "en": "The results ___ announced next week.",
+     "pt": "Os resultados serão divulgados na semana que vem.",
      "options": [
       "will be",
       "will",
@@ -333,6 +340,7 @@
      "id": "b2u5l3-6",
      "type": "choice",
      "en": "We're having a new kitchen ___ next month.",
+     "pt": "Vamos instalar uma cozinha nova no mês que vem.",
      "options": [
       "installed",
       "install",
@@ -432,6 +440,7 @@
       "Thanks! I made it cut yesterday."
      ],
      "answer": "Thanks! I had it cut yesterday.",
+     "pt": "Obrigado! Cortei ontem.",
      "why": "Had it cut = mandei cortar. \"I had cut it\" é past perfect."
     },
     {
@@ -453,6 +462,7 @@
       "Not now, sorry. It's cleaning."
      ],
      "answer": "Not now, sorry. It's being cleaned.",
+     "pt": "Agora não, desculpe. Ela está sendo limpa.",
      "why": "Is being cleaned = está sendo limpa. \"It's cleaning\" diria que a sala está limpando algo!"
     },
     {
@@ -474,6 +484,7 @@
       "My car has repair this week."
      ],
      "answer": "My car is being repaired this week.",
+     "pt": "Meu carro está no conserto esta semana.",
      "why": "O carro não conserta nada: ele está sendo consertado (is being repaired)."
     },
     {
@@ -509,6 +520,7 @@
       "Almost. It will be finish by Friday."
      ],
      "answer": "Almost. It will be finished by Friday.",
+     "pt": "Quase. Vai ficar pronto até sexta.",
      "why": "Will be + particípio (finished)."
     }
    ]
@@ -521,6 +533,7 @@
      "id": "b2u5l6-1",
      "type": "choice",
      "en": "The museum ___ closed since May.",
+     "pt": "O museu está fechado desde maio.",
      "options": [
       "has been",
       "is being",
@@ -557,6 +570,7 @@
      "id": "b2u5l6-4",
      "type": "choice",
      "en": "The new rules will ___ next year.",
+     "pt": "As novas regras serão implantadas no ano que vem.",
      "options": [
       "be introduced",
       "introduce",

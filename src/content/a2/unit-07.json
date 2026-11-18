@@ -109,6 +109,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "There are ___ apples on the table.",
+     "pt": "Tem algumas maçãs em cima da mesa.",
      "options": [
       "some",
       "any",
@@ -126,6 +127,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Is there ___ milk in the fridge?",
+     "pt": "Tem leite na geladeira?",
      "options": [
       "any",
       "some",
@@ -179,6 +181,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "There aren't ___ chairs in the room.",
+     "pt": "Não tem nenhuma cadeira na sala.",
      "options": [
       "any",
       "some",
@@ -202,6 +205,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "How ___ brothers do you have?",
+     "pt": "Quantos irmãos você tem?",
      "options": [
       "many",
       "much",
@@ -219,6 +223,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "How ___ water do you drink?",
+     "pt": "Quanta água você bebe?",
      "options": [
       "much",
       "many",
@@ -313,6 +318,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "It ___ 50 reais.",
+     "pt": "Custa 50 reais.",
      "options": [
       "costs",
       "cost",
@@ -354,6 +360,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I'd like a ___ of bread, please.",
+     "pt": "Eu queria um pedaço de pão, por favor.",
      "options": [
       "piece",
       "many",
@@ -455,6 +462,7 @@
       "Yes, I help you."
      ],
      "answer": "Yes, how much are these shoes?",
+     "pt": "Sim, quanto custam estes sapatos?",
      "why": "Preço: how much. Shoes é plural: are.",
      "prompt": "Você está numa loja."
     },
@@ -477,6 +485,7 @@
       "OK, they are cheap than."
      ],
      "answer": "OK, I'll take them.",
+     "pt": "Tá bom, vou levar.",
      "why": "\"I'll take them\" = vou levar (decisão na hora)."
     },
     {
@@ -498,6 +507,7 @@
       "No, I don't have any money."
      ],
      "answer": "That's OK. Thank you.",
+     "pt": "Tudo bem. Obrigado.",
      "why": "Resposta educada quando não tem o que você quer."
     },
     {
@@ -533,6 +543,7 @@
       "No, I would."
      ],
      "answer": "No, thanks. I have one.",
+     "pt": "Não, obrigado. Eu tenho uma.",
      "why": "\"I have one\" = eu tenho uma."
     }
    ]
@@ -546,6 +557,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "There isn't ___ water in the bottle.",
+     "pt": "Não tem muita água na garrafa.",
      "options": [
       "much",
       "many",
@@ -582,6 +594,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I'd like ___ coffee, please.",
+     "pt": "Eu queria um pouco de café, por favor.",
      "options": [
       "some",
       "any",

@@ -172,6 +172,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I have ___ apple.",
+     "pt": "Eu tenho uma maçã.",
      "options": [
       "an",
       "a",
@@ -243,6 +244,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My sister ___ fish.",
+     "pt": "Minha irmã gosta de peixe.",
      "options": [
       "likes",
       "like",
@@ -284,6 +286,7 @@
      "type": "choice",
      "prompt": "Responda: Do you like tea?",
      "en": "Yes, I ___.",
+     "pt": "Sim, gosto.",
      "options": [
       "do",
       "like",
@@ -331,6 +334,7 @@
      "type": "choice",
      "prompt": "Qual é o pedido mais educado?",
      "en": "___ a coffee, please.",
+     "pt": "Eu queria um café, por favor.",
      "options": [
       "I'd like",
       "I like",
@@ -372,6 +376,7 @@
      "type": "choice",
      "prompt": "Complete o pedido:",
      "en": "An orange juice, ___.",
+     "pt": "Um suco de laranja, por favor.",
      "options": [
       "please",
       "sorry",
@@ -475,6 +480,7 @@
       "I'm a coffee."
      ],
      "answer": "I'd like a coffee, please.",
+     "pt": "Eu queria um café, por favor.",
      "why": "No café, \"What would you like?\" pede o seu pedido: I'd like..., please.",
      "prompt": "Você está numa cafeteria."
     },
@@ -497,6 +503,7 @@
       "No, I'm not."
      ],
      "answer": "No, thank you.",
+     "pt": "Não, obrigado.",
      "why": "Para recusar com educação: No, thank you. \"I don't like\" sozinho está incompleto."
     },
     {
@@ -518,6 +525,7 @@
       "Yes, I am."
      ],
      "answer": "Yes, I love it!",
+     "pt": "Sim, eu adoro!",
      "why": "\"Like\" e \"love\" precisam de complemento: I love it / I like it. \"Yes, I like\" sozinho está errado."
     },
     {
@@ -553,6 +561,7 @@
       "Hello!"
      ],
      "answer": "Thank you!",
+     "pt": "Obrigado!",
      "why": "Quando alguém te entrega algo: Thank you!"
     }
    ]
@@ -566,6 +575,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My father ___ rice and fish.",
+     "pt": "Meu pai gosta de arroz e peixe.",
      "options": [
       "likes",
       "like",

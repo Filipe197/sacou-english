@@ -112,6 +112,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "They ___ playing football now.",
+     "pt": "Eles estão jogando futebol agora.",
      "options": [
       "are",
       "is",
@@ -129,6 +130,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She is ___ dinner.",
+     "pt": "Ela está fazendo o jantar.",
      "options": [
       "making",
       "makeing",
@@ -170,6 +172,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "The children are ___ in the sea.",
+     "pt": "As crianças estão nadando no mar.",
      "options": [
       "swimming",
       "swiming",
@@ -205,6 +208,7 @@
      "type": "choice",
      "prompt": "Complete a pergunta:",
      "en": "___ you listening to me?",
+     "pt": "Você está me ouvindo?",
      "options": [
       "Are",
       "Do",
@@ -258,6 +262,7 @@
      "type": "choice",
      "prompt": "Responda: Are they working?",
      "en": "No, they ___.",
+     "pt": "Não, não estão.",
      "options": [
       "aren't",
       "don't",
@@ -281,6 +286,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "I usually ___ coffee in the morning.",
+     "pt": "Eu normalmente tomo café de manhã.",
      "options": [
       "drink",
       "am drinking",
@@ -298,6 +304,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Look! The baby ___.",
+     "pt": "Olha! O bebê está dormindo.",
      "options": [
       "is sleeping",
       "sleeps",
@@ -450,6 +457,7 @@
       "I cooked dinner."
      ],
      "answer": "I'm cooking dinner.",
+     "pt": "Estou fazendo o jantar.",
      "why": "Pergunta sobre agora → presente contínuo."
     },
     {
@@ -471,6 +479,7 @@
       "No, it wasn't."
      ],
      "answer": "No, it isn't. It's sunny.",
+     "pt": "Não, não está. Está ensolarado.",
      "why": "Pergunta com is → resposta com isn't."
     },
     {
@@ -492,6 +501,7 @@
       "Sorry, he slept now."
      ],
      "answer": "Sorry, he's sleeping now.",
+     "pt": "Desculpe, ele está dormindo agora.",
      "why": "Agora = presente contínuo: he's sleeping."
     },
     {
@@ -527,6 +537,7 @@
       "Because I late."
      ],
      "answer": "Because I'm late for work!",
+     "pt": "Porque estou atrasado para o trabalho!",
      "why": "\"Because\" = porque. I'm late = estou atrasado."
     }
    ]
@@ -540,6 +551,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "Listen! The baby ___.",
+     "pt": "Escuta! O bebê está chorando.",
      "options": [
       "is crying",
       "cries",
@@ -579,6 +591,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "My father ___ in a bank every day.",
+     "pt": "Meu pai trabalha em um banco todo dia.",
      "options": [
       "works",
       "is working",

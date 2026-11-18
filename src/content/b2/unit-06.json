@@ -113,6 +113,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "She enjoys ___ in the morning.",
+     "pt": "Ela gosta de correr de manhã.",
      "options": [
       "running",
       "to run",
@@ -128,6 +129,7 @@
      "id": "b2u6l1-3",
      "type": "choice",
      "en": "We decided ___ a new car.",
+     "pt": "Nós decidimos comprar um carro novo.",
      "options": [
       "to buy",
       "buying",
@@ -152,6 +154,7 @@
      "id": "b2u6l1-5",
      "type": "choice",
      "en": "I can't afford ___ on holiday this year.",
+     "pt": "Eu não tenho dinheiro para viajar de férias este ano.",
      "options": [
       "to go",
       "going",
@@ -183,6 +186,7 @@
      "type": "choice",
      "prompt": "Complete:",
      "en": "He stopped ___ ten years ago. Now he's much healthier.",
+     "pt": "Ele parou de fumar há dez anos. Agora está muito mais saudável.",
      "options": [
       "smoking",
       "to smoke",
@@ -207,6 +211,7 @@
      "id": "b2u6l2-3",
      "type": "choice",
      "en": "Remember ___ the door when you leave!",
+     "pt": "Lembre-se de trancar a porta quando sair!",
      "options": [
       "to lock",
       "locking",
@@ -288,6 +293,7 @@
      "id": "b2u6l3-2",
      "type": "choice",
      "en": "It took me a year to get used to ___ on the left.",
+     "pt": "Levei um ano para me acostumar a dirigir do lado esquerdo.",
      "options": [
       "driving",
       "drive",
@@ -300,6 +306,7 @@
      "id": "b2u6l3-3",
      "type": "choice",
      "en": "When I was a kid, I ___ play football every day.",
+     "pt": "Quando eu era criança, jogava futebol todo dia.",
      "options": [
       "used to",
       "was used to",
@@ -336,6 +343,7 @@
      "id": "b2u6l3-6",
      "type": "choice",
      "en": "He pretended ___ asleep when his mother came in.",
+     "pt": "Ele fingiu que estava dormindo quando a mãe entrou.",
      "options": [
       "to be",
       "being",
@@ -430,6 +438,7 @@
       "I'd love, but I can't afford to spend money this month."
      ],
      "answer": "I'd love to, but I can't afford to spend money this month.",
+     "pt": "Eu adoraria, mas não posso gastar dinheiro este mês.",
      "why": "Afford + to. E \"I'd love to\" precisa do to no fim."
     },
     {
@@ -451,6 +460,7 @@
       "No, I mind. It's a bit cold."
      ],
      "answer": "Not at all. It's a bit cold.",
+     "pt": "Claro que não. Está um pouco frio.",
      "why": "\"Would you mind…?\" pergunta se você se incomoda. Para aceitar, diga \"Not at all\" (não me incomodo nada)."
     },
     {
@@ -472,6 +482,7 @@
       "Great! But I still used to driving on the left."
      ],
      "answer": "Great! But I'm still getting used to driving on the left.",
+     "pt": "Ótima! Mas ainda estou me acostumando a dirigir do lado esquerdo.",
      "why": "Get used to + -ing."
     },
     {
@@ -507,6 +518,7 @@
       "I wanted avoid getting home too late."
      ],
      "answer": "I wanted to avoid getting home too late.",
+     "pt": "Eu queria evitar chegar em casa muito tarde.",
      "why": "Depois de avoid, o verbo vai com -ing."
     }
    ]
@@ -519,6 +531,7 @@
      "id": "b2u6l6-1",
      "type": "choice",
      "en": "Have you finished ___ that book?",
+     "pt": "Você já terminou de ler aquele livro?",
      "options": [
       "reading",
       "to read",
@@ -553,6 +566,7 @@
      "id": "b2u6l6-4",
      "type": "choice",
      "en": "Do you remember ___ your keys on the table?",
+     "pt": "Você se lembra de ter deixado as chaves em cima da mesa?",
      "options": [
       "leaving",
       "to leave",
