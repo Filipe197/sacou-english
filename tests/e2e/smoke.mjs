@@ -152,6 +152,34 @@ await test('prova: teste para pular unidade', async () => {
   await expectText('1/12');
 });
 
+await test('privacidade, termos e excluir conta', async () => {
+  await open('/privacidade');
+  await expectText('Política de Privacidade');
+  await expectText('Seus direitos');
+  await open('/termos');
+  await expectText('Termos de Uso');
+  await open('/perfil');
+  await expectText('Excluir conta');
+  await click('Excluir minha conta');
+  await expectText('Tem certeza?');
+  await page.type('#pf-del', 'excluir');
+  await click('Excluir para sempre');
+  await page.waitForFunction(() => globalThis.__deleted === true && location.search.includes('conta=excluida'));
+});
+
+await test('lição mostra palavra nova (dicas carregam depois da abertura)', async () => {
+  await open('/licao/a1-u1-l1');
+  await expectText('Palavra nova');
+});
+
+await test('aparência: modo escuro no perfil', async () => {
+  await open('/perfil');
+  await click('Escuro');
+  await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
+  await click('Claro');
+  await page.waitForFunction(() => !document.documentElement.dataset.theme);
+});
+
 await test('tirar dúvidas: pergunta, resposta e salvar', async () => {
   await open('/duvidas');
   await wait(800);

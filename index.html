@@ -18,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<script>/* tema antes de desenhar a página, para não piscar claro (mesma regra de src/lib/theme.js) */try{var t=localStorage.getItem("sacou-tema")||"auto",p=location.pathname;if(["/","/entrar","/criar-conta","/redefinir-senha"].indexOf(p)<0&&(t==="dark"||(t==="auto"&&matchMedia("(prefers-color-scheme: dark)").matches)))document.documentElement.dataset.theme="dark"}catch(e){}</script>
 <div id="root"></div>
 <script type="module" src="/src/main.jsx"></script>
 </body>

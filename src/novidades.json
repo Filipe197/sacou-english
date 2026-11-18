@@ -2,6 +2,20 @@
   "_como_usar": "A cada publicação com novidade para o aluno, adicione um item NO TOPO da lista com um id novo (ex.: data + tema). O app mostra uma vez o item mais recente para quem já usava o app. Correções pequenas não precisam de item.",
   "itens": [
     {
+      "id": "2026-11-18-modo-escuro",
+      "titulo": "Modo escuro e mais novidades",
+      "linhas": [
+        "🌙 Modo escuro: escolha em Perfil → Aparência (ou deixe no automático, seguindo o celular).",
+        "🔥 Seu combo agora fica salvo na conta e vale no celular e no computador.",
+        "🎉 Festa especial nos marcos da ofensiva: 7, 14, 30, 50 e 100 dias.",
+        "🖼️ Cartões do caderno com desenhos, e o app abre mais rápido."
+      ],
+      "botao": {
+        "texto": "Escolher o tema",
+        "para": "/perfil"
+      }
+    },
+    {
       "id": "2026-11-18-ranking-provas",
       "titulo": "Ranking, provas e muito mais",
       "linhas": [

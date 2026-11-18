@@ -103,6 +103,19 @@ npm run dev
   As capturas ficam em `tests/e2e/artifacts/` (fora do Git). Os testes SQL em `supabase/tests/010_sessoes_bonus.sql`
   verificam a regra real do banco em uma transação revertida ao final; use um banco de testes com as migrações aplicadas.
 
+- **Privacidade e conta** (`supabase/012_conta_combo.sql`, rode depois da 011): páginas `/privacidade` e `/termos`
+  (`src/pages/Privacy.jsx`; e-mail de contato em `src/lib/legal.js`), aviso no cadastro e **Perfil → Excluir minha conta**
+  (`delete_my_account`: apaga o usuário e, em cascata, todos os dados). A mesma migração guarda o **combo** na conta
+  (`profiles.combo`, `combo_best`, função `set_combo`); sem ela, o combo fica só no aparelho.
+- **Modo escuro** (`src/lib/theme.js`, Perfil → Aparência: automático, claro ou escuro, salvo no aparelho). As cores
+  vêm de variáveis no topo do `styles.css` (`--surface`, `--text`, `--ink-fixed`...) e o bloco "Modo escuro" no fim do
+  arquivo troca os valores. Início, login e cadastro ficam sempre claros. Use `var(--surface)` em vez de `#fff` em fundos novos.
+- **Marcos da ofensiva** (`MILESTONES` em `DailyCelebration.jsx`): 7, 14, 30, 50, 100, 150, 200 e 365 dias têm festa
+  maior e card para o story. **Fogo animado** em `AnimatedFlame.jsx`.
+- **Cartões com desenho** (`src/art/cardArt.js`): palavras comuns ganham um objeto desenhado de `src/art/objetos.js`.
+- **Abertura mais leve:** o site abre só com o "esqueleto" das unidades (`scripts/vite-content.mjs`); os exercícios
+  chegam logo depois (`loadContent` em `src/lib/content.js`). Telas que usam exercícios esperam com `ContentGate`
+  (em `App.jsx`); as que não usam têm `<Private light>`. As outras telas carregam só quando abertas (`lazy`).
 - **Ranking semanal com ligas** (`supabase/011_ranking.sql`, rode depois da 010): ao ganhar o primeiro XP da semana o
   aluno entra num grupo de até 30 pessoas da sua liga (Bronze, Prata, Ouro, Platina, Diamante). Na semana seguinte os
   7 primeiros sobem e os 5 últimos descem (grupos com 10+ pessoas). Tudo acontece por gatilho em `daily_xp`, sem cron.

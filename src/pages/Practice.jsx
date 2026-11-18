@@ -64,7 +64,7 @@ export default function Practice() {
             <Link to="/aprender" className="btn btn-violet">Ir para a trilha</Link>
           </div>
         ) : (
-          <div className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap', background: 'var(--ink)', color: '#fff', borderColor: 'var(--ink)' }}>
+          <div className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap', background: 'var(--ink-fixed)', color: '#fff', borderColor: 'var(--ink-fixed)' }}>
             <div>
               <b style={{ fontSize: 20 }}>Treino de {done.length} {done.length === 1 ? 'lição' : 'lições'}</b>
               <p style={{ margin: '4px 0 0', color: 'var(--on-dark)' }}>12 exercícios · cerca de 4 minutos · até 10 XP</p>

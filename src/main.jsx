@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import { AuthProvider } from './lib/auth.jsx';
 import { installErrorReporting } from './lib/errors.js';
+import { loadContent } from './lib/content.js';
 import ErrorBoundary from './components/ErrorBoundary.jsx';
 import './styles.css';
 import './notebook.css';
@@ -20,6 +21,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// Exercícios das lições: baixam logo depois da abertura, sem atrasar a trilha
+loadContent().catch(() => { /* a tela que precisar mostra o aviso e tenta de novo */ });
 
 // App instalável (PWA): registra o service worker só na versão publicada
 if ('serviceWorker' in navigator && import.meta.env.PROD) {

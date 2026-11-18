@@ -102,6 +102,19 @@ export function AuthProvider({ children }) {
       } finally { signingOut.current = false; }
     },
   };
+  // Exclui a conta e todos os dados no servidor (012_conta_combo.sql) e limpa este aparelho
+  value.deleteAccount = async () => {
+    const uid = session?.user?.id;
+    if (!uid) return { error: new Error('Entre na sua conta.') };
+    const { error } = await supabase.rpc('delete_my_account');
+    if (error) return { error: new Error(/delete_my_account|schema cache|does not exist/i.test(error.message || '')
+      ? 'A exclusão de conta ainda não foi ativada no servidor. Tente mais tarde.'
+      : 'Não conseguimos excluir sua conta agora. Verifique a conexão e tente de novo.') };
+    try { Object.keys(localStorage).filter(k => k.startsWith('sacou-') && k.includes(uid)).forEach(k => localStorage.removeItem(k)); } catch { /* sem armazenamento */ }
+    try { await disablePush(); } catch { /* sem lembrete ativo */ }
+    try { await supabase.auth.signOut({ scope: 'local' }); } catch { /* a sessão já não vale no servidor */ }
+    return {};
+  };
   return <AuthCtx.Provider value={value}>{children}{signOutError && (
     <div role="alert" className="card auth-notice">
       <p>{signOutError}</p><button className="btn btn-violet" onClick={() => setSignOutError('')}>Entendi</button>

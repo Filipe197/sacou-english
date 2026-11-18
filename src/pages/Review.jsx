@@ -94,7 +94,7 @@ export default function Review() {
           </div>
         ) : (
           <>
-            <div className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap', background: 'var(--ink)', color: '#fff', borderColor: 'var(--ink)' }}>
+            <div className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap', background: 'var(--ink-fixed)', color: '#fff', borderColor: 'var(--ink-fixed)' }}>
               <div>
                 <b style={{ fontSize: 20 }}>{prog.mistakes.length} {prog.mistakes.length === 1 ? 'exercício' : 'exercícios'} para revisar</b>
                 <p style={{ margin: '4px 0 0', color: 'var(--on-dark)' }}>Uma sessão tem até 10 exercícios e leva uns 3 minutos.</p>

@@ -13,7 +13,7 @@ const WAVE = [0, 0.6, 1, 0.6, 0, -0.6, -1, -0.6];
 // Ícone de cada tipo de lição
 function kindOf(l) {
   const t = l.title || '';
-  if (l.story || /^História/.test(t)) return { icon: 'story', label: 'História' };
+  if (l.hasStory || l.story || /^História/.test(t)) return { icon: 'story', label: 'História' };
   if (/^Escrevendo/.test(t)) return { icon: 'edit', label: 'Escrita' };
   if (/^Conversa/.test(t)) return { icon: 'chat', label: 'Conversa' };
   if (/^Desafio/.test(t)) return { icon: 'trophy', label: 'Desafio' };
@@ -112,7 +112,7 @@ export function Rail({ prog }) {
       </div>
       <Missions compact />
       {prog.mistakes.length > 0 && (
-        <div className="card rail-alert" style={{ background: 'var(--ink)', borderColor: 'var(--ink)', color: '#fff' }}>
+        <div className="card rail-alert" style={{ background: 'var(--ink-fixed)', borderColor: 'var(--ink-fixed)', color: '#fff' }}>
           <b style={{ display: 'block', marginBottom: 6 }}>{prog.mistakes.length} {prog.mistakes.length === 1 ? 'erro' : 'erros'} para revisar</b>
           <p style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5, color: 'var(--on-dark)' }}>Revisar o que você errou ajuda a fixar mais rápido. Leva uns 3 minutos.</p>
           <Link className="btn btn-lime btn-block" to="/revisao">Revisar agora</Link>

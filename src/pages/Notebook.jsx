@@ -13,6 +13,7 @@ function exercisePt(card) {
   return full && full.trim() === String(card.en || '').trim() ? it.pt : null;
 }
 import { suggestPT } from '../lib/hints.js';
+import { cardArt } from '../art/cardArt.js';
 import { speak, canSpeak, fx } from '../lib/fx.js';
 
 const fold = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -205,6 +206,7 @@ function Flashcards({ words }) {
   }
   const card = s && s.queue[s.idx];
   const front = card && (dir === 'en' ? card.en : (card.pt || card.en));
+  const art = useMemo(() => (card ? cardArt(card.en) : ''), [card?.en]);
 
   useEffect(() => { if (card && dir === 'en' && !s.flipped) speak(card.en); }, [s?.idx, card?.id]);
 
@@ -291,6 +293,7 @@ function Flashcards({ words }) {
       </div>
       <button type="button" className={'fc-card' + (s.flipped ? ' flipped' : '')} onClick={flip} aria-label={s.flipped ? 'Cartão virado' : 'Virar o cartão'}>
         <span className="fc-face fc-front">
+          {art && <svg className="fc-art" viewBox="0 0 140 140" aria-hidden="true" dangerouslySetInnerHTML={{ __html: art }} />}
           <small>{dir === 'en' || !card.pt ? 'Em inglês' : 'Em português'}</small>
           <span className="fc-word" lang={dir === 'en' || !card.pt ? 'en' : 'pt-BR'}>{front}</span>
           <span className="muted" style={{ fontSize: 14 }}>Toque para virar · espaço</span>

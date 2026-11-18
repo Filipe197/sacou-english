@@ -39,7 +39,7 @@ export default function Progress() {
   return (
     <Shell mistakesCount={prog.mistakes.length}>
       <div style={{ maxWidth: 1000, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
-        <div className="card" style={{ background: 'var(--ink)', color: '#fff', borderColor: 'var(--ink)', display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap', padding: 28 }}>
+        <div className="card" style={{ background: 'var(--ink-fixed)', color: '#fff', borderColor: 'var(--ink-fixed)', display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap', padding: 28 }}>
           <span style={{ width: 80, height: 80, borderRadius: 24, background: 'var(--violet)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--head)', fontSize: 32, fontWeight: 700, color: 'var(--lime)' }}>{initials}</span>
           <div style={{ flex: 1, minWidth: 220 }}>
             <h1 style={{ margin: '0 0 4px', fontSize: 32 }}>{profile?.display_name || 'Meu progresso'}</h1>
@@ -71,7 +71,7 @@ export default function Progress() {
             <div className="bars" role="img" aria-label={`XP por dia: ${days.map(d => `${d.label} ${d.xp}`).join(', ')}`}>
               {days.map(d => (
                 <div key={d.day} className="col">
-                  <span style={{ fontSize: 12, fontWeight: 600, color: '#3A3E5A' }}>{d.xp}</span>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--text2)' }}>{d.xp}</span>
                   <div className={'b' + (d.xp < goal ? ' low' : '')} style={{ height: `${(d.xp / max) * 75}%` }} />
                   <span style={{ fontSize: 13, color: d.label === 'Hoje' ? 'var(--ink)' : 'var(--text3)', fontWeight: d.label === 'Hoje' ? 700 : 400 }}>{d.label}</span>
                 </div>

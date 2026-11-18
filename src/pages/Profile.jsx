@@ -5,6 +5,7 @@ import { useAuth } from '../lib/auth.jsx';
 import { supabase } from '../lib/supabase.js';
 import { Shell, Icon } from '../components/ui.jsx';
 import Reminder from '../components/Reminder.jsx';
+import { THEMES, useTheme } from '../lib/theme.js';
 
 const GOALS = [
   [10, 'Leve', 'cerca de 1 lição por dia'],
@@ -84,6 +85,8 @@ export default function Profile() {
           </button>
         </div>
 
+        <Appearance />
+
         <Reminder />
 
         <div className="card pf-card">
@@ -98,7 +101,68 @@ export default function Profile() {
           </form>
           <button type="button" className="btn btn-out" style={{ marginTop: 18, alignSelf: 'flex-start' }} onClick={async () => { const result = await signOut(); if (!result?.error) nav('/'); }}><Icon name="logout" size={18} />Sair da conta</button>
         </div>
+
+        <DeleteAccount />
+        <p className="muted pf-legal"><Link to="/privacidade">Política de Privacidade</Link> · <Link to="/termos">Termos de Uso</Link></p>
       </div>
     </Shell>
+  );
+}
+
+// Excluir a conta (LGPD): pede para digitar EXCLUIR antes de apagar tudo de vez
+function DeleteAccount() {
+  const { deleteAccount } = useAuth();
+  const nav = useNavigate();
+  const [open, setOpen] = useState(false);
+  const [typed, setTyped] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState('');
+  const ok = typed.trim().toUpperCase() === 'EXCLUIR';
+  async function go(e) {
+    e.preventDefault();
+    if (!ok || busy) return;
+    setBusy(true); setErr('');
+    const { error } = await deleteAccount();
+    setBusy(false);
+    if (error) { setErr(error.message); return; }
+    nav('/?conta=excluida', { replace: true });
+  }
+  return (
+    <div className="card pf-card pf-danger">
+      <span className="pf-label">Excluir conta</span>
+      {!open ? <>
+        <p className="muted">Apaga para sempre seu perfil, progresso, sequência, caderno, turmas que você criou, ranking e lembretes. Não dá para desfazer.</p>
+        <button type="button" className="btn btn-out pf-danger-btn" onClick={() => setOpen(true)}><Icon name="trash" size={18} />Excluir minha conta</button>
+      </> : (
+        <form onSubmit={go} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <p><b>Tem certeza?</b> Tudo será apagado agora e não poderá ser recuperado. Se quiser guardar suas anotações, use antes <Link to="/caderno">Caderno → Exportar</Link>.</p>
+          <label htmlFor="pf-del" style={{ fontSize: 15 }}>Para confirmar, digite <b>EXCLUIR</b>:</label>
+          <input id="pf-del" className="pf-input" value={typed} onChange={e => setTyped(e.target.value)} autoComplete="off" autoCapitalize="characters" />
+          {err && <div className="pf-msg bad" role="alert">{err}</div>}
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <button className="btn pf-danger-go" disabled={!ok || busy}>{busy ? 'Excluindo…' : 'Excluir para sempre'}</button>
+            <button type="button" className="btn btn-out" onClick={() => { setOpen(false); setTyped(''); setErr(''); }}>Cancelar</button>
+          </div>
+        </form>
+      )}
+    </div>
+  );
+}
+
+// Aparência: automático, claro ou escuro (fica salvo neste aparelho)
+function Appearance() {
+  const [pref, set] = useTheme();
+  return (
+    <div className="card pf-card">
+      <span className="pf-label">Aparência</span>
+      <div className="pf-theme" role="radiogroup" aria-label="Tema do aplicativo">
+        {THEMES.map(([v, label, hint]) => (
+          <button key={v} type="button" role="radio" aria-checked={pref === v} className={'pf-theme-opt' + (pref === v ? ' on' : '')} onClick={() => set(v)}>
+            <span className={'pf-theme-ic ' + v} aria-hidden="true" />
+            <b>{label}</b><small>{hint}</small>
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }

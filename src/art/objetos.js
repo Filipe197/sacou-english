@@ -215,8 +215,43 @@ const mic = (x, y) => sh(x, y + 2, 30) + `<g transform="translate(${x} ${y})">
   ${[-8, 0, 8].map(i => `<path d="M${i} -120 V-88" stroke="#8A90A8" stroke-width="2"/>`).join('')}<path d="M-16 -104 H16" stroke="#8A90A8" stroke-width="2"/>
   <path d="M26 -110 q8 6 0 14 M34 -116 q14 12 0 26" stroke="${V}" stroke-width="4" fill="none" stroke-linecap="round"/></g>`;
 
+// Objetos extras para os cartões do caderno (mesmo estilo e mesmo quadro)
+const car = (x, y) => sh(x, y + 2, 52) + `<g transform="translate(${x} ${y})">
+  <path d="M-54 -14 Q-54 -30 -40 -32 L-26 -54 Q-22 -60 -14 -60 H18 Q26 -60 30 -54 L42 -32 Q56 -30 56 -14 V-6 Q56 0 50 0 H-48 Q-54 0 -54 -6Z" fill="${P}"/>
+  <path d="M-20 -52 H-2 V-34 H-32Z M4 -52 H20 Q24 -52 26 -48 L34 -34 H4Z" fill="#CDEBFF"/>
+  <rect x="44" y="-26" width="10" height="7" rx="3" fill="${Y}"/><rect x="-54" y="-24" width="8" height="6" rx="3" fill="${O}"/>
+  <circle cx="-30" cy="-2" r="13" fill="${D}"/><circle cx="-30" cy="-2" r="5" fill="${LT}"/><circle cx="32" cy="-2" r="13" fill="${D}"/><circle cx="32" cy="-2" r="5" fill="${LT}"/></g>`;
+
+const apple = (x, y) => sh(x, y + 2, 32) + `<g transform="translate(${x} ${y})">
+  <path d="M0 -62 Q-14 -76 -30 -62 Q-46 -46 -38 -22 Q-30 0 -14 -2 Q-6 -4 0 -2 Q6 -4 14 -2 Q30 0 38 -22 Q46 -46 30 -62 Q14 -76 0 -62Z" fill="${P}"/>
+  <path d="M0 -62 Q2 -76 8 -84" stroke="${BRD}" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M6 -74 Q20 -88 30 -76 Q18 -66 6 -74Z" fill="${G}"/><ellipse cx="-20" cy="-48" rx="6" ry="10" fill="#fff" opacity=".35"/></g>`;
+
+const cat = (x, y) => sh(x, y + 2, 34) + `<g transform="translate(${x} ${y})">
+  <path d="M26 -10 Q52 -14 46 -44" stroke="#8A90A8" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <ellipse cx="4" cy="-22" rx="28" ry="22" fill="#AEB4C6"/>
+  <circle cx="-14" cy="-56" r="20" fill="#AEB4C6"/><path d="M-32 -64 L-30 -86 L-16 -72Z M4 -64 L2 -86 L-12 -72Z" fill="#AEB4C6"/>
+  <path d="M-28 -70 L-27 -80 L-21 -73Z M0 -70 L-1 -80 L-7 -73Z" fill="#FFB3C7"/>
+  <circle cx="-21" cy="-58" r="3.2" fill="${D}"/><circle cx="-7" cy="-58" r="3.2" fill="${D}"/><path d="M-17 -50 L-14 -47 L-11 -50" stroke="${D}" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M-36 -50 H-26 M-36 -45 L-27 -47 M8 -50 H-2 M8 -45 L-1 -47" stroke="${D}" stroke-width="1.6" stroke-linecap="round"/></g>`;
+
+const house = (x, y) => sh(x, y + 2, 50) + `<g transform="translate(${x} ${y})">
+  <rect x="-40" y="-56" width="80" height="56" rx="4" fill="${Y}"/><path d="M-50 -52 L0 -96 L50 -52Z" fill="${V}"/>
+  <rect x="24" y="-90" width="12" height="24" fill="${VD}"/>
+  <rect x="-10" y="-32" width="20" height="32" rx="3" fill="${BR}"/><circle cx="5" cy="-16" r="2" fill="${Y}"/>
+  <rect x="-32" y="-44" width="16" height="14" rx="2" fill="#CDEBFF"/><rect x="16" y="-44" width="16" height="14" rx="2" fill="#CDEBFF"/></g>`;
+
+const key = (x, y) => sh(x, y + 2, 36) + `<g transform="translate(${x} ${y - 40}) rotate(-24)">
+  <circle cx="-28" cy="0" r="20" fill="${Y}"/><circle cx="-28" cy="0" r="8" fill="${W}"/>
+  <rect x="-10" y="-6" width="56" height="12" rx="4" fill="${Y}"/><rect x="28" y="4" width="8" height="14" rx="2" fill="${Y}"/><rect x="40" y="4" width="6" height="10" rx="2" fill="${Y}"/></g>`;
+
+const sun = (x, y) => `<g transform="translate(${x} ${y - 58})">
+  ${Array.from({ length: 10 }, (_, i) => `<rect x="-4" y="-54" width="8" height="16" rx="4" fill="${O}" transform="rotate(${i * 36})"/>`).join('')}
+  <circle cx="0" cy="0" r="30" fill="${Y}"/><circle cx="-10" cy="-4" r="3.4" fill="${D}"/><circle cx="10" cy="-4" r="3.4" fill="${D}"/>
+  <path d="M-10 8 Q0 18 10 8" stroke="${D}" stroke-width="3.4" fill="none" stroke-linecap="round"/></g>`;
+
 // Desenho do objeto de cada unidade (quadro 140 × 140, chão em y = 130)
-const ART = { hi, nametag, party, dog, colors, clock, food, city, beach, popcorn, suitcase, phone, boxes, calendar, bags, guitar, camera, plant, book, rain, palm, ball, sack, talk, train, thought, news, magnifier, scissors, headphones, sneaker, mic };
+const ART = { car, apple, cat, house, key, sun, mug, cake, cupcake, palette, hi, nametag, party, dog, colors, clock, food, city, beach, popcorn, suitcase, phone, boxes, calendar, bags, guitar, camera, plant, book, rain, palm, ball, sack, talk, train, thought, news, magnifier, scissors, headphones, sneaker, mic };
 export function objectSvg(name) {
   const f = ART[name];
   return f ? f(70, 130) : '';

@@ -115,6 +115,7 @@ export default function Auth({ mode }) {
             {info && <div className="note" role="status">{info}</div>}
             <button className="btn btn-violet btn-block" disabled={busy}>{busy ? 'Aguarde…' : isSignup ? 'Criar conta e continuar' : 'Entrar'}</button>
             {!isSignup && <button type="button" className="link-btn" onClick={forgot}>Esqueci minha senha</button>}
+            {isSignup && <p className="hint legal-hint">Ao criar a conta, você concorda com os <Link to="/termos">Termos de Uso</Link> e a <Link to="/privacidade">Política de Privacidade</Link>.</p>}
           </form>
           <p style={{ marginTop: 28 }}><button className="link-btn" onClick={() => nav('/')}><Icon name="back" size={16} /> Voltar ao início</button></p>
         </div>

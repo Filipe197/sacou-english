@@ -406,6 +406,12 @@ function ReportBox({ itemId, onClose }) {
 function readCombo(key) {
   try { const v = key && JSON.parse(localStorage.getItem(key)); return { n: v?.n | 0, best: v?.best | 0 }; } catch { return { n: 0, best: 0 }; }
 }
+// Valor inicial: o da conta, quando existe (vale em qualquer aparelho); senão o do aparelho
+function startCombo(profile, key) {
+  const local = readCombo(key);
+  if (typeof profile?.combo !== 'number') return local;
+  return { n: profile.combo, best: Math.max(profile.combo_best | 0, local.best) };
+}
 function writeCombo(key, v) {
   try { if (key) localStorage.setItem(key, JSON.stringify(v)); } catch { /* sem armazenamento: o combo vale só nesta lição */ }
 }
@@ -413,7 +419,7 @@ function writeCombo(key, v) {
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
 export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true }) {
-  const { profile } = useAuth();
+  const { profile, setProfile } = useAuth();
   const attemptId = useRef(null);
   if (!attemptId.current) attemptId.current = crypto.randomUUID();
   const [celebrated, setCelebrated] = useState(false);
@@ -432,18 +438,22 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [tutor, setTutor] = useState(false);
   const [heard, setHeard] = useState('');
   const firstTry = useRef(new Map()); // itemId -> correct na 1ª tentativa
-  // Combo: acertos seguidos que continuam de uma lição para outra até o primeiro erro (salvo no aparelho)
+  // Combo: acertos seguidos que continuam de uma lição para outra (e entre aparelhos) até o primeiro erro.
+  // Fica na conta (012_conta_combo.sql); a cópia no aparelho serve quando não há conexão ou o SQL não rodou.
   const comboKey = profile?.id ? `sacou-combo:${profile.id}` : null;
-  const [combo, setCombo] = useState(() => readCombo(comboKey).n);
-  const comboRecord = useRef(readCombo(comboKey).best);
+  const [combo, setCombo] = useState(() => startCombo(profile, comboKey).n);
+  const comboRef = useRef(combo);
+  const comboRecord = useRef(startCombo(profile, comboKey).best);
   const newRecord = useRef(false);
   const comboKeyRef = useRef(comboKey);
+  const answered = useRef(false);
   useEffect(() => { // o perfil pode chegar depois da lição abrir
     if (!comboKey || comboKeyRef.current === comboKey) return;
     comboKeyRef.current = comboKey;
-    const v = readCombo(comboKey);
-    setCombo(c => Math.max(c, v.n)); comboRecord.current = Math.max(comboRecord.current, v.best);
-  }, [comboKey]);
+    if (answered.current) return;
+    const v = startCombo(profile, comboKey);
+    comboRef.current = v.n; setCombo(v.n); comboRecord.current = v.best;
+  }, [comboKey]); // eslint-disable-line react-hooks/exhaustive-deps
   const ctaRef = useRef(null);
 
   const cur = queue[idx];
@@ -466,12 +476,16 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const settle = useCallback((ok) => {
     setStatus(ok ? 'correct' : 'wrong');
     fx.play(ok ? 'correct' : 'wrong');
-    setCombo(c => {
-      const n = ok ? c + 1 : 0;
-      if (n > comboRecord.current) { comboRecord.current = n; if (n >= 3) newRecord.current = true; }
-      writeCombo(comboKeyRef.current, { n, best: comboRecord.current });
-      return n;
-    });
+    answered.current = true;
+    const n = ok ? comboRef.current + 1 : 0;
+    comboRef.current = n; setCombo(n);
+    if (n > comboRecord.current) { comboRecord.current = n; if (n >= 3) newRecord.current = true; }
+    writeCombo(comboKeyRef.current, { n, best: comboRecord.current });
+    if (typeof profile?.combo === 'number') {
+      supabase.rpc('set_combo', { p_n: n }).then(({ data }) => {
+        if (data) setProfile(p => (p ? { ...p, combo: data.combo, combo_best: data.combo_best } : p));
+      }, () => { /* sem conexão: fica a cópia do aparelho */ });
+    }
     if (!firstTry.current.has(item.id)) firstTry.current.set(item.id, ok);
     onItemResult?.(cur, ok);
     if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) setQueue(q => [...q, cur]);
@@ -479,7 +493,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     else if (item.type === 'choice') speak(item.en.replace('___', item.answer));
     else if (item.type === 'dialogue') speak(item.answer, { who: item.lines.find(l => l[1] === '___')?.[0] || 'B' });
     setTimeout(() => ctaRef.current?.focus(), 50);
-  }, [item, cur, onItemResult, retryWrong]);
+  }, [item, cur, onItemResult, retryWrong, profile, setProfile]);
 
   const check = () => { if (!locked && hasAnswer()) settle(isCorrect()); };
   const hasAnswer = () => item?.type === 'build' ? (value || []).length > 0 : typeof value === 'string' ? value.trim().length > 0 : value != null;
@@ -625,10 +639,10 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
             {help && (
               <div className="help-box">
                 <b style={{ display: 'block', color: 'var(--violet-dd)', marginBottom: 8 }}>{guide.title}</b>
-                <p style={{ margin: '0 0 12px', fontSize: 15, lineHeight: 1.6, color: '#2E2A55' }}>{guide.intro}</p>
+                <p style={{ margin: '0 0 12px', fontSize: 15, lineHeight: 1.6, color: 'var(--violet-text)' }}>{guide.intro}</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   {guide.points.map(p => (
-                    <div key={p.en} style={{ background: '#fff', borderRadius: 12, padding: '10px 14px', fontSize: 14, lineHeight: 1.5 }}>
+                    <div key={p.en} style={{ background: 'var(--surface)', borderRadius: 12, padding: '10px 14px', fontSize: 14, lineHeight: 1.5 }}>
                       <b lang="en">{p.en}</b> — {p.pt}<br /><span className="muted">{p.note}</span>
                     </div>
                   ))}
@@ -655,7 +669,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
                   {ok && combo >= 3 && <span className={'combo-pill' + (combo % 5 === 0 ? ' big' : '')} key={combo}>🔥 {combo} seguidas!</span>}
                   {ok ? PRAISE[idx % PRAISE.length] : item.type === 'match' ? `Quase! Você trocou ${matchMisses} ${matchMisses === 1 ? 'par' : 'pares'}.` : <>Quase! Resposta certa: <span lang="en">“{display}”</span></>}
                 </h3>
-                <p style={{ color: ok ? '#234238' : '#4A2A1C' }}>
+                <p style={{ color: ok ? 'var(--ok-text)' : 'var(--bad-text)' }}>
                   {note && <>{note} </>}{wrongNote && <>{wrongNote} </>}<b>Por quê?</b> {item.why}
                 </p>
                 {!ok && retryWrong && item.type !== 'match' && item.type !== 'speak' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela vai aparecer de novo no fim da lição e também na sua revisão.</p>}

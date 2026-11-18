@@ -1,7 +1,7 @@
 // Dicas de palavra (como no Duolingo): toque numa palavra para ver a tradução.
 // Fontes: palavras de cada unidade, pares dos exercícios de ligar e um dicionário básico.
 import DICT from '../content/dictionary.json';
-import { LESSONS, UNITS } from './content.js';
+import { LESSONS, UNITS, isContentReady } from './content.js';
 
 const strip = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
 const clean = (s) => strip(String(s).toLowerCase().replace(/\(.*?\)/g, '').replace(/[?!.,"“”]/g, '').replace(/’/g, "'").replace(/\s+/g, ' ').trim());
@@ -23,15 +23,22 @@ function addPT(pt, en) {
   }
 }
 
-for (const u of UNITS) {
-  for (const [en, pt] of u.words || []) { addEN(en, pt); addPT(pt, en); }
-  for (const l of u.lessons) for (const it of l.items) if (it.type === 'match') for (const [en, pt] of it.pairs) {
+for (const u of UNITS) for (const [en, pt] of u.words || []) { addEN(en, pt); addPT(pt, en); }
+for (const [en, pt] of Object.entries(DICT)) { addEN(en, pt); addPT(pt.split(' / ')[0], en); }
+// Pares dos exercícios de ligar e palavras novas dependem dos exercícios, que chegam
+// depois da abertura (loadContent): são montados na primeira consulta com tudo carregado.
+let built = false;
+function build() {
+  if (built || !isContentReady()) return;
+  built = true;
+  for (const u of UNITS) for (const l of u.lessons) for (const it of l.items) if (it.type === 'match') for (const [en, pt] of it.pairs) {
     if (!/^\d+$/.test(pt)) { addEN(en, pt); addPT(pt, en); }
   }
+  buildNewWords();
 }
-for (const [en, pt] of Object.entries(DICT)) { addEN(en, pt); addPT(pt.split(' / ')[0], en); }
 
 function lookupEN(w) {
+  build();
   const k = clean(w);
   if (EN.has(k)) return EN.get(k);
   const cands = [k.replace(/'s$/, ''), k.replace(/s$/, ''), k.replace(/es$/, ''), k.replace(/ies$/, 'y'), k.replace(/ed$/, ''), k.replace(/ed$/, 'e'),
@@ -39,7 +46,7 @@ function lookupEN(w) {
   for (const c of cands) if (EN.has(c)) return EN.get(c);
   return null;
 }
-const lookupPT = (w) => PT.get(clean(w)) || null;
+const lookupPT = (w) => { build(); return PT.get(clean(w)) || null; };
 // Tradução sugerida para o caderno (palavra ou expressão inteira)
 export const suggestPT = (en) => lookupEN(String(en || '').replace(/[?!.]+$/, '')) || null;
 export const suggestEN = (pt) => lookupPT(pt);
@@ -79,7 +86,7 @@ function itemEnglish(it, lesson) {
   return ' ' + clean(t.join(' | ')).replace(/[|]/g, ' ') + ' ';
 }
 const NEW_WORDS = new Map(); // itemId -> [{en, pt}]
-{
+function buildNewWords() {
   const seen = new Set();
   for (const l of LESSONS) {
     const vocab = (l.unit.words || []).flatMap(([en, pt]) => String(en).split(' / ').map(e => ({ en: e.replace(/\?$/, ''), pt, key: clean(e) })));
@@ -91,6 +98,6 @@ const NEW_WORDS = new Map(); // itemId -> [{en, pt}]
     }
   }
 }
-export const getNewWords = (itemId) => NEW_WORDS.get(itemId) || [];
+export const getNewWords = (itemId) => { build(); return NEW_WORDS.get(itemId) || []; };
 // em PT, destaca a palavra se a tradução dela é uma palavra nova
-export const ptKeyToEn = (key) => { const en = PT.get(key); return en ? clean(en) : null; };
+export const ptKeyToEn = (key) => { build(); const en = PT.get(key); return en ? clean(en) : null; };

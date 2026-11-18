@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../lib/auth.jsx';
 import { Icon, Logo, Fire } from '../components/ui.jsx';
 
@@ -20,8 +20,10 @@ const Check = () => (
 export default function Landing() {
   const { session } = useAuth();
   const start = session ? '/aprender' : '/criar-conta';
+  const [params] = useSearchParams();
   return (
     <div>
+      {params.get('conta') === 'excluida' && !session && <div className="deleted-note" role="status">Sua conta e todos os seus dados foram excluídos. Obrigado por ter estudado com a gente!</div>}
       <section className="hero">
         <div className="wrap">
           <nav className="nav" aria-label="Principal">
@@ -178,7 +180,7 @@ export default function Landing() {
       <footer className="footer">
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', fontSize: 14, color: 'var(--text3)' }}>
           <span>Sacou English · Inglês explicado do zero à fluência</span>
-          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/creditos">Fontes e créditos</Link></span>
+          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/creditos">Fontes e créditos</Link><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></span>
         </div>
       </footer>
     </div>

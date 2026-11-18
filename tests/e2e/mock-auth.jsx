@@ -12,6 +12,7 @@ export function AuthProvider({ children }) {
   const value = {
     session: { user: { id: profile.id } }, user: { id: profile.id }, profile, setProfile, isAdmin: false, loading: false,
     refreshProfile() {}, async updateProfile(p) { setProfile(x => ({ ...x, ...p })); return {}; }, signOut: async () => {},
+    async deleteAccount() { globalThis.__deleted = true; return {}; },
   };
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

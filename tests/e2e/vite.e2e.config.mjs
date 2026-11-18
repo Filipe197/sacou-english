@@ -1,6 +1,7 @@
 // Sobe o site com login e banco falsos (dados de demonstração) para os testes de tela.
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import contentSkeleton from '../../scripts/vite-content.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../..');
@@ -12,7 +13,7 @@ export default {
   server: { port: 5310, strictPort: true, fs: { allow: [root] } },
   resolve: { dedupe: ['react', 'react-dom'] },
   esbuild: { jsx: 'automatic' },
-  plugins: [{
+  plugins: [contentSkeleton(), {
     name: 'e2e-mocks', enforce: 'pre',
     resolveId(src, importer) {
       if (!importer || importer.includes(`${path.sep}e2e${path.sep}`) || importer.includes('/e2e/')) return null;
