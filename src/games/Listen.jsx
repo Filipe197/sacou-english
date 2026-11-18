@@ -24,6 +24,8 @@ function Game({ onAgain }) {
   const [score, setScore] = useState(0);
   const [hits, setHits] = useState(0);
   const [result, setResult] = useState(null);
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
   const shownAt = useRef(0);
   const voice = canSpeak();
   const r = rounds[i];
@@ -59,14 +61,14 @@ function Game({ onAgain }) {
       fx.play('complete');
       const record = setBest(user?.id, 'ouvir', score);
       const xp = hits >= 9 ? 10 : hits >= 6 ? 8 : 5;
-      const res = await finishGame({ user, setProfile, id: 'ouvir', score: (hits / ROUNDS) * 100, xp });
-      setResult({ xp, streak: res.streak, record });
+      const res = await finishGame({ user, setProfile, attemptId: attemptId.current, id: 'ouvir', score: (hits / ROUNDS) * 100, xp });
+      setResult({ ...res, record });
     })();
   }, [i]);
 
   if (i === ROUNDS) {
     if (!result) return null;
-    return <Finish title={hits >= 8 ? 'Ouvido afiado!' : 'Bom treino!'} xp={result.xp} streak={result.streak} record={result.record} onAgain={onAgain}
+    return <Finish outcome={result} title={hits >= 8 ? 'Ouvido afiado!' : 'Bom treino!'} xp={result.xp} streak={result.streak} record={result.record} onAgain={onAgain}
       stats={[['Acertos', `${hits}/${ROUNDS}`], ['Pontos', score], ['Recorde', Math.max(score, getBest(user?.id, 'ouvir'))]]}
       message="Treinar o ouvido com palavras soltas ajuda a reconhecê-las depois no meio das frases." />;
   }

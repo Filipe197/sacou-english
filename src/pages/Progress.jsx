@@ -124,7 +124,7 @@ export default function Progress() {
               <Icon name={profile?.sound_on ? 'sound' : 'mute'} />{profile?.sound_on ? 'Som ligado' : 'Som desligado'}
             </button>
             {inst.canInstall && <button className="btn btn-lime" onClick={inst.install}><Icon name="download" />Instalar app</button>}
-            <button className="btn btn-out" onClick={async () => { await signOut(); nav('/'); }}><Icon name="logout" />Sair da conta</button>
+            <button className="btn btn-out" onClick={async () => { const result = await signOut(); if (!result?.error) nav('/'); }}><Icon name="logout" />Sair da conta</button>
           </div>
           {!inst.canInstall && inst.iosHint && <p className="note" style={{ marginTop: 12 }}>Para instalar no iPhone: no Safari, toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>}
         </div>

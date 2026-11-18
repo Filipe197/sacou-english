@@ -31,6 +31,8 @@ function Game({ done, onAgain }) {
   const [score, setScore] = useState(0);
   const [solved, setSolved] = useState(0);
   const [result, setResult] = useState(null);
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
   const s = list[i];
   const dur = Math.max(9, 24 - Math.max(0, i) * 2); // segundos para chegar ao chão
   const tiles = useMemo(() => {
@@ -92,15 +94,15 @@ function Game({ done, onAgain }) {
     fx.play('complete');
     const record = setBest(user?.id, 'frases', score);
     const xp = solved >= 6 ? 10 : solved >= 3 ? 8 : 5;
-    const r = await finishGame({ user, setProfile, id: 'frases', score: (solved / list.length) * 100, xp });
-    setResult({ xp, streak: r.streak, record });
+    const r = await finishGame({ user, setProfile, attemptId: attemptId.current, id: 'frases', score: (solved / list.length) * 100, xp });
+    setResult({ ...r, record });
   }
 
   if (list.length < 3) return <div className="center-page"><p>Faça algumas lições para liberar este jogo.</p><Link to="/jogos" className="btn btn-violet">Voltar</Link></div>;
 
   if (i > ROUNDS) {
     if (!result) return <Spinner />;
-    return <Finish title={lives > 0 ? 'Muito bem!' : 'Fim de jogo'} xp={result.xp} streak={result.streak} record={result.record} onAgain={onAgain}
+    return <Finish outcome={result} title={lives > 0 ? 'Muito bem!' : 'Fim de jogo'} xp={result.xp} streak={result.streak} record={result.record} onAgain={onAgain}
       stats={[['Frases montadas', `${solved}/${list.length}`], ['Pontos', score], ['Recorde', Math.max(score, getBest(user?.id, 'frases'))]]}
       message="Montar frases rápido treina a ordem das palavras em inglês até ela virar automática." />;
   }

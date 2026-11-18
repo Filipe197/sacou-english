@@ -87,6 +87,18 @@ npm run dev
 
 ## Escudo, conquistas e ícone
 
+- **Comemoração diária e XP duplo:** execute também `supabase/010_sessoes_bonus.sql`, depois de `009_escudo.sql`,
+  **antes de publicar esta versão**. A primeira lição da trilha concluída no dia ativa 10 minutos de XP em dobro,
+  inclusive para essa lição. Treinos, revisões, jogos e modo fone também recebem o bônus enquanto ele estiver ativo.
+  O banco controla a expiração e reconhece reenvios da mesma sessão sem somar pontos novamente.
+  A comemoração da ofensiva aparece após a primeira atividade do dia confirmada pelo servidor. Sem conexão,
+  o app informa o envio pendente; pontos e bônus dependem da confirmação. Envios de dias anteriores não ativam
+  um bônus novo. O relógio do aparelho só exibe a contagem: a decisão sobre XP é do servidor.
+- **Testes de recuperação:** `npm run test:recovery` verifica erros de perfil, preservação das anotações,
+  gravação de progresso, comemoração e bônus em celular (390 px) e PC (1440 px). Também faz parte de `npm test`.
+  As capturas ficam em `tests/e2e/artifacts/` (fora do Git). Os testes SQL em `supabase/tests/010_sessoes_bonus.sql`
+  verificam a regra real do banco em uma transação revertida ao final; use um banco de testes com as migrações aplicadas.
+
 - **Escudo da sequência** (`009_escudo.sql`): a cada 7 dias seguidos o aluno ganha um escudo (máx. 2). Se faltar
   um dia, o escudo é usado sozinho na próxima lição e a sequência continua.
 - **Conquistas:** 23 medalhas calculadas do progresso (`src/lib/achievements.js`), em Meu progresso, com card para o story.

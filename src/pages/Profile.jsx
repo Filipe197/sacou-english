@@ -96,7 +96,7 @@ export default function Profile() {
             {pwMsg && <div className={'pf-msg ' + (pwMsg.ok ? 'ok' : 'bad')} role="status">{pwMsg.t}</div>}
             <button className="btn btn-out" disabled={!pw || pwBusy} style={{ alignSelf: 'flex-start' }}>{pwBusy ? 'Salvando…' : google ? 'Criar senha' : 'Trocar senha'}</button>
           </form>
-          <button type="button" className="btn btn-out" style={{ marginTop: 18, alignSelf: 'flex-start' }} onClick={async () => { await signOut(); nav('/'); }}><Icon name="logout" size={18} />Sair da conta</button>
+          <button type="button" className="btn btn-out" style={{ marginTop: 18, alignSelf: 'flex-start' }} onClick={async () => { const result = await signOut(); if (!result?.error) nav('/'); }}><Icon name="logout" size={18} />Sair da conta</button>
         </div>
       </div>
     </Shell>

@@ -64,21 +64,14 @@ await test('lição: acerto e erro com o professor', async () => {
   await click('Verificar');
   await expectText('Continuar');
   await click('Continuar');
-  // segundo exercício: escolhe uma opção qualquer até errar e chama o professor
-  for (let i = 0; i < 6; i++) {
-    const t = await text();
-    if (t.includes('Por que errei')) break;
-    const opts = await page.$$('.options .option:not([disabled])');
-    if (opts.length) { await opts[opts.length - 1].click(); await wait(150); await click('Verificar'); }
-    if ((await text()).includes('Por que errei')) break;
-    if ((await text()).includes('Continuar')) await click('Continuar'); else if ((await text()).includes('Entendi')) await click('Entendi'); else break;
-  }
-  if ((await text()).includes('Por que errei')) {
-    await click('Por que errei');
-    await expectText('Professor Sacou');
-    const t = await text();
-    if (t.includes('não respondeu')) throw new Error('o professor não respondeu');
-  }
+  // Escolhe uma resposta comprovadamente errada, sem depender da ordem sorteada.
+  const item = JSON.parse(fs.readFileSync('src/content/a1/unit-01.json', 'utf8')).lessons[0].items[1];
+  const wrong = item.options.find(o => o !== item.answer);
+  await click(wrong); await click('Verificar');
+  await expectText('Por que errei');
+  await click('Por que errei');
+  await expectText('Professor Sacou');
+  await expectText('Salvar explicação no caderno');
 });
 
 await test('treino abre', async () => { await open('/praticar'); await expectText('Começar treino'); });

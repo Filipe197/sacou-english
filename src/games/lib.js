@@ -1,6 +1,6 @@
 // Regras comuns dos minijogos: o que está liberado, XP, recordes e de onde vêm as palavras.
 import { UNITS, LESSONS, getUnit, shuffle } from '../lib/content.js';
-import { rpcOrQueue, logActivity } from '../lib/offline.js';
+import { finishSession } from '../lib/finish-session.js';
 import episodes from './data/episodes.json';
 import mysteries from './data/mysteries.json';
 import city from './data/city.json';
@@ -61,9 +61,6 @@ export function getBest(uid, game) { try { return Number(localStorage.getItem(RK
 export function setBest(uid, game, v) { try { if (v > getBest(uid, game)) { localStorage.setItem(RKEY(uid, game), String(v)); return true; } } catch { /* sem espaço */ } return false; }
 
 // Fim de jogo: soma XP, conta para a sequência e para a missão da semana
-export async function finishGame({ user, setProfile, id, score, xp }) {
-  const r = await rpcOrQueue(user?.id, 'complete_lesson', { p_lesson_id: gameId(id), p_score: Math.round(score), p_xp: xp });
-  if (r.data) setProfile?.(r.data);
-  logActivity(user?.id, 'jogo');
-  return { streak: r.data?.streak, queued: r.queued };
+export async function finishGame({ user, setProfile, id, score, xp, attemptId }) {
+  return finishSession({ uid: user?.id, setProfile, lessonId: gameId(id), score: Math.round(score), xp, attemptId, activity: 'jogo' });
 }

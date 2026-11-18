@@ -30,6 +30,8 @@ function Case({ c, first }) {
   const [wrongGuesses, setWrongGuesses] = useState([]);
   const [solved, setSolved] = useState(false);
   const [result, setResult] = useState(null);
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
   const firstTry = useRef({ total: 0, ok: 0 });
   const st = steps[at];
   const opts = useMemo(() => (st.k === 'clue' ? shuffle(c.clues[st.i].check.options) : []), [st, c]);
@@ -65,12 +67,12 @@ function Case({ c, first }) {
     const score = Math.max(0, clueScore * 100 - wrongGuesses.length * 25);
     const xp = first ? (wrongGuesses.length ? 10 : 15) : 5;
     fx.play('complete');
-    const r = await finishGame({ user, setProfile, id: c.id, score, xp });
-    setResult({ xp, streak: r.streak, score: Math.round(score) });
+    const r = await finishGame({ user, setProfile, attemptId: attemptId.current, id: c.id, score, xp });
+    setResult({ ...r, score: Math.round(score) });
   }
 
   if (result) {
-    return <Finish title="Caso resolvido!" xp={result.xp} streak={result.streak}
+    return <Finish outcome={result} title="Caso resolvido!" xp={result.xp} streak={result.streak}
       stats={[['Pistas entendidas de primeira', `${firstTry.current.ok}/${firstTry.current.total}`], ['Acusações erradas', wrongGuesses.length]]}
       message="Bom trabalho, detetive. Ler com atenção e comparar informações é exatamente o que as provas de inglês cobram." />;
   }

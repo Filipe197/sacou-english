@@ -33,6 +33,8 @@ function Game({ done, onAgain }) {
   const [matches, setMatches] = useState(0);
   const [miss, setMiss] = useState(0);
   const [result, setResult] = useState(null);
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
 
   useEffect(() => {
     if (state !== 'play') return;
@@ -71,15 +73,15 @@ function Game({ done, onAgain }) {
     const record = setBest(user?.id, 'relampago', score);
     const xp = Math.min(10, 5 + Math.floor(matches / 5));
     const acc = matches + miss ? (matches / (matches + miss)) * 100 : 0;
-    const r = await finishGame({ user, setProfile, id: 'relampago', score: acc, xp });
-    setResult({ xp, streak: r.streak, record });
+    const r = await finishGame({ user, setProfile, attemptId: attemptId.current, id: 'relampago', score: acc, xp });
+    setResult({ ...r, record });
   }
 
   if (pool.length < SLOTS) return <div className="center-page"><p>Faça algumas lições para liberar este jogo.</p><Link to="/jogos" className="btn btn-violet">Voltar</Link></div>;
 
   if (state === 'end') {
     if (!result) return <Spinner />;
-    return <Finish title="Tempo esgotado!" xp={result.xp} streak={result.streak} record={result.record} onAgain={onAgain}
+    return <Finish outcome={result} title="Tempo esgotado!" xp={result.xp} streak={result.streak} record={result.record} onAgain={onAgain}
       stats={[['Pontos', score], ['Pares', matches], ['Recorde', Math.max(score, getBest(user?.id, 'relampago'))]]}
       message={miss ? `Você trocou ${miss} ${miss === 1 ? 'par' : 'pares'}. Errar faz parte: o combo volta rapidinho.` : 'Nenhum par trocado. Impressionante!'} />;
   }

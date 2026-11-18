@@ -41,6 +41,8 @@ function Player({ ep, timing, first }) {
   const [picked, setPicked] = useState([]);
   const [feedback, setFeedback] = useState(null);
   const [result, setResult] = useState(null);
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
   const okFirst = useRef(0);
   const lineRefs = useRef([]);
   const fallback = !timing; // sem MP3 gerado: lê fala por fala com a voz do aparelho
@@ -95,12 +97,12 @@ function Player({ ep, timing, first }) {
     if (qi + 1 < ep.questions.length) { setQi(qi + 1); return; }
     fx.play('complete');
     const xp = first ? 10 : 5;
-    const r = await finishGame({ user, setProfile, id: ep.id, score: (okFirst.current / ep.questions.length) * 100, xp });
-    setResult({ xp, streak: r.streak }); setPhase('done');
+    const r = await finishGame({ user, setProfile, attemptId: attemptId.current, id: ep.id, score: (okFirst.current / ep.questions.length) * 100, xp });
+    setResult({ ...r }); setPhase('done');
   }
 
   if (phase === 'done' && result) {
-    return <Finish title="Episódio concluído!" xp={result.xp} streak={result.streak}
+    return <Finish outcome={result} title="Episódio concluído!" xp={result.xp} streak={result.streak}
       stats={[['Perguntas certas de primeira', `${okFirst.current}/${ep.questions.length}`]]}
       message="Dica: ouça de novo amanhã sem a transcrição. Entender sem ler é o que treina o ouvido de verdade." />;
   }

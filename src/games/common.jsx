@@ -2,9 +2,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon, Anim, Bolt } from '../components/ui.jsx';
 import { speak, canSpeak } from '../lib/fx.js';
+import DailyCelebration, { BoostTimer } from '../components/DailyCelebration.jsx';
+import { useAuth } from '../lib/auth.jsx';
 
 // Barra de cima dos jogos (mesmo visual das lições)
 export function GameTop({ progress = 0, label, right, onExit }) {
+  const { profile } = useAuth();
   const [ask, setAsk] = useState(false);
   return (
     <>
@@ -12,6 +15,7 @@ export function GameTop({ progress = 0, label, right, onExit }) {
         <button type="button" className="icon-btn" aria-label="Sair do jogo" onClick={() => (onExit ? onExit() : setAsk(true))}><Icon name="x" size={24} stroke={2.4} /></button>
         <div className="track" role="progressbar" aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100} aria-label={label}><div className="fill" style={{ width: `${Math.min(100, progress)}%` }} /></div>
         {right}
+        <BoostTimer until={profile?.xp_boost_until} className="boost-in-lesson" />
       </header>
       {ask && (
         <div className="exit-box" role="alertdialog" aria-label="Sair do jogo">
@@ -29,19 +33,23 @@ export function GameTop({ progress = 0, label, right, onExit }) {
   );
 }
 
-export function Finish({ title, message, stats = [], xp, streak, record, onAgain, children }) {
+export function Finish({ title, message, stats = [], xp, streak, record, onAgain, children, outcome }) {
+  const [celebrated, setCelebrated] = useState(false);
+  if (!celebrated && (outcome?.showStreak || outcome?.showBoost)) return <DailyCelebration {...outcome} onContinue={() => setCelebrated(true)} />;
   return (
     <div className="finish">
       <Anim name="celebrate" size={180} />
-      <h1 style={{ fontSize: 'clamp(30px,5vw,42px)', margin: '8px 0 0' }}>{title}</h1>
-      {message && <p className="muted" style={{ fontSize: 17, maxWidth: 560, lineHeight: 1.6 }}>{message}</p>}
+      <h1 style={{ fontSize: 'clamp(30px,5vw,42px)', margin: '8px 0 0' }}>{outcome?.title || title}</h1>
+      {(message || outcome?.message) && <p className="muted" style={{ fontSize: 17, maxWidth: 560, lineHeight: 1.6 }}>{outcome?.message || message}</p>}
+      {outcome?.error && <p className="alert" role="alert">{outcome.error}</p>}
       {record && <div className="g-record"><Icon name="medal" size={20} />Novo recorde pessoal!</div>}
       <div className="finish-stats">
         {stats.map(([l, v]) => <div key={l} className="fstat"><span className="muted" style={{ fontSize: 13 }}>{l}</span><b>{v}</b></div>)}
-        {xp != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>XP ganho</span><b style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Bolt size={22} />+{xp}</b></div>}
+        {xp != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>XP ganho{outcome?.multiplier === 2 ? ' · em dobro!' : ''}</span><b style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Bolt size={22} />+{xp}</b></div>}
         {streak != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Sequência</span><b>{streak} {streak === 1 ? 'dia' : 'dias'}</b></div>}
       </div>
       {children}
+      <BoostTimer until={outcome?.boostUntil} />
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
         {onAgain && <button type="button" className="btn btn-violet btn-lg btn-3d" onClick={onAgain} autoFocus>Jogar de novo</button>}
         <Link className={'btn btn-lg ' + (onAgain ? 'btn-out' : 'btn-violet btn-3d')} to="/jogos" autoFocus={!onAgain}>Voltar aos jogos</Link>

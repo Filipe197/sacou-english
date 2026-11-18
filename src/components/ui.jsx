@@ -4,6 +4,7 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 const DotLottieReact = lazy(() => import('@lottiefiles/dotlottie-react').then(m => ({ default: m.DotLottieReact })));
 import { useAuth } from '../lib/auth.jsx';
 import { useInstall } from '../lib/install.js';
+import { BoostTimer } from './DailyCelebration.jsx';
 
 // Ícones em traço (sem emoji)
 const P = {
@@ -190,7 +191,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
       <button className="nav-a nav-plain" onClick={() => updateProfile({ sound_on: !profile?.sound_on })} aria-pressed={!!profile?.sound_on}>
         <Icon name={profile?.sound_on ? 'sound' : 'mute'} />{profile?.sound_on ? 'Som ligado' : 'Som desligado'}
       </button>
-      <button className="nav-a nav-plain" onClick={async () => { await signOut(); nav('/'); }}>
+      <button className="nav-a nav-plain" onClick={async () => { const result = await signOut(); if (!result?.error) nav('/'); }}>
         <Icon name="logout" />Sair
       </button>
     </>
@@ -208,7 +209,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
         <div className="side-foot">{extras}</div>
       </nav>
 
-      <main className="content">{children}</main>
+      <main className="content"><div className="boost-bar"><BoostTimer until={profile?.xp_boost_until} /></div>{children}</main>
       {rail && <aside className="rail">{rail}</aside>}
 
       {/* celular */}

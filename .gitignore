@@ -11,6 +11,10 @@ video/out/
 
 # prints de testes que falharam
 tests/e2e/falhou-*.png
+tests/e2e/artifacts/
+build-check.log
+recovery-check.log
+smoke-check.log
 
 # pacote original de ilustrações (Humaaans), não versionar
 arte-fonte/

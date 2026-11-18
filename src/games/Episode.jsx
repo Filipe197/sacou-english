@@ -31,6 +31,8 @@ function Player({ ep, first }) {
   const [picked, setPicked] = useState([]);
   const [feedback, setFeedback] = useState(null);
   const [result, setResult] = useState(null);
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
   const stats = useRef({ total: 0, first: 0 });
   const logEnd = useRef(null);
 
@@ -89,14 +91,14 @@ function Player({ ep, first }) {
     const score = total ? (f / total) * 100 : 100;
     const xp = first ? 15 : 5;
     fx.play('complete');
-    const r = await finishGame({ user, setProfile, id: ep.id, score, xp });
-    setResult({ score: Math.round(score), xp, streak: r.streak });
+    const r = await finishGame({ user, setProfile, attemptId: attemptId.current, id: ep.id, score, xp });
+    setResult({ score: Math.round(score), ...r });
   }
 
   if (result) {
     const nextEp = EPISODES[EPISODES.indexOf(ep) + 1];
     return (
-      <Finish title={`Fim do episódio: ${ep.title}`} xp={result.xp} streak={result.streak}
+      <Finish outcome={result} title={`Fim do episódio: ${ep.title}`} xp={result.xp} streak={result.streak}
         stats={[['Acertos de primeira', `${result.score}%`]]}
         message={nextEp ? `O próximo episódio, "${nextEp.title}", libera quando você terminar a unidade indicada na página de jogos.` : 'Você chegou ao fim da temporada! Novos episódios vão chegar junto com os próximos níveis.'} />
     );

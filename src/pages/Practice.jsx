@@ -1,11 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LessonRunner from '../components/LessonRunner.jsx';
 import { LESSONS, shuffle } from '../lib/content.js';
 import { useProgress, dueLessonIds } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
-import { supabase } from '../lib/supabase.js';
-import { logActivity } from '../lib/offline.js';
+import { rpcOrQueue } from '../lib/offline.js';
+import { finishSession } from '../lib/finish-session.js';
 import { Shell, Spinner, Icon } from '../components/ui.jsx';
 
 // Treino livre: 12 exercícios sorteados das lições que o aluno já concluiu.
@@ -14,6 +14,7 @@ export default function Practice() {
   const prog = useProgress();
   const { user, setProfile } = useAuth();
   const [started, setStarted] = useState(0);
+  const itemResults = useRef([]);
 
   const done = LESSONS.filter(l => prog.done.has(l.id));
   const dueIds = new Set(dueLessonIds(prog.scores));
@@ -39,13 +40,11 @@ export default function Practice() {
         exitTo="/praticar"
         retryWrong={false}
         finishCta="Voltar"
-        onItemResult={(e, ok) => { if (!ok) supabase.rpc('record_mistake', { p_item_id: e.item.id, p_lesson_id: e.lessonId }).then(({ error }) => error && console.error(error)); }}
-        onFinish={async ({ score }) => {
+        onItemResult={(e, ok) => { if (!ok) itemResults.current.push(rpcOrQueue(user?.id, 'record_mistake', { p_item_id: e.item.id, p_lesson_id: e.lessonId })); }}
+        onFinish={async ({ score, attemptId }) => {
           const xp = score >= 90 ? 10 : 5;
-          const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'practice', p_score: score, p_xp: xp });
-          if (data) setProfile(data);
-          logActivity(user?.id, 'practice');
-          return { xp, streak: data?.streak, title: 'Treino concluído!', message: 'O que você errou foi para a revisão. Treinar um pouco todo dia é o que faz o inglês ficar.', to: '/praticar' };
+          const saved = await finishSession({ uid: user?.id, attemptId, lessonId: 'practice', score, xp, activity: 'practice', itemResults: itemResults.current, setProfile });
+          return { title: 'Treino concluído!', message: 'O que você errou foi para a revisão. Treinar um pouco todo dia é o que faz o inglês ficar.', to: '/praticar', ...saved };
         }}
       />
     );

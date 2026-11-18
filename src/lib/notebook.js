@@ -22,6 +22,8 @@ const listeners = new Set();
 let flushTimer = null;
 let retryTimer = null;
 let version = 0;
+let activeFlush = null;
+let generation = 0;
 
 const key = () => `sacou-caderno:${uid}`;
 function persist() {
@@ -35,8 +37,9 @@ const subscribe = (l) => { listeners.add(l); return () => listeners.delete(l); }
 
 const isMissing = (err) => err && (err.code === '42P01' || err.code === 'PGRST205' || /does not exist|schema cache/i.test(err.message || ''));
 
-async function load(newUid) {
+export async function loadNotebook(newUid) {
   if (uid === newUid && loaded) return;
+  const loadGeneration = ++generation;
   uid = newUid; loaded = false; notes = []; pending = {};
   try {
     const raw = JSON.parse(localStorage.getItem(key()) || 'null');
@@ -44,7 +47,7 @@ async function load(newUid) {
   } catch { /* cache corrompido: ignora */ }
   emit();
   const { data, error } = await supabase.from('notes').select(COLS.join(',')).order('updated_at', { ascending: false });
-  if (uid !== newUid) return; // trocou de conta no meio
+  if (uid !== newUid || generation !== loadGeneration) return;
   if (error) {
     sync = isMissing(error) ? 'missing' : 'offline';
     loaded = true; emit(); scheduleRetry(); return;
@@ -74,8 +77,19 @@ function scheduleRetry() {
   retryTimer = setTimeout(flush, 15000);
 }
 
-async function flush() {
+function flush() {
+  if (activeFlush?.generation === generation) return activeFlush.promise;
+  const current = { generation, promise: null };
+  current.promise = flushChanges().finally(() => { if (activeFlush === current) activeFlush = null; });
+  activeFlush = current;
+  return current.promise;
+}
+
+async function flushChanges() {
   clearTimeout(flushTimer);
+  const owner = uid;
+  const flushGeneration = generation;
+  const isCurrent = () => owner === uid && flushGeneration === generation;
   const entries = Object.entries(pending);
   if (!uid || !entries.length) return;
   sync = 'saving'; emit();
@@ -84,11 +98,13 @@ async function flush() {
   let err = null;
   if (ups.length) {
     const rows = ups.map(x => Object.fromEntries(COLS.map(c => [c, x.row[c] ?? null]).filter(([c, v]) => !(c === 'tags' && v === null))));
-    const { error } = await supabase.from('notes').upsert(rows);
+    const { error } = await supabase.from('notes').upsert(rows).then(r => r, error => ({ error }));
+    if (!isCurrent()) return;
     if (error) err = error; else ups.forEach(x => { if (pending[x.id]?.v === x.v) delete pending[x.id]; });
   }
   if (dels.length && !err) {
-    const { error } = await supabase.from('notes').delete().in('id', dels.map(d => d.id));
+    const { error } = await supabase.from('notes').delete().in('id', dels.map(d => d.id)).then(r => r, error => ({ error }));
+    if (!isCurrent()) return;
     if (error) err = error; else dels.forEach(d => { if (pending[d.id]?.v === d.v) delete pending[d.id]; });
   }
   // nota que sumiu da lista mas ficou como upsert (raro): descarta
@@ -99,19 +115,29 @@ async function flush() {
   if (!err && Object.keys(pending).length) scheduleFlush();
 }
 
-// Ao sair da conta: tenta enviar o que falta (até 3 s) e apaga o caderno deste aparelho,
-// para quem usar o celular depois não ver as anotações de outra pessoa.
-export async function clearNotebookCache() {
-  try { await Promise.race([flush(), new Promise(r => setTimeout(r, 3000))]); } catch { /* segue */ }
+// Só apaga o caderno depois de confirmar o envio de todas as alterações.
+export async function clearNotebookCache(accountId = uid) {
+  // A pessoa pode sair sem ter aberto o caderno nesta visita.
+  if (accountId && uid !== accountId) {
+    generation++;
+    uid = accountId; notes = []; pending = {}; loaded = false;
+    try {
+      const raw = JSON.parse(localStorage.getItem(key()) || 'null');
+      if (raw) { notes = raw.notes || []; pending = raw.pending || {}; }
+    } catch { return false; }
+  }
+  let timeout;
+  try { await Promise.race([flush(), new Promise(r => { timeout = setTimeout(r, 3000); })]); }
+  finally { clearTimeout(timeout); }
+  if (Object.keys(pending).length) return false;
   try {
-    for (let i = localStorage.length - 1; i >= 0; i--) {
-      const k = localStorage.key(i);
-      if (k && k.startsWith('sacou-caderno:')) localStorage.removeItem(k);
-    }
-  } catch { /* sem acesso ao armazenamento */ }
+    if (uid) localStorage.removeItem(key());
+  } catch { return false; }
   clearTimeout(flushTimer); clearTimeout(retryTimer);
+  generation++;
   uid = null; notes = []; pending = {}; loaded = false; sync = 'idle';
   emit();
+  return true;
 }
 
 if (typeof window !== 'undefined') {
@@ -166,7 +192,7 @@ export const notebook = {
 
 export function useNotebook() {
   const { user } = useAuth();
-  useEffect(() => { if (user?.id) load(user.id); }, [user?.id]);
+  useEffect(() => { if (user?.id) loadNotebook(user.id); }, [user?.id]);
   return useSyncExternalStore(subscribe, () => snap);
 }
 

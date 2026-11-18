@@ -26,6 +26,8 @@ function Mission({ m, first }) {
   const [picked, setPicked] = useState([]);
   const [feedback, setFeedback] = useState(null);
   const [result, setResult] = useState(null);
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
   const okFirst = useRef(0);
   const s = m.steps[i];
   const opts = useMemo(() => (s ? shuffle(s.options) : []), [s]);
@@ -48,12 +50,12 @@ function Mission({ m, first }) {
     const score = (okFirst.current / m.steps.length) * 100;
     const xp = first ? 10 : 5;
     fx.play('complete');
-    const r = await finishGame({ user, setProfile, id: m.id, score, xp });
-    setResult({ xp, streak: r.streak });
+    const r = await finishGame({ user, setProfile, attemptId: attemptId.current, id: m.id, score, xp });
+    setResult({ ...r });
   }
 
   if (result) {
-    return <Finish title="Missão cumprida!" xp={result.xp} streak={result.streak}
+    return <Finish outcome={result} title="Missão cumprida!" xp={result.xp} streak={result.streak}
       stats={[['Respostas certas de primeira', `${okFirst.current}/${m.steps.length}`]]}
       message="Essas são frases que você vai usar de verdade numa viagem. Repita em voz alta para fixar." />;
   }

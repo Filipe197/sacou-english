@@ -27,10 +27,16 @@ const Classes = lazy(() => import('./pages/Classes.jsx'));
 const Games = lazy(() => import('./games/index.jsx'));
 
 function Private({ children, allowNotOnboarded = false }) {
-  const { session, profile, loading } = useAuth();
+  const { session, profile, loading, profileError, refreshProfile, signOut } = useAuth();
   const loc = useLocation();
   if (session === undefined || (session && loading)) return <Spinner />;
   if (!session) return <Navigate to="/entrar" replace state={{ from: loc.pathname }} />;
+  if (profileError) return <main className="card auth-recovery">
+    <h1>Não foi possível abrir seu perfil</h1>
+    <p role="alert">{profileError}</p>
+    <div className="auth-recovery-actions"><button className="btn btn-violet" onClick={refreshProfile}>Tentar novamente</button>
+    <button className="btn btn-out" onClick={signOut}>Sair da conta</button></div>
+  </main>;
   if (profile && !profile.onboarded && !allowNotOnboarded) return <Navigate to="/bem-vindo" replace />;
   return children;
 }

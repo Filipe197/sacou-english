@@ -5,11 +5,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { LESSONS, shuffle } from '../lib/content.js';
 import { useProgress } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
-import { supabase } from '../lib/supabase.js';
+import { finishSession } from '../lib/finish-session.js';
+import DailyCelebration, { BoostTimer } from '../components/DailyCelebration.jsx';
 import { speakAsync, fx, canSpeak } from '../lib/fx.js';
 import { alignSpeech } from '../lib/pronounce.js';
 import { useListen, getSR, PronWords } from '../components/Pronounce.jsx';
-import { logActivity } from '../lib/offline.js';
 import { Shell, Spinner, Icon } from '../components/ui.jsx';
 
 const SESSION = 10;
@@ -69,7 +69,11 @@ export default function Headphones() {
 }
 
 function Session({ pool, onExit }) {
-  const { user, setProfile } = useAuth();
+  const { user, profile, setProfile } = useAuth();
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
+  const [result, setResult] = useState(null);
+  const [celebrated, setCelebrated] = useState(false);
   const nav = useNavigate();
   const list = useMemo(() => pool.slice(0, SESSION), [pool]);
   const [i, setI] = useState(0);
@@ -132,18 +136,21 @@ function Session({ pool, onExit }) {
     setPhase('end');
     fx.play('complete');
     const pct = Math.round((ok / Math.max(1, total)) * 100);
-    const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'fone', p_score: pct, p_xp: 5 });
-    if (data) setProfile(data);
-    logActivity(user?.id, 'fone');
+    setResult(await finishSession({ uid: user?.id, setProfile, lessonId: 'fone', score: pct, xp: 5, attemptId: attemptId.current, activity: 'fone' }));
   }
 
   const p = list[i];
   if (phase === 'end') {
+    if (!result) return <Spinner />;
+    if (!celebrated && (result.showStreak || result.showBoost)) return <DailyCelebration {...result} onContinue={() => setCelebrated(true)} />;
     return (
       <div className="hp-end">
         <span className="hp-ic big"><Icon name="headphones" size={56} color="#fff" /></span>
-        <h1>Sessão concluída!</h1>
-        <p className="muted" style={{ fontSize: 18 }}>Você acertou <b>{score.ok} de {score.total}</b> frases. +5 XP</p>
+        <h1>{result.title || 'Sessão concluída!'}</h1>
+        <p className="muted" style={{ fontSize: 18 }}>Você acertou <b>{score.ok} de {score.total}</b> frases.{result.xp != null && <> +{result.xp} XP{result.multiplier === 2 ? ' · em dobro!' : ''}</>}</p>
+        {result.message && <p>{result.message}</p>}
+        {result.error && <p className="alert" role="alert">{result.error}</p>}
+        <BoostTimer until={profile?.xp_boost_until} />
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
           <button className="btn btn-violet btn-lg btn-3d" onClick={onExit}>Outra sessão</button>
           <Link className="btn btn-out btn-lg" to="/aprender">Voltar para a trilha</Link>
@@ -154,6 +161,7 @@ function Session({ pool, onExit }) {
   return (
     <div className="hp">
       <header className="lesson-top">
+        <BoostTimer until={profile?.xp_boost_until} className="boost-in-lesson" />
         <button type="button" className="icon-btn" aria-label="Sair do modo fone" onClick={() => { alive.current = false; nav('/fone'); onExit(); }}><Icon name="x" size={24} stroke={2.4} /></button>
         <div className="track" role="progressbar" aria-valuenow={i} aria-valuemax={list.length}><div className="fill" style={{ width: `${(i / list.length) * 100}%` }} /></div>
         <span style={{ fontWeight: 700, color: 'var(--violet-dd)' }}>{Math.min(i + 1, list.length)}/{list.length}</span>

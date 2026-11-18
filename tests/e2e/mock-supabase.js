@@ -29,6 +29,7 @@ function builder(table) {
 export const supabase = {
   from: (t) => builder(t),
   rpc: async (fn, args) => {
+    if (fn === 'complete_session') return { data: { awarded_xp: args.p_xp, multiplier: 1, streak_increased: false, boost_started: false }, error: null };
     if (fn === 'admin_stats') return { data: { users: 3, new_users_7d: 2, active_today: 1, active_7d: 2, lessons_done: 14, open_reports: 0, daily: [], top_lessons: [], hard_items: [] }, error: null };
     if (fn === 'admin_users') {
       const all = [

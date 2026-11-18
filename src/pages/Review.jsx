@@ -1,12 +1,12 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import LessonRunner from '../components/LessonRunner.jsx';
 import { getItem, getUnit, getLesson } from '../lib/content.js';
 import { askAI } from '../lib/ai.js';
 import { useProgress } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
-import { supabase } from '../lib/supabase.js';
-import { logActivity } from '../lib/offline.js';
+import { rpcOrQueue } from '../lib/offline.js';
+import { finishSession } from '../lib/finish-session.js';
 import { Shell, Spinner, Icon, Anim } from '../components/ui.jsx';
 
 export default function Review() {
@@ -17,10 +17,11 @@ export default function Review() {
   const [aiBusy, setAiBusy] = useState(false);
   const [aiErr, setAiErr] = useState('');
   const [aiRun, setAiRun] = useState(0);
+  const itemResults = useRef([]);
 
   // "Voltar" no fim do treino abre /revisao de novo: sai do treino
   const loc = useLocation();
-  useEffect(() => { setAi(null); setStarted(false); }, [loc.key]);
+  useEffect(() => { setAi(null); setStarted(false); itemResults.current = []; }, [loc.key]);
 
   async function startAI() {
     setAiBusy(true); setAiErr('');
@@ -49,11 +50,9 @@ export default function Review() {
         exitTo="/revisao"
         retryWrong
         finishCta="Voltar"
-        onFinish={async ({ score }) => {
-          const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'treino-ia', p_score: score, p_xp: 5 });
-          if (data) setProfile(data);
-          logActivity(user?.id, 'treino');
-          return { xp: 5, streak: data?.streak, title: 'Treino concluído!', message: 'Exercícios novos, feitos sob medida para os seus erros. Quer mais? Gere outro treino quando quiser.', to: '/revisao' };
+        onFinish={async ({ score, attemptId }) => {
+          const saved = await finishSession({ uid: user?.id, attemptId, lessonId: 'treino-ia', score, xp: 5, activity: 'treino', setProfile });
+          return { title: 'Treino concluído!', message: 'Exercícios novos, feitos sob medida para os seus erros. Quer mais? Gere outro treino quando quiser.', to: '/revisao', ...saved };
         }}
       />
     );
@@ -68,12 +67,10 @@ export default function Review() {
         exitTo="/revisao"
         retryWrong={false}
         finishCta="Voltar"
-        onItemResult={(e, ok) => { supabase.rpc(ok ? 'resolve_mistake' : 'record_mistake', ok ? { p_item_id: e.item.id } : { p_item_id: e.item.id, p_lesson_id: e.lessonId }).then(({ error }) => error && console.error(error)); }}
-        onFinish={async ({ score }) => {
-          const { data } = await supabase.rpc('complete_lesson', { p_lesson_id: 'review', p_score: score, p_xp: 5 });
-          if (data) setProfile(data);
-          logActivity(user?.id, 'review');
-          return { xp: 5, streak: data?.streak, title: 'Revisão concluída!', message: 'O que você acertou saiu da lista. O que errou de novo continua aqui para a próxima revisão.', to: '/aprender' };
+        onItemResult={(e, ok) => { itemResults.current.push(rpcOrQueue(user?.id, ok ? 'resolve_mistake' : 'record_mistake', ok ? { p_item_id: e.item.id } : { p_item_id: e.item.id, p_lesson_id: e.lessonId })); }}
+        onFinish={async ({ score, attemptId }) => {
+          const saved = await finishSession({ uid: user?.id, attemptId, lessonId: 'review', score, xp: 5, activity: 'review', itemResults: itemResults.current, setProfile });
+          return { title: 'Revisão concluída!', message: 'O que você acertou saiu da lista. O que errou de novo continua aqui para a próxima revisão.', to: '/aprender', ...saved };
         }}
       />
     );

@@ -10,6 +10,8 @@ import { LessonCtx, SaveItemButton } from './LessonNotes.jsx';
 import { PronWords, WordCoach, useListen, getSR } from './Pronounce.jsx';
 import { alignSpeech } from '../lib/pronounce.js';
 import { ShareButton } from './ShareCard.jsx';
+import DailyCelebration, { BoostTimer } from './DailyCelebration.jsx';
+import { useAuth } from '../lib/auth.jsx';
 const NotebookDrawer = lazy(() => import('./NotebookDrawer.jsx'));
 const Tutor = lazy(() => import('./Tutor.jsx'));
 
@@ -403,6 +405,10 @@ function ReportBox({ itemId, onClose }) {
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
 export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true }) {
+  const { profile } = useAuth();
+  const attemptId = useRef(null);
+  if (!attemptId.current) attemptId.current = crypto.randomUUID();
+  const [celebrated, setCelebrated] = useState(false);
   const [queue, setQueue] = useState(entries);
   const [idx, setIdx] = useState(0);
   const [value, setValue] = useState(null);
@@ -452,12 +458,17 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const check = () => { if (!locked && hasAnswer()) settle(isCorrect()); };
   const hasAnswer = () => item?.type === 'build' ? (value || []).length > 0 : typeof value === 'string' ? value.trim().length > 0 : value != null;
 
+  const finishing = useRef(false);
   const next = async () => {
     if (idx + 1 >= queue.length) {
+      if (finishing.current) return;
+      finishing.current = true;
       const vals = [...firstTry.current.values()];
       const score = Math.round((vals.filter(Boolean).length / Math.max(1, vals.length)) * 100);
-      const res = await onFinish?.({ score, firstTry: firstTry.current });
-      fx.play(res?.anim === 'streak' ? 'streak' : 'complete');
+      let res;
+      try { res = await onFinish?.({ score, firstTry: firstTry.current, attemptId: attemptId.current }); }
+      catch { res = { xp: null, title: 'Não foi possível salvar seu progresso', message: 'Você terminou os exercícios, mas houve uma falha ao registrar os resultados.', error: 'Verifique sua conexão e tente novamente mais tarde.' }; }
+      if (!res?.error && !res?.queued) fx.play(res?.showStreak ? 'streak' : 'complete');
       setResult({ score, ...(res || {}) });
       return;
     }
@@ -479,6 +490,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   });
 
   if (result) {
+    if (!celebrated && (result.showStreak || result.showBoost)) return <DailyCelebration {...result} onContinue={() => setCelebrated(true)} />;
     const great = result.score >= 80;
     return (
       <div className="finish">
@@ -489,10 +501,11 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         </p>
         <div className="finish-stats">
           <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Acertos de primeira</span><b>{result.score}%</b></div>
-          {result.xp != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>XP ganho</span><b style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Bolt size={22} />+{result.xp}</b></div>}
+          {result.xp != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>XP ganho{result.multiplier === 2 ? ' · em dobro!' : ''}</span><b style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Bolt size={22} />+{result.xp}</b></div>}
           {result.streak != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Sequência</span><b>{result.streak} {result.streak === 1 ? 'dia' : 'dias'}</b></div>}
         </div>
         {result.error && <div className="alert" role="alert" style={{ maxWidth: 480 }}>{result.error}</div>}
+        <BoostTimer until={profile?.xp_boost_until} />
         {result.share && (
           <div className="share-cta">
             <b>Conquista desbloqueada! 🎉</b>
@@ -524,6 +537,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     <LessonCtx.Provider value={noteCtx}>
     <div className="lesson">
       <header className="lesson-top">
+        <BoostTimer until={profile?.xp_boost_until} className="boost-in-lesson" />
         <button type="button" className="icon-btn" aria-label="Sair da lição" onClick={() => setConfirmExit(true)}><Icon name="x" size={24} stroke={2.4} /></button>
         <div className="track" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} aria-label={title}><div className="fill" style={{ width: progress + '%' }} /></div>
         <span style={{ fontWeight: 700, color: 'var(--violet-dd)', fontSize: 15 }}>{Math.min(firstTry.current.size + (locked ? 0 : 1), total)}/{total}</span>
