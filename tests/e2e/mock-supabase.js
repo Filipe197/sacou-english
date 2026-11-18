@@ -30,6 +30,13 @@ export const supabase = {
   from: (t) => builder(t),
   rpc: async (fn, args) => {
     if (fn === 'complete_session') return { data: { awarded_xp: args.p_xp, multiplier: 1, streak_increased: false, boost_started: false }, error: null };
+    if (fn === 'league_board') {
+      const names = ['Mariana S.', 'Lucas P.', 'Ana', 'Bruno C.', 'Júlia M.', 'Pedro A.', 'Carla R.', 'Diego F.', 'Bia T.', 'Rafa L.', 'Nina O.', 'Caio V.'];
+      const rows = names.map((name, i) => ({ name, xp: Math.max(0, 420 - i * 37), me: name === 'Ana' }));
+      return { data: { joined: true, tier: 1, week_start: day(3), week_end: day(-3), promote: 7, demote: 5, rows }, error: null };
+    }
+    if (fn === 'class_board') return { data: [{ name: 'Lucas P.', xp: 210, me: false }, { name: 'Ana', xp: 180, me: true }], error: null };
+    if (fn === 'set_ranking' || fn === 'skip_lessons') return { data: null, error: null };
     if (fn === 'admin_stats') return { data: { users: 3, new_users_7d: 2, active_today: 1, active_7d: 2, lessons_done: 14, open_reports: 0, daily: [], top_lessons: [], hard_items: [] }, error: null };
     if (fn === 'admin_users') {
       const all = [

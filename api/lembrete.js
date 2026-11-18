@@ -13,17 +13,34 @@ const VAPID_PUBLIC = 'BCKicE52M32o-5W3chpko560BIQrrm4FU_B_uh61OKqSOkNgmbSdrX7uS2
 const todayBR = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date());
 const yesterdayBR = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date(Date.now() - 864e5));
 
+// Falas do Professor Juvenal, o mais ranzinza do Brasil: dramático e engraçado,
+// mas nunca ofende o aluno. Sem "hmph"/"hmm" (a voz e o leitor de tela leem errado).
+const RISK = [
+  (n, d) => ({ title: `😤 ${d} dias de ofensiva por um fio!`, body: `Misericórdia, ${n}! Três minutinhos de lição e eu paro de reclamar. Pelo menos hoje.` }),
+  (n, d) => ({ title: `🔥 ${d} dias seguidos. Vai jogar fora?`, body: `Ô ${n}, nem o meu vizinho desiste tão fácil da reforma. Uma lição e tá salvo!` }),
+  (n, d) => ({ title: `⏰ Sua ofensiva de ${d} dias tá chorando`, body: `${n}, eu já perdi o cafezinho quente hoje. Não me faça perder sua sequência também.` }),
+];
+const AWAY = [ // sumiu há alguns dias
+  (n, d) => ({ title: `👀 ${d} dias sem aparecer, ${n}?`, body: 'Até o Louro já sabe falar "hello". E ele só fala português! Bora voltar?' }),
+  (n) => ({ title: 'Ô criatura, cadê você?', body: `${n}, sua lição tá aí parada mais que fila de banco. Cinco minutinhos resolvem.` }),
+];
+const DAILY = [
+  (n) => ({ title: 'O Professor Juvenal tá esperando 😤', body: `${n}, já são sete da noite e nada de inglês hoje. Uma lição rápida e eu sossego.` }),
+  (n) => ({ title: 'Quase não é gol! ⚽', body: `Falta só a lição de hoje, ${n}. Chuta essa bola pra dentro!` }),
+  (n) => ({ title: 'Recado do Juvenal 📢', body: `${n}, o grupo da família mandou 47 mensagens e você não abriu o inglês. Prioridades!` }),
+  (n) => ({ title: 'Calor de rachar e você sem estudar? 🥵', body: 'Pelo menos o inglês não sua. Cinco minutinhos e tá feito, prometo.' }),
+  (n) => ({ title: 'Missões da semana te esperando 🎯', body: `${n}, uma lição agora e a semana perfeita fica mais perto. Eu conto os dias, viu?` }),
+];
+const pick = (list, seed) => list[seed % list.length];
+
 function message(p) {
-  const name = (p.display_name || '').split(' ')[0];
-  if (p.streak > 1 && p.last_active === yesterdayBR()) {
-    return { title: `🔥 ${p.streak} dias seguidos em risco!`, body: `${name ? name + ', uma' : 'Uma'} lição de 3 minutos garante sua sequência de hoje.` };
-  }
-  const msgs = [
-    { title: 'Bora praticar inglês? 💜', body: '5 minutinhos hoje já fazem diferença. Sua próxima lição está esperando.' },
-    { title: 'Seu inglês sentiu sua falta 👀', body: 'Que tal uma conversa rápida com o Sam no café?' },
-    { title: 'Missões da semana te esperando 🎯', body: 'Uma lição agora e você fica mais perto da semana perfeita.' },
-  ];
-  return msgs[new Date().getDate() % msgs.length];
+  const name = (p.display_name || '').split(' ')[0] || 'criatura';
+  // varia por pessoa e por dia, para ninguém receber sempre a mesma fala
+  const seed = new Date().getDate() + [...String(p.id || '')].reduce((s, c) => s + c.charCodeAt(0), 0);
+  if (p.streak > 1 && p.last_active === yesterdayBR()) return pick(RISK, seed)(name, p.streak);
+  const away = p.last_active ? Math.round((Date.parse(todayBR()) - Date.parse(p.last_active)) / 864e5) : 0;
+  if (away >= 3) return pick(AWAY, seed)(name, away);
+  return pick(DAILY, seed)(name);
 }
 
 export default async function handler(req, res) {

@@ -239,6 +239,7 @@ export default function Trail() {
                   <div className={'tr-div' + tone + (u.id === UNITS[0].id ? ' sr-only' : '')}>
                     <h2 id={u.id} title={u.subtitle}>{complete && <Icon name="check" size={16} stroke={3} />}Unidade {u.order} · {u.title}</h2>
                   </div>
+                  {unlocked && !complete && <Link to={`/prova/unidade/${u.id}`} className="tr-skip"><span aria-hidden="true">⚡</span> Já sabe esta unidade? Faça o teste e pule</Link>}
                   <div className="tr-path">
                     <TrailScene unitId={u.id} side={left ? 'left' : 'right'} off={!unlocked} top={left ? 150 : 446} />
                     {u.lessons.map((l, i) => {
@@ -296,6 +297,14 @@ export default function Trail() {
                 </section>
               );
             })}
+            <Link to={`/prova/nivel/${lv}`} className="exam-cta">
+              <span className="exam-cta-ic" aria-hidden="true">🎓</span>
+              <span>
+                <b>Prova do nível {lv}</b>
+                <small>{unitsOf(lv).every(u => u.lessons.every(l => prog.done.has(l.id))) ? 'Teste tudo o que aprendeu e ganhe um card de aprovado.' : `Já sabe o ${lv}? Passe na prova e pule o que falta.`}</small>
+              </span>
+              <Icon name="arrow" size={18} />
+            </Link>
           </div>
         ))}
 

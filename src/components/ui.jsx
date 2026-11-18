@@ -160,6 +160,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     ['/fone', 'headphones', 'Modo fone'],
     ['/caderno', 'notebook', 'Caderno'],
     ['/guia', 'book', 'Guia de gramática'],
+    ['/ranking', 'trophy', 'Ranking'],
     ['/progresso', 'user', 'Meu progresso'],
     ['/turmas', 'users', 'Turmas'],
     ...(isAdmin ? [['/admin', 'chart', 'Administração']] : []),

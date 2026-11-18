@@ -424,6 +424,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [tutor, setTutor] = useState(false);
   const [heard, setHeard] = useState('');
   const firstTry = useRef(new Map()); // itemId -> correct na 1ª tentativa
+  const [combo, setCombo] = useState(0); // acertos seguidos
+  const bestCombo = useRef(0);
   const ctaRef = useRef(null);
 
   const cur = queue[idx];
@@ -446,6 +448,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const settle = useCallback((ok) => {
     setStatus(ok ? 'correct' : 'wrong');
     fx.play(ok ? 'correct' : 'wrong');
+    setCombo(c => { const n = ok ? c + 1 : 0; bestCombo.current = Math.max(bestCombo.current, n); return n; });
     if (!firstTry.current.has(item.id)) firstTry.current.set(item.id, ok);
     onItemResult?.(cur, ok);
     if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) setQueue(q => [...q, cur]);
@@ -469,7 +472,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       try { res = await onFinish?.({ score, firstTry: firstTry.current, attemptId: attemptId.current }); }
       catch { res = { xp: null, title: 'Não foi possível salvar seu progresso', message: 'Você terminou os exercícios, mas houve uma falha ao registrar os resultados.', error: 'Verifique sua conexão e tente novamente mais tarde.' }; }
       if (!res?.error && !res?.queued) fx.play(res?.showStreak ? 'streak' : 'complete');
-      setResult({ score, ...(res || {}) });
+      // lição perfeita: todos os exercícios certos de primeira
+      setResult({ score, perfect: vals.length > 0 && vals.every(Boolean), bestCombo: bestCombo.current, ...(res || {}) });
       return;
     }
     setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0); setNote(null); setTutor(false); setHeard('');
@@ -492,14 +496,17 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   if (result) {
     if (!celebrated && (result.showStreak || result.showBoost)) return <DailyCelebration {...result} onContinue={() => setCelebrated(true)} />;
     const great = result.score >= 80;
+    const perfect = result.perfect && !result.error;
     return (
       <div className="finish">
         <Anim name={result.anim || (result.score >= 80 ? 'celebrate' : 'keep-going')} size={200} />
-        <h1 style={{ fontSize: 'clamp(32px,5vw,44px)', margin: '8px 0 0' }}>{result.title || (great ? 'Lição concluída!' : 'Concluída — e com aprendizado!')}</h1>
+        {perfect && <span className="perfect-badge">💎 Lição perfeita</span>}
+        <h1 style={{ fontSize: 'clamp(32px,5vw,44px)', margin: '8px 0 0' }}>{result.title || (perfect ? 'Sem nenhum erro!' : great ? 'Lição concluída!' : 'Concluída — e com aprendizado!')}</h1>
         <p className="muted" style={{ fontSize: 17, maxWidth: 520, lineHeight: 1.6 }}>
-          {result.message || (great ? 'Você acertou quase tudo de primeira. Continue assim!' : 'As frases que você errou foram para a sua revisão. Praticar de novo ajuda a fixar.')}
+          {result.message || (perfect ? 'Você acertou tudo de primeira. Isso é domínio de verdade!' : great ? 'Você acertou quase tudo de primeira. Continue assim!' : 'As frases que você errou foram para a sua revisão. Praticar de novo ajuda a fixar.')}
         </p>
         <div className="finish-stats">
+          {result.bestCombo >= 3 && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Maior combo</span><b>🔥 {result.bestCombo}</b></div>}
           <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Acertos de primeira</span><b>{result.score}%</b></div>
           {result.xp != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>XP ganho{result.multiplier === 2 ? ' · em dobro!' : ''}</span><b style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Bolt size={22} />+{result.xp}</b></div>}
           {result.streak != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Sequência</span><b>{result.streak} {result.streak === 1 ? 'dia' : 'dias'}</b></div>}
@@ -621,6 +628,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
               <span className="fb-ic" style={{ background: ok ? 'var(--ok)' : 'var(--bad)' }}><Icon name={ok ? 'check' : 'x'} size={28} color="#fff" stroke={3} /></span>
               <div>
                 <h3 style={{ color: ok ? 'var(--ok-d)' : 'var(--bad-d)' }}>
+                  {ok && combo >= 3 && <span className={'combo-pill' + (combo % 5 === 0 ? ' big' : '')} key={combo}>🔥 {combo} seguidas!</span>}
                   {ok ? PRAISE[idx % PRAISE.length] : item.type === 'match' ? `Quase! Você trocou ${matchMisses} ${matchMisses === 1 ? 'par' : 'pares'}.` : <>Quase! Resposta certa: <span lang="en">“{display}”</span></>}
                 </h3>
                 <p style={{ color: ok ? '#234238' : '#4A2A1C' }}>

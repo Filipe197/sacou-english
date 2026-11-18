@@ -103,6 +103,20 @@ npm run dev
   As capturas ficam em `tests/e2e/artifacts/` (fora do Git). Os testes SQL em `supabase/tests/010_sessoes_bonus.sql`
   verificam a regra real do banco em uma transação revertida ao final; use um banco de testes com as migrações aplicadas.
 
+- **Ranking semanal com ligas** (`supabase/011_ranking.sql`, rode depois da 010): ao ganhar o primeiro XP da semana o
+  aluno entra num grupo de até 30 pessoas da sua liga (Bronze, Prata, Ouro, Platina, Diamante). Na semana seguinte os
+  7 primeiros sobem e os 5 últimos descem (grupos com 10+ pessoas). Tudo acontece por gatilho em `daily_xp`, sem cron.
+  Aparece só o primeiro nome e a inicial do sobrenome; o aluno pode sair do ranking. Também tem o ranking da turma
+  (`/ranking`, `src/pages/Ranking.jsx`). Testes SQL em `supabase/tests/011_ranking.sql`.
+- **Provas** (`/prova/unidade/:id` e `/prova/nivel/:nivel`, `src/pages/Exam.jsx`): teste de 12 perguntas para pular a
+  unidade atual e prova de 3 perguntas por unidade no fim de cada nível. Com 80% de acerto, as lições que faltam são
+  marcadas como concluídas (`skip_lessons`, sem XP). Quem passa na prova do nível ganha um card de aprovado.
+- **Combo e lição perfeita** (`LessonRunner.jsx`): a partir de 3 acertos seguidos aparece o combo; terminar sem erros
+  mostra "Lição perfeita".
+- **Retrospectiva do mês** (`src/components/MonthRecap.jsx`, em Meu progresso): dias estudados num calendário, XP,
+  lições, palavras salvas, melhor dia e card para o story.
+- **Lembretes com o Professor Juvenal** (`api/lembrete.js`): falas ranzinzas e engraçadas que mudam conforme a
+  situação (ofensiva em risco, sumiu há dias, lembrete do dia).
 - **Escudo da sequência** (`009_escudo.sql`): a cada 7 dias seguidos o aluno ganha um escudo (máx. 2). Se faltar
   um dia, o escudo é usado sozinho na próxima lição e a sequência continua.
 - **Conquistas:** 23 medalhas calculadas do progresso (`src/lib/achievements.js`), em Meu progresso, com card para o story.

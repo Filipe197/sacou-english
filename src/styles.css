@@ -541,3 +541,76 @@ button{font-family:inherit}
 @keyframes tr-in{from{opacity:0;transform:translateY(-60%)}}
 @media (max-width:860px){.tr-jump-wrap{bottom:calc(90px + env(safe-area-inset-bottom))}}
 @media (prefers-reduced-motion:reduce){.tr-jump{animation:none}}
+/* Combo de acertos e lição perfeita */
+.combo-pill{display:inline-flex;align-items:center;margin:0 10px 4px 0;padding:3px 10px;border-radius:99px;background:#FFE7C2;color:#9A4A00;font-size:14px;font-weight:800;vertical-align:middle;animation:combo-pop .45s cubic-bezier(.2,1.6,.4,1)}
+.combo-pill.big{background:var(--fire);color:#2A1200}
+@keyframes combo-pop{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
+.perfect-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:99px;background:linear-gradient(90deg,#E9E3FF,#DDF7FF);color:var(--violet-dd);font-weight:800;font-size:15px;animation:combo-pop .5s cubic-bezier(.2,1.6,.4,1)}
+@media (prefers-reduced-motion:reduce){.combo-pill,.perfect-badge{animation:none}}
+/* Retrospectiva do mês (Meu progresso) */
+.mr{display:flex;flex-direction:column;gap:16px}
+.mr-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.mr-top h2{margin:2px 0 0;font-size:24px}
+.mr-top h2::first-letter{text-transform:uppercase}
+.mr-switch{display:inline-flex;background:var(--track);border-radius:12px;padding:3px}
+.mr-switch button{border:0;background:none;padding:7px 12px;border-radius:9px;font:inherit;font-size:14px;font-weight:700;color:var(--text2);cursor:pointer;text-transform:capitalize}
+.mr-switch button.on{background:#fff;color:var(--violet-dd);box-shadow:0 1px 3px rgba(11,13,26,.12)}
+.mr-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mr-stats>div{background:var(--violet-l);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.mr-stats b{font-family:var(--head);font-size:28px;color:var(--violet-dd);line-height:1.1}
+.mr-stats span{font-size:13px;color:var(--text2)}
+.mr-cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;max-width:420px}
+.mr-wd{font-size:12px;font-weight:700;color:var(--text3);text-align:center}
+.mr-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--track);font-size:13px;font-weight:600;color:var(--text2)}
+.mr-day.on{background:var(--fire);color:#2A1200;font-weight:800}
+.mr-day.today{outline:2px solid var(--violet);outline-offset:1px}
+.mr-day.future{opacity:.45}
+.mr-line{margin:0;font-size:15px;line-height:1.5}
+.mr .btn{align-self:flex-start}
+@media(max-width:640px){.mr-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.mr-top h2{font-size:21px}}
+/* Provas: pular unidade e prova do nível */
+.tr-skip{display:flex;width:fit-content;max-width:100%;margin:10px auto 0;align-items:center;gap:6px;padding:7px 14px;border-radius:99px;border:1.5px dashed var(--violet-ring);background:#fff;color:var(--violet-dd);font-size:14px;font-weight:700;text-decoration:none;text-align:center}
+.tr-skip:hover{background:var(--violet-l)}
+.exam-cta{display:flex;align-items:center;gap:14px;margin:6px 0 28px;padding:14px 18px;border-radius:18px;background:var(--ink);color:#fff;text-decoration:none}
+.exam-cta>span:nth-child(2){flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.exam-cta b{font-family:var(--head);font-size:18px}
+.exam-cta small{font-size:14px;color:var(--on-dark);line-height:1.4}
+.exam-cta>svg{color:var(--lime);flex:none}
+.exam-cta-ic{width:44px;height:44px;border-radius:12px;background:var(--violet);display:flex;align-items:center;justify-content:center;font-size:24px;flex:none}
+.exam-cta:hover{background:#1A1D33}
+.exam-intro{max-width:620px;margin:0 auto;padding:32px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.exam-intro h1{font-size:clamp(28px,5vw,36px);margin:0 0 6px}
+.exam-intro p{font-size:17px;line-height:1.6;margin:0}
+.exam-intro ul{margin:10px 0 18px;padding-left:20px;line-height:1.8;color:var(--text2)}
+.exam-ic{font-size:40px;line-height:1}
+.exam-actions{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:640px){.exam-intro{padding:22px}}
+/* Ranking semanal */
+.rk{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.rk h1{font-size:36px;margin:0}
+.rk .nb-tabs{margin-bottom:4px}
+.rk-head{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:20px;background:var(--ink);color:#fff;border-left:6px solid var(--tier)}
+.rk-head b{display:block;font-family:var(--head);font-size:24px}
+.rk-head span{font-size:14px;color:var(--on-dark)}
+.rk-tier-ic{font-size:40px;line-height:1}
+.rk-ladder{display:flex;justify-content:center;gap:10px;font-size:22px}
+.rk-ladder span{opacity:.3;filter:grayscale(1)}
+.rk-ladder span.past{opacity:.6;filter:none}
+.rk-ladder span.on{opacity:1;filter:none;transform:scale(1.3)}
+.rk-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.rk-row{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:#fff;border:1.5px solid var(--line)}
+.rk-row.me{border-color:var(--violet);background:var(--violet-l)}
+.rk-row.up .rk-pos{color:var(--ok-d)}
+.rk-row.down .rk-pos{color:var(--bad-d)}
+.rk-pos{font-family:var(--head);font-weight:700;font-size:18px;text-align:center}
+.rk-name{font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rk-name small{font-weight:600;color:var(--violet-dd)}
+.rk-xp{font-weight:700;color:var(--text2);font-variant-numeric:tabular-nums}
+.rk-zone{font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:4px 0}
+.rk-zone.up{color:var(--ok-d)}
+.rk-zone.down{color:var(--bad-d)}
+.rk-empty{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.rk-empty p{margin:0;line-height:1.55}
+.rk-foot{font-size:13px;margin:4px 0 0}
+.rk-note{font-size:13px;margin:0}
+.rk-select{min-height:44px;border:1.5px solid var(--line2);border-radius:12px;padding:0 12px;font:inherit;background:#fff;align-self:flex-start}

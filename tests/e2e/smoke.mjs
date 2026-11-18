@@ -127,6 +127,31 @@ await test('caderno na lição: consultar guias e anotações', async () => {
   await expectText('O que significa?');
 });
 
+await test('ranking: liga com zonas e turma', async () => {
+  await open('/ranking');
+  await expectText('Liga Prata');
+  await expectText('sobe de liga');
+  await expectText('(você)');
+  await click('Turma');
+  await expectText('Turmas');
+});
+
+await test('progresso: retrospectiva do mês', async () => {
+  await open('/progresso');
+  await expectText('Retrospectiva');
+  await expectText('dias estudados');
+});
+
+await test('prova: teste para pular unidade', async () => {
+  await open('/aprender');
+  await expectText('Já sabe esta unidade?');
+  await expectText('Prova do nível A1');
+  await open('/prova/unidade/a1-u6');
+  await expectText('Já sabe esta unidade?');
+  await click('Começar');
+  await expectText('1/12');
+});
+
 await test('tirar dúvidas: pergunta, resposta e salvar', async () => {
   await open('/duvidas');
   await wait(800);
