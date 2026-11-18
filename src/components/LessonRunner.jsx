@@ -402,6 +402,14 @@ function ReportBox({ itemId, onClose }) {
   );
 }
 
+// combo guardado no aparelho: { n: acertos seguidos agora, best: recorde }
+function readCombo(key) {
+  try { const v = key && JSON.parse(localStorage.getItem(key)); return { n: v?.n | 0, best: v?.best | 0 }; } catch { return { n: 0, best: 0 }; }
+}
+function writeCombo(key, v) {
+  try { if (key) localStorage.setItem(key, JSON.stringify(v)); } catch { /* sem armazenamento: o combo vale só nesta lição */ }
+}
+
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
 export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true }) {
@@ -424,8 +432,18 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [tutor, setTutor] = useState(false);
   const [heard, setHeard] = useState('');
   const firstTry = useRef(new Map()); // itemId -> correct na 1ª tentativa
-  const [combo, setCombo] = useState(0); // acertos seguidos
-  const bestCombo = useRef(0);
+  // Combo: acertos seguidos que continuam de uma lição para outra até o primeiro erro (salvo no aparelho)
+  const comboKey = profile?.id ? `sacou-combo:${profile.id}` : null;
+  const [combo, setCombo] = useState(() => readCombo(comboKey).n);
+  const comboRecord = useRef(readCombo(comboKey).best);
+  const newRecord = useRef(false);
+  const comboKeyRef = useRef(comboKey);
+  useEffect(() => { // o perfil pode chegar depois da lição abrir
+    if (!comboKey || comboKeyRef.current === comboKey) return;
+    comboKeyRef.current = comboKey;
+    const v = readCombo(comboKey);
+    setCombo(c => Math.max(c, v.n)); comboRecord.current = Math.max(comboRecord.current, v.best);
+  }, [comboKey]);
   const ctaRef = useRef(null);
 
   const cur = queue[idx];
@@ -448,7 +466,12 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const settle = useCallback((ok) => {
     setStatus(ok ? 'correct' : 'wrong');
     fx.play(ok ? 'correct' : 'wrong');
-    setCombo(c => { const n = ok ? c + 1 : 0; bestCombo.current = Math.max(bestCombo.current, n); return n; });
+    setCombo(c => {
+      const n = ok ? c + 1 : 0;
+      if (n > comboRecord.current) { comboRecord.current = n; if (n >= 3) newRecord.current = true; }
+      writeCombo(comboKeyRef.current, { n, best: comboRecord.current });
+      return n;
+    });
     if (!firstTry.current.has(item.id)) firstTry.current.set(item.id, ok);
     onItemResult?.(cur, ok);
     if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) setQueue(q => [...q, cur]);
@@ -473,7 +496,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       catch { res = { xp: null, title: 'Não foi possível salvar seu progresso', message: 'Você terminou os exercícios, mas houve uma falha ao registrar os resultados.', error: 'Verifique sua conexão e tente novamente mais tarde.' }; }
       if (!res?.error && !res?.queued) fx.play(res?.showStreak ? 'streak' : 'complete');
       // lição perfeita: todos os exercícios certos de primeira
-      setResult({ score, perfect: vals.length > 0 && vals.every(Boolean), bestCombo: bestCombo.current, ...(res || {}) });
+      setResult({ score, perfect: vals.length > 0 && vals.every(Boolean), combo, comboRecord: newRecord.current, ...(res || {}) });
       return;
     }
     setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0); setNote(null); setTutor(false); setHeard('');
@@ -506,7 +529,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
           {result.message || (perfect ? 'Você acertou tudo de primeira. Isso é domínio de verdade!' : great ? 'Você acertou quase tudo de primeira. Continue assim!' : 'As frases que você errou foram para a sua revisão. Praticar de novo ajuda a fixar.')}
         </p>
         <div className="finish-stats">
-          {result.bestCombo >= 3 && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Maior combo</span><b>🔥 {result.bestCombo}</b></div>}
+          {result.combo >= 3 && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>{result.comboRecord ? 'Combo · novo recorde!' : 'Combo seguido'}</span><b>🔥 {result.combo}</b></div>}
           <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Acertos de primeira</span><b>{result.score}%</b></div>
           {result.xp != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>XP ganho{result.multiplier === 2 ? ' · em dobro!' : ''}</span><b style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}><Bolt size={22} />+{result.xp}</b></div>}
           {result.streak != null && <div className="fstat"><span className="muted" style={{ fontSize: 13 }}>Sequência</span><b>{result.streak} {result.streak === 1 ? 'dia' : 'dias'}</b></div>}
@@ -547,6 +570,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         <BoostTimer until={profile?.xp_boost_until} className="boost-in-lesson" />
         <button type="button" className="icon-btn" aria-label="Sair da lição" onClick={() => setConfirmExit(true)}><Icon name="x" size={24} stroke={2.4} /></button>
         <div className="track" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} aria-label={title}><div className="fill" style={{ width: progress + '%' }} /></div>
+        {combo >= 3 && <span className="combo-mini" title={`${combo} acertos seguidos`} aria-label={`Combo: ${combo} acertos seguidos`}>🔥{combo}</span>}
         <span style={{ fontWeight: 700, color: 'var(--violet-dd)', fontSize: 15 }}>{Math.min(firstTry.current.size + (locked ? 0 : 1), total)}/{total}</span>
         <button type="button" className={'icon-btn nb-open' + (notesOpen ? ' on' : '')} aria-label="Abrir caderno" title="Caderno: anotar sem sair da lição" aria-expanded={notesOpen} onClick={() => setNotesOpen(v => !v)}><Icon name="notebook" size={24} /></button>
       </header>
