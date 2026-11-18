@@ -57,6 +57,12 @@ npm run dev
   em português, com exemplos para ouvir e botão para salvar no caderno. Até 10 perguntas por conversa; perguntas fora de
   inglês são recusadas com gentileza (`api/duvidas.js`, `src/pages/Duvidas.jsx`). Conta no mesmo limite diário das
   explicações de erro (40 por dia), então não precisa de SQL novo.
+- **Voz natural do Juvenal (ElevenLabs):** as falas que a IA cria na aula saem com a voz dele (`api/voz.js`,
+  `src/lib/voz.js`, modelo `eleven_flash_v2_5`). Na Vercel: `ELEVENLABS_API_KEY` e `ELEVENLABS_VOICE_ID`.
+  Limite por **aula** (`supabase/013_voz.sql`): plano grátis 1 aula com voz natural por dia, premium 5, até 40 falas
+  por aula e 60 no site por dia. O plano fica na tabela `plans` (o aluno não consegue editar; para dar premium,
+  insira `user_id` e `plan = 'premium'` pelo Supabase). Sem chave, sem créditos ou passado o limite, usa a voz do aparelho.
+  As falas prontas (`INTRO`, `RETRY`, `GIVE_UP`) são regravadas com `node scripts/gen-juvenal-eleven.mjs` (lê o `.env`).
 - **Treino infinito** (`api/treino.js`): na revisão, a IA cria exercícios novos sobre os erros do aluno; cada
   frase passa pela mesma checagem CEFR-J do build (`scripts/cefr.mjs`) e o que não passar é descartado.
 - **Professor que lembra:** a explicação do erro considera os erros que o aluno mais repete.

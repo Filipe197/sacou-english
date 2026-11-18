@@ -13,6 +13,8 @@ import { useAuth } from '../lib/auth.jsx';
 import { useProgress } from '../lib/progress.js';
 import { currentLevel } from '../lib/content.js';
 import { logActivity } from '../lib/offline.js';
+import { fetchJuvenal, juvenalVoiceOff, newJuvenalLesson, voiceStatus } from '../lib/voz.js';
+import { playUrl } from '../lib/fx.js';
 import { AULA_LEVELS, TOPICS, topicById, TEACHER, MAX_STEPS, MAX_CHARS, MAX_TRIES, RETRY, GIVE_UP, INTRO, commentInPt } from '../lib/aula.js';
 
 const PASS = 0.8; // parte das palavras que precisa sair para valer a repetição
@@ -74,14 +76,28 @@ function Setup({ onStart }) {
           <button type="button" className="btn btn-violet btn-lg btn-3d aula-go" onClick={() => onStart({ level: lvl, topic })}>
             <Icon name="mic" size={20} color="#fff" />Começar a aula
           </button>
-          <p className="aula-beta">
-            <b>Voz em fase beta.</b> Por enquanto, só algumas falas do Juvenal têm voz natural; o resto usa a voz do seu
-            celular, que é mais robótica. Em breve ele ganha uma voz mais natural em tudo.
-          </p>
+          <VoiceQuota />
           {!getSR() && <p className="note" style={{ marginTop: 14 }}>Seu navegador não reconhece fala. Dá para fazer a aula escrevendo, mas o melhor é usar o Chrome ou o Edge para falar.</p>}
         </div>
       </div>
     </Shell>
+  );
+}
+
+// Quantas aulas com a voz natural do Juvenal ainda dá para fazer hoje
+function VoiceQuota() {
+  const [st, setSt] = useState(undefined);
+  useEffect(() => { let on = true; voiceStatus().then(s => on && setSt(s)); return () => { on = false; }; }, []);
+  if (st === undefined) return null;
+  const left = st ? Math.max(0, st.limit - st.used) : null;
+  return (
+    <p className="aula-beta">
+      {left == null
+        ? <>A voz natural do Juvenal está chegando. Por enquanto, as falas criadas na hora usam a voz do seu aparelho.</>
+        : left > 0
+          ? <><b>Voz natural do Juvenal:</b> {left === 1 ? 'você tem 1 aula hoje' : `você tem ${left} aulas hoje`} com a voz dele em tudo. Depois disso, a aula continua com a voz do aparelho.</>
+          : <><b>Sua aula com a voz natural de hoje já foi.</b> Pode continuar estudando: as falas novas usam a voz do aparelho. Amanhã tem mais.</>}
+    </p>
   );
 }
 
@@ -110,6 +126,9 @@ function Lesson({ cfg, onExit, onAgain }) {
   const [sumBusy, setSumBusy] = useState(false);
   const talkId = useRef(0);
   const alive = useRef(true);
+  const aulaId = useRef(null);
+  if (!aulaId.current) { aulaId.current = crypto.randomUUID(); newJuvenalLesson(); }
+  const [voiceOff, setVoiceOff] = useState(juvenalVoiceOff);
   const started = useRef(false);
   const voiceRef = useRef(voice);
   voiceRef.current = voice;
@@ -126,10 +145,17 @@ function Lesson({ cfg, onExit, onAgain }) {
     const my = ++talkId.current;
     if (!voiceRef.current || !canSpeak()) return;
     setTalking(true);
-    for (const [text, lang, own] of parts) {
+    // falas criadas na hora: pede todas à voz natural de uma vez (sem pausa entre elas)
+    const natural = parts.map(([text, lang, own]) => (text && !own ? fetchJuvenal(text, lang, aulaId.current, level) : null));
+    for (let i = 0; i < parts.length; i++) {
+      const [text, lang, own] = parts[i];
       if (my !== talkId.current || !alive.current) break;
-      if (text) await speakAsync(text, { lang, who: TEACHER.who, voice: own });
+      if (!text) continue;
+      const url = natural[i] && await natural[i];
+      if (my !== talkId.current || !alive.current) break;
+      if (!url || !(await playUrl(url))) await speakAsync(text, { lang, who: TEACHER.who, voice: own });
     }
+    setVoiceOff(juvenalVoiceOff());
     if (my === talkId.current && alive.current) setTalking(false);
   }
 
@@ -234,12 +260,15 @@ function Lesson({ cfg, onExit, onAgain }) {
           <span className="muted" style={{ fontSize: 13 }}>{level} · {topic.title} · {Math.min(asks, MAX_STEPS)}/{MAX_STEPS}</span>
         </div>
         <button type="button" className="chip aula-voice" onClick={toggleVoice} aria-pressed={voice}>
-          <Icon name="sound" size={14} />{voice ? 'Voz (beta)' : 'Voz desligada'}
+          <Icon name="sound" size={14} />{voice ? 'Voz' : 'Voz desligada'}
         </button>
         {answered && <button type="button" className="btn btn-out" style={{ minHeight: 40 }} onClick={() => finish()} disabled={waiting}>{sumBusy ? 'Preparando…' : 'Terminar'}</button>}
       </header>
 
       <main className="aula-main" aria-live="polite">
+        {voice && /^limite-(aulas|site)$/.test(voiceOff) && (
+          <p className="aula-voice-note">Sua aula com a voz natural de hoje já foi usada. As falas novas seguem com a voz do aparelho.</p>
+        )}
         {fix && (
           <div className="cv-fix aula-fix">
             <span className="cv-fix-t"><Icon name="sparkle" size={14} />Você disse “{fix.you_said || lastAnswer}”. Melhor:</span>

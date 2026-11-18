@@ -48,6 +48,7 @@ export async function guard(req, kind) {
   });
   const { data: u, error: ue } = await sb.auth.getUser(token);
   if (ue || !u?.user) throw new HttpError(401, 'Sua sessão expirou. Entre de novo.');
+  if (!kind) return { user: u.user, left: null, sb }; // só confere o login (o limite é da própria rota)
   const { data: left, error } = await sb.rpc('ai_take', { p_kind: kind });
   if (error) {
     if (/ai_take|schema cache|does not exist/i.test(error.message || '')) throw new HttpError(503, 'O professor de IA ainda não foi ativado (falta rodar supabase/004_ia.sql).');

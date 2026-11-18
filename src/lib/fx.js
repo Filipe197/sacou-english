@@ -113,6 +113,9 @@ function playClip(url, slow) {
     a.play().catch((e) => { if (e?.name !== 'AbortError') finish(false, e?.name === 'NotAllowedError' ? 'blocked' : `play:${e?.name || '?'}`); });
   });
 }
+// Toca um áudio qualquer (ex.: voz natural do Juvenal vinda de api/voz.js) e espera terminar.
+export const playUrl = (url) => playClip(url, false);
+
 // voz do aparelho (plano B): tenta uma voz masculina para personagens homens
 let maleVoice;
 function ttsVoice(who) {

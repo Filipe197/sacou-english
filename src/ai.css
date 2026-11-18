@@ -235,3 +235,4 @@
 .dv-head .dv-note{margin:6px 0 0;font-size:12.5px;line-height:1.4;color:var(--text3)}
 @media(max-width:860px){.dv{min-height:auto}.dv-bar{bottom:calc(70px + env(safe-area-inset-bottom))}.dv-head{gap:12px;flex-wrap:wrap}.dv-ic{width:40px;height:40px}.dv-head-text{flex-basis:calc(100% - 52px)}.dv-head .dv-new{margin-left:52px}}
 @media(max-width:420px){.dv-bar .tutor-ask .btn{padding:0 14px}}
+.aula-voice-note{margin:0 0 10px;padding:8px 12px;border-radius:12px;background:var(--violet-l);color:var(--violet-text);font-size:13.5px;line-height:1.45}
