@@ -1,0 +1,1085 @@
+{
+ "id": "a1-u10",
+ "level": "A1",
+ "order": 10,
+ "title": "Corpo e sentimentos",
+ "subtitle": "Dizer como você está, o que dói e dar um conselho simples.",
+ "can_do": {
+  "text": "Consigo dizer como estou e o que estou sentindo, explicar o que dói e entender um conselho simples.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: trocas simples sobre necessidades imediatas, nível A1"
+ },
+ "core_inventory": [
+  "Topics: body and health",
+  "Feelings: I am / I feel + adjective",
+  "Advice: You should...",
+  "What's the matter? / My ... hurts"
+ ],
+ "words": [
+  [
+   "happy",
+   "feliz"
+  ],
+  [
+   "sad",
+   "triste"
+  ],
+  [
+   "tired",
+   "cansado(a)"
+  ],
+  [
+   "hungry",
+   "com fome"
+  ],
+  [
+   "angry",
+   "bravo(a) / com raiva"
+  ],
+  [
+   "sick",
+   "doente"
+  ],
+  [
+   "feel",
+   "sentir(-se)"
+  ],
+  [
+   "head",
+   "cabeça"
+  ],
+  [
+   "hand / arm",
+   "mão / braço"
+  ],
+  [
+   "leg",
+   "perna"
+  ],
+  [
+   "eye / ear",
+   "olho / orelha"
+  ],
+  [
+   "mouth / nose",
+   "boca / nariz"
+  ],
+  [
+   "hurt",
+   "doer"
+  ],
+  [
+   "headache",
+   "dor de cabeça"
+  ],
+  [
+   "fever",
+   "febre"
+  ],
+  [
+   "medicine",
+   "remédio"
+  ],
+  [
+   "should",
+   "deveria"
+  ],
+  [
+   "because",
+   "porque"
+  ]
+ ],
+ "guide": {
+  "title": "Como você está e o que dói",
+  "intro": "Para falar de sentimentos usamos o verbo to be (I am tired). Para dizer o que dói, a parte do corpo vem com \"hurts\". E para dar um conselho, \"should\".",
+  "points": [
+   {
+    "en": "I am tired. / I feel tired.",
+    "pt": "Estou cansado. / Me sinto cansado.",
+    "note": "Em português \"estou COM fome\", em inglês \"I AM hungry\": sem o \"com\"."
+   },
+   {
+    "en": "What's the matter?",
+    "pt": "O que você tem? / O que houve?",
+    "note": "Pergunta comum quando a pessoa parece mal."
+   },
+   {
+    "en": "My head hurts.",
+    "pt": "Minha cabeça dói.",
+    "note": "A parte do corpo + hurts (com -s): my arm hurts, my leg hurts."
+   },
+   {
+    "en": "I have a headache.",
+    "pt": "Estou com dor de cabeça.",
+    "note": "Também dá para dizer: I have a fever (estou com febre)."
+   },
+   {
+    "en": "You should drink water.",
+    "pt": "Você deveria beber água.",
+    "note": "\"Should\" + verbo = conselho. O verbo não muda: he should go."
+   },
+   {
+    "en": "I am happy because it is Friday.",
+    "pt": "Estou feliz porque é sexta.",
+    "note": "\"Because\" = porque, para explicar o motivo."
+   }
+  ],
+  "tips": [
+   "\"Are you OK?\" é o jeito mais simples de perguntar se a pessoa está bem.",
+   "Em inglês \"I am hungry\" (estou com fome) e \"I am afraid\" (estou com medo) usam o verbo to be."
+  ]
+ },
+ "extra_vocab": [],
+ "lessons": [
+  {
+   "id": "a1-u10-l1",
+   "title": "Como você está?",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l1-1",
+     "type": "match",
+     "pairs": [
+      [
+       "happy",
+       "feliz"
+      ],
+      [
+       "sad",
+       "triste"
+      ],
+      [
+       "tired",
+       "cansado"
+      ],
+      [
+       "hungry",
+       "com fome"
+      ]
+     ],
+     "why": "Com sentimentos usamos o verbo to be: I am happy, she is tired, we are hungry."
+    },
+    {
+     "id": "a1u10l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I am ___. I need to sleep.",
+     "pt": "Estou cansado. Preciso dormir.",
+     "options": [
+      "tired",
+      "hungry",
+      "happy"
+     ],
+     "answer": "tired",
+     "why": "Quem precisa dormir está cansado: tired.",
+     "wrong": {
+      "hungry": "\"Hungry\" é com fome: você precisaria comer.",
+      "happy": "\"Happy\" é feliz."
+     }
+    },
+    {
+     "id": "a1u10l1-3",
+     "type": "meaning",
+     "en": "She is angry with her brother.",
+     "options": [
+      "Ela está brava com o irmão.",
+      "Ela está triste com o irmão.",
+      "Ela está feliz com o irmão."
+     ],
+     "answer": "Ela está brava com o irmão.",
+     "why": "\"Angry\" = bravo, com raiva. \"Angry with\" = bravo com alguém."
+    },
+    {
+     "id": "a1u10l1-4",
+     "type": "build",
+     "pt": "Estou com fome.",
+     "answer": "I am hungry",
+     "extra": [
+      "have",
+      "with"
+     ],
+     "display": "I am hungry.",
+     "why": "Em inglês não é \"I have hunger\": é \"I am hungry\". Sem o \"com\"."
+    },
+    {
+     "id": "a1u10l1-5",
+     "type": "listen",
+     "en": "Are you OK?",
+     "options": [
+      "Você está bem?",
+      "Você está com fome?",
+      "Você está cansado?"
+     ],
+     "answer": "Você está bem?",
+     "why": "\"Are you OK?\" = você está bem? Muito usado quando alguém parece mal."
+    },
+    {
+     "id": "a1u10l1-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How are you today?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'm happy. It's Friday!",
+      "I'm Friday.",
+      "Yes, I do."
+     ],
+     "answer": "I'm happy. It's Friday!",
+     "pt": "Estou feliz. É sexta!",
+     "why": "Responda como você está: I'm happy, I'm tired...",
+     "wrong": {
+      "I'm Friday.": "Você não É sexta-feira!",
+      "Yes, I do.": "\"How\" pede como, não sim ou não."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l2",
+   "title": "O corpo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l2-1",
+     "type": "match",
+     "pairs": [
+      [
+       "head",
+       "cabeça"
+      ],
+      [
+       "hand",
+       "mão"
+      ],
+      [
+       "arm",
+       "braço"
+      ],
+      [
+       "leg",
+       "perna"
+      ]
+     ],
+     "why": "\"Hand\" é a mão e \"arm\" o braço. Não confunda!"
+    },
+    {
+     "id": "a1u10l2-2",
+     "type": "match",
+     "pairs": [
+      [
+       "eye",
+       "olho"
+      ],
+      [
+       "ear",
+       "orelha"
+      ],
+      [
+       "mouth",
+       "boca"
+      ],
+      [
+       "nose",
+       "nariz"
+      ]
+     ],
+     "why": "\"Eye\" soa como \"ái\", igual à palavra \"I\" (eu)."
+    },
+    {
+     "id": "a1u10l2-3",
+     "type": "meaning",
+     "en": "Wash your hands, please.",
+     "options": [
+      "Lave as mãos, por favor.",
+      "Levante as mãos, por favor.",
+      "Lave o rosto, por favor."
+     ],
+     "answer": "Lave as mãos, por favor.",
+     "why": "\"Wash\" = lavar. Em inglês dizemos \"your hands\" (as SUAS mãos)."
+    },
+    {
+     "id": "a1u10l2-4",
+     "type": "choice",
+     "prompt": "Com o que você ouve?",
+     "en": "I hear with my ___.",
+     "pt": "Eu ouço com as orelhas.",
+     "options": [
+      "ears",
+      "eyes",
+      "hands"
+     ],
+     "answer": "ears",
+     "why": "Ouvir (hear) com as orelhas (ears). Ver é com os olhos (eyes).",
+     "wrong": {
+      "eyes": "Com os olhos você vê.",
+      "hands": "Com as mãos você pega ou toca."
+     }
+    },
+    {
+     "id": "a1u10l2-5",
+     "type": "build",
+     "pt": "Ela tem olhos azuis.",
+     "answer": "She has blue eyes",
+     "extra": [
+      "is",
+      "eye"
+     ],
+     "display": "She has blue eyes.",
+     "why": "A cor vem antes: blue eyes. E \"she has\" = ela tem."
+    },
+    {
+     "id": "a1u10l2-6",
+     "type": "listen",
+     "en": "My leg hurts.",
+     "options": [
+      "Minha perna dói.",
+      "Minha cabeça dói.",
+      "Meu braço dói."
+     ],
+     "answer": "Minha perna dói.",
+     "why": "\"Leg\" = perna. \"Hurts\" = dói."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l3",
+   "title": "O que você tem?",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l3-1",
+     "type": "meaning",
+     "en": "What's the matter?",
+     "options": [
+      "O que você tem?",
+      "Qual é o seu nome?",
+      "O que você quer?"
+     ],
+     "answer": "O que você tem?",
+     "why": "\"What's the matter?\" = o que houve? o que você tem? Pergunta quando alguém não está bem."
+    },
+    {
+     "id": "a1u10l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "My head ___.",
+     "pt": "Minha cabeça dói.",
+     "options": [
+      "hurts",
+      "hurt",
+      "is hurt"
+     ],
+     "answer": "hurts",
+     "why": "\"My head\" é \"it\", então o verbo ganha -s: my head hurts.",
+     "wrong": {
+      "hurt": "Com \"my head\" (it) o verbo leva -s.",
+      "is hurt": "Para dor usamos só \"hurts\"."
+     }
+    },
+    {
+     "id": "a1u10l3-3",
+     "type": "meaning",
+     "en": "I have a headache and a fever.",
+     "options": [
+      "Estou com dor de cabeça e febre.",
+      "Estou com fome e sede.",
+      "Minha cabeça e meu braço doem."
+     ],
+     "answer": "Estou com dor de cabeça e febre.",
+     "why": "\"Headache\" = dor de cabeça (head + ache). \"Fever\" = febre."
+    },
+    {
+     "id": "a1u10l3-4",
+     "type": "choice",
+     "prompt": "Dê um conselho:",
+     "en": "You ___ go to the doctor.",
+     "pt": "Você deveria ir ao médico.",
+     "options": [
+      "should",
+      "is",
+      "are"
+     ],
+     "answer": "should",
+     "why": "\"Should\" + verbo = conselho: você deveria...",
+     "wrong": {
+      "is": "\"You is\" não existe.",
+      "are": "\"You are go\" não está certo."
+     }
+    },
+    {
+     "id": "a1u10l3-5",
+     "type": "build",
+     "pt": "Você deveria tomar o remédio.",
+     "answer": "You should take the medicine",
+     "extra": [
+      "takes",
+      "is"
+     ],
+     "display": "You should take the medicine.",
+     "why": "Remédio \"se toma\": take the medicine. Depois de \"should\" o verbo fica igual (take, nunca takes)."
+    },
+    {
+     "id": "a1u10l3-6",
+     "type": "listen",
+     "en": "I am sick today.",
+     "options": [
+      "Estou doente hoje.",
+      "Estou com fome hoje.",
+      "Estou triste hoje."
+     ],
+     "answer": "Estou doente hoje.",
+     "why": "\"Sick\" = doente."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l4",
+   "title": "Eu me sinto...",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l4-1",
+     "type": "meaning",
+     "en": "I feel happy because it is Friday.",
+     "options": [
+      "Estou feliz porque é sexta.",
+      "Estou feliz e é sexta.",
+      "Estou cansado porque é sexta."
+     ],
+     "answer": "Estou feliz porque é sexta.",
+     "why": "\"Feel\" = sentir-se. \"Because\" = porque, explica o motivo."
+    },
+    {
+     "id": "a1u10l4-2",
+     "type": "choice",
+     "prompt": "Complete com o motivo:",
+     "en": "She is sad ___ her cat is sick.",
+     "pt": "Ela está triste porque o gato dela está doente.",
+     "options": [
+      "because",
+      "but",
+      "and"
+     ],
+     "answer": "because",
+     "why": "\"Because\" = porque. O gato doente é o motivo da tristeza.",
+     "wrong": {
+      "but": "\"But\" = mas (ideia contrária).",
+      "and": "\"And\" = e (soma de ideias)."
+     }
+    },
+    {
+     "id": "a1u10l4-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He ___ tired today.",
+     "pt": "Ele se sente cansado hoje.",
+     "options": [
+      "feels",
+      "feel",
+      "is feel"
+     ],
+     "answer": "feels",
+     "why": "Com he, she e it o verbo ganha -s: he feels.",
+     "wrong": {
+      "feel": "Com \"he\" o verbo leva -s.",
+      "is feel": "Ou \"he is tired\" ou \"he feels tired\", não os dois."
+     }
+    },
+    {
+     "id": "a1u10l4-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "You look sad. What's the matter?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'm tired. I work a lot.",
+      "I'm fine, I'm sad.",
+      "Yes, please."
+     ],
+     "answer": "I'm tired. I work a lot.",
+     "pt": "Estou cansado. Trabalho muito.",
+     "why": "Quando perguntam \"What's the matter?\", explique o que você tem.",
+     "wrong": {
+      "I'm fine, I'm sad.": "As duas ideias se contradizem.",
+      "Yes, please.": "Responde uma oferta, não a pergunta."
+     }
+    },
+    {
+     "id": "a1u10l4-5",
+     "type": "build",
+     "pt": "Estou feliz porque você está aqui.",
+     "answer": "I am happy because you are here",
+     "extra": [
+      "but",
+      "is"
+     ],
+     "display": "I'm happy because you're here.",
+     "why": "\"Because\" liga a frase ao motivo: I am happy BECAUSE you are here."
+    },
+    {
+     "id": "a1u10l4-6",
+     "type": "meaning",
+     "en": "Don't be angry. It's OK!",
+     "options": [
+      "Não fique bravo. Está tudo bem!",
+      "Não fique triste. Está tudo bem!",
+      "Você está bravo? Tudo bem?"
+     ],
+     "answer": "Não fique bravo. Está tudo bem!",
+     "why": "\"Don't be...\" = não fique... \"Angry\" = bravo."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l5-1",
+     "type": "type",
+     "pt": "Estou cansado.",
+     "answer": "I am tired.",
+     "accept": [
+      "I'm tired."
+     ],
+     "why": "Com sentimentos usamos to be: I am tired."
+    },
+    {
+     "id": "a1u10l5-2",
+     "type": "type",
+     "pt": "Minha cabeça dói.",
+     "answer": "My head hurts.",
+     "why": "\"My head\" (it) + hurts, com -s."
+    },
+    {
+     "id": "a1u10l5-3",
+     "type": "dictation",
+     "en": "What's the matter?",
+     "why": "\"What's the matter?\" = o que você tem?"
+    },
+    {
+     "id": "a1u10l5-4",
+     "type": "type",
+     "pt": "Você deveria beber água.",
+     "answer": "You should drink water.",
+     "why": "\"Should\" + verbo sem mudança: should drink."
+    },
+    {
+     "id": "a1u10l5-5",
+     "type": "dictation",
+     "en": "She has a fever.",
+     "why": "\"Fever\" = febre. \"She has\" = ela tem."
+    },
+    {
+     "id": "a1u10l5-6",
+     "type": "type",
+     "pt": "Ele está com fome.",
+     "answer": "He is hungry.",
+     "accept": [
+      "He's hungry."
+     ],
+     "why": "Estar com fome = be hungry: he is hungry."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l6-1",
+     "type": "listen",
+     "en": "I have a headache.",
+     "options": [
+      "Estou com dor de cabeça.",
+      "Tenho uma cabeça.",
+      "Estou com febre."
+     ],
+     "answer": "Estou com dor de cabeça.",
+     "why": "\"Headache\" soa como \"HÉD-eik\"."
+    },
+    {
+     "id": "a1u10l6-2",
+     "type": "dictation",
+     "en": "My arm hurts.",
+     "why": "\"Arm\" = braço. \"Hurts\" = dói."
+    },
+    {
+     "id": "a1u10l6-3",
+     "type": "listen",
+     "en": "You should go to bed.",
+     "options": [
+      "Você deveria ir para a cama.",
+      "Você deveria ir ao médico.",
+      "Você está na cama."
+     ],
+     "answer": "Você deveria ir para a cama.",
+     "why": "\"Should\" soa como \"shud\", com o \"l\" mudo."
+    },
+    {
+     "id": "a1u10l6-4",
+     "type": "dictation",
+     "en": "I am happy today.",
+     "accept": [
+      "I'm happy today."
+     ],
+     "why": "\"Happy\" = feliz. \"Today\" = hoje."
+    },
+    {
+     "id": "a1u10l6-5",
+     "type": "listen",
+     "en": "Are you hungry?",
+     "options": [
+      "Você está com fome?",
+      "Você está bravo?",
+      "Você está bem?"
+     ],
+     "answer": "Você está com fome?",
+     "why": "\"Hungry\" = com fome. Não confunda com \"angry\" (bravo): HÂN-gri x ÉN-gri."
+    },
+    {
+     "id": "a1u10l6-6",
+     "type": "dictation",
+     "en": "Take this medicine.",
+     "why": "\"Medicine\" soa como \"MÉ-di-sin\" = remédio."
+    },
+    {
+     "id": "a1u10l6-7",
+     "type": "speak",
+     "en": "I feel tired today.",
+     "pt": "Estou cansado hoje.",
+     "why": "\"Tired\" soa como \"TÁI-erd\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What's the matter?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "My head hurts.",
+      "I'm from Brazil.",
+      "It's a head."
+     ],
+     "answer": "My head hurts.",
+     "pt": "Minha cabeça dói.",
+     "why": "\"What's the matter?\" pede o que está errado: diga o que dói.",
+     "wrong": {
+      "I'm from Brazil.": "Responde \"Where are you from?\".",
+      "It's a head.": "Não responde o que você tem."
+     }
+    },
+    {
+     "id": "a1u10l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I have a fever."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "You should go to the doctor.",
+      "You should eat ice cream.",
+      "Good morning!"
+     ],
+     "answer": "You should go to the doctor.",
+     "pt": "Você deveria ir ao médico.",
+     "why": "Com febre, o conselho certo é ir ao médico.",
+     "wrong": {
+      "You should eat ice cream.": "Não é um bom conselho para febre!",
+      "Good morning!": "É só um cumprimento."
+     }
+    },
+    {
+     "id": "a1u10l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Are you OK?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I'm fine. Thanks!",
+      "Yes, I do.",
+      "Yes, it is."
+     ],
+     "answer": "Yes, I'm fine. Thanks!",
+     "pt": "Sim, estou bem. Obrigado!",
+     "why": "\"Are you...?\" se responde com \"I am\": Yes, I'm fine.",
+     "wrong": {
+      "Yes, I do.": "Responde \"Do you...?\".",
+      "Yes, it is.": "Responde \"Is it...?\"."
+     }
+    },
+    {
+     "id": "a1u10l7-4",
+     "type": "speak",
+     "en": "My head hurts.",
+     "pt": "Minha cabeça dói.",
+     "why": "\"Hurts\" soa como \"hârts\"."
+    },
+    {
+     "id": "a1u10l7-5",
+     "type": "speak",
+     "en": "You should drink water.",
+     "pt": "Você deveria beber água.",
+     "why": "\"Should\" soa como \"shud\". \"Water\" soa como \"UÓ-ter\"."
+    },
+    {
+     "id": "a1u10l7-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Take this medicine two times a day."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "OK. Thank you, doctor.",
+      "You're welcome, doctor.",
+      "Sorry, doctor."
+     ],
+     "answer": "OK. Thank you, doctor.",
+     "pt": "Tá bom. Obrigado, doutor.",
+     "why": "Agradeça a orientação do médico: Thank you, doctor.",
+     "wrong": {
+      "You're welcome, doctor.": "\"You're welcome\" é \"de nada\".",
+      "Sorry, doctor.": "\"Sorry\" é para pedir desculpas."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l8",
+   "title": "Lendo: hoje não vou à aula",
+   "added": "2026-11",
+   "story": {
+    "title": "Hoje não vou à aula",
+    "lines": [
+     {
+      "who": "Sofia",
+      "en": "Hi, Laura! Sorry, I am sick today.",
+      "pt": "Oi, Laura! Desculpe, estou doente hoje."
+     },
+     {
+      "who": "Sofia",
+      "en": "I have a fever and my head hurts.",
+      "pt": "Estou com febre e minha cabeça dói."
+     },
+     {
+      "ask": "O que a Sofia sente?",
+      "options": [
+       "Febre e dor de cabeça",
+       "Fome e sede",
+       "Dor na perna"
+      ],
+      "answer": "Febre e dor de cabeça",
+      "why": "\"I have a fever and my head hurts\"."
+     },
+     {
+      "who": "Sofia",
+      "en": "The doctor says I should stay at home and drink a lot of water.",
+      "pt": "A médica disse que eu devo ficar em casa e beber muita água."
+     },
+     {
+      "who": "Sofia",
+      "en": "I am sad ___ I love our class!",
+      "pt": "Estou triste porque eu amo a nossa aula!",
+      "gap": {
+       "answer": "because",
+       "options": [
+        "because",
+        "but",
+        "or"
+       ]
+      }
+     },
+     {
+      "who": "Sofia",
+      "en": "See you on Thursday!",
+      "pt": "Até quinta!"
+     },
+     {
+      "ask": "Como a Sofia se sente por faltar?",
+      "options": [
+       "Triste",
+       "Feliz",
+       "Brava"
+      ],
+      "answer": "Triste",
+      "why": "\"I am sad because I love our class\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u10l8-1",
+     "type": "story",
+     "why": "Uma mensagem para a professora. Leia com calma e repare em como a Sofia explica o que tem."
+    },
+    {
+     "id": "a1u10l8-2",
+     "type": "quiz",
+     "q": "Por que a Sofia não vai à aula?",
+     "options": [
+      "Está doente",
+      "Está cansada",
+      "Está viajando"
+     ],
+     "answer": "Está doente",
+     "why": "\"I am sick today\" = estou doente hoje."
+    },
+    {
+     "id": "a1u10l8-3",
+     "type": "quiz",
+     "q": "O que a médica disse?",
+     "options": [
+      "Ficar em casa e beber água",
+      "Ir à escola",
+      "Comer sorvete"
+     ],
+     "answer": "Ficar em casa e beber água",
+     "why": "\"I should stay at home and drink a lot of water\"."
+    },
+    {
+     "id": "a1u10l8-4",
+     "type": "quiz",
+     "q": "Quando a Sofia volta?",
+     "options": [
+      "Na quinta",
+      "Na segunda",
+      "Hoje à noite"
+     ],
+     "answer": "Na quinta",
+     "why": "\"See you on Thursday!\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u10l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "You ___ eat something. You are hungry!",
+     "pt": "Você deveria comer alguma coisa. Você está com fome!",
+     "options": [
+      "should",
+      "are",
+      "is"
+     ],
+     "answer": "should",
+     "why": "Conselho: should + verbo.",
+     "wrong": {
+      "are": "\"You are eat\" não existe.",
+      "is": "\"You is\" não existe."
+     }
+    },
+    {
+     "id": "a1u10l9-2",
+     "type": "type",
+     "pt": "Estou triste.",
+     "answer": "I am sad.",
+     "accept": [
+      "I'm sad."
+     ],
+     "why": "\"Sad\" = triste. O contrário é \"happy\"."
+    },
+    {
+     "id": "a1u10l9-3",
+     "type": "meaning",
+     "en": "My eyes hurt. I am very tired.",
+     "options": [
+      "Meus olhos doem. Estou muito cansado.",
+      "Minhas orelhas doem. Estou com fome.",
+      "Meus olhos estão bem. Estou feliz."
+     ],
+     "answer": "Meus olhos doem. Estou muito cansado.",
+     "why": "Com \"my eyes\" (they) o verbo fica sem -s: my eyes hurt."
+    },
+    {
+     "id": "a1u10l9-4",
+     "type": "dictation",
+     "en": "I have a headache.",
+     "why": "\"Headache\" = dor de cabeça."
+    },
+    {
+     "id": "a1u10l9-5",
+     "type": "listen",
+     "en": "She is angry because she is hungry.",
+     "options": [
+      "Ela está brava porque está com fome.",
+      "Ela está com fome porque está brava.",
+      "Ela está triste porque está cansada."
+     ],
+     "answer": "Ela está brava porque está com fome.",
+     "why": "Ouça bem: ANGRY (brava) e HUNGRY (com fome) soam parecido."
+    },
+    {
+     "id": "a1u10l9-6",
+     "type": "speak",
+     "en": "I am happy because it is Friday.",
+     "pt": "Estou feliz porque é sexta.",
+     "why": "\"Because\" soa como \"bi-KÓZ\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l10",
+   "title": "História: no médico",
+   "added": "2026-11",
+   "story": {
+    "title": "No médico",
+    "lines": [
+     {
+      "who": "Laura",
+      "en": "Good morning, Pedro. What's the matter?",
+      "pt": "Bom dia, Pedro. O que você tem?"
+     },
+     {
+      "who": "Pedro",
+      "en": "Good morning, doctor. My head hurts, and my arm hurts too.",
+      "pt": "Bom dia, doutora. Minha cabeça dói, e meu braço também."
+     },
+     {
+      "ask": "Onde o Pedro está?",
+      "options": [
+       "No médico",
+       "Na escola",
+       "No restaurante"
+      ],
+      "answer": "No médico",
+      "why": "Ele fala com a médica: \"doctor\"."
+     },
+     {
+      "who": "Laura",
+      "en": "Do you have a fever?",
+      "pt": "Você está com febre?"
+     },
+     {
+      "who": "Pedro",
+      "en": "No, I don't. But I am very ___.",
+      "pt": "Não. Mas estou muito cansado.",
+      "gap": {
+       "answer": "tired",
+       "options": [
+        "tired",
+        "happy",
+        "hungry"
+       ]
+      }
+     },
+     {
+      "who": "Laura",
+      "en": "You should sleep more. And take this medicine two times a day.",
+      "pt": "Você deveria dormir mais. E tomar este remédio duas vezes por dia."
+     },
+     {
+      "ask": "O que a médica aconselha?",
+      "options": [
+       "Dormir mais e tomar o remédio",
+       "Trabalhar mais",
+       "Comer mais"
+      ],
+      "answer": "Dormir mais e tomar o remédio",
+      "why": "\"You should sleep more. And take this medicine\"."
+     },
+     {
+      "who": "Pedro",
+      "en": "Thank you, doctor! I feel happy now.",
+      "pt": "Obrigado, doutora! Agora me sinto feliz."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u10l10-1",
+     "type": "story",
+     "why": "O Pedro vai ao médico. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "a1u10l10-2",
+     "type": "quiz",
+     "q": "O que dói no Pedro?",
+     "options": [
+      "A cabeça e o braço",
+      "A perna",
+      "Os olhos"
+     ],
+     "answer": "A cabeça e o braço",
+     "why": "\"My head hurts, and my arm hurts too\"."
+    },
+    {
+     "id": "a1u10l10-3",
+     "type": "quiz",
+     "q": "Quantas vezes por dia ele toma o remédio?",
+     "options": [
+      "Duas",
+      "Uma",
+      "Três"
+     ],
+     "answer": "Duas",
+     "why": "\"Take this medicine two times a day\"."
+    },
+    {
+     "id": "a1u10l10-4",
+     "type": "quiz",
+     "q": "Como o Pedro se sente no fim?",
+     "options": [
+      "Feliz",
+      "Bravo",
+      "Triste"
+     ],
+     "answer": "Feliz",
+     "why": "\"I feel happy now\" = agora me sinto feliz."
+    }
+   ]
+  }
+ ]
+}

@@ -907,6 +907,102 @@
    ]
   },
   {
+   "id": "pod-a1u10",
+   "level": "A1",
+   "unlock": "a1-u10",
+   "title": "Como você está hoje?",
+   "intro": "A Ana não está bem hoje. O Tom quer saber o que ela tem e dá um conselho.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello! Ana, are you OK?",
+     "pt": "E eu sou o Tom. Olá! Ana, você está bem?"
+    },
+    {
+     "who": "ana",
+     "en": "Not really. I am very tired today.",
+     "pt": "Não muito. Estou muito cansada hoje."
+    },
+    {
+     "who": "tom",
+     "en": "Oh no! What's the matter?",
+     "pt": "Ah, não! O que você tem?"
+    },
+    {
+     "who": "ana",
+     "en": "My head hurts, and I have a little fever.",
+     "pt": "Minha cabeça dói, e estou com um pouco de febre."
+    },
+    {
+     "who": "tom",
+     "en": "You should drink a lot of water.",
+     "pt": "Você deveria beber muita água."
+    },
+    {
+     "who": "ana",
+     "en": "Yes, and I should sleep more.",
+     "pt": "Sim, e eu deveria dormir mais."
+    },
+    {
+     "who": "tom",
+     "en": "And you should go to the doctor!",
+     "pt": "E você deveria ir ao médico!"
+    },
+    {
+     "who": "ana",
+     "en": "OK, OK! Thank you, Tom. I feel happy because you are a good friend.",
+     "pt": "Tá bom, tá bom! Obrigada, Tom. Fico feliz porque você é um bom amigo."
+    },
+    {
+     "who": "tom",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigado por ouvir!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Como a Ana está hoje?",
+     "options": [
+      "Muito cansada",
+      "Muito feliz",
+      "Com fome"
+     ],
+     "answer": "Muito cansada",
+     "why": "\"I am very tired today\"."
+    },
+    {
+     "q": "O que a Ana sente?",
+     "options": [
+      "Dor de cabeça e um pouco de febre",
+      "Dor na perna",
+      "Dor nos olhos"
+     ],
+     "answer": "Dor de cabeça e um pouco de febre",
+     "why": "\"My head hurts, and I have a little fever\"."
+    },
+    {
+     "q": "Qual conselho o Tom NÃO dá?",
+     "options": [
+      "Comer sorvete",
+      "Beber muita água",
+      "Ir ao médico"
+     ],
+     "answer": "Comer sorvete",
+     "why": "O Tom diz para beber água e ir ao médico."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",

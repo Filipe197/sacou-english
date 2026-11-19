@@ -7,7 +7,7 @@ const SCENES = {
   'a1-u1': ['standing-1', 'hi'], 'a1-u2': ['standing-11', 'nametag'], 'a1-u3': ['standing-13', 'party'],
   'a1-u4': ['standing-19', 'dog', 'standing-12'], 'a1-u5': ['standing-3', 'colors'], 'a1-u6': ['standing-5', 'clock'],
   'a1-u7': ['standing-16', 'food'], 'a1-u8': ['standing-22', 'city'],
-  'a1-u9': ['standing-14', 'house'],
+  'a1-u9': ['standing-14', 'house'], 'a1-u10': ['sitting-5', 'mug'],
   'a2-u1': ['standing-9', 'beach'], 'a2-u2': ['sitting-2', 'popcorn'], 'a2-u3': ['standing-18', 'suitcase'],
   'a2-u4': ['sitting-4', 'phone'], 'a2-u5': ['standing-2', 'boxes'], 'a2-u6': ['standing-21', 'calendar'],
   'a2-u7': ['standing-6', 'bags'], 'a2-u8': ['sitting-3', 'guitar'],
