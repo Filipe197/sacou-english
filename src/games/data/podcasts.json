@@ -1291,6 +1291,102 @@
    ]
   },
   {
+   "id": "pod-a1u14",
+   "level": "A1",
+   "unlock": "a1-u14",
+   "title": "Ao vivo!",
+   "intro": "Um episódio ao vivo: a Ana conta o que está acontecendo no estúdio agora.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Today we are live! Tom, what are you doing right now?",
+     "pt": "Hoje estamos ao vivo! Tom, o que você está fazendo neste momento?"
+    },
+    {
+     "who": "tom",
+     "en": "I'm drinking coffee and reading your messages.",
+     "pt": "Estou tomando café e lendo as mensagens de vocês."
+    },
+    {
+     "who": "ana",
+     "en": "And look! It is raining outside.",
+     "pt": "E olha! Está chovendo lá fora."
+    },
+    {
+     "who": "tom",
+     "en": "Yes, and a man is running with an umbrella!",
+     "pt": "Sim, e um homem está correndo com um guarda-chuva!"
+    },
+    {
+     "who": "ana",
+     "en": "Ha! What are you doing at home? Write to us!",
+     "pt": "Ha! E vocês, o que estão fazendo em casa? Escrevam para a gente!"
+    },
+    {
+     "who": "tom",
+     "en": "Maria is listening in her car. Lucas is cooking dinner.",
+     "pt": "A Maria está ouvindo no carro. O Lucas está fazendo o jantar."
+    },
+    {
+     "who": "ana",
+     "en": "Thank you! We love your messages.",
+     "pt": "Obrigada! A gente adora as mensagens de vocês."
+    },
+    {
+     "who": "tom",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigado por ouvir!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom está fazendo?",
+     "options": [
+      "Tomando café e lendo mensagens",
+      "Cozinhando",
+      "Correndo na chuva"
+     ],
+     "answer": "Tomando café e lendo mensagens",
+     "why": "\"I'm drinking coffee and reading your messages\"."
+    },
+    {
+     "q": "Como está o tempo lá fora?",
+     "options": [
+      "Chovendo",
+      "Ensolarado",
+      "Nevando"
+     ],
+     "answer": "Chovendo",
+     "why": "\"It is raining outside\"."
+    },
+    {
+     "q": "Onde a Maria está ouvindo o podcast?",
+     "options": [
+      "No carro",
+      "Na cozinha",
+      "No parque"
+     ],
+     "answer": "No carro",
+     "why": "\"Maria is listening in her car\"."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",
