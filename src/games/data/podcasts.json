@@ -1003,6 +1003,102 @@
    ]
   },
   {
+   "id": "pod-a1u11",
+   "level": "A1",
+   "unlock": "a1-u11",
+   "title": "Compras com a Ana",
+   "intro": "A Ana comprou roupas novas. O Tom quer saber o que ela comprou e quanto custou.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello! Ana, I like your new jacket!",
+     "pt": "E eu sou o Tom. Olá! Ana, gostei da sua jaqueta nova!"
+    },
+    {
+     "who": "ana",
+     "en": "Thank you! There is a big sale at the shop near my house.",
+     "pt": "Obrigada! Tem uma grande promoção na loja perto da minha casa."
+    },
+    {
+     "who": "tom",
+     "en": "How much is it?",
+     "pt": "Quanto custou?"
+    },
+    {
+     "who": "ana",
+     "en": "It's only thirty dollars!",
+     "pt": "Só trinta dólares!"
+    },
+    {
+     "who": "tom",
+     "en": "Wow! Do they have shoes?",
+     "pt": "Nossa! Eles têm sapatos?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, but the shoes are too expensive. They are ninety dollars.",
+     "pt": "Têm, mas os sapatos são caros demais. Custam noventa dólares."
+    },
+    {
+     "who": "tom",
+     "en": "Ninety? Oh no! I need a new T-shirt.",
+     "pt": "Noventa? Ah, não! Eu preciso de uma camiseta nova."
+    },
+    {
+     "who": "ana",
+     "en": "T-shirts are ten dollars. You should go on Saturday!",
+     "pt": "As camisetas custam dez dólares. Você deveria ir no sábado!"
+    },
+    {
+     "who": "tom",
+     "en": "Good idea! That's all for today. Thank you for listening!",
+     "pt": "Boa ideia! Por hoje é só. Obrigado por ouvir!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quanto custou a jaqueta da Ana?",
+     "options": [
+      "30 dólares",
+      "13 dólares",
+      "90 dólares"
+     ],
+     "answer": "30 dólares",
+     "why": "\"It's only thirty dollars!\"."
+    },
+    {
+     "q": "Por que a Ana não comprou sapatos?",
+     "options": [
+      "Eram caros demais",
+      "Eram pequenos demais",
+      "Não tinha sapatos"
+     ],
+     "answer": "Eram caros demais",
+     "why": "\"The shoes are too expensive\"."
+    },
+    {
+     "q": "O que o Tom precisa comprar?",
+     "options": [
+      "Uma camiseta",
+      "Uma jaqueta",
+      "Sapatos"
+     ],
+     "answer": "Uma camiseta",
+     "why": "\"I need a new T-shirt\"."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",

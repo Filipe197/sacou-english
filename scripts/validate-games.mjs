@@ -14,7 +14,7 @@ const units = new Set(fs.readdirSync(path.join(root, 'src/content')).filter(d =>
   .flatMap(d => fs.readdirSync(path.join(root, 'src/content', d)).map(f => JSON.parse(fs.readFileSync(path.join(root, 'src/content', d, f), 'utf8')).id)));
 
 // nomes dos personagens e algumas palavras de cenário (lugares e moeda) liberados
-const EXTRA = new Set([...Object.values(cast).map(c => c.name.toLowerCase()), 'scotland', 'silva', 'wi', 'fi', 'ok', 'pounds', 'pound', 'goodbye', 'podcast', 'podcasts', 'mum', 'rio', 'chips', 'app', 'apps', 'phrasal']);
+const EXTRA = new Set([...Object.values(cast).map(c => c.name.toLowerCase()), 'scotland', 'silva', 'wi', 'fi', 'ok', 'pounds', 'pound', 'goodbye', 'podcast', 'podcasts', 'mum', 'rio', 'chips', 'app', 'apps', 'phrasal', 't']); // 't': de "T-shirt" (A1), cortada no hífen
 const errors = [];
 const err = (w, m) => errors.push(`${w}: ${m}`);
 let words = 0;

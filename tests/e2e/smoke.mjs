@@ -408,7 +408,7 @@ await test('falar: "não posso falar agora" abre as palavras para montar a frase
   await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a frase montada não foi aceita'); });
 });
 
-await test('A1 completo: unidades novas (9 e 10) na trilha, com guia', async () => {
+await test('A1 completo: unidades novas (9 a 11) na trilha, com guia', async () => {
   await open('/aprender');
   await expectText('Minha casa');
   await open('/guia/a1-u9');
@@ -416,6 +416,8 @@ await test('A1 completo: unidades novas (9 e 10) na trilha, com guia', async () 
   await expectText('The clock is above the door.');
   await open('/guia/a1-u10');
   await expectText('Como você está e o que dói');
+  await open('/guia/a1-u11');
+  await expectText('Comprando roupas');
 });
 
 await browser.close();

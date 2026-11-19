@@ -1,0 +1,155 @@
+// Etapa 2 do A1 completo (docs/plano-expansao-a1.md): unidade nova 11 — Roupas e compras.
+// Gera src/content/a1/unit-11.json (todas as lições com "added").
+// Uso: node scripts/content-add/a1-u11.mjs  (pode rodar de novo: reescreve a unidade)
+import { writeUnit } from './lib.mjs';
+
+const L = (n, title, items, story) => ({ id: `a1-u11-l${n}`, title, ...(story ? { story } : {}), items });
+const I = (n, k, o) => ({ id: `a1u11l${n}-${k}`, ...o });
+
+writeUnit('a1/unit-11.json', {
+  id: 'a1-u11', level: 'A1', order: 11,
+  title: 'Roupas e compras',
+  subtitle: 'Roupas, preços e como comprar numa loja.',
+  can_do: {
+    text: 'Consigo comprar numa loja: pedir o que quero, perguntar o preço e o tamanho, e pagar.',
+    source: 'CEFR (Conselho da Europa) — Interação: obter bens e serviços, nível A1',
+  },
+  core_inventory: ['Topics: clothes and shopping', 'How much is / are...?', 'too + adjective', 'Can I...? (pedidos)'],
+  words: [
+    ['clothes', 'roupas'],
+    ['shirt / T-shirt', 'camisa / camiseta'],
+    ['dress / skirt', 'vestido / saia'],
+    ['jeans', 'calça jeans'],
+    ['jacket / coat', 'jaqueta / casaco'],
+    ['shoe', 'sapato'],
+    ['hat', 'chapéu'],
+    ['size', 'tamanho'],
+    ['how much', 'quanto (custa)'],
+    ['dollar', 'dólar'],
+    ['money', 'dinheiro'],
+    ['buy / pay', 'comprar / pagar'],
+    ['try on', 'experimentar (roupa)'],
+    ['too big / too small', 'grande demais / pequeno demais'],
+    ['shop', 'loja'],
+    ['card', 'cartão'],
+  ],
+  guide: {
+    title: 'Comprando roupas',
+    intro: 'Numa loja você precisa de poucas frases: perguntar o preço, pedir para experimentar, falar do tamanho e pagar. Com elas você já compra em qualquer lugar.',
+    points: [
+      { en: 'How much is this T-shirt?', pt: 'Quanto custa esta camiseta?', note: 'Uma coisa: "How much IS this...?". A resposta: "It\'s ten dollars."' },
+      { en: 'How much are these shoes?', pt: 'Quanto custam estes sapatos?', note: 'Várias coisas: "How much ARE these...?". A resposta: "They\'re forty dollars."' },
+      { en: 'Can I try it on?', pt: 'Posso experimentar?', note: '"Try on" = experimentar roupa. "It" vem no meio: try IT on.' },
+      { en: 'It is too small.', pt: 'É pequeno demais.', note: '"Too" + adjetivo = demais: too big, too small, too expensive.' },
+      { en: 'Can I pay by card?', pt: 'Posso pagar com cartão?', note: 'Com cartão: "by card". Em dinheiro: "in cash".' },
+    ],
+    tips: ['"Clothes" (roupas) sempre fica no plural.', '"Jeans" e "shoes" são plurais: these jeans ARE nice.'],
+  },
+  extra_vocab: [
+    { word: 't', reason: 'Parte de "T-shirt" (A1 na CEFR-J): o validador separa a palavra no hífen.' },
+    { word: 'cash', reason: 'Pagar "in cash" (em dinheiro) é parte básica de fazer compras, objetivo desta unidade A1; na CEFR-J "cash" aparece no A2.' },
+  ],
+  lessons: [
+    L(1, 'As roupas', [
+      I(1, 1, { type: 'match', pairs: [['shirt', 'camisa'], ['dress', 'vestido'], ['skirt', 'saia'], ['jacket', 'jaqueta']], why: '"Shirt" é a camisa de botão. Camiseta é "T-shirt" (tem a forma de um T).' }),
+      I(1, 2, { type: 'match', pairs: [['shoes', 'sapatos'], ['hat', 'chapéu'], ['coat', 'casaco'], ['jeans', 'calça jeans']], why: '"Jeans" e "shoes" são plurais em inglês: these jeans, these shoes.' }),
+      I(1, 3, { type: 'meaning', en: 'I like your new dress!', options: ['Gostei do seu vestido novo!', 'Gostei da sua saia nova!', 'Gostei do seu chapéu novo!'], answer: 'Gostei do seu vestido novo!', why: '"Dress" = vestido. O adjetivo vem antes: new dress.' }),
+      I(1, 4, { type: 'choice', prompt: 'Complete:', en: 'These jeans ___ blue.', pt: 'Esta calça jeans é azul.', options: ['are', 'is', 'am'], answer: 'are', why: '"Jeans" é plural em inglês, então usamos "are".', wrong: { is: 'Em português é "a calça", mas em inglês "jeans" é plural.', am: '"Am" só vai com "I".' } }),
+      I(1, 5, { type: 'build', pt: 'Ela está de saia vermelha.', answer: 'She has a red skirt', extra: ['is', 'shirt'], display: 'She has a red skirt.', why: 'A cor vem antes da roupa: red skirt = saia vermelha.' }),
+      I(1, 6, { type: 'listen', en: 'Where are my shoes?', options: ['Onde estão meus sapatos?', 'Onde está meu chapéu?', 'De quem são estes sapatos?'], answer: 'Onde estão meus sapatos?', why: '"Shoes" soa como "shuuz".' }),
+    ]),
+    L(2, 'Quanto custa?', [
+      I(2, 1, { type: 'meaning', en: 'How much is this T-shirt?', options: ['Quanto custa esta camiseta?', 'Quantas camisetas tem?', 'De quem é esta camiseta?'], answer: 'Quanto custa esta camiseta?', why: '"How much is...?" = quanto custa...? para uma coisa só.' }),
+      I(2, 2, { type: 'choice', prompt: 'Complete:', en: 'How much ___ these shoes?', pt: 'Quanto custam estes sapatos?', options: ['are', 'is', 'do'], answer: 'are', why: '"These shoes" é plural, então "are".', wrong: { is: '"Is" é para uma coisa (this shoe).', do: 'Com preço usamos "How much is/are".' } }),
+      I(2, 3, { type: 'choice', prompt: 'Responda o preço:', en: "___ forty dollars.", pt: 'Custam quarenta dólares.', options: ["They're", "It's", "There's"], answer: "They're", why: 'Os sapatos são plural: they are (they\'re) forty dollars.', wrong: { "It's": '"It" é para uma coisa só.', "There's": '"There is" é "tem/existe".' } }),
+      I(2, 4, { type: 'listen', en: "It's fifteen dollars.", options: ['Custa quinze dólares.', 'Custa cinquenta dólares.', 'Custa cinco dólares.'], answer: 'Custa quinze dólares.', why: 'Atenção: fif-TEEN (15) tem a força no fim; FIF-ty (50) no começo.' }),
+      I(2, 5, { type: 'build', pt: 'Quanto custa este chapéu?', answer: 'How much is this hat', extra: ['are', 'many'], display: 'How much is this hat?', why: 'Preço de uma coisa: How much IS + this + a coisa.' }),
+      I(2, 6, { type: 'meaning', en: 'I have no money!', options: ['Estou sem dinheiro!', 'Tenho muito dinheiro!', 'Não tenho cartão!'], answer: 'Estou sem dinheiro!', why: '"Money" = dinheiro. "I have no..." = não tenho nenhum...' }),
+    ]),
+    L(3, 'Na loja', [
+      I(3, 1, { type: 'meaning', en: 'Can I help you?', options: ['Posso ajudar?', 'Você pode me ajudar?', 'Posso experimentar?'], answer: 'Posso ajudar?', why: 'É o que o vendedor diz quando você entra na loja.' }),
+      I(3, 2, { type: 'choice', prompt: 'Você quer experimentar a jaqueta:', en: 'Can I try it ___?', pt: 'Posso experimentar?', options: ['on', 'in', 'at'], answer: 'on', why: '"Try on" = experimentar roupa. O "it" fica no meio: try IT on.', wrong: { in: '"Try in" não existe.', at: '"Try at" não existe.' } }),
+      I(3, 3, { type: 'meaning', en: 'What size are you?', options: ['Qual é o seu tamanho?', 'Qual é a sua cor?', 'Quanto custa?'], answer: 'Qual é o seu tamanho?', why: '"Size" = tamanho: small (P), medium (M), large (G).' }),
+      I(3, 4, { type: 'choice', prompt: 'A camisa não serve, falta espaço:', en: 'This shirt is too ___.', pt: 'Esta camisa é pequena demais.', options: ['small', 'big', 'old'], answer: 'small', why: '"Too small" = pequeno demais (não cabe).', wrong: { big: '"Too big" seria grande demais.', old: '"Old" é velho, não fala do tamanho.' } }),
+      I(3, 5, { type: 'build', pt: 'Posso pagar com cartão?', answer: 'Can I pay by card', extra: ['with', 'buy'], display: 'Can I pay by card?', why: 'Pagar com cartão é "pay BY card". "Buy" é comprar.' }),
+      I(3, 6, { type: 'listen', en: "I'm looking for a jacket.", options: ['Estou procurando uma jaqueta.', 'Estou olhando uma jaqueta.', 'Eu tenho uma jaqueta.'], answer: 'Estou procurando uma jaqueta.', why: '"Look for" = procurar. "I\'m looking for..." é a frase certa na loja.' }),
+    ]),
+    L(4, 'Grande demais, caro demais', [
+      I(4, 1, { type: 'match', pairs: [['too big', 'grande demais'], ['too small', 'pequeno demais'], ['too expensive', 'caro demais'], ['very nice', 'muito bonito']], why: '"Too" é demais (um problema). "Very" é muito (pode ser bom).' }),
+      I(4, 2, { type: 'choice', prompt: 'Complete:', en: "I like it, but it's ___ expensive.", pt: 'Eu gosto, mas é caro demais.', options: ['too', 'very', 'many'], answer: 'too', why: '"Too expensive" = caro demais (por isso não compro). O "but" mostra o problema.', wrong: { very: '"Very expensive" é só "muito caro": não mostra que é um problema.', many: '"Many" é muitos (quantidade).' } }),
+      I(4, 3, { type: 'meaning', en: 'I want to buy a new coat.', options: ['Quero comprar um casaco novo.', 'Quero vender um casaco novo.', 'Quero experimentar um casaco.'], answer: 'Quero comprar um casaco novo.', why: '"Buy" = comprar. "Want to" = querer.' }),
+      I(4, 4, { type: 'dialogue', lines: [['A', 'Here you are. Try this one.'], ['B', '___']], options: ["Thanks! Oh, it's too big.", 'You are welcome.', 'Yes, I am big.'], answer: "Thanks! Oh, it's too big.", pt: 'Obrigado! Ah, é grande demais.', why: 'Agradeça e diga se serviu: too big, too small ou perfect.', wrong: { 'You are welcome.': 'Quem diz "de nada" é o vendedor, não você.', 'Yes, I am big.': 'Não responde ao que o vendedor fez.' } }),
+      I(4, 5, { type: 'build', pt: 'Estes sapatos são caros demais.', answer: 'These shoes are too expensive', extra: ['is', 'very'], display: 'These shoes are too expensive.', why: '"These shoes" (plural) + are + too expensive.' }),
+      I(4, 6, { type: 'meaning', en: 'Can I pay in cash?', options: ['Posso pagar em dinheiro?', 'Posso pagar com cartão?', 'Posso pagar depois?'], answer: 'Posso pagar em dinheiro?', why: '"In cash" = em dinheiro vivo. Com cartão: "by card".' }),
+    ]),
+    L(5, 'Escrevendo', [
+      I(5, 1, { type: 'type', pt: 'Quanto custa esta camiseta?', answer: 'How much is this T-shirt?', accept: ['How much is this t-shirt?'], why: 'Uma coisa: How much IS this...?' }),
+      I(5, 2, { type: 'type', pt: 'Posso experimentar?', answer: 'Can I try it on?', why: '"Try it on" = experimentar (roupa).' }),
+      I(5, 3, { type: 'dictation', en: 'These shoes are too small.', why: '"Too small" = pequeno demais.' }),
+      I(5, 4, { type: 'type', pt: 'Custa vinte dólares.', answer: "It's twenty dollars.", accept: ['It is twenty dollars.'], why: 'Preço de uma coisa: It is (it\'s) + valor.' }),
+      I(5, 5, { type: 'dictation', en: 'Can I pay by card?', why: '"By card" = com cartão.' }),
+      I(5, 6, { type: 'type', pt: 'Eu gosto deste vestido.', answer: 'I like this dress.', why: '"This dress" = este vestido. "Like" = gostar.' }),
+    ]),
+    L(6, 'Ouvindo', [
+      I(6, 1, { type: 'listen', en: 'How much are these jeans?', options: ['Quanto custa esta calça jeans?', 'Quanto custa esta jaqueta?', 'Onde está a calça jeans?'], answer: 'Quanto custa esta calça jeans?', why: '"Jeans" é plural, por isso "are".' }),
+      I(6, 2, { type: 'dictation', en: "It's thirty dollars.", accept: ['It is thirty dollars.'], why: '"Thirty" = 30. "Dollars" = dólares.' }),
+      I(6, 3, { type: 'listen', en: 'This hat is too big.', options: ['Este chapéu é grande demais.', 'Este chapéu é muito bonito.', 'Este casaco é grande demais.'], answer: 'Este chapéu é grande demais.', why: '"Too big" = grande demais.' }),
+      I(6, 4, { type: 'dictation', en: "I'm looking for a shirt.", accept: ['I am looking for a shirt.'], why: '"Look for" = procurar.' }),
+      I(6, 5, { type: 'listen', en: 'Can I help you?', options: ['Posso ajudar?', 'Pode me ajudar?', 'Posso pagar?'], answer: 'Posso ajudar?', why: 'Frase do vendedor: Can I help you?' }),
+      I(6, 6, { type: 'dictation', en: 'I want to buy a dress.', why: '"Buy" = comprar. "Dress" = vestido.' }),
+      I(6, 7, { type: 'speak', en: 'How much is this jacket?', pt: 'Quanto custa esta jaqueta?', why: '"Jacket" soa como "DJÉ-ket".' }),
+    ]),
+    L(7, 'Conversa de verdade', [
+      I(7, 1, { type: 'dialogue', lines: [['A', 'Hello! Can I help you?'], ['B', '___']], options: ["Yes, I'm looking for a jacket.", 'Yes, you can help.', 'No, I am a jacket.'], answer: "Yes, I'm looking for a jacket.", pt: 'Sim, estou procurando uma jaqueta.', why: 'Diga o que você procura: I\'m looking for...', wrong: { 'Yes, you can help.': 'Não diz o que você quer.', 'No, I am a jacket.': 'Você não é uma jaqueta!' } }),
+      I(7, 2, { type: 'dialogue', lines: [['A', 'How much is it?'], ['B', '___']], options: ["It's twenty-five dollars.", "They're blue.", 'Size small.'], answer: "It's twenty-five dollars.", pt: 'Custa vinte e cinco dólares.', why: '"How much" pede o preço.', wrong: { "They're blue.": 'Fala da cor.', 'Size small.': 'Fala do tamanho.' } }),
+      I(7, 3, { type: 'dialogue', lines: [['A', 'Can I try it on?'], ['B', '___']], options: ['Sure! The room is over there.', "No, it's twenty dollars.", 'Yes, by card.'], answer: 'Sure! The room is over there.', pt: 'Claro! O provador é ali.', why: '"Sure" = claro. "Over there" = ali.', wrong: { "No, it's twenty dollars.": 'Fala do preço, não responde o pedido.', 'Yes, by card.': 'Fala de pagamento.' } }),
+      I(7, 4, { type: 'speak', en: 'Can I try it on?', pt: 'Posso experimentar?', why: 'Fale ligando: "ken ai TRAI-ít-on".' }),
+      I(7, 5, { type: 'speak', en: 'Can I pay by card?', pt: 'Posso pagar com cartão?', why: '"Card" soa como "kard" (americano) ou "kaad" (britânico).' }),
+      I(7, 6, { type: 'dialogue', lines: [['A', 'So, do you want it?'], ['B', '___']], options: ["Yes, I'll take it!", "Yes, I'm it!", 'Yes, it is!'], answer: "Yes, I'll take it!", pt: 'Sim, vou levar!', why: '"I\'ll take it" = vou levar. É o jeito de dizer que vai comprar.', wrong: { "Yes, I'm it!": 'Não faz sentido.', 'Yes, it is!': 'Responde "Is it...?".' } }),
+    ]),
+    L(8, 'Lendo: promoção!', [
+      I(8, 1, { type: 'story', why: 'Um anúncio de promoção numa loja. Leia com atenção os preços.' }),
+      I(8, 2, { type: 'quiz', q: 'Quanto custam as camisetas?', options: ['10 dólares', '20 dólares', '45 dólares'], answer: '10 dólares', why: '"T-shirts: only ten dollars!".' }),
+      I(8, 3, { type: 'quiz', q: 'Quanto custam os sapatos agora?', options: ['45 dólares', '90 dólares', '15 dólares'], answer: '45 dólares', why: '"Shoes: ninety dollars, now forty-five!".' }),
+      I(8, 4, { type: 'quiz', q: 'Como se paga?', options: ['Com cartão ou em dinheiro', 'Só com cartão', 'Só em dinheiro'], answer: 'Com cartão ou em dinheiro', why: '"You can pay by card or in cash".' }),
+    ], {
+      title: 'Promoção!',
+      lines: [
+        { who: 'Laura', en: 'Big sale this weekend at our shop!', pt: 'Grande promoção neste fim de semana na nossa loja!' },
+        { who: 'Laura', en: 'T-shirts: only ten dollars!', pt: 'Camisetas: só dez dólares!' },
+        { who: 'Laura', en: 'Shoes: ninety dollars, now forty-five!', pt: 'Sapatos: noventa dólares, agora quarenta e cinco!' },
+        { ask: 'Os sapatos ficaram mais baratos?', options: ['Sim, pela metade do preço', 'Não, estão mais caros', 'Não mudaram'], answer: 'Sim, pela metade do preço', why: 'De 90 para 45 dólares: a metade.' },
+        { who: 'Laura', en: 'Come and ___ on our new dresses and jackets.', pt: 'Venha experimentar nossos vestidos e jaquetas novos.', gap: { answer: 'try', options: ['try', 'pay', 'buy'] } },
+        { who: 'Laura', en: 'You can pay by card or in cash.', pt: 'Você pode pagar com cartão ou em dinheiro.' },
+        { ask: 'Quando é a promoção?', options: ['Neste fim de semana', 'Na segunda', 'O mês todo'], answer: 'Neste fim de semana', why: '"Big sale this weekend".' },
+      ],
+    }),
+    L(9, 'Desafio da unidade', [
+      I(9, 1, { type: 'choice', prompt: 'Complete:', en: 'How much ___ this coat?', pt: 'Quanto custa este casaco?', options: ['is', 'are', 'does'], answer: 'is', why: 'Uma coisa (this coat): How much IS.', wrong: { are: '"Are" é para várias coisas.', does: 'Com preço usamos "is/are".' } }),
+      I(9, 2, { type: 'type', pt: 'É caro demais.', answer: "It's too expensive.", accept: ['It is too expensive.'], why: '"Too" = demais: too expensive.' }),
+      I(9, 3, { type: 'meaning', en: 'These jeans are too big for me.', options: ['Esta calça jeans é grande demais para mim.', 'Esta calça jeans é muito bonita.', 'Estes sapatos são grandes demais.'], answer: 'Esta calça jeans é grande demais para mim.', why: '"Too big" = grande demais. "For me" = para mim.' }),
+      I(9, 4, { type: 'dictation', en: 'How much are these shoes?', why: 'Plural (these shoes): How much ARE.' }),
+      I(9, 5, { type: 'listen', en: "I'll take it. Can I pay in cash?", options: ['Vou levar. Posso pagar em dinheiro?', 'Vou experimentar. Posso pagar com cartão?', 'Não vou levar. É caro.'], answer: 'Vou levar. Posso pagar em dinheiro?', why: '"I\'ll take it" = vou levar. "In cash" = em dinheiro.' }),
+      I(9, 6, { type: 'speak', en: "I'm looking for a black dress.", pt: 'Estou procurando um vestido preto.', why: 'A cor vem antes: black dress.' }),
+    ]),
+    L(10, 'História: um presente para a mãe', [
+      I(10, 1, { type: 'story', why: 'O Lucas procura um presente de aniversário para a mãe. Ouça cada fala e responda às perguntas no caminho.' }),
+      I(10, 2, { type: 'quiz', q: 'Para quem é o presente?', options: ['Para a mãe do Lucas', 'Para a irmã do Lucas', 'Para a vendedora'], answer: 'Para a mãe do Lucas', why: '"It\'s for my mother. It\'s her birthday".' }),
+      I(10, 3, { type: 'quiz', q: 'Quanto custa o vestido azul?', options: ['35 dólares', '53 dólares', '25 dólares'], answer: '35 dólares', why: '"It\'s thirty-five dollars".' }),
+      I(10, 4, { type: 'quiz', q: 'Como o Lucas paga?', options: ['Com cartão', 'Em dinheiro', 'Não paga'], answer: 'Com cartão', why: '"Can I pay by card?" — "Of course!".' }),
+    ], {
+      title: 'Um presente para a mãe',
+      lines: [
+        { who: 'Laura', en: 'Good afternoon! Can I help you?', pt: 'Boa tarde! Posso ajudar?' },
+        { who: 'Lucas', en: "Yes, I'm looking for a present. It's for my mother. It's her birthday.", pt: 'Sim, estou procurando um presente. É para minha mãe. É aniversário dela.' },
+        { ask: 'O que o Lucas procura?', options: ['Um presente', 'Uma camiseta para ele', 'Um sapato'], answer: 'Um presente', why: '"I\'m looking for a present".' },
+        { who: 'Laura', en: 'This blue dress is very nice.', pt: 'Este vestido azul é muito bonito.' },
+        { who: 'Lucas', en: 'Yes! How much ___ it?', pt: 'Sim! Quanto custa?', gap: { answer: 'is', options: ['is', 'are', 'do'] } },
+        { who: 'Laura', en: "It's thirty-five dollars.", pt: 'Custa trinta e cinco dólares.' },
+        { who: 'Lucas', en: "Great, I'll take it. Can I pay by card?", pt: 'Ótimo, vou levar. Posso pagar com cartão?' },
+        { who: 'Laura', en: 'Of course! Here you are.', pt: 'Claro! Aqui está.' },
+        { ask: 'O Lucas comprou o vestido?', options: ['Sim', 'Não, achou caro', 'Não, era pequeno'], answer: 'Sim', why: '"I\'ll take it" = vou levar.' },
+      ],
+    }),
+  ],
+});
