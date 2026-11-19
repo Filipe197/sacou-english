@@ -6,7 +6,7 @@ Cada unidade da trilha ganha uma cena com o elenco do Sacou: Ana, Tom, Laura, So
 
 1. Use **o mesmo chat do ChatGPT** em que o elenco e a cena da unidade 5 foram criados. Se precisar abrir outro chat, anexe as duas imagens (o elenco e a cena da unidade 5) e escreva antes: *"These are the Sacou English characters and the scene style. Keep exactly this style."*
 2. Copie o prompt inteiro da unidade (o fechamento já está incluído no fim de cada um) e cole numa mensagem só.
-3. Se vier com fundo, peça: *"Same image with a transparent background (PNG)."*
+3. **Confira se o fundo é transparente de verdade.** Se aparecer um xadrez cinza e branco "desenhado" na imagem, ou fundo branco, peça: *"Export this exact image as a PNG with a REAL transparent background (alpha channel). Do not draw a checkerboard pattern."* Fundo xadrez desenhado deixa frestas brancas entre as personagens.
 4. Baixe o PNG e salve como `arte-fonte/cenas/<unidade>.png` (por exemplo `a1-u6.png`). Ou mande no chat do Claude, que ele salva.
 5. Rode `python scripts/cenas.py`. A trilha encontra a cena sozinha.
 

@@ -31,45 +31,17 @@ def tira_fundo_claro(im):
         if x < w - 1: q.append((x + 1, y))
         if y > 0: q.append((x, y - 1))
         if y < h - 1: q.append((x, y + 1))
-    # bolsões de fundo presos entre as personagens. O xadrez tem casas de ~14 px, mas irregulares
-    # (a imagem é gerada com pequenas distorções), então uma grade única não encaixa. Teste local:
-    # no xadrez, um pixel e o vizinho a uma casa de distância quase sempre têm tons opostos;
-    # no branco de verdade (olhos, solas, balão) têm o mesmo tom.
-    def tom(x, y):
-        v = px[x, y][0]
-        return 1 if v >= 253 else 0 if v <= 251 else None
-    def casa():
-        y = next((y for y in range(2, h // 4) if all(fora[y * w + x] for x in range(w))), 2)
-        trocas, ant = [], None
-        for x in range(w):
-            t = tom(x, y)
-            if t is None:
-                continue
-            if ant is not None and t != ant:
-                trocas.append(x)
-            ant = t
-        return round((trocas[-1] - trocas[0]) / (len(trocas) - 1)) if len(trocas) > 3 else 14
-    D = casa()
+    # bolsões de fundo presos entre as personagens (o preenchimento pelas bordas não chega lá).
+    # O xadrez tem dois tons: o claro e um cinza (ex.: 254 e 249). Medimos o cinza no fundo de fora
+    # e apagamos o bolsão GRANDE com bastante desse cinza. Olhos são pequenos; balão e solas
+    # brancas quase não têm o cinza.
+    from collections import Counter
+    tons = Counter(px[x, y][0] for y in range(0, h, 2) for x in range(0, w, 2) if fora[y * w + x])
+    claro_bg = tons.most_common(1)[0][0] if tons else 254
+    cinza_bg = max((t for t in tons if t <= claro_bg - 3), key=lambda t: tons[t], default=claro_bg - 4)
     def segue_grade(pts):
-        dentro = set(pts)
-        # o xadrez alterna nas DUAS direções; listras (sola do tênis) só numa
-        def alterna(dx, dy):
-            melhor = 0
-            for d in range(max(3, D - 2), D + 3):
-                opostos = tot = 0
-                for x, y in pts[::2]:
-                    t = tom(x, y)
-                    v = (x + dx * d, y + dy * d)
-                    if t is None or v not in dentro:
-                        continue
-                    u = tom(*v)
-                    if u is not None:
-                        tot += 1
-                        opostos += (u != t)
-                if tot > 20:
-                    melhor = max(melhor, opostos / tot)
-            return melhor
-        return min(alterna(1, 0), alterna(0, 1)) > 0.55
+        cinza = sum(1 for x, y in pts if abs(px[x, y][0] - cinza_bg) <= 1)
+        return cinza / len(pts) > 0.18
     visto = bytearray(fora)
     for y0 in range(h):
         for x0 in range(w):
