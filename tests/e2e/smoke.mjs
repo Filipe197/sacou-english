@@ -362,6 +362,15 @@ await test('lição adaptativa: pula o que já domina e pede a frase sem ajuda',
   await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a frase escrita sem ajuda não foi aceita'); });
 });
 
+await test('meu progresso: retrato por habilidade e o que já consigo fazer', async () => {
+  await open('/progresso');
+  await expectText('Seu inglês por habilidade');
+  await expectText('exercícios firmes');
+  await expectText('O que você já consegue fazer');
+  await expectText('Consigo');
+  if (!await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)) throw new Error('rolagem lateral em Meu progresso');
+});
+
 await browser.close();
 await server.close();
 

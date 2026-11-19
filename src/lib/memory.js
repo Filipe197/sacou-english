@@ -121,3 +121,6 @@ export function useMemorySync(uid) {
     return () => document.removeEventListener('visibilitychange', flush);
   }, [uid]);
 }
+
+// Cópia da memória inteira (para o retrato por habilidade em "Meu progresso")
+export const memorySnapshot = (uid) => ({ ...load(uid) });
