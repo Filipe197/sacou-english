@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 export const ADDED = '2026-11';
 
-export function addLessons(file, { words = [], lessons = [] }) {
+export function addLessons(file, { words = [], lessons = [], extraVocab = [] }) {
   const p = path.join(root, 'src/content', file);
   const u = JSON.parse(fs.readFileSync(p, 'utf8'));
   const newIds = new Set(lessons.map(x => x.lesson.id));
@@ -20,6 +20,9 @@ export function addLessons(file, { words = [], lessons = [] }) {
     const { id, title, story, items } = lesson;
     u.lessons.splice(i + 1, 0, { id, title, added: ADDED, ...(story ? { story } : {}), items });
   }
+  // palavra acima do nível com justificativa (o build aceita com aviso)
+  u.extra_vocab ||= [];
+  for (const e of extraVocab) if (!u.extra_vocab.some(x => x.word === e.word)) u.extra_vocab.push(e);
   const have = new Set((u.words || []).map(w => w[0].toLowerCase()));
   for (const w of words) if (!have.has(w[0].toLowerCase())) u.words.push(w);
   fs.writeFileSync(p, JSON.stringify(u, null, 1));
