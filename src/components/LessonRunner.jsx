@@ -180,6 +180,88 @@ function TypeIn({ item, value, setValue, locked, dictation, newKeys }) {
   );
 }
 
+// ---------- "Corrija o erro de antes": só as palavras que o aluno errou ----------
+const core = (w) => w.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9']+$/g, '');
+const plainW = (w) => norm(core(w));
+// Compara a resposta errada com a certa (maior sequência em comum) e devolve quais palavras
+// da resposta certa ficam em branco. null quando não vale a pena (acertou nada ou quase tudo diferente).
+export function fixPlan(item, prev) {
+  if (!['type', 'dictation', 'build'].includes(item.type) || !prev) return null;
+  const words = (item.type === 'dictation' ? item.en : item.answer).split(/\s+/).filter(Boolean);
+  if (words.length < 2 || words.length > 14) return null;
+  const a = words.map(plainW), b = String(prev).split(/\s+/).map(plainW).filter(Boolean);
+  const L = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
+  for (let i = a.length - 1; i >= 0; i--) for (let j = b.length - 1; j >= 0; j--) L[i][j] = a[i] === b[j] ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+  const ok = Array(a.length).fill(false);
+  for (let i = 0, j = 0; i < a.length && j < b.length;) {
+    if (a[i] === b[j]) { ok[i] = true; i++; j++; } else if (L[i + 1][j] >= L[i][j + 1]) i++; else j++;
+  }
+  const blanks = ok.map((v, k) => (v ? null : k)).filter(k => k !== null);
+  if (!blanks.length || blanks.length === words.length) return null;
+  return { words, blanks };
+}
+const fixFilled = (plan, value) => (value || []).length === plan.blanks.length && value.every(v => (typeof v === 'string' ? v.trim() : v));
+const fixCorrect = (plan, value) => plan.blanks.every((k, n) => plainW(typeof value[n] === 'string' ? value[n] : value[n]?.w || '') === plainW(plan.words[k]));
+
+function FixCloze({ item, plan, value, setValue, locked, newKeys }) {
+  const build = item.type === 'build';
+  const vals = value || [];
+  const bank = useMemo(() => shuffle([
+    ...plan.blanks.map(k => ({ w: core(plan.words[k]), i: 'b' + k })),
+    ...(item.extra || []).slice(0, 2).map((w, x) => ({ w, i: 'x' + x })),
+  ]), [item.id]);
+  const used = new Set(vals.filter(Boolean).map(t => t.i));
+  const setAt = (n, v) => { const next = [...vals]; while (next.length < plan.blanks.length) next.push(build ? null : ''); next[n] = v; setValue(next); };
+  return (
+    <>
+      <p className="q-label">Complete o que faltou</p>
+      {item.type === 'dictation'
+        ? <button type="button" className="audio-btn big" aria-label="Ouvir de novo" onClick={() => speak(item.en)} style={{ marginBottom: 14 }}><Icon name="sound" size={40} color="#fff" stroke={2.2} /></button>
+        : <h1 className="q"><Hinted text={item.pt} lang="pt" newKeys={newKeys} /></h1>}
+      <div className="fix-line" lang="en">
+        {plan.words.map((w, k) => {
+          const n = plan.blanks.indexOf(k);
+          if (n < 0) return <span key={k} className="fix-w">{w}</span>;
+          const trail = w.slice(w.lastIndexOf(core(w)) + core(w).length);
+          if (!build) return (
+            <span key={k} className="fix-w">
+              <input className="fix-in" value={vals[n] || ''} disabled={locked} autoFocus={n === 0} autoComplete="off" autoCapitalize="off" spellCheck={false}
+                aria-label={`Palavra ${n + 1} que faltou`} style={{ width: `${Math.max(3, core(w).length + 1)}ch` }} onChange={e => setAt(n, e.target.value)} />{trail}
+            </span>
+          );
+          const t = vals[n];
+          return (
+            <span key={k} className="fix-w">
+              <button type="button" className={'fix-slot' + (t ? ' on' : '')} disabled={locked || !t} onClick={() => setAt(n, null)} aria-label={t ? `Tirar ${t.w}` : 'Espaço vazio'}>{t ? t.w : ' '}</button>{trail}
+            </span>
+          );
+        })}
+      </div>
+      {build && (
+        <div className="bank" aria-label="Palavras disponíveis">
+          {bank.map(t => (
+            <button key={t.i} type="button" className={'tile' + (used.has(t.i) ? ' used' : '')} disabled={locked || used.has(t.i)} lang="en"
+              onClick={() => { const n = plan.blanks.findIndex((_, x) => !vals[x]); if (n >= 0) { setAt(n, t); speak(t.w); fx.play('click'); } }}>{t.w}</button>
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+
+// ---------- "Veja esta dica": a regra do Guia da unidade, na primeira vez que ela aparece ----------
+function tipFor(item, unit) {
+  if (item.type !== 'choice' || !unit?.guide?.points) return null;
+  const pad = (s) => ' ' + norm(s).replace(/[^a-z' ]/g, ' ').replace(/\s+/g, ' ').trim() + ' ';
+  const a = pad(item.answer);
+  if (a.trim().length < 2) return null;
+  const p = unit.guide.points.find(x => pad(x.en).includes(a));
+  return p ? { ...p, key: `${unit.id}|${p.en}` } : null;
+}
+const TIPS_KEY = (uid) => `sacou-dicas:${uid || 'anon'}`;
+function seenTips(uid) { try { return new Set(JSON.parse(localStorage.getItem(TIPS_KEY(uid)) || '[]')); } catch { return new Set(); } }
+function markTip(uid, key) { try { const s = seenTips(uid); s.add(key); localStorage.setItem(TIPS_KEY(uid), JSON.stringify([...s].slice(-500))); } catch { /* sem armazenamento */ } }
+
 function Dialogue({ item, value, setValue, locked, newKeys }) {
   const opts = useMemo(() => shuffle(item.options), [item.id]);
   return (
@@ -416,15 +498,37 @@ function writeCombo(key, v) {
   try { if (key) localStorage.setItem(key, JSON.stringify(v)); } catch { /* sem armazenamento: o combo vale só nesta lição */ }
 }
 
+// ---------- retomar a lição ----------
+// O andamento fica salvo no aparelho a cada exercício. Se a página recarregar no meio
+// (celular apagou e o navegador fechou a aba, atualização do app...), a lição volta no mesmo ponto.
+const RESUME_TTL = 6 * 3600 * 1000;
+const resumeKey = (k) => `sacou-licao-andamento:${k}`;
+function readResume(key, entries) {
+  if (!key) return null;
+  try {
+    const s = JSON.parse(localStorage.getItem(resumeKey(key)) || 'null');
+    if (!s || Date.now() - s.at > RESUME_TTL || !Array.isArray(s.queue) || !s.queue.length) return null;
+    const byId = new Map(entries.map(e => [e.item.id, e]));
+    const queue = s.queue.map(([id, retry]) => byId.get(id) && (retry ? { ...byId.get(id), retry } : byId.get(id)));
+    if (queue.some(x => !x) || s.idx >= queue.length) return null;
+    return { queue, idx: s.idx, firstTry: new Map(s.firstTry || []), attemptId: s.attemptId };
+  } catch { return null; }
+}
+function writeResume(key, data) { try { localStorage.setItem(resumeKey(key), JSON.stringify(data)); } catch { /* sem armazenamento */ } }
+function clearResume(key) { try { if (key) localStorage.removeItem(resumeKey(key)); } catch { /* sem armazenamento */ } }
+
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
-export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true }) {
+export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true, saveKey = null }) {
   const { profile, setProfile } = useAuth();
   const attemptId = useRef(null);
-  if (!attemptId.current) attemptId.current = crypto.randomUUID();
+  const resumed = useRef(undefined);
+  if (resumed.current === undefined) resumed.current = readResume(saveKey, entries);
+  if (!attemptId.current) attemptId.current = resumed.current?.attemptId || crypto.randomUUID();
   const [celebrated, setCelebrated] = useState(false);
-  const [queue, setQueue] = useState(entries);
-  const [idx, setIdx] = useState(0);
+  const [queue, setQueue] = useState(() => resumed.current?.queue || entries);
+  const [idx, setIdx] = useState(() => resumed.current?.idx || 0);
+  const [resumeNote, setResumeNote] = useState(() => !!resumed.current && resumed.current.idx > 0);
   const [value, setValue] = useState(null);
   const [status, setStatus] = useState('answering'); // answering | correct | wrong
   const [matchMisses, setMatchMisses] = useState(0);
@@ -437,7 +541,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [notesOpen, setNotesOpen] = useState(false);
   const [tutor, setTutor] = useState(false);
   const [heard, setHeard] = useState('');
-  const firstTry = useRef(new Map()); // itemId -> correct na 1ª tentativa
+  const firstTry = useRef(resumed.current?.firstTry || new Map()); // itemId -> correct na 1ª tentativa
   // Combo: acertos seguidos que continuam de uma lição para outra (e entre aparelhos) até o primeiro erro.
   // Fica na conta (012_conta_combo.sql); a cópia no aparelho serve quando não há conexão ou o SQL não rodou.
   const comboKey = profile?.id ? `sacou-combo:${profile.id}` : null;
@@ -455,6 +559,15 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     comboRef.current = v.n; setCombo(v.n); comboRecord.current = v.best;
   }, [comboKey]); // eslint-disable-line react-hooks/exhaustive-deps
   const ctaRef = useRef(null);
+  // salva o andamento a cada exercício (e apaga quando a lição termina)
+  useEffect(() => {
+    if (!saveKey || result) return;
+    writeResume(saveKey, { at: Date.now(), attemptId: attemptId.current, idx, queue: queue.map(e => [e.item.id, e.retry || null]), firstTry: [...firstTry.current] });
+  }, [saveKey, idx, queue, status, result]);
+  useEffect(() => { if (resumeNote) { const tm = setTimeout(() => setResumeNote(false), 3500); return () => clearTimeout(tm); } }, [resumeNote]);
+  // dicas já decididas por posição na fila (para não sumirem depois de marcadas como vistas)
+  const tipCache = useRef(new Map());
+  const [tipVote, setTipVote] = useState(null);
 
   const cur = queue[idx];
   const item = cur?.item;
@@ -464,6 +577,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
 
   const isCorrect = useCallback(() => {
     if (!item) return false;
+    const plan = cur?.retry && fixPlan(item, cur.retry.prev);
+    if (plan) return fixCorrect(plan, value || []);
     if (item.type === 'build') return norm((value || []).map(t => t.w).join(' ')) === norm(item.answer);
     if (item.type === 'type' || item.type === 'dictation') {
       const m = matchTyped(value || '', [item.type === 'type' ? item.answer : item.en, ...(item.accept || [])]);
@@ -471,7 +586,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       return !!m;
     }
     return value === item.answer;
-  }, [item, value]);
+  }, [item, value, cur]);
 
   const settle = useCallback((ok) => {
     setStatus(ok ? 'correct' : 'wrong');
@@ -488,15 +603,22 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     }
     if (!firstTry.current.has(item.id)) firstTry.current.set(item.id, ok);
     onItemResult?.(cur, ok);
-    if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) setQueue(q => [...q, cur]);
+    // errou: volta no fim da lição como "Corrija o erro de antes", guardando o que o aluno respondeu
+    if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) {
+      const plan = cur.retry && fixPlan(item, cur.retry.prev);
+      const prev = plan ? null : item.type === 'build' ? (value || []).map(x => x.w).join(' ') : typeof value === 'string' ? value : '';
+      setQueue(q => [...q, { ...cur, retry: { prev: prev || cur.retry?.prev || '' } }]);
+    }
+    const tip = tipCache.current.get(idx);
+    if (tip) markTip(profile?.id, tip.key);
     if (item.type === 'build' || item.type === 'type') speak(item.answer);
     else if (item.type === 'choice') speak(item.en.replace('___', item.answer));
     else if (item.type === 'dialogue') speak(item.answer, { who: item.lines.find(l => l[1] === '___')?.[0] || 'B' });
     setTimeout(() => ctaRef.current?.focus(), 50);
-  }, [item, cur, onItemResult, retryWrong, profile, setProfile]);
+  }, [item, cur, onItemResult, retryWrong, profile, setProfile, value, idx]);
 
   const check = () => { if (!locked && hasAnswer()) settle(isCorrect()); };
-  const hasAnswer = () => item?.type === 'build' ? (value || []).length > 0 : typeof value === 'string' ? value.trim().length > 0 : value != null;
+  const hasAnswer = () => (cur?.retry && fixPlan(item, cur.retry.prev)) ? fixFilled(fixPlan(item, cur.retry.prev), value) : item?.type === 'build' ? (value || []).length > 0 : typeof value === 'string' ? value.trim().length > 0 : value != null;
 
   const finishing = useRef(false);
   const next = async () => {
@@ -510,10 +632,11 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       catch { res = { xp: null, title: 'Não foi possível salvar seu progresso', message: 'Você terminou os exercícios, mas houve uma falha ao registrar os resultados.', error: 'Verifique sua conexão e tente novamente mais tarde.' }; }
       if (!res?.error && !res?.queued) fx.play(res?.showStreak ? 'streak' : 'complete');
       // lição perfeita: todos os exercícios certos de primeira
+      clearResume(saveKey);
       setResult({ score, perfect: vals.length > 0 && vals.every(Boolean), combo, comboRecord: newRecord.current, ...(res || {}) });
       return;
     }
-    setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0); setNote(null); setTutor(false); setHeard('');
+    setIdx(i => i + 1); setValue(null); setStatus('answering'); setHelp(false); setReport(false); setMatchMisses(0); setNote(null); setTutor(false); setHeard(''); setTipVote(null);
   };
 
   // teclado: Enter verifica/continua, 1-4 escolhem opções
@@ -577,6 +700,17 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const level = cur.unit?.level || (/^a2/i.test(cur.lessonId || item.id || '') ? 'A2' : 'A1');
   const answerText = item.type === 'build' ? (value || []).map(t => t.w).join(' ') : item.type === 'speak' ? heard : typeof value === 'string' ? value : '';
   const canTutor = status === 'wrong' && !['match', 'story'].includes(item.type);
+  const plan = cur.retry ? fixPlan(item, cur.retry.prev) : null;
+  let tip = tipCache.current.get(idx);
+  if (tip === undefined) {
+    const t = introduceWords && retryWrong && !cur.retry ? tipFor(item, cur.unit) : null;
+    tip = t && !seenTips(profile?.id).has(t.key) ? t : null;
+    tipCache.current.set(idx, tip);
+  }
+  function voteTip(useful) {
+    setTipVote(useful ? 'up' : 'down');
+    if (!useful) supabase.auth.getUser().then(({ data }) => supabase.from('content_reports').insert({ item_id: item.id, message: `Dica pouco útil: "${tip.en}" (${tip.note})`, user_id: data.user?.id })).catch(() => {});
+  }
   return (
     <LessonCtx.Provider value={noteCtx}>
     <div className="lesson">
@@ -598,11 +732,22 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
           </div>
           <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <button type="button" className="btn btn-violet" onClick={() => setConfirmExit(false)} autoFocus>Continuar a lição</button>
-            <Link to={exitTo} className="btn btn-out">Sair</Link>
+            <Link to={exitTo} className="btn btn-out" onClick={() => clearResume(saveKey)}>Sair</Link>
           </div>
         </div>
       )}
       <main className="lesson-main" key={idx}>
+        {resumeNote && <p className="resume-note" role="status">↩ Continuando de onde você parou</p>}
+        {cur.retry && <span className="fix-tag"><Icon name="review" size={16} />Corrija o erro de antes</span>}
+        {tip && (
+          <div className="tip-box">
+            <b className="tip-h">💡 Veja esta dica</b>
+            <p>{tip.note}</p>
+            <button type="button" className="tip-ex" onClick={() => speak(tip.en.split(' / ')[0].replace(/(.*?)/g, ''))} aria-label={`Ouvir: ${tip.en}`}>
+              <Icon name="sound" size={18} /><span><b lang="en">{tip.en}</b><small>{tip.pt}</small></span>
+            </button>
+          </div>
+        )}
         {newWords.length > 0 && (
           <div className="new-words" aria-label="Palavras novas neste exercício">
             <span className="nw-tag">{newWords.length > 1 ? 'Palavras novas' : 'Palavra nova'}</span>
@@ -613,13 +758,14 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
             ))}
           </div>
         )}
-        {item.type === 'choice' && <Choice item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
-        {item.type === 'meaning' && <Meaning item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
-        {item.type === 'listen' && <Meaning item={item} value={value} setValue={setValue} locked={locked} listen />}
-        {item.type === 'build' && <Build item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {plan && <FixCloze item={item} plan={plan} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {!plan && item.type === 'choice' && <Choice item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {!plan && item.type === 'meaning' && <Meaning item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {!plan && item.type === 'listen' && <Meaning item={item} value={value} setValue={setValue} locked={locked} listen />}
+        {!plan && item.type === 'build' && <Build item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {item.type === 'match' && <Match item={item} locked={locked} onDone={(m) => { setMatchMisses(m); settle(m === 0); }} />}
-        {item.type === 'type' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
-        {item.type === 'dictation' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} dictation />}
+        {!plan && item.type === 'type' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {!plan && item.type === 'dictation' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} dictation />}
         {item.type === 'dialogue' && <Dialogue item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {item.type === 'story' && cur.story && <Story story={cur.story} locked={locked} newKeys={newKeys} onProgress={setStoryFrac} onDone={(ok, total) => {
           setNote(`Você acertou ${ok} de ${total} interações da história de primeira.`); settle(true);
@@ -673,6 +819,15 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
                   {note && <>{note} </>}{wrongNote && <>{wrongNote} </>}<b>Por quê?</b> {item.why}
                 </p>
                 {!ok && retryWrong && item.type !== 'match' && item.type !== 'speak' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela vai aparecer de novo no fim da lição e também na sua revisão.</p>}
+                {tip && (
+                  <div className="tip-vote" role="group" aria-label="Avaliar a dica">
+                    {tipVote ? <span>{tipVote === 'up' ? 'Valeu! 💜' : 'Obrigado, vamos melhorar essa dica.'}</span> : <>
+                      <span>Essa dica foi útil?</span>
+                      <button type="button" aria-label="A dica não ajudou" onClick={() => voteTip(false)}>👎</button>
+                      <button type="button" aria-label="A dica ajudou" onClick={() => voteTip(true)}>👍</button>
+                    </>}
+                  </div>
+                )}
                 <span style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
                   {canTutor && <button type="button" className="tutor-btn" onClick={() => setTutor(true)} disabled={tutor}><Icon name="sparkle" size={16} />{tutor ? 'Professor abaixo' : 'Por que errei? Pergunte ao professor'}</button>}
                   <SaveItemButton item={item} />

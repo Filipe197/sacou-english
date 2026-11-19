@@ -180,6 +180,41 @@ await test('aparência: modo escuro no perfil', async () => {
   await page.waitForFunction(() => !document.documentElement.dataset.theme);
 });
 
+await test('lição: dica na 1ª vez e "corrija o erro de antes" só no que errou', async () => {
+  const lesson = JSON.parse(fs.readFileSync('src/content/a1/unit-05.json', 'utf8')).lessons[1];
+  await open('/licao/' + lesson.id);
+  await expectText('Veja esta dica');
+  const tap = (sel, text) => page.evaluate((sel, text) => { const el = [...document.querySelectorAll(sel)].find(e => !e.disabled && e.textContent.replace(/\s+/g, ' ').trim().replace(/^\d+/, '') === text); el?.click(); return !!el; }, sel, text);
+  for (const it of lesson.items) {
+    if (['meaning', 'listen', 'choice'].includes(it.type)) await tap('.options .option', it.answer);
+    else if (it.type === 'build') for (const w of ['this', 'are', 'my', 'keys']) { await tap('.bank .tile:not(.used)', w); await wait(80); }
+    else if (it.type === 'match') for (const [en, pt] of it.pairs) { await tap('.match-col:first-child .mbtn', en); await wait(80); await tap('.match-col:last-child .mbtn', pt); await wait(80); }
+    await wait(150);
+    if (it.type !== 'match') await page.click('.bar .cta');
+    await wait(300);
+    await page.click('.bar .cta'); await wait(300);
+  }
+  await expectText('Corrija o erro de antes');
+  const slots = await page.evaluate(() => document.querySelectorAll('.fix-slot').length);
+  if (slots !== 1) throw new Error(`esperava 1 espaço para corrigir, veio ${slots}`);
+  await tap('.bank .tile:not(.used)', 'These'); await wait(100);
+  await page.click('.bar .cta');
+  await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a correção não foi aceita'); });
+});
+
+await test('lição: volta de onde parou se a página recarregar', async () => {
+  const lesson = JSON.parse(fs.readFileSync('src/content/a1/unit-05.json', 'utf8')).lessons[2];
+  await open('/licao/' + lesson.id);
+  await wait(600);
+  const tap = (sel, text) => page.evaluate((sel, text) => { const el = [...document.querySelectorAll(sel)].find(e => !e.disabled && e.textContent.replace(/\s+/g, ' ').trim().replace(/^\d+/, '') === text); el?.click(); return !!el; }, sel, text);
+  const [m] = lesson.items; // 1º exercício: ligar pares
+  for (const [en, pt] of m.pairs) { await tap('.match-col:first-child .mbtn', en); await wait(80); await tap('.match-col:last-child .mbtn', pt); await wait(80); }
+  await wait(300); await page.click('.bar .cta'); await wait(400);
+  await page.reload({ waitUntil: 'networkidle0' });
+  await expectText('Continuando de onde você parou');
+  await expectText('2/6');
+});
+
 await test('tirar dúvidas: pergunta, resposta e salvar', async () => {
   await open('/duvidas');
   await wait(800);

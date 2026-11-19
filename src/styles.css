@@ -690,3 +690,31 @@ html[data-theme=dark] .ink-card,html[data-theme=dark] .exam-cta,html[data-theme=
 .pf-theme-ic.auto{background:linear-gradient(135deg,#F4F5FA 50%,#0E1020 50%)}
 :where(html[data-theme=dark]) a,html[data-theme=dark] .link-btn{color:#A99BFF}
 .pf-theme-opt b{font-size:15px;line-height:1.2;overflow-wrap:anywhere}
+/* Modo escuro: fundos claros fixos que deixavam o texto claro ilegível */
+html[data-theme=dark] .aula-task.ask{background:#2A2414;border-color:#6B5320}
+html[data-theme=dark] .cv-fix{background:#2E2410;border-color:#6B5320;color:var(--text)}
+html[data-theme=dark] .shield-card{background:#16233A;border-color:#2B4366;color:var(--text)}
+html[data-theme=dark] .ach{background:var(--surface)}
+html[data-theme=dark] .ach-toast,html[data-theme=dark] .ms-perfect,html[data-theme=dark] .g-record{background:#2E2112;border-color:#6B4A20;color:var(--text)}
+html[data-theme=dark] .g-clue{background:#2A2410;border-color:#6B5320;color:var(--text)}
+html[data-theme=dark] .option:hover:not(:disabled),html[data-theme=dark] .tile:hover:not(:disabled){background:var(--track)}
+html[data-theme=dark] .nb-prose mark{color:#0B0D1A}
+/* "Veja esta dica" e "Corrija o erro de antes" (estilo Duolingo) */
+.tip-box{border:2px solid var(--violet-ring);background:var(--violet-l);border-radius:20px;padding:16px 18px;margin-bottom:22px;display:flex;flex-direction:column;gap:8px}
+.tip-h{font-family:var(--head);font-size:22px;color:var(--violet-dd)}
+.tip-box p{margin:0;font-size:16px;line-height:1.55;color:var(--violet-text)}
+.tip-ex{display:flex;align-items:center;gap:10px;align-self:flex-start;border:0;background:var(--surface);border-radius:14px;padding:10px 14px;cursor:pointer;font:inherit;color:var(--violet)}
+.tip-ex span{display:flex;flex-direction:column;text-align:left}
+.tip-ex b{color:var(--text);font-size:17px}.tip-ex small{color:var(--text3);font-size:13px}
+.tip-vote{display:flex;align-items:center;gap:10px;margin:8px 0 2px;font-size:15px;font-weight:600;color:inherit}
+.tip-vote button{border:0;background:rgba(255,255,255,.55);border-radius:12px;width:42px;height:38px;font-size:20px;cursor:pointer}
+html[data-theme=dark] .tip-vote button{background:rgba(255,255,255,.12)}
+.fix-tag{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;color:#C25E00;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+html[data-theme=dark] .fix-tag{color:#FFB15C}
+.fix-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 8px;font-size:24px;line-height:1.6;margin:12px 0 22px;padding:16px 18px;border:2px solid var(--line2);border-radius:18px;background:var(--surface)}
+.fix-w{display:inline-flex;align-items:baseline}
+.fix-in{border:0;border-bottom:3px solid var(--violet);background:transparent;font:inherit;color:var(--text);padding:0 4px;outline:none;text-align:center;min-width:3ch}
+.fix-in:focus{background:var(--violet-l);border-radius:6px 6px 0 0}
+.fix-slot{min-width:72px;min-height:42px;border:2px dashed var(--line2);border-radius:12px;background:transparent;font:inherit;font-size:20px;color:var(--text);padding:0 10px;cursor:pointer}
+.fix-slot.on{border-style:solid;border-color:var(--violet);background:var(--violet-l)}
+.resume-note{margin:0 0 12px;padding:8px 12px;border-radius:12px;background:var(--violet-l);color:var(--violet-text);font-size:14px;font-weight:600;width:fit-content}
