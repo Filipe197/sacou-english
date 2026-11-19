@@ -91,7 +91,7 @@ export function Missions({ compact = false }) {
             <Link to={m.to} className="ms-row">
               <span className="ms-ic">{m.done ? <Icon name="check" size={16} stroke={3} color="#fff" /> : <Icon name={m.icon} size={16} />}</span>
               <span className="ms-txt">
-                <span>{m.label}</span>
+                <span title={m.label}>{m.label}</span>
                 <span className="track ms-track"><span className="fill" style={{ width: `${(m.value / m.goal) * 100}%` }} /></span>
               </span>
               <span className="ms-n">{m.value}/{m.goal}</span>

@@ -257,7 +257,7 @@ await test('aula do Juvenal: 1 por dia para alunos, sem limite para administrado
 // (sem tela de início e sem sortear outros).
 async function sameAfterReload(counter) {
   await wait(500);
-  const q = () => page.evaluate(() => (document.querySelector('.lesson-main, main')?.innerText || '').split('\n').slice(0, 4).join('|'));
+  const q = () => page.evaluate(() => (document.querySelector('.lesson-main, main')?.innerText || '').split('\n').slice(0, 2).join('|')); // tipo + enunciado (as palavras do banco são embaralhadas a cada abertura)
   const before = await q();
   await page.reload({ waitUntil: 'networkidle0' });
   await expectText(counter);

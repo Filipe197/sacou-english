@@ -153,6 +153,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
   const items = [
     ['/aprender', 'home', 'Aprender'],
     ['/praticar', 'bolt', 'Praticar'],
+    ['/aula', 'mic', 'Aula com o Juvenal'],
     ['/conversar', 'chat', 'Conversar'],
     ['/duvidas', 'sparkle', 'Tirar dúvidas'],
     ['/jogos', 'game', 'Jogos e histórias', 0, 'Jogos'],
@@ -165,6 +166,14 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     ['/turmas', 'users', 'Turmas'],
     ...(isAdmin ? [['/admin', 'chart', 'Administração']] : []),
   ];
+  // menu do computador em grupos (o do celular continua com abas + "Mais")
+  const GROUPS = [
+    ['Estudar', ['/aprender', '/revisao', '/praticar', '/fone']],
+    ['Falar', ['/aula', '/conversar', '/duvidas']],
+    ['Explorar', ['/jogos', '/guia', '/caderno']],
+    ['Você', ['/ranking', '/progresso', '/turmas', '/admin']],
+  ].map(([g, tos]) => [g, tos.map(t => items.find(i => i[0] === t)).filter(Boolean)]);
+  const firstName = (profile?.display_name || '').trim().split(/\s+/)[0] || 'Minha conta';
   const TABS = ['/aprender', '/praticar', '/jogos', '/conversar'];
   const IN_PRACTICE = ['/revisao', '/fone']; // no celular ficam dentro de Praticar
   const tabs = TABS.map(t => items.find(i => i[0] === t)).filter(Boolean);
@@ -203,12 +212,36 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     <div className="shell">
       <nav className="side" aria-label="Menu do aluno">
         <div style={{ padding: '0 8px 20px' }}><Logo to="/aprender" /></div>
-        {items.map(([to, ic, label, badge]) => (
-          <NavLink key={to} to={to} className={({ isActive }) => 'nav-a' + (isActive ? ' active' : '')}>
-            <Icon name={ic} />{label}{badge > 0 && <span className="badge" aria-label={`${badge} pendentes`}>{badge}</span>}
-          </NavLink>
+        {GROUPS.map(([g, list]) => (
+          <div key={g} className="side-grp" role="group" aria-label={g}>
+            <span className="side-grp-t" aria-hidden="true">{g}</span>
+            {list.map(([to, ic, label, badge]) => (
+              <NavLink key={to} to={to} className={({ isActive }) => 'nav-a' + (isActive ? ' active' : '')}>
+                <Icon name={ic} />{label}{badge > 0 && <span className="badge" aria-label={`${badge} pendentes`}>{badge}</span>}
+              </NavLink>
+            ))}
+          </div>
         ))}
-        <div className="side-foot">{extras}</div>
+        <div className="side-foot">
+          {inst.canInstall && <button className="nav-a nav-install" onClick={inst.install}><Icon name="download" />Instalar app</button>}
+          {!inst.canInstall && inst.iosHint && (
+            <button className="nav-a nav-plain" onClick={() => setIosTip(v => !v)} aria-expanded={iosTip}><Icon name="download" />Instalar no iPhone</button>
+          )}
+          {iosTip && <p className="note" style={{ margin: 0, fontSize: 13 }}>No Safari, toque em <b>Compartilhar</b> e depois em <b>Adicionar à Tela de Início</b>.</p>}
+          <div className="side-me">
+            <NavLink to="/perfil" className="side-me-a" title="Editar perfil">
+              <span className="side-av" aria-hidden="true">{firstName[0].toUpperCase()}</span>
+              <span className="side-me-t"><b>{firstName}</b><small>Ver perfil</small></span>
+            </NavLink>
+            <button type="button" className="side-me-b" onClick={() => updateProfile({ sound_on: !profile?.sound_on })} aria-pressed={!!profile?.sound_on}
+              aria-label={profile?.sound_on ? 'Som ligado' : 'Som desligado'} title={profile?.sound_on ? 'Som ligado (clique para desligar)' : 'Som desligado (clique para ligar)'}>
+              <Icon name={profile?.sound_on ? 'sound' : 'mute'} size={19} />
+            </button>
+            <button type="button" className="side-me-b" aria-label="Sair" title="Sair" onClick={async () => { const result = await signOut(); if (!result?.error) nav('/'); }}>
+              <Icon name="logout" size={19} />
+            </button>
+          </div>
+        </div>
       </nav>
 
       <main className="content"><div className="boost-bar"><BoostTimer until={profile?.xp_boost_until} /></div>{children}</main>

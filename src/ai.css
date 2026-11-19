@@ -246,3 +246,7 @@
 .aula-18 p{margin:8px 0 12px;font-size:15px;line-height:1.5}
 .aula-18-btns{display:flex;gap:10px;flex-wrap:wrap}
 .aula-done{border:2px solid var(--violet-ring)}
+/* na coluna da trilha: uma linha por missão (o texto inteiro fica no title) */
+.rail .missions .ms-head{flex-wrap:wrap;row-gap:2px}
+.rail .missions .ms-head b,.rail .missions .ms-head .muted{white-space:nowrap}
+.rail .missions .ms-txt > span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

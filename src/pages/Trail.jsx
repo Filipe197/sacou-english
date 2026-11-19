@@ -65,13 +65,25 @@ function Chest({ open, fresh }) {
 
 // Barra fixa no topo com a unidade que está na tela (como no Duolingo)
 function UnitHead({ u, unitDone, complete, unlocked, tone }) {
+  const total = u.lessons.length;
+  const left = total - unitDone;
+  const going = unlocked && !complete;
   return (
     <div className={'tr-head' + tone}>
-      <div style={{ minWidth: 0 }}>
-        <span className="tr-kick">{complete && <Icon name="check" size={15} stroke={3} />}Nível {u.level} · Unidade {u.order}{unlocked && !complete ? ` · ${unitDone} de ${u.lessons.length}` : ''}</span>
+      <div style={{ minWidth: 0, flex: 1 }}>
+        <span className="tr-kick">{complete && <Icon name="check" size={15} stroke={3} />}Nível {u.level} · Unidade {u.order}</span>
         <b className="tr-title" title={u.subtitle}>{u.title}</b>
+        {going && (
+          <div className="tr-prog">
+            <span className="tr-bar" role="progressbar" aria-valuenow={unitDone} aria-valuemax={total} aria-label="Lições feitas nesta unidade"><span style={{ width: `${(unitDone / total) * 100}%` }} /></span>
+            <span className="tr-prog-t">{unitDone} de {total} lições · faltam ~{left * 5} min</span>
+          </div>
+        )}
       </div>
-      <Link className="tr-guide" to={`/guia/${u.id}`} aria-label={`Guia da unidade ${u.order}: ${u.title}`}><Icon name="book" size={18} /><span>Guia</span></Link>
+      <div className="tr-head-bts">
+        <Link className="tr-guide" to={`/guia/${u.id}`} aria-label={`Guia da unidade ${u.order}: ${u.title}`}><Icon name="book" size={18} /><span>Guia</span></Link>
+        {going && <Link className="tr-guide tr-pular" to={`/prova/unidade/${u.id}`} aria-label={`Fazer o teste e pular a unidade ${u.order}`}><Icon name="bolt" size={17} /><span>Pular</span></Link>}
+      </div>
     </div>
   );
 }
@@ -90,6 +102,16 @@ export function Rail({ prog }) {
         <div className="card" style={{ flex: 1, padding: 16, display: 'flex', alignItems: 'center', gap: 10 }}><Fire size={26} /><div><b style={{ display: 'block', fontSize: 20, fontFamily: 'var(--head)' }}>{streak}</b><span style={{ fontSize: 12, color: 'var(--text3)' }}>{streak === 1 ? 'dia seguido' : 'dias seguidos'}</span>{profile?.streak_freezes > 0 && <span className="shield-pill" title="Escudos: protegem a sequência num dia sem estudo">🛡️ {profile.streak_freezes} {profile.streak_freezes === 1 ? 'escudo' : 'escudos'}</span>}</div></div>
         <div className="card" style={{ flex: 1, padding: 16, display: 'flex', alignItems: 'center', gap: 10 }}><Bolt size={26} /><div><b style={{ display: 'block', fontSize: 20, fontFamily: 'var(--head)' }}>{(profile?.xp_total || 0).toLocaleString('pt-BR')}</b><span style={{ fontSize: 12, color: 'var(--text3)' }}>XP total</span></div></div>
       </div>
+      {prog.mistakes.length > 0 && (
+        <div className="card rail-alert rail-review">
+          <b className="rr-t">Seus erros estão esperando</b>
+          <div className="rr-row">
+            <span className="rr-n">{prog.mistakes.length}<small>{prog.mistakes.length === 1 ? 'erro' : 'erros'}</small></span>
+            <p>Uns 3 minutos de revisão fixam o que você errou e contam para a missão da semana.</p>
+          </div>
+          <Link className="btn btn-block rr-go" to="/revisao">Revisar agora</Link>
+        </div>
+      )}
       {profile?.freeze_used_on === todayBR() ? (
         <div className="card shield-card rail-alert"><b>🛡️ Seu escudo salvou a sequência!</b><span>Você ficou um dia sem estudar, mas seus {streak} dias seguidos continuam.</span></div>
       ) : shieldCovering(profile) > 0 && (
@@ -111,13 +133,6 @@ export function Rail({ prog }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,minmax(0,1fr))', gap: 6, marginTop: 6, fontSize: 12, fontWeight: 600, color: 'var(--text3)', textAlign: 'center' }}>{['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(l => <span key={l}>{l}</span>)}</div>
       </div>
       <Missions compact />
-      {prog.mistakes.length > 0 && (
-        <div className="card rail-alert" style={{ background: 'var(--ink-fixed)', borderColor: 'var(--ink-fixed)', color: '#fff' }}>
-          <b style={{ display: 'block', marginBottom: 6 }}>{prog.mistakes.length} {prog.mistakes.length === 1 ? 'erro' : 'erros'} para revisar</b>
-          <p style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5, color: 'var(--on-dark)' }}>Revisar o que você errou ajuda a fixar mais rápido. Leva uns 3 minutos.</p>
-          <Link className="btn btn-lime btn-block" to="/revisao">Revisar agora</Link>
-        </div>
-      )}
       {dueLessonIds(prog.scores).length > 0 && (
         <div className="card rail-alert" style={{ borderColor: 'var(--violet-ring)' }}>
           <b style={{ display: 'block', marginBottom: 6 }}>Hora de relembrar</b>
@@ -150,14 +165,14 @@ export default function Trail() {
     document.addEventListener('keydown', esc);
     return () => { document.removeEventListener('click', close); document.removeEventListener('keydown', esc); };
   }, [open]);
-  // Barra única no topo: mostra a unidade cujo cabeçalho já passou para baixo dela
+  // Barra única no topo: mostra a unidade que está no meio da tela
   useEffect(() => {
     if (prog.loading) return;
     let raf = 0;
     const update = () => {
       raf = 0;
       let id = null;
-      const limit = (document.querySelector('.tr-stick')?.getBoundingClientRect().bottom || 90) + 8;
+      const limit = Math.max((document.querySelector('.tr-stick')?.getBoundingClientRect().bottom || 90) + 8, window.innerHeight * 0.45);
       for (const sec of document.querySelectorAll('.tr-unit[data-u]')) {
         if (id === null || sec.getBoundingClientRect().top < limit) id = sec.dataset.u; else break;
       }
@@ -249,7 +264,13 @@ export default function Trail() {
                       const status = skipped ? 'Pulada pelo teste de nível' : st === 'done' ? 'Concluída' : st === 'current' ? 'Próxima lição' : 'Bloqueada';
                       return (
                         <div key={key} className={'tr-slot' + (st === 'current' ? ' cur' : '') + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[i % WAVE.length] }}>
-                          {st === 'current' && <span className="tr-bubble" aria-hidden="true">Começar</span>}
+                          {st === 'current' && open !== key && (
+                            <Link className="tr-bubble tr-bubble-l" to={`/licao/${l.id}`} onClick={e => e.stopPropagation()}>
+                              <span className="tr-bubble-k">{kindOf(l).label} {i + 1} · {l.items?.length ? `${l.items.length} exercícios` : 'uns 5 min'}</span>
+                              <b>{l.title}</b>
+                              <span className="tr-bubble-go">Começar · até +15 XP</span>
+                            </Link>
+                          )}
                           <button type="button" ref={st === 'current' ? curRef : undefined}
                             className={`tr-node ${st}${skipped ? ' skipped' : ''}${open === key ? ' open' : ''}`}
                             aria-expanded={open === key} aria-label={`${l.title}: ${status}`}

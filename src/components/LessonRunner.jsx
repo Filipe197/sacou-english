@@ -542,6 +542,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const { profile, setProfile } = useAuth();
   const attemptId = useRef(null);
   const resumed = useRef(undefined);
+  // a lista desta sessão fica fixa: se a tela de cima sortear outra no meio, nada muda aqui
+  const fixed = useRef(entries);
   if (resumed.current === undefined) resumed.current = readResume(saveKey, entries);
   if (!attemptId.current) attemptId.current = resumed.current?.attemptId || crypto.randomUUID();
   const [celebrated, setCelebrated] = useState(false);
@@ -582,7 +584,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   // salva o andamento a cada exercício (e apaga quando a lição termina)
   useEffect(() => {
     if (!saveKey || result) return;
-    writeResume(saveKey, { at: Date.now(), attemptId: attemptId.current, idx, queue: queue.map(e => [e.item.id, e.retry || null]), firstTry: [...firstTry.current], base: baseOf(entries) });
+    writeResume(saveKey, { at: Date.now(), attemptId: attemptId.current, idx, queue: queue.map(e => [e.item.id, e.retry || null]), firstTry: [...firstTry.current], base: baseOf(fixed.current) });
   }, [saveKey, idx, queue, status, result]);
   useEffect(() => { if (resumeNote) { const tm = setTimeout(() => setResumeNote(false), 3500); return () => clearTimeout(tm); } }, [resumeNote]);
   // dicas já decididas por posição na fila (para não sumirem depois de marcadas como vistas)
