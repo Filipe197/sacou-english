@@ -6,6 +6,7 @@ import { LESSONS, shuffle } from '../lib/content.js';
 import { useProgress } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { finishSession } from '../lib/finish-session.js';
+import { keepRead, keepWrite, keepClear } from '../lib/keep.js';
 import DailyCelebration, { BoostTimer } from '../components/DailyCelebration.jsx';
 import { speakAsync, fx, canSpeak } from '../lib/fx.js';
 import { alignSpeech } from '../lib/pronounce.js';
@@ -37,10 +38,14 @@ function phrasePool(done) {
 
 export default function Headphones() {
   const prog = useProgress();
-  const [on, setOn] = useState(false);
+  const { user } = useAuth();
+  const hk = `${user?.id || 'anon'}:fone`;
+  // sessão pela metade (a página recarregou): volta na mesma frase
+  const [saved, setSaved] = useState(() => keepRead(hk));
+  const [on, setOn] = useState(!!saved);
   const pool = useMemo(() => phrasePool(prog.done), [prog.done]);
   if (prog.loading) return <Spinner />;
-  if (on) return <Session pool={pool} onExit={() => setOn(false)} />;
+  if (on) return <Session pool={pool} saveKey={hk} saved={saved} onExit={() => { keepClear(hk); setSaved(null); setOn(false); }} />;
   return (
     <Shell mistakesCount={prog.mistakes.length}>
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
@@ -68,21 +73,21 @@ export default function Headphones() {
   );
 }
 
-function Session({ pool, onExit }) {
+function Session({ pool, onExit, saveKey, saved }) {
   const { user, profile, setProfile } = useAuth();
   const attemptId = useRef(null);
-  if (!attemptId.current) attemptId.current = crypto.randomUUID();
+  if (!attemptId.current) attemptId.current = saved?.attemptId || crypto.randomUUID();
   const [result, setResult] = useState(null);
   const [celebrated, setCelebrated] = useState(false);
   const nav = useNavigate();
-  const list = useMemo(() => pool.slice(0, SESSION), [pool]);
-  const [i, setI] = useState(0);
+  const [list] = useState(() => (saved?.list?.length ? saved.list : pool.slice(0, SESSION)));
+  const [i, setI] = useState(() => saved?.i || 0);
   const [phase, setPhase] = useState('ready'); // ready | speak | listen | ok | miss | end
   const [words, setWords] = useState(null);
   const [hide, setHide] = useState(false);
   const [paused, setPaused] = useState(false);
   const [withPt, setWithPt] = useState(true);
-  const [score, setScore] = useState({ ok: 0, total: 0 });
+  const [score, setScore] = useState(() => saved?.score || { ok: 0, total: 0 });
   const { listen, stop } = useListen();
   const alive = useRef(true);
   const pauseRef = useRef(false);
@@ -105,8 +110,8 @@ function Session({ pool, onExit }) {
   });
   const waitResume = async () => { while (pauseRef.current && alive.current) await wait(300); };
 
-  async function run(start) {
-    let ok = 0, total = 0;
+  async function run(start, from = { ok: 0, total: 0 }) {
+    let { ok, total } = from;
     for (let k = start; k < list.length && alive.current; k++) {
       setI(k); setWords(null);
       const p = list[k];
@@ -130,9 +135,11 @@ function Session({ pool, onExit }) {
       }
       total++; if (hit) ok++;
       setScore({ ok, total });
+      if (k + 1 < list.length) keepWrite(saveKey, { list, i: k + 1, score: { ok, total }, attemptId: attemptId.current });
       await wait(500);
     }
     if (!alive.current) return;
+    keepClear(saveKey);
     setPhase('end');
     fx.play('complete');
     const pct = Math.round((ok / Math.max(1, total)) * 100);
@@ -170,10 +177,12 @@ function Session({ pool, onExit }) {
         {phase === 'ready' ? (
           <div className="hp-start">
             <span className="hp-ic big"><Icon name="headphones" size={56} color="#fff" /></span>
-            <h1>Pronto?</h1>
+            <h1>{saved?.i > 0 ? 'Vamos continuar?' : 'Pronto?'}</h1>
             <p className="muted">Coloque o fone. Depois do sinal, repita a frase em voz alta.</p>
             <label className="hp-opt"><input type="checkbox" checked={withPt} onChange={e => setWithPt(e.target.checked)} /> Falar a tradução em português antes</label>
-            <button className="btn btn-lime btn-lg btn-3d" onClick={() => run(0)}>Começar agora</button>
+            {saved?.i > 0
+              ? <button className="btn btn-lime btn-lg btn-3d" onClick={() => run(saved.i, saved.score)}>Continuar da frase {saved.i + 1}</button>
+              : <button className="btn btn-lime btn-lg btn-3d" onClick={() => { keepWrite(saveKey, { list, i: 0, score, attemptId: attemptId.current }); run(0); }}>Começar agora</button>}
           </div>
         ) : (
           <>

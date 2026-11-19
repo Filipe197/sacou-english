@@ -12,11 +12,18 @@ import { askAI } from '../lib/ai.js';
 import { useNotebook, saveWord } from '../lib/notebook.js';
 import { useAuth } from '../lib/auth.jsx';
 import { logActivity } from '../lib/offline.js';
+import { keepRead, keepWrite, keepClear } from '../lib/keep.js';
 
 export default function Conversation() {
-  const [sc, setSc] = useState(null);
+  const { user } = useAuth();
+  const ck = `${user?.id || 'anon'}:conversa`;
+  // conversa pela metade (a página recarregou): volta com as mesmas falas
+  const restore = useRef(undefined);
+  if (restore.current === undefined) restore.current = keepRead(ck);
+  const [sc, setSc] = useState(() => (restore.current && SCENARIOS.find(s => s.id === restore.current.sc)) || null);
   const [run, setRun] = useState(0);
-  if (sc) return <Chat key={run} sc={sc} onExit={() => setSc(null)} onAgain={() => setRun(n => n + 1)} />;
+  const drop = () => { keepClear(ck); restore.current = null; };
+  if (sc) return <Chat key={run} sc={sc} keepKey={ck} restore={restore.current?.sc === sc.id ? restore.current : null} onExit={() => { drop(); setSc(null); }} onAgain={() => { drop(); setRun(n => n + 1); }} />;
   return (
     <Shell>
       <div style={{ maxWidth: 820, margin: '0 auto' }}>
@@ -49,14 +56,14 @@ export default function Conversation() {
   );
 }
 
-function Chat({ sc, onExit, onAgain }) {
-  const [lines, setLines] = useState(() => [{ role: 'assistant', text: sc.opening[0], pt: sc.opening[1] }]);
+function Chat({ sc, onExit, onAgain, keepKey, restore }) {
+  const [lines, setLines] = useState(() => restore?.lines?.length ? restore.lines : [{ role: 'assistant', text: sc.opening[0], pt: sc.opening[1] }]);
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
-  const [finished, setFinished] = useState(false);
+  const [finished, setFinished] = useState(!!restore?.finished);
   const [showPt, setShowPt] = useState({});
-  const [summary, setSummary] = useState(null);
+  const [summary, setSummary] = useState(restore?.summary || null);
   const [sumBusy, setSumBusy] = useState(false);
   const { listening, listen, stop } = useListen();
   const { user } = useAuth();
@@ -64,7 +71,9 @@ function Chat({ sc, onExit, onAgain }) {
   const turns = lines.filter(l => l.role === 'user').length;
   const over = finished || turns >= MAX_TURNS;
 
-  useEffect(() => { const t = setTimeout(() => speak(sc.opening[0]), 400); return () => clearTimeout(t); }, []);
+  useEffect(() => { if (restore) return; const t = setTimeout(() => speak(sc.opening[0]), 400); return () => clearTimeout(t); }, []);
+  // salva a cada fala (só depois que o aluno disse alguma coisa)
+  useEffect(() => { if (keepKey && (turns > 0 || summary)) keepWrite(keepKey, { sc: sc.id, lines, finished, summary }); }, [lines, finished, summary]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' }); }, [lines.length, busy]);
 
   async function send(text) {

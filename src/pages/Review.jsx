@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import LessonRunner from '../components/LessonRunner.jsx';
+import LessonRunner, { savedEntries, clearResume } from '../components/LessonRunner.jsx';
 import { getItem, getUnit, getLesson } from '../lib/content.js';
 import { askAI } from '../lib/ai.js';
 import { useProgress } from '../lib/progress.js';
@@ -12,8 +12,11 @@ import { Shell, Spinner, Icon, Anim } from '../components/ui.jsx';
 export default function Review() {
   const prog = useProgress();
   const { user, setProfile } = useAuth();
-  const [started, setStarted] = useState(false);
-  const [ai, setAi] = useState(null); // treino gerado pela IA
+  // revisão ou treino pela metade (a página recarregou): volta com os mesmos exercícios
+  const keyRev = `${user?.id || 'anon'}:revisao`, keyAI = `${user?.id || 'anon'}:treino-ia`;
+  const [savedRev] = useState(() => savedEntries(keyRev));
+  const [started, setStarted] = useState(!!savedRev);
+  const [ai, setAi] = useState(() => savedEntries(keyAI)); // treino gerado pela IA
   const [aiBusy, setAiBusy] = useState(false);
   const [aiErr, setAiErr] = useState('');
   const [aiRun, setAiRun] = useState(0);
@@ -21,7 +24,11 @@ export default function Review() {
 
   // "Voltar" no fim do treino abre /revisao de novo: sai do treino
   const loc = useLocation();
-  useEffect(() => { setAi(null); setStarted(false); itemResults.current = []; }, [loc.key]);
+  const firstLoc = useRef(loc.key);
+  useEffect(() => {
+    if (loc.key === firstLoc.current) return; // na abertura, mantém o que foi retomado
+    setAi(null); setStarted(false); itemResults.current = [];
+  }, [loc.key]);
 
   async function startAI() {
     setAiBusy(true); setAiErr('');
@@ -29,14 +36,16 @@ export default function Review() {
       const r = await askAI('treino', {});
       const list = r.items.map(it => ({ item: it, lessonId: it.lessonId, unit: getUnit(it.unitId), story: getLesson(it.lessonId)?.story })).filter(e => e.unit);
       if (!list.length) throw new Error('Não consegui montar o treino agora. Tente de novo.');
-      setAi(list); setAiRun(n => n + 1);
+      clearResume(keyAI); setAi(list); setAiRun(n => n + 1);
     } catch (e) { setAiErr(e.message); }
     setAiBusy(false);
   }
 
-  const entries = useMemo(() => prog.mistakes
+  const fresh = useMemo(() => prog.mistakes
     .map(m => { const f = getItem(m.item_id); return f && f.item.type !== 'story' && { item: f.item, lessonId: f.lesson.id, unit: f.lesson.unit, story: f.lesson.story, times: m.times }; })
     .filter(Boolean).slice(0, 10), [prog.mistakes]);
+  const [useSaved, setUseSaved] = useState(!!savedRev);
+  const entries = useSaved && savedRev ? savedRev : fresh;
 
   if (prog.loading) return <Spinner />;
 
@@ -46,6 +55,7 @@ export default function Review() {
         key={aiRun}
         introduceWords={false}
         entries={ai}
+        saveKey={keyAI}
         title="Treino infinito"
         exitTo="/revisao"
         retryWrong
@@ -63,6 +73,7 @@ export default function Review() {
       <LessonRunner
         introduceWords={false}
         entries={entries}
+        saveKey={keyRev}
         title="Revisão dos seus erros"
         exitTo="/revisao"
         retryWrong={false}
@@ -99,7 +110,7 @@ export default function Review() {
                 <b style={{ fontSize: 20 }}>{prog.mistakes.length} {prog.mistakes.length === 1 ? 'exercício' : 'exercícios'} para revisar</b>
                 <p style={{ margin: '4px 0 0', color: 'var(--on-dark)' }}>Uma sessão tem até 10 exercícios e leva uns 3 minutos.</p>
               </div>
-              <button className="btn btn-lime btn-lg" onClick={() => setStarted(true)}>Começar revisão</button>
+              <button className="btn btn-lime btn-lg" onClick={() => { clearResume(keyRev); setUseSaved(false); setStarted(true); }}>Começar revisão</button>
             </div>
             <div className="card ai-train">
               <div>

@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import LessonRunner from '../components/LessonRunner.jsx';
+import LessonRunner, { savedEntries, clearResume } from '../components/LessonRunner.jsx';
 import { LESSONS, shuffle } from '../lib/content.js';
 import { useProgress, dueLessonIds } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
@@ -13,13 +13,17 @@ import { Shell, Spinner, Icon } from '../components/ui.jsx';
 export default function Practice() {
   const prog = useProgress();
   const { user, setProfile } = useAuth();
-  const [started, setStarted] = useState(0);
+  const saveKey = `${user?.id || 'anon'}:treino`;
+  // treino pela metade (a página recarregou): volta com os mesmos exercícios
+  const [saved] = useState(() => savedEntries(saveKey));
+  const [started, setStarted] = useState(saved ? 1 : 0);
   const itemResults = useRef([]);
 
   const done = LESSONS.filter(l => prog.done.has(l.id));
   const dueIds = new Set(dueLessonIds(prog.scores));
   const due = done.filter(l => dueIds.has(l.id));
   const entries = useMemo(() => {
+    if (saved && started === 1) return saved;
     if (!done.length) return [];
     // lições "na hora de revisar" entram 3 vezes no sorteio; as recentes, 2 vezes
     const recent = done.slice(-6);
@@ -36,6 +40,7 @@ export default function Practice() {
         introduceWords={false}
         key={started}
         entries={entries}
+        saveKey={saveKey}
         title="Treino"
         exitTo="/praticar"
         retryWrong={false}
@@ -70,7 +75,7 @@ export default function Practice() {
               <p style={{ margin: '4px 0 0', color: 'var(--on-dark)' }}>12 exercícios · cerca de 4 minutos · até 10 XP</p>
               {due.length > 0 && <p style={{ margin: '8px 0 0', color: 'var(--lime)', fontWeight: 600 }}>{due.length} {due.length === 1 ? 'lição está' : 'lições estão'} no dia de relembrar: {due.slice(0, 3).map(l => l.title).join(', ')}{due.length > 3 ? '...' : ''}</p>}
             </div>
-            <button className="btn btn-lime btn-lg" onClick={() => setStarted(n => n + 1)}><Icon name="review" size={18} />Começar treino</button>
+            <button className="btn btn-lime btn-lg" onClick={() => { clearResume(saveKey); setStarted(n => n + 1); }}><Icon name="review" size={18} />Começar treino</button>
           </div>
         )}
 

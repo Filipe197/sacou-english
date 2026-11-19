@@ -4,7 +4,7 @@
 // (skip_lessons, a mesma do teste de nível: não dá XP nem conta erros).
 import { useMemo, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import LessonRunner from '../components/LessonRunner.jsx';
+import LessonRunner, { savedEntries } from '../components/LessonRunner.jsx';
 import { Shell } from '../components/ui.jsx';
 import { LEVELS, LEVEL_NAMES, unitsOf, getUnit, shuffle } from '../lib/content.js';
 import { useProgress } from '../lib/progress.js';
@@ -23,15 +23,17 @@ export const examCard = (level) => ({
 export default function Exam() {
   const { kind, id } = useParams();
   const prog = useProgress();
-  const { profile } = useAuth();
-  const [started, setStarted] = useState(false);
+  const { profile, user } = useAuth();
+  const saveKey = `${user?.id || 'anon'}:prova:${kind}:${id}`;
+  const [saved] = useState(() => savedEntries(saveKey)); // prova pela metade: mesmas perguntas
+  const [started, setStarted] = useState(!!saved);
   const unit = kind === 'unidade' ? getUnit(id) : null;
   const level = kind === 'nivel' && LEVELS.includes(id) ? id : null;
   const units = unit ? [unit] : level ? unitsOf(level) : [];
 
-  const entries = useMemo(() => units.length === 1
+  const entries = useMemo(() => saved || (units.length === 1
     ? shuffle(pool(units[0])).slice(0, 12)
-    : units.flatMap(u => shuffle(pool(u)).slice(0, 3)), [kind, id]); // eslint-disable-line react-hooks/exhaustive-deps
+    : units.flatMap(u => shuffle(pool(u)).slice(0, 3))), [kind, id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!units.length) return <Navigate to="/aprender" replace />;
   const title = unit ? `Teste da unidade ${unit.order}: ${unit.title}` : `Prova do nível ${level}`;
@@ -67,6 +69,7 @@ export default function Exam() {
     <LessonRunner
       introduceWords={false}
       entries={entries}
+      saveKey={saveKey}
       title={title}
       retryWrong={false}
       finishCta="Voltar para a trilha"

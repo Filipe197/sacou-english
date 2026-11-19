@@ -2,8 +2,9 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } fro
 import { Link } from 'react-router-dom';
 import { Icon, Anim, Bolt } from './ui.jsx';
 import { fx, speak, canSpeak } from '../lib/fx.js';
-import { shuffle } from '../lib/content.js';
+import { shuffle, getItem, getLesson, getUnit } from '../lib/content.js';
 import { supabase } from '../lib/supabase.js';
+import { useWakeLock } from '../lib/wakelock.js';
 import Hinted from './Hinted.jsx';
 import { getNewWords } from '../lib/hints.js';
 import { LessonCtx, SaveItemButton } from './LessonNotes.jsx';
@@ -514,8 +515,26 @@ function readResume(key, entries) {
     return { queue, idx: s.idx, firstTry: new Map(s.firstTry || []), attemptId: s.attemptId };
   } catch { return null; }
 }
+// Telas com exercícios sorteados (revisão, treino, provas, teste de nível) usam isto para
+// remontar a MESMA lista depois de recarregar, em vez de sortear outra e perder o andamento.
+// Itens do curso ficam salvos só pelo id; os criados pela IA vão inteiros.
+const baseOf = (entries) => entries.map(e => getItem(e.item.id) ? e.item.id : { item: e.item, lessonId: e.lessonId, unitId: e.unit?.id });
+export function savedEntries(key) {
+  if (!key) return null;
+  try {
+    const s = JSON.parse(localStorage.getItem(resumeKey(key)) || 'null');
+    if (!s || Date.now() - s.at > RESUME_TTL || !Array.isArray(s.base) || !s.base.length) return null;
+    const list = s.base.map(b => {
+      if (typeof b === 'string') { const f = getItem(b); return f && { item: f.item, lessonId: f.lesson.id, unit: f.lesson.unit, story: f.lesson.story }; }
+      const lesson = getLesson(b.lessonId);
+      const unit = getUnit(b.unitId || b.item?.unitId) || lesson?.unit;
+      return b.item && unit && { item: b.item, lessonId: b.lessonId, unit, story: lesson?.story };
+    });
+    return list.every(Boolean) ? list : null;
+  } catch { return null; }
+}
 function writeResume(key, data) { try { localStorage.setItem(resumeKey(key), JSON.stringify(data)); } catch { /* sem armazenamento */ } }
-function clearResume(key) { try { if (key) localStorage.removeItem(resumeKey(key)); } catch { /* sem armazenamento */ } }
+export function clearResume(key) { try { if (key) localStorage.removeItem(resumeKey(key)); } catch { /* sem armazenamento */ } }
 
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
@@ -559,10 +578,11 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     comboRef.current = v.n; setCombo(v.n); comboRecord.current = v.best;
   }, [comboKey]); // eslint-disable-line react-hooks/exhaustive-deps
   const ctaRef = useRef(null);
+  useWakeLock(!result); // a tela não apaga no meio da lição
   // salva o andamento a cada exercício (e apaga quando a lição termina)
   useEffect(() => {
     if (!saveKey || result) return;
-    writeResume(saveKey, { at: Date.now(), attemptId: attemptId.current, idx, queue: queue.map(e => [e.item.id, e.retry || null]), firstTry: [...firstTry.current] });
+    writeResume(saveKey, { at: Date.now(), attemptId: attemptId.current, idx, queue: queue.map(e => [e.item.id, e.retry || null]), firstTry: [...firstTry.current], base: baseOf(entries) });
   }, [saveKey, idx, queue, status, result]);
   useEffect(() => { if (resumeNote) { const tm = setTimeout(() => setResumeNote(false), 3500); return () => clearTimeout(tm); } }, [resumeNote]);
   // dicas já decididas por posição na fila (para não sumirem depois de marcadas como vistas)

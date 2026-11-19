@@ -7,6 +7,8 @@ import { askAI, textDoc, heading, bullets } from '../lib/ai.js';
 import { notebook, useNotebook } from '../lib/notebook.js';
 import { useProgress } from '../lib/progress.js';
 import { currentLevel } from '../lib/content.js';
+import { useAuth } from '../lib/auth.jsx';
+import { keepRead, keepWrite, keepClear } from '../lib/keep.js';
 
 const MAX_Q = 10; // perguntas por conversa (o servidor confere o mesmo número)
 const MAX_CHARS = 400;
@@ -23,7 +25,11 @@ export default function Duvidas() {
   useNotebook(); // caderno carregado para o botão "Salvar"
   const prog = useProgress();
   const level = prog.loading ? 'A1' : currentLevel(prog.done);
-  const [turns, setTurns] = useState([]); // [{ q, a, saved }]
+  const { user } = useAuth();
+  const dk = `${user?.id || 'anon'}:duvidas`;
+  // a conversa fica salva no aparelho: recarregar a página não apaga as respostas
+  const [turns, setTurns] = useState(() => keepRead(dk, 24 * 3600 * 1000)?.turns || []); // [{ q, a, saved }]
+  useEffect(() => { if (turns.length) keepWrite(dk, { turns }); }, [turns]); // eslint-disable-line react-hooks/exhaustive-deps
   const [q, setQ] = useState('');
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState(null); // { msg, question }
@@ -63,7 +69,7 @@ export default function Duvidas() {
     setTurns(ts => ts.map((t, j) => (j === i ? { ...t, saved: true } : t)));
   }
 
-  function reset() { setTurns([]); setErr(null); setQ(''); inputRef.current?.focus(); }
+  function reset() { keepClear(dk); setTurns([]); setErr(null); setQ(''); inputRef.current?.focus(); }
 
   return (
     <Shell>

@@ -228,6 +228,20 @@ await test('tirar dúvidas: pergunta, resposta e salvar', async () => {
   if (!await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)) throw new Error('rolagem lateral na tela de dúvidas');
 });
 
+await test('aula do Juvenal: volta de onde parou se a página recarregar', async () => {
+  await open('/aula');
+  await wait(800);
+  await page.evaluate(() => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Fechar')?.click());
+  await click('Começar a aula');
+  await expectText('Good morning, teacher.');
+  await click('Pular');
+  await expectText('What do you eat for breakfast?');
+  await page.reload({ waitUntil: 'networkidle0' });
+  await expectText('Continuando de onde você parou');
+  await expectText('What do you eat for breakfast?');
+  await page.evaluate(() => document.querySelector('[aria-label="Sair da aula"]')?.click());
+});
+
 await test('aula do Juvenal: 1 por dia para alunos, sem limite para administrador', async () => {
   await page.evaluateOnNewDocument(() => { globalThis.__aulaStatus = { used: 1, limit: 1, admin: false }; });
   await open('/aula');
@@ -237,6 +251,61 @@ await test('aula do Juvenal: 1 por dia para alunos, sem limite para administrado
   await open('/aula');
   await expectText('Conta de administrador');
   if (await page.evaluate(() => document.querySelector('.aula-go')?.disabled)) throw new Error('o administrador não deveria ter limite');
+});
+
+// Recarrega no meio de uma sessão de exercícios sorteados: tem que voltar no MESMO exercício
+// (sem tela de início e sem sortear outros).
+async function sameAfterReload(counter) {
+  await wait(500);
+  const q = () => page.evaluate(() => (document.querySelector('.lesson-main, main')?.innerText || '').split('\n').slice(0, 4).join('|'));
+  const before = await q();
+  await page.reload({ waitUntil: 'networkidle0' });
+  await expectText(counter);
+  await wait(400);
+  const after = await q();
+  if (before !== after) throw new Error(`voltou outro exercício:\n antes: ${before}\n depois: ${after}`);
+}
+await test('prova: volta na mesma pergunta se a página recarregar', async () => {
+  await open('/prova/unidade/a1-u6');
+  // o teste anterior deixou esta prova pela metade: ela já abre retomada, sem a tela de início
+  if ((await text()).includes('Já sabe esta unidade?')) await click('Começar');
+  await expectText('1/12');
+  await sameAfterReload('1/12');
+});
+await test('treino: volta no mesmo exercício se a página recarregar', async () => {
+  await open('/praticar'); await click('Começar treino'); await expectText('1/12');
+  await sameAfterReload('1/12');
+});
+await test('revisão de erros: volta no mesmo exercício se a página recarregar', async () => {
+  await open('/revisao'); await click('Começar revisão'); await expectText('1/3');
+  await sameAfterReload('1/3');
+});
+await test('teste de nível: volta na mesma pergunta se a página recarregar', async () => {
+  await open('/nivelamento'); await click('Começar o teste');
+  await page.waitForFunction(() => /\b1\/\d+\b/.test(document.body.innerText));
+  const counter = await page.evaluate(() => document.body.innerText.match(/\b1\/\d+\b/)?.[0]);
+  if (!counter) throw new Error('não achei o contador do teste');
+  await sameAfterReload(counter);
+});
+await test('tirar dúvidas: a conversa continua depois de recarregar', async () => {
+  await open('/duvidas');
+  await wait(800);
+  await page.evaluate(() => [...document.querySelectorAll('button')].find(b => b.innerText.trim() === 'Fechar')?.click());
+  await page.type('.dv-bar input', 'Qual a diferença entre these e those?');
+  await page.click('.dv-bar button[type=submit]');
+  await expectText('Estes sapatos são novos.');
+  await page.reload({ waitUntil: 'networkidle0' });
+  await expectText('Estes sapatos são novos.');
+});
+await test('conversa: as falas continuam depois de recarregar', async () => {
+  await open('/conversar');
+  await page.evaluate(() => document.querySelector('.sc-card')?.click());
+  await page.waitForSelector('.conv-in input');
+  await page.type('.conv-in input', 'Hello, I would like a coffee please');
+  await page.click('.conv-in button[type=submit]');
+  await wait(1500);
+  await page.reload({ waitUntil: 'networkidle0' });
+  await expectText('Hello, I would like a coffee please');
 });
 
 await browser.close();

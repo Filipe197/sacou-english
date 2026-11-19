@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import LessonRunner from '../components/LessonRunner.jsx';
+import LessonRunner, { savedEntries } from '../components/LessonRunner.jsx';
 import { UNITS, LEVELS, LEVEL_ORDER, shuffle } from '../lib/content.js';
 import { useAuth } from '../lib/auth.jsx';
 import { supabase } from '../lib/supabase.js';
@@ -11,13 +11,15 @@ import { Logo } from '../components/ui.jsx';
 const PASS = 0.66;
 
 export default function Placement() {
-  const { updateProfile } = useAuth();
-  const [started, setStarted] = useState(false);
+  const { user, updateProfile } = useAuth();
   const [params] = useSearchParams();
   const upTo = LEVEL_ORDER.indexOf(LEVELS.includes(params.get('ate')) ? params.get('ate') : 'A1');
+  const saveKey = `${user?.id || 'anon'}:teste-nivel:${upTo}`;
+  const [saved] = useState(() => savedEntries(saveKey)); // teste pela metade: mesmas perguntas
+  const [started, setStarted] = useState(!!saved);
   const tested = LEVEL_ORDER.slice(0, upTo + 1);
   const units = UNITS.filter(u => LEVEL_ORDER.indexOf(u.level) <= upTo);
-  const entries = useMemo(() => units.flatMap(u => {
+  const entries = useMemo(() => saved || units.flatMap(u => {
     const per = upTo > 0 && LEVEL_ORDER.indexOf(u.level) < upTo ? 2 : 3; // no teste longo, menos perguntas dos níveis de baixo
     return shuffle(u.lessons.flatMap(l => l.items.filter(i => !['match', 'speak', 'story', 'quiz'].includes(i.type)).map(item => ({ item, lessonId: l.id, unit: u })))).slice(0, per);
   }), [upTo]);
@@ -49,6 +51,7 @@ export default function Placement() {
     <LessonRunner
         introduceWords={false}
       entries={entries}
+      saveKey={saveKey}
       title="Teste de nível"
       exitTo="/bem-vindo"
       retryWrong={false}

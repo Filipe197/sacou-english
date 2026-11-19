@@ -10,6 +10,7 @@ import { alignSpeech } from '../lib/pronounce.js';
 import { speak, speakAsync, canSpeak, fx } from '../lib/fx.js';
 import { askAI } from '../lib/ai.js';
 import { useAuth } from '../lib/auth.jsx';
+import { useWakeLock } from '../lib/wakelock.js';
 import { useProgress } from '../lib/progress.js';
 import { currentLevel } from '../lib/content.js';
 import { logActivity } from '../lib/offline.js';
@@ -26,10 +27,28 @@ const ADULT_KEY = 'sacou-aula-18';
 const readAdult = () => { try { return localStorage.getItem(ADULT_KEY) === '1'; } catch { return false; } };
 const saveAdult = (on) => { try { localStorage.setItem(ADULT_KEY, on ? '1' : '0'); } catch { /* sem armazenamento */ } };
 
+// Andamento da aula salvo no aparelho: se a página recarregar no meio (tela apagou, navegador
+// fechou a aba), a aula volta no mesmo passo, com a mesma conversa e sem gastar outra aula do dia.
+const AULA_TTL = 3 * 3600 * 1000;
+const aulaKey = (uid) => `sacou-aula-andamento:${uid || 'anon'}`;
+function readAula(uid) {
+  try {
+    const s = JSON.parse(localStorage.getItem(aulaKey(uid)) || 'null');
+    return s && s.cfg && s.aulaId && Date.now() - s.at < AULA_TTL ? s : null;
+  } catch { return null; }
+}
+const writeAula = (uid, s) => { try { localStorage.setItem(aulaKey(uid), JSON.stringify({ ...s, at: Date.now() })); } catch { /* sem armazenamento */ } };
+const clearAula = (uid) => { try { localStorage.removeItem(aulaKey(uid)); } catch { /* sem armazenamento */ } };
+
 export default function Aula() {
-  const [cfg, setCfg] = useState(null);
+  const { user } = useAuth();
+  const restore = useRef(undefined);
+  if (restore.current === undefined) restore.current = readAula(user?.id);
+  const [cfg, setCfg] = useState(() => restore.current?.cfg || null);
   const [run, setRun] = useState(0);
-  if (cfg) return <Lesson key={run} cfg={cfg} onExit={() => setCfg(null)} onAgain={() => setRun(n => n + 1)} />;
+  const exit = () => { clearAula(user?.id); restore.current = null; setCfg(null); };
+  const again = () => { clearAula(user?.id); restore.current = null; setRun(n => n + 1); };
+  if (cfg) return <Lesson key={run} cfg={cfg} restore={restore.current} onExit={exit} onAgain={again} />;
   return <Setup onStart={setCfg} />;
 }
 
@@ -119,14 +138,15 @@ function DailyQuota({ st }) {
     : <p className="aula-beta"><b>1 aula por dia</b> com o Juvenal, com a voz natural dele. A de hoje está esperando você.</p>;
 }
 
-function Lesson({ cfg, onExit, onAgain }) {
+function Lesson({ cfg, restore, onExit, onAgain }) {
   const { level, topic: topicId } = cfg;
   const topic = topicById(topicId);
   const pt = commentInPt(level);
   const { user } = useAuth();
   const { listening, listen, stop } = useListen();
-  const [steps, setSteps] = useState([]);
-  const [cur, setCur] = useState(null);           // passo atual do professor
+  const [steps, setSteps] = useState(() => restore?.steps || []);
+  const [cur, setCur] = useState(() => restore?.cur || null);           // passo atual do professor
+  const [resumed, setResumed] = useState(() => !!restore?.cur);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   const [pending, setPending] = useState(null);   // passos para tentar de novo após erro
@@ -151,7 +171,8 @@ function Lesson({ cfg, onExit, onAgain }) {
     return RETRY[retryBag.current.pop()];
   };
   const aulaId = useRef(null);
-  if (!aulaId.current) { aulaId.current = crypto.randomUUID(); newJuvenalLesson(); }
+  if (!aulaId.current) { aulaId.current = restore?.aulaId || crypto.randomUUID(); newJuvenalLesson(); }
+  useWakeLock(true); // a tela não apaga durante a aula
   const [voiceOff, setVoiceOff] = useState(juvenalVoiceOff);
   const started = useRef(false);
   const voiceRef = useRef(voice);
@@ -161,9 +182,18 @@ function Lesson({ cfg, onExit, onAgain }) {
 
   useEffect(() => {
     alive.current = true;
-    if (!started.current) { started.current = true; next([]); }
+    if (!started.current) {
+      started.current = true;
+      if (restore?.cur) { setTimeout(() => alive.current && setResumed(false), 3500); } // volta no mesmo passo, sem pedir outro à IA
+      else next(restore?.steps || []);
+    }
     return () => { alive.current = false; talkId.current++; try { window.speechSynthesis?.cancel(); } catch { /* sem voz */ } };
   }, []);
+
+  useEffect(() => {
+    if (summary) { clearAula(user?.id); return; }
+    if (cur || steps.length) writeAula(user?.id, { cfg, aulaId: aulaId.current, steps, cur });
+  }, [steps, cur, summary]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function say(parts) {
     const my = ++talkId.current;
@@ -290,6 +320,7 @@ function Lesson({ cfg, onExit, onAgain }) {
       </header>
 
       <main className="aula-main" aria-live="polite">
+        {resumed && <p className="resume-note" role="status">↩ Continuando de onde você parou</p>}
         {voice && /^limite-(aulas|site)$/.test(voiceOff) && (
           <p className="aula-voice-note">Sua aula com a voz natural de hoje já foi usada. As falas novas seguem com a voz do aparelho.</p>
         )}
