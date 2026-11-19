@@ -94,6 +94,7 @@ export function Terms() {
       </ul>
       <h2>Professor de IA</h2>
       <p>As respostas do professor de IA são criadas automaticamente e podem ter erros. Use-as como apoio ao estudo e confira no Guia de gramática quando tiver dúvida.</p>
+      <p>A aula com o Professor Juvenal tem um <b>modo sem filtro</b>, com palavrões e humor adulto. Ele vem desligado e só pode ser ligado por maiores de 18 anos, que confirmam a idade ao ativar.</p>
       <h2>Conteúdo</h2>
       <p>As lições seguem o padrão europeu CEFR. O conteúdo, as ilustrações próprias e o código do Sacou English pertencem aos seus autores; as obras de terceiros estão listadas em <Link to="/creditos">Fontes e créditos</Link>. As anotações que você escreve são suas.</p>
       <h2>Garantias</h2>

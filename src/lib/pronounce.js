@@ -9,12 +9,53 @@ const CONTR = { "i'm": 'i am', "you're": 'you are', "he's": 'he is', "she's": 's
   "didn't": 'did not', "can't": 'cannot', "won't": 'will not', "i'll": 'i will', "let's": 'let us',
   // o reconhecimento às vezes devolve sem apóstrofo
   im: 'i am', youre: 'you are', theyre: 'they are', dont: 'do not', doesnt: 'does not', didnt: 'did not', cant: 'cannot',
-  isnt: 'is not', arent: 'are not', wont: 'will not', thats: 'that is', whats: 'what is', lets: 'let us' };
-const NUM = { one: '1', two: '2', three: '3', four: '4', five: '5', six: '6', seven: '7', eight: '8', nine: '9', ten: '10', eleven: '11', twelve: '12', twenty: '20' };
+  isnt: 'is not', arent: 'are not', wont: 'will not', thats: 'that is', whats: 'what is', lets: 'let us',
+  // "its" e "it's" soam igual: os dois viram "it is" (na frase-alvo e no que foi ouvido)
+  its: 'it is' };
+// Números de 0 a 100 escritos por extenso viram algarismos (o reconhecimento devolve "7" ou "seven")
+const UNITS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+const NUM = { hundred: '100', 'onehundred': '100' };
+UNITS.forEach((w, i) => { NUM[w] = String(i); });
+TENS.forEach((w, i) => { if (!w) return; NUM[w] = String(i * 10); for (let u = 1; u < 10; u++) NUM[w + UNITS[u]] = String(i * 10 + u); }); // "twenty-one" → twentyone
+
+// Palavras que soam igual: o reconhecimento escolhe a grafia pelo contexto, então todas valem
+const SAME = [['two', 'to', 'too', '2'], ['four', 'for', '4'], ['eight', 'ate', '8'], ['one', 'won', '1'], ['right', 'write'], ['hear', 'here'],
+  ['there', 'their', "they're", 'theyre'], ['by', 'buy', 'bye'], ['know', 'no'], ['knew', 'new'], ['see', 'sea'], ['meet', 'meat'], ['week', 'weak'],
+  ['hi', 'high'], ['i', 'eye'], ['son', 'sun'], ['wear', 'where'], ['your', "you're", 'youre'], ['red', 'read'], ['hour', 'our'],
+  ['whether', 'weather'], ['wait', 'weight'], ['tail', 'tale'], ['flower', 'flour'], ['peace', 'piece'], ['plane', 'plain'], ['sale', 'sail'],
+  ['ok', 'okay'], ['mr', 'mister'], ['mrs', 'missus'], ['dr', 'doctor'], ['grey', 'gray'], ['mum', 'mom'], ['programme', 'program'], ['practise', 'practice']];
+const CANON = {};
+for (const g of SAME) for (const w of g) CANON[w.replace(/'/g, '')] = CANON[w] = g[0];
+
+// Inglês britânico (usado no curso) × americano (o reconhecimento devolve "color", "neighbor"...)
+const usSpelling = (w) => w
+  .replace(/^(colo|favo|neighbo|hono|flavo|behavio|humo|labo|harbo|rumo|endeavo)ur/, '$1r')
+  .replace(/^(cent|theat|met|lit|fib)re(s?)$/, '$1er$2')
+  .replace(/^(realis|organis|recognis|apologis|memoris|favoris|categoris)(e|ed|es|ing)$/, (m, a, b) => a.replace(/s$/, 'z') + b)
+  .replace(/^(travel|cancel|model|label)l(ed|ing|er)$/, '$1$2');
 
 const clean = (w) => w.toLowerCase().replace(/[’]/g, "'").replace(/[^a-z0-9']/g, '');
-// cada palavra vira uma ou mais "chaves" comparáveis (I'm = i am; 3 = three)
-const keys = (w) => { const c = clean(w); return (CONTR[c] || NUM[c] || c).split(' ').filter(Boolean); };
+// cada palavra vira uma ou mais "chaves" comparáveis (I'm = i am; 3 = three; to = two; colour = color)
+const keys = (w) => {
+  const c = clean(w);
+  if (CONTR[c]) return CONTR[c].split(' ');
+  const n = NUM[c.replace(/'/g, '')] || c;
+  const k = usSpelling(n);
+  return [CANON[k] || CANON[NUM[k] || ''] || k].filter(Boolean);
+};
+// iguais, ou quase (uma letra de diferença em palavras de 4+ letras: plural, grafia)
+function near(a, b) {
+  if (a === b) return true;
+  if (Math.min(a.length, b.length) < 4 || Math.abs(a.length - b.length) > 1 || /d/.test(a + b)) return false;
+  let i = 0, j = 0, diff = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i] === b[j]) { i++; j++; continue; }
+    if (++diff > 1) return false;
+    if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; }
+  }
+  return diff + (a.length - i) + (b.length - j) <= 1;
+}
 
 // Alinha alvo e ouvido (maior subsequência comum) e marca cada palavra do alvo.
 function alignOne(target, heard) {
@@ -24,10 +65,10 @@ function alignOne(target, heard) {
   const n = tk.length, m = hk.length;
   const L = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
   for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
-    L[i][j] = tk[i].k === hk[j] ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+    L[i][j] = near(tk[i].k, hk[j]) ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
   const hit = new Set();
   for (let i = 0, j = 0; i < n && j < m;) {
-    if (tk[i].k === hk[j]) { hit.add(i); i++; j++; } else if (L[i + 1][j] >= L[i][j + 1]) i++; else j++;
+    if (near(tk[i].k, hk[j])) { hit.add(i); i++; j++; } else if (L[i + 1][j] >= L[i][j + 1]) i++; else j++;
   }
   const okWord = tw.map((_, wi) => tk.every((t, ti) => t.i !== wi || hit.has(ti)));
   const words = tw.map((w, i) => ({ w, ok: okWord[i] || !clean(w) }));
@@ -69,4 +110,4 @@ export function tipsFor(word) {
   return out.length ? out : ['Ouça devagar, repita sílaba por sílaba e grave de novo. Exagerar um pouco ajuda no começo.'];
 }
 
-export const sameWord = (a, b) => keys(a).join(' ') === keys(b).join(' ');
+export const sameWord = (a, b) => { const x = keys(a), y = keys(b); return x.length === y.length && x.every((k, i) => near(k, y[i])); };

@@ -11,20 +11,52 @@ export const getSR = () => (typeof window !== 'undefined' ? (window.SpeechRecogn
 export function useListen() {
   const [listening, setListening] = useState(false);
   const rec = useRef(null);
-  useEffect(() => () => rec.current?.abort?.(), []);
+  useEffect(() => () => { const r = rec.current; rec.current = null; r?.abort?.(); }, []); // saiu da tela: não entrega mais nada
+  // Escuta até a pessoa terminar: aceita pausas curtas no meio da frase (modo contínuo), para
+  // sozinho depois de ~1,6 s de silêncio e, se o navegador encerrar sem resultado final (comum no
+  // Android), usa o que já tinha ouvido. Entrega as alternativas uma única vez, no fim.
   function listen({ onResult, onError, interim, onEnd }) {
     const SR = getSR();
     if (!SR) return;
     rec.current?.abort?.();
     const r = new SR(); rec.current = r;
-    r.lang = 'en-US'; r.interimResults = !!interim; r.maxAlternatives = 4;
+    r.lang = 'en-US'; r.interimResults = true; r.maxAlternatives = 4; r.continuous = true;
+    const finals = []; let lastAlts = []; let partial = ''; let failed = false; let silence = null;
+    const hardStop = setTimeout(() => { try { r.stop(); } catch { /* já parou */ } }, 15000);
+    const waitSilence = () => { clearTimeout(silence); silence = setTimeout(() => { try { r.stop(); } catch { /* já parou */ } }, 1600); };
     r.onresult = (e) => {
-      const res = e.results[e.results.length - 1];
-      if (!res.isFinal) { interim?.(res[0].transcript); return; }
-      onResult([...res].map(a => a.transcript));
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const res = e.results[i];
+        const text = res[0].transcript.trim();
+        if (!res.isFinal) { partial = text; continue; }
+        partial = '';
+        const last = finals[finals.length - 1] || '';
+        // no Android o modo contínuo às vezes repete o trecho anterior junto com o novo
+        if (last && text.toLowerCase().startsWith(last.toLowerCase())) finals[finals.length - 1] = text;
+        else if (!last.toLowerCase().startsWith(text.toLowerCase())) finals.push(text);
+        lastAlts = [...res].map(a => a.transcript.trim());
+      }
+      interim?.([...finals, partial].filter(Boolean).join(' '));
+      waitSilence();
     };
-    r.onerror = (e) => onError?.(e.error === 'not-allowed' ? 'Permita o uso do microfone no navegador para praticar a fala.' : e.error === 'no-speech' ? 'Não ouvi nada. Toque no microfone e fale perto do aparelho.' : 'Não consegui ouvir. Toque no microfone e fale de novo.');
-    r.onend = () => { setListening(false); onEnd?.(); };
+    r.onerror = (e) => {
+      if (e.error === 'aborted') return;
+      if (e.error === 'no-speech' && (finals.length || partial)) return; // já tinha ouvido algo
+      failed = true;
+      onError?.(e.error === 'not-allowed' ? 'Permita o uso do microfone no navegador para praticar a fala.' : e.error === 'no-speech' ? 'Não ouvi nada. Toque no microfone e fale perto do aparelho.' : 'Não consegui ouvir. Toque no microfone e fale de novo.');
+    };
+    r.onend = () => {
+      clearTimeout(silence); clearTimeout(hardStop);
+      setListening(false);
+      if (rec.current === r && !failed) {
+        const prefix = finals.slice(0, -1).join(' ');
+        let alts = finals.length ? (lastAlts.length ? lastAlts : [finals[finals.length - 1]]).map(a => `${prefix} ${a}`.trim()) : [];
+        if (partial) alts = alts.length ? [...alts, `${finals.join(' ')} ${partial}`.trim()] : [partial];
+        if (alts.length) onResult(alts);
+        else onError?.('Não ouvi nada. Toque no microfone e fale perto do aparelho.');
+      }
+      onEnd?.();
+    };
     r.start(); setListening(true);
   }
   const stop = () => rec.current?.stop?.();

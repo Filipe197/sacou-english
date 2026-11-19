@@ -17,11 +17,14 @@ import { fetchJuvenal, juvenalVoiceOff, newJuvenalLesson, voiceStatus } from '..
 import { playUrl } from '../lib/fx.js';
 import { AULA_LEVELS, TOPICS, topicById, TEACHER, MAX_STEPS, MAX_CHARS, MAX_TRIES, RETRY, GIVE_UP, INTRO, commentInPt } from '../lib/aula.js';
 
-const PASS = 0.8; // parte das palavras que precisa sair para valer a repetição
+const PASS = 0.75; // parte das palavras que precisa sair para valer a repetição (igual às lições)
 const VOICE_KEY = 'sacou-aula-voz';
 const readVoice = () => { try { return localStorage.getItem(VOICE_KEY) !== '0'; } catch { return true; } };
 const saveVoice = (on) => { try { localStorage.setItem(VOICE_KEY, on ? '1' : '0'); } catch { /* sem armazenamento */ } };
-const pick = (list) => list[Math.floor(Math.random() * list.length)];
+// Modo sem filtro (18+): palavrões liberados na aula, só depois de confirmar a idade (fica no aparelho)
+const ADULT_KEY = 'sacou-aula-18';
+const readAdult = () => { try { return localStorage.getItem(ADULT_KEY) === '1'; } catch { return false; } };
+const saveAdult = (on) => { try { localStorage.setItem(ADULT_KEY, on ? '1' : '0'); } catch { /* sem armazenamento */ } };
 
 export default function Aula() {
   const [cfg, setCfg] = useState(null);
@@ -35,6 +38,9 @@ function Setup({ onStart }) {
   const [level, setLevel] = useState(null);
   const [topic, setTopic] = useState('surpresa');
   const lvl = level || (prog.loading ? 'A1' : currentLevel(prog.done));
+  const [adult, setAdult] = useState(readAdult);
+  const [ask18, setAsk18] = useState(false);
+  const toggleAdult = () => { if (adult) { setAdult(false); saveAdult(false); } else setAsk18(true); };
   return (
     <Shell>
       <div className="aula-setup">
@@ -73,9 +79,24 @@ function Setup({ onStart }) {
               <button key={t.id} type="button" role="radio" aria-checked={topic === t.id} className={'aula-chip' + (topic === t.id ? ' on' : '')} onClick={() => setTopic(t.id)}>{t.title}</button>
             ))}
           </div>
-          <button type="button" className="btn btn-violet btn-lg btn-3d aula-go" onClick={() => onStart({ level: lvl, topic })}>
+          <button type="button" className="btn btn-violet btn-lg btn-3d aula-go" onClick={() => onStart({ level: lvl, topic, adult })}>
             <Icon name="mic" size={20} color="#fff" />Começar a aula
           </button>
+          <button type="button" className={'aula-adult' + (adult ? ' on' : '')} role="switch" aria-checked={adult} onClick={toggleAdult}>
+            <span className="aula-adult-ic" aria-hidden="true">18+</span>
+            <span><b>Juvenal sem filtro</b><small>{adult ? 'Ligado: ele fala palavrão à vontade.' : 'Com palavrões e humor adulto. Só para maiores de 18.'}</small></span>
+            <span className={'pf-switch' + (adult ? ' on' : '')} aria-hidden="true"><span /></span>
+          </button>
+          {ask18 && (
+            <div className="aula-18" role="alertdialog" aria-labelledby="aula-18-t">
+              <b id="aula-18-t">Conteúdo para maiores de 18 anos</b>
+              <p>No modo sem filtro, o Professor Juvenal fala palavrão à vontade e faz piadas de humor adulto. Ele continua sem ofender você. Ao ligar, você confirma que tem <b>18 anos ou mais</b>.</p>
+              <div className="aula-18-btns">
+                <button type="button" className="btn btn-violet" onClick={() => { setAdult(true); saveAdult(true); setAsk18(false); }}>Tenho 18 anos ou mais</button>
+                <button type="button" className="btn btn-out" onClick={() => setAsk18(false)}>Cancelar</button>
+              </div>
+            </div>
+          )}
           <VoiceQuota />
           {!getSR() && <p className="note" style={{ marginTop: 14 }}>Seu navegador não reconhece fala. Dá para fazer a aula escrevendo, mas o melhor é usar o Chrome ou o Edge para falar.</p>}
         </div>
@@ -126,6 +147,12 @@ function Lesson({ cfg, onExit, onAgain }) {
   const [sumBusy, setSumBusy] = useState(false);
   const talkId = useRef(0);
   const alive = useRef(true);
+  // reclamações de "repete de novo": usa todas, em ordem embaralhada, antes de repetir alguma
+  const retryBag = useRef([]);
+  const nextRetry = () => {
+    if (!retryBag.current.length) retryBag.current = RETRY.map((_, i) => i).sort(() => Math.random() - 0.5);
+    return RETRY[retryBag.current.pop()];
+  };
   const aulaId = useRef(null);
   if (!aulaId.current) { aulaId.current = crypto.randomUUID(); newJuvenalLesson(); }
   const [voiceOff, setVoiceOff] = useState(juvenalVoiceOff);
@@ -162,7 +189,7 @@ function Lesson({ cfg, onExit, onAgain }) {
   async function next(ns) {
     setBusy(true); setErr(''); setPending(null);
     try {
-      const r = await askAI('aula', { level, topic: topicId, steps: ns });
+      const r = await askAI('aula', { level, topic: topicId, steps: ns, adult: !!cfg.adult });
       if (!alive.current) return;
       const withT = [...ns, { role: 'teacher', task: r.task, comment: r.comment, target: r.target_en }];
       setSteps(withT);
@@ -202,7 +229,7 @@ function Lesson({ cfg, onExit, onAgain }) {
       setTimeout(() => { if (alive.current) advance({ role: 'student', kind: 'hard', text: r.heard, tries: t, missed }); }, 2600);
       return;
     }
-    const [lp, le] = pick(RETRY);
+    const [lp, le] = nextRetry();
     const line = pt ? lp : le;
     setLocal(line);
     say([[line, pt ? 'pt' : 'en', pt ? 'jp' : 'je'], [cur.target_en, 'en']]);
@@ -227,7 +254,7 @@ function Lesson({ cfg, onExit, onAgain }) {
     if (!ns.some(s => s.role === 'student')) { onExit(); return; }
     setSumBusy(true); setErr(''); talkId.current++;
     try {
-      const s = await askAI('aula', { level, topic: topicId, steps: ns, mode: 'summary' });
+      const s = await askAI('aula', { level, topic: topicId, steps: ns, mode: 'summary', adult: !!cfg.adult });
       if (!alive.current) return;
       logActivity(user?.id, 'conversa');
       fx.play('complete');
@@ -257,7 +284,7 @@ function Lesson({ cfg, onExit, onAgain }) {
         <button type="button" className="icon-btn" aria-label="Sair da aula" onClick={onExit}><Icon name="x" size={24} stroke={2.4} /></button>
         <div style={{ minWidth: 0 }}>
           <b style={{ display: 'block' }}>Aula com o {TEACHER.full}</b>
-          <span className="muted" style={{ fontSize: 13 }}>{level} · {topic.title} · {Math.min(asks, MAX_STEPS)}/{MAX_STEPS}</span>
+          <span className="muted" style={{ fontSize: 13 }}>{level} · {topic.title} · {Math.min(asks, MAX_STEPS)}/{MAX_STEPS}{cfg.adult ? ' · 18+' : ''}</span>
         </div>
         <button type="button" className="chip aula-voice" onClick={toggleVoice} aria-pressed={voice}>
           <Icon name="sound" size={14} />{voice ? 'Voz' : 'Voz desligada'}

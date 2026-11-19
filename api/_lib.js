@@ -109,7 +109,7 @@ async function askClaude({ system, messages, schema, maxTokens = 4000 }) {
 // DeepSeek (API no formato OpenAI). O "modo JSON" dela garante um JSON válido,
 // mas não os campos: por isso o formato vai descrito no prompt, a resposta é
 // conferida e ajustada ao schema, e uma resposta vazia ou quebrada é refeita uma vez.
-async function askDeepSeek({ system, messages, schema, maxTokens = 4000 }) {
+async function askDeepSeek({ system, messages, schema, maxTokens = 4000, temperature }) {
   const key = process.env.DEEPSEEK_API_KEY;
   if (!key) throw new HttpError(503, 'O professor de IA ainda não foi configurado (falta a DEEPSEEK_API_KEY na Vercel).');
   const body = {
@@ -121,6 +121,7 @@ async function askDeepSeek({ system, messages, schema, maxTokens = 4000 }) {
     response_format: { type: 'json_object' },
     thinking: { type: 'disabled' }, // respostas curtas e rápidas, sem raciocínio longo
     max_tokens: Math.min(maxTokens, 2500),
+    ...(temperature != null ? { temperature } : {}), // mais variado na conversa (ex.: aula do Juvenal)
   };
   for (let attempt = 0; attempt < 2; attempt++) {
     let r;
