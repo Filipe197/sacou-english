@@ -1195,6 +1195,102 @@
    ]
   },
   {
+   "id": "pod-a1u13",
+   "level": "A1",
+   "unlock": "a1-u13",
+   "title": "Verão ou inverno?",
+   "intro": "A Ana mora em Londres e o Tom passou um tempo no Brasil. Eles comparam o tempo e as estações.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "What's the weather like today, Tom?",
+     "pt": "Como está o tempo hoje, Tom?"
+    },
+    {
+     "who": "tom",
+     "en": "It's cold and rainy. It's January in London!",
+     "pt": "Está frio e chuvoso. É janeiro em Londres!"
+    },
+    {
+     "who": "ana",
+     "en": "In Brazil, January is summer. It is hot and sunny.",
+     "pt": "No Brasil, janeiro é verão. É quente e ensolarado."
+    },
+    {
+     "who": "tom",
+     "en": "I love summer! My birthday is in July.",
+     "pt": "Eu adoro o verão! Meu aniversário é em julho."
+    },
+    {
+     "who": "ana",
+     "en": "July is winter in Brazil, but it is not very cold.",
+     "pt": "Julho é inverno no Brasil, mas não é muito frio."
+    },
+    {
+     "who": "tom",
+     "en": "And when is your birthday, Ana?",
+     "pt": "E quando é o seu aniversário, Ana?"
+    },
+    {
+     "who": "ana",
+     "en": "It's on March 21st. It's spring here!",
+     "pt": "É no dia 21 de março. É primavera aqui!"
+    },
+    {
+     "who": "tom",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigado por ouvir!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Como está o tempo em Londres?",
+     "options": [
+      "Frio e chuvoso",
+      "Quente e ensolarado",
+      "Com neve"
+     ],
+     "answer": "Frio e chuvoso",
+     "why": "\"It's cold and rainy\"."
+    },
+    {
+     "q": "Quando é o aniversário do Tom?",
+     "options": [
+      "Em julho",
+      "Em janeiro",
+      "Em março"
+     ],
+     "answer": "Em julho",
+     "why": "\"My birthday is in July\"."
+    },
+    {
+     "q": "Quando é o aniversário da Ana?",
+     "options": [
+      "21 de março",
+      "12 de março",
+      "21 de maio"
+     ],
+     "answer": "21 de março",
+     "why": "\"It's on March 21st\"."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",

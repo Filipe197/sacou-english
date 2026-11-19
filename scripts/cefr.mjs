@@ -65,7 +65,7 @@ export function tokens(text) {
     .flatMap(t => CONTRACTIONS[t] || [t.replace(/'s$/, '')]);
 }
 export function known(w, extra, allowed) {
-  if (/^\d+$/.test(w)) return 'ok';
+  if (/^\d+(st|nd|rd|th)?$/.test(w)) return 'ok'; // números e datas escritas com número (5th, 21st)
   const cands = [w, IRREG[w], w.replace(/s$/, ''), w.replace(/es$/, ''), w.replace(/ies$/, 'y'),
     w.replace(/ed$/, ''), w.replace(/ed$/, 'e'), w.replace(/ied$/, 'y'), w.replace(/([b-df-hj-np-tv-z])\1ed$/, '$1'),
     w.replace(/ing$/, ''), w.replace(/ing$/, 'e'), w.replace(/([b-df-hj-np-tv-z])\1ing$/, '$1'),
