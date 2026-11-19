@@ -408,16 +408,15 @@ await test('falar: "não posso falar agora" abre as palavras para montar a frase
   await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a frase montada não foi aceita'); });
 });
 
-await test('A1 completo: unidades novas (9 a 11) na trilha, com guia', async () => {
+await test('A1 completo: unidades novas (9 em diante) na trilha, com guia', async () => {
+  const novas = fs.readdirSync('src/content/a1').map(f => JSON.parse(fs.readFileSync('src/content/a1/' + f, 'utf8'))).filter(u => u.order >= 9);
   await open('/aprender');
-  await expectText('Minha casa');
-  await open('/guia/a1-u9');
-  await expectText('cômodos e onde as coisas estão');
-  await expectText('The clock is above the door.');
-  await open('/guia/a1-u10');
-  await expectText('Como você está e o que dói');
-  await open('/guia/a1-u11');
-  await expectText('Comprando roupas');
+  for (const u of novas) await expectText(u.title);
+  for (const u of novas) {
+    await open('/guia/' + u.id);
+    await expectText(u.guide.title);
+    await expectText(u.guide.points[0].en.split(' / ')[0]);
+  }
 });
 
 await browser.close();

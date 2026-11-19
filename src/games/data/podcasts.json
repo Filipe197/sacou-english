@@ -1099,6 +1099,102 @@
    ]
   },
   {
+   "id": "pod-a1u12",
+   "level": "A1",
+   "unlock": "a1-u12",
+   "title": "O que você faz no tempo livre?",
+   "intro": "A Ana e o Tom contam o que sabem e o que gostam de fazer quando estão livres.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, what do you do in your free time?",
+     "pt": "Tom, o que você faz no seu tempo livre?"
+    },
+    {
+     "who": "tom",
+     "en": "I play football with my friends. And I love playing the guitar.",
+     "pt": "Jogo futebol com meus amigos. E adoro tocar violão."
+    },
+    {
+     "who": "ana",
+     "en": "Can you sing too?",
+     "pt": "Você sabe cantar também?"
+    },
+    {
+     "who": "tom",
+     "en": "No, I can't! My singing is terrible.",
+     "pt": "Não sei! Eu canto muito mal."
+    },
+    {
+     "who": "ana",
+     "en": "I can sing, but I can't play the guitar.",
+     "pt": "Eu sei cantar, mas não sei tocar violão."
+    },
+    {
+     "who": "tom",
+     "en": "Let's make music together!",
+     "pt": "Vamos fazer música juntos!"
+    },
+    {
+     "who": "ana",
+     "en": "Good idea! On Saturday?",
+     "pt": "Boa ideia! No sábado?"
+    },
+    {
+     "who": "tom",
+     "en": "OK! That's all for today. Thank you for listening!",
+     "pt": "Combinado! Por hoje é só. Obrigado por ouvir!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom adora fazer?",
+     "options": [
+      "Tocar violão",
+      "Cantar",
+      "Nadar"
+     ],
+     "answer": "Tocar violão",
+     "why": "\"I love playing the guitar\"."
+    },
+    {
+     "q": "O que a Ana sabe fazer?",
+     "options": [
+      "Cantar",
+      "Tocar violão",
+      "Jogar futebol"
+     ],
+     "answer": "Cantar",
+     "why": "Ela diz \"I can sing\" (sei cantar)."
+    },
+    {
+     "q": "O que eles combinam?",
+     "options": [
+      "Fazer música juntos no sábado",
+      "Jogar futebol no domingo",
+      "Ir ao cinema"
+     ],
+     "answer": "Fazer música juntos no sábado",
+     "why": "\"Let's make music together!\" — \"On Saturday?\"."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",

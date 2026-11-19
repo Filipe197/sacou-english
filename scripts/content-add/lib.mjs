@@ -36,3 +36,24 @@ export function writeUnit(file, unit) {
   fs.writeFileSync(p, JSON.stringify(u, null, 1));
   console.log(`✓ ${file}: unidade ${u.id} com ${u.lessons.length} lições e ${u.lessons.reduce((n, l) => n + l.items.length, 0)} exercícios`);
 }
+
+// Escuta (podcast) de uma unidade nova: entra logo depois do episódio "after" (mesmo formato do arquivo)
+export function addPodcast(ep, after) {
+  const p = path.join(root, 'src/games/data/podcasts.json');
+  const j = JSON.parse(fs.readFileSync(p, 'utf8'));
+  j.episodes = j.episodes.filter(e => e.id !== ep.id);
+  const i = j.episodes.findIndex(e => e.id === after);
+  j.episodes.splice(i < 0 ? j.episodes.length : i + 1, 0, ep);
+  fs.writeFileSync(p, JSON.stringify(j, null, 1).replace(/\n/g, '\r\n'));
+  console.log(`✓ escuta ${ep.id} (${ep.lines.length} falas)`);
+}
+
+// Cena ao lado da trilha (src/components/TrailScene.jsx)
+export function addScene(unitId, fig, obj) {
+  const p = path.join(root, 'src/components/TrailScene.jsx');
+  let s = fs.readFileSync(p, 'utf8');
+  if (s.includes(`'${unitId}':`)) return;
+  s = s.replace(/(  'a2-u1': )/, `  '${unitId}': ['${fig}', '${obj}'],\n$1`);
+  fs.writeFileSync(p, s);
+  console.log(`✓ cena ${unitId}`);
+}

@@ -1,0 +1,1096 @@
+{
+ "id": "a1-u12",
+ "level": "A1",
+ "order": 12,
+ "title": "Tempo livre",
+ "subtitle": "O que você sabe fazer e o que gosta de fazer no tempo livre.",
+ "can_do": {
+  "text": "Consigo dizer o que sei e o que não sei fazer, o que gosto de fazer no tempo livre e combinar um programa simples.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: falar de gostos e combinar algo, nível A1"
+ },
+ "core_inventory": [
+  "Can / can't (habilidade)",
+  "like / love / hate + -ing",
+  "play / go + esportes",
+  "Let's... (sugestão)"
+ ],
+ "words": [
+  [
+   "can / can't",
+   "sei / não sei (fazer)"
+  ],
+  [
+   "swim",
+   "nadar"
+  ],
+  [
+   "dance / sing",
+   "dançar / cantar"
+  ],
+  [
+   "draw",
+   "desenhar"
+  ],
+  [
+   "play football",
+   "jogar futebol"
+  ],
+  [
+   "tennis / volleyball",
+   "tênis / vôlei"
+  ],
+  [
+   "guitar / piano",
+   "violão / piano"
+  ],
+  [
+   "music",
+   "música"
+  ],
+  [
+   "movie",
+   "filme"
+  ],
+  [
+   "game",
+   "jogo"
+  ],
+  [
+   "hobby",
+   "passatempo / hobby"
+  ],
+  [
+   "free time",
+   "tempo livre"
+  ],
+  [
+   "love / hate",
+   "amar / odiar"
+  ],
+  [
+   "let's",
+   "vamos"
+  ],
+  [
+   "together",
+   "juntos"
+  ],
+  [
+   "weekend",
+   "fim de semana"
+  ]
+ ],
+ "guide": {
+  "title": "Habilidades e passatempos",
+  "intro": "Para dizer o que você sabe fazer usamos \"can\". Para dizer do que gosta, \"like\" + verbo com -ing. E para convidar alguém, \"Let's...\".",
+  "points": [
+   {
+    "en": "I can swim, but I can't dance.",
+    "pt": "Eu sei nadar, mas não sei dançar.",
+    "note": "\"Can\" não muda: I can, he can, they can. O verbo vem sem \"to\": can swim."
+   },
+   {
+    "en": "Can you play the guitar?",
+    "pt": "Você sabe tocar violão?",
+    "note": "Pergunta: Can + pessoa + verbo? Resposta: Yes, I can. / No, I can't."
+   },
+   {
+    "en": "I like reading.",
+    "pt": "Eu gosto de ler.",
+    "note": "Like / love / hate + verbo com -ing: I love dancing, she hates cooking."
+   },
+   {
+    "en": "We play football on Saturday.",
+    "pt": "Jogamos futebol no sábado.",
+    "note": "Esportes com bola: play (play tennis, play volleyball)."
+   },
+   {
+    "en": "Let's go to the movies!",
+    "pt": "Vamos ao cinema!",
+    "note": "\"Let's\" + verbo = vamos (sugestão)."
+   }
+  ],
+  "tips": [
+   "\"Can\" também serve para pedir: Can I...? (unidade 11).",
+   "Instrumentos levam \"the\": play THE guitar, play THE piano."
+  ]
+ },
+ "extra_vocab": [
+  {
+   "word": "hate",
+   "reason": "Ensinado no A1 junto com like e love para falar de gostos (\"I hate cooking\"); na CEFR-J \"hate\" aparece no A2."
+  }
+ ],
+ "lessons": [
+  {
+   "id": "a1-u12-l1",
+   "title": "Eu sei, eu não sei",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l1-1",
+     "type": "match",
+     "pairs": [
+      [
+       "swim",
+       "nadar"
+      ],
+      [
+       "dance",
+       "dançar"
+      ],
+      [
+       "sing",
+       "cantar"
+      ],
+      [
+       "draw",
+       "desenhar"
+      ]
+     ],
+     "why": "Verbos de habilidade. Com \"can\": I can swim, I can sing."
+    },
+    {
+     "id": "a1u12l1-2",
+     "type": "meaning",
+     "en": "I can swim, but I can't dance.",
+     "options": [
+      "Sei nadar, mas não sei dançar.",
+      "Sei dançar, mas não sei nadar.",
+      "Gosto de nadar e de dançar."
+     ],
+     "answer": "Sei nadar, mas não sei dançar.",
+     "why": "\"Can\" = sei/consigo. \"Can't\" = não sei/não consigo."
+    },
+    {
+     "id": "a1u12l1-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She ___ sing very well.",
+     "pt": "Ela canta muito bem.",
+     "options": [
+      "can",
+      "cans",
+      "can to"
+     ],
+     "answer": "can",
+     "why": "\"Can\" nunca muda: she can (sem -s). E o verbo vem sem \"to\".",
+     "wrong": {
+      "cans": "\"Can\" não ganha -s com she.",
+      "can to": "Depois de \"can\" não usamos \"to\"."
+     }
+    },
+    {
+     "id": "a1u12l1-4",
+     "type": "build",
+     "pt": "Eu não sei desenhar.",
+     "answer": "I can't draw",
+     "extra": [
+      "don't",
+      "to"
+     ],
+     "display": "I can't draw.",
+     "why": "Negativa de \"can\" é \"can't\" (cannot): I can't draw."
+    },
+    {
+     "id": "a1u12l1-5",
+     "type": "listen",
+     "en": "Can you swim?",
+     "options": [
+      "Você sabe nadar?",
+      "Você gosta de nadar?",
+      "Vamos nadar?"
+     ],
+     "answer": "Você sabe nadar?",
+     "why": "Pergunta com \"can\": Can + you + verbo?"
+    },
+    {
+     "id": "a1u12l1-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Can you play the guitar?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I can.",
+      "Yes, I do.",
+      "Yes, I am."
+     ],
+     "answer": "Yes, I can.",
+     "pt": "Sei, sim.",
+     "why": "A pergunta usa \"can\", então a resposta também: Yes, I can / No, I can't.",
+     "wrong": {
+      "Yes, I do.": "Responde \"Do you...?\".",
+      "Yes, I am.": "Responde \"Are you...?\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l2",
+   "title": "Esportes e música",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l2-1",
+     "type": "match",
+     "pairs": [
+      [
+       "football",
+       "futebol"
+      ],
+      [
+       "tennis",
+       "tênis"
+      ],
+      [
+       "volleyball",
+       "vôlei"
+      ],
+      [
+       "basketball",
+       "basquete"
+      ]
+     ],
+     "why": "Esportes com bola usam \"play\": play football, play tennis."
+    },
+    {
+     "id": "a1u12l2-2",
+     "type": "match",
+     "pairs": [
+      [
+       "guitar",
+       "violão / guitarra"
+      ],
+      [
+       "piano",
+       "piano"
+      ],
+      [
+       "music",
+       "música"
+      ],
+      [
+       "song",
+       "canção"
+      ]
+     ],
+     "why": "Instrumentos levam \"the\": play the guitar, play the piano."
+    },
+    {
+     "id": "a1u12l2-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ tennis with my friends.",
+     "pt": "Eu jogo tênis com meus amigos.",
+     "options": [
+      "play",
+      "do",
+      "go"
+     ],
+     "answer": "play",
+     "why": "Esportes com bola: play.",
+     "wrong": {
+      "do": "\"Do\" não vai com tennis.",
+      "go": "\"Go\" vai com atividades em -ing: go swimming."
+     }
+    },
+    {
+     "id": "a1u12l2-4",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He plays ___ piano.",
+     "pt": "Ele toca piano.",
+     "options": [
+      "the",
+      "a",
+      "—"
+     ],
+     "answer": "the",
+     "why": "Para tocar instrumento usamos \"the\": play THE piano.",
+     "wrong": {
+      "a": "\"A piano\" fala de um piano qualquer, não de tocar.",
+      "—": "Com instrumento o \"the\" é necessário."
+     }
+    },
+    {
+     "id": "a1u12l2-5",
+     "type": "build",
+     "pt": "Nós jogamos futebol no sábado.",
+     "answer": "We play football on Saturday",
+     "extra": [
+      "in",
+      "plays"
+     ],
+     "display": "We play football on Saturday.",
+     "why": "Dia da semana usa \"on\": on Saturday."
+    },
+    {
+     "id": "a1u12l2-6",
+     "type": "listen",
+     "en": "My brother plays the guitar.",
+     "options": [
+      "Meu irmão toca violão.",
+      "Meu irmão joga futebol.",
+      "Meu irmão canta."
+     ],
+     "answer": "Meu irmão toca violão.",
+     "why": "\"Plays the guitar\" = toca violão. Com \"my brother\" (he), plays com -s."
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l3",
+   "title": "Eu gosto de...",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l3-1",
+     "type": "meaning",
+     "en": "I like reading.",
+     "options": [
+      "Eu gosto de ler.",
+      "Eu sei ler.",
+      "Eu estou lendo."
+     ],
+     "answer": "Eu gosto de ler.",
+     "why": "Like + verbo com -ing = gostar de fazer."
+    },
+    {
+     "id": "a1u12l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She loves ___.",
+     "pt": "Ela adora dançar.",
+     "options": [
+      "dancing",
+      "dance",
+      "to dances"
+     ],
+     "answer": "dancing",
+     "why": "Depois de like, love e hate, o verbo vai com -ing: loves dancing.",
+     "wrong": {
+      "dance": "Use a forma com -ing.",
+      "to dances": "Não existe."
+     }
+    },
+    {
+     "id": "a1u12l3-3",
+     "type": "meaning",
+     "en": "He hates cooking.",
+     "options": [
+      "Ele odeia cozinhar.",
+      "Ele adora cozinhar.",
+      "Ele sabe cozinhar."
+     ],
+     "answer": "Ele odeia cozinhar.",
+     "why": "\"Hate\" = odiar. O contrário é \"love\" (adorar)."
+    },
+    {
+     "id": "a1u12l3-4",
+     "type": "build",
+     "pt": "Eu adoro ouvir música.",
+     "answer": "I love listening to music",
+     "extra": [
+      "listen",
+      "at"
+     ],
+     "display": "I love listening to music.",
+     "why": "\"Listen TO music\" = ouvir música. Com love: listening."
+    },
+    {
+     "id": "a1u12l3-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What do you do in your free time?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I watch movies and play games.",
+      "I'm free.",
+      "Yes, I do."
+     ],
+     "answer": "I watch movies and play games.",
+     "pt": "Vejo filmes e jogo jogos.",
+     "why": "\"Free time\" = tempo livre. Responda com o que você faz.",
+     "wrong": {
+      "I'm free.": "Não diz o que você faz.",
+      "Yes, I do.": "A pergunta pede o que, não sim ou não."
+     }
+    },
+    {
+     "id": "a1u12l3-6",
+     "type": "listen",
+     "en": "I don't like swimming.",
+     "options": [
+      "Não gosto de nadar.",
+      "Não sei nadar.",
+      "Gosto de nadar."
+     ],
+     "answer": "Não gosto de nadar.",
+     "why": "\"Swimming\" tem \"m\" dobrado: swim → swimming."
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l4",
+   "title": "Vamos?",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l4-1",
+     "type": "meaning",
+     "en": "Let's go to the park!",
+     "options": [
+      "Vamos ao parque!",
+      "Vou ao parque!",
+      "Você vai ao parque?"
+     ],
+     "answer": "Vamos ao parque!",
+     "why": "\"Let's\" + verbo = vamos (uma sugestão)."
+    },
+    {
+     "id": "a1u12l4-2",
+     "type": "choice",
+     "prompt": "Complete a sugestão:",
+     "en": "___ play volleyball together!",
+     "pt": "Vamos jogar vôlei juntos!",
+     "options": [
+      "Let's",
+      "We",
+      "Let"
+     ],
+     "answer": "Let's",
+     "why": "\"Let's\" (let us) = vamos.",
+     "wrong": {
+      "We": "\"We play\" diz o que fazemos, não sugere.",
+      "Let": "Falta o \"'s\": Let's."
+     }
+    },
+    {
+     "id": "a1u12l4-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Let's watch a movie tonight!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Good idea!",
+      "I'm a movie.",
+      "No, I can."
+     ],
+     "answer": "Good idea!",
+     "pt": "Boa ideia!",
+     "why": "Para aceitar uma sugestão: Good idea! / OK! / Great!",
+     "wrong": {
+      "I'm a movie.": "Não faz sentido.",
+      "No, I can.": "\"No\" e \"can\" se contradizem."
+     }
+    },
+    {
+     "id": "a1u12l4-4",
+     "type": "meaning",
+     "en": "My hobby is drawing.",
+     "options": [
+      "Meu passatempo é desenhar.",
+      "Meu trabalho é desenhar.",
+      "Eu não sei desenhar."
+     ],
+     "answer": "Meu passatempo é desenhar.",
+     "why": "\"Hobby\" = passatempo."
+    },
+    {
+     "id": "a1u12l4-5",
+     "type": "build",
+     "pt": "Vamos cantar juntos!",
+     "answer": "Let's sing together",
+     "extra": [
+      "to",
+      "sings"
+     ],
+     "display": "Let's sing together!",
+     "why": "\"Together\" = juntos. Depois de \"let's\" o verbo vem sem \"to\"."
+    },
+    {
+     "id": "a1u12l4-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Let's play tennis on Sunday!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Sorry, I can't. I work on Sunday.",
+      "Yes, I like tennis.",
+      "It's tennis."
+     ],
+     "answer": "Sorry, I can't. I work on Sunday.",
+     "pt": "Desculpa, não posso. Trabalho no domingo.",
+     "why": "Para recusar com educação: Sorry, I can't + o motivo.",
+     "wrong": {
+      "Yes, I like tennis.": "Não diz se aceita.",
+      "It's tennis.": "Não responde ao convite."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l5-1",
+     "type": "type",
+     "pt": "Eu sei nadar.",
+     "answer": "I can swim.",
+     "why": "\"Can\" + verbo: I can swim."
+    },
+    {
+     "id": "a1u12l5-2",
+     "type": "type",
+     "pt": "Ela não sabe cantar.",
+     "answer": "She can't sing.",
+     "accept": [
+      "She cannot sing."
+     ],
+     "why": "Negativa: can't (cannot)."
+    },
+    {
+     "id": "a1u12l5-3",
+     "type": "dictation",
+     "en": "I like playing football.",
+     "why": "Like + -ing: playing."
+    },
+    {
+     "id": "a1u12l5-4",
+     "type": "type",
+     "pt": "Vamos ao cinema!",
+     "answer": "Let's go to the movies!",
+     "accept": [
+      "Let's go to the cinema!"
+     ],
+     "why": "\"Let's go\" = vamos. Cinema: \"the movies\" (americano) ou \"the cinema\" (britânico)."
+    },
+    {
+     "id": "a1u12l5-5",
+     "type": "dictation",
+     "en": "Can you play the piano?",
+     "why": "Instrumento com \"the\": play the piano."
+    },
+    {
+     "id": "a1u12l5-6",
+     "type": "type",
+     "pt": "Eu odeio cozinhar.",
+     "answer": "I hate cooking.",
+     "why": "Hate + -ing: cooking."
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l6-1",
+     "type": "listen",
+     "en": "I can't swim.",
+     "options": [
+      "Não sei nadar.",
+      "Sei nadar.",
+      "Não gosto de nadar."
+     ],
+     "answer": "Não sei nadar.",
+     "why": "Ouça bem: \"can\" é curto (kén) e \"can't\" é mais longo (ként), com o \"t\" no fim."
+    },
+    {
+     "id": "a1u12l6-2",
+     "type": "dictation",
+     "en": "We play volleyball on the weekend.",
+     "why": "\"On the weekend\" = no fim de semana."
+    },
+    {
+     "id": "a1u12l6-3",
+     "type": "listen",
+     "en": "She loves dancing.",
+     "options": [
+      "Ela adora dançar.",
+      "Ela sabe dançar.",
+      "Ela odeia dançar."
+     ],
+     "answer": "Ela adora dançar.",
+     "why": "\"Love\" = adorar."
+    },
+    {
+     "id": "a1u12l6-4",
+     "type": "dictation",
+     "en": "Let's play a game!",
+     "why": "\"Game\" = jogo. \"Let's\" = vamos."
+    },
+    {
+     "id": "a1u12l6-5",
+     "type": "listen",
+     "en": "What do you do in your free time?",
+     "options": [
+      "O que você faz no seu tempo livre?",
+      "Você está livre?",
+      "Quando você tem tempo?"
+     ],
+     "answer": "O que você faz no seu tempo livre?",
+     "why": "\"Free time\" = tempo livre."
+    },
+    {
+     "id": "a1u12l6-6",
+     "type": "dictation",
+     "en": "My hobby is music.",
+     "why": "\"Hobby\" = passatempo."
+    },
+    {
+     "id": "a1u12l6-7",
+     "type": "speak",
+     "en": "I can play the guitar.",
+     "pt": "Eu sei tocar violão.",
+     "why": "\"Guitar\" soa como \"gui-TÁR\", com a força no fim."
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Can you dance?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, I can't. But I can sing!",
+      "No, I don't dance it.",
+      "Yes, I dancing."
+     ],
+     "answer": "No, I can't. But I can sing!",
+     "pt": "Não sei. Mas sei cantar!",
+     "why": "Responda com can/can't e, se quiser, diga o que você sabe fazer.",
+     "wrong": {
+      "No, I don't dance it.": "A pergunta usa \"can\".",
+      "Yes, I dancing.": "Falta o verbo: \"Yes, I can\"."
+     }
+    },
+    {
+     "id": "a1u12l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you like reading?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes, I love it!",
+      "Yes, I can.",
+      "Yes, I reading."
+     ],
+     "answer": "Yes, I love it!",
+     "pt": "Sim, eu adoro!",
+     "why": "\"Do you like...?\" se responde com do/don't ou \"I love it!\".",
+     "wrong": {
+      "Yes, I can.": "\"Can\" responde \"Can you...?\".",
+      "Yes, I reading.": "Falta o verbo."
+     }
+    },
+    {
+     "id": "a1u12l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Let's play football on Saturday!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Great! What time?",
+      "I'm football.",
+      "No, thank you, I play."
+     ],
+     "answer": "Great! What time?",
+     "pt": "Ótimo! Que horas?",
+     "why": "Aceite e pergunte o horário: What time?",
+     "wrong": {
+      "I'm football.": "Não faz sentido.",
+      "No, thank you, I play.": "Recusa e aceita ao mesmo tempo."
+     }
+    },
+    {
+     "id": "a1u12l7-4",
+     "type": "speak",
+     "en": "I can swim, but I can't dance.",
+     "pt": "Sei nadar, mas não sei dançar.",
+     "why": "Marque a diferença: \"kén suím\", \"ként dens\"."
+    },
+    {
+     "id": "a1u12l7-5",
+     "type": "speak",
+     "en": "I love listening to music.",
+     "pt": "Eu adoro ouvir música.",
+     "why": "\"Music\" soa como \"MIÚ-zik\"."
+    },
+    {
+     "id": "a1u12l7-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What is your hobby?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I love drawing.",
+      "I love draw.",
+      "It's free."
+     ],
+     "answer": "I love drawing.",
+     "pt": "Eu adoro desenhar.",
+     "why": "Love + -ing: drawing.",
+     "wrong": {
+      "I love draw.": "Depois de \"love\" use -ing.",
+      "It's free.": "Não diz qual é o passatempo."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l8",
+   "title": "Lendo: o clube da escola",
+   "added": "2026-11",
+   "story": {
+    "title": "O clube da escola",
+    "lines": [
+     {
+      "who": "Laura",
+      "en": "Welcome to the school club! What can you do here?",
+      "pt": "Bem-vindo ao clube da escola! O que você pode fazer aqui?"
+     },
+     {
+      "who": "Laura",
+      "en": "On Monday we play football. On Wednesday we swim.",
+      "pt": "Na segunda jogamos futebol. Na quarta nadamos."
+     },
+     {
+      "ask": "Quando é a natação?",
+      "options": [
+       "Na quarta",
+       "Na segunda",
+       "Na sexta"
+      ],
+      "answer": "Na quarta",
+      "why": "\"On Wednesday we swim\"."
+     },
+     {
+      "who": "Laura",
+      "en": "On Friday we play music. Can you play the guitar or the piano?",
+      "pt": "Na sexta tocamos música. Você sabe tocar violão ou piano?"
+     },
+     {
+      "who": "Laura",
+      "en": "You don't need to play well! We love ___ together.",
+      "pt": "Você não precisa tocar bem! Adoramos cantar juntos.",
+      "gap": {
+       "answer": "singing",
+       "options": [
+        "singing",
+        "sing",
+        "sings"
+       ]
+      }
+     },
+     {
+      "who": "Laura",
+      "en": "The club is free! See you there!",
+      "pt": "O clube é grátis! Até lá!"
+     },
+     {
+      "ask": "O que fazem juntos na sexta?",
+      "options": [
+       "Cantam",
+       "Desenham",
+       "Jogam vôlei"
+      ],
+      "answer": "Cantam",
+      "why": "\"We love singing together\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u12l8-1",
+     "type": "story",
+     "why": "Um aviso do clube da escola. Leia o que dá para fazer em cada dia."
+    },
+    {
+     "id": "a1u12l8-2",
+     "type": "quiz",
+     "q": "O que tem na segunda?",
+     "options": [
+      "Futebol",
+      "Música",
+      "Natação"
+     ],
+     "answer": "Futebol",
+     "why": "\"On Monday we play football\"."
+    },
+    {
+     "id": "a1u12l8-3",
+     "type": "quiz",
+     "q": "Precisa saber tocar para a aula de música?",
+     "options": [
+      "Não",
+      "Sim",
+      "Só violão"
+     ],
+     "answer": "Não",
+     "why": "\"You don't need to play well!\"."
+    },
+    {
+     "id": "a1u12l8-4",
+     "type": "quiz",
+     "q": "Quanto custa o clube?",
+     "options": [
+      "É grátis",
+      "10 dólares",
+      "20 dólares"
+     ],
+     "answer": "É grátis",
+     "why": "\"The club is free!\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a1u12l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He can ___ very fast.",
+     "pt": "Ele consegue nadar muito rápido.",
+     "options": [
+      "swim",
+      "swims",
+      "swimming"
+     ],
+     "answer": "swim",
+     "why": "Depois de \"can\" o verbo vem puro: can swim.",
+     "wrong": {
+      "swims": "Sem -s depois de can.",
+      "swimming": "Sem -ing depois de can."
+     }
+    },
+    {
+     "id": "a1u12l9-2",
+     "type": "type",
+     "pt": "Eu gosto de dançar.",
+     "answer": "I like dancing.",
+     "why": "Like + -ing: dancing (o \"e\" de dance cai)."
+    },
+    {
+     "id": "a1u12l9-3",
+     "type": "meaning",
+     "en": "Let's play tennis together on Sunday.",
+     "options": [
+      "Vamos jogar tênis juntos no domingo.",
+      "Jogamos tênis juntos no domingo.",
+      "Você joga tênis no domingo?"
+     ],
+     "answer": "Vamos jogar tênis juntos no domingo.",
+     "why": "\"Let's\" = vamos. \"Together\" = juntos."
+    },
+    {
+     "id": "a1u12l9-4",
+     "type": "dictation",
+     "en": "She can't draw.",
+     "accept": [
+      "She cannot draw."
+     ],
+     "why": "\"Can't\" = não sabe/não consegue."
+    },
+    {
+     "id": "a1u12l9-5",
+     "type": "listen",
+     "en": "Do you like playing games?",
+     "options": [
+      "Você gosta de jogar jogos?",
+      "Você sabe jogar?",
+      "Vamos jogar?"
+     ],
+     "answer": "Você gosta de jogar jogos?",
+     "why": "\"Do you like...?\" = você gosta de...?"
+    },
+    {
+     "id": "a1u12l9-6",
+     "type": "speak",
+     "en": "Let's go to the park!",
+     "pt": "Vamos ao parque!",
+     "why": "\"Let's\" soa como \"lets\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l10",
+   "title": "História: o fim de semana",
+   "added": "2026-11",
+   "story": {
+    "title": "O fim de semana",
+    "lines": [
+     {
+      "who": "Leo",
+      "en": "Hi, Sofia! Let's go to the beach on Saturday!",
+      "pt": "Oi, Sofia! Vamos à praia no sábado!"
+     },
+     {
+      "who": "Sofia",
+      "en": "Oh, sorry. I can't swim!",
+      "pt": "Ah, desculpa. Eu não sei nadar!"
+     },
+     {
+      "ask": "Por que a Sofia não quer ir à praia?",
+      "options": [
+       "Não sabe nadar",
+       "Está doente",
+       "Vai trabalhar"
+      ],
+      "answer": "Não sabe nadar",
+      "why": "\"I can't swim!\"."
+     },
+     {
+      "who": "Leo",
+      "en": "No problem! What do you like ___?",
+      "pt": "Sem problema! O que você gosta de fazer?",
+      "gap": {
+       "answer": "doing",
+       "options": [
+        "doing",
+        "do",
+        "does"
+       ]
+      }
+     },
+     {
+      "who": "Sofia",
+      "en": "I love movies. Let's watch a movie!",
+      "pt": "Eu adoro filmes. Vamos ver um filme!"
+     },
+     {
+      "who": "Leo",
+      "en": "Great idea! At seven o'clock?",
+      "pt": "Ótima ideia! Às sete?"
+     },
+     {
+      "who": "Sofia",
+      "en": "OK! See you on Saturday!",
+      "pt": "Combinado! Até sábado!"
+     },
+     {
+      "ask": "O Leo gostou da ideia?",
+      "options": [
+       "Sim",
+       "Não",
+       "Não diz"
+      ],
+      "answer": "Sim",
+      "why": "\"Great idea!\"."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a1u12l10-1",
+     "type": "story",
+     "why": "O Leo e a Sofia combinam o fim de semana. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "a1u12l10-2",
+     "type": "quiz",
+     "q": "O que a Sofia não sabe fazer?",
+     "options": [
+      "Nadar",
+      "Cantar",
+      "Desenhar"
+     ],
+     "answer": "Nadar",
+     "why": "\"I can't swim!\"."
+    },
+    {
+     "id": "a1u12l10-3",
+     "type": "quiz",
+     "q": "O que eles decidem fazer?",
+     "options": [
+      "Ver um filme",
+      "Ir à praia",
+      "Jogar futebol"
+     ],
+     "answer": "Ver um filme",
+     "why": "\"Let's watch a movie!\" — \"Great idea!\"."
+    },
+    {
+     "id": "a1u12l10-4",
+     "type": "quiz",
+     "q": "Que horas eles se encontram?",
+     "options": [
+      "Às sete",
+      "Às onze",
+      "Às duas"
+     ],
+     "answer": "Às sete",
+     "why": "\"At seven o'clock\"."
+    }
+   ]
+  }
+ ]
+}
