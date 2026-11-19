@@ -24,7 +24,20 @@ const SCENES = {
   'b2-u7': ['standing-24', 'sneaker'], 'b2-u8': ['standing-1', 'mic'],
 };
 
+// Cenas ilustradas (elenco do Sacou: Ana, Tom, Julia, Lucas...): uma imagem única por unidade,
+// com fundo transparente, em src/art/cenas/<unidade>.webp (gere com scripts/cenas.py).
+// Quando existe, substitui personagem + objeto. As que ainda não existem usam a arte antiga.
+const ART = Object.fromEntries(Object.entries(import.meta.glob('../art/cenas/*.webp', { eager: true, query: '?url', import: 'default' }))
+  .map(([p, url]) => [p.split('/').pop().replace('.webp', ''), url]));
+
 export default function TrailScene({ unitId, side = 'left', off = false, top = 0 }) {
+  if (ART[unitId]) {
+    return (
+      <div className={`tr-scene tr-scene-art ${side}${off ? ' off' : ''}`} style={{ top }} aria-hidden="true">
+        <span className="tr-art"><img src={ART[unitId]} alt="" loading="lazy" decoding="async" /></span>
+      </div>
+    );
+  }
   const s = SCENES[unitId];
   if (!s) return null;
   const [fig, obj, kid] = s;

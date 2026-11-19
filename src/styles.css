@@ -860,3 +860,10 @@ html:not([data-theme=dark]) .dz-from{color:var(--bad)}
 .tr-node.extra::after{content:"NOVA";position:absolute;top:-8px;right:-10px;background:var(--lime);color:var(--ink-fixed);font-size:10px;font-weight:800;letter-spacing:.6px;padding:3px 6px;border-radius:99px;box-shadow:0 2px 0 var(--lime-d)}
 /* falar: "não posso falar agora" vira montar a frase */
 .quiet-skip{background:none;border:0;color:var(--text3);text-decoration:underline;font-weight:600;cursor:pointer;min-height:44px}
+/* cena ilustrada única por unidade (elenco do Sacou) */
+.tr-art{display:flex;animation:tr-float 3.6s ease-in-out infinite}
+.tr-art img{width:290px;height:auto;display:block}
+.tr-scene-art.left{left:calc(50% - 330px)}
+.tr-scene.off .tr-art{animation:none}
+@media (prefers-reduced-motion:reduce){.tr-art{animation:none}}
+@media (max-width:600px){.tr-scene-art.left{left:calc(50% - 176px)}}
