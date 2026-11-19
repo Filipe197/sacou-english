@@ -18,3 +18,6 @@ smoke-check.log
 
 # pacote original de ilustrações (Humaaans), não versionar
 arte-fonte/
+
+# cache dos áudios gerados (scripts/gen-podcasts-eleven.mjs)
+.cache/

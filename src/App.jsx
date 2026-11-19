@@ -26,6 +26,7 @@ const Profile = lazy(() => import('./pages/Profile.jsx'));
 const Notebook = lazy(() => import('./pages/Notebook.jsx'));
 const Conversation = lazy(() => import('./pages/Conversation.jsx'));
 const Aula = lazy(() => import('./pages/Aula.jsx'));
+const Desafio = lazy(() => import('./pages/Desafio.jsx'));
 const Duvidas = lazy(() => import('./pages/Duvidas.jsx'));
 const Exam = lazy(() => import('./pages/Exam.jsx'));
 const Ranking = lazy(() => import('./pages/Ranking.jsx'));
@@ -98,6 +99,7 @@ export default function App() {
         <Route path="/caderno/:id" element={<Private><Suspense fallback={<Spinner />}><Notebook /></Suspense></Private>} />
         <Route path="/conversar" element={<Private><Suspense fallback={<Spinner />}><Conversation /></Suspense></Private>} />
         <Route path="/aula" element={<Private><Suspense fallback={<Spinner />}><Aula /></Suspense></Private>} />
+        <Route path="/desafio/:unitId" element={<Private><Suspense fallback={<Spinner />}><Desafio /></Suspense></Private>} />
         <Route path="/ranking" element={<Private light><Suspense fallback={<Spinner />}><Ranking /></Suspense></Private>} />
         <Route path="/prova/:kind/:id" element={<Private><Suspense fallback={<Spinner />}><Exam /></Suspense></Private>} />
         <Route path="/duvidas" element={<Private light><Suspense fallback={<Spinner />}><Duvidas /></Suspense></Private>} />

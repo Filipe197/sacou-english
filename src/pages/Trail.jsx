@@ -7,6 +7,7 @@ import { Shell, Spinner, Icon, Fire, Bolt, Anim } from '../components/ui.jsx';
 import { NewAchievement } from '../components/Achievements.jsx';
 import { Missions } from '../components/Missions.jsx';
 import TrailScene from '../components/TrailScene.jsx';
+import { dueCount } from '../lib/memory.js';
 
 // Caminho em zigue-zague (deslocamento de cada bolinha, de -1 a 1)
 const WAVE = [0, 0.6, 1, 0.6, 0, -0.6, -1, -0.6];
@@ -133,10 +134,12 @@ export function Rail({ prog }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,minmax(0,1fr))', gap: 6, marginTop: 6, fontSize: 12, fontWeight: 600, color: 'var(--text3)', textAlign: 'center' }}>{['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(l => <span key={l}>{l}</span>)}</div>
       </div>
       <Missions compact />
-      {dueLessonIds(prog.scores).length > 0 && (
+      {(dueCount(profile?.id) > 0 || dueLessonIds(prog.scores).length > 0) && (
         <div className="card rail-alert" style={{ borderColor: 'var(--violet-ring)' }}>
           <b style={{ display: 'block', marginBottom: 6 }}>Hora de relembrar</b>
-          <p className="muted" style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5 }}>{dueLessonIds(prog.scores).length} {dueLessonIds(prog.scores).length === 1 ? 'lição chegou' : 'lições chegaram'} no dia certo de revisar. Um treino rápido fixa na memória.</p>
+          <p className="muted" style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5 }}>{dueCount(profile?.id) > 0
+            ? `${dueCount(profile?.id)} ${dueCount(profile?.id) === 1 ? 'palavra ou frase chegou' : 'palavras e frases chegaram'} no dia certo de revisar. Um treino rápido fixa na memória.`
+            : `${dueLessonIds(prog.scores).length} ${dueLessonIds(prog.scores).length === 1 ? 'lição chegou' : 'lições chegaram'} no dia certo de revisar. Um treino rápido fixa na memória.`}</p>
           <Link className="btn btn-violet btn-block" to="/praticar">Fazer o treino</Link>
         </div>
       )}
@@ -215,6 +218,7 @@ export default function Trail() {
   const skippedCount = states.filter(s => s.state === 'done' && isSkipped(s.lesson.id)).length;
   const allDone = states.every(s => s.state === 'done');
   const extras = games && {
+    podcastOf: (unitId) => games.g.PODCASTS.find(x => x.unlock === unitId),
     rewardsOf: (unitId) => {
       const { g } = games;
       return [
@@ -266,7 +270,7 @@ export default function Trail() {
                         <div key={key} className={'tr-slot' + (st === 'current' ? ' cur' : '') + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[i % WAVE.length] }}>
                           {st === 'current' && open !== key && (
                             <Link className="tr-bubble tr-bubble-l" to={`/licao/${l.id}`} onClick={e => e.stopPropagation()}>
-                              <span className="tr-bubble-k">{kindOf(l).label} {i + 1} · {l.items?.length ? `${l.items.length} exercícios` : 'uns 5 min'}</span>
+                              <span className="tr-bubble-k">{kindOf(l).label} {i + 1} · {(l.items?.length || l.size) ? `${l.items?.length || l.size} exercícios` : 'uns 5 min'}</span>
                               <b>{l.title}</b>
                               <span className="tr-bubble-go">Começar · até +15 XP</span>
                             </Link>
@@ -315,6 +319,22 @@ export default function Trail() {
                       );
                     })()}
                   </div>
+                  {unlocked && (
+                    <div className="tr-close">
+                      <Link to={`/desafio/${u.id}`} className={'tr-close-a' + (complete ? '' : ' off')} aria-label={complete ? `Desafio da unidade ${u.order}` : `Desafio da unidade ${u.order}: libera ao terminar a unidade`}>
+                        <span className="tr-close-ic" aria-hidden="true">🎯</span>
+                        <span><b>Desafio da unidade</b><small>{prog.scores[`desafio-${u.id}`] ? `Sua nota: ${prog.scores[`desafio-${u.id}`].best_score} · tente melhorar` : complete ? 'Escreva sobre o tema e a IA corrige' : 'Libera ao terminar a unidade'}</small></span>
+                        <Icon name={complete ? 'arrow' : 'lock'} size={18} />
+                      </Link>
+                      {extras && extras.podcastOf(u.id) && (
+                        <Link to={complete ? `/jogos/podcast/${extras.podcastOf(u.id).id}` : '#'} onClick={e => { if (!complete) e.preventDefault(); }} className={'tr-close-a' + (complete ? '' : ' off')} aria-disabled={!complete}>
+                          <span className="tr-close-ic" aria-hidden="true">🎧</span>
+                          <span><b>Escuta da unidade</b><small>{complete ? `Diálogo com vozes naturais: ${extras.podcastOf(u.id).title}` : 'Libera ao terminar a unidade'}</small></span>
+                          <Icon name={complete ? 'arrow' : 'lock'} size={18} />
+                        </Link>
+                      )}
+                    </div>
+                  )}
                 </section>
               );
             })}

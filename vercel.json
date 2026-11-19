@@ -11,6 +11,9 @@
     },
     "api/explicar.js": {
       "includeFiles": "{src/content/**,content/sources/**}"
+    },
+    "api/desafio.js": {
+      "includeFiles": "{src/content/**,content/sources/**}"
     }
   },
   "crons": [

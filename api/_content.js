@@ -45,3 +45,25 @@ export async function recurringMistakes(sb, limit = 6) {
   const idx = contentIndex();
   return (data || []).map(m => ({ ...m, found: idx.get(m.item_id) })).filter(m => m.found);
 }
+
+// Resumo de uma unidade (para o desafio final): tema, objetivo do CEFR e pontos do guia
+let units = null;
+export function unitInfo(unitId) {
+  if (!units) {
+    units = new Map();
+    const dir = path.join(process.cwd(), 'src/content');
+    for (const lv of fs.readdirSync(dir).filter(d => /^[abc][12]$/.test(d))) {
+      for (const f of fs.readdirSync(path.join(dir, lv)).filter(f => f.endsWith('.json'))) {
+        const u = JSON.parse(fs.readFileSync(path.join(dir, lv, f), 'utf8'));
+        units.set(u.id, {
+          id: u.id, level: u.level, order: u.order, title: u.title, subtitle: u.subtitle || '',
+          can_do: u.can_do?.text || '',
+          guide: u.guide?.title || '',
+          exemplos: (u.guide?.points || []).slice(0, 6).map(p => p.en).filter(Boolean),
+          palavras: (u.words || []).slice(0, 30).map(w => (Array.isArray(w) ? w[0] : w?.en)).filter(Boolean),
+        });
+      }
+    }
+  }
+  return units.get(unitId) || null;
+}

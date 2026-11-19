@@ -1,3 +1,4 @@
+import { useMemorySync } from '../lib/memory.js';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { lazy, Suspense, useEffect, useState } from 'react';
 
@@ -145,6 +146,7 @@ export function Anim({ name, size = 180, loop = false }) {
 // abas no rodapé (5 itens, como nos apps) e uma gaveta "Mais" com o resto.
 export function Shell({ children, rail, mistakesCount = 0 }) {
   const { signOut, profile, updateProfile, isAdmin } = useAuth();
+  useMemorySync(profile?.id); // memória de cada exercício: traz da conta e envia o que ficou pendente
   const nav = useNavigate();
   const loc = useLocation();
   const inst = useInstall();

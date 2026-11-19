@@ -1,10 +1,11 @@
-import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createContext, lazy, Suspense, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon, Anim, Bolt } from './ui.jsx';
 import { fx, speak, canSpeak } from '../lib/fx.js';
 import { shuffle, getItem, getLesson, getUnit } from '../lib/content.js';
 import { supabase } from '../lib/supabase.js';
 import { useWakeLock } from '../lib/wakelock.js';
+import { remember, boxOf } from '../lib/memory.js';
 import Hinted from './Hinted.jsx';
 import { getNewWords } from '../lib/hints.js';
 import { LessonCtx, SaveItemButton } from './LessonNotes.jsx';
@@ -60,12 +61,21 @@ function Options({ options, value, onPick, locked, answer, english }) {
   );
 }
 
+// Enunciados: em português no A1; do A2 em diante em inglês (com o português pequeno embaixo
+// no A2 e sem ele do B1 em diante), para o aluno ir se acostumando a pensar em inglês.
+const UiLevel = createContext('A1');
+function QLabel({ pt, en }) {
+  const lv = useContext(UiLevel);
+  if (lv === 'A1' || !en) return <p className="q-label">{pt}</p>;
+  return <p className="q-label" lang="en">{en}{lv === 'A2' && <span className="q-label-pt" lang="pt">{pt}</span>}</p>;
+}
+
 function Choice({ item, value, setValue, locked, newKeys }) {
   const opts = useMemo(() => shuffle(item.options), [item.id]);
   const [before, after] = item.en.split('___');
   return (
     <>
-      <p className="q-label">{item.prompt || 'Complete a frase'}</p>
+      {item.prompt ? <p className="q-label">{item.prompt}</p> : <QLabel pt="Complete a frase" en="Complete the sentence" />}
       <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
         {canSpeak() && <button type="button" className="audio-btn" aria-label="Ouvir a frase" onClick={() => speak(item.en.replace('___', value || item.answer))}><Icon name="sound" size={26} color="#fff" stroke={2.2} /></button>}
         <h1 className="q" lang="en"><Hinted text={before} newKeys={newKeys} /><span className="blank">{value || ' '}</span><Hinted text={after} newKeys={newKeys} /></h1>
@@ -80,7 +90,7 @@ function Meaning({ item, value, setValue, locked, listen, newKeys }) {
   useEffect(() => { const t = setTimeout(() => speak(item.en), 350); return () => clearTimeout(t); }, [item.id]);
   return (
     <>
-      <p className="q-label">{listen ? 'Ouça e escolha o significado' : 'O que significa?'}</p>
+      {listen ? <QLabel pt="Ouça e escolha o significado" en="Listen and choose the meaning" /> : <QLabel pt="O que significa?" en="What does it mean?" />}
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
         {canSpeak() && <button type="button" className={'audio-btn' + (listen ? ' big' : '')} aria-label="Ouvir de novo" onClick={() => speak(item.en)}><Icon name="sound" size={listen ? 40 : 26} color="#fff" stroke={2.2} /></button>}
         {listen && canSpeak() && <button type="button" className="audio-btn slow" aria-label="Ouvir devagar" onClick={() => speak(item.en, { slow: true })}><Icon name="turtle" size={22} color="var(--violet)" /></button>}
@@ -97,7 +107,7 @@ function Build({ item, value, setValue, locked, newKeys }) {
   const used = new Set(chosen.map(t => t.i));
   return (
     <>
-      <p className="q-label">Monte a frase em inglês</p>
+      <QLabel pt="Monte a frase em inglês" en="Build the sentence in English" />
       <h1 className="q"><Hinted text={item.pt} lang="pt" newKeys={newKeys} /></h1>
       <div className="build-line" aria-label="Sua resposta" aria-live="polite">
         {chosen.map(t => (
@@ -140,7 +150,7 @@ function Match({ item, onDone, locked }) {
   const doneR = new Set([...done].map(l => pairOf[l]));
   return (
     <>
-      <p className="q-label">Toque nos pares que combinam</p>
+      <QLabel pt="Toque nos pares que combinam" en="Match the pairs" />
       <h1 className="q" style={{ fontSize: 28 }}>Ligue o inglês ao português</h1>
       <div className="match">
         <div className="match-col">
@@ -162,11 +172,13 @@ function Match({ item, onDone, locked }) {
   );
 }
 
-function TypeIn({ item, value, setValue, locked, dictation, newKeys }) {
+function TypeIn({ item, value, setValue, locked, dictation, newKeys, free }) {
   useEffect(() => { if (dictation) { const t = setTimeout(() => speak(item.en), 350); return () => clearTimeout(t); } }, [item.id]);
   return (
     <>
-      <p className="q-label">{dictation ? 'Ouça e escreva em inglês' : 'Escreva em inglês'}</p>
+      {dictation ? <QLabel pt="Ouça e escreva em inglês" en="Listen and write it in English" />
+        : free ? <><QLabel pt="Agora sem ajuda: escreva em inglês" en="No help this time: write it in English" /><span className="free-tag">✍️ Você já montou esta frase antes. Agora é com você!</span></>
+        : <QLabel pt="Escreva em inglês" en="Write it in English" />}
       {dictation ? (
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
           <button type="button" className="audio-btn big" aria-label="Ouvir de novo" onClick={() => speak(item.en)}><Icon name="sound" size={40} color="#fff" stroke={2.2} /></button>
@@ -215,7 +227,7 @@ function FixCloze({ item, plan, value, setValue, locked, newKeys }) {
   const setAt = (n, v) => { const next = [...vals]; while (next.length < plan.blanks.length) next.push(build ? null : ''); next[n] = v; setValue(next); };
   return (
     <>
-      <p className="q-label">Complete o que faltou</p>
+      <QLabel pt="Complete o que faltou" en="Fill in what was missing" />
       {item.type === 'dictation'
         ? <button type="button" className="audio-btn big" aria-label="Ouvir de novo" onClick={() => speak(item.en)} style={{ marginBottom: 14 }}><Icon name="sound" size={40} color="#fff" stroke={2.2} /></button>
         : <h1 className="q"><Hinted text={item.pt} lang="pt" newKeys={newKeys} /></h1>}
@@ -538,7 +550,7 @@ export function clearResume(key) { try { if (key) localStorage.removeItem(resume
 
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
-export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true, saveKey = null }) {
+export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true, saveKey = null, notice = null }) {
   const { profile, setProfile } = useAuth();
   const attemptId = useRef(null);
   const resumed = useRef(undefined);
@@ -550,6 +562,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const [queue, setQueue] = useState(() => resumed.current?.queue || entries);
   const [idx, setIdx] = useState(() => resumed.current?.idx || 0);
   const [resumeNote, setResumeNote] = useState(() => !!resumed.current && resumed.current.idx > 0);
+  const [startNote, setStartNote] = useState(() => (!resumed.current || !resumed.current.idx ? notice : null));
+  useEffect(() => { if (startNote) { const tm = setTimeout(() => setStartNote(null), 6000); return () => clearTimeout(tm); } }, [startNote]);
   const [value, setValue] = useState(null);
   const [status, setStatus] = useState('answering'); // answering | correct | wrong
   const [matchMisses, setMatchMisses] = useState(0);
@@ -597,10 +611,25 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   const total = entries.length;
   const progress = Math.round(((firstTry.current.size + (item?.type === 'story' && status === 'answering' ? storyFrac : 0)) / total) * 100);
 
+  // "Agora sem ajuda": frase de montar que o aluno já acertou antes vira escrita livre (sem banco de palavras)
+  const freeCache = useRef(new Map());
+  let free = false;
+  if (item?.type === 'build' && !cur?.retry) {
+    if (!freeCache.current.has(idx)) {
+      const b = boxOf(profile?.id, item.id), lv = cur.unit?.level || 'A1';
+      freeCache.current.set(idx, b >= 2 || (lv !== 'A1' && b >= 1));
+    }
+    free = freeCache.current.get(idx);
+  }
   const isCorrect = useCallback(() => {
     if (!item) return false;
     const plan = cur?.retry && fixPlan(item, cur.retry.prev);
     if (plan) return fixCorrect(plan, value || []);
+    if (free) {
+      const m = matchTyped(typeof value === 'string' ? value : '', [item.answer, ...(item.display ? [item.display] : []), ...(item.accept || [])]);
+      if (m === 'typo') setNote(`Quase perfeito! Atenção à grafia: “${item.display || item.answer}”.`);
+      return !!m;
+    }
     if (item.type === 'build') return norm((value || []).map(t => t.w).join(' ')) === norm(item.answer);
     if (item.type === 'type' || item.type === 'dictation') {
       const m = matchTyped(value || '', [item.type === 'type' ? item.answer : item.en, ...(item.accept || [])]);
@@ -608,7 +637,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       return !!m;
     }
     return value === item.answer;
-  }, [item, value, cur]);
+  }, [item, value, cur, free]);
 
   const settle = useCallback((ok) => {
     setStatus(ok ? 'correct' : 'wrong');
@@ -623,13 +652,15 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         if (data) setProfile(p => (p ? { ...p, combo: data.combo, combo_best: data.combo_best } : p));
       }, () => { /* sem conexão: fica a cópia do aparelho */ });
     }
-    if (!firstTry.current.has(item.id)) firstTry.current.set(item.id, ok);
+    if (!firstTry.current.has(item.id)) { firstTry.current.set(item.id, ok); remember(profile?.id, cur, ok); }
     onItemResult?.(cur, ok);
-    // errou: volta no fim da lição como "Corrija o erro de antes", guardando o que o aluno respondeu
+    // errou: volta logo depois (3 exercícios à frente) como "Corrija o erro de antes", guardando o que o aluno respondeu.
+    // Reforço perto do erro fixa melhor do que só no fim da lição.
     if (!ok && retryWrong && !['match', 'speak', 'story'].includes(item.type)) {
       const plan = cur.retry && fixPlan(item, cur.retry.prev);
-      const prev = plan ? null : item.type === 'build' ? (value || []).map(x => x.w).join(' ') : typeof value === 'string' ? value : '';
-      setQueue(q => [...q, { ...cur, retry: { prev: prev || cur.retry?.prev || '' } }]);
+      const prev = plan ? null : Array.isArray(value) ? value.map(x => x?.w || '').join(' ') : typeof value === 'string' ? value : '';
+      const again = { ...cur, retry: { prev: prev || cur.retry?.prev || '' } };
+      setQueue(q => { const at = Math.min(q.length, idx + 3); return [...q.slice(0, at), again, ...q.slice(at)]; });
     }
     const tip = tipCache.current.get(idx);
     if (tip) markTip(profile?.id, tip.key);
@@ -640,7 +671,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   }, [item, cur, onItemResult, retryWrong, profile, setProfile, value, idx]);
 
   const check = () => { if (!locked && hasAnswer()) settle(isCorrect()); };
-  const hasAnswer = () => (cur?.retry && fixPlan(item, cur.retry.prev)) ? fixFilled(fixPlan(item, cur.retry.prev), value) : item?.type === 'build' ? (value || []).length > 0 : typeof value === 'string' ? value.trim().length > 0 : value != null;
+  const hasAnswer = () => (cur?.retry && fixPlan(item, cur.retry.prev)) ? fixFilled(fixPlan(item, cur.retry.prev), value) : item?.type === 'build' && !free ? (value || []).length > 0 : typeof value === 'string' ? value.trim().length > 0 : value != null;
 
   const finishing = useRef(false);
   const next = async () => {
@@ -720,7 +751,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
 
   const noteCtx = { lessonId: cur.lessonId, unitId: cur.unit?.id || null, itemId: item.id };
   const level = cur.unit?.level || (/^a2/i.test(cur.lessonId || item.id || '') ? 'A2' : 'A1');
-  const answerText = item.type === 'build' ? (value || []).map(t => t.w).join(' ') : item.type === 'speak' ? heard : typeof value === 'string' ? value : '';
+  const answerText = item.type === 'build' && Array.isArray(value) ? value.map(t => t.w).join(' ') : item.type === 'speak' ? heard : typeof value === 'string' ? value : '';
   const canTutor = status === 'wrong' && !['match', 'story'].includes(item.type);
   const plan = cur.retry ? fixPlan(item, cur.retry.prev) : null;
   let tip = tipCache.current.get(idx);
@@ -734,6 +765,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     if (!useful) supabase.auth.getUser().then(({ data }) => supabase.from('content_reports').insert({ item_id: item.id, message: `Dica pouco útil: "${tip.en}" (${tip.note})`, user_id: data.user?.id })).catch(() => {});
   }
   return (
+    <UiLevel.Provider value={level}>
     <LessonCtx.Provider value={noteCtx}>
     <div className="lesson">
       <header className="lesson-top">
@@ -760,6 +792,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       )}
       <main className="lesson-main" key={idx}>
         {resumeNote && <p className="resume-note" role="status">↩ Continuando de onde você parou</p>}
+        {startNote && <p className="resume-note adapt-note" role="status">{startNote}</p>}
         {cur.retry && <span className="fix-tag"><Icon name="review" size={16} />Corrija o erro de antes</span>}
         {tip && (
           <div className="tip-box">
@@ -784,7 +817,9 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         {!plan && item.type === 'choice' && <Choice item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {!plan && item.type === 'meaning' && <Meaning item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {!plan && item.type === 'listen' && <Meaning item={item} value={value} setValue={setValue} locked={locked} listen />}
-        {!plan && item.type === 'build' && <Build item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
+        {!plan && item.type === 'build' && (free
+          ? <TypeIn item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} free />
+          : <Build item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />)}
         {item.type === 'match' && <Match item={item} locked={locked} onDone={(m) => { setMatchMisses(m); settle(m === 0); }} />}
         {!plan && item.type === 'type' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} newKeys={newKeys} />}
         {!plan && item.type === 'dictation' && <TypeIn item={item} value={value} setValue={setValue} locked={locked} dictation />}
@@ -826,7 +861,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       <footer className={'bar' + (status === 'correct' ? ' ok' : status === 'wrong' ? ' bad' : '')}>
         <div className="bar-in" aria-live="polite">
           {status === 'answering' && <>
-            <span className="muted" style={{ fontSize: 15 }}>{item.type === 'story' ? 'Ouça, leia e toque em Continuar para seguir a história.' : item.type === 'match' ? 'Combine todos os pares para continuar.' : item.type === 'build' ? 'Toque nas palavras na ordem certa.' : item.type === 'speak' ? 'Fale a frase para continuar.' : item.type === 'type' || item.type === 'dictation' ? 'Escreva e aperte Enter ou Verificar.' : 'Escolha uma opção e toque em Verificar.'}</span>
+            <span className="muted" style={{ fontSize: 15 }}>{item.type === 'story' ? 'Ouça, leia e toque em Continuar para seguir a história.' : item.type === 'match' ? 'Combine todos os pares para continuar.' : item.type === 'build' && !free ? 'Toque nas palavras na ordem certa.' : item.type === 'build' ? 'Escreva e aperte Enter ou Verificar.' : item.type === 'speak' ? 'Fale a frase para continuar.' : item.type === 'type' || item.type === 'dictation' ? 'Escreva e aperte Enter ou Verificar.' : 'Escolha uma opção e toque em Verificar.'}</span>
             {item.type !== 'match' && item.type !== 'speak' && item.type !== 'story' && <button className="btn btn-violet btn-3d btn-lg cta" disabled={!hasAnswer()} onClick={check}>Verificar</button>}
           </>}
           {status !== 'answering' && <>
@@ -840,7 +875,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
                 <p style={{ color: ok ? 'var(--ok-text)' : 'var(--bad-text)' }}>
                   {note && <>{note} </>}{wrongNote && <>{wrongNote} </>}<b>Por quê?</b> {item.why}
                 </p>
-                {!ok && retryWrong && item.type !== 'match' && item.type !== 'speak' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela vai aparecer de novo no fim da lição e também na sua revisão.</p>}
+                {!ok && retryWrong && item.type !== 'match' && item.type !== 'speak' && <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>Ela volta daqui a pouco para você corrigir, e também na sua revisão.</p>}
                 {tip && (
                   <div className="tip-vote" role="group" aria-label="Avaliar a dica">
                     {tipVote ? <span>{tipVote === 'up' ? 'Valeu! 💜' : 'Obrigado, vamos melhorar essa dica.'}</span> : <>
@@ -865,5 +900,6 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       </footer>
     </div>
     </LessonCtx.Provider>
+    </UiLevel.Provider>
   );
 }

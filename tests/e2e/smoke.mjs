@@ -308,6 +308,60 @@ await test('conversa: as falas continuam depois de recarregar', async () => {
   await expectText('Hello, I would like a coffee please');
 });
 
+// ---------- ensino: desafio, enunciados em inglês, lição adaptativa e escrita sem ajuda ----------
+await test('desafio da unidade: escreve, recebe a correção e o resultado continua depois de recarregar', async () => {
+  await open('/aprender');
+  await expectText('Desafio da unidade');
+  await open('/desafio/a1-u1');
+  await expectText('Sua tarefa');
+  await page.type('.dz-in', 'I get up at seven. I have breakfast. He work in a bank.');
+  await click('Enviar para correção');
+  await expectText('Você já consegue');
+  await expectText('He works in a bank');
+  await page.reload({ waitUntil: 'networkidle0' });
+  await expectText('Você já consegue');
+});
+
+await test('A2 em diante: enunciados em inglês', async () => {
+  await open('/prova/nivel/A2');
+  if ((await text()).includes('Prova do nível A2')) await click('Começar');
+  await page.waitForSelector('.q-label');
+  const r = await page.evaluate(() => {
+    const PT = ['O que significa?', 'Monte a frase em inglês', 'Escreva em inglês', 'Complete a frase', 'Ouça e escolha o significado', 'Ouça e escreva em inglês'];
+    const ls = [...document.querySelectorAll('.q-label')];
+    return { en: ls.some(l => l.lang === 'en'), pt: ls.some(l => PT.includes(l.textContent.trim())), txt: ls.map(l => l.textContent).join(' | ') };
+  });
+  if (r.pt || (!r.en && !/Complete|forma|escolha/i.test(r.txt))) throw new Error('enunciado do A2 em português: ' + r.txt);
+});
+
+await test('lição adaptativa: pula o que já domina e pede a frase sem ajuda', async () => {
+  const lesson = JSON.parse(fs.readFileSync('src/content/a1/unit-01.json', 'utf8')).lessons[0];
+  await page.evaluateOnNewDocument((ids) => {
+    try {
+      const far = new Intl.DateTimeFormat('en-CA').format(new Date(Date.now() + 30 * 864e5));
+      const m = { [ids[0]]: { b: 5, d: far, n: 6, w: 0, t: 1 }, [ids[1]]: { b: 5, d: far, n: 6, w: 0, t: 1 }, [ids[2]]: { b: 2, d: far, n: 2, w: 0, t: 1 } };
+      if (!sessionStorage.getItem('mem-set')) {
+        localStorage.setItem('sacou-memoria:00000000-0000-4000-8000-0000000000d1', JSON.stringify(m));
+        for (const k of Object.keys(localStorage)) if (k.startsWith('sacou-licao-andamento:')) localStorage.removeItem(k); // outro teste deixou esta lição pela metade
+        sessionStorage.setItem('mem-set', '1');
+      }
+    } catch {}
+  }, [lesson.items[0].id, lesson.items[1].id, lesson.items[5].id]);
+  await open('/licao/' + lesson.id);
+  await expectText('Você já domina 2 exercícios');
+  await expectText('1/4');
+  const tap = (sel, t) => page.evaluate((sel, t) => { const el = [...document.querySelectorAll(sel)].find(e => !e.disabled && e.textContent.replace(/\s+/g, ' ').trim().replace(/^\d+/, '') === t); el?.click(); return !!el; }, sel, t);
+  for (const it of lesson.items.slice(2, 5)) {
+    if (it.type === 'match') for (const [en, pt] of it.pairs) { await tap('.match-col:first-child .mbtn', en); await wait(80); await tap('.match-col:last-child .mbtn', pt); await wait(80); }
+    else { await tap('.options .option', it.answer); await wait(100); await page.click('.bar .cta'); }
+    await wait(350); await page.click('.bar .cta'); await wait(350);
+  }
+  await expectText('Agora é com você');
+  await page.type('.type-in', lesson.items[5].answer);
+  await page.click('.bar .cta');
+  await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a frase escrita sem ajuda não foi aceita'); });
+});
+
 await browser.close();
 await server.close();
 

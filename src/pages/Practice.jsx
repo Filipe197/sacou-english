@@ -6,6 +6,7 @@ import { useProgress, dueLessonIds } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { rpcOrQueue } from '../lib/offline.js';
 import { finishSession } from '../lib/finish-session.js';
+import { dueEntries, dueCount } from '../lib/memory.js';
 import { Shell, Spinner, Icon } from '../components/ui.jsx';
 
 // Treino livre: 12 exercícios sorteados das lições que o aluno já concluiu.
@@ -28,8 +29,10 @@ export default function Practice() {
     // lições "na hora de revisar" entram 3 vezes no sorteio; as recentes, 2 vezes
     const recent = done.slice(-6);
     const pool = [...done, ...recent, ...due, ...due].flatMap(l => l.items.filter(i => i.type !== 'story').map(item => ({ item, lessonId: l.id, unit: l.unit, story: l.story })));
+    // primeiro, até 8 palavras e frases que chegaram no dia de revisar (as mais esquecidas antes)
+    const forgetting = dueEntries(user?.id, 8);
     const seen = new Set();
-    return shuffle(pool).filter(e => !seen.has(e.item.id) && seen.add(e.item.id)).slice(0, 12);
+    return [...forgetting, ...shuffle(pool)].filter(e => !seen.has(e.item.id) && seen.add(e.item.id)).slice(0, 12);
   }, [prog.done, started]);
 
   if (prog.loading) return <Spinner />;
@@ -60,7 +63,7 @@ export default function Practice() {
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
         <h1 style={{ fontSize: 36, margin: '0 0 8px' }}>Praticar</h1>
         <p className="muted" style={{ fontSize: 17, lineHeight: 1.6, margin: '0 0 28px' }}>
-          Um treino com 12 exercícios sorteados de tudo o que você já estudou. Ele usa <b>revisão espaçada</b>: cada lição volta 1, 3, 7, 14 e 30 dias depois de feita, que é quando a memória mais precisa de um reforço. Cada treino é diferente.
+          Um treino com 12 exercícios do que você já estudou. Ele usa <b>revisão espaçada por palavra e frase</b>: cada exercício que você acerta volta cada vez mais tarde (2, 4, 8, 16 dias…), e o que você erra volta no dia seguinte. Assim o treino vai direto no que você está esquecendo.
         </p>
         {!done.length ? (
           <div className="card" style={{ textAlign: 'center', padding: 40 }}>
@@ -73,7 +76,8 @@ export default function Practice() {
             <div>
               <b style={{ fontSize: 20 }}>Treino de {done.length} {done.length === 1 ? 'lição' : 'lições'}</b>
               <p style={{ margin: '4px 0 0', color: 'var(--on-dark)' }}>12 exercícios · cerca de 4 minutos · até 10 XP</p>
-              {due.length > 0 && <p style={{ margin: '8px 0 0', color: 'var(--lime)', fontWeight: 600 }}>{due.length} {due.length === 1 ? 'lição está' : 'lições estão'} no dia de relembrar: {due.slice(0, 3).map(l => l.title).join(', ')}{due.length > 3 ? '...' : ''}</p>}
+              {dueCount(user?.id) > 0 && <p style={{ margin: '8px 0 0', color: 'var(--lime)', fontWeight: 600 }}>🧠 {Math.min(8, dueCount(user?.id))} {dueCount(user?.id) === 1 ? 'palavra ou frase chegou' : 'palavras e frases chegaram'} no dia de relembrar e {dueCount(user?.id) === 1 ? 'entra' : 'entram'} primeiro.</p>}
+              {due.length > 0 && !dueCount(user?.id) && <p style={{ margin: '8px 0 0', color: 'var(--lime)', fontWeight: 600 }}>{due.length} {due.length === 1 ? 'lição está' : 'lições estão'} no dia de relembrar: {due.slice(0, 3).map(l => l.title).join(', ')}{due.length > 3 ? '...' : ''}</p>}
             </div>
             <button className="btn btn-lime btn-lg" onClick={() => { clearResume(saveKey); setStarted(n => n + 1); }}><Icon name="review" size={18} />Começar treino</button>
           </div>
