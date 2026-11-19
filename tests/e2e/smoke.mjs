@@ -385,6 +385,29 @@ await test('A1 completo: lições novas aparecem como NOVA, abrem e não travam 
   await expectText('Mensagem da Julia');
 });
 
+await test('falar: "não posso falar agora" abre as palavras para montar a frase', async () => {
+  const lesson = JSON.parse(fs.readFileSync('src/content/a1/unit-01.json', 'utf8')).lessons.find(l => l.id === 'a1-u1-l9');
+  await page.evaluateOnNewDocument(() => { try { for (const k of Object.keys(localStorage)) if (k.startsWith('sacou-licao-andamento:')) localStorage.removeItem(k); } catch {} });
+  await open('/licao/' + lesson.id);
+  await wait(800);
+  const tap = (sel, t) => page.evaluate((sel, t) => { const el = [...document.querySelectorAll(sel)].find(e => !e.disabled && e.textContent.replace(/\s+/g, ' ').trim().replace(/^\d+\s*/, '') === t); el?.click(); return !!el; }, sel, t);
+  // responde o que estiver na tela até chegar no exercício de falar
+  const answers = lesson.items.filter(i => i.type === 'listen').map(i => i.answer);
+  const dict = lesson.items.filter(i => i.type === 'dictation').map(i => i.en);
+  for (let step = 0, d = 0; step < 25 && !(await text()).includes('Não posso falar agora'); step++) {
+    if (await page.$('.options .option')) { for (const t of answers) if (await tap('.options .option', t)) break; }
+    else if (await page.$('.type-in')) await page.type('.type-in', dict[d++] || '');
+    await wait(150);
+    if (await page.$('.bar .cta:not([disabled])')) await page.click('.bar .cta');
+    await wait(400);
+    if (await page.$('.bar.ok, .bar.bad')) { await page.click('.bar .cta'); await wait(400); }
+  }
+  await click('Não posso falar agora');
+  await expectText('monte a frase em inglês');
+  for (const w of ['Nice', 'to', 'meet', 'you']) { await tap('.quiet-build .bank .tile:not(.used)', w); await wait(120); }
+  await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a frase montada não foi aceita'); });
+});
+
 await browser.close();
 await server.close();
 

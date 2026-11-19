@@ -299,7 +299,52 @@ function Dialogue({ item, value, setValue, locked, newKeys }) {
   );
 }
 
+// "Não posso falar agora": em vez de pular, o aluno monta a frase com as palavras (sem microfone)
+const speakTiles = (en) => en.split(/\s+/).map(w => w.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9']+$/g, '')).filter(Boolean);
+const QUIET_EXTRA = ['is', 'are', 'am', 'my', 'your', 'the', 'a', 'in', 'at', 'he', 'she', 'we', 'not', 'do', 'have', 'this'];
+function QuietBuild({ item, locked, onDone }) {
+  const words = useMemo(() => speakTiles(item.en), [item.id]);
+  // a frase fica escondida e entram 2 palavras a mais: o aluno monta de ouvido e pelo português
+  const tiles = useMemo(() => {
+    const inIt = new Set(words.map(w => w.toLowerCase()));
+    const extra = shuffle(QUIET_EXTRA.filter(w => !inIt.has(w))).slice(0, 2).map((w, k) => ({ w, i: 'x' + k }));
+    const t = [...words.map((w, i) => ({ w, i })), ...extra];
+    for (let n = 0; n < 5; n++) { const s = shuffle(t); if (s.some((x, k) => x.i !== k)) return s; }
+    return [...t].reverse();
+  }, [item.id]);
+  const [chosen, setChosen] = useState([]);
+  const [msg, setMsg] = useState('');
+  const misses = useRef(0);
+  const used = new Set(chosen.map(t => t.i));
+  function pick(t) {
+    if (locked || used.has(t.i)) return;
+    const next = [...chosen, t];
+    setChosen(next); speak(t.w); fx.play('click'); setMsg('');
+    if (next.length < words.length) return;
+    if (next.every((x, k) => norm(x.w) === norm(words[k]))) { onDone(true, null, 'built'); return; }
+    misses.current += 1;
+    if (misses.current >= 2) { onDone(false, null, 'built'); return; }
+    setMsg('A ordem não ficou certa. Ouça a frase de novo e tente outra vez.');
+    setTimeout(() => setChosen([]), 700);
+  }
+  return (
+    <div className="quiet-build">
+      <p className="muted" style={{ margin: '18px 0 8px', fontSize: 15 }}>Sem microfone: ouça e monte a frase em inglês tocando nas palavras na ordem certa.</p>
+      <div className="build-line" aria-label="Sua frase" aria-live="polite" lang="en">
+        {chosen.map(t => <button key={t.i} type="button" className="tile" disabled={locked} onClick={() => setChosen(chosen.filter(c => c.i !== t.i))}>{t.w}</button>)}
+      </div>
+      <div className="bank" aria-label="Palavras disponíveis">
+        {tiles.map(t => (
+          <button key={t.i} type="button" className={'tile' + (used.has(t.i) ? ' used' : '')} disabled={locked || used.has(t.i)} lang="en" aria-hidden={used.has(t.i)} onClick={() => pick(t)}>{t.w}</button>
+        ))}
+      </div>
+      {msg && <p className="alert" role="status" style={{ marginTop: 12 }}>{msg}</p>}
+    </div>
+  );
+}
+
 function Speak({ item, locked, onDone, newKeys }) {
+  const [quiet, setQuiet] = useState(false); // "não posso falar agora": vira montar a frase
   const { listening, listen } = useListen();
   const [heard, setHeard] = useState('');
   const [msg, setMsg] = useState('');
@@ -323,16 +368,16 @@ function Speak({ item, locked, onDone, newKeys }) {
   }
   return (
     <>
-      <p className="q-label">Fale em inglês</p>
+      <p className="q-label">{quiet && !locked ? "Monte a frase em inglês" : "Fale em inglês"}</p>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
         {canSpeak() && <button type="button" className="audio-btn" aria-label="Ouvir como se fala" onClick={() => speak(item.en)}><Icon name="sound" size={26} color="#fff" stroke={2.2} /></button>}
         {canSpeak() && <button type="button" className="audio-btn slow" aria-label="Ouvir devagar" onClick={() => speak(item.en, { slow: true })}><Icon name="turtle" size={22} color="var(--violet)" /></button>}
-        {!words && <h1 className="q" lang="en"><Hinted text={item.en} newKeys={newKeys} /></h1>}
+        {!words && (!quiet || locked) && <h1 className="q" lang="en"><Hinted text={item.en} newKeys={newKeys} /></h1>}
       </div>
       {words && <PronWords words={words} picked={picked} onPick={(i) => setPicked(p => p === i ? null : i)} />}
       {picked != null && words?.[picked] && <WordCoach word={words[picked].w} onClose={() => setPicked(null)} />}
       <p className="muted" style={{ margin: '10px 0 0', fontSize: 16 }}>{item.pt}</p>
-      {getSR() ? (
+      {quiet ? <QuietBuild item={item} locked={locked} onDone={onDone} /> : getSR() ? (
         !locked && (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, marginTop: 28 }}>
             <button type="button" className={'mic' + (listening ? ' on' : '')} disabled={listening} onClick={start} aria-label="Falar">
@@ -344,9 +389,15 @@ function Speak({ item, locked, onDone, newKeys }) {
           </div>
         )
       ) : <div className="note" style={{ marginTop: 24 }}>Seu navegador não reconhece fala. No computador, use Chrome ou Edge para praticar a pronúncia.</div>}
-      {!locked && (
+      {!locked && !quiet && (
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: 20 }}>
-          <button type="button" className="btn btn-out" onClick={() => onDone(true, null, true)}>Não posso falar agora — pular</button>
+          <button type="button" className="btn btn-out" onClick={() => setQuiet(true)}>Não posso falar agora — montar a frase</button>
+        </div>
+      )}
+      {!locked && quiet && (
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 8, flexWrap: 'wrap', marginTop: 16 }}>
+          {getSR() && <button type="button" className="btn btn-out" onClick={() => setQuiet(false)}><Icon name="mic" size={18} />Agora posso falar</button>}
+          <button type="button" className="btn btn-plain quiet-skip" onClick={() => onDone(true, null, true)}>Pular este exercício</button>
         </div>
       )}
     </>
@@ -829,7 +880,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
         }} />}
         {item.type === 'quiz' && <Quiz item={item} story={cur.story} value={value} setValue={setValue} locked={locked} />}
         {item.type === 'speak' && <Speak item={item} locked={locked} newKeys={newKeys} onDone={(ok, heard, skipped) => {
-          setNote(skipped ? 'Sem problema! Quando puder, pratique a fala em voz alta — é o que mais destrava a conversa.' : heard ? `Ouvi: “${heard}”.` : null);
+          setNote(skipped === 'built' ? (ok ? 'Boa! Você montou a frase. Quando puder, fale em voz alta também: é o que mais destrava a conversa.' : null) : skipped ? 'Sem problema! Quando puder, pratique a fala em voz alta — é o que mais destrava a conversa.' : heard ? `Ouvi: “${heard}”.` : null);
           setHeard(heard || '');
           settle(ok);
         }} />}
