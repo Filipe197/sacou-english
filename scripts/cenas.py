@@ -81,7 +81,7 @@ def tira_fundo_claro(im):
                 for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
                     if 0 <= nx < w and 0 <= ny < h and not visto[ny * w + nx] and claro(px[nx, ny]):
                         visto[ny * w + nx] = 1; q.append((nx, ny))
-            if len(pts) > 150 and segue_grade(pts):
+            if len(pts) > 1500 and segue_grade(pts):  # olhos e detalhes brancos são bem menores
                 for x, y in pts:
                     fora[y * w + x] = 1
     # borda suave: pixels claros encostados no fundo ficam meio transparentes
