@@ -53,3 +53,8 @@ export async function voiceStatus() {
 
 // Nova aula: o limite de falas era da aula anterior
 export function newJuvenalLesson() { if (off === 'limite-falas') off = ''; }
+
+// Aulas com o Juvenal hoje: { used, limit, admin } ou null (014_aula_diaria.sql ainda não rodou)
+export async function aulaStatus() {
+  try { const { data, error } = await supabase.rpc('aula_status'); return error ? null : data; } catch { return null; }
+}

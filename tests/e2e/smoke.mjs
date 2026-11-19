@@ -228,6 +228,17 @@ await test('tirar dúvidas: pergunta, resposta e salvar', async () => {
   if (!await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)) throw new Error('rolagem lateral na tela de dúvidas');
 });
 
+await test('aula do Juvenal: 1 por dia para alunos, sem limite para administrador', async () => {
+  await page.evaluateOnNewDocument(() => { globalThis.__aulaStatus = { used: 1, limit: 1, admin: false }; });
+  await open('/aula');
+  await expectText('Você já fez sua aula de hoje');
+  if (!await page.evaluate(() => document.querySelector('.aula-go')?.disabled)) throw new Error('o botão de começar deveria estar travado');
+  await page.evaluateOnNewDocument(() => { globalThis.__aulaStatus = { used: 3, limit: 1, admin: true }; });
+  await open('/aula');
+  await expectText('Conta de administrador');
+  if (await page.evaluate(() => document.querySelector('.aula-go')?.disabled)) throw new Error('o administrador não deveria ter limite');
+});
+
 await browser.close();
 await server.close();
 

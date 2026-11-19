@@ -107,7 +107,13 @@ export default async function handler(req, res) {
     if (summary && !steps.some(s => s.role === 'student')) throw new HttpError(400, 'A aula ainda não começou.');
     if (!summary && asks >= MAX_STEPS) throw new HttpError(400, 'Essa aula chegou ao fim. Veja o resumo!');
     if (!summary && steps.length && steps[steps.length - 1].role !== 'student') throw new HttpError(400, 'Falta a sua resposta.');
-    await guard(req, summary ? 'summary' : 'chat');
+    const { sb } = await guard(req, summary ? 'summary' : 'chat');
+    // 1 aula por dia para alunos (administradores sem limite): supabase/014_aula_diaria.sql
+    const aula = /^[0-9a-f-]{36}$/i.test(String(body.aula || '')) ? body.aula : null;
+    if (sb && aula) {
+      const { data: lim, error } = await sb.rpc('aula_take', { p_aula: aula });
+      if (!error && lim && lim.ok === false) throw new HttpError(429, 'Você já fez sua aula de hoje com o Professor Juvenal. Volte amanhã, criatura!');
+    }
 
     if (MOCK) return summary ? mockSummary() : mockTurn(asks);
 

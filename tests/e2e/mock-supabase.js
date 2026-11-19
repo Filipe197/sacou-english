@@ -37,6 +37,7 @@ export const supabase = {
     }
     if (fn === 'class_board') return { data: [{ name: 'Lucas P.', xp: 210, me: false }, { name: 'Ana', xp: 180, me: true }], error: null };
     if (fn === 'set_ranking' || fn === 'skip_lessons') return { data: null, error: null };
+    if (fn === 'aula_status') return { data: globalThis.__aulaStatus || null, error: null };
     if (fn === 'admin_stats') return { data: { users: 3, new_users_7d: 2, active_today: 1, active_7d: 2, lessons_done: 14, open_reports: 0, daily: [], top_lessons: [], hard_items: [] }, error: null };
     if (fn === 'admin_users') {
       const all = [

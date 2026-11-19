@@ -13,7 +13,7 @@ import { useAuth } from '../lib/auth.jsx';
 import { useProgress } from '../lib/progress.js';
 import { currentLevel } from '../lib/content.js';
 import { logActivity } from '../lib/offline.js';
-import { fetchJuvenal, juvenalVoiceOff, newJuvenalLesson, voiceStatus } from '../lib/voz.js';
+import { fetchJuvenal, juvenalVoiceOff, newJuvenalLesson, aulaStatus } from '../lib/voz.js';
 import { playUrl } from '../lib/fx.js';
 import { AULA_LEVELS, TOPICS, topicById, TEACHER, MAX_STEPS, MAX_CHARS, MAX_TRIES, RETRY, GIVE_UP, INTRO, commentInPt } from '../lib/aula.js';
 
@@ -39,6 +39,9 @@ function Setup({ onStart }) {
   const [topic, setTopic] = useState('surpresa');
   const lvl = level || (prog.loading ? 'A1' : currentLevel(prog.done));
   const [adult, setAdult] = useState(readAdult);
+  const [quota, setQuota] = useState(undefined);
+  useEffect(() => { let on = true; aulaStatus().then(s => on && setQuota(s)); return () => { on = false; }; }, []);
+  const blocked = !!quota && !quota.admin && quota.used >= quota.limit;
   const [ask18, setAsk18] = useState(false);
   const toggleAdult = () => { if (adult) { setAdult(false); saveAdult(false); } else setAsk18(true); };
   return (
@@ -79,8 +82,8 @@ function Setup({ onStart }) {
               <button key={t.id} type="button" role="radio" aria-checked={topic === t.id} className={'aula-chip' + (topic === t.id ? ' on' : '')} onClick={() => setTopic(t.id)}>{t.title}</button>
             ))}
           </div>
-          <button type="button" className="btn btn-violet btn-lg btn-3d aula-go" onClick={() => onStart({ level: lvl, topic, adult })}>
-            <Icon name="mic" size={20} color="#fff" />Começar a aula
+          <button type="button" className="btn btn-violet btn-lg btn-3d aula-go" disabled={blocked} onClick={() => onStart({ level: lvl, topic, adult })}>
+            <Icon name="mic" size={20} color="#fff" />{blocked ? "Aula de hoje já feita" : "Começar a aula"}
           </button>
           <button type="button" className={'aula-adult' + (adult ? ' on' : '')} role="switch" aria-checked={adult} onClick={toggleAdult}>
             <span className="aula-adult-ic" aria-hidden="true">18+</span>
@@ -97,7 +100,7 @@ function Setup({ onStart }) {
               </div>
             </div>
           )}
-          <VoiceQuota />
+          <DailyQuota st={quota} />
           {!getSR() && <p className="note" style={{ marginTop: 14 }}>Seu navegador não reconhece fala. Dá para fazer a aula escrevendo, mas o melhor é usar o Chrome ou o Edge para falar.</p>}
         </div>
       </div>
@@ -105,21 +108,15 @@ function Setup({ onStart }) {
   );
 }
 
-// Quantas aulas com a voz natural do Juvenal ainda dá para fazer hoje
-function VoiceQuota() {
-  const [st, setSt] = useState(undefined);
-  useEffect(() => { let on = true; voiceStatus().then(s => on && setSt(s)); return () => { on = false; }; }, []);
+// Aula do dia: alunos fazem 1 aula por dia com o Juvenal (com a voz natural dele);
+// administradores não têm limite, para testar.
+function DailyQuota({ st }) {
   if (st === undefined) return null;
-  const left = st ? Math.max(0, st.limit - st.used) : null;
-  return (
-    <p className="aula-beta">
-      {left == null
-        ? <>A voz natural do Juvenal está chegando. Por enquanto, as falas criadas na hora usam a voz do seu aparelho.</>
-        : left > 0
-          ? <><b>Voz natural do Juvenal:</b> {left === 1 ? 'você tem 1 aula hoje' : `você tem ${left} aulas hoje`} com a voz dele em tudo. Depois disso, a aula continua com a voz do aparelho.</>
-          : <><b>Sua aula com a voz natural de hoje já foi.</b> Pode continuar estudando: as falas novas usam a voz do aparelho. Amanhã tem mais.</>}
-    </p>
-  );
+  if (!st) return <p className="aula-beta"><b>1 aula por dia</b> com o Juvenal, com a voz natural dele.</p>;
+  if (st.admin) return <p className="aula-beta"><b>Conta de administrador:</b> aulas, voz natural e IA sem limite, para você testar à vontade.</p>;
+  return st.used >= st.limit
+    ? <p className="aula-beta aula-done"><b>Você já fez sua aula de hoje com o Juvenal.</b> Ele precisa de um descanso (e de um cafezinho quente). Volte amanhã!</p>
+    : <p className="aula-beta"><b>1 aula por dia</b> com o Juvenal, com a voz natural dele. A de hoje está esperando você.</p>;
 }
 
 function Lesson({ cfg, onExit, onAgain }) {
@@ -189,7 +186,7 @@ function Lesson({ cfg, onExit, onAgain }) {
   async function next(ns) {
     setBusy(true); setErr(''); setPending(null);
     try {
-      const r = await askAI('aula', { level, topic: topicId, steps: ns, adult: !!cfg.adult });
+      const r = await askAI('aula', { level, topic: topicId, steps: ns, adult: !!cfg.adult, aula: aulaId.current });
       if (!alive.current) return;
       const withT = [...ns, { role: 'teacher', task: r.task, comment: r.comment, target: r.target_en }];
       setSteps(withT);
@@ -254,7 +251,7 @@ function Lesson({ cfg, onExit, onAgain }) {
     if (!ns.some(s => s.role === 'student')) { onExit(); return; }
     setSumBusy(true); setErr(''); talkId.current++;
     try {
-      const s = await askAI('aula', { level, topic: topicId, steps: ns, mode: 'summary', adult: !!cfg.adult });
+      const s = await askAI('aula', { level, topic: topicId, steps: ns, mode: 'summary', adult: !!cfg.adult, aula: aulaId.current });
       if (!alive.current) return;
       logActivity(user?.id, 'conversa');
       fx.play('complete');

@@ -245,3 +245,4 @@
 .aula-18{margin-top:12px;padding:16px;border-radius:16px;border:2px solid #C2410C;background:var(--surface)}
 .aula-18 p{margin:8px 0 12px;font-size:15px;line-height:1.5}
 .aula-18-btns{display:flex;gap:10px;flex-wrap:wrap}
+.aula-done{border:2px solid var(--violet-ring)}
