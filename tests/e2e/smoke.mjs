@@ -408,6 +408,14 @@ await test('falar: "não posso falar agora" abre as palavras para montar a frase
   await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a frase montada não foi aceita'); });
 });
 
+await test('A1 completo: unidade 9 (Minha casa) na trilha, com guia e escuta', async () => {
+  await open('/aprender');
+  await expectText('Minha casa');
+  await open('/guia/a1-u9');
+  await expectText('cômodos e onde as coisas estão');
+  await expectText('The clock is above the door.');
+});
+
 await browser.close();
 await server.close();
 

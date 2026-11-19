@@ -28,3 +28,11 @@ export function addLessons(file, { words = [], lessons = [], extraVocab = [] }) 
   fs.writeFileSync(p, JSON.stringify(u, null, 1));
   console.log(`✓ ${file}: ${lessons.length} lições novas (${u.lessons.length} no total)`);
 }
+
+// Unidade inteira nova (A1 completo, etapas 2 e 3): todas as lições levam "added".
+export function writeUnit(file, unit) {
+  const p = path.join(root, 'src/content', file);
+  const u = { ...unit, lessons: unit.lessons.map(({ id, title, story, items }) => ({ id, title, added: ADDED, ...(story ? { story } : {}), items })) };
+  fs.writeFileSync(p, JSON.stringify(u, null, 1));
+  console.log(`✓ ${file}: unidade ${u.id} com ${u.lessons.length} lições e ${u.lessons.reduce((n, l) => n + l.items.length, 0)} exercícios`);
+}

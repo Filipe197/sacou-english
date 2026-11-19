@@ -1,0 +1,157 @@
+// Etapa 2 do A1 completo (docs/plano-expansao-a1.md): unidade nova 9 — Minha casa.
+// Gera src/content/a1/unit-09.json. Todas as lições levam "added": para quem já passou do A1
+// elas aparecem como NOVAS (opcionais) e não travam a trilha.
+// Uso: node scripts/content-add/a1-u9.mjs  (pode rodar de novo: reescreve a unidade)
+import { writeUnit } from './lib.mjs';
+
+const L = (n, title, items, story) => ({ id: `a1-u9-l${n}`, title, ...(story ? { story } : {}), items });
+const I = (n, k, o) => ({ id: `a1u9l${n}-${k}`, ...o });
+
+writeUnit('a1/unit-09.json', {
+  id: 'a1-u9', level: 'A1', order: 9,
+  title: 'Minha casa',
+  subtitle: 'Cômodos, móveis e onde as coisas estão.',
+  can_do: {
+    text: 'Consigo descrever minha casa: os cômodos, os móveis e onde as coisas estão.',
+    source: 'CEFR (Conselho da Europa) — Produção oral geral: descrever o lugar onde mora, nível A1',
+  },
+  core_inventory: ['Topics: house and home', 'Prepositions of place (above, below, beside, in front of)', 'There is / there are; have / has'],
+  words: [
+    ['house / flat', 'casa / apartamento'],
+    ['room', 'cômodo / quarto'],
+    ['bedroom', 'quarto (de dormir)'],
+    ['bathroom', 'banheiro'],
+    ['kitchen', 'cozinha'],
+    ['living room', 'sala de estar'],
+    ['garden', 'jardim / quintal'],
+    ['bed', 'cama'],
+    ['sofa', 'sofá'],
+    ['desk', 'escrivaninha'],
+    ['shelf', 'prateleira'],
+    ['wall', 'parede'],
+    ['floor', 'chão / andar'],
+    ['above / below', 'acima de / abaixo de'],
+    ['beside', 'ao lado de'],
+    ['in front of', 'na frente de'],
+    ['clean / dirty', 'limpo / sujo'],
+    ['small', 'pequeno(a)'],
+  ],
+  guide: {
+    title: 'Minha casa: cômodos e onde as coisas estão',
+    intro: 'Para descrever a casa usamos três coisas que você já conhece (there is / there are, have / has e o verbo to be) e algumas palavras novas para dizer onde as coisas estão.',
+    points: [
+      { en: 'My flat has a kitchen and two bedrooms.', pt: 'Meu apartamento tem uma cozinha e dois quartos.', note: '"Have/has" diz o que a casa tem. Com he, she e it (e com "my flat") é "has".' },
+      { en: 'There is a sofa in the living room.', pt: 'Tem um sofá na sala.', note: '"There is" para uma coisa, "there are" para várias.' },
+      { en: 'The clock is above the door.', pt: 'O relógio fica acima da porta.', note: '"Above" = acima de, sem encostar. "On" é em cima, encostando.' },
+      { en: 'The shoes are below the bed.', pt: 'Os sapatos estão embaixo da cama.', note: '"Below" e "under" são parecidos: embaixo de.' },
+      { en: 'The desk is beside the window.', pt: 'A escrivaninha fica ao lado da janela.', note: '"Beside" = "next to" = ao lado de.' },
+      { en: 'The car is in front of the house.', pt: 'O carro está na frente da casa.', note: '"In front of" = na frente de. O contrário é "behind" (atrás de).' },
+    ],
+    tips: ['"Room" é qualquer cômodo; quarto de dormir é "bedroom".', 'No Reino Unido apartamento é "flat"; nos Estados Unidos, "apartment".'],
+  },
+  extra_vocab: [],
+  lessons: [
+    L(1, 'Os cômodos', [
+      I(1, 1, { type: 'match', pairs: [['bedroom', 'quarto'], ['bathroom', 'banheiro'], ['kitchen', 'cozinha'], ['living room', 'sala de estar']], why: 'Bed (cama) + room = bedroom. Bath (banho) + room = bathroom. Fica fácil de lembrar!' }),
+      I(1, 2, { type: 'meaning', en: 'My house has a big garden.', options: ['Minha casa tem um jardim grande.', 'Minha casa tem uma cozinha grande.', 'Minha casa fica num jardim.'], answer: 'Minha casa tem um jardim grande.', why: '"Garden" = jardim ou quintal. "Has" = tem (com "my house").' }),
+      I(1, 3, { type: 'choice', prompt: 'Complete:', en: 'My flat ___ two bedrooms.', pt: 'Meu apartamento tem dois quartos.', options: ['has', 'have', 'is'], answer: 'has', why: '"My flat" é "it", então o verbo é "has".', wrong: { have: '"Have" vai com I, you, we e they.', is: '"Is" diria que o apartamento É dois quartos.' } }),
+      I(1, 4, { type: 'listen', en: 'Where is the bathroom?', options: ['Onde fica o banheiro?', 'Onde fica a cozinha?', 'Onde fica o quarto?'], answer: 'Onde fica o banheiro?', why: '"Bathroom" soa como "BÉTH-rum". Pergunta útil em qualquer lugar!' }),
+      I(1, 5, { type: 'build', pt: 'Tem um sofá na sala.', answer: 'There is a sofa in the living room', extra: ['are', 'on'], display: 'There is a sofa in the living room.', why: '"There is" para uma coisa. "In the living room" = na sala.' }),
+      I(1, 6, { type: 'choice', prompt: 'Onde você cozinha?', en: 'I cook in the ___.', pt: 'Eu cozinho na cozinha.', options: ['kitchen', 'bedroom', 'garden'], answer: 'kitchen', why: 'Cozinha = kitchen. Repare: "cook" (cozinhar) e "kitchen" (cozinha) são parecidas, mas diferentes.', wrong: { bedroom: '"Bedroom" é o quarto.', garden: '"Garden" é o jardim.' } }),
+    ]),
+    L(2, 'Os móveis', [
+      I(2, 1, { type: 'match', pairs: [['bed', 'cama'], ['sofa', 'sofá'], ['desk', 'escrivaninha'], ['shelf', 'prateleira']], why: 'Plural de shelf é "shelves": o "f" vira "v".' }),
+      I(2, 2, { type: 'meaning', en: 'The books are on the shelf.', options: ['Os livros estão na prateleira.', 'Os livros estão na mesa.', 'Os livros estão embaixo da cama.'], answer: 'Os livros estão na prateleira.', why: '"On the shelf" = na prateleira (em cima dela).' }),
+      I(2, 3, { type: 'choice', prompt: 'Complete:', en: 'There ___ two chairs in the kitchen.', pt: 'Tem duas cadeiras na cozinha.', options: ['are', 'is', 'has'], answer: 'are', why: 'Duas cadeiras = várias coisas, então "there are".', wrong: { is: '"There is" é para uma coisa só.', has: '"There has" não existe em inglês.' } }),
+      I(2, 4, { type: 'listen', en: 'My bed is very small.', options: ['Minha cama é muito pequena.', 'Minha cama é muito grande.', 'Minha casa é muito pequena.'], answer: 'Minha cama é muito pequena.', why: '"Small" = pequeno. O contrário é "big".' }),
+      I(2, 5, { type: 'build', pt: 'Meu computador está na escrivaninha.', answer: 'My computer is on the desk', extra: ['in', 'bed'], display: 'My computer is on the desk.', why: '"On the desk" = em cima da escrivaninha.' }),
+      I(2, 6, { type: 'meaning', en: 'The clock is on the wall.', options: ['O relógio está na parede.', 'O relógio está no chão.', 'O relógio está na mesa.'], answer: 'O relógio está na parede.', why: 'Na parede usamos "on": on the wall. Chão é "floor".' }),
+    ]),
+    L(3, 'Acima, abaixo, ao lado', [
+      I(3, 1, { type: 'match', pairs: [['above', 'acima de'], ['below', 'abaixo de'], ['beside', 'ao lado de'], ['in front of', 'na frente de']], why: '"Beside" é o mesmo que "next to". O contrário de "in front of" é "behind".' }),
+      I(3, 2, { type: 'choice', prompt: 'O quadro está mais alto que o sofá:', en: 'The picture is ___ the sofa.', pt: 'O quadro fica acima do sofá.', options: ['above', 'below', 'in'], answer: 'above', why: '"Above" = acima de, num lugar mais alto, sem encostar.', wrong: { below: '"Below" é abaixo.', in: '"In" é dentro.' } }),
+      I(3, 3, { type: 'meaning', en: 'The cat is in front of the door.', options: ['O gato está na frente da porta.', 'O gato está atrás da porta.', 'O gato está ao lado da porta.'], answer: 'O gato está na frente da porta.', why: '"In front of" = na frente de. São três palavras juntas.' }),
+      I(3, 4, { type: 'build', pt: 'A escrivaninha fica ao lado da janela.', answer: 'The desk is beside the window', extra: ['above', 'in'], display: 'The desk is beside the window.', why: '"Beside" = ao lado de. Também dá para dizer "next to the window".' }),
+      I(3, 5, { type: 'listen', en: 'My shoes are below the bed.', options: ['Meus sapatos estão embaixo da cama.', 'Meus sapatos estão em cima da cama.', 'Meus sapatos estão ao lado da cama.'], answer: 'Meus sapatos estão embaixo da cama.', why: '"Below" soa como "bi-LÔU" = embaixo de.' }),
+      I(3, 6, { type: 'choice', prompt: 'Complete:', en: 'The car is in ___ of the house.', pt: 'O carro está na frente da casa.', options: ['front', 'beside', 'behind'], answer: 'front', why: '"In front of" é uma expressão fixa: in + front + of.', wrong: { beside: '"Beside" não vem com "in" e "of".', behind: '"Behind" é atrás e não leva "in... of".' } }),
+    ]),
+    L(4, 'Como é a sua casa?', [
+      I(4, 1, { type: 'match', pairs: [['clean', 'limpo'], ['dirty', 'sujo'], ['small', 'pequeno'], ['big', 'grande']], why: 'Dois pares de opostos: clean x dirty, small x big.' }),
+      I(4, 2, { type: 'meaning', en: 'The kitchen is small, but it is clean.', options: ['A cozinha é pequena, mas é limpa.', 'A cozinha é grande, mas é suja.', 'A cozinha é pequena e suja.'], answer: 'A cozinha é pequena, mas é limpa.', why: '"But" = mas. Liga duas ideias diferentes.' }),
+      I(4, 3, { type: 'choice', prompt: 'Complete:', en: 'Is there a garden? — Yes, there ___.', pt: 'Tem jardim? — Tem, sim.', options: ['is', 'are', 'has'], answer: 'is', why: 'Resposta curta: repete "there" + o verbo da pergunta: Yes, there is.', wrong: { are: 'A pergunta usa "is" (um jardim).', has: '"There has" não existe.' } }),
+      I(4, 4, { type: 'dialogue', lines: [['A', 'How many bedrooms are there?'], ['B', '___']], options: ['There are three.', 'It is three.', 'Yes, there are.'], answer: 'There are three.', pt: 'Tem três.', why: '"How many...?" pergunta a quantidade. Responda com o número: There are three.', wrong: { 'It is three.': 'Para quantidade de coisas usamos "there are".', 'Yes, there are.': '"Yes" responde perguntas de sim ou não, e esta pede um número.' } }),
+      I(4, 5, { type: 'build', pt: 'Meu quarto está sujo.', answer: 'My bedroom is dirty', extra: ['clean', 'has'], display: 'My bedroom is dirty.', why: '"Dirty" = sujo. O contrário é "clean" (limpo).' }),
+      I(4, 6, { type: 'meaning', en: 'We have a sofa and a TV in the living room.', options: ['Temos um sofá e uma TV na sala.', 'Temos uma cama e uma TV no quarto.', 'Tem um sofá na cozinha.'], answer: 'Temos um sofá e uma TV na sala.', why: '"We have" = nós temos. "Living room" = sala de estar.' }),
+      I(4, 7, { type: 'choice', prompt: 'Complete:', en: 'The clock is ___ the door, not on it.', pt: 'O relógio fica acima da porta, não em cima dela.', options: ['above', 'on', 'beside'], answer: 'above', why: '"Above" é mais alto, sem encostar. "On" é encostando, em cima.', wrong: { on: 'A frase diz "not on it" (não em cima).', beside: '"Beside" é ao lado.' } }),
+    ]),
+    L(5, 'Escrevendo', [
+      I(5, 1, { type: 'type', pt: 'Onde fica a cozinha?', answer: 'Where is the kitchen?', why: '"Where is...?" = onde fica...? "Kitchen" = cozinha.' }),
+      I(5, 2, { type: 'type', pt: 'Minha casa tem dois quartos.', answer: 'My house has two bedrooms.', why: '"My house" é "it", por isso "has".' }),
+      I(5, 3, { type: 'dictation', en: 'The sofa is in front of the TV.', why: '"In front of" = na frente de.' }),
+      I(5, 4, { type: 'type', pt: 'Tem um jardim pequeno.', answer: 'There is a small garden.', why: 'O adjetivo vem antes: small garden = jardim pequeno.' }),
+      I(5, 5, { type: 'dictation', en: 'The books are on the shelf.', why: '"Shelf" = prateleira. "On" = em cima.' }),
+      I(5, 6, { type: 'type', pt: 'O banheiro está limpo.', answer: 'The bathroom is clean.', why: '"Clean" = limpo. "Bathroom" = banheiro.' }),
+    ]),
+    L(6, 'Ouvindo', [
+      I(6, 1, { type: 'listen', en: 'The kitchen is beside the living room.', options: ['A cozinha fica ao lado da sala.', 'A cozinha fica na frente da sala.', 'O quarto fica ao lado da sala.'], answer: 'A cozinha fica ao lado da sala.', why: '"Beside" soa como "bi-SÁID" = ao lado de.' }),
+      I(6, 2, { type: 'dictation', en: 'My flat has a big kitchen.', why: '"Flat" = apartamento (inglês britânico).' }),
+      I(6, 3, { type: 'listen', en: 'There are two pictures on the wall.', options: ['Tem dois quadros na parede.', 'Tem duas janelas na parede.', 'Tem dois quadros no chão.'], answer: 'Tem dois quadros na parede.', why: '"Picture" = quadro ou foto. "Wall" = parede.' }),
+      I(6, 4, { type: 'dictation', en: 'The cat is below the table.', why: '"Below" = embaixo de.' }),
+      I(6, 5, { type: 'listen', en: 'Is there a shower in the bathroom?', options: ['Tem chuveiro no banheiro?', 'Tem banheira no banheiro?', 'O banheiro está limpo?'], answer: 'Tem chuveiro no banheiro?', why: '"Shower" = chuveiro (e também "banho de chuveiro").' }),
+      I(6, 6, { type: 'dictation', en: 'My room is small but clean.', why: '"But" = mas. "Small" = pequeno, "clean" = limpo.' }),
+      I(6, 7, { type: 'speak', en: 'My house has three bedrooms.', pt: 'Minha casa tem três quartos.', why: '"Bedrooms" soa como "BÉD-ruumz".' }),
+    ]),
+    L(7, 'Conversa de verdade', [
+      I(7, 1, { type: 'dialogue', lines: [['A', 'Where do you live?'], ['B', '___']], options: ['I live in a small flat.', 'I am a small flat.', 'Yes, I do.'], answer: 'I live in a small flat.', pt: 'Moro num apartamento pequeno.', why: '"Live" = morar. "I live in..." = eu moro em...', wrong: { 'I am a small flat.': 'Isso diria que você É um apartamento!', 'Yes, I do.': '"Where" pede um lugar, não sim ou não.' } }),
+      I(7, 2, { type: 'dialogue', lines: [['A', 'Is there a garden?'], ['B', '___']], options: ["No, there isn't.", "No, it isn't.", "No, I don't."], answer: "No, there isn't.", pt: 'Não, não tem.', why: 'Resposta curta com "there": No, there isn\'t (there is not).', wrong: { "No, it isn't.": 'A pergunta usa "there is", então a resposta também.', "No, I don't.": 'Responde "Do you...?".' } }),
+      I(7, 3, { type: 'dialogue', lines: [['A', 'Where are my keys?'], ['B', '___']], options: ["They're on the shelf.", "It's on the shelf.", "There's a shelf."], answer: "They're on the shelf.", pt: 'Estão na prateleira.', why: 'Keys (chaves) é plural, então "they are" (they\'re).', wrong: { "It's on the shelf.": '"It" é para uma coisa só.', "There's a shelf.": 'Não diz onde estão as chaves.' } }),
+      I(7, 4, { type: 'speak', en: 'The bathroom is beside the kitchen.', pt: 'O banheiro fica ao lado da cozinha.', why: '"Beside" = ao lado de. Fale "bi-SÁID".' }),
+      I(7, 5, { type: 'speak', en: 'There is a sofa in the living room.', pt: 'Tem um sofá na sala.', why: '"There is" soa como "dér iz", quase junto: "dériz".' }),
+      I(7, 6, { type: 'dialogue', lines: [['A', 'Your house is beautiful!'], ['B', '___']], options: ['Thank you! Come in.', "You're welcome.", 'Sorry!'], answer: 'Thank you! Come in.', pt: 'Obrigado! Entre.', why: 'Para um elogio, agradeça: "Thank you!". "Come in" = entre.', wrong: { "You're welcome.": 'É "de nada", resposta para "thank you".', 'Sorry!': 'É para pedir desculpas.' } }),
+    ]),
+    L(8, 'Lendo: um apartamento para você', [
+      I(8, 1, { type: 'story', why: 'Um anúncio de apartamento. Leia como se você estivesse procurando um lugar para morar.' }),
+      I(8, 2, { type: 'quiz', q: 'Quantos quartos tem o apartamento?', options: ['Dois', 'Um', 'Três'], answer: 'Dois', why: '"Two bedrooms" = dois quartos.' }),
+      I(8, 3, { type: 'quiz', q: 'Onde fica a escrivaninha?', options: ['Ao lado da janela', 'Na cozinha', 'Embaixo da cama'], answer: 'Ao lado da janela', why: '"A desk beside the window".' }),
+      I(8, 4, { type: 'quiz', q: 'O que fica na frente do prédio?', options: ['Um parque', 'Uma estação', 'Um supermercado'], answer: 'Um parque', why: '"There is a park in front of the building".' }),
+    ], {
+      title: 'Um apartamento para você',
+      lines: [
+        { who: 'Laura', en: 'A small flat in the city. It is new and very clean!', pt: 'Um apartamento pequeno na cidade. É novo e muito limpo!' },
+        { who: 'Laura', en: 'There are two bedrooms and a big kitchen.', pt: 'Tem dois quartos e uma cozinha grande.' },
+        { ask: 'Como é a cozinha?', options: ['Grande', 'Pequena', 'Suja'], answer: 'Grande', why: '"A big kitchen" = uma cozinha grande.' },
+        { who: 'Laura', en: 'In the living room there is a sofa and a TV.', pt: 'Na sala tem um sofá e uma TV.' },
+        { who: 'Laura', en: 'The small bedroom has a desk ___ the window.', pt: 'O quarto pequeno tem uma escrivaninha ao lado da janela.', gap: { answer: 'beside', options: ['beside', 'between', 'about'] } },
+        { who: 'Laura', en: 'There is a park in front of the building.', pt: 'Tem um parque na frente do prédio.' },
+        { ask: 'O apartamento é novo?', options: ['Sim, e muito limpo', 'Não, é velho', 'Não diz'], answer: 'Sim, e muito limpo', why: '"It is new and very clean".' },
+      ],
+    }),
+    L(9, 'Desafio da unidade', [
+      I(9, 1, { type: 'choice', prompt: 'Complete:', en: 'There ___ three rooms in my flat.', pt: 'Tem três cômodos no meu apartamento.', options: ['are', 'is', 'has'], answer: 'are', why: 'Três cômodos = plural: there are.', wrong: { is: '"There is" é para um só.', has: '"There has" não existe.' } }),
+      I(9, 2, { type: 'type', pt: 'O gato está embaixo da cama.', answer: 'The cat is below the bed.', accept: ['The cat is under the bed.'], why: '"Below" ou "under" = embaixo de. As duas valem aqui.' }),
+      I(9, 3, { type: 'meaning', en: 'The picture is above the bed.', options: ['O quadro fica acima da cama.', 'O quadro fica embaixo da cama.', 'O quadro fica ao lado da cama.'], answer: 'O quadro fica acima da cama.', why: '"Above" = acima de.' }),
+      I(9, 4, { type: 'dictation', en: 'Is there a desk in your bedroom?', why: '"Is there...?" pergunta se tem alguma coisa.' }),
+      I(9, 5, { type: 'listen', en: 'The garden is behind the house.', options: ['O jardim fica atrás da casa.', 'O jardim fica na frente da casa.', 'O jardim fica dentro da casa.'], answer: 'O jardim fica atrás da casa.', why: '"Behind" = atrás de. O contrário é "in front of".' }),
+      I(9, 6, { type: 'speak', en: 'My bedroom is small but clean.', pt: 'Meu quarto é pequeno, mas limpo.', why: 'Use "but" para ligar duas ideias: small BUT clean.' }),
+    ]),
+    L(10, 'História: a casa nova da Julia', [
+      I(10, 1, { type: 'story', why: 'A Julia mostra a casa nova para o Tom. Ouça cada fala e responda às perguntas no caminho.' }),
+      I(10, 2, { type: 'quiz', q: 'Onde fica o quarto da Julia?', options: ['Ao lado do banheiro', 'Na frente da cozinha', 'No jardim'], answer: 'Ao lado do banheiro', why: '"My bedroom is beside the bathroom".' }),
+      I(10, 3, { type: 'quiz', q: 'O que o Tom acha da casa?', options: ['Bonita', 'Pequena demais', 'Suja'], answer: 'Bonita', why: '"Your house is beautiful!".' }),
+      I(10, 4, { type: 'quiz', q: 'Onde está o gato no fim?', options: ['Embaixo do sofá', 'No jardim', 'Na cama'], answer: 'Embaixo do sofá', why: '"The cat is below the sofa!".' }),
+    ], {
+      title: 'A casa nova da Julia',
+      lines: [
+        { who: 'Julia', en: 'Hi, Tom! Welcome to my new house. Come in!', pt: 'Oi, Tom! Bem-vindo à minha casa nova. Entre!' },
+        { who: 'Tom', en: 'Thank you! Wow, your house is beautiful!', pt: 'Obrigado! Nossa, sua casa é linda!' },
+        { who: 'Julia', en: 'This is the living room, and the kitchen is ___ it.', pt: 'Esta é a sala, e a cozinha fica ao lado dela.', gap: { answer: 'beside', options: ['beside', 'above', 'between'] } },
+        { who: 'Tom', en: 'How many bedrooms are there?', pt: 'Quantos quartos tem?' },
+        { who: 'Julia', en: 'There are two. My bedroom is beside the bathroom.', pt: 'Tem dois. Meu quarto fica ao lado do banheiro.' },
+        { ask: 'Quantos quartos tem a casa?', options: ['Dois', 'Três', 'Um'], answer: 'Dois', why: '"There are two" = tem dois.' },
+        { who: 'Tom', en: 'And where is your cat?', pt: 'E onde está o seu gato?' },
+        { who: 'Julia', en: 'Look! The cat is below the sofa!', pt: 'Olha! O gato está embaixo do sofá!' },
+        { ask: 'O Tom gostou da casa?', options: ['Sim, achou linda', 'Não, achou pequena', 'Não disse nada'], answer: 'Sim, achou linda', why: '"Your house is beautiful!".' },
+      ],
+    }),
+  ],
+});

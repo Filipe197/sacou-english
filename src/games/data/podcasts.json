@@ -806,6 +806,107 @@
    ]
   },
   {
+   "id": "pod-a1u9",
+   "level": "A1",
+   "unlock": "a1-u9",
+   "title": "A casa do Tom",
+   "intro": "O Tom acabou de mudar. A Ana quer saber tudo sobre a casa nova dele.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, you have a new flat! How is it?",
+     "pt": "Tom, você tem um apartamento novo! Como ele é?"
+    },
+    {
+     "who": "tom",
+     "en": "It is small, but it is very clean.",
+     "pt": "É pequeno, mas é muito limpo."
+    },
+    {
+     "who": "ana",
+     "en": "How many bedrooms are there?",
+     "pt": "Quantos quartos tem?"
+    },
+    {
+     "who": "tom",
+     "en": "There is one bedroom and a small kitchen.",
+     "pt": "Tem um quarto e uma cozinha pequena."
+    },
+    {
+     "who": "ana",
+     "en": "Is there a garden?",
+     "pt": "Tem jardim?"
+    },
+    {
+     "who": "tom",
+     "en": "No, there isn't. But there is a park in front of the building.",
+     "pt": "Não, não tem. Mas tem um parque na frente do prédio."
+    },
+    {
+     "who": "ana",
+     "en": "Great! And where is your desk?",
+     "pt": "Que ótimo! E onde fica a sua escrivaninha?"
+    },
+    {
+     "who": "tom",
+     "en": "It is beside the window. I love it!",
+     "pt": "Fica ao lado da janela. Eu amo!"
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Como é o apartamento do Tom?",
+     "options": [
+      "Pequeno e limpo",
+      "Grande e limpo",
+      "Pequeno e sujo"
+     ],
+     "answer": "Pequeno e limpo",
+     "why": "\"It is small, but it is very clean\"."
+    },
+    {
+     "q": "O que tem na frente do prédio?",
+     "options": [
+      "Um parque",
+      "Um jardim",
+      "Uma estação"
+     ],
+     "answer": "Um parque",
+     "why": "\"There is a park in front of the building\"."
+    },
+    {
+     "q": "Onde fica a escrivaninha do Tom?",
+     "options": [
+      "Ao lado da janela",
+      "No quarto, embaixo da cama",
+      "Na cozinha"
+     ],
+     "answer": "Ao lado da janela",
+     "why": "\"It is beside the window\"."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",
