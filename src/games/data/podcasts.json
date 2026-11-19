@@ -1387,6 +1387,102 @@
    ]
   },
   {
+   "id": "pod-a1u15",
+   "level": "A1",
+   "unlock": "a1-u15",
+   "title": "Quem é o seu melhor amigo?",
+   "intro": "A Ana e o Tom descrevem os melhores amigos: a aparência e o jeito de cada um.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, who is your best friend?",
+     "pt": "Tom, quem é o seu melhor amigo?"
+    },
+    {
+     "who": "tom",
+     "en": "My best friend is Leo. He is short and he has got long black hair.",
+     "pt": "Meu melhor amigo é o Leo. Ele é baixo e tem cabelo preto comprido."
+    },
+    {
+     "who": "ana",
+     "en": "What's he like?",
+     "pt": "E como ele é de jeito?"
+    },
+    {
+     "who": "tom",
+     "en": "He is very funny, but a little lazy!",
+     "pt": "Ele é muito engraçado, mas um pouco preguiçoso!"
+    },
+    {
+     "who": "tom",
+     "en": "And your best friend, Ana?",
+     "pt": "E a sua melhor amiga, Ana?"
+    },
+    {
+     "who": "ana",
+     "en": "Her name is Sofia. She is tall and she wears glasses.",
+     "pt": "O nome dela é Sofia. Ela é alta e usa óculos."
+    },
+    {
+     "who": "ana",
+     "en": "She is shy, but she is very smart and nice.",
+     "pt": "Ela é tímida, mas é muito inteligente e legal."
+    },
+    {
+     "who": "tom",
+     "en": "That's all for today. Thank you for listening!",
+     "pt": "Por hoje é só. Obrigado por ouvir!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Como é o cabelo do Leo?",
+     "options": [
+      "Preto e comprido",
+      "Loiro e curto",
+      "Castanho e curto"
+     ],
+     "answer": "Preto e comprido",
+     "why": "\"He has got long black hair\"."
+    },
+    {
+     "q": "Como é o jeito do Leo?",
+     "options": [
+      "Engraçado e um pouco preguiçoso",
+      "Tímido e quieto",
+      "Sério e inteligente"
+     ],
+     "answer": "Engraçado e um pouco preguiçoso",
+     "why": "\"He is very funny, but a little lazy\"."
+    },
+    {
+     "q": "O que a Sofia usa?",
+     "options": [
+      "Óculos",
+      "Chapéu",
+      "Jaqueta verde"
+     ],
+     "answer": "Óculos",
+     "why": "\"She wears glasses\" = ela usa óculos."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",

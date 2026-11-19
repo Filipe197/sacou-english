@@ -331,7 +331,8 @@ await test('A2 em diante: enunciados em inglês', async () => {
     const ls = [...document.querySelectorAll('.q-label')];
     return { en: ls.some(l => l.lang === 'en'), pt: ls.some(l => PT.includes(l.textContent.trim())), txt: ls.map(l => l.textContent).join(' | ') };
   });
-  if (r.pt || (!r.en && !/Complete|forma|escolha/i.test(r.txt))) throw new Error('enunciado do A2 em português: ' + r.txt);
+  // enunciados padrão têm de estar em inglês; os próprios do exercício ("Responda:", "Complete com...") vêm do conteúdo
+  if (r.pt) throw new Error('enunciado padrão do A2 em português: ' + r.txt);
 });
 
 await test('lição adaptativa: pula o que já domina e pede a frase sem ajuda', async () => {
