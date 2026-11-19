@@ -862,7 +862,7 @@ html:not([data-theme=dark]) .dz-from{color:var(--bad)}
 .quiet-skip{background:none;border:0;color:var(--text3);text-decoration:underline;font-weight:600;cursor:pointer;min-height:44px}
 /* cena ilustrada única por unidade (elenco do Sacou) */
 .tr-art{display:flex;animation:tr-float 3.6s ease-in-out infinite}
-.tr-art img{width:290px;height:auto;display:block}
+.tr-art img{width:auto;height:auto;max-width:290px;max-height:210px;display:block}
 .tr-scene-art.left{left:calc(50% - 330px)}
 .tr-scene.off .tr-art{animation:none}
 @media (prefers-reduced-motion:reduce){.tr-art{animation:none}}
