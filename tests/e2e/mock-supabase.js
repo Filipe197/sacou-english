@@ -2,7 +2,7 @@
 import { LESSONS } from '/src/lib/content.js';
 
 const day = (n) => new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date(Date.now() - n * 864e5));
-const done = LESSONS.filter(l => l.unit.level === 'A1' && l.unit.order <= 5);
+const done = LESSONS.filter(l => l.unit.level === 'A1' && l.unit.order <= 5 && !l.added); // as lições novas (added) ficam por fazer
 const TABLES = {
   lesson_progress: done.map((l, i) => ({ lesson_id: l.id, best_score: [100, 92, 85, 100, 96][i % 5], times_done: 1 + (i % 3), completed_at: new Date(Date.now() - (done.length - i) * 0.7 * 864e5).toISOString() })),
   mistakes: [

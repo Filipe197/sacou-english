@@ -265,7 +265,7 @@ export default function Trail() {
                       const st = stateOf[l.id];
                       const skipped = st === 'done' && isSkipped(l.id);
                       const key = l.id;
-                      const status = skipped ? 'Pulada pelo teste de nível' : st === 'done' ? 'Concluída' : st === 'current' ? 'Próxima lição' : st === 'extra' ? 'Lição nova (opcional)' : 'Bloqueada';
+                      const status = skipped ? 'Pulada pelo teste de nível' : st === 'done' ? 'Concluída' : st === 'current' ? 'Próxima lição' : st === 'extra' ? 'nova, opcional' : 'Bloqueada';
                       return (
                         <div key={key} className={'tr-slot' + (st === 'current' ? ' cur' : '') + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[i % WAVE.length] }}>
                           {st === 'current' && open !== key && (

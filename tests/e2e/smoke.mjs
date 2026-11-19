@@ -371,6 +371,20 @@ await test('meu progresso: retrato por habilidade e o que já consigo fazer', as
   if (!await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)) throw new Error('rolagem lateral em Meu progresso');
 });
 
+await test('A1 completo: lições novas aparecem como NOVA, abrem e não travam a trilha', async () => {
+  await open('/aprender');
+  await wait(1500);
+  const r = await page.evaluate(() => ({ extra: document.querySelectorAll('.tr-node.extra').length, cur: document.querySelectorAll('.tr-node.current').length }));
+  if (r.extra < 3) throw new Error(`esperava as lições novas como extra, veio ${r.extra}`);
+  if (r.cur !== 1) throw new Error('a lição atual sumiu');
+  await expectText('Minha rotina'); // a trilha continua na unidade 6
+  await open('/licao/a1-u1-l8');
+  await expectText('O que significa?');
+  await expectText('Nice to meet you!');
+  await open('/licao/a1-u1-l10');
+  await expectText('Mensagem da Julia');
+});
+
 await browser.close();
 await server.close();
 

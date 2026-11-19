@@ -10,7 +10,7 @@ const PREFIX = '\0esqueleto:';
 export function skeleton(unit) {
   return {
     ...unit,
-    lessons: unit.lessons.map(l => ({ id: l.id, title: l.title, size: l.items.length, hasStory: !!l.story, items: null, story: null })),
+    lessons: unit.lessons.map(l => ({ id: l.id, title: l.title, size: l.items.length, hasStory: !!l.story, ...(l.added ? { added: l.added } : {}), items: null, story: null })),
   };
 }
 
