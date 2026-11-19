@@ -12,6 +12,7 @@ const SCENES = {
   'a1-u13': ['standing-19', 'sun'],
   'a1-u14': ['standing-9', 'phone'],
   'a1-u15': ['standing-12', 'talk'],
+  'a1-u16': ['standing-18', 'suitcase'],
   'a2-u1': ['standing-9', 'beach'], 'a2-u2': ['sitting-2', 'popcorn'], 'a2-u3': ['standing-18', 'suitcase'],
   'a2-u4': ['sitting-4', 'phone'], 'a2-u5': ['standing-2', 'boxes'], 'a2-u6': ['standing-21', 'calendar'],
   'a2-u7': ['standing-6', 'bags'], 'a2-u8': ['sitting-3', 'guitar'],

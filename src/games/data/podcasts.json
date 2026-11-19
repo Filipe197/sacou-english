@@ -1483,6 +1483,102 @@
    ]
   },
   {
+   "id": "pod-a1u16",
+   "level": "A1",
+   "unlock": "a1-u16",
+   "title": "Como foi o fim de semana?",
+   "intro": "No último episódio do A1, a Ana e o Tom contam como foi o fim de semana de cada um.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Hello!",
+     "pt": "E eu sou o Tom. Olá!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, how was your weekend?",
+     "pt": "Tom, como foi o seu fim de semana?"
+    },
+    {
+     "who": "tom",
+     "en": "It was great! I was at my grandma's house with my family.",
+     "pt": "Foi ótimo! Eu estava na casa da minha avó com minha família."
+    },
+    {
+     "who": "ana",
+     "en": "Was the weather nice?",
+     "pt": "O tempo estava bom?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes, it was sunny. There were many birds and flowers.",
+     "pt": "Sim, estava ensolarado. Tinha muitos pássaros e flores."
+    },
+    {
+     "who": "tom",
+     "en": "And you, Ana? Where were you?",
+     "pt": "E você, Ana? Onde você estava?"
+    },
+    {
+     "who": "ana",
+     "en": "I was at home. I was sick on Saturday, but I was OK on Sunday.",
+     "pt": "Eu estava em casa. Estava doente no sábado, mas fiquei bem no domingo."
+    },
+    {
+     "who": "tom",
+     "en": "Oh no! I hope you are better now.",
+     "pt": "Ah, não! Espero que você esteja melhor agora."
+    },
+    {
+     "who": "ana",
+     "en": "Yes, thank you! That's all for today. Thank you for listening!",
+     "pt": "Sim, obrigada! Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Onde o Tom estava?",
+     "options": [
+      "Na casa da avó, com a família",
+      "Na praia",
+      "Em casa"
+     ],
+     "answer": "Na casa da avó, com a família",
+     "why": "Ele diz que estava \"at my grandma's house\"."
+    },
+    {
+     "q": "Como estava o tempo para o Tom?",
+     "options": [
+      "Ensolarado",
+      "Chuvoso",
+      "Frio"
+     ],
+     "answer": "Ensolarado",
+     "why": "\"Yes, it was sunny\"."
+    },
+    {
+     "q": "O que aconteceu com a Ana no sábado?",
+     "options": [
+      "Estava doente",
+      "Estava viajando",
+      "Estava trabalhando"
+     ],
+     "answer": "Estava doente",
+     "why": "\"I was sick on Saturday\"."
+    }
+   ]
+  },
+  {
    "id": "pod-a2u1",
    "level": "A2",
    "unlock": "a2-u1",
