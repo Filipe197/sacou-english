@@ -321,9 +321,9 @@ export default function Trail() {
                   </div>
                   {unlocked && (
                     <div className="tr-close">
-                      <Link to={`/desafio/${u.id}`} className={'tr-close-a' + (complete ? '' : ' off')} aria-label={complete ? `Desafio da unidade ${u.order}` : `Desafio da unidade ${u.order}: libera ao terminar a unidade`}>
+                      <Link to={`/desafio/${u.id}`} className={'tr-close-a' + (complete ? '' : ' off')} aria-label={complete ? `Desafio escrito da unidade ${u.order}` : `Desafio escrito da unidade ${u.order}: libera ao terminar a unidade`}>
                         <span className="tr-close-ic" aria-hidden="true">🎯</span>
-                        <span><b>Desafio da unidade</b><small>{prog.scores[`desafio-${u.id}`] ? `Sua nota: ${prog.scores[`desafio-${u.id}`].best_score} · tente melhorar` : complete ? 'Escreva sobre o tema e a IA corrige' : 'Libera ao terminar a unidade'}</small></span>
+                        <span><b>Desafio escrito</b><small>{prog.scores[`desafio-${u.id}`] ? `Sua nota: ${prog.scores[`desafio-${u.id}`].best_score} · tente melhorar` : complete ? 'Escreva sobre o tema e a IA corrige' : 'Libera ao terminar a unidade'}</small></span>
                         <Icon name={complete ? 'arrow' : 'lock'} size={18} />
                       </Link>
                       {extras && extras.podcastOf(u.id) && (

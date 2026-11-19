@@ -86,7 +86,7 @@ export function CanDoList({ prog, level }) {
       <div className="cd-head">
         <div>
           <h2>O que você já consegue fazer</h2>
-          <p className="muted">Os objetivos do padrão europeu (CEFR) de cada unidade. Termine a unidade para conquistar e passe no desafio para comprovar.</p>
+          <p className="muted">Os objetivos do padrão europeu (CEFR) de cada unidade. Termine a unidade para conquistar e passe no desafio escrito para comprovar.</p>
         </div>
         <span className="cd-count"><b>{got}</b> de {rows.length}<small>{proved ? `${proved} ${proved === 1 ? 'comprovado' : 'comprovados'} no desafio` : 'conquistados'}</small></span>
       </div>
@@ -103,8 +103,8 @@ export function CanDoList({ prog, level }) {
                   <div>
                     <p>{u.can_do.text}</p>
                     <small>
-                      Unidade {u.order} · {u.title} · {st === 'proved' ? `comprovado no desafio (nota ${score})`
-                        : st === 'got' ? <Link to={`/desafio/${u.id}`}>Faça o desafio para comprovar</Link>
+                      Unidade {u.order} · {u.title} · {st === 'proved' ? `comprovado no desafio escrito (nota ${score})`
+                        : st === 'got' ? <Link to={`/desafio/${u.id}`}>Faça o desafio escrito para comprovar</Link>
                         : st === 'going' ? `${doneN} de ${u.lessons.length} lições` : 'ainda não começou'}
                     </small>
                   </div>

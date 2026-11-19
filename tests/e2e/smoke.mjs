@@ -311,7 +311,7 @@ await test('conversa: as falas continuam depois de recarregar', async () => {
 // ---------- ensino: desafio, enunciados em inglês, lição adaptativa e escrita sem ajuda ----------
 await test('desafio da unidade: escreve, recebe a correção e o resultado continua depois de recarregar', async () => {
   await open('/aprender');
-  await expectText('Desafio da unidade');
+  await expectText('Desafio escrito');
   await open('/desafio/a1-u1');
   await expectText('Sua tarefa');
   await page.type('.dz-in', 'I get up at seven. I have breakfast. He work in a bank.');

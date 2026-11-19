@@ -70,7 +70,7 @@ export default function Desafio() {
       <div className="dz">
         <Link to="/aprender" className="dz-back"><Icon name="back" size={18} />Trilha</Link>
         <div className="dz-head">
-          <span className="eyebrow">Desafio da unidade · Nível {unit.level} · Unidade {unit.order}</span>
+          <span className="eyebrow">Desafio escrito · Nível {unit.level} · Unidade {unit.order}</span>
           <h1>{unit.title}</h1>
           {unit.can_do?.text && <p className="dz-goal"><Icon name="target" size={18} /><span><b>Objetivo:</b> {unit.can_do.text}</span></p>}
           {best != null && !result && <p className="muted" style={{ margin: '6px 0 0' }}>Sua melhor nota até agora: <b>{best}</b></p>}
