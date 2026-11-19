@@ -1,5 +1,5 @@
 // Regras comuns dos minijogos: o que está liberado, XP, recordes e de onde vêm as palavras.
-import { UNITS, LESSONS, getUnit, shuffle } from '../lib/content.js';
+import { UNITS, LESSONS, getUnit, shuffle, unitComplete } from '../lib/content.js';
 import { finishSession } from '../lib/finish-session.js';
 import episodes from './data/episodes.json';
 import mysteries from './data/mysteries.json';
@@ -22,7 +22,7 @@ export const PICTURES = pictures.words.map(([en, pt, pic]) => ({ en, pt, pic }))
 // Liberado quando todas as lições da unidade indicada estão feitas
 export function unitDone(done, unitId) {
   const u = getUnit(unitId);
-  return !!u && u.lessons.every(l => done.has(l.id));
+  return !!u && unitComplete(u.lessons, done);
 }
 export const unlockLabel = (unitId) => { const u = getUnit(unitId); return u ? `${u.level} · Unidade ${u.order}: ${u.title}` : unitId; };
 export const gameId = (id) => `jogo-${id}`;

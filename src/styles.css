@@ -855,3 +855,6 @@ html:not([data-theme=dark]) .dz-from{color:var(--bad)}
 .cd-got .cd-ic{background:var(--ok);color:#fff}
 .cd-proved .cd-ic{background:#FFE7A3}
 .cd-todo{opacity:.55}
+/* lição acrescentada depois (opcional para quem já passou daquele ponto) */
+.tr-node.extra{--c:#8F7BFF;--d:var(--violet-d);color:#fff}
+.tr-node.extra::after{content:"NOVA";position:absolute;top:-8px;right:-10px;background:var(--lime);color:var(--ink-fixed);font-size:10px;font-weight:800;letter-spacing:.6px;padding:3px 6px;border-radius:99px;box-shadow:0 2px 0 var(--lime-d)}

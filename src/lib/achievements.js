@@ -1,13 +1,13 @@
 // Conquistas (medalhas): calculadas a partir do progresso do aluno, sem tabela nova.
-import { UNITS, LESSONS, LEVELS } from './content.js';
+import { UNITS, LESSONS, LEVELS, unitComplete } from './content.js';
 
 const count = (scores, prefix) => Object.keys(scores || {}).filter(k => k.startsWith(prefix)).length;
 
 function context({ profile, done, scores }) {
   const lessons = LESSONS.filter(l => done.has(l.id)).length;
-  const words = UNITS.filter(u => u.lessons.every(l => done.has(l.id))).reduce((n, u) => n + (u.words?.length || 0), 0);
+  const words = UNITS.filter(u => unitComplete(u.lessons, done)).reduce((n, u) => n + (u.words?.length || 0), 0);
   const perfectUnit = UNITS.some(u => u.lessons.every(l => (scores?.[l.id]?.best_score ?? 0) >= 100 && scores?.[l.id]?.times_done > 0));
-  const levelDone = (lv) => { const ls = LESSONS.filter(l => l.unit.level === lv); return ls.length > 0 && ls.every(l => done.has(l.id)); };
+  const levelDone = (lv) => { const us = UNITS.filter(u => u.level === lv); return us.length > 0 && us.every(u => unitComplete(u.lessons, done)); };
   return {
     lessons, words, perfectUnit, levelDone,
     best: Math.max(profile?.best_streak || 0, profile?.streak || 0),

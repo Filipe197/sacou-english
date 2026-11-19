@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { UNITS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, NEXT_LEVEL, unitsOf, lessonStates, levelPercent, currentLevel } from '../lib/content.js';
+import { UNITS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, NEXT_LEVEL, unitsOf, lessonStates, levelPercent, currentLevel, unitComplete } from '../lib/content.js';
 import { useProgress, liveStreak, todayBR, dueLessonIds, shieldCovering } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { Shell, Spinner, Icon, Fire, Bolt, Anim } from '../components/ui.jsx';
@@ -233,7 +233,7 @@ export default function Trail() {
   const infoOf = (u) => {
     const unitStates = u.lessons.map(l => stateOf[l.id]);
     const unitDone = unitStates.filter(x => x === 'done').length;
-    const complete = unitDone === u.lessons.length;
+    const complete = unitComplete(u.lessons, prog.done);
     const unlocked = unitStates.some(x => x !== 'locked');
     return { u, unitDone, complete, unlocked, tone: complete ? ' complete' : unlocked ? '' : ' locked' };
   };
@@ -265,7 +265,7 @@ export default function Trail() {
                       const st = stateOf[l.id];
                       const skipped = st === 'done' && isSkipped(l.id);
                       const key = l.id;
-                      const status = skipped ? 'Pulada pelo teste de nível' : st === 'done' ? 'Concluída' : st === 'current' ? 'Próxima lição' : 'Bloqueada';
+                      const status = skipped ? 'Pulada pelo teste de nível' : st === 'done' ? 'Concluída' : st === 'current' ? 'Próxima lição' : st === 'extra' ? 'Lição nova (opcional)' : 'Bloqueada';
                       return (
                         <div key={key} className={'tr-slot' + (st === 'current' ? ' cur' : '') + (open === key ? ' is-open' : '')} style={{ '--x': WAVE[i % WAVE.length] }}>
                           {st === 'current' && open !== key && (
@@ -287,7 +287,7 @@ export default function Trail() {
                               <b>{l.title}</b>
                               {st === 'locked'
                                 ? <span className="tr-pop-t">Conclua as lições anteriores para liberar esta.</span>
-                                : <Link className="btn btn-3d tr-pop-go" to={`/licao/${l.id}`}>{st === 'current' ? 'Começar · até +15 XP' : skipped ? 'Fazer a lição' : 'Treinar de novo'}</Link>}
+                                : <Link className="btn btn-3d tr-pop-go" to={`/licao/${l.id}`}>{st === 'current' ? 'Começar · até +15 XP' : st === 'extra' ? 'Fazer a lição nova · +10 XP' : skipped ? 'Fazer a lição' : 'Treinar de novo'}</Link>}
                             </div>
                           )}
                         </div>
@@ -342,7 +342,7 @@ export default function Trail() {
               <span className="exam-cta-ic" aria-hidden="true">🎓</span>
               <span>
                 <b>Prova do nível {lv}</b>
-                <small>{unitsOf(lv).every(u => u.lessons.every(l => prog.done.has(l.id))) ? 'Teste tudo o que aprendeu e ganhe um card de aprovado.' : `Já sabe o ${lv}? Passe na prova e pule o que falta.`}</small>
+                <small>{unitsOf(lv).every(u => unitComplete(u.lessons, prog.done)) ? 'Teste tudo o que aprendeu e ganhe um card de aprovado.' : `Já sabe o ${lv}? Passe na prova e pule o que falta.`}</small>
               </span>
               <Icon name="arrow" size={18} />
             </Link>

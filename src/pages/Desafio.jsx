@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { Shell, Icon, Spinner } from '../components/ui.jsx';
 import { useListen, getSR } from '../components/Pronounce.jsx';
-import { getUnit } from '../lib/content.js';
+import { getUnit, unitComplete } from '../lib/content.js';
 import { useProgress } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { askAI } from '../lib/ai.js';
@@ -34,7 +34,7 @@ export default function Desafio() {
 
   if (!unit) return <Navigate to="/aprender" replace />;
   if (prog.loading) return <Spinner />;
-  const complete = unit.lessons.every(l => prog.done.has(l.id));
+  const complete = unitComplete(unit.lessons, prog.done);
   const best = prog.scores[challengeId(unit.id)]?.best_score;
   const words = text.trim().split(/\s+/).filter(Boolean).length;
 

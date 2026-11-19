@@ -5,6 +5,8 @@
 //    Telas que precisam deles esperam com useContentReady() (ver ContentGate em App.jsx).
 // Tudo é validado no build por scripts/validate-content.mjs.
 import { useEffect, useState } from 'react';
+import { statesOf, unitComplete } from './trail-rules.js';
+export { unitComplete, coreOf } from './trail-rules.js';
 
 const modules = import.meta.glob('../content/*/*.json', { eager: true, query: '?esqueleto', import: 'default' });
 const full = import.meta.glob('../content/*/*.json', { import: 'default' });
@@ -59,27 +61,27 @@ export function useContentReady() {
   return ok;
 }
 
-// Uma lição fica liberada quando a anterior foi concluída (A2 abre depois do A1)
+// Uma lição fica liberada quando a anterior foi concluída (A2 abre depois do A1).
+// Lições novas acrescentadas atrás de onde o aluno já está viram "extra" (ver trail-rules.js).
 export function lessonStates(doneSet) {
-  let nextFound = false;
-  return LESSONS.map((l) => {
-    if (doneSet.has(l.id)) return { lesson: l, state: 'done' };
-    if (!nextFound) { nextFound = true; return { lesson: l, state: 'current' }; }
-    return { lesson: l, state: 'locked' };
-  });
+  const st = statesOf(LESSONS, doneSet);
+  return LESSONS.map((l, i) => ({ lesson: l, state: st[i] }));
 }
 
-// Nível em que o aluno está: o da primeira lição ainda não feita
+// Nível em que o aluno está: o da próxima lição do caminho
 export function currentLevel(doneSet) {
-  const next = LESSONS.find(l => !doneSet.has(l.id));
-  return next ? next.unit.level : LEVELS[LEVELS.length - 1];
+  const next = lessonStates(doneSet).find(s => s.state === 'current');
+  return next ? next.lesson.unit.level : LEVELS[LEVELS.length - 1];
 }
 
+// Quanto do nível foi feito (as lições extras ainda não feitas não contam contra)
 export function levelPercent(doneSet, level = currentLevel(doneSet)) {
-  const ls = LESSONS.filter(l => l.unit.level === level);
+  const ls = lessonStates(doneSet).filter(s => s.lesson.unit.level === level && s.state !== 'extra');
   if (!ls.length) return 0;
-  return Math.round((ls.filter(l => doneSet.has(l.id)).length / ls.length) * 100);
+  return Math.round((ls.filter(s => s.state === 'done').length / ls.length) * 100);
 }
+
+export const isUnitComplete = (doneSet, u) => unitComplete(u.lessons, doneSet);
 
 export function shuffle(arr) {
   const a = [...arr];

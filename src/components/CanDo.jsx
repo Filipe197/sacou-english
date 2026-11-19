@@ -5,7 +5,7 @@
 //    terminar a unidade e comprovado com nota 50+ no desafio da unidade.
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UNITS, LEVELS, LEVEL_NAMES, LESSONS, useContentReady } from '../lib/content.js';
+import { UNITS, LEVELS, LEVEL_NAMES, LESSONS, useContentReady, unitComplete } from '../lib/content.js';
 import { memorySnapshot } from '../lib/memory.js';
 import { Icon } from './ui.jsx';
 
@@ -76,7 +76,7 @@ export function CanDoList({ prog, level }) {
   const rows = UNITS.filter(u => u.can_do?.text).map(u => {
     const doneN = u.lessons.filter(l => prog.done.has(l.id)).length;
     const score = prog.scores[`desafio-${u.id}`]?.best_score;
-    const st = score >= 50 ? 'proved' : doneN === u.lessons.length ? 'got' : doneN > 0 ? 'going' : 'todo';
+    const st = score >= 50 ? 'proved' : unitComplete(u.lessons, prog.done) ? 'got' : doneN > 0 ? 'going' : 'todo';
     return { u, st, score, doneN };
   });
   const got = rows.filter(r => r.st === 'proved' || r.st === 'got').length;

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { UNITS, LESSONS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, levelPercent, currentLevel } from '../lib/content.js';
+import { UNITS, LESSONS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, levelPercent, currentLevel, unitComplete } from '../lib/content.js';
 import { useProgress, lastSevenDays, liveStreak } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { useInstall } from '../lib/install.js';
@@ -24,7 +24,7 @@ export default function Progress() {
   const max = Math.max(goal, ...days.map(d => d.xp), 1);
   const hit = days.filter(d => d.xp >= goal).length;
   const lessonsDone = LESSONS.filter(l => prog.done.has(l.id)).length;
-  const wordsLearned = UNITS.filter(u => u.lessons.every(l => prog.done.has(l.id))).reduce((n, u) => n + u.words.length, 0);
+  const wordsLearned = UNITS.filter(u => unitComplete(u.lessons, prog.done)).reduce((n, u) => n + u.words.length, 0);
   const level = currentLevel(prog.done);
   const pct = levelPercent(prog.done, level);
   const initials = (profile?.display_name || user?.email || '?').split(/\s+/).map(s => s[0]).join('').slice(0, 2).toUpperCase();
