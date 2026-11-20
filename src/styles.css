@@ -976,3 +976,20 @@ html[data-theme=dark] .daily-celebration{background:radial-gradient(ellipse 70% 
 .btn-google{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#1F1F1F;border:2px solid var(--line2);font-weight:700}
 .btn-google:hover{background:#F7F8FA;color:#1F1F1F;border-color:#BFC2D4}
 html[data-theme=dark] .btn-google{border-color:#fff}
+
+/* topo do site: botão de quem já tem conta não quebra em duas linhas */
+.nav-go{white-space:nowrap;gap:6px}
+
+/* página Baixe o app (/baixar) */
+.dl-tabs{display:inline-flex;gap:4px;margin-top:36px;padding:4px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.dl-tabs button{border:0;background:none;font:inherit;font-weight:700;font-size:15px;padding:10px 22px;border-radius:99px;color:var(--text2);cursor:pointer;min-height:44px}
+.dl-tabs button.on{background:var(--violet);color:#fff}
+.dl-sec{margin-top:22px}
+.dl-card{display:flex;flex-direction:column;gap:18px;max-width:760px}
+.dl-card .btn-lg{align-self:flex-start;display:inline-flex;align-items:center;gap:8px}
+.dl .ap-hero .btn{display:inline-flex;align-items:center;gap:8px}
+.dl-steps{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.dl-steps li{display:flex;gap:14px;align-items:flex-start}
+.dl-n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--violet-l);color:var(--violet);font-weight:800;display:grid;place-items:center;font-size:15px}
+.dl-ic{display:inline-grid;place-items:center;vertical-align:-3px;color:#0A84FF}
+@media (max-width:640px){.dl-card .btn-lg{align-self:stretch;justify-content:center}}

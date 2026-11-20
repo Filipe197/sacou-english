@@ -250,3 +250,11 @@
 .rail .missions .ms-head{flex-wrap:wrap;row-gap:2px}
 .rail .missions .ms-head b,.rail .missions .ms-head .muted{white-space:nowrap}
 .rail .missions .ms-txt > span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* pergunta do aluno ao professor: balão violeta, legível no claro e no escuro; ao rolar até
+   ela, sobra espaço para o topo do app e para a barra de digitar não cobrir a conversa */
+.tutor-q{background:var(--violet);color:#fff;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
+.dv-turn{scroll-margin-top:84px}
+.tutor-end{scroll-margin-bottom:150px}
+.dv-thread{padding-bottom:8px}
+@media(max-width:860px){.dv-thread{padding-bottom:24px}}

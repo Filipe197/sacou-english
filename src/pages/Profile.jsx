@@ -6,6 +6,7 @@ import { supabase } from '../lib/supabase.js';
 import { Shell, Icon } from '../components/ui.jsx';
 import Reminder from '../components/Reminder.jsx';
 import { THEMES, useTheme } from '../lib/theme.js';
+import { NATIVE } from '../lib/native.js';
 
 const GOALS = [
   [10, 'Leve', 'cerca de 1 lição por dia'],
@@ -103,7 +104,7 @@ export default function Profile() {
         </div>
 
         <DeleteAccount />
-        <p className="muted pf-legal"><Link to="/sobre">Sobre o Sacou</Link> · <Link to="/apoie">Apoie</Link> · <Link to="/privacidade">Política de Privacidade</Link> · <Link to="/termos">Termos de Uso</Link></p>
+        <p className="muted pf-legal"><Link to="/sobre">Sobre o Sacou</Link> · {!NATIVE && <><Link to="/baixar">Baixar o app</Link> · </>}<Link to="/apoie">Apoie</Link> · <Link to="/privacidade">Política de Privacidade</Link> · <Link to="/termos">Termos de Uso</Link></p>
       </div>
     </Shell>
   );

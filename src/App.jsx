@@ -4,6 +4,7 @@ import { useAuth } from './lib/auth.jsx';
 import { Spinner } from './components/ui.jsx';
 import { useContentReady } from './lib/content.js';
 import UpdateManager from './components/UpdateManager.jsx';
+import { NATIVE } from './lib/native.js';
 import Novidades from './components/Novidades.jsx';
 import AppBadge from './components/AppBadge.jsx';
 import Landing from './pages/Landing.jsx';
@@ -20,6 +21,7 @@ const Progress = lazy(() => import('./pages/Progress.jsx'));
 const Credits = lazy(() => import('./pages/Credits.jsx'));
 const About = lazy(() => import('./pages/About.jsx'));
 const Support = lazy(() => import('./pages/Support.jsx'));
+const Download = lazy(() => import('./pages/Download.jsx'));
 const Privacy = lazy(() => import('./pages/Privacy.jsx').then(m => ({ default: m.Privacy })));
 const Terms = lazy(() => import('./pages/Privacy.jsx').then(m => ({ default: m.Terms })));
 import { ThemeManager } from './lib/theme.js';
@@ -77,18 +79,19 @@ export default function App() {
     <>
       <ScrollTop />
       <ThemeManager />
-      <UpdateManager />
+      {!NATIVE && <UpdateManager />}
       <Novidades />
       <AppBadge />
       <Suspense fallback={<Spinner />}>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={NATIVE ? <Navigate to="/aprender" replace /> : <Landing />} />
         <Route path="/entrar" element={<Auth mode="login" />} />
         <Route path="/criar-conta" element={<Auth mode="signup" />} />
         <Route path="/redefinir-senha" element={<ResetPassword />} />
         <Route path="/creditos" element={<Credits />} />
         <Route path="/sobre" element={<About />} />
         <Route path="/apoie" element={<Support />} />
+        <Route path="/baixar" element={<Download />} />
         <Route path="/privacidade" element={<Privacy />} />
         <Route path="/termos" element={<Terms />} />
         <Route path="/bem-vindo" element={<Private allowNotOnboarded><Onboarding /></Private>} />

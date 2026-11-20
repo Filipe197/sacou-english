@@ -10,9 +10,10 @@ import { Spinner, Icon } from '../components/ui.jsx';
 import { Stage } from './art.jsx';
 import { PODCASTS, cast, unitDone, played, finishGame } from './lib.js';
 import { GameTop, Finish, Choices, Why } from './common.jsx';
+import { REMOTE } from '../lib/native.js';
 
 let timingsCache = null;
-const loadTimings = () => (timingsCache ||= fetch('/audio/podcast/index.json').then(r => (r.ok ? r.json() : {})).catch(() => ({})));
+const loadTimings = () => (timingsCache ||= fetch(`${REMOTE}/audio/podcast/index.json`).then(r => (r.ok ? r.json() : {})).catch(() => ({})));
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 
 export default function Podcast() {
@@ -120,7 +121,7 @@ function Player({ ep, timing, first }) {
             <Stage place="office" cast={hosts} looks={cast} speaking={speaking} height={190} />
             <span className="pc-onair" aria-hidden="true"><span />{playing ? 'NO AR' : 'PODCAST'}</span>
           </div>
-          {!fallback && <audio ref={audio} src={`/audio/podcast/${ep.id}.mp3`} preload="metadata"
+          {!fallback && <audio ref={audio} src={`${REMOTE}/audio/podcast/${ep.id}.mp3`} preload="metadata"
             onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
             onTimeUpdate={(e) => { setTime(e.currentTarget.currentTime); if (e.currentTarget.currentTime > duration * 0.85) setHeard(true); }}
             onEnded={() => { setPlaying(false); setHeard(true); }} />}

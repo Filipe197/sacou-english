@@ -1,7 +1,7 @@
 // Treino infinito: a IA cria exercícios NOVOS sobre os pontos em que o aluno
 // errou. Toda frase gerada passa pela mesma checagem do conteúdo do curso:
 // estrutura e vocabulário CEFR-J do nível. O que não passar é descartado.
-import { guard, readBody, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
+import { guard, cors, readBody, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 import { recurringMistakes, describeItem, allowedWords } from './_content.js';
 import { tokens, known } from '../scripts/cefr.mjs';
 
@@ -65,6 +65,7 @@ export function validate(ex, level) {
 }
 
 export default async function handler(req, res) {
+  if (cors(req, res)) return; // app Android pede de outra origem
   await handle(res, async () => {
     readBody(req);
     const { sb } = await guard(req, 'practice');

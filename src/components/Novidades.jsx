@@ -6,7 +6,7 @@ import { useAuth } from '../lib/auth.jsx';
 import data from '../novidades.json';
 
 const KEY = (uid) => `sacou-novidades:${uid}`;
-const QUIET = /^\/(licao|revisao|praticar|conversar|fone|nivelamento|bem-vindo|jogos\/.+|entrar|criar-conta|$)/;
+const QUIET = /^\/(licao|revisao|praticar|conversar|fone|nivelamento|bem-vindo|jogos\/.+|entrar|criar-conta|sobre|apoie|baixar|privacidade|termos|creditos|$)/;
 
 export default function Novidades() {
   const { user, profile } = useAuth();

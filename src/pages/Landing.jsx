@@ -32,8 +32,9 @@ export default function Landing() {
               <a className="plain hide-m" href="#como">Como funciona</a>
               <a className="plain hide-m" href="#niveis">Níveis</a>
               <Link className="plain hide-m" to="/sobre">Sobre</Link>
+              <Link className="plain hide-m" to="/baixar">Baixar app</Link>
               {session
-                ? <Link className="btn btn-lime" to="/aprender" style={{ minHeight: 44 }}>Continuar estudando</Link>
+                ? <Link className="btn btn-lime nav-go" to="/aprender" style={{ minHeight: 44 }}>Continuar<span className="hide-m">&nbsp;estudando</span><Icon name="arrow" size={18} /></Link>
                 : <>
                     <Link className="plain" to="/entrar">Entrar</Link>
                     <Link className="btn btn-lime" to="/criar-conta" style={{ minHeight: 44, fontSize: 15 }}>Começar grátis</Link>
@@ -181,7 +182,7 @@ export default function Landing() {
       <footer className="footer">
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', fontSize: 14, color: 'var(--text3)' }}>
           <span>Sacou English · Inglês explicado do zero à fluência</span>
-          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/sobre">Sobre</Link><Link to="/apoie">Apoie</Link><Link to="/creditos">Fontes e créditos</Link><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></span>
+          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/sobre">Sobre</Link><Link to="/baixar">Baixar o app</Link><Link to="/apoie">Apoie</Link><Link to="/creditos">Fontes e créditos</Link><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></span>
         </div>
       </footer>
     </div>

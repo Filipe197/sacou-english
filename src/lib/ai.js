@@ -2,6 +2,7 @@
 // para o servidor conferir quem é o aluno e o limite diário.
 import { supabase } from './supabase.js';
 import { reportError } from './errors.js';
+import { REMOTE } from './native.js';
 
 export async function askAI(path, body) {
   if (typeof navigator !== 'undefined' && navigator.onLine === false) throw new Error('Sem internet. O professor de IA precisa de conexão.');
@@ -9,7 +10,7 @@ export async function askAI(path, body) {
   const token = data.session?.access_token;
   let r;
   try {
-    r = await fetch(`/api/${path}`, {
+    r = await fetch(`${REMOTE}/api/${path}`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', ...(token ? { authorization: `Bearer ${token}` } : {}) },
       body: JSON.stringify(body),

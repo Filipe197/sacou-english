@@ -2,7 +2,7 @@
 // diferença entre these e those) e o professor responde em português, com
 // exemplos. Usa o provedor de IA configurado (DeepSeek por padrão) e conta no
 // mesmo limite diário das explicações de erro ("explain"), sem precisar de SQL novo.
-import { guard, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
+import { guard, cors, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 
 export const MAX_QUESTIONS = 10; // perguntas por conversa
 const LEVELS = ['A1', 'A2', 'B1', 'B2'];
@@ -27,6 +27,7 @@ const SCHEMA = obj({
 });
 
 export default async function handler(req, res) {
+  if (cors(req, res)) return; // app Android pede de outra origem
   await handle(res, async () => {
     const body = readBody(req);
     const question = str(body.question, 400, 'pergunta');

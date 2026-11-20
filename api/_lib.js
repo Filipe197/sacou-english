@@ -22,6 +22,22 @@ const ai = () => (anthropic ||= new Anthropic());
 // Nunca vale em produção.
 export const MOCK = process.env.AI_MOCK === '1' && process.env.VERCEL_ENV !== 'production';
 
+// App Android (Capacitor): a página roda em https://localhost e chama o site.
+// Libera só essa origem e responde ao "preflight" (OPTIONS) do navegador.
+const APP_ORIGINS = new Set(['https://localhost', 'capacitor://localhost']);
+export function cors(req, res) {
+  const o = req.headers.origin;
+  if (APP_ORIGINS.has(o)) {
+    res.setHeader('access-control-allow-origin', o);
+    res.setHeader('vary', 'origin');
+    res.setHeader('access-control-allow-headers', 'authorization, content-type');
+    res.setHeader('access-control-allow-methods', 'POST, OPTIONS');
+    res.setHeader('access-control-max-age', '86400');
+  }
+  if (req.method === 'OPTIONS') { res.statusCode = 204; res.end(); return true; }
+  return false;
+}
+
 export class HttpError extends Error {
   constructor(status, message) { super(message); this.status = status; }
 }

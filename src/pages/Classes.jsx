@@ -6,6 +6,7 @@ import { supabase } from '../lib/supabase.js';
 import { useAuth } from '../lib/auth.jsx';
 import { useProgress, todayBR } from '../lib/progress.js';
 import { Shell, Spinner, Icon } from '../components/ui.jsx';
+import { SITE } from '../lib/native.js';
 
 const missingMsg = 'O modo turma ainda não foi ativado no banco (falta rodar supabase/005_turmas_missoes.sql).';
 const errPt = (e) => /schema cache|does not exist|create_class|join_class/i.test(e?.message || '') ? missingMsg
@@ -13,7 +14,7 @@ const errPt = (e) => /schema cache|does not exist|create_class|join_class/i.test
   : /cheia/i.test(e?.message || '') ? 'Essa turma está cheia.'
   : /limite/i.test(e?.message || '') ? 'Você chegou ao limite de 20 turmas.'
   : 'Não deu certo agora. Tente de novo.';
-const inviteLink = (code) => `${location.origin}/turmas/entrar/${code}`;
+const inviteLink = (code) => `${SITE}/turmas/entrar/${code}`;
 
 function ago(day) {
   if (!day) return 'nunca';

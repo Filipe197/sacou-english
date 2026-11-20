@@ -8,7 +8,7 @@
 // Limite por AULA (supabase/013_voz.sql, voice_take): plano grátis 1 aula com voz natural por dia,
 // premium 5; até 40 falas por aula e 60 no site inteiro por dia.
 // Se algo falhar (sem créditos, sem chave, limite), o app usa a voz do aparelho.
-import { guard, readBody, str, send, HttpError, MOCK } from './_lib.js';
+import { guard, cors, readBody, str, send, HttpError, MOCK } from './_lib.js';
 
 export const MAX_CHARS = 400;
 // Inglês mais devagar para quem está começando (velocidade da ElevenLabs: 0,7 a 1,2).
@@ -18,6 +18,7 @@ export const SPEED = { A1: 0.8, A2: 0.87, B1: 0.94, B2: 1 };
 const JUVENAL_VOICE = 'FspPSevACC3LOIYjKdIQ';
 
 export default async function handler(req, res) {
+  if (cors(req, res)) return; // app Android pede de outra origem
   try {
     const body = readBody(req);
     const text = str(body.text, MAX_CHARS, 'texto');

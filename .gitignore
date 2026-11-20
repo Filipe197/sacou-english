@@ -21,3 +21,7 @@ arte-fonte/
 
 # cache dos áudios gerados (scripts/gen-podcasts-eleven.mjs)
 .cache/
+
+# app Android (Capacitor)
+dist-android/
+apk/

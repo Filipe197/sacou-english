@@ -1,5 +1,6 @@
 import VOICES from './voices.json';
 import { reportError } from './errors.js';
+import { REMOTE } from './native.js';
 // Efeitos: sons (arquivos prontos em /public/sounds) e voz em inglês.
 // Se um arquivo de som não existir, o site continua funcionando em silêncio.
 
@@ -55,11 +56,11 @@ function clipKey(v, t) {
 }
 let clips = null;
 if (typeof window !== 'undefined') {
-  fetch('/audio/index.json').then(r => (r.ok ? r.json() : [])).then(list => { clips = new Set(list); }).catch(() => { clips = new Set(); });
+  fetch(`${REMOTE}/audio/index.json`).then(r => (r.ok ? r.json() : [])).then(list => { clips = new Set(list); }).catch(() => { clips = new Set(); });
 }
 let wordClips = null;
 if (typeof window !== 'undefined') {
-  fetch('/audio/words.json').then(r => (r.ok ? r.json() : [])).then(list => { wordClips = new Set(list); }).catch(() => { wordClips = new Set(); });
+  fetch(`${REMOTE}/audio/words.json`).then(r => (r.ok ? r.json() : [])).then(list => { wordClips = new Set(list); }).catch(() => { wordClips = new Set(); });
 }
 // Mesma separação de palavras de scripts/gen-audio.py (split_words)
 export const wordsOf = (t) => norm(t).replace(/’/g, "'").split(' ')
@@ -70,7 +71,7 @@ function wordClip(w, who) {
   const g = genderOf(who);
   for (const v of g === 'm' ? ['m', 'f'] : ['f', 'm']) {
     const k = clipKey('w' + v, w);
-    if (wordClips.has(k)) return `/audio/w/${k}.mp3`;
+    if (wordClips.has(k)) return `${REMOTE}/audio/w/${k}.mp3`;
   }
   return null;
 }
@@ -79,7 +80,7 @@ function clipFor(text, who) {
   const g = genderOf(who);
   for (const v of g === 'm' ? ['m', 'f'] : g === 'f' ? ['f', 'm'] : ['f', 'm']) {
     const k = clipKey(v, text);
-    if (clips.has(k)) return `/audio/${k}.mp3`;
+    if (clips.has(k)) return `${REMOTE}/audio/${k}.mp3`;
   }
   return null;
 }
@@ -162,6 +163,19 @@ function trim(buf) {
   const pad = Math.floor(buf.sampleRate * 0.03);
   return [Math.max(0, a - pad) / buf.sampleRate, Math.min(d.length, b + pad) / buf.sampleRate];
 }
+// ganho para levar o pico da palavra a ~0,95 (no máximo 6x, para não estourar ruído)
+const gains = new WeakMap();
+function loudness(buf, from, to) {
+  if (gains.has(buf)) return gains.get(buf);
+  let peak = 0;
+  for (let c = 0; c < buf.numberOfChannels; c++) {
+    const d = buf.getChannelData(c), end = Math.min(d.length, Math.ceil(to * buf.sampleRate));
+    for (let i = Math.floor(from * buf.sampleRate); i < end; i++) { const v = Math.abs(d[i]); if (v > peak) peak = v; }
+  }
+  const g = peak > 0.001 ? Math.min(6, 0.95 / peak) : 1;
+  gains.set(buf, g);
+  return g;
+}
 async function playWords(urls, my) {
   ctx ||= new (window.AudioContext || window.webkitAudioContext)();
   if (ctx.state === 'suspended') await ctx.resume();
@@ -171,7 +185,11 @@ async function playWords(urls, my) {
   for (const b of bufs) {
     const [from, to] = trim(b);
     const src = ctx.createBufferSource();
-    src.buffer = b; src.connect(ctx.destination);
+    src.buffer = b;
+    // cada palavra no mesmo volume da frase normal: o Web Audio sai mais baixo que o <audio>
+    // em muitos celulares, então sobe cada palavra até perto do pico máximo
+    const g = ctx.createGain(); g.gain.value = loudness(b, from, to);
+    src.connect(g); g.connect(ctx.destination);
     src.start(t, from, to - from);
     slowSources.push(src);
     t += (to - from) + GAP;
@@ -235,7 +253,7 @@ export function speakAsync(text, { slow = false, lang = 'en', who, voice } = {})
     const own = voice && clips && text ? clipKey(voice, text) : null;
     if (own && clips.has(own)) {
       setTimeout(end, 6000 + text.length * 160); // segurança
-      playClip(`/audio/${own}.mp3`, false).then(ok => { if (ok) end(); else fallback(); });
+      playClip(`${REMOTE}/audio/${own}.mp3`, false).then(ok => { if (ok) end(); else fallback(); });
       return;
     }
     fallback();

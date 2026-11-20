@@ -1,0 +1,7 @@
+{
+  "appId": "com.sacouenglish.app",
+  "appName": "Sacou English",
+  "webDir": "dist-android",
+  "android": { "allowMixedContent": false },
+  "server": { "androidScheme": "https" }
+}

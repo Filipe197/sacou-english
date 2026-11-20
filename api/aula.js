@@ -1,7 +1,7 @@
 // Aula falada com o Professor Juvenal (o mais ranzinza do Brasil): a cada passo ele comenta,
 // no personagem, e pede para o aluno repetir uma frase ou responder uma pergunta.
 // A conferência da repetição é feita no navegador (sem IA); aqui só entra o próximo passo.
-import { guard, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
+import { guard, cors, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 import { AULA_LEVELS, topicById, MAX_STEPS, MAX_CHARS, commentInPt } from '../src/lib/aula.js';
 
 const LEN = { A1: '3 to 6 words', A2: 'up to 9 words', B1: 'up to 12 words', B2: 'up to 16 words' };
@@ -95,6 +95,7 @@ const studentLine = (s) => s.kind === 'answer' ? `Student says: ${s.text}`
   : '[The student skipped this one.]';
 
 export default async function handler(req, res) {
+  if (cors(req, res)) return; // app Android pede de outra origem
   await handle(res, async () => {
     const body = readBody(req);
     const level = AULA_LEVELS.includes(body.level) ? body.level : null;

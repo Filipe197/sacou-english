@@ -1,6 +1,6 @@
 // Professor de IA: explica o erro específico que o aluno cometeu num exercício,
 // em português, e responde perguntas de acompanhamento.
-import { guard, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
+import { guard, cors, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 import { recurringMistakes, describeItem } from './_content.js';
 
 const SYSTEM = `Você é o professor do Sacou English, um curso de inglês para brasileiros iniciantes (níveis A1 e A2 do CEFR).
@@ -27,6 +27,7 @@ const TYPES = {
 };
 
 export default async function handler(req, res) {
+  if (cors(req, res)) return; // app Android pede de outra origem
   await handle(res, async () => {
     const body = readBody(req);
     const it = body.item || {};

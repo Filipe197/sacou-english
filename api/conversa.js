@@ -1,6 +1,6 @@
 // Conversa por voz com personagens: responde cada fala do aluno no papel do
 // personagem (inglês simples do nível) e, no fim, faz o resumo da conversa.
-import { guard, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
+import { guard, cors, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 import { scenarioById, MAX_TURNS, MAX_CHARS } from '../src/lib/scenarios.js';
 
 const turnSystem = (sc) => `You are role-playing with a Brazilian student of English, level ${sc.level} (CEFR).
@@ -42,6 +42,7 @@ const SUMMARY_SCHEMA = obj({
 });
 
 export default async function handler(req, res) {
+  if (cors(req, res)) return; // app Android pede de outra origem
   await handle(res, async () => {
     const body = readBody(req);
     const sc = scenarioById(body.scenario);

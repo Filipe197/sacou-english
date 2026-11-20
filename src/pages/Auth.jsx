@@ -3,6 +3,7 @@ import { Link, Navigate, useLocation, useNavigate, useSearchParams } from 'react
 import { supabase, authErrorPt } from '../lib/supabase.js';
 import { useAuth } from '../lib/auth.jsx';
 import { Icon, Logo, Fire } from '../components/ui.jsx';
+import { NATIVE, SITE } from '../lib/native.js';
 
 // ligado (Google configurado no Supabase em 20/11/2026); VITE_ENABLE_GOOGLE=false desliga
 const GOOGLE = import.meta.env.VITE_ENABLE_GOOGLE !== 'false';
@@ -43,7 +44,7 @@ export default function Auth({ mode }) {
     if (isSignup) {
       const { data, error } = await supabase.auth.signUp({
         email: email.trim(), password,
-        options: { data: { display_name: name.trim() }, emailRedirectTo: window.location.origin + '/bem-vindo' },
+        options: { data: { display_name: name.trim() }, emailRedirectTo: SITE + '/bem-vindo' },
       });
       setBusy(false);
       if (error) return setError(authErrorPt(error));
@@ -58,7 +59,7 @@ export default function Auth({ mode }) {
   async function forgot() {
     setError(''); setInfo('');
     if (!email.includes('@')) return setError('Digite seu e-mail no campo acima e clique de novo em "Esqueci minha senha".');
-    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), { redirectTo: window.location.origin + '/redefinir-senha' });
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), { redirectTo: SITE + '/redefinir-senha' });
     if (error) return setError(authErrorPt(error));
     setInfo('Se esse e-mail tiver uma conta, você vai receber um link para criar uma nova senha.');
   }
@@ -67,7 +68,9 @@ export default function Auth({ mode }) {
     setError(''); setInfo('');
     // volta para a tela de onde a pessoa veio (ou para o início do curso); quem é novo cai no "bem-vindo"
     const back = params.get('nivel') ? '/bem-vindo?nivel=1' : (loc.state?.from || '/aprender');
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.origin + back } });
+    const { error } = NATIVE
+      ? { error: await (await import('../lib/native-app.js')).openGoogleLogin(back) }
+      : await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.origin + back } });
     if (error) setError('Não foi possível abrir o login do Google agora. Tente de novo ou use seu e-mail.');
   }
 

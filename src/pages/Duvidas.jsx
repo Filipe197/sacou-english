@@ -32,19 +32,23 @@ export default function Duvidas() {
   useEffect(() => { if (turns.length) keepWrite(dk, { turns }); }, [turns]); // eslint-disable-line react-hooks/exhaustive-deps
   const [q, setQ] = useState('');
   const [busy, setBusy] = useState(false);
+  const [pending, setPending] = useState(''); // pergunta enviada, esperando a resposta
   const [err, setErr] = useState(null); // { msg, question }
   const endRef = useRef(null);
+  const lastRef = useRef(null); // última pergunta: a tela rola até ela, e não até o fim
   const inputRef = useRef(null);
   const full = turns.length >= MAX_Q;
 
+  // rola até a pergunta mais recente (no topo da tela), para a resposta ser lida desde o começo
+  // e nada ficar escondido atrás da barra de digitar
   useEffect(() => {
-    if (turns.length || busy) endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    if (turns.length || busy) (lastRef.current || endRef.current)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [turns.length, busy]);
 
   async function ask(text) {
     const question = text.trim().slice(0, MAX_CHARS);
     if (!question || busy || full) return;
-    setBusy(true); setErr(null); setQ('');
+    setBusy(true); setErr(null); setQ(''); setPending(question);
     const history = turns.flatMap(t => [{ role: 'user', text: t.q }, { role: 'assistant', text: answerText(t.a) }]);
     try {
       const a = await askAI('duvidas', { question, level, history });
@@ -53,8 +57,8 @@ export default function Duvidas() {
       setErr({ msg: e.message, question });
       setQ(question);
     }
-    setBusy(false);
-    setTimeout(() => inputRef.current?.focus(), 30);
+    setBusy(false); setPending('');
+    setTimeout(() => inputRef.current?.focus({ preventScroll: true }), 30);
   }
 
   function save(i) {
@@ -95,12 +99,17 @@ export default function Duvidas() {
 
         <div className="dv-thread" aria-live="polite">
           {turns.map((t, i) => (
-            <div key={i} className="dv-turn">
+            <div key={i} className="dv-turn" ref={!busy && i === turns.length - 1 ? lastRef : undefined}>
               <p className="tutor-q">{t.q}</p>
               <Answer a={t.a} saved={t.saved} onSave={() => save(i)} />
             </div>
           ))}
-          {busy && <div className="tutor-wait" role="status"><span /><span /><span />Pensando na resposta…</div>}
+          {busy && (
+            <div className="dv-turn" ref={lastRef}>
+              {pending && <p className="tutor-q">{pending}</p>}
+              <div className="tutor-wait" role="status"><span /><span /><span />Pensando na resposta…</div>
+            </div>
+          )}
           {err && (
             <div className="alert" role="alert">
               {err.msg} <button type="button" className="link-btn" onClick={() => ask(err.question)}>Tentar de novo</button>

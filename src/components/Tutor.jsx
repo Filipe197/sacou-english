@@ -15,6 +15,7 @@ export default function Tutor({ item, answer, correct, level, ctx, onClose }) {
   const [busy, setBusy] = useState(true);
   const [err, setErr] = useState('');
   const [q, setQ] = useState('');
+  const [pending, setPending] = useState(''); // pergunta enviada, esperando a resposta
   const [saved, setSaved] = useState(false);
   const endRef = useRef(null);
   const payload = {
@@ -23,7 +24,7 @@ export default function Tutor({ item, answer, correct, level, ctx, onClose }) {
   };
 
   async function run(question) {
-    setBusy(true); setErr('');
+    setBusy(true); setErr(''); setPending(question || '');
     try {
       const history = [];
       if (first) {
@@ -34,7 +35,7 @@ export default function Tutor({ item, answer, correct, level, ctx, onClose }) {
       if (!first) setFirst(r); else setThread(t => [...t, { q: question, a: r }]);
       setQ('');
     } catch (e) { setErr(e.message); }
-    setBusy(false);
+    setBusy(false); setPending('');
     setTimeout(() => endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
   }
   const started = useRef(false);
@@ -69,6 +70,7 @@ export default function Tutor({ item, answer, correct, level, ctx, onClose }) {
           <Answer r={t.a} />
         </div>
       ))}
+      {busy && pending && <p className="tutor-q">{pending}</p>}
       {busy && <div className="tutor-wait" role="status"><span /><span /><span />{first ? 'Pensando…' : 'Analisando a sua resposta…'}</div>}
       {err && <div className="alert" role="alert" style={{ marginTop: 10 }}>{err} {!first && <button type="button" className="link-btn" onClick={() => run()}>Tentar de novo</button>}</div>}
 
@@ -90,7 +92,7 @@ export default function Tutor({ item, answer, correct, level, ctx, onClose }) {
           </button>
         </div>
       )}
-      <div ref={endRef} />
+      <div ref={endRef} className="tutor-end" />
     </section>
   );
 }

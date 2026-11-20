@@ -1,7 +1,7 @@
 // Desafio final da unidade: o aluno escreve (ou fala) algumas frases sobre o tema da unidade,
 // sem pistas, e a IA corrige como um professor: nota, o que ele já consegue fazer (objetivo
 // do CEFR da unidade), correções frase a frase e uma versão melhorada.
-import { guard, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
+import { guard, cors, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 import { unitInfo } from './_content.js';
 
 const SYSTEM = `Você é o professor do Sacou English, um curso de inglês para brasileiros.
@@ -28,6 +28,7 @@ const SCHEMA = obj({
 });
 
 export default async function handler(req, res) {
+  if (cors(req, res)) return; // app Android pede de outra origem
   await handle(res, async () => {
     const body = readBody(req);
     const unit = unitInfo(str(body.unitId, 40, 'unitId'));

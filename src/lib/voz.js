@@ -3,6 +3,7 @@
 // a voz do aparelho. Limite por aula: supabase/013_voz.sql.
 import { supabase } from './supabase.js';
 import { playUrl } from './fx.js';
+import { REMOTE } from './native.js';
 
 const cache = new Map(); // "aula|idioma|texto" -> Promise<url | null>
 let off = '';            // motivo para parar de pedir nesta sessão
@@ -24,7 +25,7 @@ async function request(text, lang, aula, level) {
     const { data } = await supabase.auth.getSession();
     const token = data.session?.access_token;
     if (!token) return null;
-    const r = await fetch('/api/voz', {
+    const r = await fetch(`${REMOTE}/api/voz`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', authorization: `Bearer ${token}` },
       body: JSON.stringify({ text: text.slice(0, 400), lang, aula, level }),
