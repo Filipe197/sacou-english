@@ -43,7 +43,7 @@ async function check() {
       return; // pacote novo não roda no APK antigo
     }
     if (!m.web || m.web === CURRENT || readPending()?.web === m.web) return;
-    const bundle = await CapacitorUpdater.download({ url: REMOTE + m.url, version: m.web });
+    const bundle = await CapacitorUpdater.download({ url: REMOTE + m.url, version: m.web, checksum: m.checksum });
     writePending({ id: bundle.id, web: m.web });
   } catch { /* sem internet ou site fora: tenta na próxima */ }
   finally { checking = false; }

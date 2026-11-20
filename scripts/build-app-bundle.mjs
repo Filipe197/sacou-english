@@ -11,6 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
+import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { zipSync } from 'fflate';
 
@@ -39,5 +40,5 @@ const zip = zipSync(files);
 fs.mkdirSync(path.join(DIST, 'app'), { recursive: true });
 const name = `web-${id}.zip`;
 fs.writeFileSync(path.join(DIST, 'app', name), zip);
-fs.writeFileSync(path.join(DIST, 'app', 'manifest.json'), JSON.stringify({ web: id, url: `/app/${name}`, apk, apkUrl: '/download/sacou-english.apk' }));
+fs.writeFileSync(path.join(DIST, 'app', 'manifest.json'), JSON.stringify({ web: id, url: `/app/${name}`, checksum: crypto.createHash('sha256').update(zip).digest('hex'), apk, apkUrl: '/download/sacou-english.apk' }));
 console.log(`app: pacote ${name} (${(zip.length / 1048576).toFixed(1)} MB), exige APK ${apk}`);
