@@ -375,8 +375,9 @@ function Speak({ item, locked, onDone, newKeys }) {
         {canSpeak() && <button type="button" className="audio-btn slow" aria-label="Ouvir devagar" onClick={() => speak(item.en, { slow: true })}><Icon name="turtle" size={22} color="var(--violet)" /></button>}
         {!words && (!quiet || locked) && <h1 className="q" lang="en"><Hinted text={item.en} newKeys={newKeys} /></h1>}
       </div>
-      {words && <PronWords words={words} picked={picked} onPick={(i) => setPicked(p => p === i ? null : i)} />}
-      {picked != null && words?.[picked] && <WordCoach word={words[picked].w} onClose={() => setPicked(null)} />}
+      {/* ao montar sem microfone, o resultado da fala (que mostra a frase inteira) fica escondido até responder */}
+      {words && (!quiet || locked) && <PronWords words={words} picked={picked} onPick={(i) => setPicked(p => p === i ? null : i)} />}
+      {picked != null && words?.[picked] && !quiet && <WordCoach word={words[picked].w} onClose={() => setPicked(null)} />}
       <p className="muted" style={{ margin: '10px 0 0', fontSize: 16 }}>{item.pt}</p>
       {quiet ? <QuietBuild item={item} locked={locked} onDone={onDone} /> : getSR() ? (
         !locked && (

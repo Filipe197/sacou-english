@@ -405,6 +405,9 @@ await test('falar: "não posso falar agora" abre as palavras para montar a frase
   }
   await click('Não posso falar agora');
   await expectText('monte a frase em inglês');
+  // a frase em inglês não pode ficar na tela (senão é só copiar)
+  const shown = await page.evaluate(() => { const m = document.querySelector('.lesson-main') || document.body; const c = m.cloneNode(true); c.querySelectorAll('.quiet-build').forEach(e => e.remove()); return /nice to meet you/i.test(c.textContent); });
+  if (shown) throw new Error('a frase aparece na tela enquanto o aluno monta');
   for (const w of ['Nice', 'to', 'meet', 'you']) { await tap('.quiet-build .bank .tile:not(.used)', w); await wait(120); }
   await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a frase montada não foi aceita'); });
 });
