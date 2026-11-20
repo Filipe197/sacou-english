@@ -2,6 +2,23 @@
   "appId": "com.sacouenglish.app",
   "appName": "Sacou English",
   "webDir": "dist-android",
-  "android": { "allowMixedContent": false },
-  "server": { "androidScheme": "https" }
+  "android": {
+    "allowMixedContent": false
+  },
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "CapacitorUpdater": {
+      "autoUpdate": false,
+      "appReadyTimeout": 15000,
+      "resetWhenUpdate": true,
+      "autoDeletePrevious": true,
+      "autoDeleteFailed": true,
+      "keepUrlPathAfterReload": false,
+      "statsUrl": "",
+      "updateUrl": "",
+      "channelUrl": ""
+    }
+  }
 }

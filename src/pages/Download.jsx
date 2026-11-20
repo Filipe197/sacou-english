@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Logo, Icon } from '../components/ui.jsx';
 
 export const APK_URL = '/download/sacou-english.apk';
-const APK_SIZE = '6 MB';
+const APK_SIZE = '8 MB';
 
 function device() {
   if (typeof navigator === 'undefined') return 'pc';
@@ -54,8 +54,23 @@ export default function Download() {
               <>Abra o <b>Sacou English</b> e entre com a mesma conta do site.</>,
             ]} />
             <a className="btn btn-violet btn-3d btn-lg" href={APK_URL} download><Icon name="download" size={20} />Baixar o app ({APK_SIZE})</a>
-            <p className="muted ap-small">Para atualizar, baixe de novo por esta página e instale por cima: seu progresso fica salvo na conta.</p>
           </div>
+
+          <h3 className="dl-h3">O que precisa</h3>
+          <ul className="ap-list dl-req">
+            <li><Icon name="check" size={18} stroke={3} /><span><b>Android 6.0 ou mais novo</b> (praticamente todo celular dos últimos anos).</span></li>
+            <li><Icon name="check" size={18} stroke={3} /><span><b>Uns 30 MB livres</b>: o app tem {APK_SIZE} e guarda as atualizações no celular.</span></li>
+            <li><Icon name="check" size={18} stroke={3} /><span><b>Internet</b> para entrar na conta, ouvir os áudios e usar o professor de IA. As lições abrem rápido porque o app já vem com elas.</span></li>
+            <li><Icon name="check" size={18} stroke={3} /><span><b>Microfone</b> (opcional) para os exercícios de fala. O reconhecimento de voz usa o do Google, que já vem na maioria dos celulares.</span></li>
+          </ul>
+
+          <h3 className="dl-h3">Como o app se atualiza</h3>
+          <div className="dl-upd">
+            <div className="card"><span aria-hidden="true">⚡</span><b>Sozinho, na maioria das vezes</b><p>Quando sai uma novidade, o app baixa em segundo plano e já abre atualizado na próxima vez. Você não precisa fazer nada.</p></div>
+            <div className="card"><span aria-hidden="true">📚</span><b>Nunca no meio da lição</b><p>A troca só acontece quando você abre o app de novo, para não interromper o que você está estudando.</p></div>
+            <div className="card"><span aria-hidden="true">📲</span><b>Às vezes, um toque</b><p>Quando a mudança é maior, aparece o aviso <b>Nova versão do app</b>. Toque em <b>Atualizar</b> e depois em <b>Instalar</b>.</p></div>
+          </div>
+          <p className="muted ap-small">Instalou uma versão antiga (antes de 20/11/2026)? Baixe por esta página uma vez e instale por cima. Depois disso, as atualizações chegam sozinhas. Seu progresso fica salvo na conta.</p>
         </section>
       ) : (
         <section className="ap-sec dl-sec" id="iphone">
@@ -69,6 +84,7 @@ export default function Download() {
               <>Confirme em <b>Adicionar</b>, no canto de cima.</>,
               <>Abra pelo ícone do <b>Sacou English</b> na tela de início e entre com sua conta.</>,
             ]} />
+            <p className="muted ap-small"><b>Precisa de:</b> iPhone ou iPad com iOS 15 ou mais novo, o Safari e internet. <b>Atualização:</b> automática; o Sacou abre sempre na versão mais nova.</p>
             <p className="muted ap-small">Não achou a opção? Atualize o iPhone ou confira se está no Safari, e não dentro do Instagram ou do WhatsApp (nesses, toque em “Abrir no navegador” antes).</p>
           </div>
         </section>

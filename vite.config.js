@@ -26,7 +26,8 @@ function apiDev() {
 }
 
 // Número da versão publicada: o app compara com /version.json para saber se saiu atualização.
-const BUILD_ID = (process.env.VERCEL_GIT_COMMIT_SHA || '').slice(0, 12) || `local-${Date.now().toString(36)}`;
+// SACOU_BUILD_ID: o pacote do app Android (scripts/build-app-bundle.mjs) usa o mesmo número do site
+const BUILD_ID = process.env.SACOU_BUILD_ID || (process.env.VERCEL_GIT_COMMIT_SHA || '').slice(0, 12) || `local-${Date.now().toString(36)}`;
 function versionFile() {
   return {
     name: 'sacou-version',

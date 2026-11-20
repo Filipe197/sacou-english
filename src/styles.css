@@ -1039,3 +1039,12 @@ html[data-theme=dark] .btn-google{border-color:#fff}
   .stats4 .card b{font-size:24px!important;margin:4px 0 0!important}
   .stats4 .card .muted{font-size:13px!important}
 }
+.app-upd .upd-go{display:inline-flex;align-items:center;gap:6px}
+/* /baixar: requisitos e como o app se atualiza */
+.dl-h3{font-size:20px;margin:28px 0 12px}
+.dl-req li span{line-height:1.5}
+.dl-upd{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:12px}
+.dl-upd .card{display:flex;flex-direction:column;gap:6px}
+.dl-upd .card > span{font-size:26px}
+.dl-upd .card b{font-size:16px}
+.dl-upd .card p{margin:0;font-size:14.5px;color:var(--text2);line-height:1.5}

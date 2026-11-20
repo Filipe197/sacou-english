@@ -5,6 +5,8 @@ import { Spinner } from './components/ui.jsx';
 import { useContentReady } from './lib/content.js';
 import UpdateManager from './components/UpdateManager.jsx';
 import { NATIVE } from './lib/native.js';
+// app Android: aviso de APK novo (as atualizações de conteúdo entram sozinhas, src/lib/app-update.js)
+const AppUpdateBar = NATIVE ? lazy(() => import('./components/AppUpdateBar.jsx')) : null;
 import Novidades from './components/Novidades.jsx';
 import AppBadge from './components/AppBadge.jsx';
 import Landing from './pages/Landing.jsx';
@@ -79,7 +81,7 @@ export default function App() {
     <>
       <ScrollTop />
       <ThemeManager />
-      {!NATIVE && <UpdateManager />}
+      {NATIVE ? <Suspense fallback={null}><AppUpdateBar /></Suspense> : <UpdateManager />}
       <Novidades />
       <AppBadge />
       <Suspense fallback={<Spinner />}>

@@ -8,6 +8,10 @@ import { TextToSpeech } from '@capacitor-community/text-to-speech';
 import { SpeechRecognition } from '@capacitor-community/speech-recognition';
 import { supabase } from './supabase.js';
 import { APP_CALLBACK } from './native.js';
+import { startAppUpdates } from './app-update.js';
+
+// atualização automática: confere a versão nova no site e aplica na próxima abertura
+startAppUpdates();
 
 // ---------- voz (texto para fala) ----------
 class Utterance {
