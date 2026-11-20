@@ -6,7 +6,7 @@ import { useAuth } from '../lib/auth.jsx';
 import { Shell, Spinner, Icon, Fire, Bolt, Anim } from '../components/ui.jsx';
 import { NewAchievement } from '../components/Achievements.jsx';
 import { Missions } from '../components/Missions.jsx';
-import TrailScene from '../components/TrailScene.jsx';
+import TrailScene, { hasArt } from '../components/TrailScene.jsx';
 import { dueCount } from '../lib/memory.js';
 
 // Caminho em zigue-zague (deslocamento de cada bolinha, de -1 a 1)
@@ -253,6 +253,10 @@ export default function Trail() {
               const { unitDone, complete, unlocked, tone } = info;
               const rewards = extras ? extras.rewardsOf(u.id) : [];
               const left = u.order % 2 === 1;
+              // cena ilustrada: à esquerda das bolinhas 0 a 3 (que vão para a direita) ou à direita das 4 a 8
+              const art = hasArt(u.id);
+              const artSide = left || u.lessons.length < 7 ? 'left' : 'right';
+              const artAt = artSide === 'left' ? 1 : 5;
               return (
                 <section key={u.id} aria-labelledby={u.id} className={'tr-unit' + tone} data-u={u.id}>
                   <div className={'tr-div' + tone + (u.id === UNITS[0].id ? ' sr-only' : '')}>
@@ -260,7 +264,7 @@ export default function Trail() {
                   </div>
                   {unlocked && !complete && <Link to={`/prova/unidade/${u.id}`} className="tr-skip"><span aria-hidden="true">⚡</span> Já sabe esta unidade? Faça o teste e pule</Link>}
                   <div className="tr-path">
-                    <TrailScene unitId={u.id} side={left ? 'left' : 'right'} off={!unlocked} top={left ? 150 : 446} />
+                    {!art && <TrailScene unitId={u.id} side={left ? 'left' : 'right'} off={!unlocked} top={left ? 150 : 446} />}
                     {u.lessons.map((l, i) => {
                       const st = stateOf[l.id];
                       const skipped = st === 'done' && isSkipped(l.id);
@@ -275,6 +279,7 @@ export default function Trail() {
                               <span className="tr-bubble-go">Começar · até +15 XP</span>
                             </Link>
                           )}
+                          {art && i === artAt && <TrailScene unitId={u.id} side={artSide} off={!unlocked} />}
                           <button type="button" ref={st === 'current' ? curRef : undefined}
                             className={`tr-node ${st}${skipped ? ' skipped' : ''}${open === key ? ' open' : ''}`}
                             aria-expanded={open === key} aria-label={`${l.title}: ${status}`}

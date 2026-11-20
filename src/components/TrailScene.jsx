@@ -30,10 +30,13 @@ const SCENES = {
 const ART = Object.fromEntries(Object.entries(import.meta.glob('../art/cenas/*.webp', { eager: true, query: '?url', import: 'default' }))
   .map(([p, url]) => [p.split('/').pop().replace('.webp', ''), url]));
 
+// A cena ilustrada fica presa a uma bolinha da trilha (Trail.jsx), no lado em que o zigue-zague deixa espaço
+export const hasArt = (unitId) => !!ART[unitId];
+
 export default function TrailScene({ unitId, side = 'left', off = false, top = 0 }) {
   if (ART[unitId]) {
     return (
-      <div className={`tr-scene tr-scene-art ${side}${off ? ' off' : ''}`} style={{ top }} aria-hidden="true">
+      <div className={`tr-scene tr-scene-art anch ${side}${off ? ' off' : ''}`} aria-hidden="true">
         <span className="tr-art"><img src={ART[unitId]} alt="" loading="lazy" decoding="async" /></span>
       </div>
     );

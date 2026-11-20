@@ -867,6 +867,14 @@ html:not([data-theme=dark]) .dz-from{color:var(--bad)}
 .tr-scene.off .tr-art{animation:none}
 @media (prefers-reduced-motion:reduce){.tr-art{animation:none}}
 @media (max-width:600px){.tr-scene-art.left{left:calc(50% - 176px)}}
+/* cena presa à bolinha: ocupa só o espaço livre ao lado do caminho e encolhe para caber */
+.tr-path{container-type:inline-size}
+.tr-scene-art.anch{top:calc(50% + 43px);transform:translateY(-50%);margin:0;z-index:0;width:max(0px,calc(50cqw - 53px))}
+.tr-scene-art.anch.left{left:auto;right:calc(50% + 49px + var(--x) * var(--amp));justify-content:flex-end}
+.tr-scene-art.anch.right{left:calc(50% + 49px - var(--x) * var(--amp));justify-content:flex-start;flex-direction:row}
+.tr-scene-art.anch .tr-art{max-width:100%}
+.tr-scene-art.anch .tr-art img{max-width:100%}
+@media (max-width:600px){.tr-scene-art.anch .tr-art img{max-height:170px}}
 
 /* Reportar erro: motivos de um toque */
 .report-q{margin:0 0 10px;font-weight:700}
