@@ -260,3 +260,21 @@
 @media(max-width:860px){.dv-thread{padding-bottom:24px}}
 /* Aula do Juvenal no celular: retrato menor para o botão de começar aparecer mais cedo */
 @media (max-width:640px){.aula-hero > svg,.aula-hero > span svg{width:88px;height:88px}.aula-hero{gap:10px}.aula-hero h1{margin:2px 0 4px}}
+
+/* Podcast da Ana: abertura e encerramento sobre o palco */
+.pc-stage .pc-onair{z-index:4}
+.pc-show{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:16px;text-align:center;color:#fff;border-radius:inherit;
+  background:radial-gradient(120% 90% at 50% 0%,rgba(123,92,255,.96),rgba(58,34,184,.97) 60%,rgba(20,14,60,.98));animation:pc-show-in .35s ease}
+.pc-show-k{font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#D8FF3C;animation:pc-up .5s .15s both}
+.pc-show-t{font-family:var(--head);font-size:clamp(24px,6vw,34px);line-height:1.1;letter-spacing:-.02em;animation:pc-up .5s .9s both}
+.pc-show-ep{font-size:15px;color:#E7E2FF;max-width:340px;animation:pc-up .5s 2.4s both}
+.pc-show.close .pc-show-t{animation-delay:.3s}.pc-show.close .pc-show-ep{animation-delay:1.2s}
+.pc-eq{display:flex;align-items:flex-end;gap:5px;height:34px;margin-bottom:6px}
+.pc-eq i{width:6px;border-radius:3px;background:#D8FF3C;animation:pc-eq .9s ease-in-out infinite alternate}
+.pc-eq i:nth-child(odd){background:#fff}
+.pc-skip{margin-top:8px;display:inline-flex;align-items:center;gap:6px;border:0;border-radius:99px;padding:8px 14px;min-height:40px;font:inherit;font-size:13px;font-weight:700;color:#fff;background:rgba(255,255,255,.18);cursor:pointer}
+.pc-skip:hover{background:rgba(255,255,255,.28)}
+@keyframes pc-show-in{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@keyframes pc-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes pc-eq{0%{height:6px}100%{height:34px}}
+@media (prefers-reduced-motion:reduce){.pc-show,.pc-show *{animation:none!important}.pc-eq i{height:20px}}

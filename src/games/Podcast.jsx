@@ -1,5 +1,7 @@
 // Podcast da Ana: áudio contínuo com as vozes dos personagens, transcrição que acompanha,
-// velocidade normal/lenta e perguntas no fim.
+// velocidade normal/lenta e perguntas no fim. Abre com vinheta e a Ana anunciando o episódio
+// (public/audio/podcast/abertura-<id>.mp3) e fecha com o encerramento (encerramento.mp3);
+// os dois são gerados por scripts/gen-podcast-intros.mjs. Sem os arquivos, começa direto.
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useAuth } from '../lib/auth.jsx';
@@ -51,6 +53,31 @@ function Player({ ep, timing, first }) {
   const [fbLine, setFbLine] = useState(-1);
   const hosts = useMemo(() => [...new Set(ep.lines.map(l => l.who))], [ep]);
   const duration = timing?.duration || 0;
+  const n = PODCASTS.indexOf(ep) + 1;
+  // abertura (vinheta + Ana anunciando) antes do primeiro play e encerramento no fim
+  const [show, setShow] = useState(null); // 'open' | 'close' | null
+  const sting = useRef(null);
+  const opened = useRef(false);
+  const stopSting = () => { const s = sting.current; sting.current = null; if (s) { s.onended = s.onerror = null; s.pause(); } };
+  function playSting(file, then, maxMs) {
+    stopSting();
+    const s = new Audio(`${REMOTE}/audio/podcast/${file}`); sting.current = s;
+    let done = false;
+    const end = () => { if (done) return; done = true; clearTimeout(guard); if (sting.current === s) sting.current = null; then(); };
+    const guard = setTimeout(end, maxMs); // segurança: nunca prende o episódio
+    s.onended = end; s.onerror = end;
+    s.play().catch(end);
+  }
+  function startEpisode() { stopSting(); setShow(null); if (fallback) playFallback(); else audio.current?.play().catch(() => {}); }
+  function openShow() {
+    opened.current = true; setShow('open');
+    playSting(`abertura-${ep.id}.mp3`, startEpisode, 12000);
+  }
+  function closeShow() {
+    setShow('close');
+    playSting('encerramento.mp3', () => setShow(null), 9000);
+  }
+  useEffect(() => () => stopSting(), []);
 
   const cur = fallback ? fbLine : (timing.times.findIndex(([a, b], i) => time >= a && time < (timing.times[i + 1]?.[0] ?? b + 1)));
   const speaking = playing && cur >= 0 ? ep.lines[cur]?.who : null;
@@ -67,9 +94,12 @@ function Player({ ep, timing, first }) {
       await speakAsync(ep.lines[i].en, { who: ep.lines[i].who, slow });
       if (fbIdx.current === -3) { fbIdx.current = i + 1; setPlaying(false); return; } // pausado
     }
-    fbIdx.current = 0; setPlaying(false); setHeard(true);
+    fbIdx.current = 0; setPlaying(false); setHeard(true); closeShow();
   }
   function toggle() {
+    if (show === 'open') { startEpisode(); return; } // tocar de novo pula a abertura
+    if (show === 'close') stopSting();
+    if (!opened.current && !playing) { openShow(); return; }
     if (fallback) { if (playing) fbIdx.current = -3; else playFallback(); return; }
     const a = audio.current;
     if (a.paused) a.play().catch(() => {}); else a.pause();
@@ -108,7 +138,6 @@ function Player({ ep, timing, first }) {
       message="Dica: ouça de novo amanhã sem a transcrição. Entender sem ler é o que treina o ouvido de verdade." />;
   }
 
-  const n = PODCASTS.indexOf(ep) + 1;
   return (
     <div className="lesson">
       <GameTop progress={phase === 'quiz' ? 70 + (qi / ep.questions.length) * 30 : duration ? Math.min(70, (time / duration) * 70) : 0} label={ep.title} />
@@ -119,15 +148,30 @@ function Player({ ep, timing, first }) {
           <p className="g-intro" style={{ fontSize: 16 }}>{ep.intro}</p>
           <div className="pc-stage">
             <Stage place="office" cast={hosts} looks={cast} speaking={speaking} height={190} />
-            <span className="pc-onair" aria-hidden="true"><span />{playing ? 'NO AR' : 'PODCAST'}</span>
+            <span className="pc-onair" aria-hidden="true"><span />{playing || show ? 'NO AR' : 'PODCAST'}</span>
+            {show && (
+              <div className={'pc-show ' + show} role="status">
+                <div className="pc-eq" aria-hidden="true">{[0, 1, 2, 3, 4, 5, 6].map(i => <i key={i} style={{ animationDelay: `${i * -0.13}s` }} />)}</div>
+                {show === 'open' ? (<>
+                  <span className="pc-show-k">🎙️ Está no ar</span>
+                  <b className="pc-show-t">Podcast da Ana</b>
+                  <span className="pc-show-ep">Episódio {n} · {ep.title}</span>
+                  <button type="button" className="pc-skip" onClick={startEpisode}>Pular abertura<Icon name="arrow" size={16} /></button>
+                </>) : (<>
+                  <span className="pc-show-k">👋 Fim do episódio</span>
+                  <b className="pc-show-t">Esse foi o Podcast da Ana</b>
+                  <span className="pc-show-ep">Agora é com você: responda às perguntas!</span>
+                </>)}
+              </div>
+            )}
           </div>
           {!fallback && <audio ref={audio} src={`${REMOTE}/audio/podcast/${ep.id}.mp3`} preload="metadata"
             onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
             onTimeUpdate={(e) => { setTime(e.currentTarget.currentTime); if (e.currentTarget.currentTime > duration * 0.85) setHeard(true); }}
-            onEnded={() => { setPlaying(false); setHeard(true); }} />}
+            onEnded={() => { setPlaying(false); setHeard(true); closeShow(); }} />}
           <div className="pc-player">
-            <button type="button" className="pc-play" onClick={toggle} aria-label={playing ? 'Pausar' : 'Ouvir'}>
-              {playing ? <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></svg>
+            <button type="button" className="pc-play" onClick={toggle} aria-label={playing ? 'Pausar' : show === 'open' ? 'Pular abertura' : 'Ouvir'}>
+              {playing || show === 'open' ? <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></svg>
                 : <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>}
             </button>
             <div className="pc-mid">
@@ -171,7 +215,7 @@ function Player({ ep, timing, first }) {
         <div className="bar-in">
           <span className="muted" style={{ fontSize: 15 }}>{phase === 'listen' ? (heard ? 'Ouviu tudo? Responda as perguntas.' : 'Ouça o episódio até o fim.') : ''}</span>
           {phase === 'listen'
-            ? <button className="btn btn-violet btn-3d btn-lg cta" disabled={!heard} onClick={() => { audio.current?.pause(); fbIdx.current = -3; setPhase('quiz'); }}>Responder perguntas</button>
+            ? <button className="btn btn-violet btn-3d btn-lg cta" disabled={!heard} onClick={() => { audio.current?.pause(); stopSting(); setShow(null); fbIdx.current = -3; setPhase('quiz'); }}>Responder perguntas</button>
             : <button className="btn btn-violet btn-3d btn-lg cta" disabled={!feedback?.ok} onClick={nextQ} autoFocus>Continuar</button>}
         </div>
       </footer>
