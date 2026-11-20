@@ -972,3 +972,7 @@ html[data-theme=dark] .daily-celebration{background:radial-gradient(ellipse 70% 
 .ap-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .ap-sent{display:flex;flex-direction:column;gap:6px;max-width:720px;border-color:var(--ok)}
 @media (max-width:640px){.ap-pix{grid-template-columns:1fr}.pix-qr{max-width:240px;margin:0 auto}.ap-grid{grid-template-columns:1fr}.ap-form .btn-lg{align-self:stretch}}
+/* entrar com o Google: botão branco com o "G" colorido (padrão do Google) */
+.btn-google{display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;color:#1F1F1F;border:2px solid var(--line2);font-weight:700}
+.btn-google:hover{background:#F7F8FA;color:#1F1F1F;border-color:#BFC2D4}
+html[data-theme=dark] .btn-google{border-color:#fff}
