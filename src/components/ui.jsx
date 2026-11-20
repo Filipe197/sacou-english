@@ -10,6 +10,7 @@ import { BoostTimer } from './DailyCelebration.jsx';
 // Ícones em traço (sem emoji)
 const P = {
   arrow: <><path d="M5 12h14" /><path d="M13 6l6 6-6 6" /></>,
+  chevron: <path d="M6 9l6 6 6-6" />,
   back: <path d="M15 6l-6 6 6 6" />,
   check: <path d="M5 12l5 5 9-10" />,
   x: <><path d="M6 6l12 12" /><path d="M18 6L6 18" /></>,
@@ -169,12 +170,16 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     ...(isAdmin ? [['/admin', 'chart', 'Administração']] : []),
   ];
   // menu do computador em grupos (o do celular continua com abas + "Mais")
+  // o que se usa todo dia fica à mostra; o resto entra em "Mais" (abre e fecha)
   const GROUPS = [
-    ['Estudar', ['/aprender', '/revisao', '/praticar', '/fone']],
+    ['Estudar', ['/aprender', '/revisao', '/praticar']],
     ['Falar', ['/aula', '/conversar', '/duvidas']],
-    ['Explorar', ['/jogos', '/guia', '/caderno']],
-    ['Você', ['/ranking', '/progresso', '/turmas', '/admin']],
+    ['Você', ['/jogos', '/ranking', '/progresso']],
+    ['Mais', ['/fone', '/guia', '/caderno', '/turmas', '/admin']],
   ].map(([g, tos]) => [g, tos.map(t => items.find(i => i[0] === t)).filter(Boolean)]);
+  const inSideMore = GROUPS[3][1].some(([to]) => loc.pathname.startsWith(to));
+  const [sideMore, setSideMore] = useState(() => { try { return localStorage.getItem('sacou-menu-mais') === '1'; } catch { return false; } });
+  const toggleSideMore = () => setSideMore(v => { try { localStorage.setItem('sacou-menu-mais', v ? '0' : '1'); } catch { /* sem armazenamento */ } return !v; });
   const firstName = (profile?.display_name || '').trim().split(/\s+/)[0] || 'Minha conta';
   const TABS = ['/aprender', '/praticar', '/jogos', '/conversar'];
   const IN_PRACTICE = ['/revisao', '/fone']; // no celular ficam dentro de Praticar
@@ -214,16 +219,22 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     <div className="shell">
       <nav className="side" aria-label="Menu do aluno">
         <div style={{ padding: '0 8px 20px' }}><Logo to="/aprender" /></div>
-        {GROUPS.map(([g, list]) => (
+        {GROUPS.map(([g, list]) => {
+          const isMore = g === 'Mais';
+          const openMore = sideMore || inSideMore;
+          return (
           <div key={g} className="side-grp" role="group" aria-label={g}>
-            <span className="side-grp-t" aria-hidden="true">{g}</span>
-            {list.map(([to, ic, label, badge]) => (
+            {isMore
+              ? <button type="button" className="side-grp-t side-more" aria-expanded={openMore} onClick={toggleSideMore} disabled={inSideMore}>Mais <Icon name="chevron" size={14} /></button>
+              : <span className="side-grp-t" aria-hidden="true">{g}</span>}
+            {(!isMore || openMore) && list.map(([to, ic, label, badge]) => (
               <NavLink key={to} to={to} className={({ isActive }) => 'nav-a' + (isActive ? ' active' : '')}>
                 <Icon name={ic} />{label}{badge > 0 && <span className="badge" aria-label={`${badge} pendentes`}>{badge}</span>}
               </NavLink>
             ))}
           </div>
-        ))}
+          );
+        })}
         <div className="side-foot">
           {inst.canInstall && <button className="nav-a nav-install" onClick={inst.install}><Icon name="download" />Instalar app</button>}
           {!inst.canInstall && inst.iosHint && (

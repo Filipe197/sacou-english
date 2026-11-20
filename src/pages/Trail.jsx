@@ -89,60 +89,56 @@ function UnitHead({ u, unitDone, complete, unlocked, tone }) {
   );
 }
 
+// Coluna da direita da trilha: um resumo, UM próximo passo e as missões que faltam.
+// (Antes eram seis cartões pedindo coisas ao mesmo tempo; a lição precisa ser o foco.)
 export function Rail({ prog }) {
   const { profile } = useAuth();
   const todayXp = prog.week.find(w => w.day === todayBR())?.xp || 0;
   const goal = profile?.daily_goal_xp || 30;
   const level = currentLevel(prog.done);
   const pct = levelPercent(prog.done, level);
-  const li = LEVEL_ORDER.indexOf(level);
   const streak = liveStreak(profile);
+  const errs = prog.mistakes.length;
+  const dueWords = dueCount(profile?.id);
+  const dueLessons = dueLessonIds(prog.scores).length;
+  const goalOk = todayXp >= goal;
+  // o próximo passo mais importante (só um): erros primeiro, depois o que está para esquecer
+  const step = errs > 0
+    ? { t: `Revise ${errs === 1 ? 'o erro' : `os ${errs} erros`} de antes`, d: 'Uns 3 minutos fixam o que você errou e contam para a missão da semana.', to: '/revisao', cta: 'Revisar agora' }
+    : dueWords > 0 || dueLessons > 0
+      ? { t: 'Hora de relembrar', d: dueWords > 0 ? `${dueWords} ${dueWords === 1 ? 'palavra ou frase chegou' : 'palavras e frases chegaram'} no dia certo de revisar.` : `${dueLessons} ${dueLessons === 1 ? 'lição chegou' : 'lições chegaram'} no dia certo de revisar.`, to: '/praticar', cta: 'Fazer o treino' }
+      : null;
+  const alsoDue = errs > 0 && (dueWords > 0 || dueLessons > 0);
   return (
     <>
-      <div style={{ display: 'flex', gap: 10 }}>
-        <div className="card" style={{ flex: 1, padding: 16, display: 'flex', alignItems: 'center', gap: 10 }}><Fire size={26} /><div><b style={{ display: 'block', fontSize: 20, fontFamily: 'var(--head)' }}>{streak}</b><span style={{ fontSize: 12, color: 'var(--text3)' }}>{streak === 1 ? 'dia seguido' : 'dias seguidos'}</span>{profile?.streak_freezes > 0 && <span className="shield-pill" title="Escudos: protegem a sequência num dia sem estudo">🛡️ {profile.streak_freezes} {profile.streak_freezes === 1 ? 'escudo' : 'escudos'}</span>}</div></div>
-        <div className="card" style={{ flex: 1, padding: 16, display: 'flex', alignItems: 'center', gap: 10 }}><Bolt size={26} /><div><b style={{ display: 'block', fontSize: 20, fontFamily: 'var(--head)' }}>{(profile?.xp_total || 0).toLocaleString('pt-BR')}</b><span style={{ fontSize: 12, color: 'var(--text3)' }}>XP total</span></div></div>
-      </div>
-      {prog.mistakes.length > 0 && (
-        <div className="card rail-alert rail-review">
-          <b className="rr-t">Seus erros estão esperando</b>
-          <div className="rr-row">
-            <span className="rr-n">{prog.mistakes.length}<small>{prog.mistakes.length === 1 ? 'erro' : 'erros'}</small></span>
-            <p>Uns 3 minutos de revisão fixam o que você errou e contam para a missão da semana.</p>
-          </div>
-          <Link className="btn btn-block rr-go" to="/revisao">Revisar agora</Link>
+      <div className="card rail-sum">
+        <div className="rs-top">
+          <span className="rs-stat" title={streak === 1 ? 'dia seguido' : 'dias seguidos'}><Fire size={22} /><b>{streak}</b><small>{streak === 1 ? 'dia' : 'dias'}</small></span>
+          <span className="rs-stat" title="XP total"><Bolt size={22} /><b>{(profile?.xp_total || 0).toLocaleString('pt-BR')}</b><small>XP</small></span>
+          <Link className="rs-level" to="/progresso" title="Seu nível (ver Meu progresso)">{level} · {pct}%</Link>
         </div>
-      )}
+        {profile?.streak_freezes > 0 && <span className="shield-pill" title="Escudos: protegem a sequência num dia sem estudo">🛡️ {profile.streak_freezes} {profile.streak_freezes === 1 ? 'escudo' : 'escudos'}</span>}
+        <div className="rs-goal">
+          <span className="rs-goal-t"><b>Meta de hoje</b><span>{goalOk ? 'batida ✓' : `${todayXp} / ${goal} XP`}</span></span>
+          <div className="track" style={{ height: 10 }}><div className="fill" style={{ width: Math.min(100, (todayXp / goal) * 100) + '%' }} /></div>
+        </div>
+      </div>
       {profile?.freeze_used_on === todayBR() ? (
         <div className="card shield-card rail-alert"><b>🛡️ Seu escudo salvou a sequência!</b><span>Você ficou um dia sem estudar, mas seus {streak} dias seguidos continuam.</span></div>
       ) : shieldCovering(profile) > 0 && (
         <div className="card shield-card rail-alert"><b>🛡️ Sua sequência está protegida</b><span>Um escudo cobre o dia que você perdeu. Faça uma lição hoje para manter os {streak} dias.</span></div>
       )}
-      <NewAchievement prog={prog} />
-      <div className="card">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 12 }}><b>Meta de hoje</b><span style={{ fontSize: 14, color: 'var(--text3)' }}>{Math.min(todayXp, goal)} / {goal} XP</span></div>
-        <div className="track" style={{ height: 14 }}><div className="fill" style={{ width: Math.min(100, (todayXp / goal) * 100) + '%' }} /></div>
-        <p className="muted" style={{ margin: '12px 0 0', fontSize: 14, lineHeight: 1.5 }}>
-          {todayXp >= goal ? 'Meta batida! Sua sequência de hoje está garantida.' : todayXp > 0 ? `Faltam ${goal - todayXp} XP para bater a meta. Cada lição nova vale 10 a 15 XP.` : 'Faça uma lição hoje para manter sua sequência de dias.'}
-        </p>
-      </div>
-      <div className="card rail-opt">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 12 }}><b>Seu nível</b><span style={{ fontSize: 14, fontWeight: 700, color: 'var(--violet)' }}>{level} · {pct}%</span></div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,minmax(0,1fr))', gap: 6 }}>
-          {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map((l, i) => <span key={l} style={{ height: 10, borderRadius: 99, background: i < li ? 'var(--violet)' : i === li ? `linear-gradient(90deg,var(--violet) ${pct}%,var(--track) ${pct}%)` : 'var(--track)' }} />)}
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6,minmax(0,1fr))', gap: 6, marginTop: 6, fontSize: 12, fontWeight: 600, color: 'var(--text3)', textAlign: 'center' }}>{['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(l => <span key={l}>{l}</span>)}</div>
-      </div>
-      <Missions compact />
-      {(dueCount(profile?.id) > 0 || dueLessonIds(prog.scores).length > 0) && (
-        <div className="card rail-alert" style={{ borderColor: 'var(--violet-ring)' }}>
-          <b style={{ display: 'block', marginBottom: 6 }}>Hora de relembrar</b>
-          <p className="muted" style={{ margin: '0 0 14px', fontSize: 14, lineHeight: 1.5 }}>{dueCount(profile?.id) > 0
-            ? `${dueCount(profile?.id)} ${dueCount(profile?.id) === 1 ? 'palavra ou frase chegou' : 'palavras e frases chegaram'} no dia certo de revisar. Um treino rápido fixa na memória.`
-            : `${dueLessonIds(prog.scores).length} ${dueLessonIds(prog.scores).length === 1 ? 'lição chegou' : 'lições chegaram'} no dia certo de revisar. Um treino rápido fixa na memória.`}</p>
-          <Link className="btn btn-violet btn-block" to="/praticar">Fazer o treino</Link>
+      {step && (
+        <div className="card rail-step">
+          <span className="rst-k">Próximo passo</span>
+          <b>{step.t}</b>
+          <p>{step.d}</p>
+          <Link className="btn btn-violet btn-block" to={step.to}>{step.cta}</Link>
+          {alsoDue && <Link className="rst-also" to="/praticar">Também: {dueWords > 0 ? `${dueWords} ${dueWords === 1 ? 'palavra' : 'palavras'}` : `${dueLessons} ${dueLessons === 1 ? 'lição' : 'lições'}`} para relembrar →</Link>}
         </div>
       )}
+      <NewAchievement prog={prog} />
+      <Missions compact />
     </>
   );
 }
@@ -262,7 +258,6 @@ export default function Trail() {
                   <div className={'tr-div' + tone + (u.id === UNITS[0].id ? ' sr-only' : '')}>
                     <h2 id={u.id} title={u.subtitle}>{complete && <Icon name="check" size={16} stroke={3} />}Unidade {u.order} · {u.title}</h2>
                   </div>
-                  {unlocked && !complete && <Link to={`/prova/unidade/${u.id}`} className="tr-skip"><span aria-hidden="true">⚡</span> Já sabe esta unidade? Faça o teste e pule</Link>}
                   <div className="tr-path">
                     {!art && <TrailScene unitId={u.id} side={left ? 'left' : 'right'} off={!unlocked} top={left ? 150 : 446} />}
                     {u.lessons.map((l, i) => {

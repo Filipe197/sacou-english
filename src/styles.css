@@ -902,3 +902,31 @@ html:not([data-theme=dark]) .dz-from{color:var(--bad)}
 @media (min-width:700px){.report-sheet{align-items:center}}
 /* ofensiva no modo escuro: brilho laranja suave em vez da mancha bege */
 html[data-theme=dark] .daily-celebration{background:radial-gradient(ellipse 70% 55% at 50% 22%,rgba(255,138,30,.22) 0,rgba(255,138,30,.07) 45%,transparent 75%),var(--bg)}
+
+/* painel da trilha enxuto: resumo único + próximo passo + missões que faltam */
+.rail-sum{padding:16px 18px;display:flex;flex-direction:column;gap:14px}
+.rs-top{display:flex;align-items:center;gap:10px}
+.rs-stat{display:flex;align-items:center;gap:5px}
+.rs-stat svg{width:19px;height:19px}
+.rs-stat b{font-family:var(--head);font-size:19px;line-height:1}
+.rs-stat small{font-size:12px;color:var(--text3);font-weight:600}
+.rs-level{margin-left:auto;font-size:12px;font-weight:800;color:var(--violet);background:var(--violet-l);padding:4px 8px;border-radius:99px;text-decoration:none;white-space:nowrap}
+.rs-level:hover{background:var(--violet-ring)}
+.rs-goal{display:flex;flex-direction:column;gap:8px}
+.rs-goal-t{display:flex;justify-content:space-between;align-items:baseline;font-size:14px}
+.rs-goal-t span{color:var(--text3);font-size:13px}
+.rail-sum .shield-pill{align-self:flex-start;margin:-6px 0 0}
+.rail-step{border-color:var(--violet-ring);display:flex;flex-direction:column;gap:6px}
+.rst-k{font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--violet)}
+.rail-step b{font-family:var(--head);font-size:17px}
+.rail-step p{margin:0 0 8px;font-size:14px;line-height:1.5;color:var(--text3)}
+.rst-also{font-size:13px;font-weight:700;color:var(--violet);text-decoration:none;margin-top:4px;text-align:center}
+.rst-also:hover{text-decoration:underline}
+.ms-all{display:inline-block;font-size:13px;font-weight:700;color:var(--violet);text-decoration:none;margin:2px 0 6px}
+@media (max-width:640px){.ms-all{display:none}.rail .rail-step p{display:block}.rail > .rail-sum{gap:10px}}
+.side-more{display:flex;align-items:center;gap:4px;background:none;border:0;cursor:pointer;font-family:inherit;width:100%;text-align:left;border-radius:8px}
+.side-more:hover:not(:disabled){color:var(--text)}
+.side-more:disabled{cursor:default}
+.side-more svg{transition:transform .2s}
+.side-more[aria-expanded="true"] svg{transform:rotate(180deg)}
+@media (max-width:640px){.rail > .rail-sum{justify-content:center}}

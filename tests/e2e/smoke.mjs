@@ -144,7 +144,8 @@ await test('progresso: retrospectiva do mês', async () => {
 
 await test('prova: teste para pular unidade', async () => {
   await open('/aprender');
-  await expectText('Já sabe esta unidade?');
+  // o "pular" fica só no botão do cabeçalho da unidade
+  if (!(await page.$('a.tr-pular[href="/prova/unidade/a1-u6"]'))) throw new Error('sem o botão Pular no cabeçalho da unidade');
   await expectText('Prova do nível A1');
   await open('/prova/unidade/a1-u6');
   await expectText('Já sabe esta unidade?');

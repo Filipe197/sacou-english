@@ -72,12 +72,15 @@ export function Missions({ compact = false }) {
   const done = list.filter(m => m.done).length;
   const all = done === list.length;
   const left = daysLeft();
+  // no painel da trilha: só as que faltam (as feitas ficam em Meu progresso)
+  const shown = compact ? list.filter(m => !m.done).slice(0, 3) : list;
   return (
     <div className={'card missions' + (compact ? ' compact' : '')} aria-busy={loading}>
       <div className="ms-head">
         <b><Icon name="target" size={18} />Missões da semana</b>
         <span className="muted">{done}/{list.length} · {left === 1 ? 'último dia' : `faltam ${left} dias`}</span>
       </div>
+      {compact && !all && <Link to="/progresso" className="ms-all">Ver todas</Link>}
       {compact && (
         <div className="ms-mini">
           <span className="track"><span className="fill" style={{ width: `${(done / list.length) * 100}%` }} /></span>
@@ -86,7 +89,7 @@ export function Missions({ compact = false }) {
       )}
       {all && <div className="ms-perfect"><Icon name="medal" size={20} />Semana perfeita! Volte segunda para novas missões.</div>}
       <ul className="ms-list">
-        {list.map(m => (
+        {shown.map(m => (
           <li key={m.id} className={m.done ? 'done' : ''}>
             <Link to={m.to} className="ms-row">
               <span className="ms-ic">{m.done ? <Icon name="check" size={16} stroke={3} color="#fff" /> : <Icon name={m.icon} size={16} />}</span>
