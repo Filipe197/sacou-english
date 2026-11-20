@@ -13,6 +13,7 @@ function Page({ title, children }) {
       <p className="muted">Atualizado em {LEGAL_UPDATED}.</p>
       {children}
       <nav className="legal-nav">
+        <Link to="/sobre">Sobre</Link>
         <Link to="/privacidade">Política de Privacidade</Link>
         <Link to="/termos">Termos de Uso</Link>
         <Link to="/creditos">Fontes e créditos</Link>
@@ -34,7 +35,8 @@ export function Privacy() {
         <li><b>Turmas e ranking:</b> as turmas em que você entra ou que cria e sua posição no ranking da semana.</li>
         <li><b>Lembretes:</b> se você ativar, o endereço técnico de notificação do seu navegador.</li>
         <li><b>Uso do professor de IA:</b> quantas vezes você usou por dia (para o limite diário). O texto das conversas não fica guardado no nosso banco; só o que você escolher salvar no caderno.</li>
-        <li><b>Relatos de erro no conteúdo:</b> o texto que você escreve ao usar “Reportar erro” num exercício.</li>
+        <li><b>Relatos de erro no conteúdo:</b> o motivo que você escolhe e o texto que você escreve ao usar “Reportar erro” num exercício (e, se você disser que sua resposta deveria estar certa, a resposta que deu).</li>
+        <li><b>Uso das lições:</b> quando você começa uma lição, em que exercício está e se terminou. Serve para descobrir onde as lições ficam difíceis ou cansativas e melhorá-las.</li>
         <li><b>Erros técnicos:</b> quando algo quebra, guardamos a mensagem de erro, a página e o tipo de navegador, para corrigir o problema.</li>
       </ul>
 

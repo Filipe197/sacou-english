@@ -115,6 +115,91 @@ const KIND = { js: 'Erro de código', promise: 'Erro de código', react: 'Tela q
 const ago = (d) => { const m = Math.round((Date.now() - new Date(d)) / 60000); return m < 60 ? `há ${m} min` : m < 1440 ? `há ${Math.round(m / 60)} h` : `há ${Math.round(m / 1440)} d`; };
 
 // Erros que aconteceram no aparelho dos alunos (aviso automático, 008_erros.sql)
+// Funil dos testadores (supabase/017_metricas.sql): quem entra, começa, termina, volta e onde desiste
+const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
+function Funnel() {
+  const [days, setDays] = useState(30);
+  const [d, setD] = useState(null);
+  const [err, setErr] = useState('');
+  useEffect(() => {
+    let live = true;
+    setD(null);
+    supabase.rpc('admin_funnel', { p_days: days }).then(({ data, error }) => {
+      if (!live) return;
+      if (error) { setErr(/admin_funnel|lesson_runs|schema cache|does not exist/i.test(error.message || '') ? 'Falta rodar o arquivo supabase/017_metricas.sql no Supabase para ligar as métricas.' : 'Não consegui carregar as métricas agora.'); return; }
+      setErr(''); setD(data);
+    });
+    return () => { live = false; };
+  }, [days]);
+  const steps = d ? [
+    ['Criaram a conta', d.signed_up],
+    ['Começaram uma lição', d.started],
+    ['Terminaram 1 lição', d.finished_1],
+    ['Terminaram 3 lições', d.finished_3],
+  ] : [];
+  return (
+    <div className="card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 6 }}>
+        <h2 style={{ fontSize: 20, margin: 0 }}>Funil dos testadores</h2>
+        <div style={{ display: 'flex', gap: 6 }} role="group" aria-label="Período">
+          {[7, 30, 90].map(n => (
+            <button key={n} className={'btn ' + (days === n ? 'btn-violet' : 'btn-out')} style={{ minHeight: 36, padding: '0 12px', fontSize: 14 }} onClick={() => setDays(n)}>{n} dias</button>
+          ))}
+        </div>
+      </div>
+      <p className="muted" style={{ fontSize: 14, margin: '0 0 12px' }}>Quem se cadastrou nos últimos {days} dias: até onde chegou e se voltou.</p>
+      {err ? <p className="alert" role="alert">{err}</p> : !d ? <Spinner /> : <>
+        {steps.map(([t, v]) => (
+          <div key={t} className="funnel-row">
+            <span>{t}</span>
+            <div className="funnel-track"><div className="funnel-bar" style={{ width: `${pct(v, d.signed_up)}%` }} /></div>
+            <b>{v} <span className="muted" style={{ fontWeight: 400, fontSize: 13 }}>{pct(v, d.signed_up)}%</span></b>
+          </div>
+        ))}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: 12, marginTop: 16 }}>
+          {[
+            ['Voltaram no dia seguinte', `${pct(d.d1_back, d.d1_base)}%`, `${d.d1_back} de ${d.d1_base} que já tiveram a chance`],
+            ['Voltaram em até 7 dias', `${pct(d.d7_back, d.d7_base)}%`, `${d.d7_back} de ${d.d7_base} com 7 dias de conta`],
+            ['Lições abertas', d.runs, `${d.runs_done} terminadas · ${d.runs_quit} abandonadas`],
+          ].map(([t, v, s]) => (
+            <div key={t} style={{ border: '1px solid var(--line)', borderRadius: 14, padding: 14 }}>
+              <span className="muted" style={{ fontSize: 13 }}>{t}</span>
+              <b style={{ display: 'block', fontFamily: 'var(--head)', fontSize: 28, margin: '2px 0' }}>{v}</b>
+              <span className="muted" style={{ fontSize: 12 }}>{s}</span>
+            </div>
+          ))}
+        </div>
+        <p className="muted" style={{ fontSize: 12, margin: '10px 0 0' }}>Abandonada = aberta e sem terminar há mais de 1 hora. As lições abertas só são contadas a partir da instalação das métricas.</p>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 16, marginTop: 18 }}>
+          <div>
+            <h3 style={{ fontSize: 17, margin: '0 0 6px' }}>Lições com mais abandono</h3>
+            {d.lessons.length === 0 ? <p className="muted">Ainda sem dados.</p> : d.lessons.map(l => {
+              const les = getLesson(l.lesson_id);
+              return (
+                <div key={l.lesson_id} style={{ borderTop: '1px solid var(--line)', padding: '8px 0', display: 'flex', justifyContent: 'space-between', gap: 12, fontSize: 14 }}>
+                  <span>{les ? `${les.unit.level} · U${les.unit.order} · ${les.title}` : l.lesson_id}</span>
+                  <span style={{ whiteSpace: 'nowrap' }}><b>{l.quits}</b> de {l.starts} saíram{l.quits ? ` (em ${l.quit_at_pct ?? 0}% da lição)` : ''}</span>
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            <h3 style={{ fontSize: 17, margin: '0 0 6px' }}>Exercícios em que desistem</h3>
+            <p className="muted" style={{ fontSize: 13, margin: '0 0 6px' }}>O exercício que estava na tela quando a pessoa saiu.</p>
+            {d.quit_items.length === 0 ? <p className="muted">Ainda sem dados.</p> : d.quit_items.map(q => (
+              <div key={q.item_id} style={{ borderTop: '1px solid var(--line)', padding: '10px 0', display: 'flex', justifyContent: 'space-between', gap: 12 }}>
+                <ItemPreview id={q.item_id} />
+                <span style={{ whiteSpace: 'nowrap', fontSize: 14 }}><b>{q.quits}</b> saídas · {q.students} alunos</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </>}
+    </div>
+  );
+}
+
 function SiteErrors() {
   const [groups, setGroups] = useState(null);
   const [err, setErr] = useState('');
@@ -217,6 +302,7 @@ export default function Admin() {
           ))}
         </div>
 
+        {!err && <Funnel />}
         {!err && <SiteErrors />}
         {!err && <Students />}
 

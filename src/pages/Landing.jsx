@@ -31,6 +31,7 @@ export default function Landing() {
             <div className="navlinks">
               <a className="plain hide-m" href="#como">Como funciona</a>
               <a className="plain hide-m" href="#niveis">Níveis</a>
+              <Link className="plain hide-m" to="/sobre">Sobre</Link>
               {session
                 ? <Link className="btn btn-lime" to="/aprender" style={{ minHeight: 44 }}>Continuar estudando</Link>
                 : <>
@@ -180,7 +181,7 @@ export default function Landing() {
       <footer className="footer">
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', fontSize: 14, color: 'var(--text3)' }}>
           <span>Sacou English · Inglês explicado do zero à fluência</span>
-          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/creditos">Fontes e créditos</Link><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></span>
+          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/sobre">Sobre</Link><Link to="/creditos">Fontes e créditos</Link><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></span>
         </div>
       </footer>
     </div>

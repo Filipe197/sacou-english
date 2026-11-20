@@ -6,6 +6,7 @@ import { shuffle, getItem, getLesson, getUnit } from '../lib/content.js';
 import { supabase } from '../lib/supabase.js';
 import { useWakeLock } from '../lib/wakelock.js';
 import { remember, boxOf } from '../lib/memory.js';
+import { trackStep, trackFinish } from '../lib/metrics.js';
 import Hinted from './Hinted.jsx';
 import { getNewWords } from '../lib/hints.js';
 import { LessonCtx, SaveItemButton } from './LessonNotes.jsx';
@@ -525,25 +526,51 @@ function Quiz({ item, story, value, setValue, locked }) {
   );
 }
 
-function ReportBox({ itemId, onClose }) {
+// Motivos de um toque: o aluno não precisa escrever nada (o texto é opcional)
+const REPORT_REASONS = [
+  ['certa', 'Minha resposta deveria estar certa'],
+  ['audio', 'O áudio está errado ou cortado'],
+  ['traducao', 'Tradução ou explicação estranha'],
+  ['confuso', 'O enunciado está confuso'],
+  ['outro', 'Outro problema'],
+];
+
+function ReportBox({ itemId, answer = '', onClose }) {
+  const [reason, setReason] = useState(null);
   const [msg, setMsg] = useState('');
   const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  useEffect(() => { // Esc fecha
+    const k = (e) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', k); return () => window.removeEventListener('keydown', k);
+  }, [onClose]);
   async function send() {
-    if (msg.trim().length < 3) return;
+    if (!reason || busy || (reason === 'outro' && msg.trim().length < 3)) return;
+    setBusy(true);
+    const label = REPORT_REASONS.find(r => r[0] === reason)[1];
+    const parts = [`[${label}]`, reason === 'certa' && answer ? `Respondi: "${answer.slice(0, 200)}".` : '', msg.trim()];
     const { data } = await supabase.auth.getUser();
-    await supabase.from('content_reports').insert({ item_id: itemId, message: msg.trim(), user_id: data.user?.id });
-    setSent(true); setTimeout(onClose, 1200);
+    await supabase.from('content_reports').insert({ item_id: itemId, message: parts.filter(Boolean).join(' ').slice(0, 1000), user_id: data.user?.id });
+    setSent(true); setTimeout(onClose, 1400);
   }
   return (
-    <div className="card" style={{ marginTop: 12 }}>
-      {sent ? <p style={{ margin: 0 }}>Obrigado! Vamos revisar esse exercício.</p> : <>
-        <div className="field"><label htmlFor="rep">O que parece errado neste exercício?</label>
-          <textarea id="rep" rows={3} value={msg} onChange={e => setMsg(e.target.value)} placeholder="Ex.: a tradução não está natural" /></div>
+    <div className="report-sheet" onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
+    <div className="card report-box" role="dialog" aria-modal="true" aria-labelledby="rep-q">
+      {sent ? <p style={{ margin: 0 }} role="status">Obrigado! Vamos revisar esse exercício. 💜</p> : <>
+        <p className="report-q" id="rep-q">O que está errado neste exercício?</p>
+        <div className="report-reasons" role="radiogroup" aria-labelledby="rep-q">
+          {REPORT_REASONS.map(([k, t]) => (
+            <button key={k} type="button" role="radio" aria-checked={reason === k} className={'report-chip' + (reason === k ? ' on' : '')} onClick={() => setReason(k)}>{t}</button>
+          ))}
+        </div>
+        {reason && <div className="field" style={{ marginTop: 12 }}><label htmlFor="rep">{reason === 'outro' ? 'Conte o que aconteceu' : 'Quer explicar melhor? (opcional)'}</label>
+          <textarea id="rep" rows={2} maxLength={700} value={msg} onChange={e => setMsg(e.target.value)} placeholder="Ex.: a tradução não está natural" /></div>}
         <div style={{ display: 'flex', gap: 10, marginTop: 12 }}>
-          <button className="btn btn-violet" onClick={send}>Enviar</button>
+          <button className="btn btn-violet" onClick={send} disabled={!reason || busy || (reason === 'outro' && msg.trim().length < 3)}>Enviar</button>
           <button className="btn btn-out" onClick={onClose}>Cancelar</button>
         </div>
       </>}
+    </div>
     </div>
   );
 }
@@ -601,7 +628,7 @@ export function clearResume(key) { try { if (key) localStorage.removeItem(resume
 
 // ---------- executor ----------
 // entries: [{ item, lessonId, unit }]
-export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true, saveKey = null, notice = null }) {
+export default function LessonRunner({ entries, title, exitTo = '/aprender', retryWrong = true, onItemResult, onFinish, finishCta = 'Continuar', introduceWords = true, saveKey = null, notice = null, track = null }) {
   const { profile, setProfile } = useAuth();
   const attemptId = useRef(null);
   const resumed = useRef(undefined);
@@ -651,6 +678,10 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
     if (!saveKey || result) return;
     writeResume(saveKey, { at: Date.now(), attemptId: attemptId.current, idx, queue: queue.map(e => [e.item.id, e.retry || null]), firstTry: [...firstTry.current], base: baseOf(fixed.current) });
   }, [saveKey, idx, queue, status, result]);
+  // métricas: qual exercício está na tela (para saber onde quem desiste parou)
+  useEffect(() => {
+    if (track && !result && queue[idx]) trackStep(attemptId.current, track, idx, queue.length, queue[idx].item.id);
+  }, [track, idx, result]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (resumeNote) { const tm = setTimeout(() => setResumeNote(false), 3500); return () => clearTimeout(tm); } }, [resumeNote]);
   // dicas já decididas por posição na fila (para não sumirem depois de marcadas como vistas)
   const tipCache = useRef(new Map());
@@ -731,6 +762,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
       finishing.current = true;
       const vals = [...firstTry.current.values()];
       const score = Math.round((vals.filter(Boolean).length / Math.max(1, vals.length)) * 100);
+      if (track) trackFinish(attemptId.current, track, queue.length);
       let res;
       try { res = await onFinish?.({ score, firstTry: firstTry.current, attemptId: attemptId.current }); }
       catch { res = { xp: null, title: 'Não foi possível salvar seu progresso', message: 'Você terminou os exercícios, mas houve uma falha ao registrar os resultados.', error: 'Verifique sua conexão e tente novamente mais tarde.' }; }
@@ -746,7 +778,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
   // teclado: Enter verifica/continua, 1-4 escolhem opções
   useEffect(() => {
     const onKey = (e) => {
-      if (result || notesOpen || e.target.tagName === 'TEXTAREA' || e.target.closest?.('[contenteditable="true"],.nb-drawer,.nb-modal,.tutor')) return;
+      if (result || notesOpen || report || e.target.tagName === 'TEXTAREA' || e.target.closest?.('[contenteditable="true"],.nb-drawer,.nb-modal,.tutor')) return;
       if (e.key === 'Enter') { e.preventDefault(); locked ? next() : check(); }
       else if (!locked && /^[1-5]$/.test(e.key) && item?.options && item.type !== 'build') {
         const btns = document.querySelectorAll('.options .option');
@@ -906,7 +938,7 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
           </div>
         )}
         {tutor && <Suspense fallback={null}><Tutor item={item} answer={answerText} correct={display} level={level} ctx={noteCtx} onClose={() => setTutor(false)} /></Suspense>}
-        {report && <ReportBox itemId={item.id} onClose={() => setReport(false)} />}
+        {report && <ReportBox itemId={item.id} answer={status === 'wrong' ? answerText : ''} onClose={() => setReport(false)} />}
       </main>
 
       <footer className={'bar' + (status === 'correct' ? ' ok' : status === 'wrong' ? ' bad' : '')}>

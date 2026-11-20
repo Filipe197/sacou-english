@@ -51,6 +51,7 @@ export default function LessonPage() {
       entries={entries}
       notice={plan.current?.notice}
       saveKey={saveKey}
+      track={lesson.id}
       title={`${lesson.unit.title} — ${lesson.title}`}
       onItemResult={(e, ok) => { if (!ok) itemResults.current.push(rpcOrQueue(user?.id, 'record_mistake', { p_item_id: e.item.id, p_lesson_id: e.lessonId })); }}
       onFinish={async ({ score, attemptId }) => {

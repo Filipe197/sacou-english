@@ -1,6 +1,6 @@
 # Cobertura do vocabulário (CEFR-J)
 
-Gerado por scripts/coverage-cefr.mjs em 2026-11-19. Palavras da lista oficial de cada nível que o conteúdo daquele nível ainda não usa em inglês.
+Gerado por scripts/coverage-cefr.mjs em 2026-11-20. Palavras da lista oficial de cada nível que o conteúdo daquele nível ainda não usa em inglês.
 
 ## A1: 613 de 1164 palavras (53%)
 
