@@ -200,6 +200,53 @@ function Funnel() {
   );
 }
 
+// Mensagens da página Apoie (supabase/018_apoio.sql)
+const KIND_LABEL = { apoiar: 'Contribuir', patrocinio: 'Patrocínio', parceria: 'Parceria' };
+function SupportContacts() {
+  const [rows, setRows] = useState(null);
+  const [filter, setFilter] = useState('novo');
+  const [err, setErr] = useState('');
+  const load = useCallback(async () => {
+    const { data, error } = await supabase.from('support_contacts').select('id,name,email,org,kind,message,status,created_at').eq('status', filter).order('created_at', { ascending: false }).limit(100);
+    if (error) { setErr(/support_contacts|schema cache|does not exist/i.test(error.message || '') ? 'Falta rodar o arquivo supabase/018_apoio.sql no Supabase para receber as mensagens da página Apoie.' : 'Não consegui carregar as mensagens agora.'); setRows([]); return; }
+    setErr(''); setRows(data || []);
+  }, [filter]);
+  useEffect(() => { load(); }, [load]);
+  async function mark(id, status) { await supabase.from('support_contacts').update({ status }).eq('id', id); load(); }
+  return (
+    <div className="card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 12 }}>
+        <h2 style={{ fontSize: 20, margin: 0 }}>Mensagens da página Apoie</h2>
+        <div style={{ display: 'flex', gap: 6 }} role="group" aria-label="Filtrar mensagens">
+          {[['novo', 'Novas'], ['respondido', 'Respondidas'], ['arquivado', 'Arquivadas']].map(([k, t]) => (
+            <button key={k} className={'btn ' + (filter === k ? 'btn-violet' : 'btn-out')} style={{ minHeight: 36, padding: '0 12px', fontSize: 14 }} onClick={() => setFilter(k)}>{t}</button>
+          ))}
+        </div>
+      </div>
+      {err ? <p className="alert" role="alert">{err}</p> : !rows ? <Spinner /> : rows.length === 0 ? <p className="muted">Nenhuma mensagem aqui.</p> : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {rows.map(r => (
+            <div key={r.id} style={{ border: '1px solid var(--line)', borderRadius: 14, padding: 14, display: 'flex', gap: 16, justifyContent: 'space-between', flexWrap: 'wrap' }}>
+              <div style={{ flex: '1 1 320px', display: 'flex', flexDirection: 'column', gap: 4 }}>
+                <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--violet)', textTransform: 'uppercase', letterSpacing: .5 }}>{KIND_LABEL[r.kind] || r.kind} · {new Date(r.created_at).toLocaleString('pt-BR')}</span>
+                <b>{r.name}{r.org ? ` · ${r.org}` : ''}</b>
+                <a href={`mailto:${r.email}?subject=${encodeURIComponent('Sacou English')}`} style={{ fontSize: 14 }}>{r.email}</a>
+                {r.message && <div className="note" style={{ fontSize: 14, whiteSpace: 'pre-wrap' }}>{r.message}</div>}
+              </div>
+              {filter === 'novo' && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <button className="btn btn-violet" style={{ minHeight: 40, fontSize: 14 }} onClick={() => mark(r.id, 'respondido')}>Marcar respondida</button>
+                  <button className="btn btn-out" style={{ minHeight: 40, fontSize: 14 }} onClick={() => mark(r.id, 'arquivado')}>Arquivar</button>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SiteErrors() {
   const [groups, setGroups] = useState(null);
   const [err, setErr] = useState('');
@@ -303,6 +350,7 @@ export default function Admin() {
         </div>
 
         {!err && <Funnel />}
+        {!err && <SupportContacts />}
         {!err && <SiteErrors />}
         {!err && <Students />}
 

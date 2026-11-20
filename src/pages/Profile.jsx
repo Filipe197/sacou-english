@@ -103,7 +103,7 @@ export default function Profile() {
         </div>
 
         <DeleteAccount />
-        <p className="muted pf-legal"><Link to="/sobre">Sobre o Sacou</Link> · <Link to="/privacidade">Política de Privacidade</Link> · <Link to="/termos">Termos de Uso</Link></p>
+        <p className="muted pf-legal"><Link to="/sobre">Sobre o Sacou</Link> · <Link to="/apoie">Apoie</Link> · <Link to="/privacidade">Política de Privacidade</Link> · <Link to="/termos">Termos de Uso</Link></p>
       </div>
     </Shell>
   );

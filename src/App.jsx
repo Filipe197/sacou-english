@@ -19,6 +19,7 @@ const Guide = lazy(() => import('./pages/Guide.jsx'));
 const Progress = lazy(() => import('./pages/Progress.jsx'));
 const Credits = lazy(() => import('./pages/Credits.jsx'));
 const About = lazy(() => import('./pages/About.jsx'));
+const Support = lazy(() => import('./pages/Support.jsx'));
 const Privacy = lazy(() => import('./pages/Privacy.jsx').then(m => ({ default: m.Privacy })));
 const Terms = lazy(() => import('./pages/Privacy.jsx').then(m => ({ default: m.Terms })));
 import { ThemeManager } from './lib/theme.js';
@@ -87,6 +88,7 @@ export default function App() {
         <Route path="/redefinir-senha" element={<ResetPassword />} />
         <Route path="/creditos" element={<Credits />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="/apoie" element={<Support />} />
         <Route path="/privacidade" element={<Privacy />} />
         <Route path="/termos" element={<Terms />} />
         <Route path="/bem-vindo" element={<Private allowNotOnboarded><Onboarding /></Private>} />

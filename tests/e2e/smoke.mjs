@@ -153,6 +153,20 @@ await test('prova: teste para pular unidade', async () => {
   await expectText('1/12');
 });
 
+await test('apoie: Pix com QR, chave e formulário de contato', async () => {
+  await open('/apoie');
+  await expectText('Doe por Pix');
+  await expectText('+5581984783222');
+  if (!(await page.$('svg.pix-qr path'))) throw new Error('sem o QR Code do Pix');
+  await click('Quero patrocinar');
+  await page.type('#ap-n', 'Teste Empresa');
+  await page.type('#ap-e', 'contato@exemplo.com');
+  const kind = await page.$eval('#ap-k', s => s.value);
+  if (kind !== 'patrocinio') throw new Error('o botão não escolheu "patrocínio" no formulário');
+  await click('Enviar mensagem');
+  await expectText('Mensagem enviada');
+});
+
 await test('privacidade, termos e excluir conta', async () => {
   await open('/privacidade');
   await expectText('Política de Privacidade');

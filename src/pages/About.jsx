@@ -41,12 +41,14 @@ export default function About() {
         <li><b>Seus dados não são vendidos</b> nem usados para publicidade (veja a <Link to="/privacidade">Política de Privacidade</Link>).</li>
       </ul>
       <p>O que custa dinheiro para manter, como o professor de IA e a voz natural, tem um limite diário por aluno. É isso que permite manter o curso aberto para todo mundo.</p>
+      <p>Quem pode e quer ajudar a manter o projeto encontra as formas de apoio em <Link to="/apoie">Apoie o Sacou</Link>. É voluntário: nada muda para quem não contribui.</p>
 
       <div className="about-cta">
         <Link className="btn btn-violet btn-3d btn-lg" to={session ? '/aprender' : '/criar-conta'}>{session ? 'Continuar estudando' : 'Começar grátis'}</Link>
       </div>
 
       <nav className="legal-nav">
+        <Link to="/apoie">Apoie</Link>
         <Link to="/privacidade">Política de Privacidade</Link>
         <Link to="/termos">Termos de Uso</Link>
         <Link to="/creditos">Fontes e créditos</Link>
