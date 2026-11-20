@@ -63,7 +63,7 @@ export default function Practice() {
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
         <h1 style={{ fontSize: 36, margin: '0 0 8px' }}>Praticar</h1>
         <p className="muted" style={{ fontSize: 17, lineHeight: 1.6, margin: '0 0 28px' }}>
-          Um treino com 12 exercícios do que você já estudou. Ele usa <b>revisão espaçada por palavra e frase</b>: cada exercício que você acerta volta cada vez mais tarde (2, 4, 8, 16 dias…), e o que você erra volta no dia seguinte. Assim o treino vai direto no que você está esquecendo.
+          12 exercícios do que você já estudou, direto no que você está esquecendo.<span className="hide-m"> Usa <b>revisão espaçada</b>: o que você acerta volta cada vez mais tarde (2, 4, 8, 16 dias…) e o que você erra volta no dia seguinte.</span>
         </p>
         {!done.length ? (
           <div className="card" style={{ textAlign: 'center', padding: 40 }}>

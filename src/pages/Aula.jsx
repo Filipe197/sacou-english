@@ -78,9 +78,9 @@ function Setup({ onStart }) {
               </button>
             )}
             <p className="muted">
-              Dá aula de inglês desde a época da fita VHS. Reclama do calor, do vizinho que reforma a casa há três anos e do
-              cafezinho que esfriou, mas não desiste de você de jeito nenhum: ele fala uma frase, você repete em voz alta e,
-              se não sair, ele pede de novo (reclamando, claro). Depois faz perguntas para você responder do seu jeito.
+              <span className="hide-m">Dá aula de inglês desde a época da fita VHS. Reclama do calor, do vizinho que reforma a casa há três anos e do
+              cafezinho que esfriou, mas não desiste de você de jeito nenhum: </span>Ele fala uma frase, você repete em voz alta e,
+              se não sair, ele pede de novo (reclamando, claro).<span className="hide-m"> Depois faz perguntas para você responder do seu jeito.</span>
             </p>
           </div>
         </div>

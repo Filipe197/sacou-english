@@ -40,9 +40,9 @@ export default function Progress() {
   return (
     <Shell mistakesCount={prog.mistakes.length}>
       <div style={{ maxWidth: 1000, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
-        <div className="card" style={{ background: 'var(--ink-fixed)', color: '#fff', borderColor: 'var(--ink-fixed)', display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap', padding: 28 }}>
-          <span style={{ width: 80, height: 80, borderRadius: 24, background: 'var(--violet)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--head)', fontSize: 32, fontWeight: 700, color: 'var(--lime)' }}>{initials}</span>
-          <div style={{ flex: 1, minWidth: 220 }}>
+        <div className="card pr-hero" style={{ background: 'var(--ink-fixed)', color: '#fff', borderColor: 'var(--ink-fixed)', display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap', padding: 28 }}>
+          <span className="pr-av" style={{ width: 80, height: 80, borderRadius: 24, background: 'var(--violet)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--head)', fontSize: 32, fontWeight: 700, color: 'var(--lime)' }}>{initials}</span>
+          <div className="pr-who" style={{ flex: 1, minWidth: 220 }}>
             <h1 style={{ margin: '0 0 4px', fontSize: 32 }}>{profile?.display_name || 'Meu progresso'}</h1>
             <p style={{ margin: 0, color: 'var(--on-dark)' }}>Estudando desde {since} · Meta diária: {goal} XP</p>
           </div>

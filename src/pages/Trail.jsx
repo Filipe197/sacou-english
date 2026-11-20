@@ -150,6 +150,10 @@ export default function Trail() {
   const [jump, setJump] = useState(null); // 'up' | 'down' quando a lição atual está fora da tela
   const [open, setOpen] = useState(null); // bolinha com o balão aberto
   const [stuck, setStuck] = useState(null); // unidade mostrada na barra fixa do topo
+  // trilha enxuta: unidades concluídas e bloqueadas ficam recolhidas numa linha (toque para abrir),
+  // e níveis inteiros concluídos ou ainda fechados viram uma linha só. Só a unidade atual fica aberta.
+  const [unfold, setUnfold] = useState(() => new Set());
+  const openUp = (id) => setUnfold(s => new Set(s).add(id));
   const [games, setGames] = useState(null); // personagens e jogos (carregados à parte, não atrasam a trilha)
   useEffect(() => {
     let alive = true;
@@ -234,6 +238,14 @@ export default function Trail() {
     return { u, unitDone, complete, unlocked, tone: complete ? ' complete' : unlocked ? '' : ' locked' };
   };
   const stuckUnit = stuck && UNITS.find(x => x.id === stuck);
+  const curUnit = current && UNITS.find(x => x.lessons.some(l => l.id === current.id))?.id;
+  // unidade com lição nova (opcional) continua aberta, para a novidade aparecer
+  const unitFolded = (u, info) => !unfold.has(u.id) && u.id !== curUnit && (info.complete || !info.unlocked) && !u.lessons.some(l => stateOf[l.id] === 'extra');
+  const levelState = (lv) => {
+    const us = unitsOf(lv).map(infoOf);
+    const fresh = unitsOf(lv).some(u => u.lessons.some(l => stateOf[l.id] === 'extra'));
+    return fresh ? 'open' : us.every(i => i.complete) ? 'done' : us.every(i => !i.unlocked) ? 'locked' : 'open';
+  };
 
   return (
     <Shell mistakesCount={prog.mistakes.length} rail={<Rail prog={prog} />}>
@@ -241,12 +253,31 @@ export default function Trail() {
         <div className="tr-stick">{stuckUnit && <UnitHead {...infoOf(stuckUnit)} />}</div>
         {prog.error && <div className="alert" role="alert" style={{ marginBottom: 16 }}>{prog.error}</div>}
 
-        {LEVELS.map(lv => (
+        {LEVELS.map(lv => {
+          const lvState = levelState(lv);
+          const lvFolded = lvState !== 'open' && !unfold.has('lv-' + lv);
+          return (
           <div key={lv}>
             <div className="tr-level"><span>Nível {lv} · {LEVEL_NAMES[lv]}</span></div>
-            {unitsOf(lv).map((u) => {
+            {lvFolded && (
+              <button type="button" className={'tr-fold tr-fold-lv' + (lvState === 'done' ? ' complete' : ' locked')} onClick={() => openUp('lv-' + lv)}>
+                <span className="tr-fold-ic" aria-hidden="true"><Icon name={lvState === 'done' ? 'check' : 'lock'} size={18} stroke={lvState === 'done' ? 3 : 2} /></span>
+                <span className="tr-fold-t"><b>{lvState === 'done' ? `Nível ${lv} concluído` : `${unitsOf(lv).length} unidades`}</b><small>{lvState === 'done' ? 'Toque para ver as unidades e treinar de novo' : 'Libera ao terminar o nível anterior · toque para ver'}</small></span>
+                <Icon name="chevron" size={18} />
+              </button>
+            )}
+            {!lvFolded && unitsOf(lv).map((u) => {
               const info = infoOf(u);
               const { unitDone, complete, unlocked, tone } = info;
+              if (unitFolded(u, info)) return (
+                <section key={u.id} aria-labelledby={u.id} className={'tr-unit tr-unit-fold' + tone} data-u={u.id}>
+                  <button type="button" className={'tr-fold' + tone} onClick={() => openUp(u.id)}>
+                    <span className="tr-fold-ic" aria-hidden="true"><Icon name={complete ? 'check' : 'lock'} size={18} stroke={complete ? 3 : 2} /></span>
+                    <span className="tr-fold-t"><b id={u.id}>Unidade {u.order} · {u.title}</b><small>{complete ? 'Concluída · toque para treinar de novo' : 'Libera ao terminar a anterior'}</small></span>
+                    <Icon name="chevron" size={18} />
+                  </button>
+                </section>
+              );
               const rewards = extras ? extras.rewardsOf(u.id) : [];
               const left = u.order % 2 === 1;
               // cena ilustrada: à esquerda das bolinhas 0 a 3 (que vão para a direita) ou à direita das 4 a 8
@@ -347,7 +378,8 @@ export default function Trail() {
               <Icon name="arrow" size={18} />
             </Link>
           </div>
-        ))}
+          );
+        })}
 
         <div className="card" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
           {allDone && <Anim name="trophy" size={90} />}

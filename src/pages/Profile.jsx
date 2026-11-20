@@ -103,6 +103,12 @@ export default function Profile() {
           <button type="button" className="btn btn-out" style={{ marginTop: 18, alignSelf: 'flex-start' }} onClick={async () => { const result = await signOut(); if (!result?.error) nav('/'); }}><Icon name="logout" size={18} />Sair da conta</button>
         </div>
 
+        <Link to="/apoie" className="card pf-apoie">
+          <span className="pf-apoie-ic" aria-hidden="true">💜</span>
+          <span><b>Apoie o Sacou English</b><small>O curso é grátis para todo mundo. Uma contribuição por Pix ajuda a pagar servidores, áudios e o professor de IA.</small></span>
+          <Icon name="arrow" size={20} />
+        </Link>
+
         <DeleteAccount />
         <p className="muted pf-legal"><Link to="/sobre">Sobre o Sacou</Link> · {!NATIVE && <><Link to="/baixar">Baixar o app</Link> · </>}<Link to="/apoie">Apoie</Link> · <Link to="/privacidade">Política de Privacidade</Link> · <Link to="/termos">Termos de Uso</Link></p>
       </div>

@@ -258,3 +258,5 @@
 .tutor-end{scroll-margin-bottom:150px}
 .dv-thread{padding-bottom:8px}
 @media(max-width:860px){.dv-thread{padding-bottom:24px}}
+/* Aula do Juvenal no celular: retrato menor para o botão de começar aparecer mais cedo */
+@media (max-width:640px){.aula-hero > svg,.aula-hero > span svg{width:88px;height:88px}.aula-hero{gap:10px}.aula-hero h1{margin:2px 0 4px}}

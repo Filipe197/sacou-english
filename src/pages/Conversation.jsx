@@ -29,8 +29,8 @@ export default function Conversation() {
       <div style={{ maxWidth: 820, margin: '0 auto' }}>
         <h1 style={{ fontSize: 36, margin: '0 0 8px' }}>Conversar</h1>
         <p className="muted" style={{ fontSize: 17, lineHeight: 1.6, margin: '0 0 24px' }}>
-          Pratique uma conversa de verdade, falando em voz alta. O personagem responde em inglês simples, do seu nível, e quando você errar,
-          o professor mostra a forma certa na hora. No fim, você recebe um resumo e pode salvar as frases como flashcards.
+          Converse falando em voz alta: o personagem responde no seu nível e o professor corrige na hora.
+          <span className="hide-m"> No fim, você recebe um resumo e pode salvar as frases como flashcards.</span>
         </p>
         <Link to="/aula" className="conv-promo">
           <Juvenal mood="grumpy" size={72} />

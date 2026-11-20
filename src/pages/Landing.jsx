@@ -33,6 +33,7 @@ export default function Landing() {
               <a className="plain hide-m" href="#niveis">Níveis</a>
               <Link className="plain hide-m" to="/sobre">Sobre</Link>
               <Link className="plain hide-m" to="/baixar">Baixar app</Link>
+              <Link className="plain hide-m nav-heart" to="/apoie">Apoie 💜</Link>
               {session
                 ? <Link className="btn btn-lime nav-go" to="/aprender" style={{ minHeight: 44 }}>Continuar<span className="hide-m">&nbsp;estudando</span><Icon name="arrow" size={18} /></Link>
                 : <>

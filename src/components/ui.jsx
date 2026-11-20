@@ -196,6 +196,12 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
     return () => window.removeEventListener('keydown', onKey);
   }, [more]);
 
+  const apoie = (
+    <Link to="/apoie" className="nav-apoie">
+      <span className="nav-apoie-ic" aria-hidden="true"><Icon name="heart" size={18} /></span>
+      <span className="nav-apoie-t"><b>Apoie o Sacou</b><small>Ajude a manter o curso grátis</small></span>
+    </Link>
+  );
   const extras = (
     <>
       {inst.canInstall && (
@@ -236,6 +242,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
           );
         })}
         <div className="side-foot">
+          {apoie}
           {inst.canInstall && <button className="nav-a nav-install" onClick={inst.install}><Icon name="download" />Instalar app</button>}
           {!inst.canInstall && inst.iosHint && (
             <button className="nav-a nav-plain" onClick={() => setIosTip(v => !v)} aria-expanded={iosTip}><Icon name="download" />Instalar no iPhone</button>
@@ -283,6 +290,7 @@ export function Shell({ children, rail, mistakesCount = 0 }) {
             </NavLink>
           ))}
         </div>
+        <div className="sheet-apoie">{apoie}</div>
         <div className="sheet-list">{extras}</div>
       </div>
     </div>
