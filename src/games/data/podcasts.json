@@ -6389,6 +6389,87 @@
      "why": "\"It's about respect.\""
     }
    ]
+  },
+  {
+   "id": "pod-c1u5",
+   "level": "C1",
+   "unlock": "c1-u5",
+   "title": "Quem fez, afinal?",
+   "intro": "A Ana e o Tom explicam por que \"cortei o cabelo\" confunde os brasileiros em inglês.",
+   "lines": [
+    {
+     "who": "tom",
+     "en": "Ana, your hair looks great. Did you cut it yourself?",
+     "pt": "Ana, o seu cabelo está ótimo. Você mesma cortou?"
+    },
+    {
+     "who": "ana",
+     "en": "Ha! No, I had it cut at a salon. And that is exactly today's topic.",
+     "pt": "Rá! Não, mandei cortar num salão. E esse é exatamente o tema de hoje."
+    },
+    {
+     "who": "tom",
+     "en": "Right. In Portuguese, people say \"I cut my hair\" even when someone else did it.",
+     "pt": "Isso. Em português, as pessoas dizem \"cortei o cabelo\" mesmo quando foi outra pessoa."
+    },
+    {
+     "who": "ana",
+     "en": "But in English, \"I cut my hair\" means you used the scissors yourself!",
+     "pt": "Mas em inglês, \"I cut my hair\" quer dizer que você mesma usou a tesoura!"
+    },
+    {
+     "who": "tom",
+     "en": "So we say \"I had my hair cut\" or \"I got my hair cut\". The same with cars, phones and houses.",
+     "pt": "Então dizemos \"I had my hair cut\" ou \"I got my hair cut\". O mesmo vale para carros, celulares e casas."
+    },
+    {
+     "who": "ana",
+     "en": "And it works for bad things too. Last year I had my phone stolen.",
+     "pt": "E também serve para coisas ruins. Ano passado roubaram o meu celular."
+    },
+    {
+     "who": "tom",
+     "en": "Oh no. Well, now you can tell that story correctly!",
+     "pt": "Ah, não. Bom, agora você pode contar essa história do jeito certo!"
+    },
+    {
+     "who": "ana",
+     "en": "Exactly. See you next week!",
+     "pt": "Exatamente. Até a semana que vem!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quem cortou o cabelo da Ana?",
+     "options": [
+      "Um salão",
+      "Ela mesma",
+      "O Tom"
+     ],
+     "answer": "Um salão",
+     "why": "\"I had it cut at a salon.\""
+    },
+    {
+     "q": "O que \"I cut my hair\" quer dizer em inglês?",
+     "options": [
+      "Que você mesmo cortou",
+      "Que foi ao salão",
+      "Que não cortou"
+     ],
+     "answer": "Que você mesmo cortou",
+     "why": "\"It means you used the scissors yourself!\""
+    },
+    {
+     "q": "O que aconteceu com a Ana no ano passado?",
+     "options": [
+      "Roubaram o celular dela",
+      "Ela perdeu o cabelo",
+      "Ela mudou de casa"
+     ],
+     "answer": "Roubaram o celular dela",
+     "why": "\"Last year I had my phone stolen.\""
+    }
+   ]
   }
  ]
 }
