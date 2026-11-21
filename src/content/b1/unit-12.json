@@ -1,0 +1,1083 @@
+{
+ "id": "b1-u12",
+ "level": "B1",
+ "order": 12,
+ "title": "Acostumado com…",
+ "subtitle": "Be used to e get used to: hábitos novos e choque cultural.",
+ "can_do": {
+  "text": "Consigo falar do que já estou ou ainda não estou acostumado e comparar costumes de países diferentes.",
+  "source": "CEFR (Conselho da Europa) — Produção oral: descrever hábitos e diferenças culturais, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: be used to + -ing / noun",
+  "Grammar: get used to + -ing / noun",
+  "Grammar: used to (past habit) vs be used to",
+  "Topics: living abroad, customs and culture"
+ ],
+ "words": [
+  [
+   "be used to",
+   "estar acostumado(a) com"
+  ],
+  [
+   "get used to",
+   "se acostumar com"
+  ],
+  [
+   "custom",
+   "costume"
+  ],
+  [
+   "habit",
+   "hábito"
+  ],
+  [
+   "culture shock",
+   "choque cultural"
+  ],
+  [
+   "foreign",
+   "estrangeiro(a)"
+  ],
+  [
+   "accent",
+   "sotaque"
+  ],
+  [
+   "adapt",
+   "se adaptar"
+  ],
+  [
+   "weird",
+   "esquisito(a), estranho(a)"
+  ],
+  [
+   "greeting",
+   "cumprimento, saudação"
+  ],
+  [
+   "hug",
+   "abraço, abraçar"
+  ],
+  [
+   "kiss",
+   "beijo, beijar"
+  ],
+  [
+   "tip",
+   "gorjeta; dica"
+  ],
+  [
+   "schedule",
+   "horário, agenda"
+  ]
+ ],
+ "guide": {
+  "title": "Estar acostumado e se acostumar",
+  "intro": "Três estruturas parecidas, três sentidos diferentes. \"Used to\" sozinho é o passado (costumava). \"Be used to\" é estar acostumado. \"Get used to\" é o processo de se acostumar.",
+  "points": [
+   {
+    "en": "I'm used to waking up early.",
+    "pt": "Estou acostumado a acordar cedo.",
+    "note": "\"Be used to\" + verbo com -ing (ou um substantivo). Nunca \"used to wake\"."
+   },
+   {
+    "en": "I'm not used to the cold weather.",
+    "pt": "Não estou acostumado com o frio.",
+    "note": "Também vale com um substantivo: the cold weather, the food."
+   },
+   {
+    "en": "I'm getting used to driving on the left.",
+    "pt": "Estou me acostumando a dirigir pela esquerda.",
+    "note": "\"Get used to\" = o processo de se acostumar."
+   },
+   {
+    "en": "You'll get used to it.",
+    "pt": "Você vai se acostumar.",
+    "note": "Frase ótima para animar alguém que mudou de vida."
+   },
+   {
+    "en": "I used to live in Rio.",
+    "pt": "Eu morava no Rio (não moro mais).",
+    "note": "\"Used to\" + verbo normal = hábito do passado. É outra coisa!"
+   },
+   {
+    "en": "It took me a month to get used to the food.",
+    "pt": "Levei um mês para me acostumar com a comida.",
+    "note": "\"It took me ... to\" = levei (tempo) para."
+   }
+  ],
+  "tips": [
+   "Truque: se der para trocar por \"acostumado\", use \"be used to + -ing\". Se for \"costumava\", use \"used to + verbo\".",
+   "O \"to\" de \"be used to\" é uma preposição; por isso vem -ing depois: used to eating, used to driving."
+  ]
+ },
+ "extra_vocab": [
+  {
+   "word": "homesick",
+   "reason": "com saudade de casa (palavra central de quem mora fora; não está na CEFR-J)"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "b1-u12-l1",
+   "title": "Estou acostumado",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l1-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm used to ___ early.",
+     "pt": "Estou acostumado a acordar cedo.",
+     "options": [
+      "waking up",
+      "wake up",
+      "woke up"
+     ],
+     "answer": "waking up",
+     "why": "\"Be used to\" + verbo com -ing.",
+     "wrong": {
+      "wake up": "Depois de \"be used to\" vem o -ing.",
+      "woke up": "Não é passado."
+     }
+    },
+    {
+     "id": "b1u12l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She ___ used to spicy food.",
+     "pt": "Ela não está acostumada com comida apimentada.",
+     "options": [
+      "isn't",
+      "doesn't",
+      "didn't"
+     ],
+     "answer": "isn't",
+     "why": "Negativa de \"be used to\": isn't used to.",
+     "wrong": {
+      "doesn't": "\"Doesn't used to\" não existe.",
+      "didn't": "\"Didn't used to\" seria outro sentido (costumava)."
+     }
+    },
+    {
+     "id": "b1u12l1-3",
+     "type": "meaning",
+     "en": "We're used to the noise of the city.",
+     "options": [
+      "Estamos acostumados com o barulho da cidade.",
+      "Costumávamos morar na cidade.",
+      "A cidade é barulhenta demais para nós."
+     ],
+     "answer": "Estamos acostumados com o barulho da cidade.",
+     "why": "\"Be used to + substantivo\" = acostumado com."
+    },
+    {
+     "id": "b1u12l1-4",
+     "type": "listen",
+     "en": "I'm not used to the cold.",
+     "options": [
+      "Não estou acostumado com o frio.",
+      "Eu não gosto de frio.",
+      "Eu costumava sentir frio."
+     ],
+     "answer": "Não estou acostumado com o frio.",
+     "why": "\"Not used to\" = não acostumado."
+    },
+    {
+     "id": "b1u12l1-5",
+     "type": "build",
+     "pt": "Você está acostumado a trabalhar à noite?",
+     "answer": "Are you used to working at night",
+     "extra": [
+      "work",
+      "do"
+     ],
+     "display": "Are you used to working at night?",
+     "why": "Pergunta: Are you used to + -ing?"
+    },
+    {
+     "id": "b1u12l1-6",
+     "type": "match",
+     "pairs": [
+      [
+       "custom",
+       "costume"
+      ],
+      [
+       "habit",
+       "hábito"
+      ],
+      [
+       "accent",
+       "sotaque"
+      ],
+      [
+       "greeting",
+       "cumprimento"
+      ]
+     ],
+     "why": "\"Custom\" é um costume de um povo; \"habit\" é um hábito pessoal."
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l2",
+   "title": "Estou me acostumando",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm slowly getting used to ___ on the left.",
+     "pt": "Estou me acostumando aos poucos a dirigir pela esquerda.",
+     "options": [
+      "driving",
+      "drive",
+      "drove"
+     ],
+     "answer": "driving",
+     "why": "\"Get used to\" + -ing.",
+     "wrong": {
+      "drive": "Precisa do -ing.",
+      "drove": "Não é passado."
+     }
+    },
+    {
+     "id": "b1u12l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Don't worry. You'll ___ used to it.",
+     "pt": "Não se preocupe. Você vai se acostumar.",
+     "options": [
+      "get",
+      "be",
+      "use"
+     ],
+     "answer": "get",
+     "why": "\"Get used to\" = se acostumar (processo).",
+     "wrong": {
+      "be": "\"You'll be used to it\" é possível, mas o natural para animar alguém é \"get\".",
+      "use": "\"Use\" = usar."
+     }
+    },
+    {
+     "id": "b1u12l2-3",
+     "type": "meaning",
+     "en": "It took me two months to get used to the food.",
+     "options": [
+      "Levei dois meses para me acostumar com a comida.",
+      "A comida levou dois meses para ficar pronta.",
+      "Eu comi a mesma comida por dois meses."
+     ],
+     "answer": "Levei dois meses para me acostumar com a comida.",
+     "why": "\"It took me\" = levei (tempo)."
+    },
+    {
+     "id": "b1u12l2-4",
+     "type": "build",
+     "pt": "Ela está se adaptando à cultura nova.",
+     "answer": "She is adapting to the new culture",
+     "extra": [
+      "adapt",
+      "at"
+     ],
+     "display": "She is adapting to the new culture.",
+     "why": "\"Adapt to\" = se adaptar a."
+    },
+    {
+     "id": "b1u12l2-5",
+     "type": "listen",
+     "en": "I'm getting used to the accent.",
+     "options": [
+      "Estou me acostumando com o sotaque.",
+      "Já estou acostumado com o sotaque.",
+      "Não entendo o sotaque."
+     ],
+     "answer": "Estou me acostumando com o sotaque.",
+     "why": "\"Getting used to\" = me acostumando."
+    },
+    {
+     "id": "b1u12l2-6",
+     "type": "speak",
+     "en": "You'll get used to it.",
+     "pt": "Você vai se acostumar.",
+     "why": "\"Used to\" soa como \"IÚS-tu\", com som de s."
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l3",
+   "title": "Costumava ou acostumado?",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ to live in a small town, but now I live in London.",
+     "pt": "Eu morava numa cidade pequena, mas agora moro em Londres.",
+     "options": [
+      "used",
+      "am used",
+      "get used"
+     ],
+     "answer": "used",
+     "why": "Hábito do passado que mudou: used to + verbo normal.",
+     "wrong": {
+      "am used": "\"Am used to\" seria \"estou acostumado\", e pediria -ing.",
+      "get used": "Seria \"se acostumar\"."
+     }
+    },
+    {
+     "id": "b1u12l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm used to ___ in a big city now.",
+     "pt": "Agora estou acostumado a morar numa cidade grande.",
+     "options": [
+      "living",
+      "live",
+      "lived"
+     ],
+     "answer": "living",
+     "why": "\"Be used to\" + -ing.",
+     "wrong": {
+      "live": "Depois de \"am used to\", -ing.",
+      "lived": "Não é passado."
+     }
+    },
+    {
+     "id": "b1u12l3-3",
+     "type": "meaning",
+     "en": "He used to smoke, but he stopped.",
+     "options": [
+      "Ele fumava, mas parou.",
+      "Ele está acostumado a fumar.",
+      "Ele está se acostumando a fumar."
+     ],
+     "answer": "Ele fumava, mas parou.",
+     "why": "\"Used to + verbo\" = costumava (passado)."
+    },
+    {
+     "id": "b1u12l3-4",
+     "type": "choice",
+     "prompt": "Qual frase quer dizer \"estou acostumado a cozinhar\"?",
+     "en": "___ cooking.",
+     "pt": "Estou acostumado a cozinhar.",
+     "options": [
+      "I'm used to",
+      "I used to",
+      "I use to"
+     ],
+     "answer": "I'm used to",
+     "why": "\"I'm used to cooking\" = estou acostumado.",
+     "wrong": {
+      "I used to": "\"I used to cook\" (verbo normal) = eu cozinhava.",
+      "I use to": "Não existe."
+     }
+    },
+    {
+     "id": "b1u12l3-5",
+     "type": "build",
+     "pt": "Eu não estava acostumado com o horário.",
+     "answer": "I wasn't used to the schedule",
+     "extra": [
+      "didn't",
+      "use"
+     ],
+     "display": "I wasn't used to the schedule.",
+     "why": "No passado: wasn't used to."
+    },
+    {
+     "id": "b1u12l3-6",
+     "type": "listen",
+     "en": "We used to hug a lot in Brazil.",
+     "options": [
+      "A gente se abraçava muito no Brasil.",
+      "Estamos acostumados a abraçar.",
+      "Vamos nos abraçar no Brasil."
+     ],
+     "answer": "A gente se abraçava muito no Brasil.",
+     "why": "\"Used to hug\" = costumava abraçar."
+    },
+    {
+     "id": "b1u12l3-7",
+     "type": "match",
+     "pairs": [
+      [
+       "used to",
+       "costumava"
+      ],
+      [
+       "be used to",
+       "estar acostumado"
+      ],
+      [
+       "get used to",
+       "se acostumar"
+      ],
+      [
+       "adapt",
+       "se adaptar"
+      ]
+     ],
+     "why": "Três estruturas: passado, estado e processo."
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l4",
+   "title": "Prática: choque cultural",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l4-1",
+     "type": "match",
+     "pairs": [
+      [
+       "culture shock",
+       "choque cultural"
+      ],
+      [
+       "foreign",
+       "estrangeiro"
+      ],
+      [
+       "weird",
+       "esquisito"
+      ],
+      [
+       "tip",
+       "gorjeta"
+      ]
+     ],
+     "why": "\"Tip\" = gorjeta e também dica."
+    },
+    {
+     "id": "b1u12l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "In the USA, people aren't used to ___ when they meet.",
+     "pt": "Nos EUA, as pessoas não estão acostumadas a se beijar quando se encontram.",
+     "options": [
+      "kissing",
+      "kiss",
+      "kissed"
+     ],
+     "answer": "kissing",
+     "why": "\"Be used to\" + -ing.",
+     "wrong": {
+      "kiss": "Precisa do -ing.",
+      "kissed": "Não é passado."
+     }
+    },
+    {
+     "id": "b1u12l4-3",
+     "type": "meaning",
+     "en": "At first it felt weird to leave a tip, but now I do it every time.",
+     "options": [
+      "No começo era estranho deixar gorjeta, mas agora deixo sempre.",
+      "Nunca deixo gorjeta.",
+      "Gorjeta é proibida lá."
+     ],
+     "answer": "No começo era estranho deixar gorjeta, mas agora deixo sempre.",
+     "why": "\"At first\" = no começo. \"Weird\" = estranho."
+    },
+    {
+     "id": "b1u12l4-4",
+     "type": "build",
+     "pt": "Os estrangeiros às vezes sentem choque cultural.",
+     "answer": "Foreigners sometimes feel culture shock",
+     "extra": [
+      "foreign",
+      "feels"
+     ],
+     "display": "Foreigners sometimes feel culture shock.",
+     "why": "\"Foreigner\" = estrangeiro (pessoa). \"Foreign\" = adjetivo."
+    },
+    {
+     "id": "b1u12l4-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How is life in London?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Good! I'm getting used to the weather.",
+      "Good! I used to the weather.",
+      "Good! I get used the weather."
+     ],
+     "answer": "Good! I'm getting used to the weather.",
+     "pt": "Boa! Estou me acostumando com o tempo.",
+     "why": "\"Getting used to\" = me acostumando.",
+     "wrong": {
+      "Good! I used to the weather.": "Faltou o \"'m getting\" e não faz sentido.",
+      "Good! I get used the weather.": "Faltou o \"to\"."
+     }
+    },
+    {
+     "id": "b1u12l4-6",
+     "type": "listen",
+     "en": "In Japan, people are used to bowing as a greeting.",
+     "options": [
+      "No Japão, as pessoas estão acostumadas a se curvar como cumprimento.",
+      "No Japão, as pessoas se abraçam.",
+      "O cumprimento no Japão é um beijo."
+     ],
+     "answer": "No Japão, as pessoas estão acostumadas a se curvar como cumprimento.",
+     "why": "\"Bow\" = curvar-se. \"Greeting\" = cumprimento."
+    },
+    {
+     "id": "b1u12l4-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It's a Brazilian ___ to eat rice and beans every day.",
+     "pt": "É um costume brasileiro comer arroz e feijão todo dia.",
+     "options": [
+      "custom",
+      "habit",
+      "accent"
+     ],
+     "answer": "custom",
+     "why": "Costume de um povo = custom.",
+     "wrong": {
+      "habit": "\"Habit\" é um hábito pessoal.",
+      "accent": "\"Accent\" = sotaque."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l5-1",
+     "type": "type",
+     "pt": "Estou acostumado a acordar cedo.",
+     "answer": "I'm used to waking up early.",
+     "accept": [
+      "I am used to waking up early.",
+      "I'm used to getting up early.",
+      "I am used to getting up early."
+     ],
+     "why": "Be used to + -ing."
+    },
+    {
+     "id": "b1u12l5-2",
+     "type": "type",
+     "pt": "Você vai se acostumar.",
+     "answer": "You'll get used to it.",
+     "accept": [
+      "You will get used to it."
+     ],
+     "why": "\"Get used to it\" = se acostumar com isso."
+    },
+    {
+     "id": "b1u12l5-3",
+     "type": "dictation",
+     "en": "I'm not used to the food.",
+     "why": "\"Not used to\" = não acostumado."
+    },
+    {
+     "id": "b1u12l5-4",
+     "type": "type",
+     "pt": "Eu morava em Salvador.",
+     "answer": "I used to live in Salvador.",
+     "why": "Passado que mudou: used to + verbo normal."
+    },
+    {
+     "id": "b1u12l5-5",
+     "type": "dictation",
+     "en": "She is getting used to her new job.",
+     "why": "\"Getting used to\" = se acostumando."
+    },
+    {
+     "id": "b1u12l5-6",
+     "type": "type",
+     "pt": "Ele tem um sotaque forte.",
+     "answer": "He has a strong accent.",
+     "why": "\"Accent\" = sotaque."
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l6-1",
+     "type": "listen",
+     "en": "I'll never get used to this weather!",
+     "options": [
+      "Nunca vou me acostumar com este tempo!",
+      "Eu adoro este tempo.",
+      "Eu me acostumei com o tempo."
+     ],
+     "answer": "Nunca vou me acostumar com este tempo!",
+     "why": "\"Never get used to\" = nunca se acostumar."
+    },
+    {
+     "id": "b1u12l6-2",
+     "type": "dictation",
+     "en": "They are used to hard work.",
+     "why": "\"Hard work\" = trabalho duro."
+    },
+    {
+     "id": "b1u12l6-3",
+     "type": "listen",
+     "en": "It took me a year to adapt.",
+     "options": [
+      "Levei um ano para me adaptar.",
+      "Eu me adaptei em um dia.",
+      "Faz um ano que eu moro aqui."
+     ],
+     "answer": "Levei um ano para me adaptar.",
+     "why": "\"It took me a year\" = levei um ano."
+    },
+    {
+     "id": "b1u12l6-4",
+     "type": "dictation",
+     "en": "In Brazil we hug our friends.",
+     "why": "\"Hug\" = abraçar."
+    },
+    {
+     "id": "b1u12l6-5",
+     "type": "listen",
+     "en": "I wasn't used to people being so quiet.",
+     "options": [
+      "Eu não estava acostumado com as pessoas tão quietas.",
+      "As pessoas não eram quietas.",
+      "Eu sou uma pessoa quieta."
+     ],
+     "answer": "Eu não estava acostumado com as pessoas tão quietas.",
+     "why": "\"Wasn't used to\" = não estava acostumado."
+    },
+    {
+     "id": "b1u12l6-6",
+     "type": "dictation",
+     "en": "Is it normal to leave a tip?",
+     "why": "\"Leave a tip\" = deixar gorjeta."
+    },
+    {
+     "id": "b1u12l6-7",
+     "type": "speak",
+     "en": "I'm getting used to it.",
+     "pt": "Estou me acostumando.",
+     "why": "\"Getting used to it\" soa quase junto: \"GUÉ-tin-IÚS-tu-it\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How long have you been living in Canada?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Six months. I'm still getting used to the cold!",
+      "Six months. I'm still get used to the cold!",
+      "Six months. I used to the cold."
+     ],
+     "answer": "Six months. I'm still getting used to the cold!",
+     "pt": "Seis meses. Ainda estou me acostumando com o frio!",
+     "why": "\"Still getting used to\" = ainda me acostumando.",
+     "wrong": {
+      "Six months. I'm still get used to the cold!": "Precisa do -ing: getting.",
+      "Six months. I used to the cold.": "Não faz sentido."
+     }
+    },
+    {
+     "id": "b1u12l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What was the hardest thing?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Dinner at six! In Brazil I'm used to eating at nine.",
+      "Dinner at six! In Brazil I'm used to eat at nine.",
+      "Dinner at six! In Brazil I use to eat at nine."
+     ],
+     "answer": "Dinner at six! In Brazil I'm used to eating at nine.",
+     "pt": "Jantar às seis! No Brasil estou acostumado a jantar às nove.",
+     "why": "\"Be used to eating\" (-ing).",
+     "wrong": {
+      "Dinner at six! In Brazil I'm used to eat at nine.": "Depois de \"am used to\", -ing.",
+      "Dinner at six! In Brazil I use to eat at nine.": "\"I use to\" não existe."
+     }
+    },
+    {
+     "id": "b1u12l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do people kiss when they meet there?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, they usually shake hands. It felt weird at first.",
+      "No, they usually kissing.",
+      "Yes, they're used to kiss."
+     ],
+     "answer": "No, they usually shake hands. It felt weird at first.",
+     "pt": "Não, eles costumam apertar a mão. No começo foi estranho.",
+     "why": "\"Shake hands\" = apertar as mãos. \"At first\" = no começo.",
+     "wrong": {
+      "No, they usually kissing.": "Falta o verbo certo.",
+      "Yes, they're used to kiss.": "Depois de \"used to\" (acostumado), -ing."
+     }
+    },
+    {
+     "id": "b1u12l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I feel a bit homesick sometimes."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "That's normal. You'll get used to it.",
+      "That's normal. You'll get use it.",
+      "That is normal. You used to it."
+     ],
+     "answer": "That's normal. You'll get used to it.",
+     "pt": "É normal. Você vai se acostumar.",
+     "why": "\"Homesick\" = com saudade de casa. \"You'll get used to it\" anima a pessoa.",
+     "wrong": {
+      "That's normal. You'll get use it.": "É \"get used to it\".",
+      "That is normal. You used to it.": "Não faz sentido."
+     }
+    },
+    {
+     "id": "b1u12l7-5",
+     "type": "speak",
+     "en": "I'm not used to the food yet.",
+     "pt": "Ainda não estou acostumado com a comida.",
+     "why": "\"Yet\" no fim = ainda não."
+    },
+    {
+     "id": "b1u12l7-6",
+     "type": "speak",
+     "en": "It felt weird at first.",
+     "pt": "No começo pareceu estranho.",
+     "why": "\"Weird\" soa como \"UÍRD\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l8",
+   "title": "Lendo: um brasileiro em Londres",
+   "added": "2026-11",
+   "story": {
+    "title": "Um brasileiro em Londres",
+    "lines": [
+     {
+      "who": "Bruno",
+      "en": "I moved to London six months ago. Life here is very different!",
+      "pt": "Me mudei para Londres há seis meses. A vida aqui é muito diferente!"
+     },
+     {
+      "who": "Bruno",
+      "en": "At first, it was weird that people wait in line for everything. Now I'm used to it.",
+      "pt": "No começo, era estranho que as pessoas fazem fila para tudo. Agora estou acostumado."
+     },
+     {
+      "ask": "O Bruno já se acostumou com as filas?",
+      "options": [
+       "Sim",
+       "Não",
+       "Ainda não sabe"
+      ],
+      "answer": "Sim",
+      "why": "\"Now I'm used to it.\""
+     },
+     {
+      "who": "Bruno",
+      "en": "But I'm still not ___ to the grey weather. I miss the sun!",
+      "pt": "Mas ainda não estou acostumado com o tempo cinzento. Sinto falta do sol!",
+      "gap": {
+       "answer": "used",
+       "options": [
+        "used",
+        "use",
+        "using"
+       ]
+      }
+     },
+     {
+      "who": "Bruno",
+      "en": "I'm getting used to eating dinner at six, and I've started to like it.",
+      "pt": "Estou me acostumando a jantar às seis, e comecei a gostar."
+     },
+     {
+      "who": "Bruno",
+      "en": "The thing I miss most? The hugs from my friends. Here people just shake hands!",
+      "pt": "Do que eu mais sinto falta? Dos abraços dos amigos. Aqui as pessoas só apertam a mão!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u12l8-1",
+     "type": "story",
+     "why": "O Bruno escreve sobre os primeiros meses morando em Londres. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b1u12l8-2",
+     "type": "quiz",
+     "q": "Do que o Bruno ainda não se acostumou?",
+     "options": [
+      "Com o tempo cinzento",
+      "Com o metrô",
+      "Com o trabalho"
+     ],
+     "answer": "Com o tempo cinzento",
+     "why": "\"I'm still not used to the grey weather.\""
+    },
+    {
+     "id": "b1u12l8-3",
+     "type": "quiz",
+     "q": "O que ele achou estranho no começo?",
+     "options": [
+      "As pessoas fazerem fila para tudo",
+      "O preço da comida",
+      "O sotaque"
+     ],
+     "answer": "As pessoas fazerem fila para tudo",
+     "why": "\"At first, it was weird that people wait in line for everything.\""
+    },
+    {
+     "id": "b1u12l8-4",
+     "type": "quiz",
+     "q": "Do que ele sente falta?",
+     "options": [
+      "Dos abraços dos amigos",
+      "Do trânsito",
+      "Do calor do escritório"
+     ],
+     "answer": "Dos abraços dos amigos",
+     "why": "\"I miss the hugs from my friends.\""
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u12l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He isn't used to ___ alone.",
+     "pt": "Ele não está acostumado a morar sozinho.",
+     "options": [
+      "living",
+      "live",
+      "lives"
+     ],
+     "answer": "living",
+     "why": "\"Be used to\" + -ing.",
+     "wrong": {
+      "live": "Precisa do -ing.",
+      "lives": "Precisa do -ing."
+     }
+    },
+    {
+     "id": "b1u12l9-2",
+     "type": "type",
+     "pt": "Estou me acostumando com o trabalho novo.",
+     "answer": "I'm getting used to the new job.",
+     "accept": [
+      "I am getting used to the new job.",
+      "I'm getting used to my new job.",
+      "I am getting used to my new job."
+     ],
+     "why": "\"Getting used to\" + substantivo."
+    },
+    {
+     "id": "b1u12l9-3",
+     "type": "meaning",
+     "en": "We used to eat dinner late, but now we eat at seven.",
+     "options": [
+      "A gente jantava tarde, mas agora janta às sete.",
+      "A gente está acostumado a jantar tarde.",
+      "A gente vai jantar às sete."
+     ],
+     "answer": "A gente jantava tarde, mas agora janta às sete.",
+     "why": "\"Used to eat\" = costumava jantar (passado)."
+    },
+    {
+     "id": "b1u12l9-4",
+     "type": "dictation",
+     "en": "It took me a long time to adapt.",
+     "why": "\"It took me\" = levei."
+    },
+    {
+     "id": "b1u12l9-5",
+     "type": "listen",
+     "en": "You never get used to being away from your family.",
+     "options": [
+      "A gente nunca se acostuma a ficar longe da família.",
+      "Você nunca viaja com a família.",
+      "A família está acostumada com você longe."
+     ],
+     "answer": "A gente nunca se acostuma a ficar longe da família.",
+     "why": "\"Being away\" = ficar longe."
+    },
+    {
+     "id": "b1u12l9-6",
+     "type": "build",
+     "pt": "Eles não estão acostumados com o nosso horário.",
+     "answer": "They aren't used to our schedule",
+     "extra": [
+      "don't",
+      "use"
+     ],
+     "display": "They aren't used to our schedule.",
+     "why": "Be used to + substantivo (our schedule)."
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l10",
+   "title": "História: o primeiro jantar",
+   "added": "2026-11",
+   "story": {
+    "title": "O primeiro jantar",
+    "lines": [
+     {
+      "who": "Leo",
+      "en": "Emma, welcome! Don't worry, my family is a bit loud.",
+      "pt": "Emma, bem-vinda! Não se preocupe, minha família é um pouco barulhenta."
+     },
+     {
+      "who": "Emma",
+      "en": "A bit? I'm not used to so many people talking at the same time!",
+      "pt": "Um pouco? Não estou acostumada com tanta gente falando ao mesmo tempo!"
+     },
+     {
+      "who": "Leo",
+      "en": "And we're having dinner at ten. Is that late for you?",
+      "pt": "E a gente vai jantar às dez. É tarde para você?"
+     },
+     {
+      "who": "Emma",
+      "en": "Very late! At home, we're used to ___ dinner at six.",
+      "pt": "Muito tarde! Em casa, estamos acostumados a jantar às seis.",
+      "gap": {
+       "answer": "having",
+       "options": [
+        "having",
+        "have",
+        "had"
+       ]
+      }
+     },
+     {
+      "ask": "Por que o jantar parece tarde para a Emma?",
+      "options": [
+       "Em casa ela janta às seis",
+       "Ela já jantou",
+       "Ela vai dormir cedo"
+      ],
+      "answer": "Em casa ela janta às seis",
+      "why": "\"At home, we're used to having dinner at six.\""
+     },
+     {
+      "who": "Leo",
+      "en": "You'll get used to it. Look, my grandma is coming.",
+      "pt": "Você vai se acostumar. Olha, minha avó está vindo."
+     },
+     {
+      "who": "Emma",
+      "en": "Oh! She gives me a big hug. I think I'm going to love this family!",
+      "pt": "Ah! Ela me dá um abraço apertado. Acho que vou adorar esta família!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u12l10-1",
+     "type": "story",
+     "why": "A Emma, inglesa, janta pela primeira vez com a família brasileira do namorado. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u12l10-2",
+     "type": "quiz",
+     "q": "Do que a Emma não está acostumada?",
+     "options": [
+      "Com tanta gente falando junto",
+      "Com comida brasileira",
+      "Com o calor"
+     ],
+     "answer": "Com tanta gente falando junto",
+     "why": "\"I'm not used to so many people talking at the same time!\""
+    },
+    {
+     "id": "b1u12l10-3",
+     "type": "quiz",
+     "q": "A que horas é o jantar na casa da Emma?",
+     "options": [
+      "Às seis",
+      "Às dez",
+      "Às oito"
+     ],
+     "answer": "Às seis",
+     "why": "\"At home, we're used to having dinner at six.\""
+    },
+    {
+     "id": "b1u12l10-4",
+     "type": "quiz",
+     "q": "O que a avó do Leo faz no fim?",
+     "options": [
+      "Dá um abraço apertado na Emma",
+      "Ensina uma receita",
+      "Pede para ela voltar cedo"
+     ],
+     "answer": "Dá um abraço apertado na Emma",
+     "why": "\"She gives Emma a big hug.\""
+    }
+   ]
+  }
+ ]
+}

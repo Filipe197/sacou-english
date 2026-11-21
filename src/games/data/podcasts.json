@@ -3928,6 +3928,350 @@
    ]
   },
   {
+   "id": "pod-b1u9",
+   "level": "B1",
+   "unlock": "b1-u9",
+   "title": "O que você tem feito?",
+   "intro": "A Ana e o Tom contam o que andam fazendo ultimamente.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Ana, you look tired. What have you been doing?",
+     "pt": "E eu sou o Tom. Ana, você parece cansada. O que você tem feito?"
+    },
+    {
+     "who": "ana",
+     "en": "I've been learning to play the guitar. I've been practising every night!",
+     "pt": "Estou aprendendo a tocar violão. Tenho treinado toda noite!"
+    },
+    {
+     "who": "tom",
+     "en": "How long have you been playing?",
+     "pt": "Há quanto tempo você toca?"
+    },
+    {
+     "who": "ana",
+     "en": "Only for two months. And you? You look very relaxed.",
+     "pt": "Só há dois meses. E você? Você parece bem relaxado."
+    },
+    {
+     "who": "tom",
+     "en": "I've been doing yoga lately. And I've been sleeping much better.",
+     "pt": "Tenho feito ioga ultimamente. E tenho dormido muito melhor."
+    },
+    {
+     "who": "ana",
+     "en": "Maybe I should try it. My neighbours have been complaining about the guitar!",
+     "pt": "Talvez eu devesse tentar. Meus vizinhos têm reclamado do violão!"
+    },
+    {
+     "who": "tom",
+     "en": "Ha! That's all for today. Thank you for listening!",
+     "pt": "Rá! Por hoje é só. Obrigado por ouvir!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a Ana está aprendendo?",
+     "options": [
+      "Violão",
+      "Ioga",
+      "Piano"
+     ],
+     "answer": "Violão",
+     "why": "\"I've been learning to play the guitar.\""
+    },
+    {
+     "q": "Há quanto tempo ela toca?",
+     "options": [
+      "Dois meses",
+      "Dois anos",
+      "Duas semanas"
+     ],
+     "answer": "Dois meses",
+     "why": "\"Only for two months.\""
+    },
+    {
+     "q": "Quem tem reclamado?",
+     "options": [
+      "Os vizinhos da Ana",
+      "O Tom",
+      "A professora de ioga"
+     ],
+     "answer": "Os vizinhos da Ana",
+     "why": "\"My neighbours have been complaining about the guitar!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u10",
+   "level": "B1",
+   "unlock": "b1-u10",
+   "title": "Como perguntar sem parecer grosso",
+   "intro": "A Ana e o Tom mostram o jeito educado de pedir informação na rua.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: how to ask questions politely.",
+     "pt": "E eu sou o Tom. Hoje: como fazer perguntas com educação."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, imagine you're in London. You need the station. What do you say?",
+     "pt": "Tom, imagina que você está em Londres. Precisa da estação. O que você diz?"
+    },
+    {
+     "who": "tom",
+     "en": "I say: \"Excuse me, do you know where the station is?\"",
+     "pt": "Eu digo: \"Com licença, você sabe onde fica a estação?\""
+    },
+    {
+     "who": "ana",
+     "en": "Perfect! Not \"where is the station\". The verb goes to the end.",
+     "pt": "Perfeito! Não \"where is the station\". O verbo vai para o fim."
+    },
+    {
+     "who": "tom",
+     "en": "And in a shop: \"Could you tell me how much this costs?\"",
+     "pt": "E numa loja: \"Você poderia me dizer quanto custa isto?\""
+    },
+    {
+     "who": "ana",
+     "en": "Great. No \"does\" in the middle!",
+     "pt": "Ótimo. Nada de \"does\" no meio!"
+    },
+    {
+     "who": "tom",
+     "en": "I wonder if you are practising now. That's all for today!",
+     "pt": "Será que vocês estão praticando agora? Por hoje é só!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! Thank you for listening!",
+     "pt": "Tchau! Obrigada por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Como o Tom pergunta pela estação?",
+     "options": [
+      "Do you know where the station is?",
+      "Where is station?",
+      "Station where?"
+     ],
+     "answer": "Do you know where the station is?",
+     "why": "É a pergunta indireta, educada."
+    },
+    {
+     "q": "O que a Ana diz sobre o verbo?",
+     "options": [
+      "Vai para o fim",
+      "Vai para o começo",
+      "Não muda"
+     ],
+     "answer": "Vai para o fim",
+     "why": "\"The verb goes to the end.\""
+    },
+    {
+     "q": "O que não deve aparecer no meio da pergunta indireta?",
+     "options": [
+      "\"Does\"",
+      "\"Where\"",
+      "\"Excuse me\""
+     ],
+     "answer": "\"Does\"",
+     "why": "\"No 'does' in the middle!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u11",
+   "level": "B1",
+   "unlock": "b1-u11",
+   "title": "O jogo do detetive",
+   "intro": "A Ana descreve uma pessoa misteriosa e o Tom tenta adivinhar quem é.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're playing a detective game!",
+     "pt": "E eu sou o Tom. Hoje vamos jogar um jogo de detetive!"
+    },
+    {
+     "who": "ana",
+     "en": "I'm thinking of a person. She wears a white coat and works in a hospital.",
+     "pt": "Estou pensando numa pessoa. Ela usa jaleco branco e trabalha num hospital."
+    },
+    {
+     "who": "tom",
+     "en": "She must be a doctor. Or she might be a nurse.",
+     "pt": "Deve ser médica. Ou pode ser enfermeira."
+    },
+    {
+     "who": "ana",
+     "en": "Good! She also has a lot of animals in her office.",
+     "pt": "Boa! Ela também tem muitos animais no consultório."
+    },
+    {
+     "who": "tom",
+     "en": "Animals? Then she can't be a normal doctor. She must be a vet!",
+     "pt": "Animais? Então não pode ser uma médica normal. Deve ser veterinária!"
+    },
+    {
+     "who": "ana",
+     "en": "Correct! You're a great detective.",
+     "pt": "Acertou! Você é um ótimo detetive."
+    },
+    {
+     "who": "tom",
+     "en": "Ha! That's all for today. Try this game with your friends!",
+     "pt": "Rá! Por hoje é só. Tentem esse jogo com os amigos!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual foi o primeiro palpite do Tom?",
+     "options": [
+      "Médica ou enfermeira",
+      "Professora",
+      "Detetive"
+     ],
+     "answer": "Médica ou enfermeira",
+     "why": "\"She must be a doctor. Or she might be a nurse.\""
+    },
+    {
+     "q": "Qual pista mudou o palpite?",
+     "options": [
+      "Os animais no consultório",
+      "O jaleco branco",
+      "O hospital"
+     ],
+     "answer": "Os animais no consultório",
+     "why": "\"She also has a lot of animals in her office.\""
+    },
+    {
+     "q": "Qual era a profissão?",
+     "options": [
+      "Veterinária",
+      "Enfermeira",
+      "Médica de hospital"
+     ],
+     "answer": "Veterinária",
+     "why": "\"She must be a vet!\" — \"Correct!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u12",
+   "level": "B1",
+   "unlock": "b1-u12",
+   "title": "Choque cultural",
+   "intro": "O Tom, que é inglês, conta o que foi mais difícil de se acostumar no Brasil.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're talking about culture shock.",
+     "pt": "E eu sou o Tom. Hoje vamos falar de choque cultural."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, what was the hardest thing to get used to in Brazil?",
+     "pt": "Tom, o que foi mais difícil de se acostumar no Brasil?"
+    },
+    {
+     "who": "tom",
+     "en": "The kisses! In England, we aren't used to kissing people we don't know.",
+     "pt": "Os beijos! Na Inglaterra, não estamos acostumados a beijar quem a gente não conhece."
+    },
+    {
+     "who": "ana",
+     "en": "Ha! And now?",
+     "pt": "Rá! E agora?"
+    },
+    {
+     "who": "tom",
+     "en": "Now I'm used to it. I even hug my neighbours!",
+     "pt": "Agora estou acostumado. Até abraço meus vizinhos!"
+    },
+    {
+     "who": "ana",
+     "en": "When I lived in London, I couldn't get used to the grey sky.",
+     "pt": "Quando eu morei em Londres, não conseguia me acostumar com o céu cinzento."
+    },
+    {
+     "who": "tom",
+     "en": "You never get used to that! That's all for today.",
+     "pt": "Com isso ninguém se acostuma! Por hoje é só."
+    },
+    {
+     "who": "ana",
+     "en": "Bye! Thank you for listening!",
+     "pt": "Tchau! Obrigada por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que foi mais difícil para o Tom?",
+     "options": [
+      "Os beijos ao cumprimentar",
+      "A comida",
+      "O calor"
+     ],
+     "answer": "Os beijos ao cumprimentar",
+     "why": "Ele responde: \"The kisses!\" (os beijos)."
+    },
+    {
+     "q": "O Tom já se acostumou?",
+     "options": [
+      "Sim, até abraça os vizinhos",
+      "Não, ainda estranha",
+      "Ele voltou para a Inglaterra"
+     ],
+     "answer": "Sim, até abraça os vizinhos",
+     "why": "\"Now I'm used to it. I even hug my neighbours!\""
+    },
+    {
+     "q": "Com o que a Ana não se acostumou em Londres?",
+     "options": [
+      "O céu cinzento",
+      "As filas",
+      "O jantar cedo"
+     ],
+     "answer": "O céu cinzento",
+     "why": "\"I couldn't get used to the grey sky.\""
+    }
+   ]
+  },
+  {
    "id": "pod-b2u1",
    "level": "B2",
    "unlock": "b2-u1",
