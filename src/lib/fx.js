@@ -222,8 +222,9 @@ async function slowSpeak(text, who) {
     if (urls.every(Boolean)) { await playWords(urls, my); return; }
   } catch { /* cai no plano B */ }
   if (my !== seq) return;
-  // alguma palavra sem áudio: com 1 palavra, usa o áudio da frase mais devagar; senão, palavra por palavra no aparelho
-  const full = words.length === 1 && clipFor(text, who);
+  // alguma palavra sem áudio próprio: toca o áudio da frase inteira mais devagar (voz natural);
+  // só sem nenhum áudio pronto cai na voz do aparelho, palavra por palavra
+  const full = clipFor(text, who);
   if (full) { await playClip(full, true); return; }
   await ttsWords(text.split(/\s+/).filter(Boolean), who, my);
 }

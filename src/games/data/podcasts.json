@@ -2392,6 +2392,370 @@
    ]
   },
   {
+   "id": "pod-a2u9",
+   "level": "A2",
+   "unlock": "a2-u9",
+   "title": "Conselhos para uma vida saudável",
+   "intro": "A Ana e o Tom trocam conselhos simples para ficar com saúde.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're talking about health.",
+     "pt": "E eu sou o Tom. Hoje vamos falar de saúde."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, you look tired. Are you OK?",
+     "pt": "Tom, você parece cansado. Está tudo bem?"
+    },
+    {
+     "who": "tom",
+     "en": "I have a headache. I didn't sleep well last night.",
+     "pt": "Estou com dor de cabeça. Não dormi bem ontem à noite."
+    },
+    {
+     "who": "ana",
+     "en": "You shouldn't look at your phone before bed.",
+     "pt": "Você não deveria olhar o celular antes de dormir."
+    },
+    {
+     "who": "tom",
+     "en": "You're right. What else should I do?",
+     "pt": "Você tem razão. O que mais eu deveria fazer?"
+    },
+    {
+     "who": "ana",
+     "en": "You should drink more water and walk every day.",
+     "pt": "Você deveria beber mais água e caminhar todo dia."
+    },
+    {
+     "who": "tom",
+     "en": "Good advice! And you should eat less chocolate, Ana!",
+     "pt": "Bom conselho! E você deveria comer menos chocolate, Ana!"
+    },
+    {
+     "who": "ana",
+     "en": "Ha! Maybe. That's all for today. Thank you for listening!",
+     "pt": "Rá! Talvez. Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! Take care!",
+     "pt": "Tchau! Se cuidem!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Por que o Tom está com dor de cabeça?",
+     "options": [
+      "Não dormiu bem",
+      "Comeu demais",
+      "Teve um acidente"
+     ],
+     "answer": "Não dormiu bem",
+     "why": "\"I didn't sleep well last night.\""
+    },
+    {
+     "q": "O que a Ana diz que ele não deveria fazer?",
+     "options": [
+      "Olhar o celular antes de dormir",
+      "Beber água",
+      "Caminhar"
+     ],
+     "answer": "Olhar o celular antes de dormir",
+     "why": "\"You shouldn't look at your phone before bed.\""
+    },
+    {
+     "q": "Qual conselho o Tom dá para a Ana?",
+     "options": [
+      "Comer menos chocolate",
+      "Dormir mais",
+      "Ir ao médico"
+     ],
+     "answer": "Comer menos chocolate",
+     "why": "\"You should eat less chocolate, Ana!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u10",
+   "level": "A2",
+   "unlock": "a2-u10",
+   "title": "O trabalho dos sonhos",
+   "intro": "A Ana e o Tom contam do que gostam no trabalho e o que gostariam de fazer.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: work!",
+     "pt": "E eu sou o Tom. Hoje: trabalho!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, do you enjoy your job?",
+     "pt": "Tom, você curte seu trabalho?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes! I love teaching. But I hate getting up at six.",
+     "pt": "Sim! Adoro dar aula. Mas odeio acordar às seis."
+    },
+    {
+     "who": "ana",
+     "en": "I work in an office. I'm good at using computers, but I don't like sitting all day.",
+     "pt": "Eu trabalho num escritório. Sou boa com computador, mas não gosto de ficar sentada o dia todo."
+    },
+    {
+     "who": "tom",
+     "en": "What's your dream job?",
+     "pt": "Qual é o seu trabalho dos sonhos?"
+    },
+    {
+     "who": "ana",
+     "en": "I'd like to be a pilot. I want to see the world!",
+     "pt": "Eu gostaria de ser piloto. Quero conhecer o mundo!"
+    },
+    {
+     "who": "tom",
+     "en": "And I'd like to have a small restaurant by the beach.",
+     "pt": "E eu gostaria de ter um restaurantezinho na praia."
+    },
+    {
+     "who": "ana",
+     "en": "Nice! That's all for today. Thank you for listening!",
+     "pt": "Que legal! Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom odeia no trabalho?",
+     "options": [
+      "Acordar às seis",
+      "Dar aula",
+      "Usar computador"
+     ],
+     "answer": "Acordar às seis",
+     "why": "\"I hate getting up at six.\""
+    },
+    {
+     "q": "Qual é o trabalho dos sonhos da Ana?",
+     "options": [
+      "Piloto",
+      "Professora",
+      "Cozinheira"
+     ],
+     "answer": "Piloto",
+     "why": "\"I'd like to be a pilot.\""
+    },
+    {
+     "q": "O que o Tom gostaria de ter?",
+     "options": [
+      "Um restaurante na praia",
+      "Um avião",
+      "Um escritório novo"
+     ],
+     "answer": "Um restaurante na praia",
+     "why": "\"A small restaurant by the beach.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u11",
+   "level": "A2",
+   "unlock": "a2-u11",
+   "title": "Como dizer não sem ser grosso",
+   "intro": "A Ana e o Tom mostram como convidar, aceitar e recusar com educação.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're talking about how to invite people.",
+     "pt": "E eu sou o Tom. Hoje vamos falar de como convidar as pessoas."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, would you like to come to my house for dinner on Friday?",
+     "pt": "Tom, você gostaria de jantar na minha casa na sexta?"
+    },
+    {
+     "who": "tom",
+     "en": "I'd love to! But unfortunately I'm working late on Friday.",
+     "pt": "Eu adoraria! Mas infelizmente vou trabalhar até tarde na sexta."
+    },
+    {
+     "who": "ana",
+     "en": "What a pity! How about Saturday instead?",
+     "pt": "Que pena! Que tal sábado, então?"
+    },
+    {
+     "who": "tom",
+     "en": "Saturday is perfect. Can I bring something?",
+     "pt": "Sábado é perfeito. Posso levar alguma coisa?"
+    },
+    {
+     "who": "ana",
+     "en": "Why don't you bring a dessert?",
+     "pt": "Por que você não leva uma sobremesa?"
+    },
+    {
+     "who": "tom",
+     "en": "Great idea! See you on Saturday.",
+     "pt": "Ótima ideia! Até sábado."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Remember: say sorry and give a reason!",
+     "pt": "Por hoje é só. Lembrem: peçam desculpas e deem um motivo!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Por que o Tom não pode na sexta?",
+     "options": [
+      "Vai trabalhar até tarde",
+      "Está doente",
+      "Vai viajar"
+     ],
+     "answer": "Vai trabalhar até tarde",
+     "why": "\"I'm working late on Friday.\""
+    },
+    {
+     "q": "Qual dia eles combinam?",
+     "options": [
+      "Sábado",
+      "Domingo",
+      "Sexta"
+     ],
+     "answer": "Sábado",
+     "why": "\"How about Saturday instead?\" — \"Saturday is perfect.\""
+    },
+    {
+     "q": "O que o Tom vai levar?",
+     "options": [
+      "Uma sobremesa",
+      "Bebidas",
+      "Flores"
+     ],
+     "answer": "Uma sobremesa",
+     "why": "\"Why don't you bring a dessert?\""
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u12",
+   "level": "A2",
+   "unlock": "a2-u12",
+   "title": "Onde você estava quando…?",
+   "intro": "A Ana e o Tom contam o que estavam fazendo quando uma coisa engraçada aconteceu.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're telling funny stories.",
+     "pt": "E eu sou o Tom. Hoje vamos contar histórias engraçadas."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, what happened last week?",
+     "pt": "Tom, o que aconteceu na semana passada?"
+    },
+    {
+     "who": "tom",
+     "en": "I was singing in the shower when my mother called.",
+     "pt": "Eu estava cantando no chuveiro quando minha mãe ligou."
+    },
+    {
+     "who": "ana",
+     "en": "And?",
+     "pt": "E aí?"
+    },
+    {
+     "who": "tom",
+     "en": "I answered the phone and dropped it in the water!",
+     "pt": "Atendi o telefone e deixei cair na água!"
+    },
+    {
+     "who": "ana",
+     "en": "Oh no! My story: I was walking my dog while I was eating an ice cream.",
+     "pt": "Ah, não! Minha história: eu estava passeando com meu cachorro enquanto tomava um sorvete."
+    },
+    {
+     "who": "tom",
+     "en": "Let me guess. The dog ate it?",
+     "pt": "Deixa eu adivinhar. O cachorro comeu?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes! That's all for today. Thank you for listening!",
+     "pt": "Isso! Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! See you soon!",
+     "pt": "Tchau! Até logo!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom estava fazendo quando a mãe ligou?",
+     "options": [
+      "Cantando no chuveiro",
+      "Dirigindo",
+      "Dormindo"
+     ],
+     "answer": "Cantando no chuveiro",
+     "why": "\"I was singing in the shower.\""
+    },
+    {
+     "q": "O que aconteceu com o celular do Tom?",
+     "options": [
+      "Caiu na água",
+      "Foi roubado",
+      "Quebrou no chão"
+     ],
+     "answer": "Caiu na água",
+     "why": "\"I dropped it in the water!\""
+    },
+    {
+     "q": "O que o cachorro da Ana fez?",
+     "options": [
+      "Comeu o sorvete",
+      "Fugiu",
+      "Latiu muito"
+     ],
+     "answer": "Comeu o sorvete",
+     "why": "\"The dog ate it?\" — \"Yes!\""
+    }
+   ]
+  },
+  {
    "id": "pod-b1u1",
    "level": "B1",
    "unlock": "b1-u1",
