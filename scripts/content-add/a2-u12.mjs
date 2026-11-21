@@ -105,13 +105,13 @@ writeUnit('a2/unit-12.json', {
       I(7, 5, { type: 'speak', en: 'What were you doing when it happened?', pt: 'O que você estava fazendo quando aconteceu?', why: '"Happened" soa como "RÉ-pend".' }),
       I(7, 6, { type: 'speak', en: "Sorry, I wasn't listening.", pt: 'Desculpa, eu não estava prestando atenção.', why: '"Listening": o "t" é mudo: "LÍ-se-nin".' }),
     ]),
-    L(8, 'Lendo: a noite da tempestade', [
+    L(8, 'Lendo: quando a luz acabou', [
       I(8, 1, { type: 'story', why: 'O Pedro conta o que aconteceu numa noite de tempestade. Leia com calma e ouça cada frase.' }),
       I(8, 2, { type: 'quiz', q: 'O que o Pedro estava fazendo quando a luz acabou?', options: ['Vendo um filme', 'Dormindo', 'Cozinhando'], answer: 'Vendo um filme', why: '"I was watching a film when the power went off."' }),
       I(8, 3, { type: 'quiz', q: 'Quem bateu na porta?', options: ['O vizinho', 'A polícia', 'Um ladrão'], answer: 'O vizinho', why: '"It was my neighbour!"' }),
       I(8, 4, { type: 'quiz', q: 'O que o vizinho trouxe?', options: ['Uma lanterna', 'Comida', 'Um guarda-chuva'], answer: 'Uma lanterna', why: '"He brought a lamp" = ele trouxe uma lanterna (uma luz).' }),
     ], {
-      title: 'A noite da tempestade',
+      title: 'Quando a luz acabou',
       lines: [
         { who: 'Pedro', en: 'Last night there was a big storm. It was raining a lot.', pt: 'Ontem à noite teve uma tempestade forte. Estava chovendo muito.' },
         { who: 'Pedro', en: 'I was watching a film when the power went off. Everything was dark!', pt: 'Eu estava vendo um filme quando a luz acabou. Ficou tudo escuro!' },
