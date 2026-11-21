@@ -4272,6 +4272,345 @@
    ]
   },
   {
+   "id": "pod-b1u13",
+   "level": "B1",
+   "unlock": "b1-u13",
+   "title": "Prós e contras",
+   "intro": "A Ana e o Tom discutem os prós e contras de trabalhar de casa.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: working from home. Is it good or bad?",
+     "pt": "E eu sou o Tom. Hoje: trabalhar de casa. É bom ou ruim?"
+    },
+    {
+     "who": "ana",
+     "en": "I love it. Although I work a lot, I don't waste time in traffic.",
+     "pt": "Eu adoro. Embora eu trabalhe muito, não perco tempo no trânsito."
+    },
+    {
+     "who": "tom",
+     "en": "That's true. However, I feel lonely at home.",
+     "pt": "É verdade. Porém, eu me sinto sozinho em casa."
+    },
+    {
+     "who": "ana",
+     "en": "Despite that, you have more freedom, right?",
+     "pt": "Apesar disso, você tem mais liberdade, né?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes. Even though I miss my friends from work, I like having lunch with my family.",
+     "pt": "Sim. Mesmo sentindo falta dos amigos do trabalho, gosto de almoçar com a família."
+    },
+    {
+     "who": "ana",
+     "en": "So, home or office?",
+     "pt": "Então, casa ou escritório?"
+    },
+    {
+     "who": "tom",
+     "en": "Both! Two days at home, three in the office. That's all for today!",
+     "pt": "Os dois! Dois dias em casa, três no escritório. Por hoje é só!"
+    },
+    {
+     "who": "ana",
+     "en": "Bye! Thank you for listening!",
+     "pt": "Tchau! Obrigada por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual é a vantagem para a Ana?",
+     "options": [
+      "Não perde tempo no trânsito",
+      "Trabalha menos",
+      "Ganha mais"
+     ],
+     "answer": "Não perde tempo no trânsito",
+     "why": "\"I don't waste time in traffic.\""
+    },
+    {
+     "q": "Qual é o problema para o Tom?",
+     "options": [
+      "Se sente sozinho",
+      "A internet é lenta",
+      "A casa é barulhenta"
+     ],
+     "answer": "Se sente sozinho",
+     "why": "\"I feel lonely at home.\""
+    },
+    {
+     "q": "Qual é a escolha final do Tom?",
+     "options": [
+      "Os dois: casa e escritório",
+      "Só em casa",
+      "Só no escritório"
+     ],
+     "answer": "Os dois: casa e escritório",
+     "why": "\"Both! Two days at home, three in the office.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u14",
+   "level": "B1",
+   "unlock": "b1-u14",
+   "title": "O melhor e o pior",
+   "intro": "A Ana e o Tom contam a melhor e a pior experiência de viagem.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: our best and worst trips.",
+     "pt": "E eu sou o Tom. Hoje: nossas melhores e piores viagens."
+    },
+    {
+     "who": "ana",
+     "en": "My best trip was to Bahia. The beaches were absolutely amazing.",
+     "pt": "Minha melhor viagem foi para a Bahia. As praias eram absolutamente incríveis."
+    },
+    {
+     "who": "tom",
+     "en": "My worst was a weekend in the mountains. It rained so much that we didn't leave the hotel.",
+     "pt": "A pior foi um fim de semana nas montanhas. Choveu tanto que nem saímos do hotel."
+    },
+    {
+     "who": "ana",
+     "en": "Oh no! Was the hotel nice, at least?",
+     "pt": "Ah, não! O hotel pelo menos era bom?"
+    },
+    {
+     "who": "tom",
+     "en": "No! It was such a cold place. I was so disappointed.",
+     "pt": "Não! Era um lugar tão frio. Fiquei tão decepcionado."
+    },
+    {
+     "who": "ana",
+     "en": "Would you recommend it?",
+     "pt": "Você recomendaria?"
+    },
+    {
+     "who": "tom",
+     "en": "Absolutely not! That's all for today.",
+     "pt": "De jeito nenhum! Por hoje é só."
+    },
+    {
+     "who": "ana",
+     "en": "Bye! Thank you for listening!",
+     "pt": "Tchau! Obrigada por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual foi a melhor viagem da Ana?",
+     "options": [
+      "Bahia",
+      "As montanhas",
+      "Londres"
+     ],
+     "answer": "Bahia",
+     "why": "\"My best trip was to Bahia.\""
+    },
+    {
+     "q": "O que aconteceu nas montanhas?",
+     "options": [
+      "Choveu tanto que não saíram do hotel",
+      "Fez muito calor",
+      "Perderam o voo"
+     ],
+     "answer": "Choveu tanto que não saíram do hotel",
+     "why": "\"It rained so much that we didn't leave the hotel.\""
+    },
+    {
+     "q": "O Tom recomendaria o lugar?",
+     "options": [
+      "De jeito nenhum",
+      "Sim, com certeza",
+      "Talvez no verão"
+     ],
+     "answer": "De jeito nenhum",
+     "why": "\"Absolutely not!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u15",
+   "level": "B1",
+   "unlock": "b1-u15",
+   "title": "Para que você estuda inglês?",
+   "intro": "A Ana e o Tom contam por que as pessoas estudam inglês, e para que usam a tecnologia.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today's question: why are you learning English?",
+     "pt": "E eu sou o Tom. A pergunta de hoje: por que você está aprendendo inglês?"
+    },
+    {
+     "who": "ana",
+     "en": "Many people learn English to get a better job.",
+     "pt": "Muita gente aprende inglês para conseguir um emprego melhor."
+    },
+    {
+     "who": "tom",
+     "en": "And others learn it in order to travel or to watch films in English.",
+     "pt": "E outros aprendem para viajar ou para ver filmes em inglês."
+    },
+    {
+     "who": "ana",
+     "en": "I use my phone to practise every day, so that I never forget new words.",
+     "pt": "Eu uso o celular para praticar todo dia, para nunca esquecer as palavras novas."
+    },
+    {
+     "who": "tom",
+     "en": "Remember: \"to study\", not \"for study\"!",
+     "pt": "Lembrem: \"to study\", não \"for study\"!"
+    },
+    {
+     "who": "ana",
+     "en": "The most common mistake! And why do you listen to this podcast?",
+     "pt": "O erro mais comum! E para que você ouve este podcast?"
+    },
+    {
+     "who": "tom",
+     "en": "To learn and have fun, I hope! That's all for today.",
+     "pt": "Para aprender e se divertir, espero! Por hoje é só."
+    },
+    {
+     "who": "ana",
+     "en": "Bye! Thank you for listening!",
+     "pt": "Tchau! Obrigada por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Por que muita gente aprende inglês, segundo a Ana?",
+     "options": [
+      "Para conseguir um emprego melhor",
+      "Para morar fora",
+      "Por obrigação da escola"
+     ],
+     "answer": "Para conseguir um emprego melhor",
+     "why": "\"To get a better job.\""
+    },
+    {
+     "q": "Para que a Ana usa o celular?",
+     "options": [
+      "Para praticar todo dia",
+      "Para jogar",
+      "Para ler notícias"
+     ],
+     "answer": "Para praticar todo dia",
+     "why": "\"I use my phone to practise every day.\""
+    },
+    {
+     "q": "Qual é o erro mais comum, segundo eles?",
+     "options": [
+      "Dizer \"for study\" em vez de \"to study\"",
+      "Esquecer o \"the\"",
+      "Falar rápido demais"
+     ],
+     "answer": "Dizer \"for study\" em vez de \"to study\"",
+     "why": "\"Remember: to study, not for study!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b1u16",
+   "level": "B1",
+   "unlock": "b1-u16",
+   "title": "Quem me dera…",
+   "intro": "No último episódio do B1, a Ana e o Tom falam dos desejos e sonhos deles.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the last podcast of this level. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao último podcast deste nível. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: wishes and dreams.",
+     "pt": "E eu sou o Tom. Hoje: desejos e sonhos."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, what do you wish?",
+     "pt": "Tom, o que você deseja?"
+    },
+    {
+     "who": "tom",
+     "en": "I wish I could play the drums. And I wish I lived near the beach.",
+     "pt": "Queria saber tocar bateria. E queria morar perto da praia."
+    },
+    {
+     "who": "ana",
+     "en": "I wish I had more time to read. If only days had thirty hours!",
+     "pt": "Eu queria ter mais tempo para ler. Quem me dera o dia tivesse trinta horas!"
+    },
+    {
+     "who": "tom",
+     "en": "Ha! And what do you hope for the future?",
+     "pt": "Rá! E o que você espera do futuro?"
+    },
+    {
+     "who": "ana",
+     "en": "I hope you keep learning English. You've done so well!",
+     "pt": "Espero que vocês continuem aprendendo inglês. Vocês foram muito bem!"
+    },
+    {
+     "who": "tom",
+     "en": "See you in the next level! Bye!",
+     "pt": "Até o próximo nível! Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom queria saber tocar?",
+     "options": [
+      "Bateria",
+      "Piano",
+      "Violão"
+     ],
+     "answer": "Bateria",
+     "why": "\"I wish I could play the drums.\""
+    },
+    {
+     "q": "O que a Ana queria ter?",
+     "options": [
+      "Mais tempo para ler",
+      "Mais dinheiro",
+      "Uma casa na praia"
+     ],
+     "answer": "Mais tempo para ler",
+     "why": "\"I wish I had more time to read.\""
+    },
+    {
+     "q": "O que a Ana espera do futuro?",
+     "options": [
+      "Que os ouvintes continuem aprendendo",
+      "Viajar pelo mundo",
+      "Ter um podcast novo"
+     ],
+     "answer": "Que os ouvintes continuem aprendendo",
+     "why": "\"I hope you keep learning English.\""
+    }
+   ]
+  },
+  {
    "id": "pod-b2u1",
    "level": "B2",
    "unlock": "b2-u1",

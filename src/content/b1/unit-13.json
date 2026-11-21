@@ -1,0 +1,1072 @@
+{
+ "id": "b1-u13",
+ "level": "B1",
+ "order": 13,
+ "title": "Apesar de…",
+ "subtitle": "Contrastar ideias: despite, although, even though, however.",
+ "can_do": {
+  "text": "Consigo ligar ideias que se contradizem e falar dos prós e contras de uma decisão.",
+  "source": "CEFR (Conselho da Europa) — Produção oral e escrita: ligar ideias com conectores de contraste, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: despite + noun / -ing",
+  "Grammar: although / even though + clause",
+  "Grammar: however / nevertheless (new sentence)",
+  "Functions: talking about pros and cons"
+ ],
+ "words": [
+  [
+   "despite",
+   "apesar de"
+  ],
+  [
+   "even though",
+   "mesmo que, embora"
+  ],
+  [
+   "nevertheless",
+   "mesmo assim, no entanto"
+  ],
+  [
+   "stressful",
+   "estressante"
+  ],
+  [
+   "career",
+   "carreira"
+  ],
+  [
+   "quit",
+   "largar, pedir demissão"
+  ],
+  [
+   "freedom",
+   "liberdade"
+  ],
+  [
+   "security",
+   "segurança, estabilidade"
+  ],
+  [
+   "manage",
+   "conseguir (fazer), administrar"
+  ],
+  [
+   "decision",
+   "decisão"
+  ],
+  [
+   "risk",
+   "risco"
+  ],
+  [
+   "pros and cons",
+   "prós e contras"
+  ]
+ ],
+ "guide": {
+  "title": "Apesar de: juntando ideias opostas",
+  "intro": "Para dizer que uma coisa aconteceu mesmo com algo contra, o inglês tem vários conectores. O segredo é saber o que vem depois de cada um.",
+  "points": [
+   {
+    "en": "Despite the rain, we went to the beach.",
+    "pt": "Apesar da chuva, fomos à praia.",
+    "note": "\"Despite\" + substantivo (the rain) ou -ing. Nunca + frase com sujeito."
+   },
+   {
+    "en": "Despite being tired, she finished the report.",
+    "pt": "Apesar de estar cansada, ela terminou o relatório.",
+    "note": "\"Despite\" + verbo com -ing."
+   },
+   {
+    "en": "Although it was raining, we went to the beach.",
+    "pt": "Embora estivesse chovendo, fomos à praia.",
+    "note": "\"Although\" + frase completa (sujeito + verbo)."
+   },
+   {
+    "en": "Even though I'm tired, I'll go to the party.",
+    "pt": "Mesmo cansado, vou à festa.",
+    "note": "\"Even though\" = although, com mais força."
+   },
+   {
+    "en": "The job is stressful. However, the salary is good.",
+    "pt": "O trabalho é estressante. Porém, o salário é bom.",
+    "note": "\"However\" começa uma frase nova, com vírgula depois."
+   },
+   {
+    "en": "It was a risk. Nevertheless, I decided to try.",
+    "pt": "Era um risco. Mesmo assim, decidi tentar.",
+    "note": "\"Nevertheless\" = mesmo assim (mais formal)."
+   }
+  ],
+  "tips": [
+   "Erro comum: \"Despite it was raining\". Com frase completa, use \"although\": Although it was raining.",
+   "\"In spite of\" é igual a \"despite\" (despite = in spite of, sem o \"of\" depois de despite)."
+  ]
+ },
+ "extra_vocab": [
+  {
+   "word": "salary",
+   "reason": "palavra central de trabalho (B2); sempre com tradução"
+  },
+  {
+   "word": "cons",
+   "reason": "expressão fixa \"pros and cons\" (prós e contras)"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "b1-u13-l1",
+   "title": "Despite",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l1-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ the traffic, we arrived on time.",
+     "pt": "Apesar do trânsito, chegamos na hora.",
+     "options": [
+      "Despite",
+      "Although",
+      "However"
+     ],
+     "answer": "Despite",
+     "why": "\"Despite\" + substantivo (the traffic).",
+     "wrong": {
+      "Although": "\"Although\" pede frase completa: although there was traffic.",
+      "However": "\"However\" começa uma frase nova."
+     }
+    },
+    {
+     "id": "b1u13l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Despite ___ ill, he went to work.",
+     "pt": "Apesar de estar doente, ele foi trabalhar.",
+     "options": [
+      "being",
+      "he was",
+      "be"
+     ],
+     "answer": "being",
+     "why": "\"Despite\" + -ing.",
+     "wrong": {
+      "he was": "Depois de \"despite\" não vem frase com sujeito.",
+      "be": "Precisa do -ing."
+     }
+    },
+    {
+     "id": "b1u13l1-3",
+     "type": "meaning",
+     "en": "Despite the price, the hotel was full.",
+     "options": [
+      "Apesar do preço, o hotel estava cheio.",
+      "Por causa do preço, o hotel estava vazio.",
+      "O hotel era barato e estava cheio."
+     ],
+     "answer": "Apesar do preço, o hotel estava cheio.",
+     "why": "\"Despite\" = apesar de."
+    },
+    {
+     "id": "b1u13l1-4",
+     "type": "build",
+     "pt": "Apesar de ser estressante, eu amo meu trabalho.",
+     "answer": "Despite being stressful I love my job",
+     "extra": [
+      "although",
+      "is"
+     ],
+     "display": "Despite being stressful, I love my job.",
+     "why": "\"Despite being\" = apesar de ser."
+    },
+    {
+     "id": "b1u13l1-5",
+     "type": "listen",
+     "en": "Despite the risk, she quit her job.",
+     "options": [
+      "Apesar do risco, ela largou o emprego.",
+      "Por causa do risco, ela ficou no emprego.",
+      "Ela não gosta de riscos."
+     ],
+     "answer": "Apesar do risco, ela largou o emprego.",
+     "why": "\"Quit\" = largar, pedir demissão."
+    },
+    {
+     "id": "b1u13l1-6",
+     "type": "match",
+     "pairs": [
+      [
+       "despite",
+       "apesar de"
+      ],
+      [
+       "quit",
+       "largar"
+      ],
+      [
+       "freedom",
+       "liberdade"
+      ],
+      [
+       "security",
+       "estabilidade"
+      ]
+     ],
+     "why": "\"Quit\" é igual no presente e no passado: quit."
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l2",
+   "title": "Although e even though",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ it was cold, they swam in the sea.",
+     "pt": "Embora estivesse frio, eles nadaram no mar.",
+     "options": [
+      "Although",
+      "Despite",
+      "However"
+     ],
+     "answer": "Although",
+     "why": "\"Although\" + frase (it was cold).",
+     "wrong": {
+      "Despite": "\"Despite it was\" é um erro clássico.",
+      "However": "\"However\" não liga duas partes assim."
+     }
+    },
+    {
+     "id": "b1u13l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'll go, even ___ I don't really want to.",
+     "pt": "Vou, mesmo não querendo muito.",
+     "options": [
+      "though",
+      "despite",
+      "although"
+     ],
+     "answer": "though",
+     "why": "\"Even though\" = mesmo que.",
+     "wrong": {
+      "despite": "\"Even despite\" não existe.",
+      "although": "\"Even although\" não existe."
+     }
+    },
+    {
+     "id": "b1u13l2-3",
+     "type": "meaning",
+     "en": "Even though he's rich, he lives in a small flat.",
+     "options": [
+      "Mesmo sendo rico, ele mora num apartamento pequeno.",
+      "Ele é rico porque mora num apartamento pequeno.",
+      "Ele quer morar num apartamento grande."
+     ],
+     "answer": "Mesmo sendo rico, ele mora num apartamento pequeno.",
+     "why": "\"Even though\" = mesmo que, embora."
+    },
+    {
+     "id": "b1u13l2-4",
+     "type": "build",
+     "pt": "Embora o salário seja baixo, eu gosto do trabalho.",
+     "answer": "Although the salary is low I like the job",
+     "extra": [
+      "despite",
+      "being"
+     ],
+     "display": "Although the salary is low, I like the job.",
+     "why": "\"Although\" + frase completa."
+    },
+    {
+     "id": "b1u13l2-5",
+     "type": "listen",
+     "en": "Although I studied, I failed the exam.",
+     "options": [
+      "Embora eu tenha estudado, reprovei na prova.",
+      "Estudei e passei na prova.",
+      "Não estudei e reprovei."
+     ],
+     "answer": "Embora eu tenha estudado, reprovei na prova.",
+     "why": "\"Although\" = embora."
+    },
+    {
+     "id": "b1u13l2-6",
+     "type": "speak",
+     "en": "Even though it was late, we stayed.",
+     "pt": "Mesmo sendo tarde, a gente ficou.",
+     "why": "\"Even though\" soa como \"Í-ven DÔU\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l3",
+   "title": "However e nevertheless",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The flat is small. ___, it is in a great area.",
+     "pt": "O apartamento é pequeno. Porém, fica num lugar ótimo.",
+     "options": [
+      "However",
+      "Although",
+      "Despite"
+     ],
+     "answer": "However",
+     "why": "\"However\" começa a frase nova, com vírgula.",
+     "wrong": {
+      "Although": "\"Although\" fica dentro da mesma frase.",
+      "Despite": "\"Despite\" pede substantivo depois."
+     }
+    },
+    {
+     "id": "b1u13l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It was a big risk. ___, I decided to do it.",
+     "pt": "Era um risco grande. Mesmo assim, decidi fazer.",
+     "options": [
+      "Nevertheless",
+      "Despite",
+      "Even"
+     ],
+     "answer": "Nevertheless",
+     "why": "\"Nevertheless\" = mesmo assim.",
+     "wrong": {
+      "Despite": "Precisa de algo depois de \"despite\".",
+      "Even": "\"Even\" sozinho não liga as frases."
+     }
+    },
+    {
+     "id": "b1u13l3-3",
+     "type": "meaning",
+     "en": "The course was expensive. However, it helped my career a lot.",
+     "options": [
+      "O curso era caro. Porém, ajudou muito minha carreira.",
+      "O curso era barato e ajudou minha carreira.",
+      "O curso não ajudou minha carreira."
+     ],
+     "answer": "O curso era caro. Porém, ajudou muito minha carreira.",
+     "why": "\"However\" = porém. \"Career\" = carreira."
+    },
+    {
+     "id": "b1u13l3-4",
+     "type": "match",
+     "pairs": [
+      [
+       "however",
+       "porém"
+      ],
+      [
+       "nevertheless",
+       "mesmo assim"
+      ],
+      [
+       "even though",
+       "mesmo que"
+      ],
+      [
+       "although",
+       "embora"
+      ]
+     ],
+     "why": "However e nevertheless começam frase nova; although e even though ficam na mesma frase."
+    },
+    {
+     "id": "b1u13l3-5",
+     "type": "build",
+     "pt": "O trabalho é estressante. No entanto, eu aprendo muito.",
+     "answer": "The job is stressful. However I learn a lot",
+     "extra": [
+      "although",
+      "despite"
+     ],
+     "display": "The job is stressful. However, I learn a lot.",
+     "why": "\"However\" depois do ponto."
+    },
+    {
+     "id": "b1u13l3-6",
+     "type": "listen",
+     "en": "Nevertheless, we had a great time.",
+     "options": [
+      "Mesmo assim, a gente se divertiu muito.",
+      "Por isso, a gente não se divertiu.",
+      "A gente nunca se diverte."
+     ],
+     "answer": "Mesmo assim, a gente se divertiu muito.",
+     "why": "\"Have a great time\" = se divertir muito."
+    },
+    {
+     "id": "b1u13l3-7",
+     "type": "choice",
+     "prompt": "Qual frase está CERTA?",
+     "en": "___",
+     "pt": "Apesar de estar chovendo, saímos.",
+     "options": [
+      "Although it was raining, we went out.",
+      "Despite it was raining, we went out.",
+      "However it was raining, we went out."
+     ],
+     "answer": "Although it was raining, we went out.",
+     "why": "Com frase completa (it was raining), use \"although\".",
+     "wrong": {
+      "Despite it was raining, we went out.": "\"Despite\" não aceita frase completa. Seria \"Despite the rain\".",
+      "However it was raining, we went out.": "\"However\" não liga as duas partes assim."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l4",
+   "title": "Prática: prós e contras",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l4-1",
+     "type": "match",
+     "pairs": [
+      [
+       "stressful",
+       "estressante"
+      ],
+      [
+       "career",
+       "carreira"
+      ],
+      [
+       "decision",
+       "decisão"
+      ],
+      [
+       "risk",
+       "risco"
+      ]
+     ],
+     "why": "\"Make a decision\" = tomar uma decisão. \"Take a risk\" = correr um risco."
+    },
+    {
+     "id": "b1u13l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She ___ to finish the report despite the problems.",
+     "pt": "Ela conseguiu terminar o relatório apesar dos problemas.",
+     "options": [
+      "managed",
+      "could",
+      "succeeded"
+     ],
+     "answer": "managed",
+     "why": "\"Manage to\" = conseguir fazer algo difícil.",
+     "wrong": {
+      "could": "\"Could\" é para habilidade geral, não para um resultado difícil.",
+      "succeeded": "\"Succeed\" pede \"in + -ing\"."
+     }
+    },
+    {
+     "id": "b1u13l4-3",
+     "type": "meaning",
+     "en": "Working from home gives you freedom. However, it can be lonely.",
+     "options": [
+      "Trabalhar de casa dá liberdade. Porém, pode ser solitário.",
+      "Trabalhar de casa é sempre ruim.",
+      "Trabalhar no escritório dá liberdade."
+     ],
+     "answer": "Trabalhar de casa dá liberdade. Porém, pode ser solitário.",
+     "why": "\"Freedom\" = liberdade. \"Lonely\" = solitário."
+    },
+    {
+     "id": "b1u13l4-4",
+     "type": "build",
+     "pt": "Apesar da estabilidade, ele largou o emprego.",
+     "answer": "Despite the security he quit his job",
+     "extra": [
+      "although",
+      "quitted"
+     ],
+     "display": "Despite the security, he quit his job.",
+     "why": "\"Despite\" + substantivo. Passado de \"quit\": quit."
+    },
+    {
+     "id": "b1u13l4-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you like living in the city?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes. Although it's noisy, there's a lot to do.",
+      "Yes. Despite it's noisy, there's a lot to do.",
+      "Yes. However noisy, a lot to do."
+     ],
+     "answer": "Yes. Although it's noisy, there's a lot to do.",
+     "pt": "Gosto. Embora seja barulhenta, tem muita coisa para fazer.",
+     "why": "\"Although\" + frase.",
+     "wrong": {
+      "Yes. Despite it's noisy, there's a lot to do.": "\"Despite\" + frase completa não funciona.",
+      "Yes. However noisy, a lot to do.": "Falta o verbo e a estrutura."
+     }
+    },
+    {
+     "id": "b1u13l4-6",
+     "type": "listen",
+     "en": "Even though it's a risk, I think it's the right decision.",
+     "options": [
+      "Mesmo sendo um risco, acho que é a decisão certa.",
+      "É uma decisão arriscada demais.",
+      "Não sei qual decisão tomar."
+     ],
+     "answer": "Mesmo sendo um risco, acho que é a decisão certa.",
+     "why": "\"The right decision\" = a decisão certa."
+    },
+    {
+     "id": "b1u13l4-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I need to ___ a decision today.",
+     "pt": "Preciso tomar uma decisão hoje.",
+     "options": [
+      "make",
+      "do",
+      "take"
+     ],
+     "answer": "make",
+     "why": "Tomar uma decisão = \"make a decision\".",
+     "wrong": {
+      "do": "\"Do a decision\" não existe.",
+      "take": "\"Take a decision\" existe no inglês britânico, mas \"make\" é o mais comum."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l5-1",
+     "type": "type",
+     "pt": "Apesar da chuva, fomos à praia.",
+     "answer": "Despite the rain, we went to the beach.",
+     "why": "\"Despite\" + substantivo."
+    },
+    {
+     "id": "b1u13l5-2",
+     "type": "type",
+     "pt": "Embora eu estivesse cansado, fui à festa.",
+     "answer": "Although I was tired, I went to the party.",
+     "accept": [
+      "Even though I was tired, I went to the party."
+     ],
+     "why": "\"Although\" + frase completa."
+    },
+    {
+     "id": "b1u13l5-3",
+     "type": "dictation",
+     "en": "However, the salary is good.",
+     "why": "\"However\" com vírgula depois."
+    },
+    {
+     "id": "b1u13l5-4",
+     "type": "type",
+     "pt": "Ela conseguiu terminar a tempo.",
+     "answer": "She managed to finish on time.",
+     "why": "\"Manage to\" = conseguir."
+    },
+    {
+     "id": "b1u13l5-5",
+     "type": "dictation",
+     "en": "It was a difficult decision.",
+     "why": "\"Decision\" = decisão."
+    },
+    {
+     "id": "b1u13l5-6",
+     "type": "type",
+     "pt": "Apesar de estar doente, ele trabalhou.",
+     "answer": "Despite being ill, he worked.",
+     "accept": [
+      "Despite being sick, he worked."
+     ],
+     "why": "\"Despite being\" + adjetivo."
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l6-1",
+     "type": "listen",
+     "en": "Despite the noise, I slept well.",
+     "options": [
+      "Apesar do barulho, dormi bem.",
+      "Por causa do barulho, não dormi.",
+      "Não tinha barulho."
+     ],
+     "answer": "Apesar do barulho, dormi bem.",
+     "why": "\"Despite\" + substantivo."
+    },
+    {
+     "id": "b1u13l6-2",
+     "type": "dictation",
+     "en": "Although it was expensive, we bought it.",
+     "why": "\"Although\" + frase."
+    },
+    {
+     "id": "b1u13l6-3",
+     "type": "listen",
+     "en": "I want more freedom in my career.",
+     "options": [
+      "Quero mais liberdade na minha carreira.",
+      "Tenho muita liberdade no trabalho.",
+      "Minha carreira é estável."
+     ],
+     "answer": "Quero mais liberdade na minha carreira.",
+     "why": "\"Freedom\" = liberdade."
+    },
+    {
+     "id": "b1u13l6-4",
+     "type": "dictation",
+     "en": "She quit her job last year.",
+     "why": "\"Quit\" no passado é igual."
+    },
+    {
+     "id": "b1u13l6-5",
+     "type": "listen",
+     "en": "It's stressful. Nevertheless, I enjoy it.",
+     "options": [
+      "É estressante. Mesmo assim, eu curto.",
+      "É estressante e eu odeio.",
+      "É tranquilo e eu curto."
+     ],
+     "answer": "É estressante. Mesmo assim, eu curto.",
+     "why": "\"Nevertheless\" = mesmo assim."
+    },
+    {
+     "id": "b1u13l6-6",
+     "type": "dictation",
+     "en": "We managed to find a solution.",
+     "why": "\"Managed to\" = conseguimos."
+    },
+    {
+     "id": "b1u13l6-7",
+     "type": "speak",
+     "en": "Despite everything, I am happy.",
+     "pt": "Apesar de tudo, sou feliz.",
+     "why": "\"Despite everything\" = apesar de tudo."
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I'm thinking about quitting my job to travel."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Really? Although it's a risk, it sounds amazing!",
+      "Really? Despite it's a risk, sounds amazing.",
+      "Really? However a risk."
+     ],
+     "answer": "Really? Although it's a risk, it sounds amazing!",
+     "pt": "Sério? Embora seja um risco, parece incrível!",
+     "why": "\"Although\" + frase.",
+     "wrong": {
+      "Really? Despite it's a risk, sounds amazing.": "\"Despite\" + frase não funciona.",
+      "Really? However a risk.": "Frase incompleta."
+     }
+    },
+    {
+     "id": "b1u13l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "But what about money?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I've saved for two years. However, it might not be enough.",
+      "I've saved for two years. Although, it might not be enough.",
+      "I saved two years despite."
+     ],
+     "answer": "I've saved for two years. However, it might not be enough.",
+     "pt": "Economizei por dois anos. Porém, talvez não seja suficiente.",
+     "why": "\"However\" abre a frase nova.",
+     "wrong": {
+      "I've saved for two years. Although, it might not be enough.": "\"Although\" não começa frase com vírgula assim.",
+      "I saved two years despite.": "\"Despite\" sozinho no fim não funciona."
+     }
+    },
+    {
+     "id": "b1u13l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Are your parents OK with it?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Even though they are worried, they support me.",
+      "Even they are worried, they support me.",
+      "Despite they worried, support me."
+     ],
+     "answer": "Even though they are worried, they support me.",
+     "pt": "Mesmo preocupados, eles me apoiam.",
+     "why": "\"Even though\" + frase.",
+     "wrong": {
+      "Even they are worried, they support me.": "Falta o \"though\".",
+      "Despite they worried, support me.": "\"Despite\" não aceita frase."
+     }
+    },
+    {
+     "id": "b1u13l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Well, it's your decision. Good luck!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Thanks! Despite the risks, I think I have to try.",
+      "Thanks! Although the risks, I have to try.",
+      "Thanks! However risks I try."
+     ],
+     "answer": "Thanks! Despite the risks, I think I have to try.",
+     "pt": "Valeu! Apesar dos riscos, acho que tenho que tentar.",
+     "why": "\"Despite\" + substantivo (the risks).",
+     "wrong": {
+      "Thanks! Although the risks, I have to try.": "\"Although\" pede frase completa.",
+      "Thanks! However risks I try.": "Não forma frase."
+     }
+    },
+    {
+     "id": "b1u13l7-5",
+     "type": "speak",
+     "en": "Although it was difficult, I did it.",
+     "pt": "Embora tenha sido difícil, eu consegui.",
+     "why": "\"Although\" soa como \"ól-DÔU\"."
+    },
+    {
+     "id": "b1u13l7-6",
+     "type": "speak",
+     "en": "What are the pros and cons?",
+     "pt": "Quais são os prós e contras?",
+     "why": "\"Pros and cons\" soa como \"PRÔUZ-en-KÔUNZ\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l8",
+   "title": "Lendo: largar tudo?",
+   "added": "2026-11",
+   "story": {
+    "title": "Largar tudo?",
+    "lines": [
+     {
+      "who": "Paula",
+      "en": "Three years ago, I worked in a bank. I had a good salary and a lot of security.",
+      "pt": "Há três anos, eu trabalhava num banco. Tinha um bom salário e muita estabilidade."
+     },
+     {
+      "who": "Paula",
+      "en": "However, it was very stressful, and I had no freedom.",
+      "pt": "Porém, era muito estressante, e eu não tinha liberdade."
+     },
+     {
+      "ask": "Qual era o problema do banco?",
+      "options": [
+       "Estresse e falta de liberdade",
+       "Salário baixo",
+       "Era longe de casa"
+      ],
+      "answer": "Estresse e falta de liberdade",
+      "why": "\"Very stressful\" e \"no freedom\"."
+     },
+     {
+      "who": "Paula",
+      "en": "___ my family was worried, I quit and opened a small bakery.",
+      "pt": "Embora minha família estivesse preocupada, larguei tudo e abri uma padaria pequena.",
+      "gap": {
+       "answer": "Although",
+       "options": [
+        "Although",
+        "Despite",
+        "However"
+       ]
+      }
+     },
+     {
+      "who": "Paula",
+      "en": "Now I earn less money, and I work on Saturdays. Nevertheless, I feel happy every morning.",
+      "pt": "Agora ganho menos e trabalho aos sábados. Mesmo assim, acordo feliz todo dia."
+     },
+     {
+      "who": "Paula",
+      "en": "Despite everything, I don't regret it. It was the best decision of my life.",
+      "pt": "Apesar de tudo, não me arrependo. Foi a melhor decisão da minha vida."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u13l8-1",
+     "type": "story",
+     "why": "A Paula conta por que largou um emprego estável. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b1u13l8-2",
+     "type": "quiz",
+     "q": "Como era o antigo emprego da Paula?",
+     "options": [
+      "Estável e bem pago, mas estressante",
+      "Mal pago e tranquilo",
+      "Divertido e criativo"
+     ],
+     "answer": "Estável e bem pago, mas estressante",
+     "why": "\"Good salary and a lot of security. However, it was very stressful.\""
+    },
+    {
+     "id": "b1u13l8-3",
+     "type": "quiz",
+     "q": "O que ela faz agora?",
+     "options": [
+      "Tem uma padaria pequena",
+      "Trabalha num banco",
+      "Está viajando"
+     ],
+     "answer": "Tem uma padaria pequena",
+     "why": "\"Now I have a small bakery.\""
+    },
+    {
+     "id": "b1u13l8-4",
+     "type": "quiz",
+     "q": "Ela se arrepende?",
+     "options": [
+      "Não",
+      "Sim, muito",
+      "Não sabe"
+     ],
+     "answer": "Não",
+     "why": "\"Despite everything, I don't regret it.\""
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u13l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ he was nervous, he gave a great speech.",
+     "pt": "Embora estivesse nervoso, ele fez um ótimo discurso.",
+     "options": [
+      "Although",
+      "Despite",
+      "However"
+     ],
+     "answer": "Although",
+     "why": "Frase completa depois: although.",
+     "wrong": {
+      "Despite": "Seria \"Despite being nervous\".",
+      "However": "Não liga as duas partes."
+     }
+    },
+    {
+     "id": "b1u13l9-2",
+     "type": "type",
+     "pt": "Apesar do frio, saímos.",
+     "answer": "Despite the cold, we went out.",
+     "why": "\"Despite\" + substantivo (the cold)."
+    },
+    {
+     "id": "b1u13l9-3",
+     "type": "meaning",
+     "en": "The test was hard. Nevertheless, everyone passed.",
+     "options": [
+      "A prova foi difícil. Mesmo assim, todos passaram.",
+      "A prova foi fácil e todos passaram.",
+      "Ninguém passou na prova difícil."
+     ],
+     "answer": "A prova foi difícil. Mesmo assim, todos passaram.",
+     "why": "\"Nevertheless\" = mesmo assim."
+    },
+    {
+     "id": "b1u13l9-4",
+     "type": "dictation",
+     "en": "Even though I was busy, I helped her.",
+     "why": "\"Even though\" = mesmo que."
+    },
+    {
+     "id": "b1u13l9-5",
+     "type": "listen",
+     "en": "Despite having little money, they travelled a lot.",
+     "options": [
+      "Apesar de ter pouco dinheiro, eles viajavam muito.",
+      "Eles tinham muito dinheiro e viajavam.",
+      "Eles não viajavam por falta de dinheiro."
+     ],
+     "answer": "Apesar de ter pouco dinheiro, eles viajavam muito.",
+     "why": "\"Despite having\" = apesar de ter."
+    },
+    {
+     "id": "b1u13l9-6",
+     "type": "build",
+     "pt": "O hotel era caro. Porém, a vista era incrível.",
+     "answer": "The hotel was expensive. However the view was amazing",
+     "extra": [
+      "despite",
+      "although"
+     ],
+     "display": "The hotel was expensive. However, the view was amazing.",
+     "why": "\"However\" abre a frase nova."
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l10",
+   "title": "História: a escolha do Leo",
+   "added": "2026-11",
+   "story": {
+    "title": "A escolha do Leo",
+    "lines": [
+     {
+      "who": "Leo",
+      "en": "I have two job offers, and I need to make a decision this week.",
+      "pt": "Tenho duas propostas de emprego e preciso decidir esta semana."
+     },
+     {
+      "who": "Rita",
+      "en": "What are the pros and cons?",
+      "pt": "Quais são os prós e contras?"
+     },
+     {
+      "who": "Leo",
+      "en": "The job in the capital has a great salary. However, it's far from our family.",
+      "pt": "O emprego na capital tem um ótimo salário. Porém, é longe da nossa família."
+     },
+     {
+      "who": "Leo",
+      "en": "The job here pays less, ___ I'd have more freedom and free time.",
+      "pt": "O emprego daqui paga menos, embora eu tivesse mais liberdade e tempo livre.",
+      "gap": {
+       "answer": "although",
+       "options": [
+        "although",
+        "despite",
+        "however"
+       ]
+      }
+     },
+     {
+      "ask": "Qual emprego paga mais?",
+      "options": [
+       "O da capital",
+       "O daqui",
+       "Os dois pagam igual"
+      ],
+      "answer": "O da capital",
+      "why": "\"The job in the capital has a great salary.\""
+     },
+     {
+      "who": "Rita",
+      "en": "What matters more to you?",
+      "pt": "O que importa mais para você?"
+     },
+     {
+      "who": "Leo",
+      "en": "Time with you and Mom. Despite the lower salary, I'll take the job here.",
+      "pt": "Tempo com você e com a mãe. Apesar do salário menor, vou ficar com o emprego daqui."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u13l10-1",
+     "type": "story",
+     "why": "O Leo recebeu duas propostas de emprego e conversa com a irmã. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u13l10-2",
+     "type": "quiz",
+     "q": "Qual é o problema do emprego na capital?",
+     "options": [
+      "É longe da família",
+      "O salário é baixo",
+      "É muito tranquilo"
+     ],
+     "answer": "É longe da família",
+     "why": "\"It's far from our family.\""
+    },
+    {
+     "id": "b1u13l10-3",
+     "type": "quiz",
+     "q": "Qual é a vantagem do emprego perto de casa?",
+     "options": [
+      "Mais liberdade e tempo livre",
+      "Salário mais alto",
+      "Mais viagens"
+     ],
+     "answer": "Mais liberdade e tempo livre",
+     "why": "\"I'd have more freedom and free time.\""
+    },
+    {
+     "id": "b1u13l10-4",
+     "type": "quiz",
+     "q": "O que o Leo decide?",
+     "options": [
+      "O emprego perto de casa",
+      "O emprego em São Paulo",
+      "Nenhum dos dois"
+     ],
+     "answer": "O emprego perto de casa",
+     "why": "\"Despite the lower salary, I'll take the job here.\""
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+// Etapa 3 do B1 completo: unidade nova 15 — Para quê? (to, in order to, so that, for + -ing).
+// Gera src/content/b1/unit-15.json. Todas as lições levam "added".
+// Uso: node scripts/content-add/b1-u15.mjs  (pode rodar de novo: reescreve a unidade)
+import { writeUnit, addPodcast, addScene } from './lib.mjs';
+
+const L = (n, title, items, story) => ({ id: `b1-u15-l${n}`, title, ...(story ? { story } : {}), items });
+const I = (n, k, o) => ({ id: `b1u15l${n}-${k}`, ...o });
+
+writeUnit('b1/unit-15.json', {
+  id: 'b1-u15', level: 'B1', order: 15,
+  title: 'Para quê?',
+  subtitle: 'Dizer o objetivo das coisas: to, in order to, so that, for.',
+  can_do: {
+    text: 'Consigo explicar para que serve uma coisa e por que faço o que faço, inclusive com tecnologia do dia a dia.',
+    source: 'CEFR (Conselho da Europa) — Produção oral: dar razões e explicar objetivos, nível B1',
+  },
+  core_inventory: ['Grammar: to / in order to + verb (purpose)', 'Grammar: so that + clause (can / could / will)', 'Grammar: be used for + -ing', 'Vocabulary: technology and everyday devices'],
+  words: [
+    ['in order to', 'para, a fim de'],
+    ['so that', 'para que'],
+    ['be used for', 'servir para'],
+    ['purpose', 'objetivo, finalidade'],
+    ['device', 'aparelho, dispositivo'],
+    ['battery', 'bateria'],
+    ['install', 'instalar'],
+    ['download', 'baixar (da internet)'],
+    ['password', 'senha'],
+    ['account', 'conta'],
+    ['protect', 'proteger'],
+    ['online', 'on-line, na internet'],
+    ['software', 'programa, software'],
+  ],
+  guide: {
+    title: 'Para quê? O objetivo das coisas',
+    intro: 'Em português, quase tudo é "para". Em inglês, o "para" de objetivo é "to" + verbo. E quando a frase tem outra pessoa ou um verbo como can/will, usamos "so that".',
+    points: [
+      { en: 'I went to the shop to buy bread.', pt: 'Fui à loja para comprar pão.', note: 'Objetivo: to + verbo. NUNCA "for buy".' },
+      { en: 'She saves money in order to travel.', pt: 'Ela economiza dinheiro para viajar.', note: '"In order to" = to, mais formal.' },
+      { en: 'I wrote it down so that I wouldn\'t forget.', pt: 'Anotei para não esquecer.', note: '"So that" + frase (com can, could, will, would).' },
+      { en: 'Speak slowly so that everyone can understand.', pt: 'Fale devagar para que todos entendam.', note: 'Com outra pessoa na frase: so that + pessoa + can.' },
+      { en: 'This app is used for learning languages.', pt: 'Este aplicativo serve para aprender idiomas.', note: '"Be used for" + -ing = servir para.' },
+      { en: 'I need a password for my account.', pt: 'Preciso de uma senha para a minha conta.', note: '"For" + substantivo (for my account).' },
+    ],
+    tips: ['Erro clássico: "I came here for study". O certo é "I came here to study".', 'Na negativa: "so as not to" ou "so that ... won\'t": I left early so that I wouldn\'t miss the bus.'],
+  },
+  extra_vocab: [{ word: 'app', reason: 'palavra do dia a dia (aplicativo); não está na CEFR-J por ser recente' }],
+  lessons: [
+    L(1, 'To e in order to', [
+      I(1, 1, { type: 'choice', prompt: 'Complete:', en: 'I went to the bank ___ get some money.', pt: 'Fui ao banco para pegar dinheiro.', options: ['to', 'for', 'for to'], answer: 'to', why: 'Objetivo com verbo: to + verbo.', wrong: { for: '"For get" é um erro clássico de brasileiro.', 'for to': 'Não existe.' } }),
+      I(1, 2, { type: 'choice', prompt: 'Complete:', en: 'She studies hard in order ___ pass the exam.', pt: 'Ela estuda muito para passar na prova.', options: ['to', 'for', 'that'], answer: 'to', why: '"In order to" + verbo.', wrong: { for: '"In order for" pede outra estrutura.', that: '"In order that" é raro e pede frase completa.' } }),
+      I(1, 3, { type: 'meaning', en: 'I came to London to study English.', options: ['Vim para Londres para estudar inglês.', 'Estudei inglês em Londres.', 'Quero ir para Londres estudar.'], answer: 'Vim para Londres para estudar inglês.', why: '"To study" = para estudar (objetivo).' }),
+      I(1, 4, { type: 'build', pt: 'Ele acordou cedo para pegar o trem.', answer: 'He got up early to catch the train', extra: ['for', 'catching'], display: 'He got up early to catch the train.', why: 'To + verbo = para.' }),
+      I(1, 5, { type: 'listen', en: 'We saved money in order to buy a house.', options: ['Economizamos dinheiro para comprar uma casa.', 'Gastamos dinheiro numa casa.', 'Compramos uma casa e economizamos.'], answer: 'Economizamos dinheiro para comprar uma casa.', why: '"In order to" = para, a fim de.' }),
+      I(1, 6, { type: 'match', pairs: [['purpose', 'objetivo'], ['device', 'aparelho'], ['battery', 'bateria'], ['password', 'senha']], why: '"Device" é qualquer aparelho eletrônico: celular, tablet, computador.' }),
+    ]),
+    L(2, 'So that', [
+      I(2, 1, { type: 'choice', prompt: 'Complete:', en: 'Speak louder ___ everyone can hear you.', pt: 'Fale mais alto para que todos possam ouvir.', options: ['so that', 'to', 'for'], answer: 'so that', why: 'Com outra pessoa e "can": so that.', wrong: { to: '"To everyone can" não funciona.', for: '"For everyone can" não funciona.' } }),
+      I(2, 2, { type: 'choice', prompt: 'Complete:', en: 'I wrote it down so that I ___ forget.', pt: 'Anotei para não esquecer.', options: ["wouldn't", "don't", "not"], answer: "wouldn't", why: 'No passado: so that + wouldn\'t / couldn\'t.', wrong: { "don't": 'A frase está no passado.', not: '"I not forget" não existe.' } }),
+      I(2, 3, { type: 'meaning', en: 'She left early so that she could catch the last bus.', options: ['Ela saiu cedo para conseguir pegar o último ônibus.', 'Ela perdeu o último ônibus.', 'Ela saiu tarde de propósito.'], answer: 'Ela saiu cedo para conseguir pegar o último ônibus.', why: '"So that she could" = para que conseguisse.' }),
+      I(2, 4, { type: 'build', pt: 'Eu te dou a senha para você poder entrar.', answer: "I'll give you the password so that you can log in", extra: ['to', 'for'], display: "I'll give you the password so that you can log in.", why: 'So that + you + can.' }),
+      I(2, 5, { type: 'listen', en: 'Turn off the light so that the baby can sleep.', options: ['Apague a luz para o bebê poder dormir.', 'O bebê acordou com a luz.', 'Acenda a luz para o bebê.'], answer: 'Apague a luz para o bebê poder dormir.', why: '"Turn off" = apagar, desligar.' }),
+      I(2, 6, { type: 'speak', en: 'Speak slowly so that I can understand.', pt: 'Fale devagar para eu poder entender.', why: 'Frase ótima para usar em qualquer conversa.' }),
+    ]),
+    L(3, 'Serve para…', [
+      I(3, 1, { type: 'choice', prompt: 'Complete:', en: 'This app is used for ___ languages.', pt: 'Este aplicativo serve para aprender idiomas.', options: ['learning', 'learn', 'to learn'], answer: 'learning', why: '"Be used for" + -ing.', wrong: { learn: 'Depois de "for", -ing.', 'to learn': '"For to learn" não existe.' } }),
+      I(3, 2, { type: 'choice', prompt: 'Complete:', en: 'What is this button ___?', pt: 'Para que serve este botão?', options: ['for', 'to', 'used'], answer: 'for', why: '"What is it for?" = para que serve?', wrong: { to: '"What is it to?" não existe.', used: 'Faltaria "used for": What is it used for?' } }),
+      I(3, 3, { type: 'meaning', en: 'A password is used for protecting your account.', options: ['A senha serve para proteger a sua conta.', 'A senha é a sua conta.', 'Você precisa de uma conta nova.'], answer: 'A senha serve para proteger a sua conta.', why: '"Used for protecting" = serve para proteger.' }),
+      I(3, 4, { type: 'build', pt: 'Para que serve este programa?', answer: 'What is this software used for', extra: ['to', 'using'], display: 'What is this software used for?', why: 'What + is + coisa + used for?' }),
+      I(3, 5, { type: 'match', pairs: [['install', 'instalar'], ['download', 'baixar'], ['protect', 'proteger'], ['account', 'conta']], why: '"Download" = baixar; "upload" = enviar para a internet.' }),
+      I(3, 6, { type: 'listen', en: 'You need an account to use this website.', options: ['Você precisa de uma conta para usar este site.', 'Este site é grátis para todos.', 'Você precisa baixar o site.'], answer: 'Você precisa de uma conta para usar este site.', why: '"To use" = para usar.' }),
+      I(3, 7, { type: 'choice', prompt: 'Complete:', en: 'I need a charger ___ my phone.', pt: 'Preciso de um carregador para o meu celular.', options: ['for', 'to', 'so that'], answer: 'for', why: 'Para + substantivo (my phone): for.', wrong: { to: '"To" + verbo; aqui vem um substantivo.', 'so that': '"So that" pede uma frase.' } }),
+    ]),
+    L(4, 'Prática: tecnologia', [
+      I(4, 1, { type: 'choice', prompt: 'Complete:', en: 'You should change your password ___ protect your account.', pt: 'Você deveria trocar a senha para proteger a sua conta.', options: ['to', 'for', 'so'], answer: 'to', why: 'Objetivo com verbo: to.', wrong: { for: '"For protect" é erro clássico.', so: '"So protect" não funciona.' } }),
+      I(4, 2, { type: 'meaning', en: 'I turned off my phone so that I could study.', options: ['Desliguei o celular para conseguir estudar.', 'Meu celular desligou e eu estudei.', 'Estudei no celular.'], answer: 'Desliguei o celular para conseguir estudar.', why: '"So that I could" = para conseguir.' }),
+      I(4, 3, { type: 'choice', prompt: 'Complete:', en: 'Charge the battery ___ it doesn\'t die during the trip.', pt: 'Carregue a bateria para ela não acabar na viagem.', options: ['so that', 'to', 'for'], answer: 'so that', why: 'Com uma frase completa (it doesn\'t die): so that.', wrong: { to: '"To it doesn\'t" não funciona.', for: '"For it" não forma a ideia.' } }),
+      I(4, 4, { type: 'build', pt: 'Baixei o aplicativo para estudar no ônibus.', answer: 'I downloaded the app to study on the bus', extra: ['for', 'studying'], display: 'I downloaded the app to study on the bus.', why: 'To + verbo = para.' }),
+      I(4, 5, { type: 'dialogue', lines: [['A', 'Why are you learning English?'], ['B', '___']], options: ['To get a better job.', 'For get a better job.', 'For getting job better.'], answer: 'To get a better job.', pt: 'Para conseguir um emprego melhor.', why: 'Resposta curta com objetivo: To + verbo.', wrong: { 'For get a better job.': 'Erro clássico: "for" + verbo.', 'For getting job better.': 'Ordem e estrutura erradas.' } }),
+      I(4, 6, { type: 'listen', en: 'This device is used for measuring the temperature.', options: ['Este aparelho serve para medir a temperatura.', 'Este aparelho está quente.', 'Este aparelho não funciona.'], answer: 'Este aparelho serve para medir a temperatura.', why: '"Measure" = medir.' }),
+      I(4, 7, { type: 'match', pairs: [['online', 'na internet'], ['software', 'programa'], ['so that', 'para que'], ['in order to', 'a fim de']], why: '"Software" não tem plural: some software.' }),
+    ]),
+    L(5, 'Escrevendo', [
+      I(5, 1, { type: 'type', pt: 'Vim aqui para estudar.', answer: 'I came here to study.', why: 'To + verbo (e nunca "for study").' }),
+      I(5, 2, { type: 'type', pt: 'Para que serve isto?', answer: 'What is this for?', accept: ["What's this for?", 'What is this used for?', "What's this used for?"], why: '"What is it for?" = para que serve?' }),
+      I(5, 3, { type: 'dictation', en: 'I need a password for my account.', why: '"For" + substantivo.' }),
+      I(5, 4, { type: 'type', pt: 'Fale devagar para que eu possa entender.', answer: 'Speak slowly so that I can understand.', why: 'So that + I + can.' }),
+      I(5, 5, { type: 'dictation', en: 'Install the app to start.', why: '"Install" = instalar.' }),
+      I(5, 6, { type: 'type', pt: 'Ela economiza para viajar.', answer: 'She saves money to travel.', accept: ['She saves to travel.', 'She saves money in order to travel.'], why: 'To + verbo = para.' }),
+    ]),
+    L(6, 'Ouvindo', [
+      I(6, 1, { type: 'listen', en: 'I left early in order to avoid the traffic.', options: ['Saí cedo para evitar o trânsito.', 'Saí tarde por causa do trânsito.', 'Fiquei preso no trânsito.'], answer: 'Saí cedo para evitar o trânsito.', why: '"Avoid" = evitar.' }),
+      I(6, 2, { type: 'dictation', en: 'My battery is almost dead.', why: '"Dead" aqui = sem carga.' }),
+      I(6, 3, { type: 'listen', en: 'Write it down so that you remember.', options: ['Anote para você lembrar.', 'Você esqueceu de anotar.', 'Lembre de escrever amanhã.'], answer: 'Anote para você lembrar.', why: '"Write down" = anotar.' }),
+      I(6, 4, { type: 'dictation', en: 'Never share your password online.', why: '"Share" = compartilhar.' }),
+      I(6, 5, { type: 'listen', en: 'What is this key used for?', options: ['Para que serve esta chave?', 'Onde está esta chave?', 'Esta chave é nova?'], answer: 'Para que serve esta chave?', why: '"Used for" = serve para.' }),
+      I(6, 6, { type: 'dictation', en: 'I study every day to improve.', why: '"To improve" = para melhorar.' }),
+      I(6, 7, { type: 'speak', en: 'I am learning English to travel.', pt: 'Estou aprendendo inglês para viajar.', why: '"To travel" = para viajar.' }),
+    ]),
+    L(7, 'Conversa de verdade', [
+      I(7, 1, { type: 'dialogue', lines: [['A', "My phone is so slow. What should I do?"], ['B', '___']], options: ['Delete some apps to make space.', 'Delete some apps for make space.', 'Delete apps so make space.'], answer: 'Delete some apps to make space.', pt: 'Apague alguns aplicativos para liberar espaço.', why: 'Objetivo: to + verbo.', wrong: { 'Delete some apps for make space.': '"For make" é erro.', 'Delete apps so make space.': '"So make" não funciona.' } }),
+      I(7, 2, { type: 'dialogue', lines: [['A', 'Why do you need two passwords?'], ['B', '___']], options: ['So that nobody can open my account.', 'For nobody open my account.', 'To nobody can open my account.'], answer: 'So that nobody can open my account.', pt: 'Para ninguém conseguir abrir minha conta.', why: 'Com outra pessoa (nobody) + can: so that.', wrong: { 'For nobody open my account.': 'Estrutura errada.', 'To nobody can open my account.': '"To" não aceita frase completa.' } }),
+      I(7, 3, { type: 'dialogue', lines: [['A', "What's this little device for?"], ['B', '___']], options: ["It's for charging your watch.", "It's for charge your watch.", "It's to charging your watch."], answer: "It's for charging your watch.", pt: 'Serve para carregar o seu relógio.', why: '"For" + -ing (para que serve).', wrong: { "It's for charge your watch.": 'Depois de "for", -ing.', "It's to charging your watch.": '"To" + verbo normal.' } }),
+      I(7, 4, { type: 'dialogue', lines: [['A', 'Are you going to the shop?'], ['B', '___']], options: ['Yes, to buy a new battery.', 'Yes, for buy a new battery.', 'Yes, for to buy a battery.'], answer: 'Yes, to buy a new battery.', pt: 'Sim, para comprar uma bateria nova.', why: 'Resposta curta de objetivo: to + verbo.', wrong: { 'Yes, for buy a new battery.': '"For buy" é erro.', 'Yes, for to buy a battery.': 'Não existe "for to".' } }),
+      I(7, 5, { type: 'speak', en: 'What is this button for?', pt: 'Para que serve este botão?', why: '"Button" soa como "BÂ-ton".' }),
+      I(7, 6, { type: 'speak', en: 'I came here to learn.', pt: 'Vim aqui para aprender.', why: 'Lembre: "to learn", nunca "for learn".' }),
+    ]),
+    L(8, 'Lendo: o celular novo da vovó', [
+      I(8, 1, { type: 'story', why: 'O Lucas explica para a avó para que servem as coisas no celular novo. Leia com calma e ouça cada frase.' }),
+      I(8, 2, { type: 'quiz', q: 'Para que serve o aplicativo verde?', options: ['Para mandar mensagens', 'Para tirar fotos', 'Para ouvir música'], answer: 'Para mandar mensagens', why: '"The green app is for sending messages."' }),
+      I(8, 3, { type: 'quiz', q: 'Por que o Lucas anotou a senha?', options: ['Para a avó não esquecer', 'Para mostrar aos amigos', 'Para trocar depois'], answer: 'Para a avó não esquecer', why: '"So that you won\'t forget it."' }),
+      I(8, 4, { type: 'quiz', q: 'O que a avó quer aprender?', options: ['A fazer chamada de vídeo', 'A jogar', 'A pagar contas'], answer: 'A fazer chamada de vídeo', why: '"I want to see your face when we talk."' }),
+    ], {
+      title: 'O celular novo da vovó',
+      lines: [
+        { who: 'Lucas', en: 'Grandma, this green app is for sending messages.', pt: 'Vó, este aplicativo verde serve para mandar mensagens.' },
+        { who: 'Lucas', en: 'And this one is used for taking photos.', pt: 'E este serve para tirar fotos.' },
+        { ask: 'Para que serve o segundo aplicativo?', options: ['Para tirar fotos', 'Para mandar mensagens', 'Para ligar'], answer: 'Para tirar fotos', why: '"This one is used for taking photos."' },
+        { who: 'Lucas', en: 'I wrote your password on this paper ___ that you won\'t forget it.', pt: 'Escrevi sua senha neste papel para você não esquecer.', gap: { answer: 'so', options: ['so', 'to', 'for'] } },
+        { who: 'Maria', en: 'Thank you, dear. I bought this phone to talk to you every day.', pt: 'Obrigada, querido. Comprei este celular para falar com você todo dia.' },
+        { who: 'Maria', en: 'Now, can you teach me to make video calls? I want to see your face when we talk!', pt: 'Agora, você me ensina a fazer chamada de vídeo? Quero ver seu rosto quando a gente conversa!' },
+      ],
+    }),
+    L(9, 'Desafio da unidade', [
+      I(9, 1, { type: 'choice', prompt: 'Complete:', en: 'He went to the gym ___ lose weight.', pt: 'Ele foi à academia para emagrecer.', options: ['to', 'for', 'so'], answer: 'to', why: 'Objetivo com verbo: to + verbo.', wrong: { for: '"For lose" é erro.', so: '"So lose" não funciona.' } }),
+      I(9, 2, { type: 'type', pt: 'Preciso de uma senha para a minha conta.', answer: 'I need a password for my account.', why: '"For" + substantivo.' }),
+      I(9, 3, { type: 'meaning', en: 'We spoke quietly so that we wouldn\'t wake the baby.', options: ['Falamos baixinho para não acordar o bebê.', 'O bebê acordou com a gente.', 'Falamos alto com o bebê.'], answer: 'Falamos baixinho para não acordar o bebê.', why: '"So that we wouldn\'t" = para não.' }),
+      I(9, 4, { type: 'dictation', en: 'This app is used for learning English.', why: '"Used for" + -ing.' }),
+      I(9, 5, { type: 'listen', en: 'She installed the software in order to work from home.', options: ['Ela instalou o programa para trabalhar de casa.', 'Ela trabalha no escritório.', 'O programa não funcionou.'], answer: 'Ela instalou o programa para trabalhar de casa.', why: '"In order to" = para.' }),
+      I(9, 6, { type: 'build', pt: 'Liguei para ela para que ela soubesse a notícia.', answer: 'I called her so that she would know the news', extra: ['to', 'for'], display: 'I called her so that she would know the news.', why: 'So that + she + would.' }),
+    ]),
+    L(10, 'História: a senha esquecida', [
+      I(10, 1, { type: 'story', why: 'O Carlos não consegue entrar na conta do banco. Ouça cada fala e responda às perguntas no caminho.' }),
+      I(10, 2, { type: 'quiz', q: 'Qual é o problema do Carlos?', options: ['Esqueceu a senha', 'Perdeu o celular', 'O banco fechou'], answer: 'Esqueceu a senha', why: '"I forgot my password."' }),
+      I(10, 3, { type: 'quiz', q: 'Para que o banco manda um código?', options: ['Para proteger a conta', 'Para dar desconto', 'Para trocar o celular'], answer: 'Para proteger a conta', why: '"They send a code in order to protect your account."' }),
+      I(10, 4, { type: 'quiz', q: 'Onde a Sofia sugere guardar a senha nova?', options: ['Num lugar seguro, não no celular', 'Num papel na carteira', 'No e-mail'], answer: 'Num lugar seguro, não no celular', why: '"Keep it somewhere safe, not on your phone."' }),
+    ], {
+      title: 'A senha esquecida',
+      lines: [
+        { who: 'Carlos', en: "Sofia, can you help me? I forgot my password, and I can't open my bank account.", pt: 'Sofia, você me ajuda? Esqueci a senha e não consigo abrir minha conta do banco.' },
+        { who: 'Sofia', en: 'Click here to make a new one. The bank will send you a code.', pt: 'Clica aqui para criar uma nova. O banco vai te mandar um código.' },
+        { who: 'Carlos', en: 'Why do they send a code?', pt: 'Por que eles mandam um código?' },
+        { who: 'Sofia', en: 'They send it in ___ to protect your account.', pt: 'Eles mandam para proteger a sua conta.', gap: { answer: 'order', options: ['order', 'that', 'for'] } },
+        { ask: 'Para que serve o código?', options: ['Para proteger a conta', 'Para pagar contas', 'Para mudar o nome'], answer: 'Para proteger a conta', why: '"In order to protect your account."' },
+        { who: 'Carlos', en: "OK, it worked! I'll write the new password down so that I don't forget it again.", pt: 'Pronto, funcionou! Vou anotar a senha nova para não esquecer de novo.' },
+        { who: 'Sofia', en: 'Good idea. But keep it somewhere safe, not on your phone!', pt: 'Boa ideia. Mas guarda num lugar seguro, não no celular!' },
+      ],
+    }),
+  ],
+});
+
+addPodcast({
+  id: 'pod-b1u15', level: 'B1', unlock: 'b1-u15', title: 'Para que você estuda inglês?',
+  intro: 'A Ana e o Tom contam por que as pessoas estudam inglês, e para que usam a tecnologia.',
+  lines: [
+    { who: 'ana', en: "Hi everyone! Welcome to the podcast. I'm Ana.", pt: 'Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana.' },
+    { who: 'tom', en: "And I'm Tom. Today's question: why are you learning English?", pt: 'E eu sou o Tom. A pergunta de hoje: por que você está aprendendo inglês?' },
+    { who: 'ana', en: 'Many people learn English to get a better job.', pt: 'Muita gente aprende inglês para conseguir um emprego melhor.' },
+    { who: 'tom', en: 'And others learn it in order to travel or to watch films in English.', pt: 'E outros aprendem para viajar ou para ver filmes em inglês.' },
+    { who: 'ana', en: 'I use my phone to practise every day, so that I never forget new words.', pt: 'Eu uso o celular para praticar todo dia, para nunca esquecer as palavras novas.' },
+    { who: 'tom', en: 'Remember: "to study", not "for study"!', pt: 'Lembrem: "to study", não "for study"!' },
+    { who: 'ana', en: 'The most common mistake! And why do you listen to this podcast?', pt: 'O erro mais comum! E para que você ouve este podcast?' },
+    { who: 'tom', en: "To learn and have fun, I hope! That's all for today.", pt: 'Para aprender e se divertir, espero! Por hoje é só.' },
+    { who: 'ana', en: 'Bye! Thank you for listening!', pt: 'Tchau! Obrigada por ouvir!' },
+  ],
+  questions: [
+    { q: 'Por que muita gente aprende inglês, segundo a Ana?', options: ['Para conseguir um emprego melhor', 'Para morar fora', 'Por obrigação da escola'], answer: 'Para conseguir um emprego melhor', why: '"To get a better job."' },
+    { q: 'Para que a Ana usa o celular?', options: ['Para praticar todo dia', 'Para jogar', 'Para ler notícias'], answer: 'Para praticar todo dia', why: '"I use my phone to practise every day."' },
+    { q: 'Qual é o erro mais comum, segundo eles?', options: ['Dizer "for study" em vez de "to study"', 'Esquecer o "the"', 'Falar rápido demais'], answer: 'Dizer "for study" em vez de "to study"', why: '"Remember: to study, not for study!"' },
+  ],
+}, 'pod-b1u14');
+addScene('b1-u15', 'sitting-4', 'phone');

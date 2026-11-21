@@ -1,0 +1,1058 @@
+{
+ "id": "b1-u14",
+ "level": "B1",
+ "order": 14,
+ "title": "Tão bom que…",
+ "subtitle": "So, such e adjetivos fortes para descrever experiências.",
+ "can_do": {
+  "text": "Consigo descrever com emoção um filme, um restaurante ou uma viagem, e escrever uma avaliação simples.",
+  "source": "CEFR (Conselho da Europa) — Produção escrita: descrever experiências e reações, nível B1"
+ },
+ "core_inventory": [
+  "Grammar: so + adjective / such + (a) + adjective + noun",
+  "Grammar: so / such ... that (result)",
+  "Vocabulary: strong adjectives (amazing, awful, brilliant)",
+  "Vocabulary: intensifiers (absolutely, extremely, really)"
+ ],
+ "words": [
+  [
+   "so",
+   "tão"
+  ],
+  [
+   "such",
+   "tão, tamanho(a) (antes de substantivo)"
+  ],
+  [
+   "absolutely",
+   "absolutamente, totalmente"
+  ],
+  [
+   "extremely",
+   "extremamente"
+  ],
+  [
+   "incredibly",
+   "incrivelmente"
+  ],
+  [
+   "terribly",
+   "terrivelmente, muito"
+  ],
+  [
+   "brilliant",
+   "genial, excelente"
+  ],
+  [
+   "impressive",
+   "impressionante"
+  ],
+  [
+   "disappointing",
+   "decepcionante"
+  ],
+  [
+   "disappointed",
+   "decepcionado(a)"
+  ],
+  [
+   "recommend",
+   "recomendar"
+  ],
+  [
+   "review",
+   "avaliação, resenha"
+  ]
+ ],
+ "guide": {
+  "title": "So, such e adjetivos fortes",
+  "intro": "Para dar emoção a uma descrição, o inglês usa \"so\" e \"such\" (tão) e adjetivos fortes. E com \"that\" você mostra a consequência: tão bom QUE...",
+  "points": [
+   {
+    "en": "The film was so good!",
+    "pt": "O filme foi tão bom!",
+    "note": "\"So\" + adjetivo sozinho."
+   },
+   {
+    "en": "It was such a good film!",
+    "pt": "Foi um filme tão bom!",
+    "note": "\"Such a\" + adjetivo + substantivo."
+   },
+   {
+    "en": "The food was so spicy that I cried.",
+    "pt": "A comida estava tão apimentada que eu chorei.",
+    "note": "So + adjetivo + that + consequência."
+   },
+   {
+    "en": "It was such a long trip that we slept on the bus.",
+    "pt": "Foi uma viagem tão longa que dormimos no ônibus.",
+    "note": "Such + a + adjetivo + substantivo + that."
+   },
+   {
+    "en": "The view was absolutely amazing.",
+    "pt": "A vista era absolutamente incrível.",
+    "note": "Com adjetivo forte (amazing, awful), use \"absolutely\", não \"very\"."
+   },
+   {
+    "en": "I'd really recommend it.",
+    "pt": "Eu recomendo muito.",
+    "note": "\"Recommend\" = recomendar. Um \"c\" e dois \"m\"."
+   }
+  ],
+  "tips": [
+   "\"Very amazing\" soa estranho. Com adjetivos fortes, prefira \"absolutely\" ou \"really\": absolutely amazing.",
+   "\"Disappointed\" é a pessoa (decepcionada); \"disappointing\" é a coisa (decepcionante). Igual a bored / boring."
+  ]
+ },
+ "extra_vocab": [],
+ "lessons": [
+  {
+   "id": "b1-u14-l1",
+   "title": "So e such",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l1-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The weather was ___ hot!",
+     "pt": "O tempo estava tão quente!",
+     "options": [
+      "so",
+      "such",
+      "such a"
+     ],
+     "answer": "so",
+     "why": "\"So\" + adjetivo sozinho.",
+     "wrong": {
+      "such": "\"Such\" precisa de substantivo: such hot weather.",
+      "such a": "\"Such a\" + adjetivo + substantivo."
+     }
+    },
+    {
+     "id": "b1u14l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It was ___ beautiful day!",
+     "pt": "Foi um dia tão bonito!",
+     "options": [
+      "such a",
+      "so",
+      "so a"
+     ],
+     "answer": "such a",
+     "why": "Com \"a day\" (substantivo), use \"such a\".",
+     "wrong": {
+      "so": "\"So beautiful day\" fica sem o \"a\" e com a palavra errada.",
+      "so a": "Não existe \"so a\"."
+     }
+    },
+    {
+     "id": "b1u14l1-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "They are ___ nice people.",
+     "pt": "Eles são pessoas tão legais.",
+     "options": [
+      "such",
+      "so",
+      "such a"
+     ],
+     "answer": "such",
+     "why": "Plural (people): such, sem \"a\".",
+     "wrong": {
+      "so": "\"So nice people\" está errado; com substantivo, use such.",
+      "such a": "Sem \"a\" no plural."
+     }
+    },
+    {
+     "id": "b1u14l1-4",
+     "type": "meaning",
+     "en": "I'm so tired!",
+     "options": [
+      "Estou tão cansado!",
+      "Estou um pouco cansado.",
+      "Não estou cansado."
+     ],
+     "answer": "Estou tão cansado!",
+     "why": "\"So\" + adjetivo = tão."
+    },
+    {
+     "id": "b1u14l1-5",
+     "type": "build",
+     "pt": "Foi uma festa tão divertida!",
+     "answer": "It was such a fun party",
+     "extra": [
+      "so",
+      "an"
+     ],
+     "display": "It was such a fun party!",
+     "why": "Such a + adjetivo + substantivo."
+    },
+    {
+     "id": "b1u14l1-6",
+     "type": "listen",
+     "en": "She is such a good friend.",
+     "options": [
+      "Ela é uma amiga tão boa.",
+      "Ela é minha melhor amiga.",
+      "Ela é boa em tudo."
+     ],
+     "answer": "Ela é uma amiga tão boa.",
+     "why": "\"Such a good friend\" = uma amiga tão boa."
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l2",
+   "title": "Tão… que…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The film was so boring ___ I fell asleep.",
+     "pt": "O filme estava tão chato que eu dormi.",
+     "options": [
+      "that",
+      "than",
+      "what"
+     ],
+     "answer": "that",
+     "why": "So + adjetivo + THAT + consequência.",
+     "wrong": {
+      "than": "\"Than\" é de comparação.",
+      "what": "\"What\" não liga a consequência."
+     }
+    },
+    {
+     "id": "b1u14l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It was ___ a long queue that we went home.",
+     "pt": "Era uma fila tão longa que fomos para casa.",
+     "options": [
+      "such",
+      "so",
+      "very"
+     ],
+     "answer": "such",
+     "why": "Com \"a long queue\": such.",
+     "wrong": {
+      "so": "\"So a long\" não existe.",
+      "very": "\"Very a long\" não existe."
+     }
+    },
+    {
+     "id": "b1u14l2-3",
+     "type": "meaning",
+     "en": "The music was so loud that we couldn't talk.",
+     "options": [
+      "A música estava tão alta que não dava para conversar.",
+      "A música estava baixa e conversamos.",
+      "Não tinha música."
+     ],
+     "answer": "A música estava tão alta que não dava para conversar.",
+     "why": "\"So loud that\" = tão alta que."
+    },
+    {
+     "id": "b1u14l2-4",
+     "type": "build",
+     "pt": "Estava tão frio que ficamos em casa.",
+     "answer": "It was so cold that we stayed at home",
+     "extra": [
+      "such",
+      "than"
+     ],
+     "display": "It was so cold that we stayed at home.",
+     "why": "So + adjetivo + that."
+    },
+    {
+     "id": "b1u14l2-5",
+     "type": "listen",
+     "en": "He was so nervous that he forgot his speech.",
+     "options": [
+      "Ele estava tão nervoso que esqueceu o discurso.",
+      "Ele fez um ótimo discurso.",
+      "Ele não ficou nervoso."
+     ],
+     "answer": "Ele estava tão nervoso que esqueceu o discurso.",
+     "why": "\"Speech\" = discurso."
+    },
+    {
+     "id": "b1u14l2-6",
+     "type": "speak",
+     "en": "It was such a great day!",
+     "pt": "Foi um dia tão bom!",
+     "why": "\"Such a\" soa quase como \"SÂ-tcha\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l3",
+   "title": "Adjetivos fortes",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l3-1",
+     "type": "match",
+     "pairs": [
+      [
+       "brilliant",
+       "genial"
+      ],
+      [
+       "impressive",
+       "impressionante"
+      ],
+      [
+       "disappointing",
+       "decepcionante"
+      ],
+      [
+       "awful",
+       "horrível"
+      ]
+     ],
+     "why": "\"Brilliant\" no inglês britânico também quer dizer \"ótimo\"."
+    },
+    {
+     "id": "b1u14l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The view from the top was ___ amazing.",
+     "pt": "A vista lá de cima era absolutamente incrível.",
+     "options": [
+      "absolutely",
+      "very",
+      "a bit"
+     ],
+     "answer": "absolutely",
+     "why": "Com adjetivo forte (amazing), use \"absolutely\".",
+     "wrong": {
+      "very": "\"Very amazing\" soa estranho.",
+      "a bit": "\"A bit amazing\" não combina."
+     }
+    },
+    {
+     "id": "b1u14l3-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I was really ___ with the hotel. It was dirty.",
+     "pt": "Fiquei muito decepcionado com o hotel. Estava sujo.",
+     "options": [
+      "disappointed",
+      "disappointing",
+      "disappoint"
+     ],
+     "answer": "disappointed",
+     "why": "A pessoa fica \"disappointed\".",
+     "wrong": {
+      "disappointing": "\"Disappointing\" é a coisa (o hotel).",
+      "disappoint": "É o verbo."
+     }
+    },
+    {
+     "id": "b1u14l3-4",
+     "type": "meaning",
+     "en": "The concert was extremely impressive.",
+     "options": [
+      "O show foi extremamente impressionante.",
+      "O show foi decepcionante.",
+      "O show foi curto."
+     ],
+     "answer": "O show foi extremamente impressionante.",
+     "why": "\"Extremely\" = extremamente."
+    },
+    {
+     "id": "b1u14l3-5",
+     "type": "build",
+     "pt": "A comida estava incrivelmente boa.",
+     "answer": "The food was incredibly good",
+     "extra": [
+      "incredible",
+      "such"
+     ],
+     "display": "The food was incredibly good.",
+     "why": "Advérbio antes do adjetivo: incredibly good."
+    },
+    {
+     "id": "b1u14l3-6",
+     "type": "listen",
+     "en": "I'm terribly sorry.",
+     "options": [
+      "Sinto muitíssimo.",
+      "Estou com muito medo.",
+      "Que coisa terrível."
+     ],
+     "answer": "Sinto muitíssimo.",
+     "why": "\"Terribly sorry\" = sinto muito (bem formal)."
+    },
+    {
+     "id": "b1u14l3-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ending of the film was ___. I expected more.",
+     "pt": "O final do filme foi decepcionante. Eu esperava mais.",
+     "options": [
+      "disappointing",
+      "disappointed",
+      "brilliant"
+     ],
+     "answer": "disappointing",
+     "why": "A coisa (o final) é \"disappointing\".",
+     "wrong": {
+      "disappointed": "É a pessoa que fica \"disappointed\".",
+      "brilliant": "Não combina com \"esperava mais\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l4",
+   "title": "Prática: escrevendo uma avaliação",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l4-1",
+     "type": "match",
+     "pairs": [
+      [
+       "review",
+       "avaliação"
+      ],
+      [
+       "recommend",
+       "recomendar"
+      ],
+      [
+       "extremely",
+       "extremamente"
+      ],
+      [
+       "absolutely",
+       "totalmente"
+      ]
+     ],
+     "why": "\"Write a review\" = escrever uma avaliação."
+    },
+    {
+     "id": "b1u14l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I would definitely ___ this restaurant.",
+     "pt": "Eu com certeza recomendaria este restaurante.",
+     "options": [
+      "recommend",
+      "recommends",
+      "recommending"
+     ],
+     "answer": "recommend",
+     "why": "Depois de \"would\", verbo normal.",
+     "wrong": {
+      "recommends": "Depois de would, sem -s.",
+      "recommending": "Sem -ing depois de would."
+     }
+    },
+    {
+     "id": "b1u14l4-3",
+     "type": "meaning",
+     "en": "The staff were so kind that we felt at home.",
+     "options": [
+      "A equipe era tão simpática que nos sentimos em casa.",
+      "A equipe não foi simpática.",
+      "Ficamos em casa."
+     ],
+     "answer": "A equipe era tão simpática que nos sentimos em casa.",
+     "why": "\"Feel at home\" = se sentir em casa."
+    },
+    {
+     "id": "b1u14l4-4",
+     "type": "build",
+     "pt": "Foi uma noite tão boa que voltamos no dia seguinte.",
+     "answer": "It was such a good night that we came back the next day",
+     "extra": [
+      "so",
+      "than"
+     ],
+     "display": "It was such a good night that we came back the next day.",
+     "why": "Such a + adjetivo + substantivo + that."
+    },
+    {
+     "id": "b1u14l4-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How was the hotel?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Absolutely awful! The room was so small.",
+      "Very awful! The room was such small.",
+      "So awful hotel!"
+     ],
+     "answer": "Absolutely awful! The room was so small.",
+     "pt": "Horrível! O quarto era tão pequeno.",
+     "why": "Absolutely + adjetivo forte; \"so small\" (adjetivo sozinho).",
+     "wrong": {
+      "Very awful! The room was such small.": "\"Very awful\" soa estranho e \"such small\" está errado.",
+      "So awful hotel!": "Com substantivo, seria \"such an awful hotel\"."
+     }
+    },
+    {
+     "id": "b1u14l4-6",
+     "type": "listen",
+     "en": "It wasn't as good as the reviews said.",
+     "options": [
+      "Não foi tão bom quanto as avaliações diziam.",
+      "Foi melhor do que as avaliações diziam.",
+      "Não li as avaliações."
+     ],
+     "answer": "Não foi tão bom quanto as avaliações diziam.",
+     "why": "\"Not as good as\" = não tão bom quanto."
+    },
+    {
+     "id": "b1u14l4-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Five stars! The service was ___.",
+     "pt": "Cinco estrelas! O atendimento foi genial.",
+     "options": [
+      "brilliant",
+      "disappointing",
+      "awful"
+     ],
+     "answer": "brilliant",
+     "why": "\"Brilliant\" = genial, ótimo.",
+     "wrong": {
+      "disappointing": "Não combina com cinco estrelas.",
+      "awful": "Seria uma estrela!"
+     }
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l5-1",
+     "type": "type",
+     "pt": "O filme foi tão bom!",
+     "answer": "The film was so good!",
+     "accept": [
+      "The movie was so good!"
+     ],
+     "why": "\"So\" + adjetivo."
+    },
+    {
+     "id": "b1u14l5-2",
+     "type": "type",
+     "pt": "Foi um dia tão longo!",
+     "answer": "It was such a long day!",
+     "why": "\"Such a\" + adjetivo + substantivo."
+    },
+    {
+     "id": "b1u14l5-3",
+     "type": "dictation",
+     "en": "I was so tired that I went to bed early.",
+     "why": "So + adjetivo + that = tão... que."
+    },
+    {
+     "id": "b1u14l5-4",
+     "type": "type",
+     "pt": "Eu recomendo este livro.",
+     "answer": "I recommend this book.",
+     "why": "\"Recommend\" = recomendar."
+    },
+    {
+     "id": "b1u14l5-5",
+     "type": "dictation",
+     "en": "The view was absolutely amazing.",
+     "why": "\"Absolutely amazing\" = absolutamente incrível."
+    },
+    {
+     "id": "b1u14l5-6",
+     "type": "type",
+     "pt": "Fiquei decepcionado com o show.",
+     "answer": "I was disappointed with the concert.",
+     "accept": [
+      "I was disappointed with the show."
+     ],
+     "why": "A pessoa: disappointed."
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l6-1",
+     "type": "listen",
+     "en": "It was such a disappointing trip.",
+     "options": [
+      "Foi uma viagem tão decepcionante.",
+      "Foi uma viagem incrível.",
+      "A viagem foi longa."
+     ],
+     "answer": "Foi uma viagem tão decepcionante.",
+     "why": "\"Disappointing\" = decepcionante."
+    },
+    {
+     "id": "b1u14l6-2",
+     "type": "dictation",
+     "en": "The cake was so delicious!",
+     "why": "\"Delicious\" = delicioso."
+    },
+    {
+     "id": "b1u14l6-3",
+     "type": "listen",
+     "en": "The museum was incredibly impressive.",
+     "options": [
+      "O museu era incrivelmente impressionante.",
+      "O museu estava fechado.",
+      "O museu era pequeno."
+     ],
+     "answer": "O museu era incrivelmente impressionante.",
+     "why": "\"Impressive\" = impressionante."
+    },
+    {
+     "id": "b1u14l6-4",
+     "type": "dictation",
+     "en": "I read the reviews online.",
+     "why": "\"Reviews\" = avaliações."
+    },
+    {
+     "id": "b1u14l6-5",
+     "type": "listen",
+     "en": "The test was so easy that everyone finished early.",
+     "options": [
+      "A prova estava tão fácil que todos terminaram cedo.",
+      "A prova estava difícil.",
+      "Ninguém terminou a prova."
+     ],
+     "answer": "A prova estava tão fácil que todos terminaram cedo.",
+     "why": "So easy that = tão fácil que."
+    },
+    {
+     "id": "b1u14l6-6",
+     "type": "dictation",
+     "en": "They are such kind people.",
+     "why": "Plural: such, sem \"a\"."
+    },
+    {
+     "id": "b1u14l6-7",
+     "type": "speak",
+     "en": "I would really recommend it.",
+     "pt": "Eu recomendaria muito.",
+     "why": "\"Recommend\" soa como \"ré-ko-MÉND\"."
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you like the new restaurant?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes! The food was so good that I want to go back.",
+      "Yes! The food was such good that I want to go back.",
+      "Yes! So good food."
+     ],
+     "answer": "Yes! The food was so good that I want to go back.",
+     "pt": "Sim! A comida estava tão boa que quero voltar.",
+     "why": "So + adjetivo + that.",
+     "wrong": {
+      "Yes! The food was such good that I want to go back.": "\"Such good\" sem substantivo está errado.",
+      "Yes! So good food.": "Seria \"such good food\"."
+     }
+    },
+    {
+     "id": "b1u14l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How was the film?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Honestly, it was a bit disappointing.",
+      "Honestly, I was a bit disappointing.",
+      "Honestly, it was disappointed."
+     ],
+     "answer": "Honestly, it was a bit disappointing.",
+     "pt": "Sinceramente, foi meio decepcionante.",
+     "why": "O filme é \"disappointing\".",
+     "wrong": {
+      "Honestly, I was a bit disappointing.": "Isso diria que VOCÊ é decepcionante.",
+      "Honestly, it was disappointed.": "O filme não sente nada: disappointing."
+     }
+    },
+    {
+     "id": "b1u14l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Would you recommend the hotel?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Absolutely! It was such a lovely place.",
+      "Absolutely! It was so a lovely place.",
+      "Absolutely! It was very lovely place."
+     ],
+     "answer": "Absolutely! It was such a lovely place.",
+     "pt": "Com certeza! Era um lugar tão agradável.",
+     "why": "\"Absolutely!\" sozinho = com certeza. \"Such a lovely place\".",
+     "wrong": {
+      "Absolutely! It was so a lovely place.": "Não existe \"so a\".",
+      "Absolutely! It was very lovely place.": "Faltou o \"a\"."
+     }
+    },
+    {
+     "id": "b1u14l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "The concert was amazing!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I know! It was so loud that my ears still hurt.",
+      "I know! It was such loud that my ears hurt.",
+      "I know! So loud ears."
+     ],
+     "answer": "I know! It was so loud that my ears still hurt.",
+     "pt": "Pois é! Estava tão alto que meus ouvidos ainda doem.",
+     "why": "So + adjetivo + that.",
+     "wrong": {
+      "I know! It was such loud that my ears hurt.": "\"Such loud\" está errado.",
+      "I know! So loud ears.": "Não forma frase."
+     }
+    },
+    {
+     "id": "b1u14l7-5",
+     "type": "speak",
+     "en": "It was absolutely brilliant!",
+     "pt": "Foi absolutamente genial!",
+     "why": "\"Brilliant\" soa como \"BRÍ-lian-t\"."
+    },
+    {
+     "id": "b1u14l7-6",
+     "type": "speak",
+     "en": "It was so good that I went twice.",
+     "pt": "Foi tão bom que fui duas vezes.",
+     "why": "\"Twice\" = duas vezes."
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l8",
+   "title": "Lendo: avaliações de um restaurante",
+   "added": "2026-11",
+   "story": {
+    "title": "Avaliações: Restaurante Sabor",
+    "lines": [
+     {
+      "who": "Julia",
+      "en": "Five stars! The food was so good that I ordered dessert twice.",
+      "pt": "Cinco estrelas! A comida estava tão boa que pedi sobremesa duas vezes."
+     },
+     {
+      "who": "Mike",
+      "en": "Three stars. The food was brilliant, but we waited such a long time for our table.",
+      "pt": "Três estrelas. A comida era ótima, mas esperamos tanto tempo pela mesa."
+     },
+     {
+      "ask": "Quantas estrelas o Mike deu?",
+      "options": [
+       "Três",
+       "Cinco",
+       "Uma"
+      ],
+      "answer": "Três",
+      "why": "\"Three stars.\""
+     },
+     {
+      "who": "Carlos",
+      "en": "The staff were ___ kind, and the view of the sea was absolutely amazing.",
+      "pt": "A equipe era extremamente simpática, e a vista do mar era absolutamente incrível.",
+      "gap": {
+       "answer": "extremely",
+       "options": [
+        "extremely",
+        "such",
+        "disappointed"
+       ]
+      }
+     },
+     {
+      "who": "Carlos",
+      "en": "It isn't cheap, but I'd absolutely recommend it.",
+      "pt": "Não é barato, mas eu recomendo totalmente."
+     },
+     {
+      "who": "Julia",
+      "en": "The only disappointing thing? They had no chocolate cake left!",
+      "pt": "A única coisa decepcionante? Não tinha mais bolo de chocolate!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u14l8-1",
+     "type": "story",
+     "why": "Três pessoas escrevem avaliações do mesmo restaurante. Repare nos adjetivos fortes. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b1u14l8-2",
+     "type": "quiz",
+     "q": "O que a Julia achou da comida?",
+     "options": [
+      "Tão boa que pediu sobremesa duas vezes",
+      "Fria e sem graça",
+      "Apimentada demais"
+     ],
+     "answer": "Tão boa que pediu sobremesa duas vezes",
+     "why": "\"So good that I ordered dessert twice.\""
+    },
+    {
+     "id": "b1u14l8-3",
+     "type": "quiz",
+     "q": "Qual foi o problema do Mike?",
+     "options": [
+      "A espera longa",
+      "A comida fria",
+      "O preço"
+     ],
+     "answer": "A espera longa",
+     "why": "\"We waited such a long time for our table.\""
+    },
+    {
+     "id": "b1u14l8-4",
+     "type": "quiz",
+     "q": "O Carlos recomenda o restaurante?",
+     "options": [
+      "Sim, absolutamente",
+      "Não",
+      "Só no almoço"
+     ],
+     "answer": "Sim, absolutamente",
+     "why": "\"I'd absolutely recommend it.\""
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b1u14l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It was ___ an easy test!",
+     "pt": "Foi uma prova tão fácil!",
+     "options": [
+      "such",
+      "so",
+      "very"
+     ],
+     "answer": "such",
+     "why": "Com \"an easy test\": such.",
+     "wrong": {
+      "so": "\"So an easy\" não existe.",
+      "very": "\"Very an easy\" não existe."
+     }
+    },
+    {
+     "id": "b1u14l9-2",
+     "type": "type",
+     "pt": "Estava tão quente que fomos à praia.",
+     "answer": "It was so hot that we went to the beach.",
+     "why": "So + adjetivo + that."
+    },
+    {
+     "id": "b1u14l9-3",
+     "type": "meaning",
+     "en": "I was so disappointed with the ending.",
+     "options": [
+      "Fiquei tão decepcionado com o final.",
+      "O final foi ótimo.",
+      "Não vi o final."
+     ],
+     "answer": "Fiquei tão decepcionado com o final.",
+     "why": "\"Disappointed\" = decepcionado (a pessoa)."
+    },
+    {
+     "id": "b1u14l9-4",
+     "type": "dictation",
+     "en": "The hotel was absolutely awful.",
+     "why": "\"Absolutely awful\" = horrível."
+    },
+    {
+     "id": "b1u14l9-5",
+     "type": "listen",
+     "en": "It was such a long film that I fell asleep.",
+     "options": [
+      "Era um filme tão longo que eu dormi.",
+      "O filme era curto e bom.",
+      "Eu dormi antes do filme."
+     ],
+     "answer": "Era um filme tão longo que eu dormi.",
+     "why": "Such a + adjetivo + substantivo + that."
+    },
+    {
+     "id": "b1u14l9-6",
+     "type": "build",
+     "pt": "Eles são pessoas tão simpáticas.",
+     "answer": "They are such nice people",
+     "extra": [
+      "so",
+      "a"
+     ],
+     "display": "They are such nice people.",
+     "why": "Plural: such (sem \"a\")."
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l10",
+   "title": "História: a crítica de cinema",
+   "added": "2026-11",
+   "story": {
+    "title": "A crítica de cinema",
+    "lines": [
+     {
+      "who": "Nina",
+      "en": "That was absolutely brilliant! The ending was so surprising!",
+      "pt": "Foi absolutamente genial! O final foi tão surpreendente!"
+     },
+     {
+      "who": "Ben",
+      "en": "Really? I thought it was such a disappointing film.",
+      "pt": "Sério? Achei um filme tão decepcionante."
+     },
+     {
+      "who": "Nina",
+      "en": "Disappointing? The actors were extremely good!",
+      "pt": "Decepcionante? Os atores eram extremamente bons!"
+     },
+     {
+      "who": "Ben",
+      "en": "Maybe. But it was ___ long that I almost fell asleep.",
+      "pt": "Talvez. Mas foi tão longo que eu quase dormi.",
+      "gap": {
+       "answer": "so",
+       "options": [
+        "so",
+        "such",
+        "very"
+       ]
+      }
+     },
+     {
+      "ask": "O que quase aconteceu com o Ben?",
+      "options": [
+       "Quase dormiu",
+       "Quase chorou",
+       "Quase saiu"
+      ],
+      "answer": "Quase dormiu",
+      "why": "\"I almost fell asleep.\""
+     },
+     {
+      "who": "Nina",
+      "en": "You're impossible! I'll write a five-star review.",
+      "pt": "Você é impossível! Vou escrever uma avaliação de cinco estrelas."
+     },
+     {
+      "who": "Ben",
+      "en": "And I'll write a two-star one. Next time, I choose the film!",
+      "pt": "E eu vou escrever uma de duas estrelas. Da próxima vez, eu escolho o filme!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b1u14l10-1",
+     "type": "story",
+     "why": "A Nina e o Ben saem do cinema com opiniões bem diferentes. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "b1u14l10-2",
+     "type": "quiz",
+     "q": "O que a Nina achou do filme?",
+     "options": [
+      "Genial",
+      "Chato",
+      "Normal"
+     ],
+     "answer": "Genial",
+     "why": "\"That was absolutely brilliant!\""
+    },
+    {
+     "id": "b1u14l10-3",
+     "type": "quiz",
+     "q": "Por que o Ben não gostou?",
+     "options": [
+      "Achou o filme longo e decepcionante",
+      "Não entendeu o inglês",
+      "Estava com fome"
+     ],
+     "answer": "Achou o filme longo e decepcionante",
+     "why": "\"It was so long\" e \"disappointing\"."
+    },
+    {
+     "id": "b1u14l10-4",
+     "type": "quiz",
+     "q": "O que eles combinam no fim?",
+     "options": [
+      "Ele escolhe o próximo filme",
+      "Nunca mais ir ao cinema",
+      "Ver o mesmo filme de novo"
+     ],
+     "answer": "Ele escolhe o próximo filme",
+     "why": "\"Next time, I choose the film!\""
+    }
+   ]
+  }
+ ]
+}
