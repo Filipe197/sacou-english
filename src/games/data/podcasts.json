@@ -5417,6 +5417,330 @@
      "why": "\"However\" = porém, no entanto."
     }
    ]
+  },
+  {
+   "id": "pod-b2u9",
+   "level": "B2",
+   "unlock": "b2-u9",
+   "title": "Onde você vai estar em 2035?",
+   "intro": "A Ana e o Tom imaginam como vai estar a vida deles daqui a dez anos.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: where will we be in ten years?",
+     "pt": "E eu sou o Tom. Hoje: onde vamos estar daqui a dez anos?"
+    },
+    {
+     "who": "ana",
+     "en": "I hope I'll be living by the sea and working from home.",
+     "pt": "Espero estar morando perto do mar e trabalhando de casa."
+    },
+    {
+     "who": "tom",
+     "en": "By then, I'll have written my first book. That's my biggest target.",
+     "pt": "Até lá, vou ter escrito meu primeiro livro. É a minha maior meta."
+    },
+    {
+     "who": "ana",
+     "en": "And this podcast? Will we still be recording it?",
+     "pt": "E este podcast? Vamos ainda estar gravando?"
+    },
+    {
+     "who": "tom",
+     "en": "Of course! By 2035, we'll have recorded more than a thousand episodes.",
+     "pt": "Claro! Até 2035, vamos ter gravado mais de mil episódios."
+    },
+    {
+     "who": "ana",
+     "en": "And you'll have become fluent in English!",
+     "pt": "E vocês vão ter ficado fluentes em inglês!"
+    },
+    {
+     "who": "tom",
+     "en": "That's all for today. Bye!",
+     "pt": "Por hoje é só. Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Onde a Ana espera estar morando?",
+     "options": [
+      "Perto do mar",
+      "Na capital",
+      "No exterior"
+     ],
+     "answer": "Perto do mar",
+     "why": "\"I'll be living by the sea.\""
+    },
+    {
+     "q": "Qual é a maior meta do Tom?",
+     "options": [
+      "Escrever o primeiro livro",
+      "Se aposentar",
+      "Mudar de país"
+     ],
+     "answer": "Escrever o primeiro livro",
+     "why": "\"I'll have written my first book.\""
+    },
+    {
+     "q": "Quantos episódios eles vão ter gravado até 2035?",
+     "options": [
+      "Mais de mil",
+      "Cem",
+      "Cinquenta"
+     ],
+     "answer": "Mais de mil",
+     "why": "\"More than a thousand episodes.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u10",
+   "level": "B2",
+   "unlock": "b2-u10",
+   "title": "Portas que se fecharam",
+   "intro": "A Ana e o Tom falam de escolhas que mudaram a vida deles.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: choices that changed our lives.",
+     "pt": "E eu sou o Tom. Hoje: escolhas que mudaram a nossa vida."
+    },
+    {
+     "who": "ana",
+     "en": "When I was eighteen, I almost studied engineering. If I had, I'd be building bridges now!",
+     "pt": "Aos dezoito anos, quase estudei engenharia. Se tivesse estudado, estaria construindo pontes agora!"
+    },
+    {
+     "who": "tom",
+     "en": "And I almost stayed in England. If I hadn't come to Brazil, I wouldn't be doing this podcast.",
+     "pt": "E eu quase fiquei na Inglaterra. Se não tivesse vindo para o Brasil, não estaria fazendo este podcast."
+    },
+    {
+     "who": "ana",
+     "en": "Do you regret anything?",
+     "pt": "Você se arrepende de alguma coisa?"
+    },
+    {
+     "who": "tom",
+     "en": "Only one thing. If I weren't so lazy, I would have learned Portuguese faster!",
+     "pt": "Só de uma coisa. Se eu não fosse tão preguiçoso, teria aprendido português mais rápido!"
+    },
+    {
+     "who": "ana",
+     "en": "Ha! That's all for today. Thank you for listening!",
+     "pt": "Rá! Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye!",
+     "pt": "Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que a Ana quase estudou?",
+     "options": [
+      "Engenharia",
+      "Medicina",
+      "Direito"
+     ],
+     "answer": "Engenharia",
+     "why": "\"I almost studied engineering.\""
+    },
+    {
+     "q": "O que aconteceria se o Tom não tivesse vindo ao Brasil?",
+     "options": [
+      "Não estaria fazendo o podcast",
+      "Seria engenheiro",
+      "Falaria português melhor"
+     ],
+     "answer": "Não estaria fazendo o podcast",
+     "why": "\"I wouldn't be doing this podcast.\""
+    },
+    {
+     "q": "Do que o Tom se arrepende?",
+     "options": [
+      "De não ter aprendido português mais rápido",
+      "De ter vindo ao Brasil",
+      "De não ter estudado engenharia"
+     ],
+     "answer": "De não ter aprendido português mais rápido",
+     "why": "\"I would have learned Portuguese faster!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u11",
+   "level": "B2",
+   "unlock": "b2-u11",
+   "title": "Pessoas que marcaram a gente",
+   "intro": "A Ana e o Tom falam de pessoas importantes na vida deles.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: people who changed our lives.",
+     "pt": "E eu sou o Tom. Hoje: pessoas que mudaram a nossa vida."
+    },
+    {
+     "who": "ana",
+     "en": "My grandmother, who was a teacher, taught me to read when I was four.",
+     "pt": "Minha avó, que era professora, me ensinou a ler quando eu tinha quatro anos."
+    },
+    {
+     "who": "tom",
+     "en": "For me, it was my first boss, whose advice I still follow today.",
+     "pt": "Para mim, foi o meu primeiro chefe, cujos conselhos eu sigo até hoje."
+    },
+    {
+     "who": "ana",
+     "en": "What did he say?",
+     "pt": "O que ele dizia?"
+    },
+    {
+     "who": "tom",
+     "en": "\"Always listen more than you speak,\" which is great advice for a podcast!",
+     "pt": "\"Sempre escute mais do que fala\", o que é um ótimo conselho para um podcast!"
+    },
+    {
+     "who": "ana",
+     "en": "Ha! That's all for today. Thank you for listening!",
+     "pt": "Rá! Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye!",
+     "pt": "Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quem ensinou a Ana a ler?",
+     "options": [
+      "A avó, que era professora",
+      "A mãe",
+      "O primeiro chefe"
+     ],
+     "answer": "A avó, que era professora",
+     "why": "\"My grandmother, who was a teacher, taught me to read.\""
+    },
+    {
+     "q": "Quem marcou a vida do Tom?",
+     "options": [
+      "O primeiro chefe",
+      "O pai",
+      "Um professor"
+     ],
+     "answer": "O primeiro chefe",
+     "why": "\"My first boss, whose advice I still follow.\""
+    },
+    {
+     "q": "Qual era o conselho?",
+     "options": [
+      "Escutar mais do que falar",
+      "Trabalhar muito",
+      "Viajar sempre"
+     ],
+     "answer": "Escutar mais do que falar",
+     "why": "\"Always listen more than you speak.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u12",
+   "level": "B2",
+   "unlock": "b2-u12",
+   "title": "Uma palavra vira dez",
+   "intro": "A Ana e o Tom mostram como prefixos e sufixos multiplicam o vocabulário.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: one word, many forms.",
+     "pt": "E eu sou o Tom. Hoje: uma palavra, várias formas."
+    },
+    {
+     "who": "ana",
+     "en": "Take the word \"help\". Helpful, helpless, helper, unhelpful...",
+     "pt": "Pegue a palavra \"help\". Helpful, helpless, helper, unhelpful..."
+    },
+    {
+     "who": "tom",
+     "en": "That's amazing. Learn one word and you understand five!",
+     "pt": "Isso é incrível. Aprenda uma palavra e você entende cinco!"
+    },
+    {
+     "who": "ana",
+     "en": "My favourite is \"unbelievable\". It has three pieces!",
+     "pt": "Minha favorita é \"unbelievable\". Tem três pedaços: un, believe, able!"
+    },
+    {
+     "who": "tom",
+     "en": "And remember: after \"very\", use the adjective. Very careful, not very care.",
+     "pt": "E lembrem: depois de \"very\", use o adjetivo. Very careful, não very care."
+    },
+    {
+     "who": "ana",
+     "en": "Great tip! That's all for today. Thank you for listening!",
+     "pt": "Ótima dica! Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye!",
+     "pt": "Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual palavra a Ana usa como exemplo primeiro?",
+     "options": [
+      "Help",
+      "Happy",
+      "Care"
+     ],
+     "answer": "Help",
+     "why": "\"Take the word help.\""
+    },
+    {
+     "q": "Qual é a palavra favorita da Ana?",
+     "options": [
+      "Unbelievable",
+      "Helpful",
+      "Careful"
+     ],
+     "answer": "Unbelievable",
+     "why": "\"My favourite is unbelievable.\""
+    },
+    {
+     "q": "Qual é a dica do Tom?",
+     "options": [
+      "Depois de \"very\", use o adjetivo",
+      "Nunca use prefixos",
+      "Decore todas as palavras"
+     ],
+     "answer": "Depois de \"very\", use o adjetivo",
+     "why": "\"After very, use the adjective.\""
+    }
+   ]
   }
  ]
 }

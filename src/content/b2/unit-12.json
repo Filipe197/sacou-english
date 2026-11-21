@@ -1,0 +1,1071 @@
+{
+ "id": "b2-u12",
+ "level": "B2",
+ "order": 12,
+ "title": "Uma palavra, várias formas",
+ "subtitle": "Prefixos e sufixos: multiplicar o vocabulário a partir de uma palavra.",
+ "can_do": {
+  "text": "Consigo entender e formar palavras novas com prefixos e sufixos comuns, e escolher a forma certa (verbo, substantivo, adjetivo) numa frase.",
+  "source": "CEFR (Conselho da Europa) — Amplitude de vocabulário e formação de palavras, nível B2"
+ },
+ "core_inventory": [
+  "Vocabulary: negative prefixes (un-, dis-, im-, in-)",
+  "Vocabulary: adjective suffixes (-ful, -less, -able)",
+  "Vocabulary: noun suffixes (-ness, -ment, -tion)",
+  "Grammar: word class in context (noun, verb, adjective, adverb)"
+ ],
+ "words": [
+  [
+   "unhappy",
+   "infeliz"
+  ],
+  [
+   "dishonest",
+   "desonesto(a)"
+  ],
+  [
+   "impossible",
+   "impossível"
+  ],
+  [
+   "careful / careless",
+   "cuidadoso / descuidado"
+  ],
+  [
+   "helpful / useless",
+   "prestativo, útil / inútil"
+  ],
+  [
+   "happiness",
+   "felicidade"
+  ],
+  [
+   "kindness",
+   "gentileza, bondade"
+  ],
+  [
+   "friendship",
+   "amizade"
+  ],
+  [
+   "development",
+   "desenvolvimento"
+  ],
+  [
+   "education",
+   "educação, ensino"
+  ],
+  [
+   "unbelievable",
+   "inacreditável"
+  ],
+  [
+   "employment",
+   "emprego, trabalho"
+  ]
+ ],
+ "guide": {
+  "title": "Prefixos e sufixos: o mesmo tijolo, várias construções",
+  "intro": "Muitas palavras inglesas são uma raiz + um pedaço no começo (prefixo) ou no fim (sufixo). Conhecendo esses pedaços, você entende palavras que nunca viu e escolhe a forma certa na frase.",
+  "points": [
+   {
+    "en": "happy → unhappy, honest → dishonest, possible → impossible",
+    "pt": "feliz → infeliz, honesto → desonesto, possível → impossível",
+    "note": "Prefixos negativos: un-, dis-, im- (antes de p e m), in-."
+   },
+   {
+    "en": "care → careful / careless",
+    "pt": "cuidado → cuidadoso / descuidado",
+    "note": "-ful = cheio de; -less = sem."
+   },
+   {
+    "en": "happy → happiness, kind → kindness",
+    "pt": "feliz → felicidade, gentil → gentileza",
+    "note": "-ness transforma adjetivo em substantivo."
+   },
+   {
+    "en": "develop → development, educate → education",
+    "pt": "desenvolver → desenvolvimento, educar → educação",
+    "note": "-ment e -tion transformam verbo em substantivo."
+   },
+   {
+    "en": "believe → unbelievable",
+    "pt": "acreditar → inacreditável",
+    "note": "-able = que pode ser. Un- + believe + -able: que não dá para acreditar."
+   },
+   {
+    "en": "friend → friendship",
+    "pt": "amigo → amizade",
+    "note": "-ship forma substantivos de relação: friendship, relationship."
+   }
+  ],
+  "tips": [
+   "Antes de escolher a forma, pergunte: depois de \"the/a\" vem substantivo; depois de \"very/so\" vem adjetivo; depois do verbo, muitas vezes, advérbio (-ly).",
+   "\"Useless\" (inútil) existe, mas \"useful\" é útil. Nem toda palavra aceita os dois."
+  ]
+ },
+ "extra_vocab": [],
+ "lessons": [
+  {
+   "id": "b2-u12-l1",
+   "title": "Prefixos negativos",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l1-1",
+     "type": "match",
+     "pairs": [
+      [
+       "unhappy",
+       "infeliz"
+      ],
+      [
+       "dishonest",
+       "desonesto"
+      ],
+      [
+       "impossible",
+       "impossível"
+      ],
+      [
+       "unusual",
+       "incomum"
+      ]
+     ],
+     "why": "Un-, dis-, im- deixam a palavra com o sentido contrário."
+    },
+    {
+     "id": "b2u12l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It's ___ to finish this in one day.",
+     "pt": "É impossível terminar isto em um dia.",
+     "options": [
+      "impossible",
+      "possible",
+      "possibly"
+     ],
+     "answer": "impossible",
+     "why": "Antes de \"p\", o prefixo negativo é \"im-\": impossible. (Cuidado: \"unpossible\" não existe!)",
+     "wrong": {
+      "possible": "\"Possible\" é o contrário: possível.",
+      "possibly": "\"Possibly\" é advérbio (possivelmente)."
+     }
+    },
+    {
+     "id": "b2u12l1-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He lied to us. He was very ___.",
+     "pt": "Ele mentiu para nós. Foi muito desonesto.",
+     "options": [
+      "dishonest",
+      "honest",
+      "honesty"
+     ],
+     "answer": "dishonest",
+     "why": "O contrário de \"honest\" é \"dishonest\" (e não \"unhonest\").",
+     "wrong": {
+      "honest": "\"Honest\" = honesto, o contrário.",
+      "honesty": "\"Honesty\" é o substantivo (honestidade)."
+     }
+    },
+    {
+     "id": "b2u12l1-4",
+     "type": "meaning",
+     "en": "She looked unhappy, so I asked if she was OK.",
+     "options": [
+      "Ela parecia triste, então perguntei se estava bem.",
+      "Ela estava muito feliz.",
+      "Ela me perguntou se eu estava bem."
+     ],
+     "answer": "Ela parecia triste, então perguntei se estava bem.",
+     "why": "\"Unhappy\" = infeliz, triste."
+    },
+    {
+     "id": "b2u12l1-5",
+     "type": "build",
+     "pt": "Foi uma história inacreditável.",
+     "answer": "It was an unbelievable story",
+     "extra": [
+      "a",
+      "believe"
+     ],
+     "display": "It was an unbelievable story.",
+     "why": "Un- + believe + -able. Antes de vogal: \"an\"."
+    },
+    {
+     "id": "b2u12l1-6",
+     "type": "listen",
+     "en": "Don't be impatient. The bus is coming.",
+     "options": [
+      "Não seja impaciente. O ônibus está chegando.",
+      "Seja paciente com o ônibus atrasado.",
+      "O ônibus não vem."
+     ],
+     "answer": "Não seja impaciente. O ônibus está chegando.",
+     "why": "\"Impatient\" = impaciente (im- + patient)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l2",
+   "title": "Com e sem: -ful e -less",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Be ___ with that glass. It might break.",
+     "pt": "Cuidado com esse copo. Pode quebrar.",
+     "options": [
+      "careful",
+      "careless",
+      "care"
+     ],
+     "answer": "careful",
+     "why": "-ful = cheio de: cheio de cuidado.",
+     "wrong": {
+      "careless": "\"Careless\" = descuidado, o contrário.",
+      "care": "\"Care\" é substantivo ou verbo; depois de \"be\", adjetivo."
+     }
+    },
+    {
+     "id": "b2u12l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "This old phone is ___. It doesn't even turn on.",
+     "pt": "Este celular velho é inútil. Nem liga.",
+     "options": [
+      "useless",
+      "useful",
+      "use"
+     ],
+     "answer": "useless",
+     "why": "-less = sem: sem uso, inútil.",
+     "wrong": {
+      "useful": "\"Useful\" = útil, o contrário.",
+      "use": "\"Use\" é verbo ou substantivo."
+     }
+    },
+    {
+     "id": "b2u12l2-3",
+     "type": "meaning",
+     "en": "The staff were very helpful.",
+     "options": [
+      "A equipe foi muito prestativa.",
+      "A equipe precisava de ajuda.",
+      "A equipe não ajudou."
+     ],
+     "answer": "A equipe foi muito prestativa.",
+     "why": "\"Helpful\" = que ajuda, prestativo."
+    },
+    {
+     "id": "b2u12l2-4",
+     "type": "build",
+     "pt": "Foi um erro descuidado.",
+     "answer": "It was a careless mistake",
+     "extra": [
+      "careful",
+      "an"
+     ],
+     "display": "It was a careless mistake.",
+     "why": "\"Careless\" = descuidado."
+    },
+    {
+     "id": "b2u12l2-5",
+     "type": "match",
+     "pairs": [
+      [
+       "careful",
+       "cuidadoso"
+      ],
+      [
+       "careless",
+       "descuidado"
+      ],
+      [
+       "helpful",
+       "prestativo"
+      ],
+      [
+       "useless",
+       "inútil"
+      ]
+     ],
+     "why": "-ful = com, -less = sem."
+    },
+    {
+     "id": "b2u12l2-6",
+     "type": "speak",
+     "en": "Thank you, you were very helpful.",
+     "pt": "Obrigado, você foi muito prestativo.",
+     "why": "Ótima frase para agradecer um atendimento."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l3",
+   "title": "Substantivos: -ness, -ment, -tion, -ship",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Money does not always bring ___.",
+     "pt": "Dinheiro nem sempre traz felicidade.",
+     "options": [
+      "happiness",
+      "happy",
+      "happily"
+     ],
+     "answer": "happiness",
+     "why": "Depois de \"bring\", precisa de substantivo: happiness.",
+     "wrong": {
+      "happy": "\"Happy\" é adjetivo.",
+      "happily": "\"Happily\" é advérbio."
+     }
+    },
+    {
+     "id": "b2u12l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Good ___ is the key to success.",
+     "pt": "Uma boa educação é a chave do sucesso.",
+     "options": [
+      "education",
+      "educate",
+      "educated"
+     ],
+     "answer": "education",
+     "why": "Substantivo depois de \"good\": education (-tion).",
+     "wrong": {
+      "educate": "\"Educate\" é verbo.",
+      "educated": "\"Educated\" é adjetivo (instruído)."
+     }
+    },
+    {
+     "id": "b2u12l3-3",
+     "type": "meaning",
+     "en": "Our friendship started at school.",
+     "options": [
+      "Nossa amizade começou na escola.",
+      "Meu amigo estuda na escola.",
+      "A escola é nossa amiga."
+     ],
+     "answer": "Nossa amizade começou na escola.",
+     "why": "\"Friendship\" = amizade (-ship)."
+    },
+    {
+     "id": "b2u12l3-4",
+     "type": "build",
+     "pt": "Obrigado pela sua gentileza.",
+     "answer": "Thank you for your kindness",
+     "extra": [
+      "kind",
+      "kindly"
+     ],
+     "display": "Thank you for your kindness.",
+     "why": "Substantivo depois de \"your\": kindness."
+    },
+    {
+     "id": "b2u12l3-5",
+     "type": "listen",
+     "en": "The development of the city was very fast.",
+     "options": [
+      "O desenvolvimento da cidade foi muito rápido.",
+      "A cidade é muito desenvolvida.",
+      "A cidade vai crescer devagar."
+     ],
+     "answer": "O desenvolvimento da cidade foi muito rápido.",
+     "why": "\"Development\" = desenvolvimento (develop + -ment)."
+    },
+    {
+     "id": "b2u12l3-6",
+     "type": "match",
+     "pairs": [
+      [
+       "happiness",
+       "felicidade"
+      ],
+      [
+       "kindness",
+       "gentileza"
+      ],
+      [
+       "friendship",
+       "amizade"
+      ],
+      [
+       "development",
+       "desenvolvimento"
+      ]
+     ],
+     "why": "-ness, -ship e -ment viram substantivos."
+    },
+    {
+     "id": "b2u12l3-7",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Unemployment is a serious problem. Many people are looking for ___.",
+     "pt": "O desemprego é um problema sério. Muita gente está procurando emprego.",
+     "options": [
+      "employment",
+      "employ",
+      "employed"
+     ],
+     "answer": "employment",
+     "why": "Substantivo depois de \"for\": employment.",
+     "wrong": {
+      "employ": "\"Employ\" é verbo.",
+      "employed": "\"Employed\" é adjetivo."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l4",
+   "title": "Prática: qual forma?",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l4-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She sings ___.",
+     "pt": "Ela canta lindamente.",
+     "options": [
+      "beautifully",
+      "beautiful",
+      "beauty"
+     ],
+     "answer": "beautifully",
+     "why": "Depois do verbo (sings), advérbio: beautifully.",
+     "wrong": {
+      "beautiful": "\"Beautiful\" é adjetivo.",
+      "beauty": "\"Beauty\" é substantivo."
+     }
+    },
+    {
+     "id": "b2u12l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "What's the ___ between these two words?",
+     "pt": "Qual é a diferença entre estas duas palavras?",
+     "options": [
+      "difference",
+      "different",
+      "differently"
+     ],
+     "answer": "difference",
+     "why": "Depois de \"the\", substantivo: difference.",
+     "wrong": {
+      "different": "\"Different\" é adjetivo.",
+      "differently": "\"Differently\" é advérbio."
+     }
+    },
+    {
+     "id": "b2u12l4-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The film was so ___ that I watched it twice.",
+     "pt": "O filme foi tão emocionante que assisti duas vezes.",
+     "options": [
+      "exciting",
+      "excitement",
+      "excited"
+     ],
+     "answer": "exciting",
+     "why": "Depois de \"so\", adjetivo. O filme (a coisa) é \"exciting\".",
+     "wrong": {
+      "excitement": "\"Excitement\" é substantivo.",
+      "excited": "\"Excited\" é a pessoa (animada), não o filme."
+     }
+    },
+    {
+     "id": "b2u12l4-4",
+     "type": "meaning",
+     "en": "It was a careless mistake, but nobody was hurt.",
+     "options": [
+      "Foi um erro descuidado, mas ninguém se machucou.",
+      "Ninguém cometeu erros.",
+      "O erro machucou todo mundo."
+     ],
+     "answer": "Foi um erro descuidado, mas ninguém se machucou.",
+     "why": "\"Careless\" = descuidado."
+    },
+    {
+     "id": "b2u12l4-5",
+     "type": "build",
+     "pt": "Ele é infeliz no trabalho atual.",
+     "answer": "He is unhappy in his current job",
+     "extra": [
+      "happiness",
+      "happily"
+     ],
+     "display": "He is unhappy in his current job.",
+     "why": "Depois de \"is\", adjetivo: unhappy."
+    },
+    {
+     "id": "b2u12l4-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "How was the hotel staff?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Really helpful. They solved every problem.",
+      "Really help. They solved every problem.",
+      "Really helping."
+     ],
+     "answer": "Really helpful. They solved every problem.",
+     "pt": "Muito prestativos. Resolveram todos os problemas.",
+     "why": "Adjetivo para descrever pessoas: helpful.",
+     "wrong": {
+      "Really help. They solved every problem.": "\"Help\" é verbo ou substantivo.",
+      "Really helping.": "Para descrever pessoas, use o adjetivo: helpful."
+     }
+    },
+    {
+     "id": "b2u12l4-7",
+     "type": "listen",
+     "en": "Her kindness made a big difference.",
+     "options": [
+      "A gentileza dela fez uma grande diferença.",
+      "Ela é gentil com todo mundo.",
+      "A diferença foi pequena."
+     ],
+     "answer": "A gentileza dela fez uma grande diferença.",
+     "why": "\"Make a difference\" = fazer diferença."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l5-1",
+     "type": "type",
+     "pt": "Isso é impossível!",
+     "answer": "That's impossible!",
+     "accept": [
+      "That is impossible!",
+      "It's impossible!",
+      "It is impossible!"
+     ],
+     "why": "Im- + possible."
+    },
+    {
+     "id": "b2u12l5-2",
+     "type": "type",
+     "pt": "Tenha cuidado!",
+     "answer": "Be careful!",
+     "why": "\"Careful\" = cuidadoso."
+    },
+    {
+     "id": "b2u12l5-3",
+     "type": "dictation",
+     "en": "Our friendship is very important to me.",
+     "why": "\"Friendship\" = amizade."
+    },
+    {
+     "id": "b2u12l5-4",
+     "type": "type",
+     "pt": "Ele foi muito desonesto.",
+     "answer": "He was very dishonest.",
+     "why": "Dis- + honest = desonesto."
+    },
+    {
+     "id": "b2u12l5-5",
+     "type": "dictation",
+     "en": "Education is the key to development.",
+     "why": "-tion e -ment: substantivos."
+    },
+    {
+     "id": "b2u12l5-6",
+     "type": "type",
+     "pt": "Obrigado pela sua gentileza.",
+     "answer": "Thank you for your kindness.",
+     "accept": [
+      "Thanks for your kindness."
+     ],
+     "why": "Kind + -ness = gentileza."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l6-1",
+     "type": "listen",
+     "en": "It's unbelievable how fast children learn.",
+     "options": [
+      "É inacreditável como as crianças aprendem rápido.",
+      "As crianças aprendem devagar.",
+      "Ninguém acredita nas crianças."
+     ],
+     "answer": "É inacreditável como as crianças aprendem rápido.",
+     "why": "\"Unbelievable\" = inacreditável."
+    },
+    {
+     "id": "b2u12l6-2",
+     "type": "dictation",
+     "en": "This map is useless.",
+     "why": "\"Useless\" = inútil."
+    },
+    {
+     "id": "b2u12l6-3",
+     "type": "listen",
+     "en": "Happiness is more important than money.",
+     "options": [
+      "A felicidade é mais importante que o dinheiro.",
+      "O dinheiro traz felicidade.",
+      "Ele é feliz com dinheiro."
+     ],
+     "answer": "A felicidade é mais importante que o dinheiro.",
+     "why": "\"Happiness\" = felicidade."
+    },
+    {
+     "id": "b2u12l6-4",
+     "type": "dictation",
+     "en": "Please be careful on the stairs.",
+     "why": "\"Careful\" = cuidadoso."
+    },
+    {
+     "id": "b2u12l6-5",
+     "type": "listen",
+     "en": "The government wants to improve education.",
+     "options": [
+      "O governo quer melhorar a educação.",
+      "A educação está ótima.",
+      "O governo fechou escolas."
+     ],
+     "answer": "O governo quer melhorar a educação.",
+     "why": "\"Government\" = governo (govern + -ment)."
+    },
+    {
+     "id": "b2u12l6-6",
+     "type": "dictation",
+     "en": "She is an unusual person.",
+     "why": "\"Unusual\" = incomum. \"An\" antes de vogal."
+    },
+    {
+     "id": "b2u12l6-7",
+     "type": "speak",
+     "en": "Nothing is impossible.",
+     "pt": "Nada é impossível.",
+     "why": "\"Impossible\" soa como \"im-PÓ-si-bol\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I left my wallet in the taxi again!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "That's so careless! You need to be more careful.",
+      "That's so careful! You need to be careless.",
+      "That is care!"
+     ],
+     "answer": "That's so careless! You need to be more careful.",
+     "pt": "Que descuido! Você precisa ser mais cuidadoso.",
+     "why": "Careless (descuidado) e careful (cuidadoso).",
+     "wrong": {
+      "That's so careful! You need to be careless.": "Trocou os sentidos.",
+      "That is care!": "\"Care\" é substantivo ou verbo."
+     }
+    },
+    {
+     "id": "b2u12l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What makes you happy?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "For me, happiness is time with my family.",
+      "For me, happy is time with my family.",
+      "For me, happily is time."
+     ],
+     "answer": "For me, happiness is time with my family.",
+     "pt": "Para mim, felicidade é tempo com a família.",
+     "why": "Como sujeito da frase, substantivo: happiness.",
+     "wrong": {
+      "For me, happy is time with my family.": "\"Happy\" é adjetivo.",
+      "For me, happily is time.": "\"Happily\" é advérbio."
+     }
+    },
+    {
+     "id": "b2u12l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "He told the boss a lie to get the promotion."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "That's so dishonest!",
+      "That's so honest!",
+      "That's so dishonesty!"
+     ],
+     "answer": "That's so dishonest!",
+     "pt": "Que desonesto!",
+     "why": "O contrário de honest: dishonest. Depois de \"so\", adjetivo.",
+     "wrong": {
+      "That's so honest!": "\"Honest\" é o contrário: honesto.",
+      "That's so dishonesty!": "\"Dishonesty\" é o substantivo."
+     }
+    },
+    {
+     "id": "b2u12l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Thanks for helping me move!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No problem. That's what friendship is for!",
+      "No problem. That's what friend is for!",
+      "No problem. Friendly is for that."
+     ],
+     "answer": "No problem. That's what friendship is for!",
+     "pt": "Imagina. Amizade é para isso!",
+     "why": "\"Friendship\" = amizade.",
+     "wrong": {
+      "No problem. That's what friend is for!": "Seria \"friends are for\".",
+      "No problem. Friendly is for that.": "\"Friendly\" é adjetivo."
+     }
+    },
+    {
+     "id": "b2u12l7-5",
+     "type": "speak",
+     "en": "That's unbelievable!",
+     "pt": "Que inacreditável!",
+     "why": "\"Unbelievable\" soa como \"ân-bi-LÍ-va-bol\"."
+    },
+    {
+     "id": "b2u12l7-6",
+     "type": "speak",
+     "en": "Thank you for your kindness.",
+     "pt": "Obrigado pela sua gentileza.",
+     "why": "\"Kindness\" soa como \"KÁIND-nis\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l8",
+   "title": "Lendo: o segredo da felicidade",
+   "added": "2026-11",
+   "story": {
+    "title": "O segredo da felicidade",
+    "lines": [
+     {
+      "who": "Sarah",
+      "en": "What makes people happy? Researchers followed hundreds of people in a study that lasted eighty years.",
+      "pt": "O que deixa as pessoas felizes? Pesquisadores acompanharam centenas de pessoas num estudo que durou oitenta anos."
+     },
+     {
+      "who": "Sarah",
+      "en": "The results were surprising. Money and success were not the most important things.",
+      "pt": "Os resultados foram surpreendentes. Dinheiro e sucesso não eram as coisas mais importantes."
+     },
+     {
+      "ask": "Dinheiro foi a coisa mais importante?",
+      "options": [
+       "Não",
+       "Sim",
+       "Só para os jovens"
+      ],
+      "answer": "Não",
+      "why": "\"Money and success were not the most important things.\""
+     },
+     {
+      "who": "Sarah",
+      "en": "Good relationships, like friendship and family, were the real key to ___.",
+      "pt": "Boas relações, como amizade e família, eram a verdadeira chave da felicidade.",
+      "gap": {
+       "answer": "happiness",
+       "options": [
+        "happiness",
+        "happy",
+        "happily"
+       ]
+      }
+     },
+     {
+      "who": "Sarah",
+      "en": "People without close friends were more unhappy, and their health was worse.",
+      "pt": "Pessoas sem amigos próximos eram mais infelizes, e a saúde delas era pior."
+     },
+     {
+      "who": "Sarah",
+      "en": "So, the message is simple: be kind. A little kindness makes a big difference.",
+      "pt": "Então, a mensagem é simples: seja gentil. Um pouco de gentileza faz uma grande diferença."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u12l8-1",
+     "type": "story",
+     "why": "Um artigo fala de uma pesquisa sobre felicidade. Repare nas palavras com prefixos e sufixos."
+    },
+    {
+     "id": "b2u12l8-2",
+     "type": "quiz",
+     "q": "Quanto tempo durou a pesquisa?",
+     "options": [
+      "Oitenta anos",
+      "Oito anos",
+      "Oito meses"
+     ],
+     "answer": "Oitenta anos",
+     "why": "\"A study that lasted eighty years.\""
+    },
+    {
+     "id": "b2u12l8-3",
+     "type": "quiz",
+     "q": "O que a pesquisa descobriu?",
+     "options": [
+      "Boas relações trazem felicidade",
+      "Dinheiro traz felicidade",
+      "Fama traz felicidade"
+     ],
+     "answer": "Boas relações trazem felicidade",
+     "why": "\"Good relationships are the real key to happiness.\""
+    },
+    {
+     "id": "b2u12l8-4",
+     "type": "quiz",
+     "q": "Como eram as pessoas sem amigos próximos?",
+     "options": [
+      "Mais infelizes",
+      "Mais ricas",
+      "Mais saudáveis"
+     ],
+     "answer": "Mais infelizes",
+     "why": "\"People without close friends were more unhappy.\""
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u12l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He drove ___ and had an accident.",
+     "pt": "Ele dirigiu de forma descuidada e sofreu um acidente.",
+     "options": [
+      "carelessly",
+      "careless",
+      "careful"
+     ],
+     "answer": "carelessly",
+     "why": "Depois do verbo (drove), advérbio: carelessly.",
+     "wrong": {
+      "careless": "Adjetivo; aqui precisa de advérbio.",
+      "careful": "Sentido oposto e forma errada."
+     }
+    },
+    {
+     "id": "b2u12l9-2",
+     "type": "type",
+     "pt": "A amizade é muito importante.",
+     "answer": "Friendship is very important.",
+     "why": "\"Friendship\" = amizade."
+    },
+    {
+     "id": "b2u12l9-3",
+     "type": "meaning",
+     "en": "Thanks for your help. It was really useful.",
+     "options": [
+      "Obrigado pela ajuda. Foi muito útil.",
+      "Sua ajuda foi inútil.",
+      "Preciso de ajuda."
+     ],
+     "answer": "Obrigado pela ajuda. Foi muito útil.",
+     "why": "\"Useful\" = útil."
+    },
+    {
+     "id": "b2u12l9-4",
+     "type": "dictation",
+     "en": "It is impossible to please everyone.",
+     "why": "\"Please everyone\" = agradar a todos."
+    },
+    {
+     "id": "b2u12l9-5",
+     "type": "listen",
+     "en": "The new development will create thousands of jobs.",
+     "options": [
+      "O novo empreendimento vai criar milhares de empregos.",
+      "Milhares de pessoas perderam o emprego.",
+      "Não há empregos novos."
+     ],
+     "answer": "O novo empreendimento vai criar milhares de empregos.",
+     "why": "\"Development\" também pode ser um empreendimento."
+    },
+    {
+     "id": "b2u12l9-6",
+     "type": "build",
+     "pt": "A gentileza dela me deixou feliz.",
+     "answer": "Her kindness made me happy",
+     "extra": [
+      "kind",
+      "happiness"
+     ],
+     "display": "Her kindness made me happy.",
+     "why": "Substantivo (kindness) como sujeito; adjetivo (happy) depois de \"made me\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l10",
+   "title": "História: a entrevista de bolsa",
+   "added": "2026-11",
+   "story": {
+    "title": "A entrevista de bolsa",
+    "lines": [
+     {
+      "who": "Tom",
+      "en": "Good morning, Nina. Why do you want this scholarship?",
+      "pt": "Bom dia, Nina. Por que você quer esta bolsa?"
+     },
+     {
+      "who": "Nina",
+      "en": "I want to study education. I believe good teachers can change lives.",
+      "pt": "Quero estudar educação. Acredito que bons professores podem mudar vidas."
+     },
+     {
+      "who": "Tom",
+      "en": "What is your biggest strength?",
+      "pt": "Qual é a sua maior qualidade?"
+     },
+     {
+      "who": "Nina",
+      "en": "I'm patient and ___. I love explaining things to children.",
+      "pt": "Sou paciente e prestativa. Adoro explicar coisas para crianças.",
+      "gap": {
+       "answer": "helpful",
+       "options": [
+        "helpful",
+        "helpless",
+        "help"
+       ]
+      }
+     },
+     {
+      "ask": "Do que a Nina gosta?",
+      "options": [
+       "De explicar coisas para crianças",
+       "De viajar",
+       "De trabalhar sozinha"
+      ],
+      "answer": "De explicar coisas para crianças",
+      "why": "\"I love explaining things to children.\""
+     },
+     {
+      "who": "Tom",
+      "en": "And your weakness?",
+      "pt": "E a sua fraqueza?"
+     },
+     {
+      "who": "Nina",
+      "en": "I'm sometimes impatient with myself. But I'm working on it!",
+      "pt": "Às vezes sou impaciente comigo mesma. Mas estou trabalhando nisso!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u12l10-1",
+     "type": "story",
+     "why": "A Nina faz uma entrevista para uma bolsa de estudos. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u12l10-2",
+     "type": "quiz",
+     "q": "O que a Nina quer estudar?",
+     "options": [
+      "Educação",
+      "Medicina",
+      "Direito"
+     ],
+     "answer": "Educação",
+     "why": "\"I want to study education.\""
+    },
+    {
+     "id": "b2u12l10-3",
+     "type": "quiz",
+     "q": "Qual é a maior qualidade dela, segundo ela?",
+     "options": [
+      "É paciente e prestativa",
+      "É muito ambiciosa",
+      "É famosa"
+     ],
+     "answer": "É paciente e prestativa",
+     "why": "\"I'm patient and helpful.\""
+    },
+    {
+     "id": "b2u12l10-4",
+     "type": "quiz",
+     "q": "Qual é a fraqueza que ela admite?",
+     "options": [
+      "Às vezes é impaciente consigo mesma",
+      "É desonesta",
+      "É preguiçosa"
+     ],
+     "answer": "Às vezes é impaciente consigo mesma",
+     "why": "\"I'm sometimes impatient with myself.\""
+    }
+   ]
+  }
+ ]
+}
