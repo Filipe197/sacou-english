@@ -101,6 +101,22 @@
   [
    "windy",
    "com vento, ventando"
+  ],
+  [
+   "actually",
+   "na verdade"
+  ],
+  [
+   "quite",
+   "bem, bastante"
+  ],
+  [
+   "especially",
+   "principalmente, especialmente"
+  ],
+  [
+   "several",
+   "vários(as)"
   ]
  ],
  "guide": {
@@ -568,6 +584,109 @@
       "It is awful. It rains all day.": "Está no presente, mas a viagem já aconteceu.",
       "They were awful. It rain all day.": "\"The trip\" é uma coisa só: it was. E \"rain\" no passado é \"rained\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u1-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u1l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "actually",
+       "na verdade"
+      ],
+      [
+       "quite",
+       "bastante"
+      ],
+      [
+       "especially",
+       "principalmente"
+      ],
+      [
+       "several",
+       "vários"
+      ]
+     ],
+     "why": "Cuidado: \"actually\" NÃO é \"atualmente\". Quer dizer \"na verdade\"."
+    },
+    {
+     "id": "a2u1l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I thought it was boring, but it was ___ fun.",
+     "pt": "Achei que seria chato, mas na verdade foi divertido.",
+     "options": [
+      "actually",
+      "nowadays",
+      "already"
+     ],
+     "answer": "actually",
+     "why": "\"Actually\" corrige uma ideia: na verdade.",
+     "wrong": {
+      "nowadays": "\"Nowadays\" = hoje em dia (e não \"atualmente\" no sentido de agora).",
+      "already": "\"Already\" = já."
+     }
+    },
+    {
+     "id": "a2u1l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The hotel was ___ good, but the food was awful.",
+     "pt": "O hotel era bem bom, mas a comida era horrível.",
+     "options": [
+      "quite",
+      "several",
+      "especially"
+     ],
+     "answer": "quite",
+     "why": "\"Quite\" + adjetivo = bem, bastante.",
+     "wrong": {
+      "several": "\"Several\" vem antes de plural: several days.",
+      "especially": "\"Especially\" = principalmente."
+     }
+    },
+    {
+     "id": "a2u1l11-4",
+     "type": "meaning",
+     "en": "I love the beach, especially in summer.",
+     "options": [
+      "Adoro praia, principalmente no verão.",
+      "Adoro praia, mas só no verão.",
+      "Não gosto de praia no verão."
+     ],
+     "answer": "Adoro praia, principalmente no verão.",
+     "why": "\"Especially\" = principalmente."
+    },
+    {
+     "id": "a2u1l11-5",
+     "type": "build",
+     "pt": "Eu estive lá várias vezes.",
+     "answer": "I was there several times",
+     "extra": [
+      "were",
+      "quite"
+     ],
+     "display": "I was there several times.",
+     "why": "\"Several\" = vários, mais de dois."
+    },
+    {
+     "id": "a2u1l11-6",
+     "type": "listen",
+     "en": "Actually, I was at home all day.",
+     "options": [
+      "Na verdade, fiquei em casa o dia todo.",
+      "Atualmente, fico em casa o dia todo.",
+      "Eu nunca fico em casa."
+     ],
+     "answer": "Na verdade, fiquei em casa o dia todo.",
+     "why": "\"Actually\" = na verdade."
     }
    ]
   },

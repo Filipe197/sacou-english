@@ -85,6 +85,22 @@
   [
    "small",
    "pequeno(a)"
+  ],
+  [
+   "inside",
+   "dentro"
+  ],
+  [
+   "wrong",
+   "errado(a)"
+  ],
+  [
+   "ready",
+   "pronto(a)"
+  ],
+  [
+   "else",
+   "mais, outro (something else)"
   ]
  ],
  "guide": {
@@ -554,6 +570,109 @@
       "on": "A frase diz \"not on it\" (não em cima).",
       "beside": "\"Beside\" é ao lado."
      }
+    }
+   ]
+  },
+  {
+   "id": "a1-u9-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u9l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "inside",
+       "dentro"
+      ],
+      [
+       "wrong",
+       "errado"
+      ],
+      [
+       "ready",
+       "pronto"
+      ],
+      [
+       "else",
+       "mais"
+      ]
+     ],
+     "why": "\"Else\" vem depois de palavras como something, anything, who: something else = outra coisa."
+    },
+    {
+     "id": "a1u9l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It is raining. Let's stay ___.",
+     "pt": "Está chovendo. Vamos ficar dentro de casa.",
+     "options": [
+      "inside",
+      "into",
+      "outside"
+     ],
+     "answer": "inside",
+     "why": "\"Inside\" = dentro (onde está). \"Into\" é movimento.",
+     "wrong": {
+      "into": "\"Into\" precisa de movimento e de um lugar depois.",
+      "outside": "\"Outside\" = lá fora; com chuva, não!"
+     }
+    },
+    {
+     "id": "a1u9l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Dinner is ___! Come to the kitchen.",
+     "pt": "O jantar está pronto! Venham para a cozinha.",
+     "options": [
+      "ready",
+      "wrong",
+      "inside"
+     ],
+     "answer": "ready",
+     "why": "\"Ready\" = pronto.",
+     "wrong": {
+      "wrong": "\"Wrong\" = errado.",
+      "inside": "\"Inside\" = dentro."
+     }
+    },
+    {
+     "id": "a1u9l11-4",
+     "type": "meaning",
+     "en": "Sorry, this is the wrong key.",
+     "options": [
+      "Desculpa, esta é a chave errada.",
+      "Desculpa, perdi a chave.",
+      "Esta chave é nova."
+     ],
+     "answer": "Desculpa, esta é a chave errada.",
+     "why": "\"Wrong\" = errado. O contrário é \"right\"."
+    },
+    {
+     "id": "a1u9l11-5",
+     "type": "build",
+     "pt": "Você quer mais alguma coisa?",
+     "answer": "Do you want anything else",
+     "extra": [
+      "other",
+      "any"
+     ],
+     "display": "Do you want anything else?",
+     "why": "\"Anything else\" = mais alguma coisa. Muito usado em lojas."
+    },
+    {
+     "id": "a1u9l11-6",
+     "type": "listen",
+     "en": "Are you ready?",
+     "options": [
+      "Você está pronto?",
+      "Você está bem?",
+      "Você está em casa?"
+     ],
+     "answer": "Você está pronto?",
+     "why": "\"Ready\" soa como \"RÉ-di\"."
     }
    ]
   },

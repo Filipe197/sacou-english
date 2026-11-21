@@ -93,6 +93,22 @@
   [
    "as ... as",
    "tão ... quanto"
+  ],
+  [
+   "simple",
+   "simples"
+  ],
+  [
+   "clear",
+   "claro(a), limpo(a)"
+  ],
+  [
+   "less",
+   "menos"
+  ],
+  [
+   "least",
+   "o menos, o mínimo"
   ]
  ],
  "guide": {
@@ -555,6 +571,109 @@
       "Yes, and it is more cheap too.": "Palavra curta leva -er: cheaper.",
       "Yes, and it is the cheaper too.": "\"The\" vai com o superlativo (the cheapest), não com o comparativo."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u5-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u5l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "simple",
+       "simples"
+      ],
+      [
+       "clear",
+       "claro"
+      ],
+      [
+       "less",
+       "menos"
+      ],
+      [
+       "least",
+       "o menos"
+      ]
+     ],
+     "why": "\"Less\" é o contrário de \"more\"; \"the least\" é o contrário de \"the most\"."
+    },
+    {
+     "id": "a2u5l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "This phone is ___ expensive than that one.",
+     "pt": "Este celular é menos caro que aquele.",
+     "options": [
+      "less",
+      "least",
+      "more less"
+     ],
+     "answer": "less",
+     "why": "\"Less + adjetivo + than\" = menos ... que.",
+     "wrong": {
+      "least": "\"The least\" é superlativo (o menos de todos).",
+      "more less": "Não existe."
+     }
+    },
+    {
+     "id": "a2u5l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It's the ___ expensive hotel in the city.",
+     "pt": "É o hotel menos caro da cidade.",
+     "options": [
+      "least",
+      "less",
+      "lesser"
+     ],
+     "answer": "least",
+     "why": "\"The least\" = o menos (de todos).",
+     "wrong": {
+      "less": "\"Less\" compara duas coisas.",
+      "lesser": "Não se usa assim."
+     }
+    },
+    {
+     "id": "a2u5l11-4",
+     "type": "meaning",
+     "en": "The rules are simple and clear.",
+     "options": [
+      "As regras são simples e claras.",
+      "As regras são longas e difíceis.",
+      "Não tem regras."
+     ],
+     "answer": "As regras são simples e claras.",
+     "why": "\"Simple\" = simples. \"Clear\" = claro, fácil de entender."
+    },
+    {
+     "id": "a2u5l11-5",
+     "type": "build",
+     "pt": "Hoje o céu está limpo.",
+     "answer": "The sky is clear today",
+     "extra": [
+      "clean",
+      "are"
+     ],
+     "display": "The sky is clear today.",
+     "why": "Céu sem nuvens = clear sky. \"Clean\" é limpo de sujeira."
+    },
+    {
+     "id": "a2u5l11-6",
+     "type": "listen",
+     "en": "I want to spend less money this month.",
+     "options": [
+      "Quero gastar menos dinheiro este mês.",
+      "Quero ganhar mais dinheiro este mês.",
+      "Gastei muito dinheiro este mês."
+     ],
+     "answer": "Quero gastar menos dinheiro este mês.",
+     "why": "\"Less money\" = menos dinheiro."
     }
    ]
   },

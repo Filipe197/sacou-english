@@ -74,6 +74,22 @@
   [
    "pity",
    "pena (que pena)"
+  ],
+  [
+   "no one",
+   "ninguém"
+  ],
+  [
+   "either",
+   "qualquer um (dos dois), também não"
+  ],
+  [
+   "rather",
+   "preferir (I'd rather)"
+  ],
+  [
+   "anyway",
+   "de qualquer jeito, enfim"
   ]
  ],
  "guide": {
@@ -602,6 +618,109 @@
       "to meet": "\"Suggest\" não aceita \"to\".",
       "meet": "Precisa do -ing."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u11-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u11l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "no one",
+       "ninguém"
+      ],
+      [
+       "either",
+       "qualquer um dos dois"
+      ],
+      [
+       "rather",
+       "preferir"
+      ],
+      [
+       "anyway",
+       "de qualquer jeito"
+      ]
+     ],
+     "why": "\"I'd rather\" = eu prefiro, eu preferia."
+    },
+    {
+     "id": "a2u11l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Saturday or Sunday? ___ day is fine for me.",
+     "pt": "Sábado ou domingo? Qualquer um dos dois está bom para mim.",
+     "options": [
+      "Either",
+      "Both",
+      "Every"
+     ],
+     "answer": "Either",
+     "why": "\"Either\" = qualquer um dos dois.",
+     "wrong": {
+      "Both": "\"Both days\" pediria \"are\".",
+      "Every": "\"Every\" é para mais de dois."
+     }
+    },
+    {
+     "id": "a2u11l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'd ___ stay at home tonight.",
+     "pt": "Eu prefiro ficar em casa hoje à noite.",
+     "options": [
+      "rather",
+      "prefer",
+      "like"
+     ],
+     "answer": "rather",
+     "why": "\"I'd rather\" + verbo normal = prefiro.",
+     "wrong": {
+      "prefer": "\"I'd prefer\" pediria \"to stay\".",
+      "like": "\"I'd like stay\" falta o \"to\"."
+     }
+    },
+    {
+     "id": "a2u11l11-4",
+     "type": "meaning",
+     "en": "I invited them, but no one came.",
+     "options": [
+      "Eu convidei, mas ninguém veio.",
+      "Eu convidei e todo mundo veio.",
+      "Ninguém me convidou."
+     ],
+     "answer": "Eu convidei, mas ninguém veio.",
+     "why": "\"No one\" = ninguém. Um negativo só: no one came."
+    },
+    {
+     "id": "a2u11l11-5",
+     "type": "build",
+     "pt": "Está chovendo, mas vamos sair de qualquer jeito.",
+     "answer": "It's raining but let's go out anyway",
+     "extra": [
+      "either",
+      "rather"
+     ],
+     "display": "It's raining, but let's go out anyway.",
+     "why": "\"Anyway\" no fim = mesmo assim, de qualquer jeito."
+    },
+    {
+     "id": "a2u11l11-6",
+     "type": "listen",
+     "en": "I don't like it either.",
+     "options": [
+      "Eu também não gosto.",
+      "Eu também gosto.",
+      "Eu não gosto de nenhum."
+     ],
+     "answer": "Eu também não gosto.",
+     "why": "Na negativa, \"também não\" = \"either\" no fim."
     }
    ]
   },

@@ -78,6 +78,22 @@
   [
    "report",
    "relatório"
+  ],
+  [
+   "international",
+   "internacional"
+  ],
+  [
+   "research",
+   "pesquisa"
+  ],
+  [
+   "support",
+   "apoio, apoiar"
+  ],
+  [
+   "control",
+   "controle, controlar"
   ]
  ],
  "guide": {
@@ -581,6 +597,109 @@
       "experiences": "No plural seria \"vivências\" (coisas que aconteceram).",
       "an experience": "Para experiência profissional, sem \"an\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u10-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u10l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "international",
+       "internacional"
+      ],
+      [
+       "research",
+       "pesquisa"
+      ],
+      [
+       "support",
+       "apoio"
+      ],
+      [
+       "control",
+       "controle"
+      ]
+     ],
+     "why": "\"Support\" é apoiar (e não \"suportar\" alguém chato, que é \"stand\")."
+    },
+    {
+     "id": "a2u10l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She works for an ___ company.",
+     "pt": "Ela trabalha numa empresa internacional.",
+     "options": [
+      "international",
+      "a international",
+      "internationals"
+     ],
+     "answer": "international",
+     "why": "Antes de som de vogal, \"an\": an international company.",
+     "wrong": {
+      "a international": "Ficaria \"an a international\".",
+      "internationals": "Adjetivo não tem plural em inglês."
+     }
+    },
+    {
+     "id": "a2u10l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "My family always ___ me.",
+     "pt": "Minha família sempre me apoia.",
+     "options": [
+      "supports",
+      "support",
+      "stands"
+     ],
+     "answer": "supports",
+     "why": "\"Support\" = apoiar. Com \"my family\" (it): supports.",
+     "wrong": {
+      "support": "Com \"my family\", o verbo leva -s.",
+      "stands": "\"Stand\" é aguentar, suportar."
+     }
+    },
+    {
+     "id": "a2u10l11-4",
+     "type": "meaning",
+     "en": "He does research on new medicines.",
+     "options": [
+      "Ele faz pesquisa sobre remédios novos.",
+      "Ele vende remédios novos.",
+      "Ele toma remédios novos."
+     ],
+     "answer": "Ele faz pesquisa sobre remédios novos.",
+     "why": "\"Do research\" = fazer pesquisa. \"Research\" não tem plural."
+    },
+    {
+     "id": "a2u10l11-5",
+     "type": "build",
+     "pt": "Eu não consigo controlar meu tempo.",
+     "answer": "I can't control my time",
+     "extra": [
+      "controls",
+      "mine"
+     ],
+     "display": "I can't control my time.",
+     "why": "\"Control\" = controlar."
+    },
+    {
+     "id": "a2u10l11-6",
+     "type": "listen",
+     "en": "Thank you for your support!",
+     "options": [
+      "Obrigado pelo seu apoio!",
+      "Obrigado pela sua ajuda com a pesquisa!",
+      "Obrigado por vir!"
+     ],
+     "answer": "Obrigado pelo seu apoio!",
+     "why": "\"Support\" = apoio."
     }
    ]
   },

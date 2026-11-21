@@ -70,6 +70,22 @@
   [
    "us",
    "nos, a gente (depois do verbo)"
+  ],
+  [
+   "herself",
+   "ela mesma, se"
+  ],
+  [
+   "himself",
+   "ele mesmo, se"
+  ],
+  [
+   "themselves",
+   "eles mesmos, se"
+  ],
+  [
+   "without",
+   "sem"
   ]
  ],
  "guide": {
@@ -573,6 +589,109 @@
       "your": "\"Your\" precisa de algo depois.",
       "yours": "Não se usa aqui."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u13-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u13l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "herself",
+       "ela mesma"
+      ],
+      [
+       "himself",
+       "ele mesmo"
+      ],
+      [
+       "themselves",
+       "eles mesmos"
+      ],
+      [
+       "without",
+       "sem"
+      ]
+     ],
+     "why": "myself, yourself, himself, herself, itself, ourselves, themselves."
+    },
+    {
+     "id": "a2u13l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She cleaned the whole house by ___.",
+     "pt": "Ela limpou a casa toda sozinha.",
+     "options": [
+      "herself",
+      "her",
+      "himself"
+     ],
+     "answer": "herself",
+     "why": "\"By herself\" = sozinha, ela mesma.",
+     "wrong": {
+      "her": "\"By her\" = por ela (outra pessoa).",
+      "himself": "\"Himself\" é para ele."
+     }
+    },
+    {
+     "id": "a2u13l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I can't live ___ coffee!",
+     "pt": "Não consigo viver sem café!",
+     "options": [
+      "without",
+      "with",
+      "no"
+     ],
+     "answer": "without",
+     "why": "\"Without\" = sem.",
+     "wrong": {
+      "with": "\"With\" = com.",
+      "no": "\"Live no coffee\" não existe."
+     }
+    },
+    {
+     "id": "a2u13l11-4",
+     "type": "meaning",
+     "en": "The kids made dinner themselves.",
+     "options": [
+      "As crianças fizeram o jantar sozinhas.",
+      "Fizemos o jantar para as crianças.",
+      "As crianças não jantaram."
+     ],
+     "answer": "As crianças fizeram o jantar sozinhas.",
+     "why": "\"Themselves\" = eles mesmos, sozinhos."
+    },
+    {
+     "id": "a2u13l11-5",
+     "type": "build",
+     "pt": "Ele se machucou na cozinha.",
+     "answer": "He hurt himself in the kitchen",
+     "extra": [
+      "him",
+      "herself"
+     ],
+     "display": "He hurt himself in the kitchen.",
+     "why": "\"Hurt himself\" = se machucou. A ação volta para a mesma pessoa."
+    },
+    {
+     "id": "a2u13l11-6",
+     "type": "listen",
+     "en": "Please leave without making noise.",
+     "options": [
+      "Por favor, saia sem fazer barulho.",
+      "Por favor, faça barulho.",
+      "Por favor, não saia."
+     ],
+     "answer": "Por favor, saia sem fazer barulho.",
+     "why": "Depois de \"without\", verbo com -ing."
     }
    ]
   },

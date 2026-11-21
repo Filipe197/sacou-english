@@ -18,4 +18,7 @@ assert.deepEqual(s(['u1-l1', 'u1-l2', 'u1-l3']), ['done', 'done', 'extra', 'done
 assert.equal(unitComplete(lessons.slice(0, 4), new Set(['u1-l1', 'u1-l2', 'u1-l3'])), true);
 assert.equal(unitComplete(lessons.slice(4, 6), new Set(['u2-l1'])), false);
 assert.equal(coreOf(lessons.slice(4, 6)).length, 2);
-console.log('✓ regras da trilha: 7 verificações passaram');
+// lição bônus numa unidade inteira nova não conta para concluir a unidade
+const comBonus = [...lessons.slice(4, 6), { id: 'u2-l11', added: '2026-11', bonus: true }];
+assert.equal(unitComplete(comBonus, new Set(['u2-l1', 'u2-l2'])), true);
+console.log('✓ regras da trilha: 8 verificações passaram');

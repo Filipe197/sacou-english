@@ -70,6 +70,22 @@
   [
    "shower",
    "chuveiro, banho de chuveiro"
+  ],
+  [
+   "fire",
+   "fogo, incêndio"
+  ],
+  [
+   "crime",
+   "crime"
+  ],
+  [
+   "fear",
+   "medo"
+  ],
+  [
+   "trouble",
+   "problema, encrenca"
   ]
  ],
  "guide": {
@@ -556,6 +572,109 @@
      ],
      "answer": "A polícia chegou enquanto a gente conversava.",
      "why": "\"Police\" soa como \"po-LÍIS\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u12-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u12l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "fire",
+       "incêndio"
+      ],
+      [
+       "crime",
+       "crime"
+      ],
+      [
+       "fear",
+       "medo"
+      ],
+      [
+       "trouble",
+       "encrenca"
+      ]
+     ],
+     "why": "\"Be in trouble\" = estar em apuros, encrencado."
+    },
+    {
+     "id": "a2u12l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Call the police! There is a ___ in the building!",
+     "pt": "Chame a polícia! Tem um incêndio no prédio!",
+     "options": [
+      "fire",
+      "crime",
+      "fear"
+     ],
+     "answer": "fire",
+     "why": "\"Fire\" = fogo, incêndio.",
+     "wrong": {
+      "crime": "\"Crime\" = crime.",
+      "fear": "\"Fear\" = medo."
+     }
+    },
+    {
+     "id": "a2u12l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We're in ___. We missed the last bus!",
+     "pt": "Estamos encrencados. Perdemos o último ônibus!",
+     "options": [
+      "trouble",
+      "fear",
+      "fire"
+     ],
+     "answer": "trouble",
+     "why": "\"In trouble\" = em apuros.",
+     "wrong": {
+      "fear": "\"In fear\" = com medo.",
+      "fire": "\"In fire\" não se usa."
+     }
+    },
+    {
+     "id": "a2u12l11-4",
+     "type": "meaning",
+     "en": "There is not much crime in my town.",
+     "options": [
+      "Não tem muito crime na minha cidade.",
+      "Minha cidade é perigosa.",
+      "A polícia não trabalha na minha cidade."
+     ],
+     "answer": "Não tem muito crime na minha cidade.",
+     "why": "\"Crime\" não se conta: not much crime."
+    },
+    {
+     "id": "a2u12l11-5",
+     "type": "build",
+     "pt": "Ela tem medo de cachorros grandes.",
+     "answer": "She has a fear of big dogs",
+     "extra": [
+      "afraid",
+      "have"
+     ],
+     "display": "She has a fear of big dogs.",
+     "why": "\"Have a fear of\" = ter medo de. Também: She is afraid of big dogs."
+    },
+    {
+     "id": "a2u12l11-6",
+     "type": "listen",
+     "en": "What was the trouble?",
+     "options": [
+      "Qual era o problema?",
+      "Onde foi o incêndio?",
+      "Quem chamou a polícia?"
+     ],
+     "answer": "Qual era o problema?",
+     "why": "\"Trouble\" = problema."
     }
    ]
   },

@@ -136,6 +136,22 @@
   [
    "far",
    "longe"
+  ],
+  [
+   "into",
+   "para dentro de"
+  ],
+  [
+   "through",
+   "por, através de"
+  ],
+  [
+   "around",
+   "em volta de, por aí"
+  ],
+  [
+   "along",
+   "ao longo de"
   ]
  ],
  "guide": {
@@ -607,6 +623,109 @@
       "It's my bike.": "Não responde como chegar.",
       "Yes, there is.": "Responde \"Is there...?\", não \"how\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "a1-u8-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u8l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "into",
+       "para dentro"
+      ],
+      [
+       "through",
+       "através"
+      ],
+      [
+       "around",
+       "em volta"
+      ],
+      [
+       "along",
+       "ao longo"
+      ]
+     ],
+     "why": "Quatro palavras de movimento. Muito usadas para explicar caminhos."
+    },
+    {
+     "id": "a1u8l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Go ___ the park and turn left.",
+     "pt": "Atravesse o parque e vire à esquerda.",
+     "options": [
+      "through",
+      "into",
+      "on"
+     ],
+     "answer": "through",
+     "why": "\"Through\" = atravessando, por dentro de.",
+     "wrong": {
+      "into": "\"Into\" = entrar em.",
+      "on": "\"On the park\" não indica caminho."
+     }
+    },
+    {
+     "id": "a1u8l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Come ___ the house. It is cold outside.",
+     "pt": "Entre na casa. Está frio lá fora.",
+     "options": [
+      "into",
+      "through",
+      "along"
+     ],
+     "answer": "into",
+     "why": "\"Into\" = para dentro (movimento).",
+     "wrong": {
+      "through": "\"Through\" = atravessando.",
+      "along": "\"Along\" = ao longo."
+     }
+    },
+    {
+     "id": "a1u8l11-4",
+     "type": "meaning",
+     "en": "We walked along the beach.",
+     "options": [
+      "Caminhamos ao longo da praia.",
+      "Atravessamos a praia de carro.",
+      "Ficamos sentados na praia."
+     ],
+     "answer": "Caminhamos ao longo da praia.",
+     "why": "\"Along\" = ao longo de, beirando."
+    },
+    {
+     "id": "a1u8l11-5",
+     "type": "build",
+     "pt": "Tem lojas em volta do parque.",
+     "answer": "There are shops around the park",
+     "extra": [
+      "is",
+      "into"
+     ],
+     "display": "There are shops around the park.",
+     "why": "\"Around\" = em volta de."
+    },
+    {
+     "id": "a1u8l11-6",
+     "type": "listen",
+     "en": "The bank is just around the corner.",
+     "options": [
+      "O banco fica logo ali na esquina.",
+      "O banco fica longe daqui.",
+      "O banco está fechado."
+     ],
+     "answer": "O banco fica logo ali na esquina.",
+     "why": "\"Around the corner\" = logo ali, virando a esquina."
     }
    ]
   },

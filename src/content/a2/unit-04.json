@@ -93,6 +93,22 @@
   [
    "mall",
    "shopping (o prédio)"
+  ],
+  [
+   "continue",
+   "continuar"
+  ],
+  [
+   "wonder",
+   "imaginar, se perguntar"
+  ],
+  [
+   "join",
+   "entrar (num grupo), juntar-se"
+  ],
+  [
+   "agree",
+   "concordar"
   ]
  ],
  "guide": {
@@ -549,6 +565,109 @@
       "They're upstairs. They play a game.": "\"They play\" é rotina. Agora é \"they're playing\".",
       "They upstairs. They're play a game.": "Falta o \"are\" na primeira frase e o -ing na segunda."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u4-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u4l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "continue",
+       "continuar"
+      ],
+      [
+       "wonder",
+       "se perguntar"
+      ],
+      [
+       "join",
+       "juntar-se"
+      ],
+      [
+       "agree",
+       "concordar"
+      ]
+     ],
+     "why": "\"I agree\" = concordo. Nunca \"I am agree\"."
+    },
+    {
+     "id": "a2u4l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ with you.",
+     "pt": "Eu concordo com você.",
+     "options": [
+      "agree",
+      "am agree",
+      "agreed with"
+     ],
+     "answer": "agree",
+     "why": "\"Agree\" já é verbo: I agree.",
+     "wrong": {
+      "am agree": "Erro clássico de brasileiro: não tem \"am\".",
+      "agreed with": "Ficaria \"agreed with with you\"."
+     }
+    },
+    {
+     "id": "a2u4l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We're going to the beach. Do you want to ___ us?",
+     "pt": "Estamos indo à praia. Quer vir com a gente?",
+     "options": [
+      "join",
+      "continue",
+      "follow"
+     ],
+     "answer": "join",
+     "why": "\"Join us\" = venha com a gente, junte-se a nós.",
+     "wrong": {
+      "continue": "\"Continue\" = continuar.",
+      "follow": "\"Follow us\" = siga a gente (atrás)."
+     }
+    },
+    {
+     "id": "a2u4l11-4",
+     "type": "meaning",
+     "en": "I'm wondering what she is doing now.",
+     "options": [
+      "Estou me perguntando o que ela está fazendo agora.",
+      "Estou vendo o que ela está fazendo.",
+      "Ela está pensando em mim."
+     ],
+     "answer": "Estou me perguntando o que ela está fazendo agora.",
+     "why": "\"Wonder\" = se perguntar, imaginar."
+    },
+    {
+     "id": "a2u4l11-5",
+     "type": "build",
+     "pt": "Por favor, continue lendo.",
+     "answer": "Please continue reading",
+     "extra": [
+      "continues",
+      "read"
+     ],
+     "display": "Please continue reading.",
+     "why": "\"Continue + -ing\" (ou \"to read\") = continuar fazendo."
+    },
+    {
+     "id": "a2u4l11-6",
+     "type": "listen",
+     "en": "It's still raining. Let's continue tomorrow.",
+     "options": [
+      "Ainda está chovendo. Vamos continuar amanhã.",
+      "Parou de chover. Vamos continuar.",
+      "Amanhã vai chover."
+     ],
+     "answer": "Ainda está chovendo. Vamos continuar amanhã.",
+     "why": "\"Still raining\" = ainda chovendo."
     }
    ]
   },

@@ -135,6 +135,22 @@
   [
    "need",
    "precisar"
+  ],
+  [
+   "health",
+   "saúde"
+  ],
+  [
+   "body",
+   "corpo"
+  ],
+  [
+   "heart",
+   "coração"
+  ],
+  [
+   "kind",
+   "tipo; gentil"
   ]
  ],
  "guide": {
@@ -599,6 +615,109 @@
       "Yes, I am.": "\"I am\" responde \"Are you...?\".",
       "I'm fine, thanks.": "Isso responde \"How are you?\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "a1-u7-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u7l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "health",
+       "saúde"
+      ],
+      [
+       "body",
+       "corpo"
+      ],
+      [
+       "heart",
+       "coração"
+      ],
+      [
+       "kind",
+       "tipo"
+      ]
+     ],
+     "why": "\"Kind\" tem dois sentidos: tipo (what kind of food?) e gentil (she is kind)."
+    },
+    {
+     "id": "a1u7l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "What ___ of food do you like?",
+     "pt": "Que tipo de comida você gosta?",
+     "options": [
+      "kind",
+      "side",
+      "way"
+     ],
+     "answer": "kind",
+     "why": "\"What kind of...?\" = que tipo de...?",
+     "wrong": {
+      "side": "\"Side\" = lado.",
+      "way": "\"Way\" = jeito, caminho."
+     }
+    },
+    {
+     "id": "a1u7l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Fruit is good for your ___.",
+     "pt": "Fruta faz bem para a saúde.",
+     "options": [
+      "health",
+      "heart",
+      "body"
+     ],
+     "answer": "health",
+     "why": "\"Good for your health\" = faz bem para a saúde.",
+     "wrong": {
+      "heart": "Faz bem ao coração também, mas a expressão é \"for your health\".",
+      "body": "Possível, mas a expressão natural é \"for your health\"."
+     }
+    },
+    {
+     "id": "a1u7l11-4",
+     "type": "meaning",
+     "en": "Water is very important for the body.",
+     "options": [
+      "A água é muito importante para o corpo.",
+      "A água é boa para beber no almoço.",
+      "O corpo precisa de comida."
+     ],
+     "answer": "A água é muito importante para o corpo.",
+     "why": "\"Body\" = corpo."
+    },
+    {
+     "id": "a1u7l11-5",
+     "type": "build",
+     "pt": "Ela é muito gentil com todo mundo.",
+     "answer": "She is very kind to everyone",
+     "extra": [
+      "kinds",
+      "with"
+     ],
+     "display": "She is very kind to everyone.",
+     "why": "\"Kind to\" = gentil com."
+    },
+    {
+     "id": "a1u7l11-6",
+     "type": "listen",
+     "en": "Chocolate makes my heart happy.",
+     "options": [
+      "Chocolate deixa meu coração feliz.",
+      "Chocolate faz mal para o coração.",
+      "Eu não como chocolate."
+     ],
+     "answer": "Chocolate deixa meu coração feliz.",
+     "why": "\"Heart\" = coração. Soa como \"RÁRT\"."
     }
    ]
   },

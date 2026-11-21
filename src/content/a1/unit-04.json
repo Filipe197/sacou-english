@@ -118,6 +118,22 @@
   [
    "photo",
    "foto"
+  ],
+  [
+   "both",
+   "os dois, ambos"
+  ],
+  [
+   "each other",
+   "um ao outro"
+  ],
+  [
+   "remember",
+   "lembrar"
+  ],
+  [
+   "face",
+   "rosto"
   ]
  ],
  "guide": {
@@ -624,6 +640,109 @@
       "Yes, he is.": "A pergunta é sobre \"she\" (ela).",
       "Yes, I am.": "\"I am\" responde perguntas sobre você (Are you...?)."
      }
+    }
+   ]
+  },
+  {
+   "id": "a1-u4-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u4l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "both",
+       "os dois"
+      ],
+      [
+       "each other",
+       "um ao outro"
+      ],
+      [
+       "remember",
+       "lembrar"
+      ],
+      [
+       "face",
+       "rosto"
+      ]
+     ],
+     "why": "\"Remember\" = lembrar. \"Forget\" = esquecer."
+    },
+    {
+     "id": "a1u4l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I have two sisters. ___ are teachers.",
+     "pt": "Tenho duas irmãs. As duas são professoras.",
+     "options": [
+      "Both",
+      "Each",
+      "Same"
+     ],
+     "answer": "Both",
+     "why": "\"Both\" = os dois, as duas.",
+     "wrong": {
+      "Each": "\"Each\" vem com singular: each is a teacher.",
+      "Same": "\"Same\" = mesmo."
+     }
+    },
+    {
+     "id": "a1u4l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Do you ___ my name?",
+     "pt": "Você lembra do meu nome?",
+     "options": [
+      "remember",
+      "know",
+      "tell"
+     ],
+     "answer": "remember",
+     "why": "\"Remember\" = lembrar. Sem \"of\": remember my name.",
+     "wrong": {
+      "know": "\"Know\" = saber, conhecer.",
+      "tell": "\"Tell\" = contar."
+     }
+    },
+    {
+     "id": "a1u4l11-4",
+     "type": "meaning",
+     "en": "My parents love each other.",
+     "options": [
+      "Meus pais se amam.",
+      "Meus pais amam os filhos.",
+      "Meus pais estão juntos há muito tempo."
+     ],
+     "answer": "Meus pais se amam.",
+     "why": "\"Each other\" = um ao outro. \"Love each other\" = se amam."
+    },
+    {
+     "id": "a1u4l11-5",
+     "type": "build",
+     "pt": "O bebê tem o rosto da mãe.",
+     "answer": "The baby has his mother's face",
+     "extra": [
+      "have",
+      "her"
+     ],
+     "display": "The baby has his mother's face.",
+     "why": "\"Mother's face\" = o rosto da mãe. O 's mostra de quem é."
+    },
+    {
+     "id": "a1u4l11-6",
+     "type": "listen",
+     "en": "We both like music.",
+     "options": [
+      "Nós dois gostamos de música.",
+      "Só eu gosto de música.",
+      "Nós dois tocamos música."
+     ],
+     "answer": "Nós dois gostamos de música.",
+     "why": "\"We both\" = nós dois. \"Both\" vem antes do verbo."
     }
    ]
   },

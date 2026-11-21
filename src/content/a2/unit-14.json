@@ -74,6 +74,22 @@
   [
    "could you",
    "você poderia"
+  ],
+  [
+   "address",
+   "endereço"
+  ],
+  [
+   "map",
+   "mapa"
+  ],
+  [
+   "ahead",
+   "à frente, adiante"
+  ],
+  [
+   "across",
+   "do outro lado de, atravessando"
   ]
  ],
  "guide": {
@@ -550,6 +566,109 @@
      "en": "The room is too small.",
      "pt": "O quarto é pequeno demais.",
      "why": "\"Too\" soa como \"TÚU\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u14-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u14l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "address",
+       "endereço"
+      ],
+      [
+       "map",
+       "mapa"
+      ],
+      [
+       "ahead",
+       "à frente"
+      ],
+      [
+       "across",
+       "do outro lado"
+      ]
+     ],
+     "why": "\"Address\" tem dois \"d\" e dois \"s\"."
+    },
+    {
+     "id": "a2u14l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The bank is ___ the street.",
+     "pt": "O banco fica do outro lado da rua.",
+     "options": [
+      "across",
+      "ahead",
+      "along"
+     ],
+     "answer": "across",
+     "why": "\"Across the street\" = do outro lado da rua.",
+     "wrong": {
+      "ahead": "\"Ahead\" = à frente.",
+      "along": "\"Along\" = ao longo."
+     }
+    },
+    {
+     "id": "a2u14l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Go straight ___. The hotel is on the right.",
+     "pt": "Siga em frente. O hotel fica à direita.",
+     "options": [
+      "ahead",
+      "across",
+      "away"
+     ],
+     "answer": "ahead",
+     "why": "\"Go straight ahead\" = siga em frente.",
+     "wrong": {
+      "across": "\"Across\" = do outro lado.",
+      "away": "\"Go away\" = vá embora!"
+     }
+    },
+    {
+     "id": "a2u14l11-4",
+     "type": "meaning",
+     "en": "Can you show me on the map?",
+     "options": [
+      "Você pode me mostrar no mapa?",
+      "Você tem um mapa?",
+      "Onde fica o mapa?"
+     ],
+     "answer": "Você pode me mostrar no mapa?",
+     "why": "\"Show me on the map\" = me mostre no mapa."
+    },
+    {
+     "id": "a2u14l11-5",
+     "type": "build",
+     "pt": "Qual é o endereço do hotel?",
+     "answer": "What's the address of the hotel",
+     "extra": [
+      "where",
+      "addresses"
+     ],
+     "display": "What's the address of the hotel?",
+     "why": "\"Address\" = endereço."
+    },
+    {
+     "id": "a2u14l11-6",
+     "type": "listen",
+     "en": "We walked across the bridge.",
+     "options": [
+      "Atravessamos a ponte a pé.",
+      "Ficamos embaixo da ponte.",
+      "Vimos a ponte de longe."
+     ],
+     "answer": "Atravessamos a ponte a pé.",
+     "why": "\"Across\" = atravessando."
     }
    ]
   },

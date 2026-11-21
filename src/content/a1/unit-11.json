@@ -78,6 +78,22 @@
   [
    "card",
    "cartão"
+  ],
+  [
+   "choose",
+   "escolher"
+  ],
+  [
+   "special",
+   "especial"
+  ],
+  [
+   "excellent",
+   "excelente"
+  ],
+  [
+   "lovely",
+   "lindo(a), adorável"
   ]
  ],
  "guide": {
@@ -522,6 +538,109 @@
      ],
      "answer": "Posso pagar em dinheiro?",
      "why": "\"In cash\" = em dinheiro vivo. Com cartão: \"by card\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u11-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u11l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "choose",
+       "escolher"
+      ],
+      [
+       "special",
+       "especial"
+      ],
+      [
+       "excellent",
+       "excelente"
+      ],
+      [
+       "lovely",
+       "adorável"
+      ]
+     ],
+     "why": "\"Lovely\" é muito usado no inglês britânico: lindo, ótimo, adorável."
+    },
+    {
+     "id": "a1u11l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I can't ___. Both dresses are beautiful!",
+     "pt": "Não consigo escolher. Os dois vestidos são lindos!",
+     "options": [
+      "choose",
+      "buy",
+      "wear"
+     ],
+     "answer": "choose",
+     "why": "\"Choose\" = escolher.",
+     "wrong": {
+      "buy": "\"Buy\" = comprar.",
+      "wear": "\"Wear\" = usar (roupa)."
+     }
+    },
+    {
+     "id": "a1u11l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "This is a ___ day. It is my birthday!",
+     "pt": "Hoje é um dia especial. É meu aniversário!",
+     "options": [
+      "special",
+      "excellent",
+      "lovely"
+     ],
+     "answer": "special",
+     "why": "\"Special\" = especial.",
+     "wrong": {
+      "excellent": "\"Excellent\" = excelente (qualidade).",
+      "lovely": "\"Lovely day\" seria um dia lindo (o tempo)."
+     }
+    },
+    {
+     "id": "a1u11l11-4",
+     "type": "meaning",
+     "en": "What a lovely dress!",
+     "options": [
+      "Que vestido lindo!",
+      "Que vestido caro!",
+      "Que vestido grande!"
+     ],
+     "answer": "Que vestido lindo!",
+     "why": "\"Lovely\" = lindo, adorável."
+    },
+    {
+     "id": "a1u11l11-5",
+     "type": "build",
+     "pt": "A comida nesta loja é excelente.",
+     "answer": "The food in this shop is excellent",
+     "extra": [
+      "these",
+      "are"
+     ],
+     "display": "The food in this shop is excellent.",
+     "why": "\"Excellent\" = excelente. Soa como \"ÉK-se-lent\"."
+    },
+    {
+     "id": "a1u11l11-6",
+     "type": "listen",
+     "en": "You can choose the color.",
+     "options": [
+      "Você pode escolher a cor.",
+      "Você pode comprar a cor.",
+      "A cor é especial."
+     ],
+     "answer": "Você pode escolher a cor.",
+     "why": "\"Choose\" soa como \"TCHÚUZ\"."
     }
    ]
   },

@@ -17,8 +17,8 @@ export function addLessons(file, { words = [], lessons = [], extraVocab = [] }) 
   for (const { after, lesson } of lessons) {
     const i = u.lessons.findIndex(l => l.id === after);
     if (i < 0) throw new Error(`${file}: lição "${after}" não encontrada`);
-    const { id, title, story, items } = lesson;
-    u.lessons.splice(i + 1, 0, { id, title, added: ADDED, ...(story ? { story } : {}), items });
+    const { id, title, story, items, bonus } = lesson;
+    u.lessons.splice(i + 1, 0, { id, title, added: ADDED, ...(bonus ? { bonus: true } : {}), ...(story ? { story } : {}), items });
   }
   // palavra acima do nível com justificativa (o build aceita com aviso)
   u.extra_vocab ||= [];

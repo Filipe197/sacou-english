@@ -70,6 +70,22 @@
   [
    "hard",
    "muito, com esforço (trabalhar, estudar)"
+  ],
+  [
+   "birth",
+   "nascimento"
+  ],
+  [
+   "success",
+   "sucesso"
+  ],
+  [
+   "successful",
+   "bem-sucedido(a)"
+  ],
+  [
+   "goal",
+   "objetivo, meta; gol"
   ]
  ],
  "guide": {
@@ -572,6 +588,109 @@
      ],
      "answer": "Meu pai me ensinou a nadar quando eu tinha seis anos.",
      "why": "\"Taught\" é o passado de \"teach\" (ensinar)."
+    }
+   ]
+  },
+  {
+   "id": "a2-u16-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u16l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "birth",
+       "nascimento"
+      ],
+      [
+       "success",
+       "sucesso"
+      ],
+      [
+       "successful",
+       "bem-sucedido"
+      ],
+      [
+       "goal",
+       "objetivo"
+      ]
+     ],
+     "why": "\"Goal\" é objetivo e também gol no futebol."
+    },
+    {
+     "id": "a2u16l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "What's your date of ___?",
+     "pt": "Qual é a sua data de nascimento?",
+     "options": [
+      "birth",
+      "born",
+      "birthday"
+     ],
+     "answer": "birth",
+     "why": "\"Date of birth\" = data de nascimento.",
+     "wrong": {
+      "born": "\"Born\" vem em \"I was born\".",
+      "birthday": "\"Birthday\" = aniversário."
+     }
+    },
+    {
+     "id": "a2u16l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She is a very ___ lawyer.",
+     "pt": "Ela é uma advogada muito bem-sucedida.",
+     "options": [
+      "successful",
+      "success",
+      "successes"
+     ],
+     "answer": "successful",
+     "why": "\"Successful\" é o adjetivo (bem-sucedido).",
+     "wrong": {
+      "success": "\"Success\" é o substantivo (o sucesso).",
+      "successes": "\"Successes\" = sucessos (plural do substantivo)."
+     }
+    },
+    {
+     "id": "a2u16l11-4",
+     "type": "meaning",
+     "en": "My goal is to speak English well.",
+     "options": [
+      "Meu objetivo é falar inglês bem.",
+      "Meu gol foi bonito.",
+      "Eu falo inglês bem."
+     ],
+     "answer": "Meu objetivo é falar inglês bem.",
+     "why": "\"Goal\" = objetivo, meta."
+    },
+    {
+     "id": "a2u16l11-5",
+     "type": "build",
+     "pt": "O show foi um grande sucesso.",
+     "answer": "The show was a big success",
+     "extra": [
+      "successful",
+      "were"
+     ],
+     "display": "The show was a big success.",
+     "why": "\"A success\" = um sucesso."
+    },
+    {
+     "id": "a2u16l11-6",
+     "type": "listen",
+     "en": "Hard work is the key to success.",
+     "options": [
+      "Trabalho duro é a chave do sucesso.",
+      "O sucesso é fácil.",
+      "Ele trabalha muito."
+     ],
+     "answer": "Trabalho duro é a chave do sucesso.",
+     "why": "\"The key to success\" = a chave do sucesso."
     }
    ]
   },

@@ -78,6 +78,22 @@
   [
    "weekend",
    "fim de semana"
+  ],
+  [
+   "group",
+   "grupo"
+  ],
+  [
+   "art",
+   "arte"
+  ],
+  [
+   "history",
+   "história (matéria, do passado)"
+  ],
+  [
+   "news",
+   "notícia(s)"
   ]
  ],
  "guide": {
@@ -554,6 +570,109 @@
       "Yes, I like tennis.": "Não diz se aceita.",
       "It's tennis.": "Não responde ao convite."
      }
+    }
+   ]
+  },
+  {
+   "id": "a1-u12-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u12l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "group",
+       "grupo"
+      ],
+      [
+       "art",
+       "arte"
+      ],
+      [
+       "history",
+       "história"
+      ],
+      [
+       "news",
+       "notícias"
+      ]
+     ],
+     "why": "\"History\" é a história do passado. \"Story\" é uma história inventada ou contada."
+    },
+    {
+     "id": "a1u12l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I watch the ___ every evening.",
+     "pt": "Eu vejo o jornal (as notícias) toda noite.",
+     "options": [
+      "news",
+      "history",
+      "art"
+     ],
+     "answer": "news",
+     "why": "\"The news\" = as notícias, o jornal da TV.",
+     "wrong": {
+      "history": "\"History\" = história (passado).",
+      "art": "\"Art\" = arte."
+     }
+    },
+    {
+     "id": "a1u12l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She loves ___. She paints every weekend.",
+     "pt": "Ela adora arte. Pinta todo fim de semana.",
+     "options": [
+      "art",
+      "news",
+      "group"
+     ],
+     "answer": "art",
+     "why": "\"Art\" = arte. Soa como \"ÁRT\".",
+     "wrong": {
+      "news": "\"News\" = notícias.",
+      "group": "\"Group\" = grupo."
+     }
+    },
+    {
+     "id": "a1u12l11-4",
+     "type": "meaning",
+     "en": "We play music in a group.",
+     "options": [
+      "A gente toca música num grupo.",
+      "A gente ouve música sozinho.",
+      "O grupo não gosta de música."
+     ],
+     "answer": "A gente toca música num grupo.",
+     "why": "\"Group\" = grupo."
+    },
+    {
+     "id": "a1u12l11-5",
+     "type": "build",
+     "pt": "Eu gosto de aulas de história.",
+     "answer": "I like history lessons",
+     "extra": [
+      "story",
+      "likes"
+     ],
+     "display": "I like history lessons.",
+     "why": "\"History\" para a matéria da escola."
+    },
+    {
+     "id": "a1u12l11-6",
+     "type": "listen",
+     "en": "Good news! We have a new game.",
+     "options": [
+      "Boa notícia! Temos um jogo novo.",
+      "Má notícia! Perdemos o jogo.",
+      "Temos notícias do jogo."
+     ],
+     "answer": "Boa notícia! Temos um jogo novo.",
+     "why": "\"Good news\" = boa notícia. \"News\" não tem plural diferente: é sempre \"news\"."
     }
    ]
   },

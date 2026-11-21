@@ -130,6 +130,22 @@
   [
    "expensive",
    "caro(a)"
+  ],
+  [
+   "another",
+   "outro(a), mais um(a)"
+  ],
+  [
+   "nothing",
+   "nada"
+  ],
+  [
+   "top",
+   "topo, parte de cima"
+  ],
+  [
+   "side",
+   "lado"
   ]
  ],
  "guide": {
@@ -600,6 +616,109 @@
      ],
      "answer": "Meu celular velho está quebrado.",
      "why": "\"Old\" = velho e \"broken\" = quebrado."
+    }
+   ]
+  },
+  {
+   "id": "a1-u5-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u5l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "another",
+       "outro"
+      ],
+      [
+       "nothing",
+       "nada"
+      ],
+      [
+       "top",
+       "topo"
+      ],
+      [
+       "side",
+       "lado"
+      ]
+     ],
+     "why": "\"Another\" = an + other: outro (mais um)."
+    },
+    {
+     "id": "a1u5l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Can I have ___ cup of coffee?",
+     "pt": "Posso tomar mais uma xícara de café?",
+     "options": [
+      "another",
+      "other",
+      "others"
+     ],
+     "answer": "another",
+     "why": "\"Another\" + singular = mais um, outro.",
+     "wrong": {
+      "other": "\"Other\" pede \"the\" ou plural: the other cup.",
+      "others": "\"Others\" não vem antes de uma coisa."
+     }
+    },
+    {
+     "id": "a1u5l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There is ___ in the box. Look!",
+     "pt": "Não tem nada na caixa. Olha!",
+     "options": [
+      "nothing",
+      "something",
+      "anything"
+     ],
+     "answer": "nothing",
+     "why": "\"Nothing\" = nada. Em inglês, um só negativo: there is nothing.",
+     "wrong": {
+      "something": "\"Something\" = alguma coisa.",
+      "anything": "\"Anything\" vai em perguntas e com \"not\"."
+     }
+    },
+    {
+     "id": "a1u5l11-4",
+     "type": "meaning",
+     "en": "The book is on the top shelf.",
+     "options": [
+      "O livro está na prateleira de cima.",
+      "O livro está embaixo da mesa.",
+      "O livro está ao lado da prateleira."
+     ],
+     "answer": "O livro está na prateleira de cima.",
+     "why": "\"Top\" = em cima, no alto."
+    },
+    {
+     "id": "a1u5l11-5",
+     "type": "build",
+     "pt": "A bolsa está do outro lado da mesa.",
+     "answer": "The bag is on the other side of the table",
+     "extra": [
+      "another",
+      "in"
+     ],
+     "display": "The bag is on the other side of the table.",
+     "why": "\"On the other side of\" = do outro lado de."
+    },
+    {
+     "id": "a1u5l11-6",
+     "type": "listen",
+     "en": "I have nothing in my bag.",
+     "options": [
+      "Não tenho nada na minha bolsa.",
+      "Tenho tudo na minha bolsa.",
+      "Minha bolsa é nova."
+     ],
+     "answer": "Não tenho nada na minha bolsa.",
+     "why": "\"Nothing\" = nada."
     }
    ]
   },

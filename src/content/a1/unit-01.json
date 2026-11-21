@@ -103,6 +103,22 @@
   [
    "not bad",
    "nada mal"
+  ],
+  [
+   "ask",
+   "perguntar, pedir"
+  ],
+  [
+   "tell",
+   "contar, dizer (para alguém)"
+  ],
+  [
+   "also",
+   "também"
+  ],
+  [
+   "same",
+   "mesmo(a), igual"
   ]
  ],
  "guide": {
@@ -602,6 +618,109 @@
      "answer": "Not bad, thanks.",
      "pt": "Nada mal, valeu.",
      "why": "\"Not bad\" = nada mal. É outra resposta comum para \"How are you?\", além de \"I'm fine\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u1-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u1l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "ask",
+       "perguntar"
+      ],
+      [
+       "tell",
+       "contar"
+      ],
+      [
+       "also",
+       "também"
+      ],
+      [
+       "same",
+       "mesmo"
+      ]
+     ],
+     "why": "Quatro palavras entre as mais usadas do inglês. Você vai ouvir todas elas todo dia."
+    },
+    {
+     "id": "a1u1l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Can I ___ a question?",
+     "pt": "Posso fazer uma pergunta?",
+     "options": [
+      "ask",
+      "tell",
+      "say"
+     ],
+     "answer": "ask",
+     "why": "Fazer uma pergunta = \"ask a question\".",
+     "wrong": {
+      "tell": "\"Tell\" é contar ou dizer algo para alguém.",
+      "say": "\"Say a question\" não se usa."
+     }
+    },
+    {
+     "id": "a1u1l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Please ___ me your name.",
+     "pt": "Por favor, me diga o seu nome.",
+     "options": [
+      "tell",
+      "ask",
+      "speak"
+     ],
+     "answer": "tell",
+     "why": "\"Tell me\" = me diga, me conte. Depois de \"tell\" vem a pessoa.",
+     "wrong": {
+      "ask": "\"Ask me\" é \"me pergunte\".",
+      "speak": "\"Speak\" é falar (um idioma, com alguém)."
+     }
+    },
+    {
+     "id": "a1u1l11-4",
+     "type": "meaning",
+     "en": "I am also a student.",
+     "options": [
+      "Eu também sou estudante.",
+      "Eu sou só estudante.",
+      "Eu não sou estudante."
+     ],
+     "answer": "Eu também sou estudante.",
+     "why": "\"Also\" = também. Vem depois de \"am/is/are\" e antes de outros verbos."
+    },
+    {
+     "id": "a1u1l11-5",
+     "type": "build",
+     "pt": "Nós temos o mesmo nome!",
+     "answer": "We have the same name",
+     "extra": [
+      "some",
+      "a"
+     ],
+     "display": "We have the same name!",
+     "why": "\"The same\" = o mesmo. Sempre com \"the\"."
+    },
+    {
+     "id": "a1u1l11-6",
+     "type": "listen",
+     "en": "She is from the same city.",
+     "options": [
+      "Ela é da mesma cidade.",
+      "Ela mora numa cidade grande.",
+      "Ela é de outra cidade."
+     ],
+     "answer": "Ela é da mesma cidade.",
+     "why": "\"The same city\" = a mesma cidade."
     }
    ]
   },

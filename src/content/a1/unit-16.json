@@ -71,6 +71,22 @@
   [
    "boring / interesting",
    "chato / interessante"
+  ],
+  [
+   "way",
+   "caminho, jeito"
+  ],
+  [
+   "reason",
+   "motivo, razão"
+  ],
+  [
+   "form",
+   "formulário"
+  ],
+  [
+   "post",
+   "correio; postar"
   ]
  ],
  "guide": {
@@ -544,6 +560,109 @@
      ],
      "answer": "Nossa viagem foi maravilhosa!",
      "why": "\"Wonderful\" = maravilhoso."
+    }
+   ]
+  },
+  {
+   "id": "a1-u16-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u16l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "way",
+       "caminho"
+      ],
+      [
+       "reason",
+       "motivo"
+      ],
+      [
+       "form",
+       "formulário"
+      ],
+      [
+       "post",
+       "correio"
+      ]
+     ],
+     "why": "\"Way\" também é jeito: the best way = o melhor jeito."
+    },
+    {
+     "id": "a1u16l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Excuse me, is this the ___ to the airport?",
+     "pt": "Com licença, este é o caminho para o aeroporto?",
+     "options": [
+      "way",
+      "reason",
+      "form"
+     ],
+     "answer": "way",
+     "why": "\"The way to\" = o caminho para.",
+     "wrong": {
+      "reason": "\"Reason\" = motivo.",
+      "form": "\"Form\" = formulário."
+     }
+    },
+    {
+     "id": "a1u16l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Please fill in this ___ at the hotel.",
+     "pt": "Por favor, preencha este formulário no hotel.",
+     "options": [
+      "form",
+      "post",
+      "way"
+     ],
+     "answer": "form",
+     "why": "\"Fill in a form\" = preencher um formulário.",
+     "wrong": {
+      "post": "\"Post\" = correio.",
+      "way": "\"Way\" = caminho."
+     }
+    },
+    {
+     "id": "a1u16l11-4",
+     "type": "meaning",
+     "en": "What was the reason for your trip?",
+     "options": [
+      "Qual foi o motivo da sua viagem?",
+      "Quando foi a sua viagem?",
+      "Como foi a sua viagem?"
+     ],
+     "answer": "Qual foi o motivo da sua viagem?",
+     "why": "\"Reason\" = motivo. Pergunta comum no aeroporto."
+    },
+    {
+     "id": "a1u16l11-5",
+     "type": "build",
+     "pt": "Eu postei as fotos da viagem.",
+     "answer": "I posted the photos of the trip",
+     "extra": [
+      "post",
+      "way"
+     ],
+     "display": "I posted the photos of the trip.",
+     "why": "\"Post\" = postar (na internet). Passado: posted."
+    },
+    {
+     "id": "a1u16l11-6",
+     "type": "listen",
+     "en": "There's no way to get there by bus.",
+     "options": [
+      "Não tem como chegar lá de ônibus.",
+      "O ônibus chega lá rápido.",
+      "Tem um ônibus para lá."
+     ],
+     "answer": "Não tem como chegar lá de ônibus.",
+     "why": "\"There's no way\" = não tem como, não tem jeito."
     }
    ]
   },

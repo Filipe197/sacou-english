@@ -97,6 +97,22 @@
   [
    "neighbour",
    "vizinho(a)"
+  ],
+  [
+   "decide",
+   "decidir"
+  ],
+  [
+   "explain",
+   "explicar"
+  ],
+  [
+   "return",
+   "voltar, devolver"
+  ],
+  [
+   "receive",
+   "receber"
   ]
  ],
  "guide": {
@@ -547,6 +563,109 @@
       "No, I don't. I call her later.": "A pergunta está no passado (did), não no presente.",
       "No, I wasn't. I called her later.": "\"Wasn't\" responde perguntas com \"Were you...?\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u2-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u2l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "decide",
+       "decidir"
+      ],
+      [
+       "explain",
+       "explicar"
+      ],
+      [
+       "return",
+       "devolver"
+      ],
+      [
+       "receive",
+       "receber"
+      ]
+     ],
+     "why": "\"Return\" = voltar (return home) e devolver (return the book)."
+    },
+    {
+     "id": "a2u2l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We ___ to stay at home.",
+     "pt": "Decidimos ficar em casa.",
+     "options": [
+      "decided",
+      "decide to",
+      "decides"
+     ],
+     "answer": "decided",
+     "why": "\"Decide\" + to + verbo. No passado: decided.",
+     "wrong": {
+      "decide to": "Ficaria \"decide to to stay\". E precisa do passado.",
+      "decides": "Precisa do passado, e com \"we\" não tem -s."
+     }
+    },
+    {
+     "id": "a2u2l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Can you ___ this word to me?",
+     "pt": "Você pode me explicar esta palavra?",
+     "options": [
+      "explain",
+      "explain me",
+      "say me"
+     ],
+     "answer": "explain",
+     "why": "\"Explain something TO someone\". Nunca \"explain me\".",
+     "wrong": {
+      "explain me": "Em inglês é \"explain it to me\".",
+      "say me": "\"Say\" não leva a pessoa logo depois."
+     }
+    },
+    {
+     "id": "a2u2l11-4",
+     "type": "meaning",
+     "en": "I returned the book to the library.",
+     "options": [
+      "Devolvi o livro para a biblioteca.",
+      "Peguei um livro na biblioteca.",
+      "Voltei para a biblioteca para ler."
+     ],
+     "answer": "Devolvi o livro para a biblioteca.",
+     "why": "\"Return something\" = devolver."
+    },
+    {
+     "id": "a2u2l11-5",
+     "type": "build",
+     "pt": "Ela recebeu uma carta da avó.",
+     "answer": "She received a letter from her grandma",
+     "extra": [
+      "receive",
+      "of"
+     ],
+     "display": "She received a letter from her grandma.",
+     "why": "\"Receive\" = receber. \"From\" = de (quem mandou)."
+    },
+    {
+     "id": "a2u2l11-6",
+     "type": "listen",
+     "en": "When did you return from your trip?",
+     "options": [
+      "Quando você voltou da viagem?",
+      "Quando você vai viajar?",
+      "Como foi a viagem?"
+     ],
+     "answer": "Quando você voltou da viagem?",
+     "why": "\"Return from\" = voltar de."
     }
    ]
   },

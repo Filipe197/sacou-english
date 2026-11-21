@@ -105,6 +105,22 @@
   [
    "camping",
    "acampar, acampamento"
+  ],
+  [
+   "hold",
+   "segurar"
+  ],
+  [
+   "cut",
+   "cortar"
+  ],
+  [
+   "follow",
+   "seguir"
+  ],
+  [
+   "save",
+   "economizar, guardar, salvar"
   ]
  ],
  "guide": {
@@ -571,6 +587,109 @@
       "No, we drived. It taked ten hours.": "\"Drived\" e \"taked\" não existem: drove e took.",
       "No, we drive. It takes ten hours.": "A viagem já aconteceu: passado."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u3-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u3l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "hold",
+       "segurar"
+      ],
+      [
+       "cut",
+       "cortar"
+      ],
+      [
+       "follow",
+       "seguir"
+      ],
+      [
+       "save",
+       "economizar"
+      ]
+     ],
+     "why": "Passado: hold → held, cut → cut (igual), follow → followed, save → saved."
+    },
+    {
+     "id": "a2u3l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We ___ money for the trip all year.",
+     "pt": "A gente economizou dinheiro para a viagem o ano todo.",
+     "options": [
+      "saved",
+      "spent",
+      "cut"
+     ],
+     "answer": "saved",
+     "why": "\"Save money\" = economizar.",
+     "wrong": {
+      "spent": "\"Spent\" = gastou, o contrário.",
+      "cut": "\"Cut\" = cortar."
+     }
+    },
+    {
+     "id": "a2u3l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Can you ___ my bag for a minute?",
+     "pt": "Você pode segurar minha bolsa um minutinho?",
+     "options": [
+      "hold",
+      "follow",
+      "save"
+     ],
+     "answer": "hold",
+     "why": "\"Hold\" = segurar.",
+     "wrong": {
+      "follow": "\"Follow\" = seguir.",
+      "save": "\"Save\" = guardar (para depois) ou economizar."
+     }
+    },
+    {
+     "id": "a2u3l11-4",
+     "type": "meaning",
+     "en": "Follow me. The hotel is this way.",
+     "options": [
+      "Me siga. O hotel é por aqui.",
+      "Espere aqui. O hotel é longe.",
+      "Me ligue quando chegar no hotel."
+     ],
+     "answer": "Me siga. O hotel é por aqui.",
+     "why": "\"Follow\" = seguir. \"This way\" = por aqui."
+    },
+    {
+     "id": "a2u3l11-5",
+     "type": "build",
+     "pt": "Ela cortou o cabelo ontem.",
+     "answer": "She cut her hair yesterday",
+     "extra": [
+      "cutted",
+      "his"
+     ],
+     "display": "She cut her hair yesterday.",
+     "why": "\"Cut\" no passado é igual: cut."
+    },
+    {
+     "id": "a2u3l11-6",
+     "type": "listen",
+     "en": "Don't forget to save the file.",
+     "options": [
+      "Não esqueça de salvar o arquivo.",
+      "Não esqueça de apagar o arquivo.",
+      "Não esqueça de mandar o arquivo."
+     ],
+     "answer": "Não esqueça de salvar o arquivo.",
+     "why": "No computador, \"save\" = salvar."
     }
    ]
   },

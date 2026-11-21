@@ -129,6 +129,22 @@
   [
    "old",
    "velho(a) / idoso(a)"
+  ],
+  [
+   "almost",
+   "quase"
+  ],
+  [
+   "once",
+   "uma vez"
+  ],
+  [
+   "each",
+   "cada"
+  ],
+  [
+   "large",
+   "grande"
   ]
  ],
  "guide": {
@@ -597,6 +613,109 @@
      ],
      "answer": "Meu professor tem sessenta anos.",
      "why": "\"Sixty\" = 60. Lembre: a idade vem com \"is\" + número + \"years old\"."
+    }
+   ]
+  },
+  {
+   "id": "a1-u3-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u3l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "almost",
+       "quase"
+      ],
+      [
+       "once",
+       "uma vez"
+      ],
+      [
+       "each",
+       "cada"
+      ],
+      [
+       "large",
+       "grande"
+      ]
+     ],
+     "why": "\"Once\" = uma vez. \"Twice\" = duas vezes. Depois: three times."
+    },
+    {
+     "id": "a1u3l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm ___ twenty. My birthday is on Friday!",
+     "pt": "Eu tenho quase vinte anos. Meu aniversário é na sexta!",
+     "options": [
+      "almost",
+      "once",
+      "each"
+     ],
+     "answer": "almost",
+     "why": "\"Almost\" = quase. Vem antes do número.",
+     "wrong": {
+      "once": "\"Once\" = uma vez.",
+      "each": "\"Each\" = cada."
+     }
+    },
+    {
+     "id": "a1u3l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The pens are two reais ___.",
+     "pt": "As canetas custam dois reais cada.",
+     "options": [
+      "each",
+      "once",
+      "all"
+     ],
+     "answer": "each",
+     "why": "\"Each\" no fim = cada uma.",
+     "wrong": {
+      "once": "\"Once\" = uma vez.",
+      "all": "\"All\" = todas juntas."
+     }
+    },
+    {
+     "id": "a1u3l11-4",
+     "type": "meaning",
+     "en": "I call my grandma once a week.",
+     "options": [
+      "Eu ligo para minha avó uma vez por semana.",
+      "Eu ligo para minha avó todo dia.",
+      "Eu ligo para minha avó uma semana sim, outra não."
+     ],
+     "answer": "Eu ligo para minha avó uma vez por semana.",
+     "why": "\"Once a week\" = uma vez por semana."
+    },
+    {
+     "id": "a1u3l11-5",
+     "type": "build",
+     "pt": "Cada aluno tem um livro.",
+     "answer": "Each student has a book",
+     "extra": [
+      "have",
+      "all"
+     ],
+     "display": "Each student has a book.",
+     "why": "Depois de \"each\", singular: each student HAS."
+    },
+    {
+     "id": "a1u3l11-6",
+     "type": "listen",
+     "en": "Can I have a large coffee?",
+     "options": [
+      "Pode me dar um café grande?",
+      "Pode me dar um café pequeno?",
+      "Você quer um café?"
+     ],
+     "answer": "Pode me dar um café grande?",
+     "why": "\"Large\" = grande (em tamanho de pedido: small, medium, large)."
     }
    ]
   },

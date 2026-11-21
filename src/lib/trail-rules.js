@@ -18,9 +18,10 @@ export function statesOf(lessons, done) {
 }
 
 // Lições que contam para dar a unidade como concluída: as originais. Numa unidade inteira nova,
-// todas contam.
+// todas contam, menos as de bônus ("bonus": reforço de vocabulário acrescentado depois), que
+// nunca fazem uma unidade já concluída voltar a ficar incompleta.
 export function coreOf(lessons) {
   const core = lessons.filter(l => !l.added);
-  return core.length ? core : lessons;
+  return core.length ? core : lessons.filter(l => !l.bonus);
 }
 export const unitComplete = (lessons, done) => coreOf(lessons).every(l => done.has(l.id));

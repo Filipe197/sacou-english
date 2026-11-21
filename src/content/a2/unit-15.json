@@ -74,6 +74,22 @@
   [
    "too much / too many",
    "demais (o que não se conta / o que se conta)"
+  ],
+  [
+   "north / south",
+   "norte / sul"
+  ],
+  [
+   "east / west",
+   "leste / oeste"
+  ],
+  [
+   "land",
+   "terra, terreno"
+  ],
+  [
+   "wild",
+   "selvagem"
   ]
  ],
  "guide": {
@@ -569,6 +585,109 @@
      ],
      "answer": "As montanhas são mais frias que a praia.",
      "why": "\"Colder\" = mais frio."
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u15l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "north",
+       "norte"
+      ],
+      [
+       "south",
+       "sul"
+      ],
+      [
+       "east",
+       "leste"
+      ],
+      [
+       "west",
+       "oeste"
+      ]
+     ],
+     "why": "O sol nasce no leste (east) e se põe no oeste (west)."
+    },
+    {
+     "id": "a2u15l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Argentina is ___ of Brazil.",
+     "pt": "A Argentina fica ao sul do Brasil.",
+     "options": [
+      "south",
+      "north",
+      "east"
+     ],
+     "answer": "south",
+     "why": "\"South of\" = ao sul de.",
+     "wrong": {
+      "north": "A Argentina não fica ao norte do Brasil.",
+      "east": "A leste do Brasil fica o oceano."
+     }
+    },
+    {
+     "id": "a2u15l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The sun comes up in the ___.",
+     "pt": "O sol nasce no leste.",
+     "options": [
+      "east",
+      "west",
+      "north"
+     ],
+     "answer": "east",
+     "why": "O sol nasce no leste (east) e se põe no oeste (west).",
+     "wrong": {
+      "west": "No oeste o sol se põe.",
+      "north": "\"North\" = norte."
+     }
+    },
+    {
+     "id": "a2u15l11-4",
+     "type": "meaning",
+     "en": "There are many wild animals in the forest.",
+     "options": [
+      "Tem muitos animais selvagens na floresta.",
+      "Tem muitos animais de estimação na floresta.",
+      "Não tem animais na floresta."
+     ],
+     "answer": "Tem muitos animais selvagens na floresta.",
+     "why": "\"Wild\" = selvagem."
+    },
+    {
+     "id": "a2u15l11-5",
+     "type": "build",
+     "pt": "Meu avô tem um pedaço de terra no sul.",
+     "answer": "My grandpa has a piece of land in the south",
+     "extra": [
+      "have",
+      "north"
+     ],
+     "display": "My grandpa has a piece of land in the south.",
+     "why": "\"Land\" não se conta: a piece of land."
+    },
+    {
+     "id": "a2u15l11-6",
+     "type": "listen",
+     "en": "The wind is coming from the west.",
+     "options": [
+      "O vento está vindo do oeste.",
+      "O vento está vindo do leste.",
+      "Não tem vento hoje."
+     ],
+     "answer": "O vento está vindo do oeste.",
+     "why": "\"West\" = oeste."
     }
    ]
   },

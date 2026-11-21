@@ -66,6 +66,22 @@
   [
    "rain",
    "chover / chuva"
+  ],
+  [
+   "information",
+   "informação, informações"
+  ],
+  [
+   "word",
+   "palavra"
+  ],
+  [
+   "line",
+   "linha, fila"
+  ],
+  [
+   "example",
+   "exemplo"
   ]
  ],
  "guide": {
@@ -499,6 +515,109 @@
      ],
      "answer": "Você está me escutando?",
      "why": "\"Listen to\" = escutar alguém ou algo."
+    }
+   ]
+  },
+  {
+   "id": "a1-u14-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u14l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "information",
+       "informação"
+      ],
+      [
+       "word",
+       "palavra"
+      ],
+      [
+       "line",
+       "linha"
+      ],
+      [
+       "example",
+       "exemplo"
+      ]
+     ],
+     "why": "\"Information\" não tem plural: some information (e nunca \"informations\")."
+    },
+    {
+     "id": "a1u14l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I need some ___ about the train.",
+     "pt": "Preciso de informações sobre o trem.",
+     "options": [
+      "information",
+      "informations",
+      "an information"
+     ],
+     "answer": "information",
+     "why": "\"Information\" não se conta: some information.",
+     "wrong": {
+      "informations": "Não existe plural.",
+      "an information": "Não se usa \"an\" com information."
+     }
+    },
+    {
+     "id": "a1u14l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Can you give me an ___?",
+     "pt": "Você pode me dar um exemplo?",
+     "options": [
+      "example",
+      "word",
+      "line"
+     ],
+     "answer": "example",
+     "why": "\"For example\" = por exemplo.",
+     "wrong": {
+      "word": "\"A word\" = uma palavra (e com \"a\", não \"an\").",
+      "line": "\"A line\" = uma linha (e com \"a\")."
+     }
+    },
+    {
+     "id": "a1u14l11-4",
+     "type": "meaning",
+     "en": "I'm waiting in line at the bank.",
+     "options": [
+      "Estou esperando na fila do banco.",
+      "Estou trabalhando no banco.",
+      "Estou falando ao telefone no banco."
+     ],
+     "answer": "Estou esperando na fila do banco.",
+     "why": "\"In line\" = na fila (inglês americano)."
+    },
+    {
+     "id": "a1u14l11-5",
+     "type": "build",
+     "pt": "Eu não sei esta palavra.",
+     "answer": "I don't know this word",
+     "extra": [
+      "these",
+      "words"
+     ],
+     "display": "I don't know this word.",
+     "why": "\"Word\" = palavra."
+    },
+    {
+     "id": "a1u14l11-6",
+     "type": "listen",
+     "en": "Sorry, the line is busy.",
+     "options": [
+      "Desculpe, a linha está ocupada.",
+      "Desculpe, a fila está grande.",
+      "A ligação caiu."
+     ],
+     "answer": "Desculpe, a linha está ocupada.",
+     "why": "No telefone, \"line\" é a linha. \"Busy\" = ocupada."
     }
    ]
   },

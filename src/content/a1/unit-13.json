@@ -66,6 +66,22 @@
   [
    "warm",
    "morno / quentinho"
+  ],
+  [
+   "high",
+   "alto(a) (temperatura, preço, montanha)"
+  ],
+  [
+   "strong",
+   "forte"
+  ],
+  [
+   "glad",
+   "contente, feliz"
+  ],
+  [
+   "excited",
+   "animado(a), empolgado(a)"
   ]
  ],
  "guide": {
@@ -553,6 +569,109 @@
      ],
      "answer": "Neva no inverno.",
      "why": "\"Snowy\" = com neve."
+    }
+   ]
+  },
+  {
+   "id": "a1-u13-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u13l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "high",
+       "alto"
+      ],
+      [
+       "strong",
+       "forte"
+      ],
+      [
+       "glad",
+       "contente"
+      ],
+      [
+       "excited",
+       "animado"
+      ]
+     ],
+     "why": "\"High\" é alto para coisas (temperatura, preço). Para pessoas, use \"tall\"."
+    },
+    {
+     "id": "a1u13l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The wind is very ___ today.",
+     "pt": "O vento está muito forte hoje.",
+     "options": [
+      "strong",
+      "high",
+      "tall"
+     ],
+     "answer": "strong",
+     "why": "\"Strong wind\" = vento forte.",
+     "wrong": {
+      "high": "\"High wind\" existe, mas o mais comum é \"strong\".",
+      "tall": "\"Tall\" é para pessoas e prédios."
+     }
+    },
+    {
+     "id": "a1u13l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The price is very ___.",
+     "pt": "O preço é muito alto.",
+     "options": [
+      "high",
+      "tall",
+      "strong"
+     ],
+     "answer": "high",
+     "why": "Preço alto = high price. \"High\" é alto para coisas que não são pessoas.",
+     "wrong": {
+      "tall": "\"Tall\" é para pessoas e prédios.",
+      "strong": "\"Strong\" = forte."
+     }
+    },
+    {
+     "id": "a1u13l11-4",
+     "type": "meaning",
+     "en": "I'm so excited about the trip!",
+     "options": [
+      "Estou muito animado com a viagem!",
+      "Estou cansado da viagem.",
+      "A viagem foi chata."
+     ],
+     "answer": "Estou muito animado com a viagem!",
+     "why": "\"Excited\" = animado, empolgado (e não \"excitado\")."
+    },
+    {
+     "id": "a1u13l11-5",
+     "type": "build",
+     "pt": "Estou contente que você está aqui.",
+     "answer": "I'm glad you are here",
+     "extra": [
+      "excited",
+      "is"
+     ],
+     "display": "I'm glad you are here.",
+     "why": "\"Glad\" = contente, feliz (por algo)."
+    },
+    {
+     "id": "a1u13l11-6",
+     "type": "listen",
+     "en": "Tomorrow will be sunny with a high of thirty.",
+     "options": [
+      "Amanhã vai fazer sol, com máxima de trinta graus.",
+      "Amanhã vai chover o dia todo.",
+      "Hoje está fazendo trinta graus."
+     ],
+     "answer": "Amanhã vai fazer sol, com máxima de trinta graus.",
+     "why": "\"A high of thirty\" = máxima de trinta (previsão do tempo)."
     }
    ]
   },

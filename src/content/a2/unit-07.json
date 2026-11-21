@@ -102,6 +102,22 @@
   [
    "fridge",
    "geladeira"
+  ],
+  [
+   "business",
+   "negócio, empresa"
+  ],
+  [
+   "market",
+   "mercado, feira"
+  ],
+  [
+   "local",
+   "local, do bairro"
+  ],
+  [
+   "deal",
+   "acordo, negócio, oferta"
   ]
  ],
  "guide": {
@@ -562,6 +578,109 @@
       "Thanks. Here's your money back.": "\"Money back\" é devolver o dinheiro todo (reembolso).",
       "Thanks. Here's your receipt back.": "A nota não volta: o cliente recebe o troco."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u7-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u7l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "business",
+       "negócio"
+      ],
+      [
+       "market",
+       "feira"
+      ],
+      [
+       "local",
+       "do bairro"
+      ],
+      [
+       "deal",
+       "oferta"
+      ]
+     ],
+     "why": "\"Good deal\" = bom negócio, boa oferta."
+    },
+    {
+     "id": "a2u7l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Three shirts for 50 reais? That's a good ___!",
+     "pt": "Três camisas por 50 reais? É um ótimo negócio!",
+     "options": [
+      "deal",
+      "market",
+      "business"
+     ],
+     "answer": "deal",
+     "why": "\"A good deal\" = um bom negócio, uma boa oferta.",
+     "wrong": {
+      "market": "\"Market\" = mercado, feira.",
+      "business": "\"Business\" = negócio como empresa."
+     }
+    },
+    {
+     "id": "a2u7l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We buy fruit at the ___ every Saturday.",
+     "pt": "A gente compra fruta na feira todo sábado.",
+     "options": [
+      "market",
+      "deal",
+      "business"
+     ],
+     "answer": "market",
+     "why": "\"Market\" = feira, mercado.",
+     "wrong": {
+      "deal": "\"Deal\" = oferta.",
+      "business": "\"Business\" = empresa."
+     }
+    },
+    {
+     "id": "a2u7l11-4",
+     "type": "meaning",
+     "en": "My uncle has a small business.",
+     "options": [
+      "Meu tio tem um pequeno negócio.",
+      "Meu tio trabalha num banco.",
+      "Meu tio é um homem ocupado."
+     ],
+     "answer": "Meu tio tem um pequeno negócio.",
+     "why": "\"Business\" = negócio, empresa. Soa como \"BÍZ-nis\"."
+    },
+    {
+     "id": "a2u7l11-5",
+     "type": "build",
+     "pt": "Eu gosto de comprar em lojas do bairro.",
+     "answer": "I like buying in local shops",
+     "extra": [
+      "likes",
+      "at"
+     ],
+     "display": "I like buying in local shops.",
+     "why": "\"Local shops\" = lojas do bairro, da região."
+    },
+    {
+     "id": "a2u7l11-6",
+     "type": "listen",
+     "en": "Is it a business trip?",
+     "options": [
+      "É uma viagem de negócios?",
+      "É uma viagem de férias?",
+      "Você viaja muito?"
+     ],
+     "answer": "É uma viagem de negócios?",
+     "why": "\"Business trip\" = viagem de trabalho."
     }
    ]
   },

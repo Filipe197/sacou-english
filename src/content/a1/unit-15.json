@@ -70,6 +70,22 @@
   [
    "person / people",
    "pessoa / pessoas"
+  ],
+  [
+   "anyone",
+   "alguém, qualquer pessoa"
+  ],
+  [
+   "yourself",
+   "você mesmo(a), se"
+  ],
+  [
+   "guy",
+   "cara, rapaz"
+  ],
+  [
+   "cool",
+   "legal, bacana; fresco"
   ]
  ],
  "guide": {
@@ -528,6 +544,109 @@
       "has": "\"Has\" vai com he, she e it.",
       "am": "\"Am got\" não existe."
      }
+    }
+   ]
+  },
+  {
+   "id": "a1-u15-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u15l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "anyone",
+       "alguém"
+      ],
+      [
+       "yourself",
+       "você mesmo"
+      ],
+      [
+       "guy",
+       "cara"
+      ],
+      [
+       "cool",
+       "legal"
+      ]
+     ],
+     "why": "\"Cool\" = legal (informal). Também quer dizer fresco, um pouco frio."
+    },
+    {
+     "id": "a1u15l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Does ___ know his name?",
+     "pt": "Alguém sabe o nome dele?",
+     "options": [
+      "anyone",
+      "someone",
+      "no"
+     ],
+     "answer": "anyone",
+     "why": "Em perguntas, \"alguém\" é \"anyone\".",
+     "wrong": {
+      "someone": "\"Someone\" vai em afirmações.",
+      "no": "\"No\" sozinho não forma \"ninguém\" aqui."
+     }
+    },
+    {
+     "id": "a1u15l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Tell me about ___.",
+     "pt": "Me fale sobre você.",
+     "options": [
+      "yourself",
+      "you",
+      "your"
+     ],
+     "answer": "yourself",
+     "why": "\"Tell me about yourself\" é a frase clássica de entrevista.",
+     "wrong": {
+      "you": "É possível, mas o natural é \"yourself\".",
+      "your": "\"Your\" precisa de algo depois."
+     }
+    },
+    {
+     "id": "a1u15l11-4",
+     "type": "meaning",
+     "en": "He is a really nice guy.",
+     "options": [
+      "Ele é um cara muito legal.",
+      "Ele é muito alto.",
+      "Ele é um menino pequeno."
+     ],
+     "answer": "Ele é um cara muito legal.",
+     "why": "\"Guy\" = cara, rapaz (informal)."
+    },
+    {
+     "id": "a1u15l11-5",
+     "type": "build",
+     "pt": "A sua irmã é muito legal!",
+     "answer": "Your sister is very cool",
+     "extra": [
+      "you",
+      "cold"
+     ],
+     "display": "Your sister is very cool!",
+     "why": "\"Cool\" = legal. Cuidado: \"cold\" = frio."
+    },
+    {
+     "id": "a1u15l11-6",
+     "type": "listen",
+     "en": "Help yourself!",
+     "options": [
+      "Sirva-se!",
+      "Me ajude!",
+      "Ajude ele!"
+     ],
+     "answer": "Sirva-se!",
+     "why": "\"Help yourself\" = sirva-se, fique à vontade (com comida)."
     }
    ]
   },

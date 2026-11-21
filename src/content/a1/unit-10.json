@@ -86,6 +86,22 @@
   [
    "because",
    "porque"
+  ],
+  [
+   "mind",
+   "mente, cabeça"
+  ],
+  [
+   "feeling",
+   "sentimento, sensação"
+  ],
+  [
+   "believe",
+   "acreditar"
+  ],
+  [
+   "mean",
+   "querer dizer, significar"
   ]
  ],
  "guide": {
@@ -540,6 +556,109 @@
      ],
      "answer": "Não fique bravo. Está tudo bem!",
      "why": "\"Don't be...\" = não fique... \"Angry\" = bravo."
+    }
+   ]
+  },
+  {
+   "id": "a1-u10-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u10l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "mind",
+       "mente"
+      ],
+      [
+       "feeling",
+       "sentimento"
+      ],
+      [
+       "believe",
+       "acreditar"
+      ],
+      [
+       "mean",
+       "significar"
+      ]
+     ],
+     "why": "\"What does it mean?\" = o que isso significa?"
+    },
+    {
+     "id": "a1u10l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "What does this word ___?",
+     "pt": "O que esta palavra significa?",
+     "options": [
+      "mean",
+      "say",
+      "believe"
+     ],
+     "answer": "mean",
+     "why": "\"What does ... mean?\" = o que ... significa?",
+     "wrong": {
+      "say": "\"What does it say?\" = o que está escrito?",
+      "believe": "\"Believe\" = acreditar."
+     }
+    },
+    {
+     "id": "a1u10l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I don't ___ you. It isn't true!",
+     "pt": "Não acredito em você. Não é verdade!",
+     "options": [
+      "believe",
+      "mean",
+      "feel"
+     ],
+     "answer": "believe",
+     "why": "\"Believe\" = acreditar. Sem \"in\" para pessoas: believe you.",
+     "wrong": {
+      "mean": "\"Mean\" = querer dizer.",
+      "feel": "\"Feel\" = sentir."
+     }
+    },
+    {
+     "id": "a1u10l11-4",
+     "type": "meaning",
+     "en": "I have a good feeling about this.",
+     "options": [
+      "Tenho um bom pressentimento sobre isso.",
+      "Eu me sinto mal com isso.",
+      "Isso é muito bom."
+     ],
+     "answer": "Tenho um bom pressentimento sobre isso.",
+     "why": "\"Feeling\" = sentimento, sensação, pressentimento."
+    },
+    {
+     "id": "a1u10l11-5",
+     "type": "build",
+     "pt": "Eu mudei de ideia.",
+     "answer": "I changed my mind",
+     "extra": [
+      "change",
+      "head"
+     ],
+     "display": "I changed my mind.",
+     "why": "\"Change my mind\" = mudar de ideia."
+    },
+    {
+     "id": "a1u10l11-6",
+     "type": "listen",
+     "en": "I believe you can do it.",
+     "options": [
+      "Eu acredito que você consegue.",
+      "Eu sei que você não consegue.",
+      "Você acredita em mim?"
+     ],
+     "answer": "Eu acredito que você consegue.",
+     "why": "\"I believe you can\" = acredito que você consegue."
     }
    ]
   },

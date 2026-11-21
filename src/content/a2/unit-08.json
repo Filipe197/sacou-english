@@ -90,6 +90,22 @@
   [
    "allowed",
    "permitido"
+  ],
+  [
+   "avoid",
+   "evitar"
+  ],
+  [
+   "public",
+   "público(a)"
+  ],
+  [
+   "social",
+   "social"
+  ],
+  [
+   "level",
+   "nível"
   ]
  ],
  "guide": {
@@ -540,6 +556,109 @@
       "Oh no! You could try again last month.": "\"Last month\" é passado; a nova chance é no futuro.",
       "Oh no! You must to try again next month.": "Depois de \"must\" não vai \"to\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u8-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u8l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "avoid",
+       "evitar"
+      ],
+      [
+       "public",
+       "público"
+      ],
+      [
+       "social",
+       "social"
+      ],
+      [
+       "level",
+       "nível"
+      ]
+     ],
+     "why": "\"Avoid\" + -ing: avoid eating late."
+    },
+    {
+     "id": "a2u8l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "You should avoid ___ late at night.",
+     "pt": "Você deveria evitar comer tarde da noite.",
+     "options": [
+      "eating",
+      "to eat",
+      "eat"
+     ],
+     "answer": "eating",
+     "why": "\"Avoid\" + -ing.",
+     "wrong": {
+      "to eat": "\"Avoid\" não aceita \"to\".",
+      "eat": "Precisa do -ing."
+     }
+    },
+    {
+     "id": "a2u8l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "You must not smoke in ___ places.",
+     "pt": "Não pode fumar em lugares públicos.",
+     "options": [
+      "public",
+      "social",
+      "local"
+     ],
+     "answer": "public",
+     "why": "\"Public places\" = lugares públicos.",
+     "wrong": {
+      "social": "\"Social\" = social.",
+      "local": "\"Local\" = da região."
+     }
+    },
+    {
+     "id": "a2u8l11-4",
+     "type": "meaning",
+     "en": "What level is your English?",
+     "options": [
+      "Qual é o nível do seu inglês?",
+      "Você fala inglês?",
+      "Onde você estuda inglês?"
+     ],
+     "answer": "Qual é o nível do seu inglês?",
+     "why": "\"Level\" = nível: A1, A2, B1..."
+    },
+    {
+     "id": "a2u8l11-5",
+     "type": "build",
+     "pt": "Eu gosto de eventos sociais.",
+     "answer": "I like social events",
+     "extra": [
+      "public",
+      "likes"
+     ],
+     "display": "I like social events.",
+     "why": "\"Social\" = social. Adjetivo vem antes: social events."
+    },
+    {
+     "id": "a2u8l11-6",
+     "type": "listen",
+     "en": "Can I use this card on public buses?",
+     "options": [
+      "Posso usar este cartão nos ônibus públicos?",
+      "Este cartão é de crédito?",
+      "Onde fica o ponto de ônibus?"
+     ],
+     "answer": "Posso usar este cartão nos ônibus públicos?",
+     "why": "\"Public\" = público."
     }
    ]
   },

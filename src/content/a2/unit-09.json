@@ -78,6 +78,22 @@
   [
    "accident",
    "acidente"
+  ],
+  [
+   "although",
+   "embora"
+  ],
+  [
+   "however",
+   "porém, no entanto"
+  ],
+  [
+   "fact",
+   "fato"
+  ],
+  [
+   "cause",
+   "causa, causar"
   ]
  ],
  "guide": {
@@ -594,6 +610,109 @@
       "should": "Fumar faz mal: o conselho é não fumar.",
       "can": "\"Can\" seria \"você pode fumar\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u9-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u9l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "although",
+       "embora"
+      ],
+      [
+       "however",
+       "porém"
+      ],
+      [
+       "fact",
+       "fato"
+      ],
+      [
+       "cause",
+       "causa"
+      ]
+     ],
+     "why": "\"Although\" liga duas ideias numa frase. \"However\" começa uma frase nova."
+    },
+    {
+     "id": "a2u9l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ I was ill, I went to work.",
+     "pt": "Embora eu estivesse doente, fui trabalhar.",
+     "options": [
+      "Although",
+      "However",
+      "Because"
+     ],
+     "answer": "Although",
+     "why": "\"Although\" = embora.",
+     "wrong": {
+      "However": "\"However\" vem depois de um ponto: I was ill. However, I went to work.",
+      "Because": "\"Because\" = porque."
+     }
+    },
+    {
+     "id": "a2u9l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The doctor was nice. ___, the medicine was expensive.",
+     "pt": "O médico foi gentil. Porém, o remédio era caro.",
+     "options": [
+      "However",
+      "Although",
+      "Also"
+     ],
+     "answer": "However",
+     "why": "\"However\" = porém, no começo da frase e com vírgula.",
+     "wrong": {
+      "Although": "\"Although\" não começa uma frase sozinha assim.",
+      "Also": "\"Also\" = também."
+     }
+    },
+    {
+     "id": "a2u9l11-4",
+     "type": "meaning",
+     "en": "Too much sugar can cause problems.",
+     "options": [
+      "Açúcar demais pode causar problemas.",
+      "Açúcar não causa problemas.",
+      "O problema é o sal."
+     ],
+     "answer": "Açúcar demais pode causar problemas.",
+     "why": "\"Cause\" = causar."
+    },
+    {
+     "id": "a2u9l11-5",
+     "type": "build",
+     "pt": "É um fato: dormir bem é importante.",
+     "answer": "It's a fact: sleeping well is important",
+     "extra": [
+      "facts",
+      "are"
+     ],
+     "display": "It's a fact: sleeping well is important.",
+     "why": "\"Fact\" = fato. Verbo com -ing como sujeito: sleeping well."
+    },
+    {
+     "id": "a2u9l11-6",
+     "type": "listen",
+     "en": "In fact, I feel much better now.",
+     "options": [
+      "Na verdade, me sinto bem melhor agora.",
+      "De fato, estou pior agora.",
+      "Ainda me sinto mal."
+     ],
+     "answer": "Na verdade, me sinto bem melhor agora.",
+     "why": "\"In fact\" = na verdade, de fato."
     }
    ]
   },

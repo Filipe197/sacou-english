@@ -93,6 +93,22 @@
   [
    "pass",
    "passar (numa prova)"
+  ],
+  [
+   "expect",
+   "esperar (que aconteça)"
+  ],
+  [
+   "improve",
+   "melhorar"
+  ],
+  [
+   "chance",
+   "chance"
+  ],
+  [
+   "create",
+   "criar"
   ]
  ],
  "guide": {
@@ -543,6 +559,109 @@
       "I like open a restaurant someday.": "\"I like\" é eu gosto; e faltaria o \"to\".",
       "I'm open a restaurant someday.": "Faltaria \"going to\": I'm going to open..."
      }
+    }
+   ]
+  },
+  {
+   "id": "a2-u6-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a2u6l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "expect",
+       "esperar"
+      ],
+      [
+       "improve",
+       "melhorar"
+      ],
+      [
+       "chance",
+       "chance"
+      ],
+      [
+       "create",
+       "criar"
+      ]
+     ],
+     "why": "\"Expect\" é esperar que algo aconteça. Esperar alguém é \"wait for\"."
+    },
+    {
+     "id": "a2u6l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I want to ___ my English this year.",
+     "pt": "Quero melhorar meu inglês este ano.",
+     "options": [
+      "improve",
+      "expect",
+      "better"
+     ],
+     "answer": "improve",
+     "why": "\"Improve\" = melhorar.",
+     "wrong": {
+      "expect": "\"Expect\" = esperar.",
+      "better": "\"Better\" é adjetivo (melhor), não verbo aqui."
+     }
+    },
+    {
+     "id": "a2u6l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ it will rain tomorrow.",
+     "pt": "Eu espero (acho) que vai chover amanhã.",
+     "options": [
+      "expect",
+      "wait",
+      "hope for"
+     ],
+     "answer": "expect",
+     "why": "\"Expect\" = achar que algo vai acontecer.",
+     "wrong": {
+      "wait": "\"Wait\" = esperar alguém ou algo chegar.",
+      "hope for": "\"Hope for\" + coisa (hope for rain)."
+     }
+    },
+    {
+     "id": "a2u6l11-4",
+     "type": "meaning",
+     "en": "This is a great chance to travel.",
+     "options": [
+      "Esta é uma ótima chance de viajar.",
+      "Não tenho chance de viajar.",
+      "Viajar é caro demais."
+     ],
+     "answer": "Esta é uma ótima chance de viajar.",
+     "why": "\"Chance\" = chance, oportunidade."
+    },
+    {
+     "id": "a2u6l11-5",
+     "type": "build",
+     "pt": "Ela quer criar um jogo novo.",
+     "answer": "She wants to create a new game",
+     "extra": [
+      "creates",
+      "want"
+     ],
+     "display": "She wants to create a new game.",
+     "why": "\"Want to create\" = quer criar."
+    },
+    {
+     "id": "a2u6l11-6",
+     "type": "listen",
+     "en": "I didn't expect to see you here!",
+     "options": [
+      "Não esperava ver você aqui!",
+      "Eu estava esperando você aqui.",
+      "Você não me viu aqui?"
+     ],
+     "answer": "Não esperava ver você aqui!",
+     "why": "\"Didn't expect\" = não esperava."
     }
    ]
   },

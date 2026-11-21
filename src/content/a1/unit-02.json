@@ -103,6 +103,22 @@
   [
    "famous",
    "famoso(a)"
+  ],
+  [
+   "real",
+   "real, de verdade"
+  ],
+  [
+   "true",
+   "verdade, verdadeiro"
+  ],
+  [
+   "own",
+   "próprio(a)"
+  ],
+  [
+   "different",
+   "diferente"
   ]
  ],
  "guide": {
@@ -611,6 +627,109 @@
      ],
      "answer": "Ele é um ator famoso.",
      "why": "Em inglês o adjetivo vem ANTES da palavra: famous actor = ator famoso."
+    }
+   ]
+  },
+  {
+   "id": "a1-u2-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u2l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "real",
+       "real"
+      ],
+      [
+       "true",
+       "verdadeiro"
+      ],
+      [
+       "own",
+       "próprio"
+      ],
+      [
+       "different",
+       "diferente"
+      ]
+     ],
+     "why": "\"True\" = é verdade. \"Real\" = existe de verdade (não é falso)."
+    },
+    {
+     "id": "a1u2l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Is it ___? You're from Japan?",
+     "pt": "É verdade? Você é do Japão?",
+     "options": [
+      "true",
+      "real",
+      "own"
+     ],
+     "answer": "true",
+     "why": "\"Is it true?\" = é verdade?",
+     "wrong": {
+      "real": "\"Real\" é real, de verdade (uma coisa que existe).",
+      "own": "\"Own\" = próprio."
+     }
+    },
+    {
+     "id": "a1u2l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I have my ___ room.",
+     "pt": "Eu tenho o meu próprio quarto.",
+     "options": [
+      "own",
+      "same",
+      "real"
+     ],
+     "answer": "own",
+     "why": "\"My own\" = meu próprio. \"Own\" vem depois de my, your, his, her.",
+     "wrong": {
+      "same": "\"My same room\" não faz sentido.",
+      "real": "\"My real room\" seria \"meu quarto de verdade\"."
+     }
+    },
+    {
+     "id": "a1u2l11-4",
+     "type": "meaning",
+     "en": "My brother and I are very different.",
+     "options": [
+      "Meu irmão e eu somos muito diferentes.",
+      "Meu irmão e eu somos iguais.",
+      "Meu irmão é muito alto."
+     ],
+     "answer": "Meu irmão e eu somos muito diferentes.",
+     "why": "\"Different\" = diferente. O contrário é \"the same\"."
+    },
+    {
+     "id": "a1u2l11-5",
+     "type": "build",
+     "pt": "O nome dele de verdade é Pedro.",
+     "answer": "His real name is Pedro",
+     "extra": [
+      "true",
+      "her"
+     ],
+     "display": "His real name is Pedro.",
+     "why": "\"Real name\" = nome de verdade."
+    },
+    {
+     "id": "a1u2l11-6",
+     "type": "listen",
+     "en": "That's true!",
+     "options": [
+      "É verdade!",
+      "Que legal!",
+      "Não é verdade!"
+     ],
+     "answer": "É verdade!",
+     "why": "\"That's true\" = é verdade. Muito usado para concordar."
     }
    ]
   },
@@ -1150,5 +1269,6 @@
     }
    ]
   }
- ]
+ ],
+ "extra_vocab": []
 }

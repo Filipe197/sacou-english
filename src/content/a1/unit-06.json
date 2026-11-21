@@ -127,6 +127,22 @@
   [
    "late",
    "tarde / atrasado(a)"
+  ],
+  [
+   "still",
+   "ainda"
+  ],
+  [
+   "until",
+   "até (tempo)"
+  ],
+  [
+   "keep",
+   "continuar, manter, guardar"
+  ],
+  [
+   "away",
+   "longe, fora"
   ]
  ],
  "guide": {
@@ -579,6 +595,109 @@
      ],
      "answer": "Jantamos às sete e meia.",
      "why": "\"Half past seven\" = sete e meia (meia hora depois das sete). \"Dinner\" = jantar."
+    }
+   ]
+  },
+  {
+   "id": "a1-u6-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "a1u6l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "still",
+       "ainda"
+      ],
+      [
+       "until",
+       "até"
+      ],
+      [
+       "keep",
+       "guardar"
+      ],
+      [
+       "away",
+       "longe"
+      ]
+     ],
+     "why": "\"Until\" é \"até\" para tempo: until five. Para lugar, use \"to\"."
+    },
+    {
+     "id": "a1u6l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It is ten o'clock and he is ___ in bed.",
+     "pt": "São dez horas e ele ainda está na cama.",
+     "options": [
+      "still",
+      "until",
+      "away"
+     ],
+     "answer": "still",
+     "why": "\"Still\" = ainda (a situação continua).",
+     "wrong": {
+      "until": "\"Until\" = até.",
+      "away": "\"Away\" = longe."
+     }
+    },
+    {
+     "id": "a1u6l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I work from nine ___ five.",
+     "pt": "Eu trabalho das nove até as cinco.",
+     "options": [
+      "until",
+      "still",
+      "away"
+     ],
+     "answer": "until",
+     "why": "\"From ... until ...\" = de ... até ...",
+     "wrong": {
+      "still": "\"Still\" = ainda.",
+      "away": "\"Away\" = longe."
+     }
+    },
+    {
+     "id": "a1u6l11-4",
+     "type": "meaning",
+     "en": "My grandparents live away from the city.",
+     "options": [
+      "Meus avós moram longe da cidade.",
+      "Meus avós moram no centro da cidade.",
+      "Meus avós moram com a gente."
+     ],
+     "answer": "Meus avós moram longe da cidade.",
+     "why": "\"Away from\" = longe de."
+    },
+    {
+     "id": "a1u6l11-5",
+     "type": "build",
+     "pt": "Ela continua estudando todo dia.",
+     "answer": "She keeps studying every day",
+     "extra": [
+      "keep",
+      "study"
+     ],
+     "display": "She keeps studying every day.",
+     "why": "\"Keep + -ing\" = continuar fazendo. Com she: keeps."
+    },
+    {
+     "id": "a1u6l11-6",
+     "type": "listen",
+     "en": "Are you still at work?",
+     "options": [
+      "Você ainda está no trabalho?",
+      "Você vai trabalhar?",
+      "Você saiu do trabalho?"
+     ],
+     "answer": "Você ainda está no trabalho?",
+     "why": "\"Still\" = ainda."
     }
    ]
   },
