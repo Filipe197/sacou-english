@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { supabase, authErrorPt } from '../lib/supabase.js';
 import { useAuth } from '../lib/auth.jsx';
 import { Icon, Logo, Fire } from '../components/ui.jsx';
 import { NATIVE, SITE } from '../lib/native.js';
+import Turnstile, { TURNSTILE_KEY } from '../components/Turnstile.jsx';
 
 // ligado (Google configurado no Supabase em 20/11/2026); VITE_ENABLE_GOOGLE=false desliga
 const GOOGLE = import.meta.env.VITE_ENABLE_GOOGLE !== 'false';
@@ -29,37 +30,74 @@ export default function Auth({ mode }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [info, setInfo] = useState('');
+  const [token, setToken] = useState('');     // verificação anti-robô (Turnstile)
+  const robo = useRef(null);
+  const [enviado, setEnviado] = useState(''); // e-mail que ainda precisa ser confirmado
+  const [espera, setEspera] = useState(0);    // segundos até poder reenviar o link
+  useEffect(() => {
+    if (espera <= 0) return undefined;
+    const t = setTimeout(() => setEspera(x => x - 1), 1000);
+    return () => clearTimeout(t);
+  }, [espera]);
 
   if (session && profile) {
     const to = !profile.onboarded ? '/bem-vindo' + (params.get('nivel') ? '?nivel=1' : '') : (loc.state?.from || '/aprender');
     return <Navigate to={to} replace />;
   }
 
+  // com o anti-robô ligado, cada chamada precisa de um token novo (vale uma vez só)
+  const semToken = () => {
+    if (!TURNSTILE_KEY || token) return false;
+    setError('Aguarde um instante: estamos confirmando que você não é um robô.');
+    return true;
+  };
+  const novoToken = () => robo.current?.reset();
+
   async function submit(e) {
     e.preventDefault();
     setError(''); setInfo('');
     if (isSignup && name.trim().length < 2) return setError('Diga como podemos te chamar.');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())) return setError('Esse e-mail não parece válido.');
     if (password.length < 8 && isSignup) return setError('A senha precisa ter pelo menos 8 caracteres.');
+    if (semToken()) return;
     setBusy(true);
+    const captchaToken = token || undefined;
     if (isSignup) {
       const { data, error } = await supabase.auth.signUp({
         email: email.trim(), password,
-        options: { data: { display_name: name.trim() }, emailRedirectTo: SITE + '/bem-vindo' },
+        options: { data: { display_name: name.trim() }, emailRedirectTo: SITE + '/bem-vindo', captchaToken },
       });
-      setBusy(false);
+      setBusy(false); novoToken();
       if (error) return setError(authErrorPt(error));
-      if (!data.session) setInfo('Conta criada! Enviamos um link de confirmação para o seu e-mail. Abra o link para entrar (confira também o spam).');
+      if (!data.session) { setEnviado(email.trim()); setEspera(60); }
     } else {
-      const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
-      setBusy(false);
-      if (error) return setError(authErrorPt(error));
+      const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password, options: { captchaToken } });
+      setBusy(false); novoToken();
+      if (error) {
+        // conta criada mas e-mail ainda não confirmado: mostra a tela de reenviar o link
+        if ((error.message || '').toLowerCase().includes('email not confirmed')) { setEnviado(email.trim()); return; }
+        return setError(authErrorPt(error));
+      }
     }
+  }
+
+  async function reenviar() {
+    setError(''); setInfo('');
+    if (semToken()) return;
+    setBusy(true);
+    const { error } = await supabase.auth.resend({ type: 'signup', email: enviado, options: { emailRedirectTo: SITE + '/bem-vindo', captchaToken: token || undefined } });
+    setBusy(false); novoToken();
+    if (error) return setError(authErrorPt(error));
+    setInfo('Pronto, mandamos um link novo. Pode levar alguns minutos para chegar.');
+    setEspera(60);
   }
 
   async function forgot() {
     setError(''); setInfo('');
     if (!email.includes('@')) return setError('Digite seu e-mail no campo acima e clique de novo em "Esqueci minha senha".');
-    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), { redirectTo: SITE + '/redefinir-senha' });
+    if (semToken()) return;
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), { redirectTo: SITE + '/redefinir-senha', captchaToken: token || undefined });
+    novoToken();
     if (error) return setError(authErrorPt(error));
     setInfo('Se esse e-mail tiver uma conta, você vai receber um link para criar uma nova senha.');
   }
@@ -100,6 +138,30 @@ export default function Auth({ mode }) {
       </aside>
 
       <main>
+        {enviado ? (
+          <div className="form-box confirma">
+            <div className="confirma-ic" aria-hidden="true">📬</div>
+            <h2 style={{ fontSize: 32, margin: '0 0 8px' }}>Confira seu e-mail</h2>
+            <p className="muted" style={{ fontSize: 16, margin: 0 }}>Mandamos um link de confirmação para</p>
+            <p className="confirma-mail">{enviado}</p>
+            <ol className="confirma-passos">
+              <li>Abra o e-mail do <b>Sacou English</b>.</li>
+              <li>Toque em <b>Confirmar meu e-mail</b>.</li>
+              <li>Pronto: você entra direto no curso.</li>
+            </ol>
+            <p className="hint">Não chegou? Espere um minuto e olhe também a pasta de <b>spam</b> e a aba <b>Promoções</b>.</p>
+            <Turnstile ref={robo} onToken={setToken} />
+            {error && <div className="alert" role="alert">{error}</div>}
+            {info && <div className="note" role="status">{info}</div>}
+            <button type="button" className="btn btn-violet btn-block" disabled={busy || espera > 0} onClick={reenviar}>
+              {busy ? 'Aguarde…' : espera > 0 ? `Reenviar o link (${espera}s)` : 'Reenviar o link'}
+            </button>
+            <p className="confirma-links">
+              <button type="button" className="link-btn" onClick={() => { setEnviado(''); setError(''); setInfo(''); }}>Usar outro e-mail</button>
+              {isSignup && <Link to="/entrar">Já confirmei, entrar</Link>}
+            </p>
+          </div>
+        ) : (
         <div className="form-box">
           {isSignup && (
             <div className="steps" aria-label="Etapa 1 de 2">
@@ -128,6 +190,7 @@ export default function Auth({ mode }) {
             <div className="field"><label htmlFor="senha">Senha</label>
               <input id="senha" type="password" autoComplete={isSignup ? 'new-password' : 'current-password'} value={password} onChange={e => setPassword(e.target.value)} placeholder={isSignup ? 'Mínimo de 8 caracteres' : 'Sua senha'} required />
               {isSignup && <span className="hint">Dica: misture letras e números para deixar mais segura.</span>}</div>
+            <Turnstile ref={robo} onToken={setToken} />
             {error && <div className="alert" role="alert">{error}</div>}
             {info && <div className="note" role="status">{info}</div>}
             <button className="btn btn-violet btn-block" disabled={busy}>{busy ? 'Aguarde…' : isSignup ? 'Criar conta e continuar' : 'Entrar'}</button>
@@ -136,6 +199,7 @@ export default function Auth({ mode }) {
           </form>
           <p style={{ marginTop: 28 }}><button className="link-btn" onClick={() => nav('/')}><Icon name="back" size={16} /> Voltar ao início</button></p>
         </div>
+        )}
       </main>
     </div>
   );

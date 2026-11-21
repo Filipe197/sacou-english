@@ -1048,3 +1048,15 @@ html[data-theme=dark] .btn-google{border-color:#fff}
 .dl-upd .card > span{font-size:26px}
 .dl-upd .card b{font-size:16px}
 .dl-upd .card p{margin:0;font-size:14.5px;color:var(--text2);line-height:1.5}
+
+/* Cadastro: anti-robô e tela "Confira seu e-mail" (Auth.jsx) */
+.turnstile:empty{display:none}
+.turnstile>div:first-child{display:flex;justify-content:center}
+.confirma{text-align:left}
+.confirma-ic{font-size:48px;line-height:1;margin-bottom:12px}
+.confirma-mail{font-weight:700;font-size:18px;margin:2px 0 18px;word-break:break-all;color:var(--violet)}
+.confirma-passos{margin:0 0 14px;padding-left:22px;line-height:1.7}
+.confirma .hint{display:block;margin:0 0 16px}
+.confirma .alert,.confirma .note{margin-bottom:14px}
+.confirma-links{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.confirma-links a{font-weight:600}

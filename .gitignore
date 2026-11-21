@@ -25,3 +25,4 @@ arte-fonte/
 # app Android (Capacitor)
 dist-android/
 apk/
+.env.*.local

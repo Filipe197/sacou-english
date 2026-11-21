@@ -12,6 +12,7 @@ export default {
   logLevel: 'error',
   server: { port: 5310, strictPort: true, fs: { allow: [root] } },
   resolve: { dedupe: ['react', 'react-dom'] },
+  define: { 'import.meta.env.VITE_TURNSTILE_SITE_KEY': JSON.stringify('off') }, // sem anti-robô nos testes
   esbuild: { jsx: 'automatic' },
   plugins: [contentSkeleton(), {
     name: 'e2e-mocks', enforce: 'pre',

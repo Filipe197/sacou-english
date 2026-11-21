@@ -87,8 +87,8 @@ export default function App() {
       <Suspense fallback={<Spinner />}>
       <Routes>
         <Route path="/" element={NATIVE ? <Navigate to="/aprender" replace /> : <Landing />} />
-        <Route path="/entrar" element={<Auth mode="login" />} />
-        <Route path="/criar-conta" element={<Auth mode="signup" />} />
+        <Route path="/entrar" element={<Auth key="login" mode="login" />} />
+        <Route path="/criar-conta" element={<Auth key="signup" mode="signup" />} />
         <Route path="/redefinir-senha" element={<ResetPassword />} />
         <Route path="/creditos" element={<Credits />} />
         <Route path="/sobre" element={<About />} />
