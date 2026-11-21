@@ -54,6 +54,38 @@
   [
    "mistake",
    "erro"
+  ],
+  [
+   "by the time",
+   "quando, até o momento em que"
+  ],
+  [
+   "already",
+   "já"
+  ],
+  [
+   "discover",
+   "descobrir"
+  ],
+  [
+   "blame",
+   "culpar"
+  ],
+  [
+   "apparently",
+   "pelo jeito, aparentemente"
+  ],
+  [
+   "consequence",
+   "consequência"
+  ],
+  [
+   "reveal",
+   "revelar"
+  ],
+  [
+   "realise",
+   "perceber, se dar conta"
   ]
  ],
  "guide": {
@@ -355,6 +387,140 @@
    ]
   },
   {
+   "id": "b2-u1-l8",
+   "title": "Quando cheguei, já tinha…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u1l8-1",
+     "type": "match",
+     "pairs": [
+      [
+       "by the time",
+       "quando (até o momento)"
+      ],
+      [
+       "discover",
+       "descobrir"
+      ],
+      [
+       "blame",
+       "culpar"
+      ],
+      [
+       "reveal",
+       "revelar"
+      ]
+     ],
+     "why": "\"By the time\" puxa o past perfect: by the time I arrived, the film had started."
+    },
+    {
+     "id": "b2u1l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "By the time we got to the cinema, the film ___.",
+     "pt": "Quando chegamos ao cinema, o filme já tinha começado.",
+     "options": [
+      "had started",
+      "started",
+      "has started"
+     ],
+     "answer": "had started",
+     "why": "Uma ação aconteceu antes da outra no passado: had + particípio.",
+     "wrong": {
+      "started": "Com \"by the time\", a ação anterior vai no past perfect.",
+      "has started": "\"Has started\" é present perfect, ligado ao agora."
+     }
+    },
+    {
+     "id": "b2u1l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She realised she ___ her keys at the office.",
+     "pt": "Ela percebeu que tinha deixado as chaves no escritório.",
+     "options": [
+      "had left",
+      "left",
+      "has left"
+     ],
+     "answer": "had left",
+     "why": "Deixar as chaves aconteceu antes de perceber: had left.",
+     "wrong": {
+      "left": "Sem o \"had\", parece que as duas coisas aconteceram juntas.",
+      "has left": "Não combina com \"realised\" (passado)."
+     }
+    },
+    {
+     "id": "b2u1l8-4",
+     "type": "meaning",
+     "en": "Apparently, he had never seen the sea before that trip.",
+     "options": [
+      "Pelo jeito, ele nunca tinha visto o mar antes daquela viagem.",
+      "Ele vê o mar todo ano.",
+      "Ele vai ver o mar pela primeira vez."
+     ],
+     "answer": "Pelo jeito, ele nunca tinha visto o mar antes daquela viagem.",
+     "why": "\"Apparently\" = pelo jeito. \"Had never seen\" = nunca tinha visto."
+    },
+    {
+     "id": "b2u1l8-5",
+     "type": "build",
+     "pt": "Quando a polícia chegou, o ladrão já tinha fugido.",
+     "answer": "By the time the police arrived the thief had already escaped",
+     "extra": [
+      "has",
+      "escape"
+     ],
+     "display": "By the time the police arrived, the thief had already escaped.",
+     "why": "\"Already\" fica entre \"had\" e o particípio."
+    },
+    {
+     "id": "b2u1l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "They blamed me, but I ___ anything wrong.",
+     "pt": "Eles me culparam, mas eu não tinha feito nada de errado.",
+     "options": [
+      "hadn't done",
+      "didn't did",
+      "haven't done"
+     ],
+     "answer": "hadn't done",
+     "why": "Negativa do past perfect: hadn't + particípio.",
+     "wrong": {
+      "didn't did": "Não existe.",
+      "haven't done": "Present perfect não combina com \"blamed\"."
+     }
+    },
+    {
+     "id": "b2u1l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why were you so nervous on the plane?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'd never flown before!",
+      "I've never flown before!",
+      "I never had fly before!"
+     ],
+     "answer": "I'd never flown before!",
+     "pt": "Eu nunca tinha voado antes!",
+     "why": "\"I'd\" = I had. Experiência anterior a um momento do passado.",
+     "wrong": {
+      "I've never flown before!": "Seria \"nunca voei até hoje\", mas você já voou naquele dia.",
+      "I never had fly before!": "Ordem e particípio errados: had never flown."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u1-l4",
    "title": "Escrevendo",
    "items": [
@@ -415,6 +581,74 @@
       "He was tired because he'd worked hard"
      ],
      "why": "O trabalho veio antes do cansaço: had worked."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u1l9-1",
+     "type": "listen",
+     "en": "When I got home, everyone had gone to bed.",
+     "options": [
+      "Quando cheguei em casa, todo mundo já tinha ido dormir.",
+      "Cheguei e fui dormir com todo mundo.",
+      "Todo mundo me esperou acordado."
+     ],
+     "answer": "Quando cheguei em casa, todo mundo já tinha ido dormir.",
+     "why": "\"Had gone\" = já tinham ido."
+    },
+    {
+     "id": "b2u1l9-2",
+     "type": "dictation",
+     "en": "I had already eaten when she called.",
+     "why": "\"Had already eaten\" = já tinha comido."
+    },
+    {
+     "id": "b2u1l9-3",
+     "type": "listen",
+     "en": "They discovered that someone had stolen the painting.",
+     "options": [
+      "Eles descobriram que alguém tinha roubado o quadro.",
+      "Eles roubaram um quadro.",
+      "O quadro foi vendido."
+     ],
+     "answer": "Eles descobriram que alguém tinha roubado o quadro.",
+     "why": "\"Had stolen\" = tinha roubado (antes de descobrirem)."
+    },
+    {
+     "id": "b2u1l9-4",
+     "type": "dictation",
+     "en": "She had never been abroad before.",
+     "why": "\"Abroad\" = no exterior."
+    },
+    {
+     "id": "b2u1l9-5",
+     "type": "listen",
+     "en": "He didn't recognise me because I'd changed a lot.",
+     "options": [
+      "Ele não me reconheceu porque eu tinha mudado muito.",
+      "Ele mudou muito e eu não o reconheci.",
+      "Nós nos reconhecemos na hora."
+     ],
+     "answer": "Ele não me reconheceu porque eu tinha mudado muito.",
+     "why": "\"I'd changed\" = I had changed."
+    },
+    {
+     "id": "b2u1l9-6",
+     "type": "dictation",
+     "en": "The consequences were serious.",
+     "why": "\"Consequences\" = consequências."
+    },
+    {
+     "id": "b2u1l9-7",
+     "type": "speak",
+     "en": "I realised I had made a mistake.",
+     "pt": "Percebi que tinha cometido um erro.",
+     "why": "\"Make a mistake\" = cometer um erro."
     }
    ]
   },
@@ -523,6 +757,102 @@
      "answer": "Strange! I had never worked in such a big office.",
      "pt": "Estranho! Eu nunca tinha trabalhado num escritório tão grande.",
      "why": "Had never worked = nunca tinha trabalhado (antes daquele dia)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l10",
+   "title": "Lendo: o dia em que tudo deu errado",
+   "added": "2026-11",
+   "story": {
+    "title": "O dia em que tudo deu errado",
+    "lines": [
+     {
+      "who": "Carlos",
+      "en": "Last Monday was a disaster. My alarm had not gone off, so I woke up late.",
+      "pt": "Segunda passada foi um desastre. Meu despertador não tinha tocado, então acordei atrasado."
+     },
+     {
+      "who": "Carlos",
+      "en": "By the time I got to the station, the train had already left.",
+      "pt": "Quando cheguei à estação, o trem já tinha saído."
+     },
+     {
+      "ask": "Por que o Carlos acordou tarde?",
+      "options": [
+       "O despertador não tocou",
+       "Ele estava doente",
+       "Ele foi dormir tarde"
+      ],
+      "answer": "O despertador não tocou",
+      "why": "\"My alarm had not gone off.\""
+     },
+     {
+      "who": "Carlos",
+      "en": "When I finally arrived at work, I realised I had ___ my laptop at home.",
+      "pt": "Quando finalmente cheguei ao trabalho, percebi que tinha esquecido meu notebook em casa.",
+      "gap": {
+       "answer": "forgotten",
+       "options": [
+        "forgotten",
+        "forgot",
+        "forget"
+       ]
+      }
+     },
+     {
+      "who": "Carlos",
+      "en": "My boss blamed me for the late report, although I had sent it the night before.",
+      "pt": "Meu chefe me culpou pelo relatório atrasado, embora eu o tivesse mandado na noite anterior."
+     },
+     {
+      "who": "Carlos",
+      "en": "Apparently, the email had gone to his spam folder. What a day!",
+      "pt": "Pelo jeito, o e-mail tinha ido para a pasta de spam dele. Que dia!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u1l10-1",
+     "type": "story",
+     "why": "O Carlos conta uma segunda-feira em que tudo deu errado. Repare no past perfect. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b2u1l10-2",
+     "type": "quiz",
+     "q": "O que ele esqueceu em casa?",
+     "options": [
+      "O notebook",
+      "A carteira",
+      "O celular"
+     ],
+     "answer": "O notebook",
+     "why": "\"I had forgotten my laptop at home.\""
+    },
+    {
+     "id": "b2u1l10-3",
+     "type": "quiz",
+     "q": "Por que o chefe não recebeu o relatório?",
+     "options": [
+      "O e-mail foi para o spam",
+      "O Carlos não mandou",
+      "O chefe apagou"
+     ],
+     "answer": "O e-mail foi para o spam",
+     "why": "\"The email had gone to his spam folder.\""
+    },
+    {
+     "id": "b2u1l10-4",
+     "type": "quiz",
+     "q": "Quando ele tinha mandado o relatório?",
+     "options": [
+      "Na noite anterior",
+      "Na segunda de manhã",
+      "Nunca mandou"
+     ],
+     "answer": "Na noite anterior",
+     "why": "\"I had sent it the night before.\""
     }
    ]
   },
@@ -725,6 +1055,20 @@
      "why": "\"the traffic had improved\"."
     }
    ]
+  }
+ ],
+ "extra_vocab": [
+  {
+   "word": "laptop",
+   "reason": "palavra do dia a dia (notebook); não está na CEFR-J"
+  },
+  {
+   "word": "spam",
+   "reason": "palavra do dia a dia (e-mail indesejado)"
+  },
+  {
+   "word": "folder",
+   "reason": "pasta (de e-mail); aparece uma vez com tradução"
   }
  ]
 }

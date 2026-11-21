@@ -54,6 +54,38 @@
   [
    "set up",
    "abrir, montar (um negócio)"
+  ],
+  [
+   "figure out",
+   "entender, descobrir"
+  ],
+  [
+   "carry on",
+   "continuar"
+  ],
+  [
+   "bring up",
+   "mencionar, tocar no assunto; criar (filhos)"
+  ],
+  [
+   "break down",
+   "quebrar, enguiçar"
+  ],
+  [
+   "show up",
+   "aparecer"
+  ],
+  [
+   "take off",
+   "decolar; tirar (roupa)"
+  ],
+  [
+   "work out",
+   "malhar; dar certo"
+  ],
+  [
+   "call off",
+   "cancelar"
   ]
  ],
  "guide": {
@@ -358,6 +390,140 @@
    ]
   },
   {
+   "id": "b2-u7-l8",
+   "title": "Mais phrasal verbs",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u7l8-1",
+     "type": "match",
+     "pairs": [
+      [
+       "call off",
+       "cancelar"
+      ],
+      [
+       "show up",
+       "aparecer"
+      ],
+      [
+       "break down",
+       "enguiçar"
+      ],
+      [
+       "carry on",
+       "continuar"
+      ]
+     ],
+     "why": "Phrasal verb = verbo + partícula, com um sentido novo."
+    },
+    {
+     "id": "b2u7l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Our car broke ___ on the way to the beach.",
+     "pt": "Nosso carro enguiçou a caminho da praia.",
+     "options": [
+      "down",
+      "up",
+      "off"
+     ],
+     "answer": "down",
+     "why": "\"Break down\" = enguiçar, quebrar (máquina, carro).",
+     "wrong": {
+      "up": "\"Break up\" = terminar um namoro.",
+      "off": "\"Break off\" = romper, separar um pedaço."
+     }
+    },
+    {
+     "id": "b2u7l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The match was called ___ because of the rain.",
+     "pt": "O jogo foi cancelado por causa da chuva.",
+     "options": [
+      "off",
+      "up",
+      "out"
+     ],
+     "answer": "off",
+     "why": "\"Call off\" = cancelar.",
+     "wrong": {
+      "up": "\"Call up\" = ligar para alguém.",
+      "out": "\"Call out\" = gritar, chamar em voz alta."
+     }
+    },
+    {
+     "id": "b2u7l8-4",
+     "type": "meaning",
+     "en": "I can't figure out how this machine works.",
+     "options": [
+      "Não consigo entender como esta máquina funciona.",
+      "Esta máquina está quebrada.",
+      "Eu sei consertar máquinas."
+     ],
+     "answer": "Não consigo entender como esta máquina funciona.",
+     "why": "\"Figure out\" = entender, descobrir."
+    },
+    {
+     "id": "b2u7l8-5",
+     "type": "build",
+     "pt": "Ele não apareceu na festa.",
+     "answer": "He didn't show up at the party",
+     "extra": [
+      "showed",
+      "in"
+     ],
+     "display": "He didn't show up at the party.",
+     "why": "\"Show up\" = aparecer. Com \"didn't\", verbo normal."
+    },
+    {
+     "id": "b2u7l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Don't stop! Carry ___ with your story.",
+     "pt": "Não pare! Continue a sua história.",
+     "options": [
+      "on",
+      "off",
+      "out"
+     ],
+     "answer": "on",
+     "why": "\"Carry on\" = continuar.",
+     "wrong": {
+      "off": "\"Carry off\" é outra coisa (levar embora).",
+      "out": "\"Carry out\" = realizar, executar."
+     }
+    },
+    {
+     "id": "b2u7l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Why do you look so tired?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I worked out at the gym for two hours.",
+      "I worked up at the gym for two hours.",
+      "I out worked at the gym."
+     ],
+     "answer": "I worked out at the gym for two hours.",
+     "pt": "Malhei na academia por duas horas.",
+     "why": "\"Work out\" = malhar, fazer exercício.",
+     "wrong": {
+      "I worked up at the gym for two hours.": "\"Work up\" não tem esse sentido.",
+      "I out worked at the gym.": "A partícula vem depois do verbo."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u7-l4",
    "title": "Escrevendo",
    "items": [
@@ -412,6 +578,74 @@
       "I look forward to seeing you"
      ],
      "why": "Look forward to + -ing."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u7l9-1",
+     "type": "listen",
+     "en": "The plane took off an hour late.",
+     "options": [
+      "O avião decolou com uma hora de atraso.",
+      "O avião pousou cedo.",
+      "O voo foi cancelado."
+     ],
+     "answer": "O avião decolou com uma hora de atraso.",
+     "why": "\"Take off\" = decolar."
+    },
+    {
+     "id": "b2u7l9-2",
+     "type": "dictation",
+     "en": "Please carry on with your work.",
+     "why": "\"Carry on\" = continuar."
+    },
+    {
+     "id": "b2u7l9-3",
+     "type": "listen",
+     "en": "She was brought up by her grandparents.",
+     "options": [
+      "Ela foi criada pelos avós.",
+      "Ela cuidou dos avós.",
+      "Ela visitou os avós."
+     ],
+     "answer": "Ela foi criada pelos avós.",
+     "why": "\"Bring up\" = criar (filhos)."
+    },
+    {
+     "id": "b2u7l9-4",
+     "type": "dictation",
+     "en": "Don't bring up that subject again.",
+     "why": "\"Bring up\" = tocar no assunto."
+    },
+    {
+     "id": "b2u7l9-5",
+     "type": "listen",
+     "en": "Don't worry. Everything will work out.",
+     "options": [
+      "Não se preocupe. Tudo vai dar certo.",
+      "Não se preocupe com o trabalho.",
+      "Vamos malhar juntos."
+     ],
+     "answer": "Não se preocupe. Tudo vai dar certo.",
+     "why": "\"Work out\" também = dar certo."
+    },
+    {
+     "id": "b2u7l9-6",
+     "type": "dictation",
+     "en": "Only three people showed up.",
+     "why": "\"Show up\" = aparecer."
+    },
+    {
+     "id": "b2u7l9-7",
+     "type": "speak",
+     "en": "I finally figured it out!",
+     "pt": "Finalmente entendi!",
+     "why": "\"Figure it out\" = entender, resolver."
     }
    ]
   },
@@ -520,6 +754,102 @@
      "answer": "Very well. She's really nice.",
      "pt": "Muito bem. Ela é muito legal.",
      "why": "Get on with someone = se dar bem com alguém. Get on the bus = subir no ônibus."
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l10",
+   "title": "Lendo: o casamento quase cancelado",
+   "added": "2026-11",
+   "story": {
+    "title": "O casamento quase cancelado",
+    "lines": [
+     {
+      "who": "Julia",
+      "en": "Two days before our wedding, the band called and said they had to call it off.",
+      "pt": "Dois dias antes do nosso casamento, a banda ligou e disse que tinha que cancelar."
+     },
+     {
+      "who": "Julia",
+      "en": "Then my brother's car broke down, and he couldn't pick up the cake.",
+      "pt": "Depois o carro do meu irmão enguiçou, e ele não conseguiu buscar o bolo."
+     },
+     {
+      "ask": "O que a banda fez?",
+      "options": [
+       "Cancelou",
+       "Chegou atrasada",
+       "Pediu mais dinheiro"
+      ],
+      "answer": "Cancelou",
+      "why": "\"They had to call it off.\""
+     },
+     {
+      "who": "Julia",
+      "en": "I wanted to give up, but my mother said: \"Carry ___. We will figure it out.\"",
+      "pt": "Eu quis desistir, mas minha mãe disse: \"Continue. A gente vai resolver.\"",
+      "gap": {
+       "answer": "on",
+       "options": [
+        "on",
+        "off",
+        "down"
+       ]
+      }
+     },
+     {
+      "who": "Julia",
+      "en": "My cousin offered to play the guitar, and a neighbour brought the cake in his truck.",
+      "pt": "Meu primo se ofereceu para tocar violão, e um vizinho trouxe o bolo na caminhonete."
+     },
+     {
+      "who": "Julia",
+      "en": "In the end, everyone showed up, and it all worked out perfectly!",
+      "pt": "No fim, todo mundo apareceu, e deu tudo perfeitamente certo!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u7l10-1",
+     "type": "story",
+     "why": "A Julia conta como o casamento quase deu errado. Repare nos phrasal verbs."
+    },
+    {
+     "id": "b2u7l10-2",
+     "type": "quiz",
+     "q": "Por que o irmão não buscou o bolo?",
+     "options": [
+      "O carro enguiçou",
+      "Ele esqueceu",
+      "Estava chovendo"
+     ],
+     "answer": "O carro enguiçou",
+     "why": "\"My brother's car broke down.\""
+    },
+    {
+     "id": "b2u7l10-3",
+     "type": "quiz",
+     "q": "Quem tocou na festa?",
+     "options": [
+      "O primo, no violão",
+      "A banda",
+      "Ninguém"
+     ],
+     "answer": "O primo, no violão",
+     "why": "\"My cousin offered to play the guitar.\""
+    },
+    {
+     "id": "b2u7l10-4",
+     "type": "quiz",
+     "q": "Como terminou?",
+     "options": [
+      "Deu tudo certo",
+      "O casamento foi cancelado",
+      "Ninguém apareceu"
+     ],
+     "answer": "Deu tudo certo",
+     "why": "\"It all worked out perfectly!\""
     }
    ]
   },
@@ -731,5 +1061,6 @@
     }
    ]
   }
- ]
+ ],
+ "extra_vocab": []
 }

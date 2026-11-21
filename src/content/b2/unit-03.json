@@ -54,6 +54,38 @@
   [
    "report",
    "relatório"
+  ],
+  [
+   "claim",
+   "afirmar, alegar"
+  ],
+  [
+   "deny",
+   "negar"
+  ],
+  [
+   "announce",
+   "anunciar"
+  ],
+  [
+   "insist",
+   "insistir"
+  ],
+  [
+   "warn",
+   "avisar, alertar"
+  ],
+  [
+   "refuse",
+   "se recusar"
+  ],
+  [
+   "according to",
+   "segundo, de acordo com"
+  ],
+  [
+   "rumour",
+   "boato"
   ]
  ],
  "guide": {
@@ -358,6 +390,140 @@
    ]
   },
   {
+   "id": "b2-u3-l8",
+   "title": "Verbos para contar",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u3l8-1",
+     "type": "match",
+     "pairs": [
+      [
+       "claim",
+       "afirmar"
+      ],
+      [
+       "deny",
+       "negar"
+      ],
+      [
+       "announce",
+       "anunciar"
+      ],
+      [
+       "insist",
+       "insistir"
+      ]
+     ],
+     "why": "Em vez de repetir \"said\", use verbos mais precisos: claimed, denied, announced."
+    },
+    {
+     "id": "b2u3l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "He denied ___ the money.",
+     "pt": "Ele negou ter pegado o dinheiro.",
+     "options": [
+      "taking",
+      "to take",
+      "take"
+     ],
+     "answer": "taking",
+     "why": "\"Deny\" + verbo com -ing: denied taking.",
+     "wrong": {
+      "to take": "\"Deny\" não aceita \"to\".",
+      "take": "Precisa do -ing."
+     }
+    },
+    {
+     "id": "b2u3l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She refused ___ the contract.",
+     "pt": "Ela se recusou a assinar o contrato.",
+     "options": [
+      "to sign",
+      "signing",
+      "sign"
+     ],
+     "answer": "to sign",
+     "why": "\"Refuse\" + to + verbo.",
+     "wrong": {
+      "signing": "\"Refuse\" pede \"to\".",
+      "sign": "Falta o \"to\"."
+     }
+    },
+    {
+     "id": "b2u3l8-4",
+     "type": "meaning",
+     "en": "According to the news, the president will announce new rules tomorrow.",
+     "options": [
+      "Segundo o jornal, o presidente vai anunciar novas regras amanhã.",
+      "O presidente anunciou novas regras ontem.",
+      "O jornal criticou as regras."
+     ],
+     "answer": "Segundo o jornal, o presidente vai anunciar novas regras amanhã.",
+     "why": "\"According to\" = segundo."
+    },
+    {
+     "id": "b2u3l8-5",
+     "type": "build",
+     "pt": "Ele me avisou para não chegar atrasado.",
+     "answer": "He warned me not to be late",
+     "extra": [
+      "to not",
+      "said"
+     ],
+     "display": "He warned me not to be late.",
+     "why": "\"Warn someone not to\" = avisar alguém para não."
+    },
+    {
+     "id": "b2u3l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The company claimed that the product ___ safe.",
+     "pt": "A empresa afirmou que o produto era seguro.",
+     "options": [
+      "was",
+      "is being",
+      "were"
+     ],
+     "answer": "was",
+     "why": "No discurso indireto, o tempo \"volta\" um passo: is → was.",
+     "wrong": {
+      "is being": "Não combina com \"claimed\".",
+      "were": "Com \"the product\" (singular): was."
+     }
+    },
+    {
+     "id": "b2u3l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did Tom say he was leaving the company?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, he denied it. But there's a rumour.",
+      "No, he denied to leave.",
+      "No, he said me no."
+     ],
+     "answer": "No, he denied it. But there's a rumour.",
+     "pt": "Não, ele negou. Mas tem um boato.",
+     "why": "\"Deny it\" = negar. \"Rumour\" = boato.",
+     "wrong": {
+      "No, he denied to leave.": "\"Deny\" + -ing, não \"to\".",
+      "No, he said me no.": "\"Say\" não leva a pessoa direto: \"he told me no\"."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u3-l4",
    "title": "Escrevendo",
    "items": [
@@ -416,6 +582,74 @@
      "pt": "Ele me pediu para esperar.",
      "answer": "He asked me to wait",
      "why": "Asked + pessoa + to + verbo."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u3l9-1",
+     "type": "listen",
+     "en": "She told me she had found a new job.",
+     "options": [
+      "Ela me contou que tinha arrumado um emprego novo.",
+      "Ela vai procurar um emprego novo.",
+      "Ela perdeu o emprego."
+     ],
+     "answer": "Ela me contou que tinha arrumado um emprego novo.",
+     "why": "\"Told me\" + \"had found\"."
+    },
+    {
+     "id": "b2u3l9-2",
+     "type": "dictation",
+     "en": "He insisted on paying the bill.",
+     "why": "\"Insist on\" + -ing."
+    },
+    {
+     "id": "b2u3l9-3",
+     "type": "listen",
+     "en": "They asked us whether we wanted to stay.",
+     "options": [
+      "Eles nos perguntaram se a gente queria ficar.",
+      "Eles queriam ficar.",
+      "A gente perguntou se eles iam ficar."
+     ],
+     "answer": "Eles nos perguntaram se a gente queria ficar.",
+     "why": "Pergunta indireta: asked whether."
+    },
+    {
+     "id": "b2u3l9-4",
+     "type": "dictation",
+     "en": "According to my teacher, it is correct.",
+     "why": "\"According to\" = segundo."
+    },
+    {
+     "id": "b2u3l9-5",
+     "type": "listen",
+     "en": "The manager announced that the shop would close.",
+     "options": [
+      "O gerente anunciou que a loja ia fechar.",
+      "A loja abriu hoje.",
+      "O gerente vai abrir uma loja."
+     ],
+     "answer": "O gerente anunciou que a loja ia fechar.",
+     "why": "will → would no discurso indireto."
+    },
+    {
+     "id": "b2u3l9-6",
+     "type": "dictation",
+     "en": "She refused to answer.",
+     "why": "\"Refuse to\" = se recusar a."
+    },
+    {
+     "id": "b2u3l9-7",
+     "type": "speak",
+     "en": "He said he would call me later.",
+     "pt": "Ele disse que me ligaria mais tarde.",
+     "why": "\"Would\" no discurso indireto."
     }
    ]
   },
@@ -524,6 +758,102 @@
      "answer": "Yes, I told her you would call tonight.",
      "pt": "Sim, eu disse a ela que você ia ligar hoje à noite.",
      "why": "Told her + would call."
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l10",
+   "title": "Lendo: o boato do escritório",
+   "added": "2026-11",
+   "story": {
+    "title": "O boato do escritório",
+    "lines": [
+     {
+      "who": "Nina",
+      "en": "There was a rumour in the office that our boss was leaving.",
+      "pt": "Tinha um boato no escritório de que o nosso chefe ia sair."
+     },
+     {
+      "who": "Nina",
+      "en": "Ben claimed he had heard the boss on the phone with another company.",
+      "pt": "O Ben afirmou que tinha ouvido o chefe ao telefone com outra empresa."
+     },
+     {
+      "ask": "O que o Ben disse ter ouvido?",
+      "options": [
+       "O chefe falando com outra empresa",
+       "O chefe pedindo demissão",
+       "Uma reunião secreta"
+      ],
+      "answer": "O chefe falando com outra empresa",
+      "why": "\"He had heard the boss on the phone with another company.\""
+     },
+     {
+      "who": "Nina",
+      "en": "When I asked the boss, he ___ it. He said he was just talking to a friend.",
+      "pt": "Quando perguntei ao chefe, ele negou. Disse que só estava falando com um amigo.",
+      "gap": {
+       "answer": "denied",
+       "options": [
+        "denied",
+        "announced",
+        "insisted"
+       ]
+      }
+     },
+     {
+      "who": "Nina",
+      "en": "But on Friday, he announced that he would move to Lisbon next month!",
+      "pt": "Mas na sexta, ele anunciou que ia se mudar para Lisboa no mês seguinte!"
+     },
+     {
+      "who": "Nina",
+      "en": "So, according to Ben, rumours are always true. I am not so sure!",
+      "pt": "Então, segundo o Ben, boatos são sempre verdade. Eu não tenho tanta certeza!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u3l10-1",
+     "type": "story",
+     "why": "A Nina conta como um boato se espalhou no trabalho. Repare nos verbos de discurso indireto. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b2u3l10-2",
+     "type": "quiz",
+     "q": "Para onde o chefe vai se mudar?",
+     "options": [
+      "Lisboa",
+      "Londres",
+      "Salvador"
+     ],
+     "answer": "Lisboa",
+     "why": "\"He would move to Lisbon next month.\""
+    },
+    {
+     "id": "b2u3l10-3",
+     "type": "quiz",
+     "q": "O boato era verdade?",
+     "options": [
+      "Sim, no fim era",
+      "Não",
+      "Ninguém soube"
+     ],
+     "answer": "Sim, no fim era",
+     "why": "O chefe anunciou que ia se mudar."
+    },
+    {
+     "id": "b2u3l10-4",
+     "type": "quiz",
+     "q": "O que o chefe disse no começo?",
+     "options": [
+      "Que estava falando com um amigo",
+      "Que ia sair",
+      "Que não usava telefone"
+     ],
+     "answer": "Que estava falando com um amigo",
+     "why": "\"He said he was just talking to a friend.\""
     }
    ]
   },
@@ -726,6 +1056,12 @@
      "why": "\"He said it started at eight\"."
     }
    ]
+  }
+ ],
+ "extra_vocab": [
+  {
+   "word": "according",
+   "reason": "\"according to\" (segundo, de acordo com) é essencial para relatar o que outros disseram"
   }
  ]
 }

@@ -54,6 +54,38 @@
   [
    "form",
    "formulário"
+  ],
+  [
+   "get something done",
+   "mandar fazer algo"
+  ],
+  [
+   "being",
+   "sendo (passiva contínua)"
+  ],
+  [
+   "will be",
+   "vai ser, será"
+  ],
+  [
+   "renovate",
+   "reformar"
+  ],
+  [
+   "check",
+   "verificar, revisar"
+  ],
+  [
+   "cut",
+   "cortar"
+  ],
+  [
+   "tooth",
+   "dente"
+  ],
+  [
+   "haircut",
+   "corte de cabelo"
   ]
  ],
  "guide": {
@@ -352,6 +384,140 @@
    ]
   },
   {
+   "id": "b2-u5-l8",
+   "title": "Está sendo feito",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u5l8-1",
+     "type": "match",
+     "pairs": [
+      [
+       "is being built",
+       "está sendo construído"
+      ],
+      [
+       "will be sent",
+       "vai ser enviado"
+      ],
+      [
+       "has been sold",
+       "foi vendido"
+      ],
+      [
+       "was being repaired",
+       "estava sendo consertado"
+      ]
+     ],
+     "why": "Passiva = be (no tempo certo) + particípio."
+    },
+    {
+     "id": "b2u5l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "A new bridge is ___ built over the river.",
+     "pt": "Uma ponte nova está sendo construída sobre o rio.",
+     "options": [
+      "being",
+      "been",
+      "be"
+     ],
+     "answer": "being",
+     "why": "Passiva no presente contínuo: is being + particípio.",
+     "wrong": {
+      "been": "\"Is been\" não existe.",
+      "be": "\"Is be\" não existe."
+     }
+    },
+    {
+     "id": "b2u5l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Your order will ___ delivered tomorrow.",
+     "pt": "Seu pedido vai ser entregue amanhã.",
+     "options": [
+      "be",
+      "being",
+      "been"
+     ],
+     "answer": "be",
+     "why": "Passiva no futuro: will be + particípio.",
+     "wrong": {
+      "being": "\"Will being\" não existe.",
+      "been": "\"Will been\" não existe."
+     }
+    },
+    {
+     "id": "b2u5l8-4",
+     "type": "meaning",
+     "en": "I had my car checked before the trip.",
+     "options": [
+      "Mandei revisar meu carro antes da viagem.",
+      "Eu mesmo revisei o carro.",
+      "Meu carro quebrou na viagem."
+     ],
+     "answer": "Mandei revisar meu carro antes da viagem.",
+     "why": "\"Have something done\" = mandar alguém fazer."
+    },
+    {
+     "id": "b2u5l8-5",
+     "type": "build",
+     "pt": "Vou cortar o cabelo amanhã (no cabeleireiro).",
+     "answer": "I'm going to get my hair cut tomorrow",
+     "extra": [
+      "cutting",
+      "myself"
+     ],
+     "display": "I'm going to get my hair cut tomorrow.",
+     "why": "\"Get my hair cut\" = cortar o cabelo (alguém corta para você)."
+    },
+    {
+     "id": "b2u5l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The house has ___ renovated recently.",
+     "pt": "A casa foi reformada recentemente.",
+     "options": [
+      "been",
+      "being",
+      "be"
+     ],
+     "answer": "been",
+     "why": "Passiva no present perfect: has been + particípio.",
+     "wrong": {
+      "being": "\"Has being\" não existe.",
+      "be": "\"Has be\" não existe."
+     }
+    },
+    {
+     "id": "b2u5l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you fix the roof yourself?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No, I had it repaired by a professional.",
+      "No, I repaired by a professional.",
+      "No, I had repair it."
+     ],
+     "answer": "No, I had it repaired by a professional.",
+     "pt": "Não, mandei um profissional consertar.",
+     "why": "Have + coisa + particípio (+ by quem fez).",
+     "wrong": {
+      "No, I repaired by a professional.": "Isso diria que você mesmo consertou.",
+      "No, I had repair it.": "Ordem: had IT repaired."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u5-l4",
    "title": "Escrevendo",
    "items": [
@@ -414,6 +580,74 @@
       "All tickets have been sold"
      ],
      "why": "Have been + particípio."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u5l9-1",
+     "type": "listen",
+     "en": "The road is being repaired, so take another way.",
+     "options": [
+      "A rua está sendo consertada, então pegue outro caminho.",
+      "A rua foi consertada ontem.",
+      "A rua está fechada para sempre."
+     ],
+     "answer": "A rua está sendo consertada, então pegue outro caminho.",
+     "why": "\"Is being repaired\" = está sendo consertada."
+    },
+    {
+     "id": "b2u5l9-2",
+     "type": "dictation",
+     "en": "I need to get my phone fixed.",
+     "why": "\"Get something fixed\" = mandar consertar."
+    },
+    {
+     "id": "b2u5l9-3",
+     "type": "listen",
+     "en": "The results will be announced on Friday.",
+     "options": [
+      "Os resultados vão ser anunciados na sexta.",
+      "Os resultados saíram na sexta.",
+      "Ninguém sabe dos resultados."
+     ],
+     "answer": "Os resultados vão ser anunciados na sexta.",
+     "why": "\"Will be announced\" = vão ser anunciados."
+    },
+    {
+     "id": "b2u5l9-4",
+     "type": "dictation",
+     "en": "She had her tooth checked.",
+     "why": "\"Have something checked\" = mandar verificar."
+    },
+    {
+     "id": "b2u5l9-5",
+     "type": "listen",
+     "en": "My wallet was stolen while I was sleeping.",
+     "options": [
+      "Minha carteira foi roubada enquanto eu dormia.",
+      "Eu perdi a carteira dormindo.",
+      "Roubaram meu celular."
+     ],
+     "answer": "Minha carteira foi roubada enquanto eu dormia.",
+     "why": "\"Was stolen\" = foi roubada."
+    },
+    {
+     "id": "b2u5l9-6",
+     "type": "dictation",
+     "en": "The package has been delivered.",
+     "why": "\"Has been delivered\" = foi entregue."
+    },
+    {
+     "id": "b2u5l9-7",
+     "type": "speak",
+     "en": "I need a haircut.",
+     "pt": "Preciso cortar o cabelo.",
+     "why": "\"Haircut\" = corte de cabelo."
     }
    ]
   },
@@ -522,6 +756,102 @@
      "answer": "Almost. It will be finished by Friday.",
      "pt": "Quase. Vai ficar pronto até sexta.",
      "why": "Will be + particípio (finished)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l10",
+   "title": "Lendo: a reforma da casa",
+   "added": "2026-11",
+   "story": {
+    "title": "A reforma da casa",
+    "lines": [
+     {
+      "who": "Marcos",
+      "en": "We bought an old house last year, and it's being renovated now.",
+      "pt": "Compramos uma casa velha no ano passado, e ela está sendo reformada agora."
+     },
+     {
+      "who": "Marcos",
+      "en": "The kitchen has already been finished, and the walls have been painted.",
+      "pt": "A cozinha já foi terminada, e as paredes foram pintadas."
+     },
+     {
+      "ask": "O que já está pronto?",
+      "options": [
+       "A cozinha e as paredes",
+       "O telhado",
+       "O jardim"
+      ],
+      "answer": "A cozinha e as paredes",
+      "why": "\"The kitchen has already been finished, and the walls have been painted.\""
+     },
+     {
+      "who": "Marcos",
+      "en": "We're having the roof ___ next week. It was damaged in the storm.",
+      "pt": "Vamos mandar consertar o telhado semana que vem. Ele foi danificado na tempestade.",
+      "gap": {
+       "answer": "repaired",
+       "options": [
+        "repaired",
+        "repair",
+        "repairing"
+       ]
+      }
+     },
+     {
+      "who": "Marcos",
+      "en": "We did some work ourselves, but the electricity was installed by a professional.",
+      "pt": "Fizemos parte do trabalho nós mesmos, mas a parte elétrica foi instalada por um profissional."
+     },
+     {
+      "who": "Marcos",
+      "en": "If everything goes well, the house will be finished before Christmas!",
+      "pt": "Se tudo der certo, a casa vai estar pronta antes do Natal!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u5l10-1",
+     "type": "story",
+     "why": "O Marcos conta como está a reforma da casa. Repare na voz passiva em vários tempos."
+    },
+    {
+     "id": "b2u5l10-2",
+     "type": "quiz",
+     "q": "Por que o telhado precisa de conserto?",
+     "options": [
+      "Foi danificado na tempestade",
+      "É muito velho",
+      "Está pequeno"
+     ],
+     "answer": "Foi danificado na tempestade",
+     "why": "\"It was damaged in the storm.\""
+    },
+    {
+     "id": "b2u5l10-3",
+     "type": "quiz",
+     "q": "Quem instalou a parte elétrica?",
+     "options": [
+      "Um profissional",
+      "O Marcos",
+      "O vizinho"
+     ],
+     "answer": "Um profissional",
+     "why": "\"Was installed by a professional.\""
+    },
+    {
+     "id": "b2u5l10-4",
+     "type": "quiz",
+     "q": "Quando a casa deve ficar pronta?",
+     "options": [
+      "Antes do Natal",
+      "Semana que vem",
+      "No ano que vem"
+     ],
+     "answer": "Antes do Natal",
+     "why": "\"Will be finished before Christmas.\""
     }
    ]
   },
@@ -729,6 +1059,20 @@
      "why": "\"All my meals are delivered by the restaurant downstairs\"."
     }
    ]
+  }
+ ],
+ "extra_vocab": [
+  {
+   "word": "electricity",
+   "reason": "parte elétrica da casa; aparece uma vez com tradução"
+  },
+  {
+   "word": "renovate",
+   "reason": "reformar (casa): palavra central da leitura, sempre com tradução"
+  },
+  {
+   "word": "christmas",
+   "reason": "nome de data (Natal)"
   }
  ]
 }

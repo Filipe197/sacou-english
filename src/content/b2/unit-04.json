@@ -54,6 +54,38 @@
   [
    "vet",
    "veterinário"
+  ],
+  [
+   "must have",
+   "deve ter (dedução sobre o passado)"
+  ],
+  [
+   "can't have",
+   "não pode ter"
+  ],
+  [
+   "might have",
+   "pode ter, talvez tenha"
+  ],
+  [
+   "assume",
+   "supor, presumir"
+  ],
+  [
+   "conclude",
+   "concluir"
+  ],
+  [
+   "guilty",
+   "culpado(a)"
+  ],
+  [
+   "innocent",
+   "inocente"
+  ],
+  [
+   "responsible",
+   "responsável"
   ]
  ],
  "guide": {
@@ -355,6 +387,140 @@
    ]
   },
   {
+   "id": "b2-u4-l8",
+   "title": "Deve ter sido…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u4l8-1",
+     "type": "match",
+     "pairs": [
+      [
+       "must have",
+       "deve ter"
+      ],
+      [
+       "can't have",
+       "não pode ter"
+      ],
+      [
+       "might have",
+       "pode ter"
+      ],
+      [
+       "guilty",
+       "culpado"
+      ]
+     ],
+     "why": "Sobre o passado: modal + have + particípio."
+    },
+    {
+     "id": "b2u4l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ground is wet. It must have ___ last night.",
+     "pt": "O chão está molhado. Deve ter chovido ontem à noite.",
+     "options": [
+      "rained",
+      "rain",
+      "raining"
+     ],
+     "answer": "rained",
+     "why": "Dedução sobre o passado: must have + particípio.",
+     "wrong": {
+      "rain": "Precisa do particípio.",
+      "raining": "Sem -ing aqui."
+     }
+    },
+    {
+     "id": "b2u4l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She ___ have seen us. She didn't say hello.",
+     "pt": "Ela não pode ter visto a gente. Não deu oi.",
+     "options": [
+      "can't",
+      "mustn't",
+      "should"
+     ],
+     "answer": "can't",
+     "why": "Certeza de que não aconteceu: can't have.",
+     "wrong": {
+      "mustn't": "\"Mustn't have\" não se usa para dedução.",
+      "should": "\"Should have seen\" seria \"deveria ter visto\"."
+     }
+    },
+    {
+     "id": "b2u4l8-4",
+     "type": "meaning",
+     "en": "He might have missed the bus. Let's wait a bit.",
+     "options": [
+      "Ele pode ter perdido o ônibus. Vamos esperar um pouco.",
+      "Ele perdeu o ônibus com certeza.",
+      "Ele não vem mais."
+     ],
+     "answer": "Ele pode ter perdido o ônibus. Vamos esperar um pouco.",
+     "why": "\"Might have\" = talvez tenha."
+    },
+    {
+     "id": "b2u4l8-5",
+     "type": "build",
+     "pt": "Alguém deve ter deixado a porta aberta.",
+     "answer": "Someone must have left the door open",
+     "extra": [
+      "mustn't",
+      "leave"
+     ],
+     "display": "Someone must have left the door open.",
+     "why": "Must have + particípio (leave → left)."
+    },
+    {
+     "id": "b2u4l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We assumed he was guilty, but he was ___.",
+     "pt": "Achamos que ele era culpado, mas era inocente.",
+     "options": [
+      "innocent",
+      "responsible",
+      "certain"
+     ],
+     "answer": "innocent",
+     "why": "\"Innocent\" = inocente, o contrário de \"guilty\".",
+     "wrong": {
+      "responsible": "\"Responsible\" = responsável.",
+      "certain": "\"Certain\" = certo."
+     }
+    },
+    {
+     "id": "b2u4l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Mike hasn't arrived. The meeting started an hour ago."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "He must have forgotten about it.",
+      "He must forgotten about it.",
+      "He must have forget about it."
+     ],
+     "answer": "He must have forgotten about it.",
+     "pt": "Ele deve ter esquecido.",
+     "why": "Must have + particípio.",
+     "wrong": {
+      "He must forgotten about it.": "Falta o \"have\".",
+      "He must have forget about it.": "Precisa do particípio: forgotten."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u4-l4",
    "title": "Escrevendo",
    "items": [
@@ -412,6 +578,74 @@
       "He couldn't have seen us"
      ],
      "why": "Can't have + particípio."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u4l9-1",
+     "type": "listen",
+     "en": "You must have been very tired after the trip.",
+     "options": [
+      "Você deve ter ficado muito cansado depois da viagem.",
+      "Você está cansado agora.",
+      "Você não viajou."
+     ],
+     "answer": "Você deve ter ficado muito cansado depois da viagem.",
+     "why": "\"Must have been\" = deve ter ficado."
+    },
+    {
+     "id": "b2u4l9-2",
+     "type": "dictation",
+     "en": "He can't have done it alone.",
+     "why": "\"Can't have done\" = não pode ter feito."
+    },
+    {
+     "id": "b2u4l9-3",
+     "type": "listen",
+     "en": "Who is responsible for this mess?",
+     "options": [
+      "Quem é o responsável por esta bagunça?",
+      "Quem limpou a casa?",
+      "Onde está a bagunça?"
+     ],
+     "answer": "Quem é o responsável por esta bagunça?",
+     "why": "\"Mess\" = bagunça."
+    },
+    {
+     "id": "b2u4l9-4",
+     "type": "dictation",
+     "en": "She might have taken the wrong train.",
+     "why": "\"Might have taken\" = pode ter pegado."
+    },
+    {
+     "id": "b2u4l9-5",
+     "type": "listen",
+     "en": "The police concluded that the driver was guilty.",
+     "options": [
+      "A polícia concluiu que o motorista era culpado.",
+      "O motorista era inocente.",
+      "A polícia não sabia de nada."
+     ],
+     "answer": "A polícia concluiu que o motorista era culpado.",
+     "why": "\"Conclude\" = concluir."
+    },
+    {
+     "id": "b2u4l9-6",
+     "type": "dictation",
+     "en": "Someone must have called the police.",
+     "why": "\"Someone\" = alguém."
+    },
+    {
+     "id": "b2u4l9-7",
+     "type": "speak",
+     "en": "It must have been a mistake.",
+     "pt": "Deve ter sido um engano.",
+     "why": "\"Must have been\" soa como \"MÂST-av-bin\"."
     }
    ]
   },
@@ -520,6 +754,102 @@
      "answer": "Well, you should have studied!",
      "pt": "Bom, você devia ter estudado!",
      "why": "Crítica sobre o passado: should have studied."
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l10",
+   "title": "Lendo: quem comeu o queijo?",
+   "added": "2026-11",
+   "story": {
+    "title": "Quem comeu o queijo?",
+    "lines": [
+     {
+      "who": "Paula",
+      "en": "This morning, the cheese in the fridge had disappeared. Who could it have been?",
+      "pt": "Hoje de manhã, o queijo da geladeira tinha sumido. Quem poderia ter sido?"
+     },
+     {
+      "who": "Paula",
+      "en": "It can't have been my husband. He has been on a diet for weeks.",
+      "pt": "Não pode ter sido meu marido. Ele está de dieta há semanas."
+     },
+     {
+      "ask": "Por que não pode ter sido o marido?",
+      "options": [
+       "Ele está de dieta",
+       "Ele estava viajando",
+       "Ele não gosta de queijo"
+      ],
+      "answer": "Ele está de dieta",
+      "why": "\"He has been on a diet for weeks.\""
+     },
+     {
+      "who": "Paula",
+      "en": "My son might have eaten it, but he was sleeping at his friend's ___.",
+      "pt": "Meu filho pode ter comido, mas estava dormindo na casa do amigo.",
+      "gap": {
+       "answer": "house",
+       "options": [
+        "house",
+        "guilty",
+        "conclude"
+       ]
+      }
+     },
+     {
+      "who": "Paula",
+      "en": "Then I noticed that the window was open and there was a small footprint on the floor.",
+      "pt": "Então reparei que a janela estava aberta e tinha uma pegadinha no chão."
+     },
+     {
+      "who": "Paula",
+      "en": "I concluded that the neighbour's cat must have come in. Guilty!",
+      "pt": "Concluí que o gato do vizinho deve ter entrado. Culpado!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u4l10-1",
+     "type": "story",
+     "why": "A Paula investiga o sumiço do queijo. Repare nas deduções sobre o passado. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b2u4l10-2",
+     "type": "quiz",
+     "q": "Onde estava o filho?",
+     "options": [
+      "Na casa do amigo",
+      "No quarto",
+      "Na escola"
+     ],
+     "answer": "Na casa do amigo",
+     "why": "\"He was sleeping at his friend's house.\""
+    },
+    {
+     "id": "b2u4l10-3",
+     "type": "quiz",
+     "q": "Que pistas a Paula encontrou?",
+     "options": [
+      "Janela aberta e uma pegadinha",
+      "Um bilhete",
+      "Migalhas na cama"
+     ],
+     "answer": "Janela aberta e uma pegadinha",
+     "why": "\"The window was open and there was a small footprint.\""
+    },
+    {
+     "id": "b2u4l10-4",
+     "type": "quiz",
+     "q": "Quem foi o culpado?",
+     "options": [
+      "O gato do vizinho",
+      "O marido",
+      "O filho"
+     ],
+     "answer": "O gato do vizinho",
+     "why": "\"The neighbour's cat must have come in.\""
     }
    ]
   },
@@ -727,6 +1057,12 @@
      "why": "\"We should call the vet\"."
     }
    ]
+  }
+ ],
+ "extra_vocab": [
+  {
+   "word": "footprint",
+   "reason": "pegada (pista na história); aparece uma vez com tradução"
   }
  ]
 }

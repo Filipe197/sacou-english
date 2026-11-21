@@ -50,6 +50,38 @@
   [
    "prepare",
    "preparar(-se)"
+  ],
+  [
+   "should have",
+   "deveria ter"
+  ],
+  [
+   "could have",
+   "poderia ter"
+  ],
+  [
+   "would have",
+   "teria"
+  ],
+  [
+   "mistake",
+   "erro"
+  ],
+  [
+   "lesson",
+   "lição (de vida)"
+  ],
+  [
+   "admit",
+   "admitir"
+  ],
+  [
+   "outcome",
+   "resultado"
+  ],
+  [
+   "differently",
+   "de outro jeito"
   ]
  ],
  "guide": {
@@ -354,6 +386,140 @@
    ]
   },
   {
+   "id": "b2-u2-l8",
+   "title": "Deveria ter…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u2l8-1",
+     "type": "match",
+     "pairs": [
+      [
+       "should have",
+       "deveria ter"
+      ],
+      [
+       "could have",
+       "poderia ter"
+      ],
+      [
+       "would have",
+       "teria"
+      ],
+      [
+       "outcome",
+       "resultado"
+      ]
+     ],
+     "why": "Todos seguidos de particípio: should have gone, could have won, would have helped."
+    },
+    {
+     "id": "b2u2l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "You should have ___ me. I would have helped you.",
+     "pt": "Você deveria ter me ligado. Eu teria te ajudado.",
+     "options": [
+      "called",
+      "call",
+      "calling"
+     ],
+     "answer": "called",
+     "why": "\"Should have\" + particípio = crítica ou arrependimento sobre o passado.",
+     "wrong": {
+      "call": "Precisa do particípio: called.",
+      "calling": "Não usa -ing aqui."
+     }
+    },
+    {
+     "id": "b2u2l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We could have ___ the match if we had trained more.",
+     "pt": "Poderíamos ter ganhado o jogo se tivéssemos treinado mais.",
+     "options": [
+      "won",
+      "win",
+      "winning"
+     ],
+     "answer": "won",
+     "why": "\"Could have\" + particípio (win → won).",
+     "wrong": {
+      "win": "Precisa do particípio.",
+      "winning": "Sem -ing."
+     }
+    },
+    {
+     "id": "b2u2l8-4",
+     "type": "meaning",
+     "en": "I shouldn't have said that. It was a big mistake.",
+     "options": [
+      "Eu não deveria ter dito aquilo. Foi um erro grande.",
+      "Eu deveria ter falado mais.",
+      "Eu não disse nada de errado."
+     ],
+     "answer": "Eu não deveria ter dito aquilo. Foi um erro grande.",
+     "why": "\"Shouldn't have said\" = não deveria ter dito."
+    },
+    {
+     "id": "b2u2l8-5",
+     "type": "build",
+     "pt": "Se eu tivesse estudado, teria passado.",
+     "answer": "If I had studied I would have passed",
+     "extra": [
+      "will",
+      "studied had"
+     ],
+     "display": "If I had studied, I would have passed.",
+     "why": "Third conditional: If + had + particípio, would have + particípio."
+    },
+    {
+     "id": "b2u2l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I admit I ___ have done it differently.",
+     "pt": "Admito que poderia ter feito de outro jeito.",
+     "options": [
+      "could",
+      "can",
+      "will"
+     ],
+     "answer": "could",
+     "why": "\"Could have done\" = poderia ter feito.",
+     "wrong": {
+      "can": "\"Can have done\" não é usado assim.",
+      "will": "\"Will have done\" é outro tempo (futuro perfeito)."
+     }
+    },
+    {
+     "id": "b2u2l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I missed the flight by five minutes."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Oh no! You should have left earlier.",
+      "Oh no! You should left earlier.",
+      "Oh no! You should have leave earlier."
+     ],
+     "answer": "Oh no! You should have left earlier.",
+     "pt": "Ah, não! Você deveria ter saído mais cedo.",
+     "why": "Should have + particípio (leave → left).",
+     "wrong": {
+      "Oh no! You should left earlier.": "Falta o \"have\".",
+      "Oh no! You should have leave earlier.": "Precisa do particípio: left."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u2-l4",
    "title": "Escrevendo",
    "items": [
@@ -414,6 +580,74 @@
       "If it hadn't rained, we would've gone"
      ],
      "why": "If it hadn't rained = se não tivesse chovido."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u2l9-1",
+     "type": "listen",
+     "en": "If you had told me, I would have come.",
+     "options": [
+      "Se você tivesse me contado, eu teria vindo.",
+      "Você me contou e eu vim.",
+      "Se você me contar, eu venho."
+     ],
+     "answer": "Se você tivesse me contado, eu teria vindo.",
+     "why": "Third conditional: situação que não aconteceu."
+    },
+    {
+     "id": "b2u2l9-2",
+     "type": "dictation",
+     "en": "I should have listened to you.",
+     "why": "\"Should have listened\" = deveria ter ouvido."
+    },
+    {
+     "id": "b2u2l9-3",
+     "type": "listen",
+     "en": "The outcome would have been different if we'd waited.",
+     "options": [
+      "O resultado teria sido diferente se tivéssemos esperado.",
+      "Esperamos e deu certo.",
+      "O resultado foi o mesmo."
+     ],
+     "answer": "O resultado teria sido diferente se tivéssemos esperado.",
+     "why": "\"We'd waited\" = we had waited."
+    },
+    {
+     "id": "b2u2l9-4",
+     "type": "dictation",
+     "en": "It was a lesson I will never forget.",
+     "why": "\"A lesson\" = uma lição (de vida)."
+    },
+    {
+     "id": "b2u2l9-5",
+     "type": "listen",
+     "en": "She wishes she hadn't sold her car.",
+     "options": [
+      "Ela queria não ter vendido o carro.",
+      "Ela quer vender o carro.",
+      "Ela comprou um carro novo."
+     ],
+     "answer": "Ela queria não ter vendido o carro.",
+     "why": "\"Wish + had + particípio\" = arrependimento sobre o passado."
+    },
+    {
+     "id": "b2u2l9-6",
+     "type": "dictation",
+     "en": "We could have done it differently.",
+     "why": "\"Differently\" = de outro jeito."
+    },
+    {
+     "id": "b2u2l9-7",
+     "type": "speak",
+     "en": "I shouldn't have eaten so much.",
+     "pt": "Eu não deveria ter comido tanto.",
+     "why": "\"Shouldn't have\" soa como \"XÚ-dent-av\"."
     }
    ]
   },
@@ -522,6 +756,102 @@
      "answer": "Really? I wish you hadn't sold it. It was beautiful.",
      "pt": "Sério? Queria que você não tivesse vendido. Era linda.",
      "why": "Arrependimento sobre o passado: wish + hadn't + particípio."
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l10",
+   "title": "Lendo: a carta para o meu eu de 18 anos",
+   "added": "2026-11",
+   "story": {
+    "title": "Carta para o meu eu de 18 anos",
+    "lines": [
+     {
+      "who": "Laura",
+      "en": "Dear 18-year-old me, I know you think you know everything. You don't!",
+      "pt": "Querida eu de 18 anos, sei que você acha que sabe tudo. Não sabe!"
+     },
+     {
+      "who": "Laura",
+      "en": "I wish I had travelled more when I was young. I always said I didn't have time.",
+      "pt": "Queria ter viajado mais quando era jovem. Eu sempre dizia que não tinha tempo."
+     },
+     {
+      "ask": "Do que a Laura se arrepende primeiro?",
+      "options": [
+       "De não ter viajado mais",
+       "De ter estudado demais",
+       "De ter se mudado"
+      ],
+      "answer": "De não ter viajado mais",
+      "why": "\"I wish I had travelled more.\""
+     },
+     {
+      "who": "Laura",
+      "en": "If I had learned English earlier, I would ___ got that job in London.",
+      "pt": "Se eu tivesse aprendido inglês antes, teria conseguido aquele emprego em Londres.",
+      "gap": {
+       "answer": "have",
+       "options": [
+        "have",
+        "had",
+        "has"
+       ]
+      }
+     },
+     {
+      "who": "Laura",
+      "en": "I should have called Grandma more often. She had so many stories.",
+      "pt": "Eu deveria ter ligado mais para a vovó. Ela tinha tantas histórias."
+     },
+     {
+      "who": "Laura",
+      "en": "But don't worry too much. Every mistake taught me a lesson.",
+      "pt": "Mas não se preocupe demais. Cada erro me ensinou uma lição."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u2l10-1",
+     "type": "story",
+     "why": "A Laura escreve uma carta para ela mesma aos 18 anos. Repare nos arrependimentos. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b2u2l10-2",
+     "type": "quiz",
+     "q": "Que emprego ela teria conseguido?",
+     "options": [
+      "Um emprego em Londres",
+      "Um emprego no banco",
+      "Um emprego de professora"
+     ],
+     "answer": "Um emprego em Londres",
+     "why": "\"I would have got that job in London.\""
+    },
+    {
+     "id": "b2u2l10-3",
+     "type": "quiz",
+     "q": "Para quem ela deveria ter ligado mais?",
+     "options": [
+      "Para a avó",
+      "Para a mãe",
+      "Para os amigos"
+     ],
+     "answer": "Para a avó",
+     "why": "\"I should have called Grandma more often.\""
+    },
+    {
+     "id": "b2u2l10-4",
+     "type": "quiz",
+     "q": "Qual é a mensagem final?",
+     "options": [
+      "Cada erro ensina uma lição",
+      "Nunca cometa erros",
+      "Não viaje"
+     ],
+     "answer": "Cada erro ensina uma lição",
+     "why": "\"Every mistake taught me a lesson.\""
     }
    ]
   },
@@ -730,5 +1060,6 @@
     }
    ]
   }
- ]
+ ],
+ "extra_vocab": []
 }

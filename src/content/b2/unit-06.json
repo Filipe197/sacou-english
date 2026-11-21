@@ -54,6 +54,38 @@
   [
    "habit",
    "hábito"
+  ],
+  [
+   "stop doing / stop to do",
+   "parar de fazer / parar para fazer"
+  ],
+  [
+   "remember doing / remember to do",
+   "lembrar de ter feito / lembrar de fazer"
+  ],
+  [
+   "try doing / try to do",
+   "experimentar fazer / tentar fazer"
+  ],
+  [
+   "regret",
+   "se arrepender"
+  ],
+  [
+   "postpone",
+   "adiar"
+  ],
+  [
+   "suggest",
+   "sugerir"
+  ],
+  [
+   "deserve",
+   "merecer"
+  ],
+  [
+   "tend",
+   "tender, costumar"
   ]
  ],
  "guide": {
@@ -355,6 +387,135 @@
    ]
   },
   {
+   "id": "b2-u6-l8",
+   "title": "Muda o sentido!",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u6l8-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I stopped ___ two years ago. I feel much better now.",
+     "pt": "Parei de fumar há dois anos. Me sinto bem melhor agora.",
+     "options": [
+      "smoking",
+      "to smoke",
+      "smoke"
+     ],
+     "answer": "smoking",
+     "why": "\"Stop + -ing\" = parar de fazer.",
+     "wrong": {
+      "to smoke": "\"Stop to smoke\" = parar (o que fazia) PARA fumar!",
+      "smoke": "Precisa de -ing ou to."
+     }
+    },
+    {
+     "id": "b2u6l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We stopped ___ coffee on the way.",
+     "pt": "Paramos para tomar um café no caminho.",
+     "options": [
+      "to have",
+      "having",
+      "have"
+     ],
+     "answer": "to have",
+     "why": "\"Stop + to\" = parar para fazer outra coisa.",
+     "wrong": {
+      "having": "\"Stop having\" = parar de tomar café.",
+      "have": "Precisa de -ing ou to."
+     }
+    },
+    {
+     "id": "b2u6l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Remember ___ the door when you leave.",
+     "pt": "Lembre de trancar a porta quando sair.",
+     "options": [
+      "to lock",
+      "locking",
+      "lock"
+     ],
+     "answer": "to lock",
+     "why": "\"Remember to\" = lembrar de fazer (algo no futuro).",
+     "wrong": {
+      "locking": "\"Remember locking\" = lembrar de ter trancado (passado).",
+      "lock": "Precisa de \"to\"."
+     }
+    },
+    {
+     "id": "b2u6l8-4",
+     "type": "meaning",
+     "en": "I remember meeting her at a party years ago.",
+     "options": [
+      "Eu me lembro de tê-la conhecido numa festa anos atrás.",
+      "Preciso lembrar de encontrá-la na festa.",
+      "Vou conhecê-la numa festa."
+     ],
+     "answer": "Eu me lembro de tê-la conhecido numa festa anos atrás.",
+     "why": "\"Remember + -ing\" = lembrar de algo que já aconteceu."
+    },
+    {
+     "id": "b2u6l8-5",
+     "type": "build",
+     "pt": "Tente desligar e ligar de novo.",
+     "answer": "Try turning it off and on again",
+     "extra": [
+      "to turning",
+      "turn"
+     ],
+     "display": "Try turning it off and on again.",
+     "why": "\"Try + -ing\" = experimentar fazer (para ver se resolve)."
+    },
+    {
+     "id": "b2u6l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "They decided to postpone ___ the house.",
+     "pt": "Eles decidiram adiar a compra da casa.",
+     "options": [
+      "buying",
+      "to buy",
+      "buy"
+     ],
+     "answer": "buying",
+     "why": "\"Postpone\" + -ing.",
+     "wrong": {
+      "to buy": "\"Postpone\" não aceita \"to\".",
+      "buy": "Precisa do -ing."
+     }
+    },
+    {
+     "id": "b2u6l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I regret not studying more at school."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It's never too late. You deserve to try again!",
+      "It's never too late. You deserve trying again!",
+      "Never late. You deserve try."
+     ],
+     "answer": "It's never too late. You deserve to try again!",
+     "pt": "Nunca é tarde. Você merece tentar de novo!",
+     "why": "\"Deserve\" + to + verbo.",
+     "wrong": {
+      "It's never too late. You deserve trying again!": "\"Deserve\" pede \"to\".",
+      "Never late. You deserve try.": "Faltam \"it's\", \"too\" e \"to\"."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u6-l4",
    "title": "Escrevendo",
    "items": [
@@ -412,6 +573,74 @@
       "Would you mind waiting"
      ],
      "why": "Depois de mind, o verbo vai com -ing."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u6l9-1",
+     "type": "listen",
+     "en": "I'll never forget seeing the sea for the first time.",
+     "options": [
+      "Nunca vou esquecer de ter visto o mar pela primeira vez.",
+      "Esqueci de ver o mar.",
+      "Vou ver o mar pela primeira vez."
+     ],
+     "answer": "Nunca vou esquecer de ter visto o mar pela primeira vez.",
+     "why": "\"Forget + -ing\" = esquecer algo que já aconteceu."
+    },
+    {
+     "id": "b2u6l9-2",
+     "type": "dictation",
+     "en": "Don't forget to call your mother.",
+     "why": "\"Forget to\" = esquecer de fazer."
+    },
+    {
+     "id": "b2u6l9-3",
+     "type": "listen",
+     "en": "She suggested going to the beach.",
+     "options": [
+      "Ela sugeriu ir à praia.",
+      "Ela foi à praia sozinha.",
+      "Ela não quer ir à praia."
+     ],
+     "answer": "Ela sugeriu ir à praia.",
+     "why": "\"Suggest\" + -ing."
+    },
+    {
+     "id": "b2u6l9-4",
+     "type": "dictation",
+     "en": "I tried to open the window.",
+     "why": "\"Try to\" = tentar (com esforço)."
+    },
+    {
+     "id": "b2u6l9-5",
+     "type": "listen",
+     "en": "People tend to spend more in December.",
+     "options": [
+      "As pessoas costumam gastar mais em dezembro.",
+      "As pessoas economizam em dezembro.",
+      "Dezembro é o mês mais barato."
+     ],
+     "answer": "As pessoas costumam gastar mais em dezembro.",
+     "why": "\"Tend to\" = costumar, ter tendência a."
+    },
+    {
+     "id": "b2u6l9-6",
+     "type": "dictation",
+     "en": "He stopped to answer the phone.",
+     "why": "\"Stop to\" = parar para."
+    },
+    {
+     "id": "b2u6l9-7",
+     "type": "speak",
+     "en": "Remember to lock the door.",
+     "pt": "Lembre de trancar a porta.",
+     "why": "\"Lock\" = trancar."
     }
    ]
   },
@@ -520,6 +749,102 @@
      "answer": "I wanted to avoid getting home too late.",
      "pt": "Eu queria evitar chegar em casa muito tarde.",
      "why": "Depois de avoid, o verbo vai com -ing."
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l10",
+   "title": "Lendo: as resoluções de ano-novo",
+   "added": "2026-11",
+   "story": {
+    "title": "Resoluções de ano-novo",
+    "lines": [
+     {
+      "who": "Sofia",
+      "en": "Every January I promise to change my life. This year I really want to succeed!",
+      "pt": "Todo janeiro eu prometo mudar de vida. Este ano quero mesmo conseguir!"
+     },
+     {
+      "who": "Sofia",
+      "en": "First, I want to stop checking my phone in bed.",
+      "pt": "Primeiro, quero parar de olhar o celular na cama."
+     },
+     {
+      "ask": "Qual é a primeira resolução?",
+      "options": [
+       "Parar de olhar o celular na cama",
+       "Começar a correr",
+       "Aprender a cozinhar"
+      ],
+      "answer": "Parar de olhar o celular na cama",
+      "why": "\"Stop checking my phone in bed.\""
+     },
+     {
+      "who": "Sofia",
+      "en": "I tend to postpone ___ exercise, so I joined a gym near my office.",
+      "pt": "Eu costumo adiar os exercícios, então me matriculei numa academia perto do escritório.",
+      "gap": {
+       "answer": "doing",
+       "options": [
+        "doing",
+        "to do",
+        "do"
+       ]
+      }
+     },
+     {
+      "who": "Sofia",
+      "en": "I also need to remember to drink more water. My doctor suggested having a bottle on my desk.",
+      "pt": "Também preciso lembrar de beber mais água. Minha médica sugeriu deixar uma garrafa na mesa."
+     },
+     {
+      "who": "Sofia",
+      "en": "Last year I tried learning the guitar, but I gave up. This time, I won't regret trying!",
+      "pt": "No ano passado experimentei aprender violão, mas desisti. Desta vez, não vou me arrepender de tentar!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u6l10-1",
+     "type": "story",
+     "why": "A Sofia conta as resoluções de ano-novo. Repare nos verbos com -ing ou com \"to\"."
+    },
+    {
+     "id": "b2u6l10-2",
+     "type": "quiz",
+     "q": "O que a médica sugeriu?",
+     "options": [
+      "Deixar uma garrafa de água na mesa",
+      "Dormir mais",
+      "Parar de trabalhar"
+     ],
+     "answer": "Deixar uma garrafa de água na mesa",
+     "why": "\"Suggested having a bottle on my desk.\""
+    },
+    {
+     "id": "b2u6l10-3",
+     "type": "quiz",
+     "q": "Por que ela entrou numa academia perto do escritório?",
+     "options": [
+      "Porque costuma adiar os exercícios",
+      "Porque é barata",
+      "Porque o namorado treina lá"
+     ],
+     "answer": "Porque costuma adiar os exercícios",
+     "why": "\"I tend to postpone doing exercise.\""
+    },
+    {
+     "id": "b2u6l10-4",
+     "type": "quiz",
+     "q": "O que aconteceu com o violão?",
+     "options": [
+      "Ela desistiu no ano passado",
+      "Ela toca muito bem",
+      "Ela vai começar agora"
+     ],
+     "answer": "Ela desistiu no ano passado",
+     "why": "\"I tried learning the guitar, but I gave up.\""
     }
    ]
   },
@@ -726,5 +1051,6 @@
     }
    ]
   }
- ]
+ ],
+ "extra_vocab": []
 }

@@ -54,6 +54,38 @@
   [
    "conclusion",
    "conclusão"
+  ],
+  [
+   "on the other hand",
+   "por outro lado"
+  ],
+  [
+   "in addition",
+   "além disso"
+  ],
+  [
+   "as a result",
+   "como resultado, por isso"
+  ],
+  [
+   "in my view",
+   "na minha visão"
+  ],
+  [
+   "benefit",
+   "benefício"
+  ],
+  [
+   "issue",
+   "questão, problema"
+  ],
+  [
+   "solution",
+   "solução"
+  ],
+  [
+   "effect",
+   "efeito"
   ]
  ],
  "guide": {
@@ -358,6 +390,140 @@
    ]
   },
   {
+   "id": "b2-u8-l8",
+   "title": "Organizando o argumento",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u8l8-1",
+     "type": "match",
+     "pairs": [
+      [
+       "on the other hand",
+       "por outro lado"
+      ],
+      [
+       "in addition",
+       "além disso"
+      ],
+      [
+       "as a result",
+       "como resultado"
+      ],
+      [
+       "therefore",
+       "portanto"
+      ]
+     ],
+     "why": "Conectores organizam um texto: somar ideias, contrastar e concluir."
+    },
+    {
+     "id": "b2u8l8-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Cities offer more jobs. ___, life there is more expensive.",
+     "pt": "As cidades oferecem mais empregos. Por outro lado, a vida lá é mais cara.",
+     "options": [
+      "On the other hand",
+      "In addition",
+      "As a result"
+     ],
+     "answer": "On the other hand",
+     "why": "\"On the other hand\" apresenta o lado oposto.",
+     "wrong": {
+      "In addition": "\"In addition\" soma uma ideia parecida.",
+      "As a result": "\"As a result\" mostra consequência."
+     }
+    },
+    {
+     "id": "b2u8l8-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Public transport is cheap. ___, it reduces pollution.",
+     "pt": "O transporte público é barato. Além disso, reduz a poluição.",
+     "options": [
+      "In addition",
+      "Whereas",
+      "However"
+     ],
+     "answer": "In addition",
+     "why": "\"In addition\" = além disso (soma mais um benefício).",
+     "wrong": {
+      "Whereas": "\"Whereas\" contrasta duas coisas na mesma frase.",
+      "However": "\"However\" traz uma ideia contrária."
+     }
+    },
+    {
+     "id": "b2u8l8-4",
+     "type": "meaning",
+     "en": "He missed many classes. As a result, he failed the exam.",
+     "options": [
+      "Ele faltou a muitas aulas. Por isso, reprovou na prova.",
+      "Ele foi a todas as aulas e passou.",
+      "Ele reprovou e depois faltou às aulas."
+     ],
+     "answer": "Ele faltou a muitas aulas. Por isso, reprovou na prova.",
+     "why": "\"As a result\" = como resultado, por isso."
+    },
+    {
+     "id": "b2u8l8-5",
+     "type": "build",
+     "pt": "Na minha visão, o maior benefício é a liberdade.",
+     "answer": "In my view the biggest benefit is freedom",
+     "extra": [
+      "on",
+      "disadvantage"
+     ],
+     "display": "In my view, the biggest benefit is freedom.",
+     "why": "\"In my view\" = na minha visão. \"Benefit\" = benefício."
+    },
+    {
+     "id": "b2u8l8-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The main ___ of living alone is feeling lonely.",
+     "pt": "A principal desvantagem de morar sozinho é se sentir solitário.",
+     "options": [
+      "disadvantage",
+      "benefit",
+      "solution"
+     ],
+     "answer": "disadvantage",
+     "why": "\"Drawback\" = desvantagem.",
+     "wrong": {
+      "benefit": "\"Benefit\" é o contrário: benefício.",
+      "solution": "\"Solution\" = solução."
+     }
+    },
+    {
+     "id": "b2u8l8-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Should schools ban phones?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "In my view, yes. On the other hand, they can help with research.",
+      "In my view, yes. In other hand, they help.",
+      "My view yes, other hand research."
+     ],
+     "answer": "In my view, yes. On the other hand, they can help with research.",
+     "pt": "Na minha visão, sim. Por outro lado, eles podem ajudar na pesquisa.",
+     "why": "Opinião + contraponto: um argumento equilibrado.",
+     "wrong": {
+      "In my view, yes. In other hand, they help.": "É \"ON the other hand\".",
+      "My view yes, other hand research.": "Frases incompletas."
+     }
+    }
+   ]
+  },
+  {
    "id": "b2-u8-l4",
    "title": "Escrevendo",
    "items": [
@@ -421,6 +587,74 @@
       "In addition, it's cheaper"
      ],
      "why": "Moreover ou in addition = além disso."
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l9",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u8l9-1",
+     "type": "listen",
+     "en": "One disadvantage is the cost. On the other hand, it saves time.",
+     "options": [
+      "Uma desvantagem é o custo. Por outro lado, economiza tempo.",
+      "É barato e rápido.",
+      "Custa caro e demora."
+     ],
+     "answer": "Uma desvantagem é o custo. Por outro lado, economiza tempo.",
+     "why": "\"Drawback\" e \"on the other hand\"."
+    },
+    {
+     "id": "b2u8l9-2",
+     "type": "dictation",
+     "en": "In addition, it is good for your health.",
+     "why": "\"In addition\" = além disso."
+    },
+    {
+     "id": "b2u8l9-3",
+     "type": "listen",
+     "en": "There's no easy solution to this issue.",
+     "options": [
+      "Não há solução fácil para esta questão.",
+      "A solução é fácil.",
+      "Não existe problema nenhum."
+     ],
+     "answer": "Não há solução fácil para esta questão.",
+     "why": "\"Issue\" = questão, problema."
+    },
+    {
+     "id": "b2u8l9-4",
+     "type": "dictation",
+     "en": "Therefore, we need to act now.",
+     "why": "\"Therefore\" = portanto."
+    },
+    {
+     "id": "b2u8l9-5",
+     "type": "listen",
+     "en": "Prices went up. As a result, people bought less.",
+     "options": [
+      "Os preços subiram. Por isso, as pessoas compraram menos.",
+      "Os preços caíram e as pessoas compraram mais.",
+      "As pessoas compram sempre igual."
+     ],
+     "answer": "Os preços subiram. Por isso, as pessoas compraram menos.",
+     "why": "\"As a result\" = por isso."
+    },
+    {
+     "id": "b2u8l9-6",
+     "type": "dictation",
+     "en": "The benefits are clear.",
+     "why": "\"Benefits\" = benefícios."
+    },
+    {
+     "id": "b2u8l9-7",
+     "type": "speak",
+     "en": "In my view, it is a good idea.",
+     "pt": "Na minha visão, é uma boa ideia.",
+     "why": "\"In my view\" soa como \"in-mai-VIÚ\"."
     }
    ]
   },
@@ -529,6 +763,102 @@
      "answer": "To sum up, the advantages are bigger than the disadvantages.",
      "pt": "Em resumo, as vantagens são maiores que as desvantagens.",
      "why": "A expressão completa é \"to sum up\" (resumindo)."
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l10",
+   "title": "Lendo: um texto de opinião",
+   "added": "2026-11",
+   "story": {
+    "title": "Trabalhar quatro dias por semana?",
+    "lines": [
+     {
+      "who": "Ben",
+      "en": "Some companies are trying a four-day working week. Is it a good idea?",
+      "pt": "Algumas empresas estão testando a semana de quatro dias de trabalho. É uma boa ideia?"
+     },
+     {
+      "who": "Ben",
+      "en": "The main benefit is clear: people have more time for their families and hobbies.",
+      "pt": "O principal benefício é claro: as pessoas têm mais tempo para a família e os hobbies."
+     },
+     {
+      "ask": "Qual é o principal benefício, segundo o texto?",
+      "options": [
+       "Mais tempo para a família e hobbies",
+       "Salários maiores",
+       "Menos trânsito"
+      ],
+      "answer": "Mais tempo para a família e hobbies",
+      "why": "\"More time for their families and hobbies.\""
+     },
+     {
+      "who": "Ben",
+      "en": "___ addition, studies show that rested workers make fewer mistakes.",
+      "pt": "Além disso, estudos mostram que funcionários descansados cometem menos erros.",
+      "gap": {
+       "answer": "In",
+       "options": [
+        "In",
+        "On",
+        "As"
+       ]
+      }
+     },
+     {
+      "who": "Ben",
+      "en": "On the other hand, some jobs, like hospitals, cannot close for a day. This is a real issue.",
+      "pt": "Por outro lado, alguns trabalhos, como hospitais, não podem fechar um dia. Esta é uma questão real."
+     },
+     {
+      "who": "Ben",
+      "en": "In my view, the benefits are bigger than the disadvantages. Therefore, more companies should try it.",
+      "pt": "Na minha visão, os benefícios são maiores que as desvantagens. Portanto, mais empresas deveriam testar."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u8l10-1",
+     "type": "story",
+     "why": "O Ben escreve um texto de opinião. Repare como ele organiza os argumentos com conectores."
+    },
+    {
+     "id": "b2u8l10-2",
+     "type": "quiz",
+     "q": "O que os estudos mostram?",
+     "options": [
+      "Funcionários descansados erram menos",
+      "As pessoas trabalham mais",
+      "Os salários caem"
+     ],
+     "answer": "Funcionários descansados erram menos",
+     "why": "\"Rested workers make fewer mistakes.\""
+    },
+    {
+     "id": "b2u8l10-3",
+     "type": "quiz",
+     "q": "Qual é o problema apontado?",
+     "options": [
+      "Alguns trabalhos, como hospitais, não podem fechar",
+      "Ninguém quer trabalhar menos",
+      "Custa caro demais"
+     ],
+     "answer": "Alguns trabalhos, como hospitais, não podem fechar",
+     "why": "\"Some jobs, like hospitals, cannot close for a day.\""
+    },
+    {
+     "id": "b2u8l10-4",
+     "type": "quiz",
+     "q": "Qual é a conclusão do Ben?",
+     "options": [
+      "Mais empresas deveriam testar",
+      "A ideia é ruim",
+      "Só hospitais deveriam testar"
+     ],
+     "answer": "Mais empresas deveriam testar",
+     "why": "\"Therefore, more companies should try it.\""
     }
    ]
   },
@@ -741,5 +1071,6 @@
     }
    ]
   }
- ]
+ ],
+ "extra_vocab": []
 }
