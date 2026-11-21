@@ -8,7 +8,7 @@ addLessons('a1/unit-06.json', {
     ['often', 'frequentemente / muitas vezes'],
     ['sometimes', 'às vezes'],
     ['never', 'nunca'],
-    ['Tuesday / Wednesday / Thursday', 'terça / quarta / quinta-feira'],
+    ['Tuesday / Wednesday / Thursday', 'terça-feira / quarta-feira / quinta-feira'],
     ['week', 'semana'],
     ['take a shower', 'tomar banho'],
     ['dinner', 'jantar'],

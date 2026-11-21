@@ -1,0 +1,1844 @@
+{
+ "como-se-diz-eu-quero": {
+  "titulo": "Como se diz “eu quero” em inglês?",
+  "descricao": "\"Eu quero\" em inglês é \"I want\" (fala-se ái uánt). Veja exemplos com áudio, o jeito educado de pedir e o erro que todo brasileiro comete.",
+  "tema": "Frases do dia a dia",
+  "resposta": {
+   "pt": "Eu quero",
+   "en": "I want",
+   "fala": "ái uánt",
+   "voz": "ana"
+  },
+  "explica": "Want quer dizer querer. Serve para coisas (I want coffee) e para ações. Quando vem outro verbo depois, ele ganha um to na frente: I want to sleep, eu quero dormir.",
+  "exemplos": [
+   {
+    "en": "I want coffee.",
+    "pt": "Eu quero café.",
+    "voz": "ana"
+   },
+   {
+    "en": "I want to travel.",
+    "pt": "Eu quero viajar.",
+    "voz": "tom"
+   },
+   {
+    "en": "I want a new phone.",
+    "pt": "Eu quero um celular novo.",
+    "voz": "ana"
+   },
+   {
+    "en": "I don't want to go.",
+    "pt": "Eu não quero ir.",
+    "voz": "tom"
+   },
+   {
+    "en": "Do you want some water?",
+    "pt": "Você quer água?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "No restaurante, peça com I'd like",
+   "texto": "I want é certo, mas num pedido soa meio seco, como \"eu quero isso aí\". Para pedir com educação, o nativo usa I'd like (eu gostaria).",
+   "en": "I'd like a coffee, please.",
+   "pt": "Eu gostaria de um café, por favor.",
+   "fala": "áid láik a cófi, plíiz",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "I want that you come.",
+    "certo": "I want you to come.",
+    "pt": "Eu quero que você venha.",
+    "porque": "Em inglês não existe \"quero que\". A pessoa vem logo depois de want, e a ação vem com to."
+   },
+   {
+    "errado": "I want sleep.",
+    "certo": "I want to sleep.",
+    "pt": "Eu quero dormir.",
+    "porque": "Verbo depois de want sempre leva to."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Eu quero dormir.",
+    "ops": [
+     "I want sleep.",
+     "I want to sleep.",
+     "I want sleeping."
+    ],
+    "ok": 1,
+    "porque": "Verbo depois de want leva to: want to sleep."
+   },
+   {
+    "q": "Eu quero que você fique.",
+    "ops": [
+     "I want that you stay.",
+     "I want you stay.",
+     "I want you to stay."
+    ],
+    "ok": 2,
+    "porque": "Want + pessoa + to + ação. Nada de \"that\"."
+   },
+   {
+    "q": "No café, o jeito mais educado de pedir:",
+    "ops": [
+     "I'd like a coffee, please.",
+     "I want coffee.",
+     "Give me coffee."
+    ],
+    "ok": 0,
+    "porque": "I'd like é o pedido educado que o nativo usa."
+   }
+  ],
+  "licao": {
+   "id": "a1-u7-l3",
+   "nome": "Pedindo no café",
+   "unidade": "A1 · Unidade 7 · Comida e bebida"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-preciso",
+   "como-se-diz-eu-gosto",
+   "como-se-diz-eu-posso"
+  ]
+ },
+ "como-se-diz-eu-preciso": {
+  "titulo": "Como se diz “eu preciso” em inglês?",
+  "descricao": "“Eu preciso” em inglês é “I need” (fala-se ái níid). Exemplos com áudio, a diferença para “I have to” e o erro mais comum.",
+  "tema": "Frases do dia a dia",
+  "resposta": {
+   "pt": "Eu preciso",
+   "en": "I need",
+   "fala": "ái níid",
+   "voz": "tom"
+  },
+  "explica": "Need quer dizer precisar. Com coisas, vai direto: I need help. Com outra ação depois, entra o to: I need to go, eu preciso ir.",
+  "exemplos": [
+   {
+    "en": "I need help.",
+    "pt": "Eu preciso de ajuda.",
+    "voz": "ana"
+   },
+   {
+    "en": "I need to go.",
+    "pt": "Eu preciso ir.",
+    "voz": "tom"
+   },
+   {
+    "en": "I need a taxi.",
+    "pt": "Eu preciso de um táxi.",
+    "voz": "ana"
+   },
+   {
+    "en": "You don't need to pay.",
+    "pt": "Você não precisa pagar.",
+    "voz": "tom"
+   },
+   {
+    "en": "Do you need anything?",
+    "pt": "Você precisa de alguma coisa?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "I need to ou I have to?",
+   "texto": "Os dois servem para obrigação. I have to é mais comum quando é uma regra ou algo de fora (o chefe mandou, o horário obriga).",
+   "en": "I have to work tomorrow.",
+   "pt": "Eu tenho que trabalhar amanhã.",
+   "fala": "ái rév tu uârk tumórou",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "I need of help.",
+    "certo": "I need help.",
+    "pt": "Eu preciso de ajuda.",
+    "porque": "O “de” do português não vai para o inglês: need já inclui tudo."
+   },
+   {
+    "errado": "I need go.",
+    "certo": "I need to go.",
+    "pt": "Eu preciso ir.",
+    "porque": "Ação depois de need leva to."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Eu preciso de água.",
+    "ops": [
+     "I need of water.",
+     "I need water.",
+     "I need to water."
+    ],
+    "ok": 1,
+    "porque": "Need + coisa, sem “of”."
+   },
+   {
+    "q": "Eu preciso estudar.",
+    "ops": [
+     "I need to study.",
+     "I need study.",
+     "I need studying."
+    ],
+    "ok": 0,
+    "porque": "Need + to + ação."
+   },
+   {
+    "q": "Você não precisa vir.",
+    "ops": [
+     "You don't need to come.",
+     "You not need come.",
+     "You needn't to come."
+    ],
+    "ok": 0,
+    "porque": "Negativa com don't need to."
+   }
+  ],
+  "licao": {
+   "id": "a1-u11-l3",
+   "nome": "Na loja",
+   "unidade": "A1 · Unidade 11 · Roupas e compras"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-quero",
+   "como-se-diz-eu-tenho",
+   "como-se-diz-eu-posso"
+  ]
+ },
+ "como-se-diz-eu-gosto": {
+  "titulo": "Como se diz “eu gosto” em inglês?",
+  "descricao": "“Eu gosto” em inglês é “I like” (fala-se ái láik). Veja exemplos com áudio, como dizer “eu gosto de fazer” e o erro do “like of”.",
+  "tema": "Frases do dia a dia",
+  "resposta": {
+   "pt": "Eu gosto",
+   "en": "I like",
+   "fala": "ái láik",
+   "voz": "ana"
+  },
+  "explica": "Like quer dizer gostar. A coisa vem logo depois, sem “de”: I like pizza. Para atividades, use o verbo com -ing: I like reading, eu gosto de ler.",
+  "exemplos": [
+   {
+    "en": "I like pizza.",
+    "pt": "Eu gosto de pizza.",
+    "voz": "ana"
+   },
+   {
+    "en": "I like music.",
+    "pt": "Eu gosto de música.",
+    "voz": "tom"
+   },
+   {
+    "en": "I like reading.",
+    "pt": "Eu gosto de ler.",
+    "voz": "ana"
+   },
+   {
+    "en": "I don't like coffee.",
+    "pt": "Eu não gosto de café.",
+    "voz": "tom"
+   },
+   {
+    "en": "Do you like dogs?",
+    "pt": "Você gosta de cachorros?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Para dizer “eu adoro”, use love",
+   "texto": "Love não é só para pessoas: o nativo usa o tempo todo para coisas de que gosta muito.",
+   "en": "I love this song!",
+   "pt": "Eu adoro essa música!",
+   "fala": "ái lâv dís sóng",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "I like of pizza.",
+    "certo": "I like pizza.",
+    "pt": "Eu gosto de pizza.",
+    "porque": "O “de” de “gostar de” não existe em inglês."
+   },
+   {
+    "errado": "I no like coffee.",
+    "certo": "I don't like coffee.",
+    "pt": "Eu não gosto de café.",
+    "porque": "O “não” com like é don't."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Eu gosto de futebol.",
+    "ops": [
+     "I like of soccer.",
+     "I like soccer.",
+     "I likes soccer."
+    ],
+    "ok": 1,
+    "porque": "Like + coisa, sem “of”."
+   },
+   {
+    "q": "Eu não gosto de chá.",
+    "ops": [
+     "I no like tea.",
+     "I don't like tea.",
+     "I not like tea."
+    ],
+    "ok": 1,
+    "porque": "Negativa: don't like."
+   },
+   {
+    "q": "Eu gosto de cozinhar.",
+    "ops": [
+     "I like cooking.",
+     "I like cook.",
+     "I like of cooking."
+    ],
+    "ok": 0,
+    "porque": "Atividade depois de like: verbo com -ing."
+   }
+  ],
+  "licao": {
+   "id": "a1-u7-l2",
+   "nome": "Eu gosto, eu não gosto",
+   "unidade": "A1 · Unidade 7 · Comida e bebida"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-quero",
+   "como-se-diz-eu-preciso",
+   "como-se-diz-eu-tenho"
+  ]
+ },
+ "como-se-diz-eu-tenho": {
+  "titulo": "Como se diz “eu tenho” em inglês?",
+  "descricao": "“Eu tenho” em inglês é “I have” (fala-se ái rév). Exemplos com áudio e os dois erros clássicos: idade e “tem” de lugar.",
+  "tema": "Frases do dia a dia",
+  "resposta": {
+   "pt": "Eu tenho",
+   "en": "I have",
+   "fala": "ái rév",
+   "voz": "tom"
+  },
+  "explica": "Have quer dizer ter, possuir: I have a car. Atenção: o h de have é aspirado, soa como o r de “rato”. Com he, she e it, vira has: She has a dog.",
+  "exemplos": [
+   {
+    "en": "I have a car.",
+    "pt": "Eu tenho um carro.",
+    "voz": "ana"
+   },
+   {
+    "en": "I have two brothers.",
+    "pt": "Eu tenho dois irmãos.",
+    "voz": "tom"
+   },
+   {
+    "en": "She has a dog.",
+    "pt": "Ela tem um cachorro.",
+    "voz": "ana"
+   },
+   {
+    "en": "I don't have time.",
+    "pt": "Eu não tenho tempo.",
+    "voz": "tom"
+   },
+   {
+    "en": "Do you have a pen?",
+    "pt": "Você tem uma caneta?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "“Tem” de lugar não é have",
+   "texto": "Quando “tem” quer dizer “existe” (tem um café aqui perto), o inglês usa there is.",
+   "en": "There is a café near here.",
+   "pt": "Tem um café aqui perto.",
+   "fala": "dér iz a kafêi níar rír",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "I have 20 years.",
+    "certo": "I'm 20 years old.",
+    "pt": "Eu tenho 20 anos.",
+    "porque": "Idade em inglês é com o verbo ser/estar: I am."
+   },
+   {
+    "errado": "Have a bank here?",
+    "certo": "Is there a bank here?",
+    "pt": "Tem um banco aqui?",
+    "porque": "“Tem” de existir é there is."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Eu tenho uma irmã.",
+    "ops": [
+     "I have a sister.",
+     "I has a sister.",
+     "I am a sister."
+    ],
+    "ok": 0,
+    "porque": "I have."
+   },
+   {
+    "q": "Ela tem um carro.",
+    "ops": [
+     "She have a car.",
+     "She has a car.",
+     "She is a car."
+    ],
+    "ok": 1,
+    "porque": "He, she, it: has."
+   },
+   {
+    "q": "Eu tenho 30 anos.",
+    "ops": [
+     "I have 30 years.",
+     "I'm 30 years old.",
+     "I have 30 years old."
+    ],
+    "ok": 1,
+    "porque": "Idade é com I am."
+   }
+  ],
+  "licao": {
+   "id": "a1-u4-l3",
+   "nome": "Eu tenho...",
+   "unidade": "A1 · Unidade 4 · Família"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-tenho-20-anos",
+   "there-is-ou-have",
+   "como-se-diz-eu-preciso"
+  ]
+ },
+ "como-se-diz-eu-posso": {
+  "titulo": "Como se diz “eu posso?” em inglês?",
+  "descricao": "“Eu posso?” em inglês é “Can I?” (fala-se kén ái?). Veja como pedir permissão, o jeito mais educado e o erro do “I can?”.",
+  "tema": "Frases do dia a dia",
+  "resposta": {
+   "pt": "Eu posso?",
+   "en": "Can I?",
+   "fala": "kén ái?",
+   "voz": "ana"
+  },
+  "explica": "Para perguntar, o can vem antes de I: Can I sit here? Na afirmativa a ordem é a normal: I can swim, eu sei nadar.",
+  "exemplos": [
+   {
+    "en": "Can I sit here?",
+    "pt": "Posso sentar aqui?",
+    "voz": "ana"
+   },
+   {
+    "en": "Can I help you?",
+    "pt": "Posso te ajudar?",
+    "voz": "tom"
+   },
+   {
+    "en": "Can I pay by card?",
+    "pt": "Posso pagar no cartão?",
+    "voz": "ana"
+   },
+   {
+    "en": "Can I ask a question?",
+    "pt": "Posso fazer uma pergunta?",
+    "voz": "tom"
+   },
+   {
+    "en": "Yes, you can.",
+    "pt": "Pode, sim.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Mais educado: Could I?",
+   "texto": "Com desconhecidos, num hotel ou no trabalho, could soa mais gentil que can.",
+   "en": "Could I have the menu, please?",
+   "pt": "Poderia me ver o cardápio, por favor?",
+   "fala": "kúd ái rév dâ mêniu, plíiz",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "I can sit here?",
+    "certo": "Can I sit here?",
+    "pt": "Posso sentar aqui?",
+    "porque": "Em pergunta, can vem antes da pessoa."
+   },
+   {
+    "errado": "Can I to go?",
+    "certo": "Can I go?",
+    "pt": "Posso ir?",
+    "porque": "Depois de can não vai to."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Posso abrir a janela?",
+    "ops": [
+     "I can open the window?",
+     "Can I open the window?",
+     "Can I to open the window?"
+    ],
+    "ok": 1,
+    "porque": "Can + I + ação."
+   },
+   {
+    "q": "Posso pagar em dinheiro?",
+    "ops": [
+     "Can I pay in cash?",
+     "Can I to pay cash?",
+     "I can pay cash?"
+    ],
+    "ok": 0,
+    "porque": "Can I pay in cash?"
+   },
+   {
+    "q": "O jeito mais educado:",
+    "ops": [
+     "Give me the menu.",
+     "Could I have the menu, please?",
+     "I want menu."
+    ],
+    "ok": 1,
+    "porque": "Could I... please? é o mais gentil."
+   }
+  ],
+  "licao": {
+   "id": "a1-u1-l3",
+   "nome": "Por favor, obrigado, desculpe",
+   "unidade": "A1 · Unidade 1 · Primeiros contatos"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-quero",
+   "como-se-diz-pode-repetir",
+   "como-se-diz-quanto-custa"
+  ]
+ },
+ "como-se-diz-eu-nao-sei": {
+  "titulo": "Como se diz “eu não sei” em inglês?",
+  "descricao": "“Eu não sei” em inglês é “I don't know” (fala-se ái dôun nôu). Exemplos com áudio, “eu sei” e a diferença entre know e can.",
+  "tema": "Frases do dia a dia",
+  "resposta": {
+   "pt": "Eu não sei",
+   "en": "I don't know",
+   "fala": "ái dôun nôu",
+   "voz": "tom"
+  },
+  "explica": "Know quer dizer saber, conhecer. O k do começo é mudo: know soa “nôu”. Para negar, use don't: I don't know.",
+  "exemplos": [
+   {
+    "en": "I don't know.",
+    "pt": "Eu não sei.",
+    "voz": "ana"
+   },
+   {
+    "en": "I know.",
+    "pt": "Eu sei.",
+    "voz": "tom"
+   },
+   {
+    "en": "I don't know his name.",
+    "pt": "Eu não sei o nome dele.",
+    "voz": "ana"
+   },
+   {
+    "en": "Do you know her?",
+    "pt": "Você conhece ela?",
+    "voz": "tom"
+   },
+   {
+    "en": "I don't know where it is.",
+    "pt": "Eu não sei onde fica.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "“Eu sei nadar” não é know",
+   "texto": "Saber fazer alguma coisa (uma habilidade) em inglês é can.",
+   "en": "I can swim.",
+   "pt": "Eu sei nadar.",
+   "fala": "ái kén suím",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "I no know.",
+    "certo": "I don't know.",
+    "pt": "Eu não sei.",
+    "porque": "O “não” com know é don't."
+   },
+   {
+    "errado": "I know swim.",
+    "certo": "I can swim.",
+    "pt": "Eu sei nadar.",
+    "porque": "Habilidade é can, não know."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Eu não sei.",
+    "ops": [
+     "I no know.",
+     "I don't know.",
+     "I not know."
+    ],
+    "ok": 1,
+    "porque": "I don't know."
+   },
+   {
+    "q": "Eu sei dirigir.",
+    "ops": [
+     "I know drive.",
+     "I can drive.",
+     "I know to drive."
+    ],
+    "ok": 1,
+    "porque": "Habilidade: can."
+   },
+   {
+    "q": "Você conhece o João?",
+    "ops": [
+     "Do you know João?",
+     "You know João?",
+     "Can you João?"
+    ],
+    "ok": 0,
+    "porque": "Conhecer pessoa também é know."
+   }
+  ],
+  "licao": {
+   "id": "a1-u12-l1",
+   "nome": "Eu sei, eu não sei",
+   "unidade": "A1 · Unidade 12 · Tempo livre"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-nao-entendo",
+   "como-se-diz-pode-repetir",
+   "como-se-diz-eu-posso"
+  ]
+ },
+ "como-se-diz-eu-nao-entendo": {
+  "titulo": "Como se diz “eu não entendo” em inglês?",
+  "descricao": "“Eu não entendo” em inglês é “I don't understand” (fala-se ái dôun ânder-sténd). Com áudio e as frases para pedir ajuda numa conversa.",
+  "tema": "Frases do dia a dia",
+  "resposta": {
+   "pt": "Eu não entendo",
+   "en": "I don't understand",
+   "fala": "ái dôun ânder-sténd",
+   "voz": "ana"
+  },
+  "explica": "Understand quer dizer entender. É a frase salva-vidas de quem está aprendendo: use sem vergonha, nativo está acostumado.",
+  "exemplos": [
+   {
+    "en": "I don't understand.",
+    "pt": "Eu não entendo.",
+    "voz": "ana"
+   },
+   {
+    "en": "I understand.",
+    "pt": "Eu entendo.",
+    "voz": "tom"
+   },
+   {
+    "en": "Sorry, I didn't understand.",
+    "pt": "Desculpa, eu não entendi.",
+    "voz": "ana"
+   },
+   {
+    "en": "Do you understand?",
+    "pt": "Você entende?",
+    "voz": "tom"
+   },
+   {
+    "en": "Can you speak slowly?",
+    "pt": "Pode falar devagar?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Para ganhar tempo numa conversa",
+   "texto": "Em vez de travar, peça para a pessoa explicar de outro jeito.",
+   "en": "What do you mean?",
+   "pt": "Como assim? O que você quer dizer?",
+   "fala": "uót du iú míin",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "I no understand.",
+    "certo": "I don't understand.",
+    "pt": "Eu não entendo.",
+    "porque": "Negativa com don't."
+   },
+   {
+    "errado": "I don't understood.",
+    "certo": "I didn't understand.",
+    "pt": "Eu não entendi.",
+    "porque": "No passado, o did leva a marca: didn't + understand."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Eu não entendi.",
+    "ops": [
+     "I don't understood.",
+     "I didn't understand.",
+     "I no understand."
+    ],
+    "ok": 1,
+    "porque": "Passado: didn't understand."
+   },
+   {
+    "q": "Você entende?",
+    "ops": [
+     "You understand?",
+     "Do you understand?",
+     "Are you understand?"
+    ],
+    "ok": 1,
+    "porque": "Pergunta com do."
+   },
+   {
+    "q": "Como assim?",
+    "ops": [
+     "What do you mean?",
+     "How so you mean?",
+     "What you say mean?"
+    ],
+    "ok": 0,
+    "porque": "What do you mean?"
+   }
+  ],
+  "licao": {
+   "id": "a1-u1-l3",
+   "nome": "Por favor, obrigado, desculpe",
+   "unidade": "A1 · Unidade 1 · Primeiros contatos"
+  },
+  "relacionadas": [
+   "como-se-diz-pode-repetir",
+   "como-se-diz-eu-nao-sei",
+   "como-se-diz-eu-posso"
+  ]
+ },
+ "como-se-diz-quanto-custa": {
+  "titulo": "Como se diz “quanto custa?” em inglês?",
+  "descricao": "“Quanto custa?” em inglês é “How much is it?” (fala-se ráu mâtch íz it?). Com áudio, como entender o preço e pedir desconto.",
+  "tema": "Inglês para viagem",
+  "resposta": {
+   "pt": "Quanto custa?",
+   "en": "How much is it?",
+   "fala": "ráu mâtch íz it?",
+   "voz": "tom"
+  },
+  "explica": "How much quer dizer quanto. Para várias coisas, troque is por are: How much are these?",
+  "exemplos": [
+   {
+    "en": "How much is it?",
+    "pt": "Quanto custa?",
+    "voz": "ana"
+   },
+   {
+    "en": "How much is this shirt?",
+    "pt": "Quanto custa essa camisa?",
+    "voz": "tom"
+   },
+   {
+    "en": "How much are these?",
+    "pt": "Quanto custam esses?",
+    "voz": "ana"
+   },
+   {
+    "en": "It's ten dollars.",
+    "pt": "Custa dez dólares.",
+    "voz": "tom"
+   },
+   {
+    "en": "That's too expensive.",
+    "pt": "Está caro demais.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Pedindo um precinho melhor",
+   "texto": "Em feiras e lojas pequenas dá para tentar. Pergunte com educação.",
+   "en": "Can you give me a discount?",
+   "pt": "Você me faz um desconto?",
+   "fala": "kén iú guív mi a dískaunt",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "How much costs?",
+    "certo": "How much is it?",
+    "pt": "Quanto custa?",
+    "porque": "O jeito natural é com is: How much is it?"
+   },
+   {
+    "errado": "How many is it?",
+    "certo": "How much is it?",
+    "pt": "Quanto custa?",
+    "porque": "Preço é sempre how much."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Quanto custa esse livro?",
+    "ops": [
+     "How much is this book?",
+     "How many is this book?",
+     "How much costs this book?"
+    ],
+    "ok": 0,
+    "porque": "How much is...?"
+   },
+   {
+    "q": "Quanto custam esses sapatos?",
+    "ops": [
+     "How much is these shoes?",
+     "How much are these shoes?",
+     "How many are these shoes?"
+    ],
+    "ok": 1,
+    "porque": "Plural: are."
+   },
+   {
+    "q": "Está caro demais.",
+    "ops": [
+     "It's too expensive.",
+     "It's very expensive too.",
+     "It's much expensive."
+    ],
+    "ok": 0,
+    "porque": "Too = demais."
+   }
+  ],
+  "licao": {
+   "id": "a1-u11-l2",
+   "nome": "Quanto custa?",
+   "unidade": "A1 · Unidade 11 · Roupas e compras"
+  },
+  "relacionadas": [
+   "como-se-diz-a-conta-por-favor",
+   "como-se-diz-onde-fica-o-banheiro",
+   "como-se-diz-estou-perdido"
+  ]
+ },
+ "como-se-diz-onde-fica-o-banheiro": {
+  "titulo": "Como se diz “onde fica o banheiro?” em inglês?",
+  "descricao": "“Onde fica o banheiro?” em inglês é “Where is the bathroom?” (fala-se uér iz dâ bét-rum?). Com áudio e as palavras certas para cada país.",
+  "tema": "Inglês para viagem",
+  "resposta": {
+   "pt": "Onde fica o banheiro?",
+   "en": "Where is the bathroom?",
+   "fala": "uér iz dâ bét-rum?",
+   "voz": "ana"
+  },
+  "explica": "Where quer dizer onde. A mesma estrutura serve para qualquer lugar: Where is the station? Onde fica a estação?",
+  "exemplos": [
+   {
+    "en": "Where is the bathroom?",
+    "pt": "Onde fica o banheiro?",
+    "voz": "ana"
+   },
+   {
+    "en": "Excuse me, where is the restroom?",
+    "pt": "Com licença, onde fica o banheiro?",
+    "voz": "tom"
+   },
+   {
+    "en": "It's on the left.",
+    "pt": "Fica à esquerda.",
+    "voz": "ana"
+   },
+   {
+    "en": "It's on the right.",
+    "pt": "Fica à direita.",
+    "voz": "tom"
+   },
+   {
+    "en": "Where is the exit?",
+    "pt": "Onde fica a saída?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Bathroom, restroom ou toilet?",
+   "texto": "Nos Estados Unidos, em lugares públicos, o mais comum é restroom. Na Inglaterra, toilets.",
+   "en": "Where are the toilets?",
+   "pt": "Onde ficam os banheiros?",
+   "fala": "uér ár dâ tóilets",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "Where stay the bathroom?",
+    "certo": "Where is the bathroom?",
+    "pt": "Onde fica o banheiro?",
+    "porque": "“Ficar” aqui é is, não stay."
+   },
+   {
+    "errado": "Where is bathroom?",
+    "certo": "Where is the bathroom?",
+    "pt": "Onde fica o banheiro?",
+    "porque": "Não esqueça o the."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Onde fica a estação?",
+    "ops": [
+     "Where stay the station?",
+     "Where is the station?",
+     "Where the station is?"
+    ],
+    "ok": 1,
+    "porque": "Where is the...?"
+   },
+   {
+    "q": "Fica à direita.",
+    "ops": [
+     "It's on the right.",
+     "It's in the right.",
+     "Stay on right."
+    ],
+    "ok": 0,
+    "porque": "On the right."
+   },
+   {
+    "q": "Nos EUA, em lugar público, o mais comum:",
+    "ops": [
+     "restroom",
+     "WC",
+     "bath"
+    ],
+    "ok": 0,
+    "porque": "Restroom."
+   }
+  ],
+  "licao": {
+   "id": "a1-u8-l3",
+   "nome": "Onde está?",
+   "unidade": "A1 · Unidade 8 · Lugares na cidade"
+  },
+  "relacionadas": [
+   "como-se-diz-estou-perdido",
+   "como-se-diz-quanto-custa",
+   "como-se-diz-a-conta-por-favor"
+  ]
+ },
+ "como-se-diz-a-conta-por-favor": {
+  "titulo": "Como se diz “a conta, por favor” em inglês?",
+  "descricao": "“A conta, por favor” em inglês é “The check, please” (fala-se dâ tchék, plíiz). Com áudio, a versão britânica e como pagar no cartão.",
+  "tema": "Inglês para viagem",
+  "resposta": {
+   "pt": "A conta, por favor",
+   "en": "The check, please",
+   "fala": "dâ tchék, plíiz",
+   "voz": "tom"
+  },
+  "explica": "Check é a conta do restaurante nos Estados Unidos. Na Inglaterra se diz the bill.",
+  "exemplos": [
+   {
+    "en": "The check, please.",
+    "pt": "A conta, por favor.",
+    "voz": "ana"
+   },
+   {
+    "en": "Can we have the bill, please?",
+    "pt": "Pode trazer a conta, por favor?",
+    "voz": "tom"
+   },
+   {
+    "en": "Can I pay by card?",
+    "pt": "Posso pagar no cartão?",
+    "voz": "ana"
+   },
+   {
+    "en": "Is the tip included?",
+    "pt": "A gorjeta está incluída?",
+    "voz": "tom"
+   },
+   {
+    "en": "Keep the change.",
+    "pt": "Pode ficar com o troco.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Gorjeta nos Estados Unidos",
+   "texto": "Lá a gorjeta não costuma vir na conta e é esperada: em geral de 15 a 20%. Vale perguntar.",
+   "en": "Is the service included?",
+   "pt": "O serviço está incluído?",
+   "fala": "íz dâ sêrvis inklúdid",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "The account, please.",
+    "certo": "The check, please.",
+    "pt": "A conta, por favor.",
+    "porque": "Account é conta de banco, não de restaurante."
+   },
+   {
+    "errado": "Can I pay with card?",
+    "certo": "Can I pay by card?",
+    "pt": "Posso pagar no cartão?",
+    "porque": "O natural é pay by card."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "A conta, por favor. (EUA)",
+    "ops": [
+     "The account, please.",
+     "The check, please.",
+     "The count, please."
+    ],
+    "ok": 1,
+    "porque": "Check."
+   },
+   {
+    "q": "Na Inglaterra, a conta é:",
+    "ops": [
+     "the bill",
+     "the ticket",
+     "the note"
+    ],
+    "ok": 0,
+    "porque": "The bill."
+   },
+   {
+    "q": "Pode ficar com o troco.",
+    "ops": [
+     "Keep the change.",
+     "Stay with the change.",
+     "Keep the rest money."
+    ],
+    "ok": 0,
+    "porque": "Keep the change."
+   }
+  ],
+  "licao": {
+   "id": "a1-u7-l3",
+   "nome": "Pedindo no café",
+   "unidade": "A1 · Unidade 7 · Comida e bebida"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-quero",
+   "como-se-diz-quanto-custa",
+   "como-se-diz-obrigado"
+  ]
+ },
+ "como-se-diz-estou-perdido": {
+  "titulo": "Como se diz “estou perdido” em inglês?",
+  "descricao": "“Estou perdido” em inglês é “I'm lost” (fala-se áim lóst). Com áudio e as frases para pedir direção na rua.",
+  "tema": "Inglês para viagem",
+  "resposta": {
+   "pt": "Estou perdido",
+   "en": "I'm lost",
+   "fala": "áim lóst",
+   "voz": "ana"
+  },
+  "explica": "I'm é a forma curta de I am. Lost serve para homem e mulher: perdido ou perdida.",
+  "exemplos": [
+   {
+    "en": "I'm lost.",
+    "pt": "Estou perdido.",
+    "voz": "ana"
+   },
+   {
+    "en": "Can you help me?",
+    "pt": "Você pode me ajudar?",
+    "voz": "tom"
+   },
+   {
+    "en": "How do I get to the station?",
+    "pt": "Como eu chego na estação?",
+    "voz": "ana"
+   },
+   {
+    "en": "Is it far?",
+    "pt": "É longe?",
+    "voz": "tom"
+   },
+   {
+    "en": "Go straight ahead.",
+    "pt": "Siga em frente.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Mostrando o mapa",
+   "texto": "Com o celular na mão, aponte e pergunte onde você está.",
+   "en": "Where are we on the map?",
+   "pt": "Onde estamos no mapa?",
+   "fala": "uér ár uí ón dâ mép",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "I am losted.",
+    "certo": "I'm lost.",
+    "pt": "Estou perdido.",
+    "porque": "Lost já é a forma certa, sem -ed."
+   },
+   {
+    "errado": "How I go to the station?",
+    "certo": "How do I get to the station?",
+    "pt": "Como eu chego na estação?",
+    "porque": "Pergunta precisa do do, e “chegar” é get to."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Estou perdida.",
+    "ops": [
+     "I'm lost.",
+     "I'm losted.",
+     "I have lost."
+    ],
+    "ok": 0,
+    "porque": "I'm lost."
+   },
+   {
+    "q": "É longe?",
+    "ops": [
+     "Is it far?",
+     "Is far?",
+     "It is long?"
+    ],
+    "ok": 0,
+    "porque": "Is it far?"
+   },
+   {
+    "q": "Siga em frente.",
+    "ops": [
+     "Go straight ahead.",
+     "Follow in front.",
+     "Go front."
+    ],
+    "ok": 0,
+    "porque": "Go straight ahead."
+   }
+  ],
+  "licao": {
+   "id": "a1-u8-l8",
+   "nome": "Como chegar",
+   "unidade": "A1 · Unidade 8 · Lugares na cidade"
+  },
+  "relacionadas": [
+   "como-se-diz-onde-fica-o-banheiro",
+   "como-se-diz-pode-repetir",
+   "como-se-diz-quanto-custa"
+  ]
+ },
+ "como-se-diz-pode-repetir": {
+  "titulo": "Como se diz “pode repetir?” em inglês?",
+  "descricao": "“Pode repetir?” em inglês é “Can you repeat that?” (fala-se kén iú ripít dét?). Com áudio e o jeito educado de pedir para falarem devagar.",
+  "tema": "Inglês para viagem",
+  "resposta": {
+   "pt": "Pode repetir?",
+   "en": "Can you repeat that?",
+   "fala": "kén iú ripít dét?",
+   "voz": "tom"
+  },
+  "explica": "Can you...? é o jeito simples de pedir algo para alguém. Serve para quase tudo: Can you help me? Can you speak slowly?",
+  "exemplos": [
+   {
+    "en": "Can you repeat that?",
+    "pt": "Pode repetir?",
+    "voz": "ana"
+   },
+   {
+    "en": "Sorry?",
+    "pt": "Desculpa? (o que você disse?)",
+    "voz": "tom"
+   },
+   {
+    "en": "Slower, please.",
+    "pt": "Mais devagar, por favor.",
+    "voz": "ana"
+   },
+   {
+    "en": "Can you speak slowly?",
+    "pt": "Pode falar devagar?",
+    "voz": "tom"
+   },
+   {
+    "en": "Can you write it down?",
+    "pt": "Pode escrever para mim?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "O mais educado de todos",
+   "texto": "Com desconhecidos, could you soa ainda mais gentil.",
+   "en": "Could you say that again, please?",
+   "pt": "Poderia dizer de novo, por favor?",
+   "fala": "kúd iú sêi dét aguén, plíiz",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "Can you repeat?",
+    "certo": "Can you repeat that?",
+    "pt": "Pode repetir?",
+    "porque": "Em inglês, repeat pede um complemento: that."
+   },
+   {
+    "errado": "Speak more slow.",
+    "certo": "Speak more slowly.",
+    "pt": "Fale mais devagar.",
+    "porque": "Devagar (o jeito de falar) é slowly."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Pode repetir?",
+    "ops": [
+     "Can you repeat that?",
+     "You can repeat?",
+     "Can repeat?"
+    ],
+    "ok": 0,
+    "porque": "Can you repeat that?"
+   },
+   {
+    "q": "Pode falar devagar?",
+    "ops": [
+     "Can you speak slow?",
+     "Can you speak slowly?",
+     "Can you slowly speak?"
+    ],
+    "ok": 1,
+    "porque": "Slowly."
+   },
+   {
+    "q": "Mais educado:",
+    "ops": [
+     "Repeat!",
+     "Could you say that again, please?",
+     "Again."
+    ],
+    "ok": 1,
+    "porque": "Could you..., please?"
+   }
+  ],
+  "licao": {
+   "id": "a1-u1-l3",
+   "nome": "Por favor, obrigado, desculpe",
+   "unidade": "A1 · Unidade 1 · Primeiros contatos"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-nao-entendo",
+   "como-se-diz-eu-posso",
+   "como-se-diz-obrigado"
+  ]
+ },
+ "como-se-diz-obrigado": {
+  "titulo": "Como se diz “obrigado” e “de nada” em inglês?",
+  "descricao": "“Obrigado” em inglês é “Thank you” (fala-se thénk iú) e “de nada” é “You're welcome”. Com áudio e o jeito certo de pronunciar o th.",
+  "tema": "Inglês para viagem",
+  "resposta": {
+   "pt": "Obrigado / obrigada",
+   "en": "Thank you",
+   "fala": "thénk iú",
+   "voz": "ana"
+  },
+  "explica": "Thank you serve para homem e mulher. O th é a língua encostada nos dentes da frente, soprando de leve. Não é “tenk” nem “fenk”.",
+  "exemplos": [
+   {
+    "en": "Thank you.",
+    "pt": "Obrigado.",
+    "voz": "ana"
+   },
+   {
+    "en": "Thanks a lot.",
+    "pt": "Muito obrigado.",
+    "voz": "tom"
+   },
+   {
+    "en": "You're welcome.",
+    "pt": "De nada.",
+    "voz": "ana"
+   },
+   {
+    "en": "No problem.",
+    "pt": "Imagina, sem problema.",
+    "voz": "tom"
+   },
+   {
+    "en": "Thank you for your help.",
+    "pt": "Obrigado pela sua ajuda.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Respostas que o nativo usa",
+   "texto": "Além de You're welcome, é muito comum ouvir No problem, Sure ou My pleasure (num hotel ou restaurante).",
+   "en": "My pleasure.",
+   "pt": "Foi um prazer. (de nada)",
+   "fala": "mái plêjer",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "Thank you for help me.",
+    "certo": "Thank you for helping me.",
+    "pt": "Obrigado por me ajudar.",
+    "porque": "Depois de for, o verbo vai com -ing."
+   },
+   {
+    "errado": "Of nothing.",
+    "certo": "You're welcome.",
+    "pt": "De nada.",
+    "porque": "“De nada” traduzido ao pé da letra não existe."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "De nada.",
+    "ops": [
+     "Of nothing.",
+     "You're welcome.",
+     "For nothing."
+    ],
+    "ok": 1,
+    "porque": "You're welcome."
+   },
+   {
+    "q": "Obrigado por vir.",
+    "ops": [
+     "Thank you for coming.",
+     "Thank you for come.",
+     "Thank you to come."
+    ],
+    "ok": 0,
+    "porque": "For + -ing."
+   },
+   {
+    "q": "Muito obrigado.",
+    "ops": [
+     "Thanks a lot.",
+     "Thank very much you.",
+     "Many thank."
+    ],
+    "ok": 0,
+    "porque": "Thanks a lot (ou Thank you very much)."
+   }
+  ],
+  "licao": {
+   "id": "a1-u1-l3",
+   "nome": "Por favor, obrigado, desculpe",
+   "unidade": "A1 · Unidade 1 · Primeiros contatos"
+  },
+  "relacionadas": [
+   "como-se-diz-pode-repetir",
+   "como-se-diz-a-conta-por-favor",
+   "como-se-diz-eu-posso"
+  ]
+ },
+ "como-se-diz-eu-tenho-20-anos": {
+  "titulo": "Como se diz “eu tenho 20 anos” em inglês?",
+  "descricao": "“Eu tenho 20 anos” em inglês é “I'm 20 years old”, e não “I have 20 years”. Entenda o porquê, com áudio e exemplos.",
+  "tema": "Erros comuns",
+  "resposta": {
+   "pt": "Eu tenho 20 anos",
+   "en": "I'm 20 years old",
+   "fala": "áim tuênti íars ôuld",
+   "voz": "tom"
+  },
+  "explica": "Em inglês, idade não é algo que você tem, é algo que você é. Por isso usa I am (I'm). Pode parar no número: I'm 20.",
+  "exemplos": [
+   {
+    "en": "I'm 20.",
+    "pt": "Eu tenho 20 anos.",
+    "voz": "ana"
+   },
+   {
+    "en": "How old are you?",
+    "pt": "Quantos anos você tem?",
+    "voz": "tom"
+   },
+   {
+    "en": "She is 35 years old.",
+    "pt": "Ela tem 35 anos.",
+    "voz": "ana"
+   },
+   {
+    "en": "My son is five.",
+    "pt": "Meu filho tem cinco anos.",
+    "voz": "tom"
+   },
+   {
+    "en": "How old is your mother?",
+    "pt": "Quantos anos tem sua mãe?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Aniversário",
+   "texto": "Para contar que fez aniversário, use o passado de turn (virar).",
+   "en": "I just turned 30.",
+   "pt": "Acabei de fazer 30.",
+   "fala": "ái djâst târnd thâri",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "I have 20 years.",
+    "certo": "I'm 20 years old.",
+    "pt": "Eu tenho 20 anos.",
+    "porque": "Idade usa o verbo be (ser/estar), nunca have."
+   },
+   {
+    "errado": "How many years you have?",
+    "certo": "How old are you?",
+    "pt": "Quantos anos você tem?",
+    "porque": "A pergunta de idade é How old are you?"
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Eu tenho 25 anos.",
+    "ops": [
+     "I have 25 years.",
+     "I'm 25 years old.",
+     "I have 25 years old."
+    ],
+    "ok": 1,
+    "porque": "I am + idade."
+   },
+   {
+    "q": "Quantos anos você tem?",
+    "ops": [
+     "How many years you have?",
+     "How old are you?",
+     "How old you have?"
+    ],
+    "ok": 1,
+    "porque": "How old are you?"
+   },
+   {
+    "q": "Ele tem 40 anos.",
+    "ops": [
+     "He has 40 years.",
+     "He is 40.",
+     "He have 40."
+    ],
+    "ok": 1,
+    "porque": "He is 40."
+   }
+  ],
+  "licao": {
+   "id": "a1-u3-l3",
+   "nome": "Quantos anos você tem?",
+   "unidade": "A1 · Unidade 3 · Números e idade"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-tenho",
+   "there-is-ou-have",
+   "pretend-nao-e-pretender"
+  ]
+ },
+ "there-is-ou-have": {
+  "titulo": "“Tem” em inglês: there is ou have?",
+  "descricao": "Quando “tem” quer dizer “existe”, o inglês usa there is / there are, e não have. Veja a diferença com exemplos e áudio.",
+  "tema": "Erros comuns",
+  "resposta": {
+   "pt": "Tem um café aqui perto",
+   "en": "There is a café near here",
+   "fala": "dér iz a kafêi níar rír",
+   "voz": "ana"
+  },
+  "explica": "Have é ter, possuir: I have a car. Quando “tem” é “existe” (tem gente, tem um banco, tem problema), o inglês usa there is para uma coisa e there are para várias.",
+  "exemplos": [
+   {
+    "en": "There is a bank on this street.",
+    "pt": "Tem um banco nessa rua.",
+    "voz": "ana"
+   },
+   {
+    "en": "There are many people here.",
+    "pt": "Tem muita gente aqui.",
+    "voz": "tom"
+   },
+   {
+    "en": "Is there a pharmacy near here?",
+    "pt": "Tem uma farmácia aqui perto?",
+    "voz": "ana"
+   },
+   {
+    "en": "There isn't any milk.",
+    "pt": "Não tem leite.",
+    "voz": "tom"
+   },
+   {
+    "en": "I have a question.",
+    "pt": "Eu tenho uma pergunta.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Teste rápido para não errar",
+   "texto": "Troque “tem” por “existe”. Se a frase continua fazendo sentido, é there is.",
+   "en": "There is a problem.",
+   "pt": "Tem um problema. (existe um problema)",
+   "fala": "dér iz a próblem",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "Have a bank here?",
+    "certo": "Is there a bank here?",
+    "pt": "Tem um banco aqui?",
+    "porque": "“Tem” de existir é there is."
+   },
+   {
+    "errado": "There have many people.",
+    "certo": "There are many people.",
+    "pt": "Tem muita gente.",
+    "porque": "Várias coisas: there are."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Tem um mercado aqui perto?",
+    "ops": [
+     "Have a market near here?",
+     "Is there a market near here?",
+     "There have a market?"
+    ],
+    "ok": 1,
+    "porque": "Is there...?"
+   },
+   {
+    "q": "Tem muitos carros na rua.",
+    "ops": [
+     "There are many cars on the street.",
+     "Have many cars on the street.",
+     "There is many cars."
+    ],
+    "ok": 0,
+    "porque": "Várias coisas: there are."
+   },
+   {
+    "q": "Eu tenho dois filhos.",
+    "ops": [
+     "There are two children.",
+     "I have two children.",
+     "Have two children."
+    ],
+    "ok": 1,
+    "porque": "Possuir: have."
+   }
+  ],
+  "licao": {
+   "id": "a1-u8-l2",
+   "nome": "There is, there are",
+   "unidade": "A1 · Unidade 8 · Lugares na cidade"
+  },
+  "relacionadas": [
+   "como-se-diz-eu-tenho",
+   "como-se-diz-eu-tenho-20-anos",
+   "como-se-diz-onde-fica-o-banheiro"
+  ]
+ },
+ "pretend-nao-e-pretender": {
+  "titulo": "Pretend não é “pretender”: o falso amigo do inglês",
+  "descricao": "Pretend em inglês quer dizer “fingir”, não “pretender”. Para dizer “eu pretendo”, use “I intend to” ou “I plan to”. Com áudio e exemplos.",
+  "tema": "Erros comuns",
+  "resposta": {
+   "pt": "Fingir",
+   "en": "Pretend",
+   "fala": "pri-ténd",
+   "voz": "tom"
+  },
+  "explica": "Pretend parece “pretender”, mas quer dizer fingir. É um falso cognato: parece, mas não é. Para planos, o inglês usa plan to ou intend to.",
+  "exemplos": [
+   {
+    "en": "He pretends to be sick.",
+    "pt": "Ele finge que está doente.",
+    "voz": "ana"
+   },
+   {
+    "en": "Don't pretend you didn't see me.",
+    "pt": "Não finge que não me viu.",
+    "voz": "tom"
+   },
+   {
+    "en": "I plan to travel next year.",
+    "pt": "Eu pretendo viajar ano que vem.",
+    "voz": "ana"
+   },
+   {
+    "en": "I intend to study English.",
+    "pt": "Eu pretendo estudar inglês.",
+    "voz": "tom"
+   },
+   {
+    "en": "I'm going to buy a car.",
+    "pt": "Eu vou comprar um carro.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "O jeito mais natural de falar de planos",
+   "texto": "No dia a dia, o nativo usa muito going to para planos.",
+   "en": "I'm going to move next year.",
+   "pt": "Eu pretendo me mudar ano que vem.",
+   "fala": "áim gôuin tu múuv nékst íar",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "I pretend to travel to London.",
+    "certo": "I plan to travel to London.",
+    "pt": "Eu pretendo viajar para Londres.",
+    "porque": "Pretend é fingir. Planos: plan to."
+   },
+   {
+    "errado": "What do you pretend to do?",
+    "certo": "What do you plan to do?",
+    "pt": "O que você pretende fazer?",
+    "porque": "Mesma coisa: plan to."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Ele finge que não ouve.",
+    "ops": [
+     "He pretends he doesn't hear.",
+     "He intends he doesn't hear.",
+     "He plans he doesn't hear."
+    ],
+    "ok": 0,
+    "porque": "Fingir: pretend."
+   },
+   {
+    "q": "Eu pretendo estudar mais.",
+    "ops": [
+     "I pretend to study more.",
+     "I plan to study more.",
+     "I pretending study more."
+    ],
+    "ok": 1,
+    "porque": "Plano: plan to."
+   },
+   {
+    "q": "Pretend quer dizer:",
+    "ops": [
+     "pretender",
+     "fingir",
+     "prender"
+    ],
+    "ok": 1,
+    "porque": "Fingir."
+   }
+  ],
+  "licao": null,
+  "relacionadas": [
+   "actually-nao-e-atualmente",
+   "push-e-pull",
+   "como-se-diz-eu-tenho-20-anos"
+  ]
+ },
+ "actually-nao-e-atualmente": {
+  "titulo": "Actually não é “atualmente”: o que quer dizer",
+  "descricao": "Actually em inglês quer dizer “na verdade”, não “atualmente”. Para “atualmente”, use “currently” ou “nowadays”. Com áudio e exemplos.",
+  "tema": "Erros comuns",
+  "resposta": {
+   "pt": "Na verdade",
+   "en": "Actually",
+   "fala": "ék-tchuali",
+   "voz": "ana"
+  },
+  "explica": "Actually serve para corrigir ou trazer uma informação inesperada: na verdade, aliás. Para falar do presente, “atualmente” é currently ou nowadays.",
+  "exemplos": [
+   {
+    "en": "Actually, I'm from Brazil.",
+    "pt": "Na verdade, eu sou do Brasil.",
+    "voz": "ana"
+   },
+   {
+    "en": "I don't actually like coffee.",
+    "pt": "Na verdade eu não gosto de café.",
+    "voz": "tom"
+   },
+   {
+    "en": "I currently work from home.",
+    "pt": "Atualmente eu trabalho de casa.",
+    "voz": "ana"
+   },
+   {
+    "en": "Nowadays everybody has a phone.",
+    "pt": "Hoje em dia todo mundo tem celular.",
+    "voz": "tom"
+   },
+   {
+    "en": "Is it actually true?",
+    "pt": "Isso é verdade mesmo?",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "Outros falsos amigos parecidos",
+   "texto": "Eventually é “no fim das contas”, não “eventualmente”. E library é biblioteca, não livraria.",
+   "en": "Eventually, he found a job.",
+   "pt": "No fim, ele conseguiu um emprego.",
+   "fala": "ivéntchuali, rí fáund a djób",
+   "voz": "tom"
+  },
+  "erros": [
+   {
+    "errado": "Actually I work in a bank.",
+    "certo": "Currently I work in a bank.",
+    "pt": "Atualmente eu trabalho num banco.",
+    "porque": "Atualmente = currently. Actually = na verdade."
+   },
+   {
+    "errado": "Actually the prices are high.",
+    "certo": "Nowadays prices are high.",
+    "pt": "Atualmente os preços estão altos.",
+    "porque": "Para “hoje em dia”: nowadays."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Atualmente eu moro em São Paulo.",
+    "ops": [
+     "Actually I live in São Paulo.",
+     "I currently live in São Paulo.",
+     "Actual I live in São Paulo."
+    ],
+    "ok": 1,
+    "porque": "Currently."
+   },
+   {
+    "q": "Na verdade, eu não sei.",
+    "ops": [
+     "Actually, I don't know.",
+     "Currently, I don't know.",
+     "Nowadays, I don't know."
+    ],
+    "ok": 0,
+    "porque": "Actually."
+   },
+   {
+    "q": "Eventually quer dizer:",
+    "ops": [
+     "eventualmente",
+     "no fim das contas",
+     "às vezes"
+    ],
+    "ok": 1,
+    "porque": "No fim das contas."
+   }
+  ],
+  "licao": null,
+  "relacionadas": [
+   "pretend-nao-e-pretender",
+   "push-e-pull",
+   "there-is-ou-have"
+  ]
+ },
+ "push-e-pull": {
+  "titulo": "Push ou pull: qual é empurrar e qual é puxar?",
+  "descricao": "Push é empurrar e pull é puxar, apesar de “pull” parecer “pular”. Veja um truque para nunca mais errar a porta, com áudio.",
+  "tema": "Erros comuns",
+  "resposta": {
+   "pt": "Empurre / Puxe",
+   "en": "Push / Pull",
+   "fala": "púch / púl",
+   "voz": "tom"
+  },
+  "explica": "Push é empurrar, pull é puxar. A confusão vem de pull parecer “pular” e push parecer “puxar”. É exatamente o contrário.",
+  "exemplos": [
+   {
+    "en": "Push the door.",
+    "pt": "Empurre a porta.",
+    "voz": "ana"
+   },
+   {
+    "en": "Pull the door.",
+    "pt": "Puxe a porta.",
+    "voz": "tom"
+   },
+   {
+    "en": "Don't push me!",
+    "pt": "Não me empurra!",
+    "voz": "ana"
+   },
+   {
+    "en": "Pull the chair.",
+    "pt": "Puxe a cadeira.",
+    "voz": "tom"
+   },
+   {
+    "en": "Push the button.",
+    "pt": "Aperte o botão.",
+    "voz": "ana"
+   }
+  ],
+  "dica": {
+   "titulo": "O truque para não errar",
+   "texto": "Push tem s de “sai de perto” (empurra para longe). Pull tem l de “lá pra cá” (puxa para você).",
+   "en": "Push to open.",
+   "pt": "Empurre para abrir.",
+   "fala": "púch tu ôupen",
+   "voz": "ana"
+  },
+  "erros": [
+   {
+    "errado": "Pull the door (querendo empurrar)",
+    "certo": "Push the door.",
+    "pt": "Empurre a porta.",
+    "porque": "Pull parece “pular”, mas é puxar."
+   },
+   {
+    "errado": "Push the rope (querendo puxar)",
+    "certo": "Pull the rope.",
+    "pt": "Puxe a corda.",
+    "porque": "Push parece “puxar”, mas é empurrar."
+   }
+  ],
+  "quiz": [
+   {
+    "q": "Na porta está escrito PULL. Você:",
+    "ops": [
+     "empurra",
+     "puxa",
+     "pula"
+    ],
+    "ok": 1,
+    "porque": "Pull = puxar."
+   },
+   {
+    "q": "Aperte o botão.",
+    "ops": [
+     "Pull the button.",
+     "Push the button.",
+     "Press in the button."
+    ],
+    "ok": 1,
+    "porque": "Push (ou press) the button."
+   },
+   {
+    "q": "Puxe a cadeira.",
+    "ops": [
+     "Push the chair.",
+     "Pull the chair.",
+     "Pool the chair."
+    ],
+    "ok": 1,
+    "porque": "Pull."
+   }
+  ],
+  "licao": null,
+  "relacionadas": [
+   "pretend-nao-e-pretender",
+   "actually-nao-e-atualmente",
+   "como-se-diz-eu-tenho-20-anos"
+  ]
+ }
+}

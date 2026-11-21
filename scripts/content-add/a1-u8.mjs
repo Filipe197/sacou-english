@@ -12,7 +12,7 @@ addLessons('a1/unit-08.json', {
     ['bus / train', 'ônibus / trem'],
     ['taxi / bike', 'táxi / bicicleta'],
     ['by bus', 'de ônibus'],
-    ['turn left / turn right', 'vire à esquerda / à direita'],
+    ['turn left / turn right', 'vire à esquerda / vire à direita'],
     ['straight on', 'em frente'],
     ['corner', 'esquina'],
     ['far', 'longe'],

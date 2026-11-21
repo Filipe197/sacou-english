@@ -23,7 +23,15 @@ function addPT(pt, en) {
   }
 }
 
-for (const u of UNITS) for (const [en, pt] of u.words || []) { addEN(en, pt); addPT(pt, en); }
+// Pares da lista da unidade ("boyfriend / girlfriend" = "namorado / namorada"): cada palavra
+// fica com a sua tradução (boyfriend = namorado), nunca com o par inteiro.
+// Só casa por posição quando os dois lados têm o mesmo número de partes.
+export function pares(en, pt) {
+  const e = String(en).split(' / '), p = String(pt).split(' / ');
+  return e.length > 1 && e.length === p.length ? e.map((x, i) => [x, p[i]]) : e.map(x => [x, String(pt)]);
+}
+
+for (const u of UNITS) for (const [en, pt] of u.words || []) for (const [e, p] of pares(en, pt)) { addEN(e, p); addPT(p, e); }
 for (const [en, pt] of Object.entries(DICT)) { addEN(en, pt); addPT(pt.split(' / ')[0], en); }
 // Pares dos exercícios de ligar e palavras novas dependem dos exercícios, que chegam
 // depois da abertura (loadContent): são montados na primeira consulta com tudo carregado.
@@ -32,7 +40,7 @@ function build() {
   if (built || !isContentReady()) return;
   built = true;
   for (const u of UNITS) for (const l of u.lessons) for (const it of l.items) if (it.type === 'match') for (const [en, pt] of it.pairs) {
-    if (!/^\d+$/.test(pt)) { addEN(en, pt); addPT(pt, en); }
+    if (!/^\d+$/.test(pt)) for (const [e, p] of pares(en, pt)) { addEN(e, p); addPT(p, e); }
   }
   buildNewWords();
 }
@@ -89,7 +97,7 @@ const NEW_WORDS = new Map(); // itemId -> [{en, pt}]
 function buildNewWords() {
   const seen = new Set();
   for (const l of LESSONS) {
-    const vocab = (l.unit.words || []).flatMap(([en, pt]) => String(en).split(' / ').map(e => ({ en: e.replace(/\?$/, ''), pt, key: clean(e) })));
+    const vocab = (l.unit.words || []).flatMap(([en, pt]) => pares(en, pt).map(([e, p]) => ({ en: e.replace(/\?$/, ''), pt: p, key: clean(e) })));
     for (const it of l.items) {
       const txt = itemEnglish(it, l);
       const fresh = vocab.filter(v => !seen.has(v.key) && txt.includes(' ' + v.key + ' '));

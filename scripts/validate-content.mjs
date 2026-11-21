@@ -68,7 +68,14 @@ for (const { f, u, rank } of units) {
     }
   };
 
-  for (const [en, pt] of u.words || []) { if (!pt) err(W, `palavra "${en}" sem tradução`); checkEn(`${W} words`, en); }
+  for (const [en, pt] of u.words || []) {
+    if (!pt) err(W, `palavra "${en}" sem tradução`);
+    checkEn(`${W} words`, en);
+    // par "boyfriend / girlfriend" = "namorado / namorada": os dois lados precisam ter o mesmo número de partes,
+    // senão a dica de palavra mostra a tradução errada (ex.: boyfriend = namorado / namorada)
+    const ne = String(en).split(" / ").length, np = String(pt).split(" / ").length;
+    if (ne > 1 && np > 1 && ne !== np) err(W, `palavra "${en}" = "${pt}": o inglês tem ${ne} partes e o português ${np}`);
+  }
   for (const p of u.guide?.points || []) if (p.en) checkEn(`${W} guide`, p.en);
 
   for (const l of u.lessons || []) {

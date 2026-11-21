@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "validate": "node scripts/validate-content.mjs && node scripts/validate-games.mjs",
-    "build": "node scripts/validate-content.mjs && node scripts/coverage-cefr.mjs && node scripts/validate-games.mjs && node scripts/check-api.mjs && vite build && node scripts/build-app-bundle.mjs",
+    "build": "node scripts/validate-content.mjs && node scripts/coverage-cefr.mjs && node scripts/validate-games.mjs && node scripts/check-api.mjs && vite build && node scripts/prerender-ingles.mjs && node scripts/build-app-bundle.mjs",
     "test": "node tests/unit/trail-rules.mjs && node tests/e2e/smoke.mjs && node tests/e2e/recovery.mjs",
     "test:recovery": "node tests/e2e/recovery.mjs",
     "preview": "vite preview",

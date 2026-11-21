@@ -2,6 +2,16 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../lib/auth.jsx';
 import { Icon, Logo, Fire } from '../components/ui.jsx';
 
+// amostra das páginas públicas /ingles (a lista completa fica em src/seo/paginas.json)
+const FRASES = [
+  ['como-se-diz-eu-quero', 'Eu quero', 'I want', 'ái uánt'],
+  ['como-se-diz-quanto-custa', 'Quanto custa?', 'How much is it?', 'ráu mâtch íz it?'],
+  ['como-se-diz-eu-tenho-20-anos', 'Eu tenho 20 anos', "I'm 20 years old", 'áim tuênti íars ôuld'],
+  ['como-se-diz-onde-fica-o-banheiro', 'Onde fica o banheiro?', 'Where is the bathroom?', 'uér iz dâ bét-rum?'],
+  ['pretend-nao-e-pretender', 'Fingir', 'Pretend', 'pri-ténd'],
+  ['como-se-diz-obrigado', 'Obrigado', 'Thank you', 'thénk iú'],
+];
+
 const LEVELS = [
   ['A1', 'Iniciante', 'Se apresentar, cumprimentar e fazer perguntas simples.'],
   ['A2', 'Básico', 'Falar da rotina, fazer compras e pedir informações.'],
@@ -32,6 +42,7 @@ export default function Landing() {
               <a className="plain hide-m" href="#como">Como funciona</a>
               <a className="plain hide-m" href="#niveis">Níveis</a>
               <Link className="plain hide-m" to="/sobre">Sobre</Link>
+              <Link className="plain hide-m" to="/ingles">Dicas rápidas</Link>
               <Link className="plain hide-m" to="/baixar">Baixar app</Link>
               <Link className="plain hide-m nav-heart" to="/apoie">Apoie 💜</Link>
               {session
@@ -170,6 +181,19 @@ export default function Landing() {
 
       <section className="section">
         <div className="wrap">
+          <h2 style={{ marginBottom: 8 }}>Aprenda agora, sem cadastro.</h2>
+          <p className="muted" style={{ margin: '0 0 24px', fontSize: 17 }}>Como se diz em inglês? Pronúncia do jeito que a gente lê, com áudio e teste rápido.</p>
+          <div className="ig-mini-grid land-frases">
+            {FRASES.map(([slug, pt, en, fala]) => (
+              <Link key={slug} to={`/ingles/${slug}`} className="ig-mini"><b>{pt}</b><i>{en}</i><span>🗣️ {fala}</span></Link>
+            ))}
+          </div>
+          <p style={{ marginTop: 18 }}><Link to="/ingles" style={{ fontWeight: 700 }}>Ver todas as frases e dicas →</Link></p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap">
           <div className="cta-band">
             <div style={{ maxWidth: 640 }}>
               <h2 style={{ margin: '0 0 12px' }}>Sua primeira lição está a 1 minuto daqui.</h2>
@@ -183,7 +207,7 @@ export default function Landing() {
       <footer className="footer">
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', fontSize: 14, color: 'var(--text3)' }}>
           <span>Sacou English · Inglês explicado do zero à fluência</span>
-          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/sobre">Sobre</Link><Link to="/baixar">Baixar o app</Link><Link to="/apoie">Apoie</Link><Link to="/creditos">Fontes e créditos</Link><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></span>
+          <span style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}><a href="#como">Como funciona</a><a href="#niveis">Níveis</a><Link to="/sobre">Sobre</Link><Link to="/ingles">Frases e dicas</Link><Link to="/baixar">Baixar o app</Link><Link to="/apoie">Apoie</Link><Link to="/creditos">Fontes e créditos</Link><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link></span>
         </div>
       </footer>
     </div>
