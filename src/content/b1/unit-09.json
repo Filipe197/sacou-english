@@ -62,6 +62,22 @@
   [
    "paint",
    "pintar, tinta"
+  ],
+  [
+   "network",
+   "rede"
+  ],
+  [
+   "access",
+   "acesso"
+  ],
+  [
+   "link",
+   "link, ligação"
+  ],
+  [
+   "digital",
+   "digital"
   ]
  ],
  "guide": {
@@ -554,6 +570,109 @@
       "didn't sleep": "Para um período que continua (this week), o natural é o present perfect.",
       "don't sleep": "Seria um hábito geral."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u9-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u9l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "network",
+       "rede"
+      ],
+      [
+       "access",
+       "acesso"
+      ],
+      [
+       "link",
+       "ligação"
+      ],
+      [
+       "digital",
+       "digital"
+      ]
+     ],
+     "why": "\"Access\" também é verbo: access the internet."
+    },
+    {
+     "id": "b1u9l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I can't ___ my email from here.",
+     "pt": "Não consigo acessar meu e-mail daqui.",
+     "options": [
+      "access",
+      "link",
+      "network"
+     ],
+     "answer": "access",
+     "why": "\"Access\" = acessar.",
+     "wrong": {
+      "link": "\"Link\" = ligar, conectar.",
+      "network": "\"Network\" = rede."
+     }
+    },
+    {
+     "id": "b1u9l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Click on the ___ to see the photos.",
+     "pt": "Clique no link para ver as fotos.",
+     "options": [
+      "link",
+      "access",
+      "digital"
+     ],
+     "answer": "link",
+     "why": "\"Click on the link\" = clique no link.",
+     "wrong": {
+      "access": "\"Access\" = acesso.",
+      "digital": "\"Digital\" é adjetivo."
+     }
+    },
+    {
+     "id": "b1u9l11-4",
+     "type": "meaning",
+     "en": "The phone network is down.",
+     "options": [
+      "A rede do celular está fora do ar.",
+      "O celular está sem bateria.",
+      "O sinal está ótimo."
+     ],
+     "answer": "A rede do celular está fora do ar.",
+     "why": "\"Be down\" = estar fora do ar."
+    },
+    {
+     "id": "b1u9l11-5",
+     "type": "build",
+     "pt": "Hoje em dia tudo é digital.",
+     "answer": "Nowadays everything is digital",
+     "extra": [
+      "every",
+      "are"
+     ],
+     "display": "Nowadays, everything is digital.",
+     "why": "\"Everything\" é singular: everything is."
+    },
+    {
+     "id": "b1u9l11-6",
+     "type": "listen",
+     "en": "Do you have access to the internet?",
+     "options": [
+      "Você tem acesso à internet?",
+      "Você usa muito a internet?",
+      "A internet está lenta?"
+     ],
+     "answer": "Você tem acesso à internet?",
+     "why": "\"Access to\" = acesso a."
     }
    ]
   },

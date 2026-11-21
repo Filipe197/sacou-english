@@ -54,6 +54,22 @@
   [
    "complain",
    "reclamar"
+  ],
+  [
+   "existing",
+   "existente, atual"
+  ],
+  [
+   "developing",
+   "em desenvolvimento"
+  ],
+  [
+   "growing",
+   "crescente"
+  ],
+  [
+   "remaining",
+   "restante"
   ]
  ],
  "guide": {
@@ -526,6 +542,109 @@
       "I'd rather to walk.": "Sem \"to\".",
       "I'd rather walking.": "Sem -ing."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u13-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u13l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "existing",
+       "existente"
+      ],
+      [
+       "developing",
+       "em desenvolvimento"
+      ],
+      [
+       "growing",
+       "crescente"
+      ],
+      [
+       "remaining",
+       "restante"
+      ]
+     ],
+     "why": "Palavras em -ing também funcionam como adjetivo: a growing city."
+    },
+    {
+     "id": "b2u13l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We can use the ___ money for the party.",
+     "pt": "Podemos usar o dinheiro restante para a festa.",
+     "options": [
+      "remaining",
+      "growing",
+      "existing"
+     ],
+     "answer": "remaining",
+     "why": "\"Remaining\" = o que sobrou, restante.",
+     "wrong": {
+      "growing": "\"Growing\" = crescente.",
+      "existing": "\"Existing\" = que já existe."
+     }
+    },
+    {
+     "id": "b2u13l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There is a ___ interest in learning languages.",
+     "pt": "Há um interesse crescente em aprender idiomas.",
+     "options": [
+      "growing",
+      "remaining",
+      "developed"
+     ],
+     "answer": "growing",
+     "why": "\"Growing\" = crescente, que está aumentando.",
+     "wrong": {
+      "remaining": "\"Remaining\" = restante.",
+      "developed": "\"Developed\" = desenvolvido, já pronto."
+     }
+    },
+    {
+     "id": "b2u13l11-4",
+     "type": "meaning",
+     "en": "Brazil is a developing country.",
+     "options": [
+      "O Brasil é um país em desenvolvimento.",
+      "O Brasil é um país rico.",
+      "O Brasil é um país pequeno."
+     ],
+     "answer": "O Brasil é um país em desenvolvimento.",
+     "why": "\"Developing country\" = país em desenvolvimento."
+    },
+    {
+     "id": "b2u13l11-5",
+     "type": "build",
+     "pt": "Vamos melhorar o sistema que já existe.",
+     "answer": "We're going to improve the existing system",
+     "extra": [
+      "exist",
+      "improving"
+     ],
+     "display": "We're going to improve the existing system.",
+     "why": "\"Existing\" = que já existe, atual."
+    },
+    {
+     "id": "b2u13l11-6",
+     "type": "listen",
+     "en": "The remaining tickets are very expensive.",
+     "options": [
+      "Os ingressos que sobraram são muito caros.",
+      "Os ingressos acabaram.",
+      "Os ingressos são grátis."
+     ],
+     "answer": "Os ingressos que sobraram são muito caros.",
+     "why": "\"Remaining\" = restante."
     }
    ]
   },

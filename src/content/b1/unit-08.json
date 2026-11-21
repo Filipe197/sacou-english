@@ -108,6 +108,22 @@
   [
    "ridiculous",
    "ridículo(a), absurdo(a)"
+  ],
+  [
+   "election",
+   "eleição"
+  ],
+  [
+   "politics",
+   "política"
+  ],
+  [
+   "council",
+   "câmara, conselho"
+  ],
+  [
+   "majority",
+   "maioria"
   ]
  ],
  "guide": {
@@ -540,6 +556,109 @@
       "I see your point, but I'm not agree.": "\"Agree\" é verbo: I don't agree.",
       "I am agree. It depends of the job.": "\"I agree\" sem \"am\", e \"depends on\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u8-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u8l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "election",
+       "eleição"
+      ],
+      [
+       "politics",
+       "política"
+      ],
+      [
+       "council",
+       "câmara municipal"
+      ],
+      [
+       "majority",
+       "maioria"
+      ]
+     ],
+     "why": "\"Politics\" termina em -s mas é singular: politics is…"
+    },
+    {
+     "id": "b1u8l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ___ is next Sunday.",
+     "pt": "A eleição é no próximo domingo.",
+     "options": [
+      "election",
+      "council",
+      "majority"
+     ],
+     "answer": "election",
+     "why": "\"Election\" = eleição.",
+     "wrong": {
+      "council": "\"Council\" = conselho, câmara.",
+      "majority": "\"Majority\" = maioria."
+     }
+    },
+    {
+     "id": "b1u8l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ___ of people agree with the plan.",
+     "pt": "A maioria das pessoas concorda com o plano.",
+     "options": [
+      "majority",
+      "most",
+      "politics"
+     ],
+     "answer": "majority",
+     "why": "\"The majority of\" = a maioria de.",
+     "wrong": {
+      "most": "\"Most\" não leva \"the ... of\" assim: most people.",
+      "politics": "\"Politics\" = política."
+     }
+    },
+    {
+     "id": "b1u8l11-4",
+     "type": "meaning",
+     "en": "I'm not interested in politics.",
+     "options": [
+      "Não me interesso por política.",
+      "Eu trabalho com política.",
+      "Gosto muito de política."
+     ],
+     "answer": "Não me interesso por política.",
+     "why": "\"Interested in\" = interessado em."
+    },
+    {
+     "id": "b1u8l11-5",
+     "type": "build",
+     "pt": "A câmara vai construir um parque novo.",
+     "answer": "The council is going to build a new park",
+     "extra": [
+      "politics",
+      "built"
+     ],
+     "display": "The council is going to build a new park.",
+     "why": "\"Council\" = câmara municipal, conselho da cidade."
+    },
+    {
+     "id": "b1u8l11-6",
+     "type": "listen",
+     "en": "Who won the election?",
+     "options": [
+      "Quem ganhou a eleição?",
+      "Quando é a eleição?",
+      "Em quem você votou?"
+     ],
+     "answer": "Quem ganhou a eleição?",
+     "why": "\"Win an election\" = ganhar uma eleição."
     }
    ]
   },

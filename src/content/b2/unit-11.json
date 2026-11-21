@@ -54,6 +54,22 @@
   [
    "built",
    "construído(a)"
+  ],
+  [
+   "factor",
+   "fator"
+  ],
+  [
+   "phase",
+   "fase"
+  ],
+  [
+   "core",
+   "central, essencial"
+  ],
+  [
+   "perspective",
+   "perspectiva, ponto de vista"
   ]
  ],
  "guide": {
@@ -556,6 +572,109 @@
       ]
      ],
      "why": "\"Designed by\" e \"built by\" aparecem muito em textos sobre lugares famosos."
+    }
+   ]
+  },
+  {
+   "id": "b2-u11-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u11l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "factor",
+       "fator"
+      ],
+      [
+       "phase",
+       "fase"
+      ],
+      [
+       "core",
+       "central"
+      ],
+      [
+       "perspective",
+       "perspectiva"
+      ]
+     ],
+     "why": "\"From my perspective\" = do meu ponto de vista."
+    },
+    {
+     "id": "b2u11l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Don't worry, it's just a ___.",
+     "pt": "Não se preocupe, é só uma fase.",
+     "options": [
+      "phase",
+      "factor",
+      "core"
+     ],
+     "answer": "phase",
+     "why": "\"Just a phase\" = só uma fase.",
+     "wrong": {
+      "factor": "\"Factor\" = fator.",
+      "core": "\"Core\" = centro, essencial."
+     }
+    },
+    {
+     "id": "b2u11l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Price is an important ___ for most people.",
+     "pt": "O preço é um fator importante para a maioria das pessoas.",
+     "options": [
+      "factor",
+      "phase",
+      "perspective"
+     ],
+     "answer": "factor",
+     "why": "\"Factor\" = fator.",
+     "wrong": {
+      "phase": "\"Phase\" = fase.",
+      "perspective": "\"Perspective\" = ponto de vista."
+     }
+    },
+    {
+     "id": "b2u11l11-4",
+     "type": "meaning",
+     "en": "From my perspective, it was a good decision.",
+     "options": [
+      "Do meu ponto de vista, foi uma boa decisão.",
+      "Eu não concordo com a decisão.",
+      "Ainda não decidimos."
+     ],
+     "answer": "Do meu ponto de vista, foi uma boa decisão.",
+     "why": "\"From my perspective\" = do meu ponto de vista."
+    },
+    {
+     "id": "b2u11l11-5",
+     "type": "build",
+     "pt": "Esse é o problema central.",
+     "answer": "That's the core problem",
+     "extra": [
+      "center",
+      "factor"
+     ],
+     "display": "That's the core problem.",
+     "why": "\"Core\" = central, o mais importante."
+    },
+    {
+     "id": "b2u11l11-6",
+     "type": "listen",
+     "en": "The project has three phases.",
+     "options": [
+      "O projeto tem três fases.",
+      "O projeto vai levar três anos.",
+      "O projeto tem três pessoas."
+     ],
+     "answer": "O projeto tem três fases.",
+     "why": "\"Phase\" = fase, etapa."
     }
    ]
   },

@@ -98,6 +98,22 @@
   [
    "passport",
    "passaporte"
+  ],
+  [
+   "available",
+   "disponível"
+  ],
+  [
+   "various",
+   "vários(as), diversos(as)"
+  ],
+  [
+   "entire",
+   "inteiro(a)"
+  ],
+  [
+   "previous",
+   "anterior"
   ]
  ],
  "guide": {
@@ -533,6 +549,109 @@
       "Yes, I have. I have gone surfing in Bahia last year.": "Com \"last year\" (quando), use o passado simples: went.",
       "Yes, I did. I go surfing in Bahia.": "A pergunta é \"Have you...?\", a resposta curta é \"I have\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u1-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u1l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "available",
+       "disponível"
+      ],
+      [
+       "various",
+       "diversos"
+      ],
+      [
+       "entire",
+       "inteiro"
+      ],
+      [
+       "previous",
+       "anterior"
+      ]
+     ],
+     "why": "\"Entire\" é um jeito mais forte de dizer \"whole\": the entire day."
+    },
+    {
+     "id": "b1u1l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Sorry, the manager is not ___ right now.",
+     "pt": "Desculpe, o gerente não está disponível agora.",
+     "options": [
+      "available",
+      "previous",
+      "entire"
+     ],
+     "answer": "available",
+     "why": "\"Available\" = disponível (pessoa livre ou coisa que dá para usar).",
+     "wrong": {
+      "previous": "\"Previous\" = anterior.",
+      "entire": "\"Entire\" = inteiro."
+     }
+    },
+    {
+     "id": "b1u1l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I spent the ___ weekend at home.",
+     "pt": "Passei o fim de semana inteiro em casa.",
+     "options": [
+      "entire",
+      "various",
+      "available"
+     ],
+     "answer": "entire",
+     "why": "\"The entire weekend\" = o fim de semana inteiro.",
+     "wrong": {
+      "various": "\"Various\" vem antes de plural: various places.",
+      "available": "\"Available\" = disponível."
+     }
+    },
+    {
+     "id": "b1u1l11-4",
+     "type": "meaning",
+     "en": "She has lived in various countries.",
+     "options": [
+      "Ela já morou em vários países.",
+      "Ela nunca saiu do país.",
+      "Ela quer morar em outro país."
+     ],
+     "answer": "Ela já morou em vários países.",
+     "why": "\"Various\" = vários, diversos."
+    },
+    {
+     "id": "b1u1l11-5",
+     "type": "build",
+     "pt": "Meu emprego anterior era mais perto de casa.",
+     "answer": "My previous job was closer to home",
+     "extra": [
+      "last",
+      "near"
+     ],
+     "display": "My previous job was closer to home.",
+     "why": "\"Previous\" = anterior, o que veio antes."
+    },
+    {
+     "id": "b1u1l11-6",
+     "type": "listen",
+     "en": "Is this seat available?",
+     "options": [
+      "Este lugar está livre?",
+      "Este lugar é seu?",
+      "Posso trocar de lugar?"
+     ],
+     "answer": "Este lugar está livre?",
+     "why": "\"Is this seat available?\" = este lugar está disponível/livre?"
     }
    ]
   },

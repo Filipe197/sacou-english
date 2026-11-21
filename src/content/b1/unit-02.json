@@ -94,6 +94,22 @@
   [
    "deadline",
    "prazo"
+  ],
+  [
+   "including",
+   "incluindo"
+  ],
+  [
+   "per",
+   "por (cada)"
+  ],
+  [
+   "via",
+   "via, por meio de"
+  ],
+  [
+   "throughout",
+   "durante todo, por todo"
   ]
  ],
  "guide": {
@@ -525,6 +541,109 @@
       "For 2022. I made a lot of progress so far.": "\"For\" pede um período (for two years); 2022 é um ponto: since.",
       "Since two years. I make progress.": "\"Two years\" é período: for two years."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u2-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u2l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "including",
+       "incluindo"
+      ],
+      [
+       "per",
+       "por cada"
+      ],
+      [
+       "via",
+       "por meio de"
+      ],
+      [
+       "throughout",
+       "durante todo"
+      ]
+     ],
+     "why": "\"Per\" aparece em preços: 50 reais per person."
+    },
+    {
+     "id": "b1u2l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The tickets cost twenty dollars ___ person.",
+     "pt": "Os ingressos custam vinte dólares por pessoa.",
+     "options": [
+      "per",
+      "via",
+      "for each of"
+     ],
+     "answer": "per",
+     "why": "\"Per person\" = por pessoa.",
+     "wrong": {
+      "via": "\"Via\" = por meio de, passando por.",
+      "for each of": "Ficaria \"for each of person\": errado."
+     }
+    },
+    {
+     "id": "b1u2l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Everybody came, ___ my grandparents.",
+     "pt": "Todo mundo veio, incluindo meus avós.",
+     "options": [
+      "including",
+      "throughout",
+      "per"
+     ],
+     "answer": "including",
+     "why": "\"Including\" = incluindo.",
+     "wrong": {
+      "throughout": "\"Throughout\" = durante todo.",
+      "per": "\"Per\" = por cada."
+     }
+    },
+    {
+     "id": "b1u2l11-4",
+     "type": "meaning",
+     "en": "It rained throughout the night.",
+     "options": [
+      "Choveu a noite toda.",
+      "Choveu só um pouco à noite.",
+      "Parou de chover à noite."
+     ],
+     "answer": "Choveu a noite toda.",
+     "why": "\"Throughout the night\" = durante a noite toda."
+    },
+    {
+     "id": "b1u2l11-5",
+     "type": "build",
+     "pt": "Eu te mando o arquivo por e-mail.",
+     "answer": "I'll send you the file via email",
+     "extra": [
+      "sending",
+      "per"
+     ],
+     "display": "I'll send you the file via email.",
+     "why": "\"Via email\" = por e-mail."
+    },
+    {
+     "id": "b1u2l11-6",
+     "type": "listen",
+     "en": "The price includes breakfast.",
+     "options": [
+      "O preço inclui o café da manhã.",
+      "O café da manhã é pago à parte.",
+      "Não tem café da manhã."
+     ],
+     "answer": "O preço inclui o café da manhã.",
+     "why": "\"Include\" = incluir; \"including\" = incluindo."
     }
    ]
   },

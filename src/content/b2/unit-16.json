@@ -54,6 +54,22 @@
   [
    "basically",
    "basicamente"
+  ],
+  [
+   "injured",
+   "ferido(a), machucado(a)"
+  ],
+  [
+   "therapy",
+   "terapia"
+  ],
+  [
+   "suffering",
+   "sofrimento"
+  ],
+  [
+   "relief",
+   "alívio"
   ]
  ],
  "guide": {
@@ -539,6 +555,109 @@
       ]
      ],
      "why": "Conectores para organizar a conversa."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u16l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "injured",
+       "ferido"
+      ],
+      [
+       "therapy",
+       "terapia"
+      ],
+      [
+       "suffering",
+       "sofrimento"
+      ],
+      [
+       "relief",
+       "alívio"
+      ]
+     ],
+     "why": "\"What a relief!\" = que alívio!"
+    },
+    {
+     "id": "b2u16l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "You passed the test? What a ___!",
+     "pt": "Você passou na prova? Que alívio!",
+     "options": [
+      "relief",
+      "therapy",
+      "suffering"
+     ],
+     "answer": "relief",
+     "why": "\"What a relief!\" = que alívio!",
+     "wrong": {
+      "therapy": "\"Therapy\" = terapia.",
+      "suffering": "\"Suffering\" = sofrimento."
+     }
+    },
+    {
+     "id": "b2u16l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Two people were ___ in the accident.",
+     "pt": "Duas pessoas ficaram feridas no acidente.",
+     "options": [
+      "injured",
+      "relief",
+      "hurting"
+     ],
+     "answer": "injured",
+     "why": "\"Be injured\" = ficar ferido.",
+     "wrong": {
+      "relief": "\"Relief\" = alívio.",
+      "hurting": "Ficaria \"were hurting\": estavam sentindo dor."
+     }
+    },
+    {
+     "id": "b2u16l11-4",
+     "type": "meaning",
+     "en": "She goes to therapy once a week.",
+     "options": [
+      "Ela faz terapia uma vez por semana.",
+      "Ela vai ao médico todo dia.",
+      "Ela parou a terapia."
+     ],
+     "answer": "Ela faz terapia uma vez por semana.",
+     "why": "\"Go to therapy\" = fazer terapia."
+    },
+    {
+     "id": "b2u16l11-5",
+     "type": "build",
+     "pt": "O remédio diminuiu o sofrimento dele.",
+     "answer": "The medicine reduced his suffering",
+     "extra": [
+      "suffer",
+      "reduces"
+     ],
+     "display": "The medicine reduced his suffering.",
+     "why": "\"Suffering\" = sofrimento."
+    },
+    {
+     "id": "b2u16l11-6",
+     "type": "listen",
+     "en": "He can't play. He's injured.",
+     "options": [
+      "Ele não pode jogar. Está machucado.",
+      "Ele não quer jogar.",
+      "Ele vai jogar amanhã."
+     ],
+     "answer": "Ele não pode jogar. Está machucado.",
+     "why": "\"Injured\" = machucado, lesionado."
     }
    ]
   },

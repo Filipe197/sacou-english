@@ -94,6 +94,22 @@
   [
    "otherwise",
    "senão, caso contrário"
+  ],
+  [
+   "tax",
+   "imposto"
+  ],
+  [
+   "income",
+   "renda"
+  ],
+  [
+   "amount",
+   "quantia, quantidade"
+  ],
+  [
+   "paid",
+   "pago(a), remunerado(a)"
   ]
  ],
  "guide": {
@@ -525,6 +541,109 @@
       "Yes. If you won't, you get wet.": "O \"will\" fica fora da parte do \"if\".",
       "Yes. If you didn't, you would get wet.": "Isso é second conditional (imaginário)."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u4-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u4l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "tax",
+       "imposto"
+      ],
+      [
+       "income",
+       "renda"
+      ],
+      [
+       "amount",
+       "quantia"
+      ],
+      [
+       "paid",
+       "pago"
+      ]
+     ],
+     "why": "\"Amount\" se usa com coisas que não se contam: a large amount of money."
+    },
+    {
+     "id": "b1u4l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Do I have to pay ___ on this?",
+     "pt": "Preciso pagar imposto sobre isso?",
+     "options": [
+      "tax",
+      "income",
+      "amount"
+     ],
+     "answer": "tax",
+     "why": "\"Pay tax\" = pagar imposto.",
+     "wrong": {
+      "income": "\"Income\" = renda, o que você ganha.",
+      "amount": "\"Amount\" = quantia."
+     }
+    },
+    {
+     "id": "b1u4l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "That is a large ___ of money.",
+     "pt": "É uma grande quantia de dinheiro.",
+     "options": [
+      "amount",
+      "number",
+      "tax"
+     ],
+     "answer": "amount",
+     "why": "\"Amount of money\" = quantia de dinheiro.",
+     "wrong": {
+      "number": "\"Number\" é para coisas que se contam: a number of people.",
+      "tax": "\"Tax\" = imposto."
+     }
+    },
+    {
+     "id": "b1u4l11-4",
+     "type": "meaning",
+     "en": "Her income is higher than mine.",
+     "options": [
+      "A renda dela é maior que a minha.",
+      "Ela gasta mais do que eu.",
+      "Ela paga menos imposto."
+     ],
+     "answer": "A renda dela é maior que a minha.",
+     "why": "\"Income\" = renda, o que a pessoa ganha."
+    },
+    {
+     "id": "b1u4l11-5",
+     "type": "build",
+     "pt": "É um trabalho bem pago.",
+     "answer": "It's a well paid job",
+     "extra": [
+      "pay",
+      "good"
+     ],
+     "display": "It's a well-paid job.",
+     "why": "\"Well-paid\" = bem pago, bem remunerado."
+    },
+    {
+     "id": "b1u4l11-6",
+     "type": "listen",
+     "en": "I already paid the bill.",
+     "options": [
+      "Eu já paguei a conta.",
+      "Eu ainda não paguei a conta.",
+      "A conta está muito cara."
+     ],
+     "answer": "Eu já paguei a conta.",
+     "why": "\"Paid\" é o passado de \"pay\"."
     }
    ]
   },

@@ -82,6 +82,22 @@
   [
    "differently",
    "de outro jeito"
+  ],
+  [
+   "data",
+   "dados"
+  ],
+  [
+   "user",
+   "usuário(a)"
+  ],
+  [
+   "version",
+   "versão"
+  ],
+  [
+   "technical",
+   "técnico(a)"
   ]
  ],
  "guide": {
@@ -516,6 +532,109 @@
       "Oh no! You should left earlier.": "Falta o \"have\".",
       "Oh no! You should have leave earlier.": "Precisa do particípio: left."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u2-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u2l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "data",
+       "dados"
+      ],
+      [
+       "user",
+       "usuário"
+      ],
+      [
+       "version",
+       "versão"
+      ],
+      [
+       "technical",
+       "técnico"
+      ]
+     ],
+     "why": "\"Data\" é incontável no dia a dia: the data is ready."
+    },
+    {
+     "id": "b2u2l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Please update the program to the latest ___.",
+     "pt": "Por favor, atualize o programa para a versão mais recente.",
+     "options": [
+      "version",
+      "user",
+      "data"
+     ],
+     "answer": "version",
+     "why": "\"The latest version\" = a versão mais recente.",
+     "wrong": {
+      "user": "\"User\" = usuário.",
+      "data": "\"Data\" = dados."
+     }
+    },
+    {
+     "id": "b2u2l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We had some ___ problems during the meeting.",
+     "pt": "Tivemos alguns problemas técnicos durante a reunião.",
+     "options": [
+      "technical",
+      "technique",
+      "technology"
+     ],
+     "answer": "technical",
+     "why": "\"Technical\" é adjetivo: technical problems.",
+     "wrong": {
+      "technique": "\"Technique\" = técnica, jeito de fazer.",
+      "technology": "\"Technology\" = tecnologia."
+     }
+    },
+    {
+     "id": "b2u2l11-4",
+     "type": "meaning",
+     "en": "The website has more than a million users.",
+     "options": [
+      "O site tem mais de um milhão de usuários.",
+      "O site custa um milhão.",
+      "O site foi aberto uma vez."
+     ],
+     "answer": "O site tem mais de um milhão de usuários.",
+     "why": "\"User\" = usuário."
+    },
+    {
+     "id": "b2u2l11-5",
+     "type": "build",
+     "pt": "Eles guardam os nossos dados com segurança.",
+     "answer": "They keep our data safe",
+     "extra": [
+      "datas",
+      "safety"
+     ],
+     "display": "They keep our data safe.",
+     "why": "\"Data\" não tem plural com -s."
+    },
+    {
+     "id": "b2u2l11-6",
+     "type": "listen",
+     "en": "I prefer the old version.",
+     "options": [
+      "Prefiro a versão antiga.",
+      "A versão nova é melhor.",
+      "Não tenho a versão nova."
+     ],
+     "answer": "Prefiro a versão antiga.",
+     "why": "\"Version\" = versão."
     }
    ]
   },

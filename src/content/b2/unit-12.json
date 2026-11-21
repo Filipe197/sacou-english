@@ -62,6 +62,22 @@
   [
    "employment",
    "emprego, trabalho"
+  ],
+  [
+   "crew",
+   "tripulação, equipe"
+  ],
+  [
+   "aircraft",
+   "avião, aeronave"
+  ],
+  [
+   "route",
+   "rota, caminho"
+  ],
+  [
+   "shipping",
+   "frete, envio"
   ]
  ],
  "guide": {
@@ -545,6 +561,109 @@
      ],
      "answer": "A gentileza dela fez uma grande diferença.",
      "why": "\"Make a difference\" = fazer diferença."
+    }
+   ]
+  },
+  {
+   "id": "b2-u12-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u12l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "crew",
+       "tripulação"
+      ],
+      [
+       "aircraft",
+       "aeronave"
+      ],
+      [
+       "route",
+       "rota"
+      ],
+      [
+       "shipping",
+       "frete"
+      ]
+     ],
+     "why": "\"Aircraft\" não muda no plural: two aircraft."
+    },
+    {
+     "id": "b2u12l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Is ___ free if I buy two?",
+     "pt": "O frete é grátis se eu comprar dois?",
+     "options": [
+      "shipping",
+      "route",
+      "crew"
+     ],
+     "answer": "shipping",
+     "why": "\"Free shipping\" = frete grátis.",
+     "wrong": {
+      "route": "\"Route\" = rota.",
+      "crew": "\"Crew\" = tripulação."
+     }
+    },
+    {
+     "id": "b2u12l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ___ helped the passengers with their bags.",
+     "pt": "A tripulação ajudou os passageiros com as malas.",
+     "options": [
+      "crew",
+      "aircraft",
+      "shipping"
+     ],
+     "answer": "crew",
+     "why": "\"Crew\" = tripulação, equipe.",
+     "wrong": {
+      "aircraft": "\"Aircraft\" = avião.",
+      "shipping": "\"Shipping\" = frete."
+     }
+    },
+    {
+     "id": "b2u12l11-4",
+     "type": "meaning",
+     "en": "This is the fastest route to the airport.",
+     "options": [
+      "Este é o caminho mais rápido para o aeroporto.",
+      "O aeroporto fica muito longe.",
+      "O voo está atrasado."
+     ],
+     "answer": "Este é o caminho mais rápido para o aeroporto.",
+     "why": "\"Route\" = rota, caminho."
+    },
+    {
+     "id": "b2u12l11-5",
+     "type": "build",
+     "pt": "A aeronave pousou em segurança.",
+     "answer": "The aircraft landed safely",
+     "extra": [
+      "safe",
+      "lands"
+     ],
+     "display": "The aircraft landed safely.",
+     "why": "\"Land\" = pousar. \"Safely\" = em segurança."
+    },
+    {
+     "id": "b2u12l11-6",
+     "type": "listen",
+     "en": "Shipping takes five days.",
+     "options": [
+      "A entrega leva cinco dias.",
+      "A loja abre em cinco dias.",
+      "O produto chegou ontem."
+     ],
+     "answer": "A entrega leva cinco dias.",
+     "why": "\"Shipping\" = envio, frete."
     }
    ]
   },

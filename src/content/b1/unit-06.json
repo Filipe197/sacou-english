@@ -90,6 +90,22 @@
   [
    "cassette",
    "fita cassete"
+  ],
+  [
+   "pain",
+   "dor"
+  ],
+  [
+   "treatment",
+   "tratamento"
+  ],
+  [
+   "disease",
+   "doença"
+  ],
+  [
+   "skin",
+   "pele"
   ]
  ],
  "guide": {
@@ -522,6 +538,109 @@
       "Not any more. I use to play every day as a kid.": "Na afirmativa: used to.",
       "Not any more. I was used to play every day.": "\"Be used to\" é estar acostumado, e pediria -ing."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u6-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u6l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "pain",
+       "dor"
+      ],
+      [
+       "treatment",
+       "tratamento"
+      ],
+      [
+       "disease",
+       "doença"
+      ],
+      [
+       "skin",
+       "pele"
+      ]
+     ],
+     "why": "\"Pain\" é a dor em geral; \"headache\" é dor de cabeça."
+    },
+    {
+     "id": "b1u6l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I have a terrible ___ in my back.",
+     "pt": "Estou com uma dor horrível nas costas.",
+     "options": [
+      "pain",
+      "disease",
+      "skin"
+     ],
+     "answer": "pain",
+     "why": "\"A pain in my back\" = uma dor nas costas.",
+     "wrong": {
+      "disease": "\"Disease\" = doença.",
+      "skin": "\"Skin\" = pele."
+     }
+    },
+    {
+     "id": "b1u6l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Use sun cream to protect your ___.",
+     "pt": "Use protetor solar para proteger a sua pele.",
+     "options": [
+      "skin",
+      "pain",
+      "treatment"
+     ],
+     "answer": "skin",
+     "why": "\"Skin\" = pele (do corpo).",
+     "wrong": {
+      "pain": "\"Pain\" = dor.",
+      "treatment": "\"Treatment\" = tratamento."
+     }
+    },
+    {
+     "id": "b1u6l11-4",
+     "type": "meaning",
+     "en": "The treatment takes three months.",
+     "options": [
+      "O tratamento leva três meses.",
+      "A doença dura três meses.",
+      "Ele melhorou em três meses."
+     ],
+     "answer": "O tratamento leva três meses.",
+     "why": "\"Treatment\" = tratamento."
+    },
+    {
+     "id": "b1u6l11-5",
+     "type": "build",
+     "pt": "É uma doença muito rara.",
+     "answer": "It's a very rare disease",
+     "extra": [
+      "pain",
+      "rarely"
+     ],
+     "display": "It's a very rare disease.",
+     "why": "\"Disease\" = doença."
+    },
+    {
+     "id": "b1u6l11-6",
+     "type": "listen",
+     "en": "The pain is getting better.",
+     "options": [
+      "A dor está melhorando.",
+      "A dor está piorando.",
+      "Não sinto dor."
+     ],
+     "answer": "A dor está melhorando.",
+     "why": "\"Get better\" = melhorar."
     }
    ]
   },

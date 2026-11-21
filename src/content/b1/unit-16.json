@@ -62,6 +62,22 @@
   [
    "abroad",
    "no exterior"
+  ],
+  [
+   "location",
+   "localização, local"
+  ],
+  [
+   "distance",
+   "distância"
+  ],
+  [
+   "region",
+   "região"
+  ],
+  [
+   "southern",
+   "do sul"
   ]
  ],
  "guide": {
@@ -534,6 +550,109 @@
      ],
      "answer": "Você às vezes queria morar em outro país?",
      "why": "\"Do you ever wish\" = você às vezes deseja."
+    }
+   ]
+  },
+  {
+   "id": "b1-u16-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u16l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "location",
+       "localização"
+      ],
+      [
+       "distance",
+       "distância"
+      ],
+      [
+       "region",
+       "região"
+      ],
+      [
+       "southern",
+       "do sul"
+      ]
+     ],
+     "why": "\"Southern\", \"northern\": do sul, do norte."
+    },
+    {
+     "id": "b1u16l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The hotel is in a great ___, near the beach.",
+     "pt": "O hotel tem uma ótima localização, perto da praia.",
+     "options": [
+      "location",
+      "distance",
+      "region"
+     ],
+     "answer": "location",
+     "why": "\"Location\" = localização.",
+     "wrong": {
+      "distance": "\"Distance\" = distância.",
+      "region": "\"Region\" é uma área grande."
+     }
+    },
+    {
+     "id": "b1u16l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "What is the ___ from here to the station?",
+     "pt": "Qual é a distância daqui até a estação?",
+     "options": [
+      "distance",
+      "location",
+      "far"
+     ],
+     "answer": "distance",
+     "why": "\"The distance from ... to ...\" = a distância de ... até ...",
+     "wrong": {
+      "location": "\"Location\" = localização.",
+      "far": "\"Far\" é adjetivo: longe."
+     }
+    },
+    {
+     "id": "b1u16l11-4",
+     "type": "meaning",
+     "en": "It is very cold in the southern part of the country in winter.",
+     "options": [
+      "No inverno faz muito frio no sul do país.",
+      "O sul do país é sempre quente.",
+      "O norte do país é muito frio."
+     ],
+     "answer": "No inverno faz muito frio no sul do país.",
+     "why": "\"Southern\" = do sul."
+    },
+    {
+     "id": "b1u16l11-5",
+     "type": "build",
+     "pt": "Esta região é famosa pelo café.",
+     "answer": "This region is famous for its coffee",
+     "extra": [
+      "of",
+      "regions"
+     ],
+     "display": "This region is famous for its coffee.",
+     "why": "\"Famous for\" = famoso por."
+    },
+    {
+     "id": "b1u16l11-6",
+     "type": "listen",
+     "en": "We live in the same region.",
+     "options": [
+      "Moramos na mesma região.",
+      "Moramos longe um do outro.",
+      "Moramos na mesma rua."
+     ],
+     "answer": "Moramos na mesma região.",
+     "why": "\"Region\" = região."
     }
    ]
   },

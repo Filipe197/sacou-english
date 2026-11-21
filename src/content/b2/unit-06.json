@@ -86,6 +86,22 @@
   [
    "tend",
    "tender, costumar"
+  ],
+  [
+   "literally",
+   "literalmente"
+  ],
+  [
+   "actual",
+   "real, de verdade"
+  ],
+  [
+   "overall",
+   "no geral, total"
+  ],
+  [
+   "specifically",
+   "especificamente"
   ]
  ],
  "guide": {
@@ -512,6 +528,109 @@
       "It's never too late. You deserve trying again!": "\"Deserve\" pede \"to\".",
       "Never late. You deserve try.": "Faltam \"it's\", \"too\" e \"to\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u6-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u6l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "literally",
+       "literalmente"
+      ],
+      [
+       "actual",
+       "real"
+      ],
+      [
+       "overall",
+       "no geral"
+      ],
+      [
+       "specifically",
+       "especificamente"
+      ]
+     ],
+     "why": "Falso amigo: \"actual\" = real, verdadeiro. \"Atual\" é \"current\"."
+    },
+    {
+     "id": "b2u6l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ___ price was much higher than on the website.",
+     "pt": "O preço real era bem mais alto do que no site.",
+     "options": [
+      "actual",
+      "current",
+      "overall"
+     ],
+     "answer": "actual",
+     "why": "\"Actual\" = real, de verdade.",
+     "wrong": {
+      "current": "\"Current\" = atual, de agora.",
+      "overall": "\"Overall\" = total, no geral."
+     }
+    },
+    {
+     "id": "b2u6l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, the trip was great.",
+     "pt": "No geral, a viagem foi ótima.",
+     "options": [
+      "Overall",
+      "Literally",
+      "Specifically"
+     ],
+     "answer": "Overall",
+     "why": "\"Overall\" = no geral, de modo geral.",
+     "wrong": {
+      "Literally": "\"Literally\" = literalmente.",
+      "Specifically": "\"Specifically\" = especificamente."
+     }
+    },
+    {
+     "id": "b2u6l11-4",
+     "type": "meaning",
+     "en": "I literally ran to the station.",
+     "options": [
+      "Eu literalmente corri até a estação.",
+      "Fui de carro até a estação.",
+      "Perdi o trem."
+     ],
+     "answer": "Eu literalmente corri até a estação.",
+     "why": "\"Literally\" = literalmente."
+    },
+    {
+     "id": "b2u6l11-5",
+     "type": "build",
+     "pt": "Eu fiz este bolo especificamente para você.",
+     "answer": "I made this cake specifically for you",
+     "extra": [
+      "did",
+      "specific"
+     ],
+     "display": "I made this cake specifically for you.",
+     "why": "\"Specifically\" = especificamente, só para isso."
+    },
+    {
+     "id": "b2u6l11-6",
+     "type": "listen",
+     "en": "What is the actual problem?",
+     "options": [
+      "Qual é o problema real?",
+      "Qual é o problema atual?",
+      "Não tem problema."
+     ],
+     "answer": "Qual é o problema real?",
+     "why": "\"Actual\" = real, verdadeiro."
     }
    ]
   },

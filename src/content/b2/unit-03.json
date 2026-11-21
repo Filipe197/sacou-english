@@ -86,6 +86,22 @@
   [
    "rumour",
    "boato"
+  ],
+  [
+   "media",
+   "mídia, imprensa"
+  ],
+  [
+   "campaign",
+   "campanha"
+  ],
+  [
+   "marketing",
+   "marketing"
+  ],
+  [
+   "profile",
+   "perfil"
   ]
  ],
  "guide": {
@@ -520,6 +536,109 @@
       "No, he denied to leave.": "\"Deny\" + -ing, não \"to\".",
       "No, he said me no.": "\"Say\" não leva a pessoa direto: \"he told me no\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u3-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u3l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "media",
+       "mídia"
+      ],
+      [
+       "campaign",
+       "campanha"
+      ],
+      [
+       "marketing",
+       "marketing"
+      ],
+      [
+       "profile",
+       "perfil"
+      ]
+     ],
+     "why": "\"Social media\" = redes sociais."
+    },
+    {
+     "id": "b2u3l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I changed my ___ picture.",
+     "pt": "Troquei minha foto de perfil.",
+     "options": [
+      "profile",
+      "media",
+      "campaign"
+     ],
+     "answer": "profile",
+     "why": "\"Profile picture\" = foto de perfil.",
+     "wrong": {
+      "media": "\"Media\" = mídia.",
+      "campaign": "\"Campaign\" = campanha."
+     }
+    },
+    {
+     "id": "b2u3l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She spends hours on social ___.",
+     "pt": "Ela passa horas nas redes sociais.",
+     "options": [
+      "media",
+      "marketing",
+      "networks of"
+     ],
+     "answer": "media",
+     "why": "\"Social media\" = redes sociais.",
+     "wrong": {
+      "marketing": "\"Marketing\" é a área de vender e divulgar.",
+      "networks of": "Ficaria incompleto."
+     }
+    },
+    {
+     "id": "b2u3l11-4",
+     "type": "meaning",
+     "en": "The new campaign was a big success.",
+     "options": [
+      "A campanha nova foi um grande sucesso.",
+      "A campanha não funcionou.",
+      "Ainda não começaram a campanha."
+     ],
+     "answer": "A campanha nova foi um grande sucesso.",
+     "why": "\"Campaign\" = campanha."
+    },
+    {
+     "id": "b2u3l11-5",
+     "type": "build",
+     "pt": "Ela trabalha com marketing.",
+     "answer": "She works in marketing",
+     "extra": [
+      "with",
+      "work"
+     ],
+     "display": "She works in marketing.",
+     "why": "Área de trabalho: work IN marketing (não \"with\")."
+    },
+    {
+     "id": "b2u3l11-6",
+     "type": "listen",
+     "en": "The media is talking about it.",
+     "options": [
+      "A imprensa está falando disso.",
+      "Ninguém sabe disso.",
+      "É um segredo."
+     ],
+     "answer": "A imprensa está falando disso.",
+     "why": "\"The media\" = a imprensa, a mídia."
     }
    ]
   },

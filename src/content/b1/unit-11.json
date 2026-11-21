@@ -70,6 +70,22 @@
   [
    "unusual",
    "incomum, estranho(a)"
+  ],
+  [
+   "immediately",
+   "imediatamente"
+  ],
+  [
+   "particularly",
+   "particularmente, especialmente"
+  ],
+  [
+   "generally",
+   "geralmente, em geral"
+  ],
+  [
+   "directly",
+   "diretamente"
   ]
  ],
  "guide": {
@@ -555,6 +571,109 @@
      ],
      "answer": "Obviamente, o detetive encontrou as provas.",
      "why": "\"Obviously\" = obviamente."
+    }
+   ]
+  },
+  {
+   "id": "b1-u11-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u11l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "immediately",
+       "imediatamente"
+      ],
+      [
+       "particularly",
+       "especialmente"
+      ],
+      [
+       "generally",
+       "em geral"
+      ],
+      [
+       "directly",
+       "diretamente"
+      ]
+     ],
+     "why": "Advérbios em -ly são como os nossos em -mente."
+    },
+    {
+     "id": "b1u11l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Call me ___ when you arrive.",
+     "pt": "Me ligue imediatamente quando chegar.",
+     "options": [
+      "immediately",
+      "generally",
+      "particularly"
+     ],
+     "answer": "immediately",
+     "why": "\"Immediately\" = imediatamente, na hora.",
+     "wrong": {
+      "generally": "\"Generally\" = em geral.",
+      "particularly": "\"Particularly\" = especialmente."
+     }
+    },
+    {
+     "id": "b1u11l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I don't ___ like horror films.",
+     "pt": "Não gosto especialmente de filmes de terror.",
+     "options": [
+      "particularly",
+      "directly",
+      "immediately"
+     ],
+     "answer": "particularly",
+     "why": "\"Not particularly\" = não muito, não especialmente.",
+     "wrong": {
+      "directly": "\"Directly\" = diretamente.",
+      "immediately": "\"Immediately\" = imediatamente."
+     }
+    },
+    {
+     "id": "b1u11l11-4",
+     "type": "meaning",
+     "en": "Generally, people here are very nice.",
+     "options": [
+      "Em geral, as pessoas aqui são muito legais.",
+      "Ninguém aqui é simpático.",
+      "Só algumas pessoas são legais."
+     ],
+     "answer": "Em geral, as pessoas aqui são muito legais.",
+     "why": "\"Generally\" = em geral."
+    },
+    {
+     "id": "b1u11l11-5",
+     "type": "build",
+     "pt": "Este trem vai direto para o aeroporto.",
+     "answer": "This train goes directly to the airport",
+     "extra": [
+      "direct",
+      "go"
+     ],
+     "display": "This train goes directly to the airport.",
+     "why": "\"Directly\" = diretamente, sem parar."
+    },
+    {
+     "id": "b1u11l11-6",
+     "type": "listen",
+     "en": "Please leave the building immediately.",
+     "options": [
+      "Por favor, saiam do prédio imediatamente.",
+      "Por favor, fiquem no prédio.",
+      "O prédio fecha às dez."
+     ],
+     "answer": "Por favor, saiam do prédio imediatamente.",
+     "why": "\"Leave\" = sair de."
     }
    ]
   },

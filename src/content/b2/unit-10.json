@@ -54,6 +54,22 @@
   [
    "path",
    "caminho"
+  ],
+  [
+   "trial",
+   "julgamento, teste"
+  ],
+  [
+   "minister",
+   "ministro(a)"
+  ],
+  [
+   "parliament",
+   "parlamento"
+  ],
+  [
+   "reform",
+   "reforma (de leis)"
   ]
  ],
  "guide": {
@@ -534,6 +550,109 @@
       "wouldn't have been": "Com \"now\", use would + verbo.",
       "won't be": "\"Will\" não entra aqui."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u10-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u10l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "trial",
+       "julgamento"
+      ],
+      [
+       "minister",
+       "ministro"
+      ],
+      [
+       "parliament",
+       "parlamento"
+      ],
+      [
+       "reform",
+       "reforma"
+      ]
+     ],
+     "why": "\"Free trial\" = teste grátis. Num tribunal, \"trial\" = julgamento."
+    },
+    {
+     "id": "b2u10l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The service has a free ___ for seven days.",
+     "pt": "O serviço tem um teste grátis de sete dias.",
+     "options": [
+      "trial",
+      "reform",
+      "test drive"
+     ],
+     "answer": "trial",
+     "why": "\"Free trial\" = período de teste grátis.",
+     "wrong": {
+      "reform": "\"Reform\" = reforma de leis ou sistemas.",
+      "test drive": "É para carro."
+     }
+    },
+    {
+     "id": "b2u10l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ___ of health spoke on TV.",
+     "pt": "O ministro da saúde falou na TV.",
+     "options": [
+      "minister",
+      "parliament",
+      "trial"
+     ],
+     "answer": "minister",
+     "why": "\"Minister of health\" = ministro da saúde.",
+     "wrong": {
+      "parliament": "\"Parliament\" é a instituição.",
+      "trial": "\"Trial\" = julgamento."
+     }
+    },
+    {
+     "id": "b2u10l11-4",
+     "type": "meaning",
+     "en": "The trial will start next month.",
+     "options": [
+      "O julgamento vai começar mês que vem.",
+      "O teste acabou.",
+      "Ele foi preso mês passado."
+     ],
+     "answer": "O julgamento vai começar mês que vem.",
+     "why": "Num tribunal, \"trial\" = julgamento."
+    },
+    {
+     "id": "b2u10l11-5",
+     "type": "build",
+     "pt": "O governo quer fazer uma reforma na educação.",
+     "answer": "The government wants to reform education",
+     "extra": [
+      "want",
+      "reforms"
+     ],
+     "display": "The government wants to reform education.",
+     "why": "\"Reform\" = reformar (leis, sistemas). Casa se \"renova\": renovate."
+    },
+    {
+     "id": "b2u10l11-6",
+     "type": "listen",
+     "en": "Parliament voted against the plan.",
+     "options": [
+      "O parlamento votou contra o plano.",
+      "O parlamento aprovou o plano.",
+      "Ninguém votou."
+     ],
+     "answer": "O parlamento votou contra o plano.",
+     "why": "\"Vote against\" = votar contra."
     }
    ]
   },

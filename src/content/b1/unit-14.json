@@ -62,6 +62,22 @@
   [
    "review",
    "avaliação, resenha"
+  ],
+  [
+   "growth",
+   "crescimento"
+  ],
+  [
+   "demand",
+   "procura, demanda"
+  ],
+  [
+   "supply",
+   "oferta, fornecimento"
+  ],
+  [
+   "gain",
+   "ganhar (aos poucos)"
   ]
  ],
  "guide": {
@@ -534,6 +550,109 @@
       "disappointing": "Não combina com cinco estrelas.",
       "awful": "Seria uma estrela!"
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u14-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u14l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "growth",
+       "crescimento"
+      ],
+      [
+       "demand",
+       "procura"
+      ],
+      [
+       "supply",
+       "oferta"
+      ],
+      [
+       "gain",
+       "ganhar aos poucos"
+      ]
+     ],
+     "why": "\"Gain weight\" = ganhar peso; \"gain experience\" = ganhar experiência."
+    },
+    {
+     "id": "b1u14l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There is a lot of ___ for English teachers.",
+     "pt": "Há muita procura por professores de inglês.",
+     "options": [
+      "demand",
+      "supply",
+      "growth"
+     ],
+     "answer": "demand",
+     "why": "\"Demand for\" = procura por.",
+     "wrong": {
+      "supply": "\"Supply\" = oferta, o contrário.",
+      "growth": "\"Growth\" = crescimento."
+     }
+    },
+    {
+     "id": "b1u14l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ a lot of experience in that job.",
+     "pt": "Ganhei muita experiência naquele emprego.",
+     "options": [
+      "gained",
+      "won",
+      "earned money"
+     ],
+     "answer": "gained",
+     "why": "\"Gain experience\" = ganhar experiência.",
+     "wrong": {
+      "won": "\"Win\" é ganhar jogo ou prêmio.",
+      "earned money": "Não combina com \"experience\"."
+     }
+    },
+    {
+     "id": "b1u14l11-4",
+     "type": "meaning",
+     "en": "The city had a lot of growth this year.",
+     "options": [
+      "A cidade cresceu muito este ano.",
+      "A cidade ficou mais vazia.",
+      "A cidade ganhou um prêmio."
+     ],
+     "answer": "A cidade cresceu muito este ano.",
+     "why": "\"Growth\" = crescimento."
+    },
+    {
+     "id": "b1u14l11-5",
+     "type": "build",
+     "pt": "A água vem de um rio perto daqui.",
+     "answer": "The water supply comes from a river near here",
+     "extra": [
+      "come",
+      "demand"
+     ],
+     "display": "The water supply comes from a river near here.",
+     "why": "\"Water supply\" = fornecimento de água."
+    },
+    {
+     "id": "b1u14l11-6",
+     "type": "listen",
+     "en": "I gained two kilos on holiday.",
+     "options": [
+      "Engordei dois quilos nas férias.",
+      "Perdi dois quilos nas férias.",
+      "Não comi nada nas férias."
+     ],
+     "answer": "Engordei dois quilos nas férias.",
+     "why": "\"Gain weight/kilos\" = engordar."
     }
    ]
   },

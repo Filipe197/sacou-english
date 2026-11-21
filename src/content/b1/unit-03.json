@@ -98,6 +98,22 @@
   [
    "disaster",
    "desastre"
+  ],
+  [
+   "department",
+   "departamento, setor"
+  ],
+  [
+   "management",
+   "gerência, administração"
+  ],
+  [
+   "chief",
+   "chefe, principal"
+  ],
+  [
+   "firm",
+   "empresa, firma"
   ]
  ],
  "guide": {
@@ -530,6 +546,109 @@
       "Afterwards, we call the police and wait.": "A história é no passado: called, waited.",
       "Afterwards, we were call the police.": "\"Were call\" não existe."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u3-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u3l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "department",
+       "setor"
+      ],
+      [
+       "management",
+       "gerência"
+      ],
+      [
+       "chief",
+       "chefe"
+      ],
+      [
+       "firm",
+       "empresa"
+      ]
+     ],
+     "why": "\"Firm\" é usado para escritórios: a law firm (escritório de advocacia)."
+    },
+    {
+     "id": "b1u3l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She works in the sales ___.",
+     "pt": "Ela trabalha no setor de vendas.",
+     "options": [
+      "department",
+      "firm",
+      "chief"
+     ],
+     "answer": "department",
+     "why": "\"Sales department\" = setor de vendas.",
+     "wrong": {
+      "firm": "\"Firm\" é a empresa inteira.",
+      "chief": "\"Chief\" é uma pessoa."
+     }
+    },
+    {
+     "id": "b1u3l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The ___ decided to close the shop on Sundays.",
+     "pt": "A gerência decidiu fechar a loja aos domingos.",
+     "options": [
+      "management",
+      "department",
+      "manager of"
+     ],
+     "answer": "management",
+     "why": "\"The management\" = a gerência, quem administra.",
+     "wrong": {
+      "department": "Um setor não decide sozinho pela empresa.",
+      "manager of": "Ficaria incompleto."
+     }
+    },
+    {
+     "id": "b1u3l11-4",
+     "type": "meaning",
+     "en": "He works for a small law firm in the city.",
+     "options": [
+      "Ele trabalha num pequeno escritório de advocacia na cidade.",
+      "Ele é dono de uma empresa grande.",
+      "Ele estuda direito na cidade."
+     ],
+     "answer": "Ele trabalha num pequeno escritório de advocacia na cidade.",
+     "why": "\"Law firm\" = escritório de advocacia."
+    },
+    {
+     "id": "b1u3l11-5",
+     "type": "build",
+     "pt": "O chefe de cozinha fez um prato especial.",
+     "answer": "The chief cook made a special dish",
+     "extra": [
+      "chef of",
+      "did"
+     ],
+     "display": "The chief cook made a special dish.",
+     "why": "\"Chief\" = principal, chefe de algo."
+    },
+    {
+     "id": "b1u3l11-6",
+     "type": "listen",
+     "en": "Which department do you work in?",
+     "options": [
+      "Em qual setor você trabalha?",
+      "Onde fica a empresa?",
+      "Quem é o seu chefe?"
+     ],
+     "answer": "Em qual setor você trabalha?",
+     "why": "\"Department\" = setor, departamento."
     }
    ]
   },

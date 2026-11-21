@@ -54,6 +54,22 @@
   [
    "actually",
    "na verdade"
+  ],
+  [
+   "decade",
+   "década"
+  ],
+  [
+   "billion",
+   "bilhão"
+  ],
+  [
+   "statistics",
+   "estatística(s)"
+  ],
+  [
+   "estimated",
+   "estimado(a)"
   ]
  ],
  "guide": {
@@ -534,6 +550,109 @@
       "The weather ruined the trip.": "Correta, mas sem ênfase especial.",
       "The trip was ruined.": "Nem diz o que estragou."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u14-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u14l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "decade",
+       "década"
+      ],
+      [
+       "billion",
+       "bilhão"
+      ],
+      [
+       "statistics",
+       "estatísticas"
+      ],
+      [
+       "estimated",
+       "estimado"
+      ]
+     ],
+     "why": "Cuidado: \"billion\" = bilhão (mil milhões)."
+    },
+    {
+     "id": "b2u14l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Things have changed a lot in the last ___.",
+     "pt": "As coisas mudaram muito na última década.",
+     "options": [
+      "decade",
+      "billion",
+      "statistics"
+     ],
+     "answer": "decade",
+     "why": "\"Decade\" = década, dez anos.",
+     "wrong": {
+      "billion": "\"Billion\" = bilhão.",
+      "statistics": "\"Statistics\" = estatísticas."
+     }
+    },
+    {
+     "id": "b2u14l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There are about eight ___ people in the world.",
+     "pt": "Há cerca de oito bilhões de pessoas no mundo.",
+     "options": [
+      "billion",
+      "billions",
+      "millions of"
+     ],
+     "answer": "billion",
+     "why": "Depois de um número, \"billion\" não leva -s: eight billion.",
+     "wrong": {
+      "billions": "Com número antes, fica sem -s.",
+      "millions of": "Seria milhões, e a forma está errada."
+     }
+    },
+    {
+     "id": "b2u14l11-4",
+     "type": "meaning",
+     "en": "The statistics show that more people are working from home.",
+     "options": [
+      "As estatísticas mostram que mais pessoas trabalham de casa.",
+      "Ninguém trabalha mais de casa.",
+      "As pessoas voltaram ao escritório."
+     ],
+     "answer": "As estatísticas mostram que mais pessoas trabalham de casa.",
+     "why": "\"Statistics\" = estatísticas."
+    },
+    {
+     "id": "b2u14l11-5",
+     "type": "build",
+     "pt": "O custo estimado é de dois mil reais.",
+     "answer": "The estimated cost is two thousand reais",
+     "extra": [
+      "estimate",
+      "thousands"
+     ],
+     "display": "The estimated cost is two thousand reais.",
+     "why": "\"Estimated\" = estimado, calculado mais ou menos."
+    },
+    {
+     "id": "b2u14l11-6",
+     "type": "listen",
+     "en": "It took almost a decade.",
+     "options": [
+      "Levou quase dez anos.",
+      "Levou quase um ano.",
+      "Foi muito rápido."
+     ],
+     "answer": "Levou quase dez anos.",
+     "why": "\"Decade\" = década."
     }
    ]
   },

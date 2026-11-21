@@ -54,6 +54,22 @@
   [
    "expect",
    "esperar (que aconteça)"
+  ],
+  [
+   "understanding",
+   "compreensão, compreensivo(a)"
+  ],
+  [
+   "reference",
+   "referência"
+  ],
+  [
+   "theme",
+   "tema"
+  ],
+  [
+   "plot",
+   "enredo, trama"
   ]
  ],
  "guide": {
@@ -543,6 +559,109 @@
       "She says to speak five languages.": "Isso seria \"ela diz para falar\".",
       "She is saying five languages.": "Não faz sentido."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u15-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u15l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "understanding",
+       "compreensão"
+      ],
+      [
+       "reference",
+       "referência"
+      ],
+      [
+       "theme",
+       "tema"
+      ],
+      [
+       "plot",
+       "enredo"
+      ]
+     ],
+     "why": "\"Plot\" é o enredo de um filme ou livro."
+    },
+    {
+     "id": "b2u15l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The film has a great ___, but the ending is weak.",
+     "pt": "O filme tem um ótimo enredo, mas o final é fraco.",
+     "options": [
+      "plot",
+      "theme",
+      "reference"
+     ],
+     "answer": "plot",
+     "why": "\"Plot\" = enredo, a história em si.",
+     "wrong": {
+      "theme": "\"Theme\" é o tema, a ideia geral.",
+      "reference": "\"Reference\" = referência."
+     }
+    },
+    {
+     "id": "b2u15l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The main ___ of the book is family.",
+     "pt": "O tema principal do livro é a família.",
+     "options": [
+      "theme",
+      "plot",
+      "understanding"
+     ],
+     "answer": "theme",
+     "why": "\"Theme\" = tema.",
+     "wrong": {
+      "plot": "\"Plot\" é o que acontece, não o tema.",
+      "understanding": "\"Understanding\" = compreensão."
+     }
+    },
+    {
+     "id": "b2u15l11-4",
+     "type": "meaning",
+     "en": "My boss is very understanding.",
+     "options": [
+      "Minha chefe é muito compreensiva.",
+      "Minha chefe entende tudo de tecnologia.",
+      "Minha chefe é muito rígida."
+     ],
+     "answer": "Minha chefe é muito compreensiva.",
+     "why": "\"Understanding\" como adjetivo = compreensivo."
+    },
+    {
+     "id": "b2u15l11-5",
+     "type": "build",
+     "pt": "O filme tem muitas referências aos anos oitenta.",
+     "answer": "The film has a lot of references to the eighties",
+     "extra": [
+      "of the",
+      "have"
+     ],
+     "display": "The film has a lot of references to the '80s.",
+     "why": "\"Reference to\" = referência a."
+    },
+    {
+     "id": "b2u15l11-6",
+     "type": "listen",
+     "en": "Can you give me a reference?",
+     "options": [
+      "Você pode me dar uma referência?",
+      "Você pode me dar um conselho?",
+      "Você pode me emprestar dinheiro?"
+     ],
+     "answer": "Você pode me dar uma referência?",
+     "why": "\"Reference\" = referência."
     }
    ]
   },

@@ -66,6 +66,22 @@
   [
    "software",
    "programa, software"
+  ],
+  [
+   "aware",
+   "ciente, consciente"
+  ],
+  [
+   "mental",
+   "mental"
+  ],
+  [
+   "respect",
+   "respeito, respeitar"
+  ],
+  [
+   "reality",
+   "realidade"
   ]
  ],
  "guide": {
@@ -548,6 +564,109 @@
       ]
      ],
      "why": "\"Software\" não tem plural: some software."
+    }
+   ]
+  },
+  {
+   "id": "b1-u15-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u15l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "aware",
+       "ciente"
+      ],
+      [
+       "mental",
+       "mental"
+      ],
+      [
+       "respect",
+       "respeito"
+      ],
+      [
+       "reality",
+       "realidade"
+      ]
+     ],
+     "why": "\"Be aware of\" = estar ciente de."
+    },
+    {
+     "id": "b1u15l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Are you ___ of the risks?",
+     "pt": "Você está ciente dos riscos?",
+     "options": [
+      "aware",
+      "mental",
+      "real"
+     ],
+     "answer": "aware",
+     "why": "\"Aware of\" = ciente de.",
+     "wrong": {
+      "mental": "\"Mental\" = mental.",
+      "real": "\"Real\" = real."
+     }
+    },
+    {
+     "id": "b1u15l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "You should ___ other people.",
+     "pt": "Você deveria respeitar as outras pessoas.",
+     "options": [
+      "respect",
+      "aware",
+      "reality"
+     ],
+     "answer": "respect",
+     "why": "\"Respect\" = respeitar.",
+     "wrong": {
+      "aware": "\"Aware\" é adjetivo.",
+      "reality": "\"Reality\" = realidade."
+     }
+    },
+    {
+     "id": "b1u15l11-4",
+     "type": "meaning",
+     "en": "Mental health is as important as physical health.",
+     "options": [
+      "A saúde mental é tão importante quanto a física.",
+      "A saúde física é mais importante.",
+      "Ninguém fala de saúde mental."
+     ],
+     "answer": "A saúde mental é tão importante quanto a física.",
+     "why": "\"Mental health\" = saúde mental."
+    },
+    {
+     "id": "b1u15l11-5",
+     "type": "build",
+     "pt": "Na realidade, a casa era bem pequena.",
+     "answer": "In reality the house was quite small",
+     "extra": [
+      "real",
+      "were"
+     ],
+     "display": "In reality, the house was quite small.",
+     "why": "\"In reality\" = na realidade."
+    },
+    {
+     "id": "b1u15l11-6",
+     "type": "listen",
+     "en": "I have a lot of respect for her.",
+     "options": [
+      "Tenho muito respeito por ela.",
+      "Não gosto muito dela.",
+      "Ela me respeita muito."
+     ],
+     "answer": "Tenho muito respeito por ela.",
+     "why": "\"Respect for\" = respeito por."
     }
    ]
   },

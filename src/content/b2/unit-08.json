@@ -86,6 +86,22 @@
   [
    "effect",
    "efeito"
+  ],
+  [
+   "willing",
+   "disposto(a)"
+  ],
+  [
+   "determined",
+   "determinado(a)"
+  ],
+  [
+   "tough",
+   "difícil, duro(a)"
+  ],
+  [
+   "faith",
+   "fé"
   ]
  ],
  "guide": {
@@ -520,6 +536,109 @@
       "In my view, yes. In other hand, they help.": "É \"ON the other hand\".",
       "My view yes, other hand research.": "Frases incompletas."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u8-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u8l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "willing",
+       "disposto"
+      ],
+      [
+       "determined",
+       "determinado"
+      ],
+      [
+       "tough",
+       "duro"
+      ],
+      [
+       "faith",
+       "fé"
+      ]
+     ],
+     "why": "\"Be willing to\" = estar disposto a."
+    },
+    {
+     "id": "b2u8l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm ___ to help, but I don't have much time.",
+     "pt": "Estou disposto a ajudar, mas não tenho muito tempo.",
+     "options": [
+      "willing",
+      "determined",
+      "tough"
+     ],
+     "answer": "willing",
+     "why": "\"Willing to\" = disposto a.",
+     "wrong": {
+      "determined": "\"Determined\" = determinado, decidido.",
+      "tough": "\"Tough\" = difícil, duro."
+     }
+    },
+    {
+     "id": "b2u8l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It was a ___ year, but we got through it.",
+     "pt": "Foi um ano difícil, mas a gente passou por ele.",
+     "options": [
+      "tough",
+      "willing",
+      "faith"
+     ],
+     "answer": "tough",
+     "why": "\"Tough\" = difícil, duro.",
+     "wrong": {
+      "willing": "\"Willing\" = disposto.",
+      "faith": "\"Faith\" = fé."
+     }
+    },
+    {
+     "id": "b2u8l11-4",
+     "type": "meaning",
+     "en": "She is determined to pass the exam.",
+     "options": [
+      "Ela está decidida a passar na prova.",
+      "Ela tem medo da prova.",
+      "Ela não quer fazer a prova."
+     ],
+     "answer": "Ela está decidida a passar na prova.",
+     "why": "\"Determined to\" = decidido, determinado a."
+    },
+    {
+     "id": "b2u8l11-5",
+     "type": "build",
+     "pt": "Não perca a fé.",
+     "answer": "Don't lose faith",
+     "extra": [
+      "loose",
+      "faiths"
+     ],
+     "display": "Don't lose faith.",
+     "why": "\"Lose\" = perder. \"Loose\" = solto."
+    },
+    {
+     "id": "b2u8l11-6",
+     "type": "listen",
+     "en": "Don't worry. She's tough.",
+     "options": [
+      "Não se preocupe. Ela é forte.",
+      "Ela está muito doente.",
+      "Ela é muito sensível."
+     ],
+     "answer": "Não se preocupe. Ela é forte.",
+     "why": "Para pessoas, \"tough\" = forte, durona."
     }
    ]
   },

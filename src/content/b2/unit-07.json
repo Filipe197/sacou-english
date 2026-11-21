@@ -86,6 +86,22 @@
   [
    "call off",
    "cancelar"
+  ],
+  [
+   "previously",
+   "anteriormente"
+  ],
+  [
+   "originally",
+   "originalmente"
+  ],
+  [
+   "ultimately",
+   "no fim das contas"
+  ],
+  [
+   "significantly",
+   "consideravelmente"
   ]
  ],
  "guide": {
@@ -520,6 +536,109 @@
       "I worked up at the gym for two hours.": "\"Work up\" não tem esse sentido.",
       "I out worked at the gym.": "A partícula vem depois do verbo."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u7-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u7l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "previously",
+       "anteriormente"
+      ],
+      [
+       "originally",
+       "originalmente"
+      ],
+      [
+       "ultimately",
+       "no fim das contas"
+      ],
+      [
+       "significantly",
+       "consideravelmente"
+      ]
+     ],
+     "why": "\"Ultimately\" = no final, no fim das contas."
+    },
+    {
+     "id": "b2u7l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm ___ from Salvador, but I live in Rio now.",
+     "pt": "Sou originalmente de Salvador, mas agora moro no Rio.",
+     "options": [
+      "originally",
+      "previously",
+      "ultimately"
+     ],
+     "answer": "originally",
+     "why": "\"Originally from\" = originalmente de.",
+     "wrong": {
+      "previously": "\"Previously\" = anteriormente.",
+      "ultimately": "\"Ultimately\" = no fim das contas."
+     }
+    },
+    {
+     "id": "b2u7l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Prices went up ___ this year.",
+     "pt": "Os preços subiram consideravelmente este ano.",
+     "options": [
+      "significantly",
+      "originally",
+      "previously"
+     ],
+     "answer": "significantly",
+     "why": "\"Significantly\" = bastante, de forma importante.",
+     "wrong": {
+      "originally": "\"Originally\" = originalmente.",
+      "previously": "\"Previously\" = anteriormente."
+     }
+    },
+    {
+     "id": "b2u7l11-4",
+     "type": "meaning",
+     "en": "Ultimately, it is your decision.",
+     "options": [
+      "No fim das contas, a decisão é sua.",
+      "Eu já decidi por você.",
+      "Ninguém pode decidir isso."
+     ],
+     "answer": "No fim das contas, a decisão é sua.",
+     "why": "\"Ultimately\" = no fim das contas."
+    },
+    {
+     "id": "b2u7l11-5",
+     "type": "build",
+     "pt": "Ele trabalhou anteriormente num banco.",
+     "answer": "He previously worked at a bank",
+     "extra": [
+      "before of",
+      "works"
+     ],
+     "display": "He previously worked at a bank.",
+     "why": "\"Previously\" = anteriormente, antes."
+    },
+    {
+     "id": "b2u7l11-6",
+     "type": "listen",
+     "en": "As I previously said, the meeting is at ten.",
+     "options": [
+      "Como eu disse antes, a reunião é às dez.",
+      "A reunião foi cancelada.",
+      "Não sei a hora da reunião."
+     ],
+     "answer": "Como eu disse antes, a reunião é às dez.",
+     "why": "\"Previously\" = anteriormente."
     }
    ]
   },

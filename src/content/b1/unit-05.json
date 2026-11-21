@@ -94,6 +94,22 @@
   [
    "powerful",
    "poderoso(a)"
+  ],
+  [
+   "insurance",
+   "seguro"
+  ],
+  [
+   "financial",
+   "financeiro(a)"
+  ],
+  [
+   "economic",
+   "econômico(a)"
+  ],
+  [
+   "economy",
+   "economia"
   ]
  ],
  "guide": {
@@ -523,6 +539,109 @@
       "I don't think so. I will tell the truth yesterday.": "\"Will\" e \"yesterday\" não combinam.",
       "No, I would told the truth.": "Depois de \"would\", verbo normal: tell."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u5-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u5l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "insurance",
+       "seguro"
+      ],
+      [
+       "financial",
+       "financeiro"
+      ],
+      [
+       "economic",
+       "econômico"
+      ],
+      [
+       "economy",
+       "economia"
+      ]
+     ],
+     "why": "Cuidado: \"economic\" é da economia do país; \"barato\" é \"cheap\"."
+    },
+    {
+     "id": "b1u5l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Did you buy travel ___?",
+     "pt": "Você comprou seguro-viagem?",
+     "options": [
+      "insurance",
+      "economy",
+      "safe"
+     ],
+     "answer": "insurance",
+     "why": "\"Travel insurance\" = seguro-viagem.",
+     "wrong": {
+      "economy": "\"Economy\" = economia.",
+      "safe": "\"Safe\" = seguro no sentido de \"sem perigo\"."
+     }
+    },
+    {
+     "id": "b1u5l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The country has serious ___ problems.",
+     "pt": "O país tem problemas econômicos sérios.",
+     "options": [
+      "economic",
+      "economy",
+      "insurance"
+     ],
+     "answer": "economic",
+     "why": "\"Economic\" é adjetivo: economic problems.",
+     "wrong": {
+      "economy": "\"Economy\" é substantivo: the economy.",
+      "insurance": "\"Insurance\" = seguro."
+     }
+    },
+    {
+     "id": "b1u5l11-4",
+     "type": "meaning",
+     "en": "The economy is growing again.",
+     "options": [
+      "A economia está crescendo de novo.",
+      "Tudo está mais barato.",
+      "Ninguém está economizando."
+     ],
+     "answer": "A economia está crescendo de novo.",
+     "why": "\"The economy\" = a economia (do país)."
+    },
+    {
+     "id": "b1u5l11-5",
+     "type": "build",
+     "pt": "Ela tem problemas financeiros.",
+     "answer": "She has financial problems",
+     "extra": [
+      "finance",
+      "have"
+     ],
+     "display": "She has financial problems.",
+     "why": "\"Financial\" = financeiro."
+    },
+    {
+     "id": "b1u5l11-6",
+     "type": "listen",
+     "en": "My car insurance is very expensive.",
+     "options": [
+      "O seguro do meu carro é muito caro.",
+      "Meu carro é muito caro.",
+      "Vendi meu carro."
+     ],
+     "answer": "O seguro do meu carro é muito caro.",
+     "why": "\"Car insurance\" = seguro do carro."
     }
    ]
   },

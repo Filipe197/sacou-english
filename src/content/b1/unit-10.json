@@ -66,6 +66,22 @@
   [
    "lost property",
    "achados e perdidos"
+  ],
+  [
+   "channel",
+   "canal"
+  ],
+  [
+   "content",
+   "conteúdo"
+  ],
+  [
+   "comment",
+   "comentário, comentar"
+  ],
+  [
+   "edition",
+   "edição"
   ]
  ],
  "guide": {
@@ -557,6 +573,109 @@
       "Is": "\"Is the manager in today?\" é direto, menos formal.",
       "You know if": "Informal e sem o \"do\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u10-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u10l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "channel",
+       "canal"
+      ],
+      [
+       "content",
+       "conteúdo"
+      ],
+      [
+       "comment",
+       "comentário"
+      ],
+      [
+       "edition",
+       "edição"
+      ]
+     ],
+     "why": "\"Content\" é incontável: a lot of content."
+    },
+    {
+     "id": "b1u10l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "What ___ is the game on?",
+     "pt": "Em que canal está o jogo?",
+     "options": [
+      "channel",
+      "content",
+      "edition"
+     ],
+     "answer": "channel",
+     "why": "\"Channel\" = canal (TV, internet).",
+     "wrong": {
+      "content": "\"Content\" = conteúdo.",
+      "edition": "\"Edition\" = edição."
+     }
+    },
+    {
+     "id": "b1u10l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Please leave a ___ below the video.",
+     "pt": "Por favor, deixe um comentário embaixo do vídeo.",
+     "options": [
+      "comment",
+      "channel",
+      "contents"
+     ],
+     "answer": "comment",
+     "why": "\"Leave a comment\" = deixar um comentário.",
+     "wrong": {
+      "channel": "\"Channel\" = canal.",
+      "contents": "\"Contents\" = conteúdo, índice."
+     }
+    },
+    {
+     "id": "b1u10l11-4",
+     "type": "meaning",
+     "en": "She creates content for her channel every day.",
+     "options": [
+      "Ela cria conteúdo para o canal dela todo dia.",
+      "Ela assiste a um canal todo dia.",
+      "Ela fechou o canal dela."
+     ],
+     "answer": "Ela cria conteúdo para o canal dela todo dia.",
+     "why": "\"Create content\" = criar conteúdo."
+    },
+    {
+     "id": "b1u10l11-5",
+     "type": "build",
+     "pt": "Comprei a edição nova da revista.",
+     "answer": "I bought the new edition of the magazine",
+     "extra": [
+      "buyed",
+      "channel"
+     ],
+     "display": "I bought the new edition of the magazine.",
+     "why": "\"Edition\" = edição (de livro, revista)."
+    },
+    {
+     "id": "b1u10l11-6",
+     "type": "listen",
+     "en": "No comment!",
+     "options": [
+      "Sem comentários!",
+      "Comente aqui!",
+      "Que comentário bom!"
+     ],
+     "answer": "Sem comentários!",
+     "why": "\"No comment\" = sem comentários."
     }
    ]
   },

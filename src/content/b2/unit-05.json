@@ -86,6 +86,22 @@
   [
    "haircut",
    "corte de cabelo"
+  ],
+  [
+   "energy",
+   "energia"
+  ],
+  [
+   "solar",
+   "solar"
+  ],
+  [
+   "carbon",
+   "carbono"
+  ],
+  [
+   "reaction",
+   "reação"
   ]
  ],
  "guide": {
@@ -514,6 +530,109 @@
       "No, I repaired by a professional.": "Isso diria que você mesmo consertou.",
       "No, I had repair it.": "Ordem: had IT repaired."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u5-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u5l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "energy",
+       "energia"
+      ],
+      [
+       "solar",
+       "solar"
+      ],
+      [
+       "carbon",
+       "carbono"
+      ],
+      [
+       "reaction",
+       "reação"
+      ]
+     ],
+     "why": "\"Energy\" serve para eletricidade e para disposição: I have no energy."
+    },
+    {
+     "id": "b2u5l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We put ___ panels on the roof.",
+     "pt": "Colocamos placas solares no telhado.",
+     "options": [
+      "solar",
+      "sun",
+      "energy"
+     ],
+     "answer": "solar",
+     "why": "\"Solar panels\" = placas solares.",
+     "wrong": {
+      "sun": "\"Sun panels\" não se usa.",
+      "energy": "Ficaria \"energy panels\", que não se usa."
+     }
+    },
+    {
+     "id": "b2u5l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm so tired. I have no ___ today.",
+     "pt": "Estou tão cansado. Estou sem energia hoje.",
+     "options": [
+      "energy",
+      "reaction",
+      "carbon"
+     ],
+     "answer": "energy",
+     "why": "\"No energy\" = sem energia, sem disposição.",
+     "wrong": {
+      "reaction": "\"Reaction\" = reação.",
+      "carbon": "\"Carbon\" = carbono."
+     }
+    },
+    {
+     "id": "b2u5l11-4",
+     "type": "meaning",
+     "en": "What was his reaction when you told him?",
+     "options": [
+      "Qual foi a reação dele quando você contou?",
+      "Por que você não contou para ele?",
+      "Ele já sabia de tudo?"
+     ],
+     "answer": "Qual foi a reação dele quando você contou?",
+     "why": "\"Reaction\" = reação."
+    },
+    {
+     "id": "b2u5l11-5",
+     "type": "build",
+     "pt": "Os carros produzem muito carbono.",
+     "answer": "Cars produce a lot of carbon",
+     "extra": [
+      "produces",
+      "many"
+     ],
+     "display": "Cars produce a lot of carbon.",
+     "why": "\"Carbon\" é incontável: a lot of carbon."
+    },
+    {
+     "id": "b2u5l11-6",
+     "type": "listen",
+     "en": "Solar energy is clean and cheap.",
+     "options": [
+      "A energia solar é limpa e barata.",
+      "A energia solar é muito cara.",
+      "O sol está muito forte."
+     ],
+     "answer": "A energia solar é limpa e barata.",
+     "why": "\"Solar energy\" = energia solar."
     }
    ]
   },

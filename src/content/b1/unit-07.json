@@ -120,6 +120,22 @@
   [
    "ancient",
    "antigo(a), muito antigo"
+  ],
+  [
+   "legal",
+   "legal (da lei), permitido"
+  ],
+  [
+   "justice",
+   "justiça"
+  ],
+  [
+   "prison",
+   "prisão"
+  ],
+  [
+   "safety",
+   "segurança"
   ]
  ],
  "guide": {
@@ -552,6 +568,109 @@
       "It was wrote by a Brazilian author.": "\"Wrote\" é passado simples; a passiva usa o particípio: written.",
       "It wrote by a Brazilian author.": "Falta o \"was\"."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u7-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u7l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "legal",
+       "permitido por lei"
+      ],
+      [
+       "justice",
+       "justiça"
+      ],
+      [
+       "prison",
+       "prisão"
+      ],
+      [
+       "safety",
+       "segurança"
+      ]
+     ],
+     "why": "Falso amigo: \"legal\" em inglês é \"da lei\". O nosso \"legal\" é \"cool\" ou \"nice\"."
+    },
+    {
+     "id": "b1u7l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Is it ___ to park here?",
+     "pt": "É permitido estacionar aqui?",
+     "options": [
+      "legal",
+      "cool",
+      "safety"
+     ],
+     "answer": "legal",
+     "why": "\"Legal\" = permitido pela lei.",
+     "wrong": {
+      "cool": "\"Cool\" é o nosso \"legal\" de gíria.",
+      "safety": "\"Safety\" é substantivo: segurança."
+     }
+    },
+    {
+     "id": "b1u7l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "For your ___, please wear a helmet.",
+     "pt": "Para a sua segurança, use capacete.",
+     "options": [
+      "safety",
+      "safe",
+      "justice"
+     ],
+     "answer": "safety",
+     "why": "\"Safety\" = segurança (contra acidentes).",
+     "wrong": {
+      "safe": "\"Safe\" é adjetivo: seguro.",
+      "justice": "\"Justice\" = justiça."
+     }
+    },
+    {
+     "id": "b1u7l11-4",
+     "type": "meaning",
+     "en": "He spent five years in prison.",
+     "options": [
+      "Ele passou cinco anos na prisão.",
+      "Ele trabalhou cinco anos na polícia.",
+      "Ele estudou direito por cinco anos."
+     ],
+     "answer": "Ele passou cinco anos na prisão.",
+     "why": "\"Prison\" = prisão, cadeia."
+    },
+    {
+     "id": "b1u7l11-5",
+     "type": "build",
+     "pt": "As pessoas querem justiça.",
+     "answer": "People want justice",
+     "extra": [
+      "wants",
+      "legal"
+     ],
+     "display": "People want justice.",
+     "why": "\"Justice\" = justiça."
+    },
+    {
+     "id": "b1u7l11-6",
+     "type": "listen",
+     "en": "Safety comes first.",
+     "options": [
+      "A segurança vem em primeiro lugar.",
+      "Chegue cedo.",
+      "O primeiro é o mais rápido."
+     ],
+     "answer": "A segurança vem em primeiro lugar.",
+     "why": "\"Safety first\" é frase comum em placas."
     }
    ]
   },

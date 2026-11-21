@@ -86,6 +86,22 @@
   [
    "responsible",
    "responsável"
+  ],
+  [
+   "investment",
+   "investimento"
+  ],
+  [
+   "profit",
+   "lucro"
+  ],
+  [
+   "loan",
+   "empréstimo"
+  ],
+  [
+   "payment",
+   "pagamento"
   ]
  ],
  "guide": {
@@ -517,6 +533,109 @@
       "He must forgotten about it.": "Falta o \"have\".",
       "He must have forget about it.": "Precisa do particípio: forgotten."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u4-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u4l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "investment",
+       "investimento"
+      ],
+      [
+       "profit",
+       "lucro"
+      ],
+      [
+       "loan",
+       "empréstimo"
+      ],
+      [
+       "payment",
+       "pagamento"
+      ]
+     ],
+     "why": "\"Make a profit\" = ter lucro."
+    },
+    {
+     "id": "b2u4l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I asked the bank for a ___ to buy a car.",
+     "pt": "Pedi um empréstimo ao banco para comprar um carro.",
+     "options": [
+      "loan",
+      "profit",
+      "payment"
+     ],
+     "answer": "loan",
+     "why": "\"Loan\" = empréstimo.",
+     "wrong": {
+      "profit": "\"Profit\" = lucro.",
+      "payment": "\"Payment\" = pagamento."
+     }
+    },
+    {
+     "id": "b2u4l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The company made a big ___ this year.",
+     "pt": "A empresa teve um grande lucro este ano.",
+     "options": [
+      "profit",
+      "loan",
+      "investment"
+     ],
+     "answer": "profit",
+     "why": "\"Make a profit\" = ter lucro.",
+     "wrong": {
+      "loan": "\"Loan\" = empréstimo.",
+      "investment": "\"Investment\" = investimento."
+     }
+    },
+    {
+     "id": "b2u4l11-4",
+     "type": "meaning",
+     "en": "Buying a house is a good investment.",
+     "options": [
+      "Comprar uma casa é um bom investimento.",
+      "Comprar uma casa é muito caro.",
+      "Alugar é melhor do que comprar."
+     ],
+     "answer": "Comprar uma casa é um bom investimento.",
+     "why": "\"Investment\" = investimento."
+    },
+    {
+     "id": "b2u4l11-5",
+     "type": "build",
+     "pt": "O pagamento é no fim do mês.",
+     "answer": "The payment is at the end of the month",
+     "extra": [
+      "pay",
+      "in"
+     ],
+     "display": "The payment is at the end of the month.",
+     "why": "\"At the end of\" = no fim de."
+    },
+    {
+     "id": "b2u4l11-6",
+     "type": "listen",
+     "en": "We accept payment by card.",
+     "options": [
+      "Aceitamos pagamento com cartão.",
+      "Só aceitamos dinheiro.",
+      "O cartão não funciona."
+     ],
+     "answer": "Aceitamos pagamento com cartão.",
+     "why": "\"Payment by card\" = pagamento com cartão."
     }
    ]
   },

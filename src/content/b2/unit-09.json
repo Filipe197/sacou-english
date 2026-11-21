@@ -62,6 +62,22 @@
   [
    "retire",
    "se aposentar"
+  ],
+  [
+   "conference",
+   "conferência, congresso"
+  ],
+  [
+   "panel",
+   "painel, banca"
+  ],
+  [
+   "executive",
+   "executivo(a)"
+  ],
+  [
+   "candidate",
+   "candidato(a)"
   ]
  ],
  "guide": {
@@ -552,6 +568,109 @@
       ]
      ],
      "why": "\"Get a promotion\" = ser promovido."
+    }
+   ]
+  },
+  {
+   "id": "b2-u9-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u9l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "conference",
+       "congresso"
+      ],
+      [
+       "panel",
+       "banca"
+      ],
+      [
+       "executive",
+       "executivo"
+      ],
+      [
+       "candidate",
+       "candidato"
+      ]
+     ],
+     "why": "\"Conference call\" = reunião por telefone ou vídeo."
+    },
+    {
+     "id": "b2u9l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There are five ___ for the job.",
+     "pt": "Há cinco candidatos para a vaga.",
+     "options": [
+      "candidates",
+      "executives",
+      "panels"
+     ],
+     "answer": "candidates",
+     "why": "\"Candidate\" = candidato.",
+     "wrong": {
+      "executives": "\"Executive\" = executivo.",
+      "panels": "\"Panel\" = banca, painel."
+     }
+    },
+    {
+     "id": "b2u9l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She's going to a ___ in London next week.",
+     "pt": "Ela vai a um congresso em Londres semana que vem.",
+     "options": [
+      "conference",
+      "candidate",
+      "panel"
+     ],
+     "answer": "conference",
+     "why": "\"Conference\" = congresso, conferência.",
+     "wrong": {
+      "candidate": "\"Candidate\" é uma pessoa.",
+      "panel": "\"Panel\" é um grupo que avalia ou debate."
+     }
+    },
+    {
+     "id": "b2u9l11-4",
+     "type": "meaning",
+     "en": "A panel of three people interviewed me.",
+     "options": [
+      "Uma banca de três pessoas me entrevistou.",
+      "Três pessoas me ligaram.",
+      "Entrevistei três pessoas."
+     ],
+     "answer": "Uma banca de três pessoas me entrevistou.",
+     "why": "\"Panel\" = banca, grupo de avaliadores."
+    },
+    {
+     "id": "b2u9l11-5",
+     "type": "build",
+     "pt": "Ele é executivo de uma empresa grande.",
+     "answer": "He's an executive at a big company",
+     "extra": [
+      "executives",
+      "of"
+     ],
+     "display": "He's an executive at a big company.",
+     "why": "\"Executive\" = executivo."
+    },
+    {
+     "id": "b2u9l11-6",
+     "type": "listen",
+     "en": "She is the best candidate.",
+     "options": [
+      "Ela é a melhor candidata.",
+      "Ela é a chefe.",
+      "Ela não se candidatou."
+     ],
+     "answer": "Ela é a melhor candidata.",
+     "why": "\"Candidate\" = candidato(a)."
     }
    ]
   },

@@ -86,6 +86,22 @@
   [
    "realise",
    "perceber, se dar conta"
+  ],
+  [
+   "community",
+   "comunidade"
+  ],
+  [
+   "environment",
+   "meio ambiente, ambiente"
+  ],
+  [
+   "urban",
+   "urbano(a)"
+  ],
+  [
+   "rural",
+   "rural"
   ]
  ],
  "guide": {
@@ -517,6 +533,109 @@
       "I've never flown before!": "Seria \"nunca voei até hoje\", mas você já voou naquele dia.",
       "I never had fly before!": "Ordem e particípio errados: had never flown."
      }
+    }
+   ]
+  },
+  {
+   "id": "b2-u1-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b2u1l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "community",
+       "comunidade"
+      ],
+      [
+       "environment",
+       "meio ambiente"
+      ],
+      [
+       "urban",
+       "urbano"
+      ],
+      [
+       "rural",
+       "rural"
+      ]
+     ],
+     "why": "\"The environment\" = o meio ambiente; \"a work environment\" = um ambiente de trabalho."
+    },
+    {
+     "id": "b2u1l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We all need to protect the ___.",
+     "pt": "Todos nós precisamos proteger o meio ambiente.",
+     "options": [
+      "environment",
+      "community",
+      "nature"
+     ],
+     "answer": "environment",
+     "why": "\"Protect the environment\" = proteger o meio ambiente.",
+     "wrong": {
+      "community": "\"Community\" = comunidade.",
+      "nature": "\"Nature\" = natureza; \"protect the environment\" é a expressão."
+     }
+    },
+    {
+     "id": "b2u1l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Life in ___ areas is quieter than in the city.",
+     "pt": "A vida nas áreas rurais é mais tranquila do que na cidade.",
+     "options": [
+      "rural",
+      "urban",
+      "environment"
+     ],
+     "answer": "rural",
+     "why": "\"Rural areas\" = áreas rurais, o campo.",
+     "wrong": {
+      "urban": "\"Urban\" = da cidade, o contrário.",
+      "environment": "\"Environment\" é substantivo."
+     }
+    },
+    {
+     "id": "b2u1l11-4",
+     "type": "meaning",
+     "en": "The local community helped to build the school.",
+     "options": [
+      "A comunidade local ajudou a construir a escola.",
+      "O governo construiu a escola.",
+      "A escola fechou por falta de alunos."
+     ],
+     "answer": "A comunidade local ajudou a construir a escola.",
+     "why": "\"Community\" = comunidade."
+    },
+    {
+     "id": "b2u1l11-5",
+     "type": "build",
+     "pt": "O transporte urbano precisa melhorar.",
+     "answer": "Urban transport needs to improve",
+     "extra": [
+      "need",
+      "rural"
+     ],
+     "display": "Urban transport needs to improve.",
+     "why": "\"Urban\" = urbano, da cidade."
+    },
+    {
+     "id": "b2u1l11-6",
+     "type": "listen",
+     "en": "It is a friendly work environment.",
+     "options": [
+      "É um ambiente de trabalho agradável.",
+      "O trabalho é muito difícil.",
+      "Ninguém gosta de trabalhar lá."
+     ],
+     "answer": "É um ambiente de trabalho agradável.",
+     "why": "\"Work environment\" = ambiente de trabalho."
     }
    ]
   },

@@ -70,6 +70,22 @@
   [
    "schedule",
    "horário, agenda"
+  ],
+  [
+   "potential",
+   "potencial, possível"
+  ],
+  [
+   "positive",
+   "positivo(a)"
+  ],
+  [
+   "effective",
+   "eficaz"
+  ],
+  [
+   "critical",
+   "crítico(a)"
   ]
  ],
  "guide": {
@@ -552,6 +568,109 @@
       "habit": "\"Habit\" é um hábito pessoal.",
       "accent": "\"Accent\" = sotaque."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u12-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u12l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "potential",
+       "potencial"
+      ],
+      [
+       "positive",
+       "positivo"
+      ],
+      [
+       "effective",
+       "eficaz"
+      ],
+      [
+       "critical",
+       "crítico"
+      ]
+     ],
+     "why": "Falso amigo: \"effective\" = que funciona (eficaz), não \"efetivo\" de emprego."
+    },
+    {
+     "id": "b1u12l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Try to be ___. Things will get better.",
+     "pt": "Tente ser positivo. As coisas vão melhorar.",
+     "options": [
+      "positive",
+      "critical",
+      "potential"
+     ],
+     "answer": "positive",
+     "why": "\"Positive\" = positivo, otimista.",
+     "wrong": {
+      "critical": "\"Critical\" = crítico.",
+      "potential": "\"Potential\" = potencial."
+     }
+    },
+    {
+     "id": "b1u12l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "This medicine is very ___.",
+     "pt": "Este remédio é muito eficaz.",
+     "options": [
+      "effective",
+      "positive",
+      "effect"
+     ],
+     "answer": "effective",
+     "why": "\"Effective\" = eficaz, que funciona.",
+     "wrong": {
+      "positive": "Um remédio não é \"otimista\".",
+      "effect": "\"Effect\" é substantivo: efeito."
+     }
+    },
+    {
+     "id": "b1u12l11-4",
+     "type": "meaning",
+     "en": "She has a lot of potential.",
+     "options": [
+      "Ela tem muito potencial.",
+      "Ela tem muito poder.",
+      "Ela tem muitos problemas."
+     ],
+     "answer": "Ela tem muito potencial.",
+     "why": "\"Potential\" = potencial."
+    },
+    {
+     "id": "b1u12l11-5",
+     "type": "build",
+     "pt": "Meu pai é muito crítico.",
+     "answer": "My father is very critical",
+     "extra": [
+      "critic",
+      "are"
+     ],
+     "display": "My father is very critical.",
+     "why": "\"Critical\" = crítico (adjetivo). \"Critic\" é a pessoa que faz críticas."
+    },
+    {
+     "id": "b1u12l11-6",
+     "type": "listen",
+     "en": "The test was positive.",
+     "options": [
+      "O teste deu positivo.",
+      "O teste deu negativo.",
+      "Ainda não fiz o teste."
+     ],
+     "answer": "O teste deu positivo.",
+     "why": "\"Positive\" = positivo."
     }
    ]
   },

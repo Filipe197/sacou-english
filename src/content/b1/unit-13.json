@@ -62,6 +62,22 @@
   [
    "pros and cons",
    "prós e contras"
+  ],
+  [
+   "approach",
+   "abordagem, aproximar-se"
+  ],
+  [
+   "analysis",
+   "análise"
+  ],
+  [
+   "theory",
+   "teoria"
+  ],
+  [
+   "option",
+   "opção"
   ]
  ],
  "guide": {
@@ -548,6 +564,109 @@
       "do": "\"Do a decision\" não existe.",
       "take": "\"Take a decision\" existe no inglês britânico, mas \"make\" é o mais comum."
      }
+    }
+   ]
+  },
+  {
+   "id": "b1-u13-l11",
+   "title": "Palavras essenciais",
+   "added": "2026-11",
+   "bonus": true,
+   "items": [
+    {
+     "id": "b1u13l11-1",
+     "type": "match",
+     "pairs": [
+      [
+       "approach",
+       "abordagem"
+      ],
+      [
+       "analysis",
+       "análise"
+      ],
+      [
+       "theory",
+       "teoria"
+      ],
+      [
+       "option",
+       "opção"
+      ]
+     ],
+     "why": "\"Approach\" é substantivo (abordagem) e verbo (aproximar-se)."
+    },
+    {
+     "id": "b1u13l11-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We don't have any other ___.",
+     "pt": "Não temos outra opção.",
+     "options": [
+      "option",
+      "theory",
+      "analysis"
+     ],
+     "answer": "option",
+     "why": "\"Option\" = opção.",
+     "wrong": {
+      "theory": "\"Theory\" = teoria.",
+      "analysis": "\"Analysis\" = análise."
+     }
+    },
+    {
+     "id": "b1u13l11-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "In ___, it works. In practice, it does not.",
+     "pt": "Na teoria funciona. Na prática, não.",
+     "options": [
+      "theory",
+      "option",
+      "approach"
+     ],
+     "answer": "theory",
+     "why": "\"In theory\" = na teoria.",
+     "wrong": {
+      "option": "\"Option\" = opção.",
+      "approach": "\"Approach\" = abordagem."
+     }
+    },
+    {
+     "id": "b1u13l11-4",
+     "type": "meaning",
+     "en": "We need a new approach to this problem.",
+     "options": [
+      "Precisamos de uma nova abordagem para esse problema.",
+      "Precisamos esquecer esse problema.",
+      "O problema é novo."
+     ],
+     "answer": "Precisamos de uma nova abordagem para esse problema.",
+     "why": "\"Approach\" = abordagem, jeito de lidar."
+    },
+    {
+     "id": "b1u13l11-5",
+     "type": "build",
+     "pt": "A análise vai levar uma semana.",
+     "answer": "The analysis will take a week",
+     "extra": [
+      "analyse",
+      "takes"
+     ],
+     "display": "The analysis will take a week.",
+     "why": "\"Analysis\" = análise."
+    },
+    {
+     "id": "b1u13l11-6",
+     "type": "listen",
+     "en": "I have a theory about that.",
+     "options": [
+      "Tenho uma teoria sobre isso.",
+      "Não sei nada sobre isso.",
+      "Já ouvi falar disso."
+     ],
+     "answer": "Tenho uma teoria sobre isso.",
+     "why": "\"Theory\" = teoria."
     }
    ]
   },
