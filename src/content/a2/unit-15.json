@@ -1,0 +1,1098 @@
+{
+ "id": "a2-u15",
+ "level": "A2",
+ "order": 15,
+ "title": "Cidade e natureza",
+ "subtitle": "Comparar a cidade e o campo e dizer o que tem demais ou de menos.",
+ "can_do": {
+  "text": "Consigo descrever e comparar lugares (cidade, campo, praia) e dizer o que tem demais ou falta num lugar.",
+  "source": "CEFR (Conselho da Europa) — Produção oral: descrever e comparar lugares, nível A2"
+ },
+ "core_inventory": [
+  "Topics: town and country, nature",
+  "Grammar: comparatives and superlatives in use",
+  "Grammar: too much / too many / not enough",
+  "Vocabulary: places in nature"
+ ],
+ "words": [
+  [
+   "countryside",
+   "campo, interior"
+  ],
+  [
+   "village",
+   "vila, cidadezinha"
+  ],
+  [
+   "traffic",
+   "trânsito"
+  ],
+  [
+   "pollution",
+   "poluição"
+  ],
+  [
+   "air",
+   "ar"
+  ],
+  [
+   "nature",
+   "natureza"
+  ],
+  [
+   "forest",
+   "floresta"
+  ],
+  [
+   "river",
+   "rio"
+  ],
+  [
+   "hill",
+   "morro, colina"
+  ],
+  [
+   "field",
+   "campo (plantação, gramado)"
+  ],
+  [
+   "farm",
+   "fazenda, sítio"
+  ],
+  [
+   "peaceful",
+   "tranquilo(a), sossegado(a)"
+  ],
+  [
+   "capital",
+   "capital"
+  ],
+  [
+   "population",
+   "população"
+  ],
+  [
+   "too much / too many",
+   "demais (o que não se conta / o que se conta)"
+  ]
+ ],
+ "guide": {
+  "title": "Cidade ou campo?",
+  "intro": "Nesta unidade você junta o que já sabe de comparação (bigger, more peaceful, the best) com um jeito novo de reclamar de um lugar: too much e too many (demais).",
+  "points": [
+   {
+    "en": "The countryside is more peaceful than the city.",
+    "pt": "O campo é mais tranquilo que a cidade.",
+    "note": "Palavra longa: more + adjetivo + than."
+   },
+   {
+    "en": "London is the biggest city in England.",
+    "pt": "Londres é a maior cidade da Inglaterra.",
+    "note": "Superlativo: the + -est (ou the most). \"In England\" = da Inglaterra."
+   },
+   {
+    "en": "There is too much traffic.",
+    "pt": "Tem trânsito demais.",
+    "note": "\"Too much\" para o que não se conta (traffic, noise, pollution)."
+   },
+   {
+    "en": "There are too many cars.",
+    "pt": "Tem carros demais.",
+    "note": "\"Too many\" para o que se conta (cars, people)."
+   },
+   {
+    "en": "There aren't enough parks.",
+    "pt": "Não tem parques suficientes.",
+    "note": "\"Not enough\" = faltam, não tem o suficiente."
+   },
+   {
+    "en": "The air is cleaner in the countryside.",
+    "pt": "O ar é mais limpo no campo.",
+    "note": "\"Clean\" é curta: cleaner."
+   }
+  ],
+  "tips": [
+   "\"Countryside\" é o campo, longe da cidade. \"Field\" é um campo de plantação ou gramado.",
+   "Repare: \"the best city IN the world\" (e não \"of the world\")."
+  ]
+ },
+ "extra_vocab": [
+  {
+   "word": "amazon",
+   "reason": "nome próprio: a Amazônia"
+  },
+  {
+   "word": "mosquito",
+   "reason": "bicho comum no campo (B1); aparece uma vez, com tradução"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "a2-u15-l1",
+   "title": "Lugares na natureza",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l1-1",
+     "type": "match",
+     "pairs": [
+      [
+       "forest",
+       "floresta"
+      ],
+      [
+       "river",
+       "rio"
+      ],
+      [
+       "hill",
+       "morro"
+      ],
+      [
+       "farm",
+       "fazenda"
+      ]
+     ],
+     "why": "\"River\" soa como \"RÍ-ver\". \"Hill\" é um morro pequeno; \"mountain\" é montanha."
+    },
+    {
+     "id": "a2u15l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "My grandparents live on a ___ with cows and horses.",
+     "pt": "Meus avós moram num sítio com vacas e cavalos.",
+     "options": [
+      "farm",
+      "forest",
+      "river"
+     ],
+     "answer": "farm",
+     "why": "Lugar com animais e plantação: farm. Repare: \"on a farm\".",
+     "wrong": {
+      "forest": "\"Forest\" é floresta.",
+      "river": "\"River\" é rio."
+     }
+    },
+    {
+     "id": "a2u15l1-3",
+     "type": "meaning",
+     "en": "We swam in the river and walked in the forest.",
+     "options": [
+      "Nadamos no rio e caminhamos na floresta.",
+      "Nadamos no mar e corremos no parque.",
+      "Andamos de barco no rio."
+     ],
+     "answer": "Nadamos no rio e caminhamos na floresta.",
+     "why": "\"Swam\" é o passado de swim (nadar)."
+    },
+    {
+     "id": "a2u15l1-4",
+     "type": "listen",
+     "en": "I love nature.",
+     "options": [
+      "Eu amo a natureza.",
+      "Eu amo o campo.",
+      "Eu amo a cidade."
+     ],
+     "answer": "Eu amo a natureza.",
+     "why": "\"Nature\" soa como \"NÊI-tcher\". Sem \"the\" antes."
+    },
+    {
+     "id": "a2u15l1-5",
+     "type": "build",
+     "pt": "Tem um morro atrás da vila.",
+     "answer": "There is a hill behind the village",
+     "extra": [
+      "are",
+      "front"
+     ],
+     "display": "There is a hill behind the village.",
+     "why": "\"Behind\" = atrás de. \"Village\" = vila."
+    },
+    {
+     "id": "a2u15l1-6",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It is very ___ here. No cars, no noise.",
+     "pt": "É muito sossegado aqui. Sem carros, sem barulho.",
+     "options": [
+      "peaceful",
+      "noisy",
+      "crowded"
+     ],
+     "answer": "peaceful",
+     "why": "\"Peaceful\" = tranquilo, sossegado.",
+     "wrong": {
+      "noisy": "\"Noisy\" = barulhento.",
+      "crowded": "\"Crowded\" = lotado."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l2",
+   "title": "Cidade ou campo?",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The countryside is ___ than the city.",
+     "pt": "O campo é mais tranquilo que a cidade.",
+     "options": [
+      "more peaceful",
+      "peacefuller",
+      "the most peaceful"
+     ],
+     "answer": "more peaceful",
+     "why": "Palavra longa: more peaceful than.",
+     "wrong": {
+      "peacefuller": "Palavra longa não leva -er.",
+      "the most peaceful": "Com \"than\", é comparativo, não superlativo."
+     }
+    },
+    {
+     "id": "a2u15l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The air in the village is ___.",
+     "pt": "O ar na vila é mais limpo.",
+     "options": [
+      "cleaner",
+      "more clean",
+      "cleanest"
+     ],
+     "answer": "cleaner",
+     "why": "\"Clean\" é curta: cleaner.",
+     "wrong": {
+      "more clean": "Palavra curta leva -er.",
+      "cleanest": "Superlativo precisa de \"the\" e compara com todos."
+     }
+    },
+    {
+     "id": "a2u15l2-3",
+     "type": "match",
+     "pairs": [
+      [
+       "traffic",
+       "trânsito"
+      ],
+      [
+       "pollution",
+       "poluição"
+      ],
+      [
+       "countryside",
+       "campo"
+      ],
+      [
+       "population",
+       "população"
+      ]
+     ],
+     "why": "\"Traffic\" não se conta: too much traffic, a lot of traffic."
+    },
+    {
+     "id": "a2u15l2-4",
+     "type": "meaning",
+     "en": "Life in the city is faster, but it is more expensive.",
+     "options": [
+      "A vida na cidade é mais rápida, mas é mais cara.",
+      "A vida no campo é mais rápida e mais barata.",
+      "A cidade é longe e cara."
+     ],
+     "answer": "A vida na cidade é mais rápida, mas é mais cara.",
+     "why": "\"Faster\" (curta, -er) e \"more expensive\" (longa, more)."
+    },
+    {
+     "id": "a2u15l2-5",
+     "type": "build",
+     "pt": "A cidade é mais barulhenta que o campo.",
+     "answer": "The city is noisier than the countryside",
+     "extra": [
+      "more",
+      "then"
+     ],
+     "display": "The city is noisier than the countryside.",
+     "why": "\"Noisy\" termina em y: noisier. \"Than\" (que), não \"then\" (então)."
+    },
+    {
+     "id": "a2u15l2-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you prefer the city or the countryside?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "The countryside. It is quieter.",
+      "The countryside. It is more quiet than.",
+      "The countryside. It is the quiet."
+     ],
+     "answer": "The countryside. It is quieter.",
+     "pt": "O campo. É mais tranquilo.",
+     "why": "\"Quiet\" → \"quieter\". Pode terminar sem \"than\" quando fica claro.",
+     "wrong": {
+      "The countryside. It is more quiet than.": "\"Than\" sozinho no fim não fecha a frase.",
+      "The countryside. It is the quiet.": "Não forma comparação."
+     }
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l3",
+   "title": "Demais!",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There is too ___ traffic in my city.",
+     "pt": "Tem trânsito demais na minha cidade.",
+     "options": [
+      "much",
+      "many",
+      "enough"
+     ],
+     "answer": "much",
+     "why": "\"Traffic\" não se conta: too much.",
+     "wrong": {
+      "many": "\"Many\" é para o que se conta (cars).",
+      "enough": "\"Too enough\" não existe."
+     }
+    },
+    {
+     "id": "a2u15l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There are too ___ people on the beach.",
+     "pt": "Tem gente demais na praia.",
+     "options": [
+      "many",
+      "much",
+      "more"
+     ],
+     "answer": "many",
+     "why": "\"People\" se conta (one person, two people): too many.",
+     "wrong": {
+      "much": "\"Much\" é para o que não se conta.",
+      "more": "\"Too more\" não existe."
+     }
+    },
+    {
+     "id": "a2u15l3-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There ___ enough parks in this area.",
+     "pt": "Não tem parques suficientes nesta área.",
+     "options": [
+      "aren't",
+      "isn't",
+      "don't"
+     ],
+     "answer": "aren't",
+     "why": "\"Parks\" é plural: there aren't enough parks.",
+     "wrong": {
+      "isn't": "Plural pede \"aren't\".",
+      "don't": "\"There don't\" não existe."
+     }
+    },
+    {
+     "id": "a2u15l3-4",
+     "type": "meaning",
+     "en": "There is too much pollution and not enough trees.",
+     "options": [
+      "Tem poluição demais e árvores de menos.",
+      "Tem árvores demais e pouca poluição.",
+      "A poluição é igual às árvores."
+     ],
+     "answer": "Tem poluição demais e árvores de menos.",
+     "why": "\"Too much\" = demais. \"Not enough\" = de menos, não o suficiente."
+    },
+    {
+     "id": "a2u15l3-5",
+     "type": "build",
+     "pt": "Tem carros demais na rua.",
+     "answer": "There are too many cars on the street",
+     "extra": [
+      "much",
+      "is"
+     ],
+     "display": "There are too many cars on the street.",
+     "why": "Carros se contam: too many."
+    },
+    {
+     "id": "a2u15l3-6",
+     "type": "speak",
+     "en": "There is too much traffic.",
+     "pt": "Tem trânsito demais.",
+     "why": "\"Traffic\" soa como \"TRÉ-fik\"."
+    },
+    {
+     "id": "a2u15l3-7",
+     "type": "listen",
+     "en": "There aren't many shops in the village.",
+     "options": [
+      "Não tem muitas lojas na vila.",
+      "Tem lojas demais na vila.",
+      "A vila não tem lojas boas."
+     ],
+     "answer": "Não tem muitas lojas na vila.",
+     "why": "\"Not many\" = não muitos."
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l4",
+   "title": "Prática: o maior de todos",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l4-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The Amazon is the ___ forest in the world.",
+     "pt": "A Amazônia é a maior floresta do mundo.",
+     "options": [
+      "biggest",
+      "bigger",
+      "most big"
+     ],
+     "answer": "biggest",
+     "why": "Superlativo de \"big\": the biggest (dobra o g).",
+     "wrong": {
+      "bigger": "\"Bigger\" compara duas coisas.",
+      "most big": "Palavra curta leva -est."
+     }
+    },
+    {
+     "id": "a2u15l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "It's the most beautiful beach ___ Brazil.",
+     "pt": "É a praia mais linda do Brasil.",
+     "options": [
+      "in",
+      "of",
+      "from"
+     ],
+     "answer": "in",
+     "why": "Com lugar, o superlativo usa \"in\": the best IN the world.",
+     "wrong": {
+      "of": "Em português é \"do Brasil\", mas em inglês é \"in Brazil\".",
+      "from": "Não se usa com superlativo."
+     }
+    },
+    {
+     "id": "a2u15l4-3",
+     "type": "meaning",
+     "en": "Rio is not the capital, but it is the most famous city in Brazil.",
+     "options": [
+      "O Rio não é a capital, mas é a cidade mais famosa do Brasil.",
+      "O Rio é a capital e a maior cidade do Brasil.",
+      "O Rio é a cidade mais tranquila do Brasil."
+     ],
+     "answer": "O Rio não é a capital, mas é a cidade mais famosa do Brasil.",
+     "why": "\"Capital\" = capital. \"The most famous\" = a mais famosa."
+    },
+    {
+     "id": "a2u15l4-4",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "This is the ___ river I know.",
+     "pt": "Este é o rio mais limpo que eu conheço.",
+     "options": [
+      "cleanest",
+      "most clean",
+      "cleaner"
+     ],
+     "answer": "cleanest",
+     "why": "\"Clean\" é curta: the cleanest.",
+     "wrong": {
+      "most clean": "Palavra curta leva -est.",
+      "cleaner": "Com \"the\" e \"I know\", é superlativo."
+     }
+    },
+    {
+     "id": "a2u15l4-5",
+     "type": "build",
+     "pt": "É o lugar mais tranquilo da cidade.",
+     "answer": "It's the most peaceful place in the city",
+     "extra": [
+      "of",
+      "more"
+     ],
+     "display": "It's the most peaceful place in the city.",
+     "why": "Palavra longa: the most peaceful. Com lugar: in the city."
+    },
+    {
+     "id": "a2u15l4-6",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What's the best thing about your town?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "The people. They're the nicest in the world!",
+      "The people. They're the more nice of the world!",
+      "The people. They're nicer world!"
+     ],
+     "answer": "The people. They're the nicest in the world!",
+     "pt": "As pessoas. São as mais legais do mundo!",
+     "why": "\"Nice\" termina em e: the nicest. E \"in the world\".",
+     "wrong": {
+      "The people. They're the more nice of the world!": "Superlativo de palavra curta: the nicest, e \"in the world\".",
+      "The people. They're nicer world!": "Falta \"the\" e \"in the\"."
+     }
+    },
+    {
+     "id": "a2u15l4-7",
+     "type": "listen",
+     "en": "The mountains are colder than the beach.",
+     "options": [
+      "As montanhas são mais frias que a praia.",
+      "A praia é mais fria que as montanhas.",
+      "As montanhas são lindas e frias."
+     ],
+     "answer": "As montanhas são mais frias que a praia.",
+     "why": "\"Colder\" = mais frio."
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l5-1",
+     "type": "type",
+     "pt": "Tem trânsito demais.",
+     "answer": "There is too much traffic.",
+     "why": "\"Too much\" para o que não se conta."
+    },
+    {
+     "id": "a2u15l5-2",
+     "type": "type",
+     "pt": "O campo é mais tranquilo.",
+     "answer": "The countryside is more peaceful.",
+     "accept": [
+      "The countryside is quieter."
+     ],
+     "why": "\"More peaceful\" ou \"quieter\" = mais tranquilo."
+    },
+    {
+     "id": "a2u15l5-3",
+     "type": "dictation",
+     "en": "We live near a river.",
+     "why": "\"Near\" = perto de."
+    },
+    {
+     "id": "a2u15l5-4",
+     "type": "type",
+     "pt": "Tem gente demais aqui.",
+     "answer": "There are too many people here.",
+     "why": "\"People\" se conta: too many."
+    },
+    {
+     "id": "a2u15l5-5",
+     "type": "dictation",
+     "en": "The air is very clean.",
+     "why": "\"Air\" soa como \"ÉR\"."
+    },
+    {
+     "id": "a2u15l5-6",
+     "type": "type",
+     "pt": "É a maior cidade do país.",
+     "answer": "It's the biggest city in the country.",
+     "accept": [
+      "It is the biggest city in the country."
+     ],
+     "why": "Superlativo + \"in the country\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l6-1",
+     "type": "listen",
+     "en": "My village is small but very peaceful.",
+     "options": [
+      "Minha vila é pequena, mas muito tranquila.",
+      "Minha vila é grande e barulhenta.",
+      "Minha cidade é pequena e lotada."
+     ],
+     "answer": "Minha vila é pequena, mas muito tranquila.",
+     "why": "\"Peaceful\" soa como \"PÍIS-ful\"."
+    },
+    {
+     "id": "a2u15l6-2",
+     "type": "dictation",
+     "en": "There is too much noise.",
+     "why": "\"Noise\" = barulho. Não se conta: too much."
+    },
+    {
+     "id": "a2u15l6-3",
+     "type": "listen",
+     "en": "There aren't enough trees in the city.",
+     "options": [
+      "Não tem árvores suficientes na cidade.",
+      "Tem árvores demais na cidade.",
+      "As árvores da cidade são grandes."
+     ],
+     "answer": "Não tem árvores suficientes na cidade.",
+     "why": "\"Not enough\" = não o suficiente."
+    },
+    {
+     "id": "a2u15l6-4",
+     "type": "dictation",
+     "en": "The forest is beautiful.",
+     "why": "\"Forest\" soa como \"FÓ-rest\"."
+    },
+    {
+     "id": "a2u15l6-5",
+     "type": "listen",
+     "en": "Life on a farm is harder than people think.",
+     "options": [
+      "A vida numa fazenda é mais difícil do que as pessoas pensam.",
+      "A vida na fazenda é fácil e tranquila.",
+      "As pessoas gostam da vida na fazenda."
+     ],
+     "answer": "A vida numa fazenda é mais difícil do que as pessoas pensam.",
+     "why": "\"Harder\" = mais difícil (hard → harder)."
+    },
+    {
+     "id": "a2u15l6-6",
+     "type": "dictation",
+     "en": "It is the best beach in Brazil.",
+     "why": "\"The best... in Brazil\" = a melhor do Brasil."
+    },
+    {
+     "id": "a2u15l6-7",
+     "type": "speak",
+     "en": "I prefer the countryside.",
+     "pt": "Eu prefiro o campo.",
+     "why": "\"Countryside\" soa como \"KÂN-tri-said\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Where are you from?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'm from a small village near Salvador.",
+      "I'm from small village near of Salvador.",
+      "I from a village small near Salvador."
+     ],
+     "answer": "I'm from a small village near Salvador.",
+     "pt": "Sou de uma vilazinha perto de Salvador.",
+     "why": "\"Near\" sem \"of\". Adjetivo antes: small village.",
+     "wrong": {
+      "I'm from small village near of Salvador.": "Faltou \"a\" e sobrou \"of\".",
+      "I from a village small near Salvador.": "Falta \"am\" e o adjetivo vem antes."
+     }
+    },
+    {
+     "id": "a2u15l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What is it like?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It's quiet. There isn't much traffic.",
+      "It's quiet. There aren't much traffic.",
+      "It's like quiet."
+     ],
+     "answer": "It's quiet. There isn't much traffic.",
+     "pt": "É tranquila. Não tem muito trânsito.",
+     "why": "\"What is it like?\" = como é? Traffic não se conta: isn't much.",
+     "wrong": {
+      "It's quiet. There aren't much traffic.": "Traffic é singular: there isn't.",
+      "It's like quiet.": "O \"like\" da pergunta não aparece na resposta."
+     }
+    },
+    {
+     "id": "a2u15l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I live in the city. It's too crowded."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "You should visit the countryside. It is more peaceful.",
+      "You should visiting the countryside. It is peacefuler.",
+      "You should to visit the countryside."
+     ],
+     "answer": "You should visit the countryside. It is more peaceful.",
+     "pt": "Você deveria visitar o campo. É mais tranquilo.",
+     "why": "\"Should\" + verbo normal; \"more peaceful\".",
+     "wrong": {
+      "You should visiting the countryside. It is peacefuler.": "Sem -ing depois de should, e \"more peaceful\".",
+      "You should to visit the countryside.": "Sem \"to\" depois de should."
+     }
+    },
+    {
+     "id": "a2u15l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What's the most beautiful place you know?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "A beach in Bahia. The water is so clean!",
+      "A beach in Bahia. The water is cleanest.",
+      "Bahia is more beautiful place."
+     ],
+     "answer": "A beach in Bahia. The water is so clean!",
+     "pt": "Uma praia na Bahia. A água é tão limpa!",
+     "why": "\"So clean\" = tão limpa.",
+     "wrong": {
+      "A beach in Bahia. The water is cleanest.": "Superlativo precisa de \"the\" e comparação.",
+      "Bahia is more beautiful place.": "Falta \"the most\" e \"the\"."
+     }
+    },
+    {
+     "id": "a2u15l7-5",
+     "type": "speak",
+     "en": "There are too many cars.",
+     "pt": "Tem carros demais.",
+     "why": "\"Too many\" soa como \"tu MÉ-ni\"."
+    },
+    {
+     "id": "a2u15l7-6",
+     "type": "speak",
+     "en": "The air is cleaner here.",
+     "pt": "O ar é mais limpo aqui.",
+     "why": "\"Cleaner\" soa como \"KLÍI-ner\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l8",
+   "title": "Lendo: dois lugares, duas vidas",
+   "added": "2026-11",
+   "story": {
+    "title": "Dois lugares, duas vidas",
+    "lines": [
+     {
+      "who": "Rita",
+      "en": "I work in the capital. It is the busiest city in the country.",
+      "pt": "Eu trabalho na capital. É a cidade mais movimentada do país."
+     },
+     {
+      "who": "Rita",
+      "en": "There is too much traffic and too much noise. And the air is not very clean.",
+      "pt": "Tem trânsito demais e barulho demais. E o ar não é muito limpo."
+     },
+     {
+      "ask": "Como é a capital?",
+      "options": [
+       "A mais movimentada do país",
+       "A mais tranquila do país",
+       "A menor do país"
+      ],
+      "answer": "A mais movimentada do país",
+      "why": "\"The busiest city in the country.\""
+     },
+     {
+      "who": "Rita",
+      "en": "On weekends I visit my parents. They live on a farm near a ___.",
+      "pt": "Nos fins de semana eu visito meus pais. Eles moram num sítio perto de um rio.",
+      "gap": {
+       "answer": "river",
+       "options": [
+        "river",
+        "traffic",
+        "capital"
+       ]
+      }
+     },
+     {
+      "who": "Rita",
+      "en": "It's more peaceful there. But there aren't enough shops, and the internet is slower!",
+      "pt": "Lá é mais tranquilo. Mas não tem lojas suficientes, e a internet é mais lenta!"
+     },
+     {
+      "who": "Rita",
+      "en": "Someday I'd like to live in the countryside. I love nature.",
+      "pt": "Algum dia eu gostaria de morar no campo. Eu amo a natureza."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a2u15l8-1",
+     "type": "story",
+     "why": "A Rita compara a vida na capital com a vida no sítio dos pais. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "a2u15l8-2",
+     "type": "quiz",
+     "q": "O que a Rita acha da capital?",
+     "options": [
+      "Tem trânsito e barulho demais",
+      "É muito tranquila",
+      "É pequena demais"
+     ],
+     "answer": "Tem trânsito e barulho demais",
+     "why": "\"There is too much traffic and too much noise.\""
+    },
+    {
+     "id": "a2u15l8-3",
+     "type": "quiz",
+     "q": "O que o sítio não tem?",
+     "options": [
+      "Lojas suficientes",
+      "Ar limpo",
+      "Natureza"
+     ],
+     "answer": "Lojas suficientes",
+     "why": "\"There aren't enough shops.\""
+    },
+    {
+     "id": "a2u15l8-4",
+     "type": "quiz",
+     "q": "Onde a Rita quer morar no futuro?",
+     "options": [
+      "No campo",
+      "Na capital",
+      "Na praia"
+     ],
+     "answer": "No campo",
+     "why": "\"Someday I'd like to live in the countryside.\""
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "a2u15l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "There are too ___ tourists in summer.",
+     "pt": "Tem turistas demais no verão.",
+     "options": [
+      "many",
+      "much",
+      "enough"
+     ],
+     "answer": "many",
+     "why": "Turistas se contam: too many.",
+     "wrong": {
+      "much": "\"Much\" é para o que não se conta.",
+      "enough": "\"Too enough\" não existe."
+     }
+    },
+    {
+     "id": "a2u15l9-2",
+     "type": "type",
+     "pt": "A cidade é maior que a vila.",
+     "answer": "The city is bigger than the village.",
+     "why": "\"Big\" → \"bigger\" (dobra o g)."
+    },
+    {
+     "id": "a2u15l9-3",
+     "type": "meaning",
+     "en": "There isn't enough water in the river this year.",
+     "options": [
+      "Não tem água suficiente no rio este ano.",
+      "Tem água demais no rio este ano.",
+      "O rio está mais limpo este ano."
+     ],
+     "answer": "Não tem água suficiente no rio este ano.",
+     "why": "\"Not enough water\" = água insuficiente."
+    },
+    {
+     "id": "a2u15l9-4",
+     "type": "dictation",
+     "en": "The village is very peaceful.",
+     "why": "\"Village\" = \"VÍ-lidj\"."
+    },
+    {
+     "id": "a2u15l9-5",
+     "type": "listen",
+     "en": "Which is the longest river in the world?",
+     "options": [
+      "Qual é o rio mais longo do mundo?",
+      "Qual rio é mais limpo?",
+      "Onde fica o maior rio?"
+     ],
+     "answer": "Qual é o rio mais longo do mundo?",
+     "why": "\"Longest\" = mais longo (long → longest)."
+    },
+    {
+     "id": "a2u15l9-6",
+     "type": "build",
+     "pt": "Tem barulho demais e parques de menos.",
+     "answer": "There is too much noise and not enough parks",
+     "extra": [
+      "many",
+      "are"
+     ],
+     "display": "There is too much noise and not enough parks.",
+     "why": "\"Too much noise\" (não se conta) e \"not enough parks\"."
+    }
+   ]
+  },
+  {
+   "id": "a2-u15-l10",
+   "title": "História: o fim de semana no sítio",
+   "added": "2026-11",
+   "story": {
+    "title": "O fim de semana no sítio",
+    "lines": [
+     {
+      "who": "Laura",
+      "en": "Welcome to our farm, Ben! What do you think?",
+      "pt": "Bem-vindo ao nosso sítio, Ben! O que você acha?"
+     },
+     {
+      "who": "Ben",
+      "en": "Wow! It's beautiful. The air is so much ___ than in the city!",
+      "pt": "Uau! É lindo. O ar é muito mais limpo que na cidade!",
+      "gap": {
+       "answer": "cleaner",
+       "options": [
+        "cleaner",
+        "cleanest",
+        "more clean"
+       ]
+      }
+     },
+     {
+      "who": "Laura",
+      "en": "Yes, and it is very peaceful. No traffic, no noise.",
+      "pt": "É, e é muito tranquilo. Sem trânsito, sem barulho."
+     },
+     {
+      "who": "Ben",
+      "en": "Is there a problem? Every place has one!",
+      "pt": "Tem algum problema? Todo lugar tem um!"
+     },
+     {
+      "who": "Laura",
+      "en": "Ha! There are too many mosquitoes in summer!",
+      "pt": "Rá! Tem mosquito demais no verão!"
+     },
+     {
+      "ask": "O que tem demais no sítio?",
+      "options": [
+       "Mosquitos",
+       "Carros",
+       "Turistas"
+      ],
+      "answer": "Mosquitos",
+      "why": "\"There are too many mosquitoes.\""
+     },
+     {
+      "who": "Ben",
+      "en": "That's OK. What is the best thing to do here?",
+      "pt": "Tudo bem. Qual é a melhor coisa para fazer aqui?"
+     },
+     {
+      "who": "Laura",
+      "en": "Let's climb the hill on Sunday. It has the best view in the area.",
+      "pt": "Vamos subir o morro no domingo. Tem a melhor vista da região."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "a2u15l10-1",
+     "type": "story",
+     "why": "O Ben passa o fim de semana no sítio da Laura. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "a2u15l10-2",
+     "type": "quiz",
+     "q": "O que o Ben acha do ar?",
+     "options": [
+      "Mais limpo que na cidade",
+      "Frio demais",
+      "Igual ao da cidade"
+     ],
+     "answer": "Mais limpo que na cidade",
+     "why": "\"The air is so much cleaner than in the city!\""
+    },
+    {
+     "id": "a2u15l10-3",
+     "type": "quiz",
+     "q": "Qual é o problema do sítio, segundo a Laura?",
+     "options": [
+      "Tem mosquito demais",
+      "Tem gente demais",
+      "Não tem água"
+     ],
+     "answer": "Tem mosquito demais",
+     "why": "\"There are too many mosquitoes!\""
+    },
+    {
+     "id": "a2u15l10-4",
+     "type": "quiz",
+     "q": "O que eles vão fazer no domingo?",
+     "options": [
+      "Subir o morro",
+      "Voltar para a cidade",
+      "Nadar no rio"
+     ],
+     "answer": "Subir o morro",
+     "why": "\"Let's climb the hill on Sunday.\""
+    }
+   ]
+  }
+ ]
+}

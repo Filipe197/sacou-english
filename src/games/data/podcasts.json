@@ -2756,6 +2756,370 @@
    ]
   },
   {
+   "id": "pod-a2u13",
+   "level": "A2",
+   "unlock": "a2-u13",
+   "title": "Quem lava a louça?",
+   "intro": "A Ana e o Tom contam como dividem as tarefas de casa.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're talking about jobs in the house.",
+     "pt": "E eu sou o Tom. Hoje vamos falar das tarefas de casa."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, do you share the jobs with your family?",
+     "pt": "Tom, você divide as tarefas com a sua família?"
+    },
+    {
+     "who": "tom",
+     "en": "Yes. My wife cooks, and I do the dishes. It is fair.",
+     "pt": "Sim. Minha esposa cozinha e eu lavo a louça. É justo."
+    },
+    {
+     "who": "ana",
+     "en": "I live with my sister. She's very tidy, but I'm a bit lazy.",
+     "pt": "Eu moro com a minha irmã. Ela é muito organizada, mas eu sou meio preguiçosa."
+    },
+    {
+     "who": "tom",
+     "en": "Ha! Does she help you?",
+     "pt": "Rá! Ela te ajuda?"
+    },
+    {
+     "who": "ana",
+     "en": "Yes, but she always says: 'Ana, it's your turn!'",
+     "pt": "Ajuda, mas ela sempre diz: \"Ana, é a sua vez!\""
+    },
+    {
+     "who": "tom",
+     "en": "And whose turn is it today?",
+     "pt": "E de quem é a vez hoje?"
+    },
+    {
+     "who": "ana",
+     "en": "Mine. I have to take out the garbage! That's all for today.",
+     "pt": "Minha. Tenho que tirar o lixo! Por hoje é só."
+    },
+    {
+     "who": "tom",
+     "en": "Bye! Thank you for listening!",
+     "pt": "Tchau! Obrigado por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom faz em casa?",
+     "options": [
+      "Lava a louça",
+      "Cozinha",
+      "Tira o lixo"
+     ],
+     "answer": "Lava a louça",
+     "why": "\"I do the dishes.\""
+    },
+    {
+     "q": "Como é a irmã da Ana?",
+     "options": [
+      "Muito organizada",
+      "Preguiçosa",
+      "Bagunceira"
+     ],
+     "answer": "Muito organizada",
+     "why": "\"She's very tidy.\""
+    },
+    {
+     "q": "O que a Ana precisa fazer hoje?",
+     "options": [
+      "Tirar o lixo",
+      "Lavar a louça",
+      "Cozinhar"
+     ],
+     "answer": "Tirar o lixo",
+     "why": "\"I have to take out the garbage!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u14",
+   "level": "A2",
+   "unlock": "a2-u14",
+   "title": "Viajar sem estresse",
+   "intro": "A Ana e o Tom contam como foi a última viagem e dão dicas para o hotel e o aeroporto.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're talking about hotels and airports.",
+     "pt": "E eu sou o Tom. Hoje vamos falar de hotéis e aeroportos."
+    },
+    {
+     "who": "ana",
+     "en": "Tom, how was your last trip?",
+     "pt": "Tom, como foi sua última viagem?"
+    },
+    {
+     "who": "tom",
+     "en": "Not great. My flight had a four-hour delay!",
+     "pt": "Nada boa. Meu voo atrasou quatro horas!"
+    },
+    {
+     "who": "ana",
+     "en": "Oh no! And the hotel?",
+     "pt": "Ah, não! E o hotel?"
+    },
+    {
+     "who": "tom",
+     "en": "The room was too small, and the bed wasn't big enough for me.",
+     "pt": "O quarto era pequeno demais e a cama não era grande o suficiente para mim."
+    },
+    {
+     "who": "ana",
+     "en": "My tip: be polite. Say 'Could you help me, please?' People help you more.",
+     "pt": "Minha dica: seja educado. Diga \"Could you help me, please?\". As pessoas ajudam mais."
+    },
+    {
+     "who": "tom",
+     "en": "Good tip! And always ask for a window seat. The view is beautiful.",
+     "pt": "Boa dica! E sempre peça janela. A vista é linda."
+    },
+    {
+     "who": "ana",
+     "en": "That's all for today. Have a good trip!",
+     "pt": "Por hoje é só. Boa viagem!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye! Thank you for listening!",
+     "pt": "Tchau! Obrigado por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Quanto tempo o voo do Tom atrasou?",
+     "options": [
+      "Quatro horas",
+      "Duas horas",
+      "Um dia"
+     ],
+     "answer": "Quatro horas",
+     "why": "\"A four-hour delay.\""
+    },
+    {
+     "q": "Qual era o problema da cama?",
+     "options": [
+      "Pequena demais para ele",
+      "Dura demais",
+      "Suja"
+     ],
+     "answer": "Pequena demais para ele",
+     "why": "\"The bed wasn't big enough for me.\""
+    },
+    {
+     "q": "Qual é a dica da Ana?",
+     "options": [
+      "Ser educado ao pedir",
+      "Viajar à noite",
+      "Levar pouca mala"
+     ],
+     "answer": "Ser educado ao pedir",
+     "why": "\"Be polite. Say 'Could you help me, please?'\""
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u15",
+   "level": "A2",
+   "unlock": "a2-u15",
+   "title": "Cidade grande ou cidade pequena?",
+   "intro": "A Ana e o Tom comparam a vida na cidade grande e no interior.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: the city or the countryside?",
+     "pt": "E eu sou o Tom. Hoje: cidade ou campo?"
+    },
+    {
+     "who": "ana",
+     "en": "I live in a big city. There is always something to do.",
+     "pt": "Eu moro numa cidade grande. Sempre tem alguma coisa para fazer."
+    },
+    {
+     "who": "tom",
+     "en": "But there is too much traffic, Ana!",
+     "pt": "Mas tem trânsito demais, Ana!"
+    },
+    {
+     "who": "ana",
+     "en": "That's true. And too many people on the bus.",
+     "pt": "É verdade. E gente demais no ônibus."
+    },
+    {
+     "who": "tom",
+     "en": "I grew up in a small village. It was quieter and cheaper.",
+     "pt": "Eu cresci numa vilazinha. Era mais tranquila e mais barata."
+    },
+    {
+     "who": "ana",
+     "en": "Was it boring?",
+     "pt": "Era chata?"
+    },
+    {
+     "who": "tom",
+     "en": "A little. There weren't enough things to do on Saturday night!",
+     "pt": "Um pouco. Não tinha coisas suficientes para fazer no sábado à noite!"
+    },
+    {
+     "who": "ana",
+     "en": "So the best place is... a small city near a big one! That's all for today.",
+     "pt": "Então o melhor lugar é... uma cidade pequena perto de uma grande! Por hoje é só."
+    },
+    {
+     "who": "tom",
+     "en": "Ha! Bye! Thank you for listening!",
+     "pt": "Rá! Tchau! Obrigado por ouvir!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom diz da cidade da Ana?",
+     "options": [
+      "Tem trânsito demais",
+      "É barata demais",
+      "É chata"
+     ],
+     "answer": "Tem trânsito demais",
+     "why": "\"There is too much traffic, Ana!\""
+    },
+    {
+     "q": "Como era a vila do Tom?",
+     "options": [
+      "Mais tranquila e mais barata",
+      "Mais barulhenta",
+      "Maior que a cidade"
+     ],
+     "answer": "Mais tranquila e mais barata",
+     "why": "\"It was quieter and cheaper.\""
+    },
+    {
+     "q": "Qual é a conclusão da Ana?",
+     "options": [
+      "Uma cidade pequena perto de uma grande",
+      "Só a cidade grande",
+      "Só o campo"
+     ],
+     "answer": "Uma cidade pequena perto de uma grande",
+     "why": "\"A small city near a big one!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-a2u16",
+   "level": "A2",
+   "unlock": "a2-u16",
+   "title": "A nossa história",
+   "intro": "No último episódio do A2, a Ana e o Tom contam um pouco da própria vida.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the last podcast of this level. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao último podcast do A2. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're telling our life stories.",
+     "pt": "E eu sou o Tom. Hoje vamos contar a nossa história de vida."
+    },
+    {
+     "who": "ana",
+     "en": "I'm from Bahia, but I grew up in Rio.",
+     "pt": "Eu sou da Bahia, mas cresci no Rio."
+    },
+    {
+     "who": "tom",
+     "en": "I'm from England. I moved to Brazil ten years ago.",
+     "pt": "Eu sou da Inglaterra. Me mudei para o Brasil há dez anos."
+    },
+    {
+     "who": "ana",
+     "en": "Why did you come here?",
+     "pt": "Por que você veio para cá?"
+    },
+    {
+     "who": "tom",
+     "en": "I got a job as a teacher. And then I met my wife!",
+     "pt": "Arrumei um emprego de professor. E aí conheci minha esposa!"
+    },
+    {
+     "who": "ana",
+     "en": "And you learned Portuguese very quickly.",
+     "pt": "E você aprendeu português muito rápido."
+    },
+    {
+     "who": "tom",
+     "en": "Not quickly! I studied hard. Like you, listening to this podcast!",
+     "pt": "Rápido, não! Estudei muito. Igual a vocês, ouvindo este podcast!"
+    },
+    {
+     "who": "ana",
+     "en": "Well done! You finished this level! That's all for today.",
+     "pt": "Muito bem! Vocês terminaram este nível! Por hoje é só."
+    },
+    {
+     "who": "tom",
+     "en": "See you in the next level! Bye!",
+     "pt": "Até o próximo nível! Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Onde a Ana cresceu?",
+     "options": [
+      "No Rio",
+      "Na Bahia",
+      "Na Inglaterra"
+     ],
+     "answer": "No Rio",
+     "why": "\"I grew up in Rio.\""
+    },
+    {
+     "q": "Por que o Tom veio para o Brasil?",
+     "options": [
+      "Arrumou um emprego de professor",
+      "Para estudar",
+      "Para se aposentar"
+     ],
+     "answer": "Arrumou um emprego de professor",
+     "why": "\"I got a job as a teacher.\""
+    },
+    {
+     "q": "Como o Tom aprendeu português?",
+     "options": [
+      "Estudando muito",
+      "Muito rápido, sem estudar",
+      "Na escola na Inglaterra"
+     ],
+     "answer": "Estudando muito",
+     "why": "\"Not quickly! I studied hard.\""
+    }
+   ]
+  },
+  {
    "id": "pod-b1u1",
    "level": "B1",
    "unlock": "b1-u1",
