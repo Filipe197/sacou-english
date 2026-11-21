@@ -5741,6 +5741,330 @@
      "why": "\"After very, use the adjective.\""
     }
    ]
+  },
+  {
+   "id": "pod-b2u13",
+   "level": "B2",
+   "unlock": "b2-u13",
+   "title": "Você prefere…?",
+   "intro": "A Ana e o Tom jogam o \"Você prefere?\" em inglês.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today we're playing 'Would you rather'!",
+     "pt": "E eu sou o Tom. Hoje vamos jogar \"Você prefere\"!"
+    },
+    {
+     "who": "ana",
+     "en": "Tom, would you rather live without music or without films?",
+     "pt": "Tom, você prefere viver sem música ou sem filmes?"
+    },
+    {
+     "who": "tom",
+     "en": "Hard one! I'd rather live without films. Music is everything to me.",
+     "pt": "Difícil! Prefiro viver sem filmes. Música é tudo para mim."
+    },
+    {
+     "who": "ana",
+     "en": "My turn. Would I rather be rich or famous? I'd rather be rich, but nobody knew me!",
+     "pt": "Minha vez. Prefiro ser rica ou famosa? Prefiro ser rica, mas que ninguém me conhecesse!"
+    },
+    {
+     "who": "tom",
+     "en": "Ha! You talk as if you had thought about it a lot.",
+     "pt": "Rá! Você fala como se tivesse pensado muito nisso."
+    },
+    {
+     "who": "ana",
+     "en": "Maybe I have! OK, it's time we said goodbye. Try this game with your friends!",
+     "pt": "Talvez eu tenha! Bom, já está na hora de nos despedirmos. Tentem esse jogo com os amigos!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye!",
+     "pt": "Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O Tom prefere viver sem o quê?",
+     "options": [
+      "Sem filmes",
+      "Sem música",
+      "Sem dinheiro"
+     ],
+     "answer": "Sem filmes",
+     "why": "\"I'd rather live without films.\""
+    },
+    {
+     "q": "O que a Ana prefere ser?",
+     "options": [
+      "Rica, mas sem ser conhecida",
+      "Famosa",
+      "Nem rica nem famosa"
+     ],
+     "answer": "Rica, mas sem ser conhecida",
+     "why": "\"I'd rather be rich, but nobody knew me!\""
+    },
+    {
+     "q": "Como a Ana fala, segundo o Tom?",
+     "options": [
+      "Como se tivesse pensado muito nisso",
+      "Como se estivesse cansada",
+      "Como se fosse famosa"
+     ],
+     "answer": "Como se tivesse pensado muito nisso",
+     "why": "\"As if you had thought about it a lot.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u14",
+   "level": "B2",
+   "unlock": "b2-u14",
+   "title": "O que mais importa",
+   "intro": "A Ana e o Tom falam do que realmente importa para eles.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: what really matters to us?",
+     "pt": "E eu sou o Tom. Hoje: o que realmente importa para nós?"
+    },
+    {
+     "who": "ana",
+     "en": "What matters most to me is having time for my family.",
+     "pt": "O que mais importa para mim é ter tempo para a minha família."
+    },
+    {
+     "who": "tom",
+     "en": "For me, what I value is freedom. I'd hate a job with a fixed schedule.",
+     "pt": "Para mim, o que eu valorizo é a liberdade. Eu odiaria um emprego com horário fixo."
+    },
+    {
+     "who": "ana",
+     "en": "And what annoys you most?",
+     "pt": "E o que mais te irrita?"
+    },
+    {
+     "who": "tom",
+     "en": "What annoys me is people who are always on their phones. I do try not to be like that!",
+     "pt": "O que me irrita são pessoas que estão sempre no celular. Eu tento, sim, não ser assim!"
+    },
+    {
+     "who": "ana",
+     "en": "Ha! That's all for today. Thank you for listening!",
+     "pt": "Rá! Por hoje é só. Obrigada por ouvir!"
+    },
+    {
+     "who": "tom",
+     "en": "Bye!",
+     "pt": "Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que mais importa para a Ana?",
+     "options": [
+      "Ter tempo para a família",
+      "Ganhar dinheiro",
+      "Viajar"
+     ],
+     "answer": "Ter tempo para a família",
+     "why": "\"Having time for my family.\""
+    },
+    {
+     "q": "O que o Tom valoriza?",
+     "options": [
+      "Liberdade",
+      "Estabilidade",
+      "Fama"
+     ],
+     "answer": "Liberdade",
+     "why": "\"What I value is freedom.\""
+    },
+    {
+     "q": "O que irrita o Tom?",
+     "options": [
+      "Pessoas sempre no celular",
+      "Trânsito",
+      "Barulho"
+     ],
+     "answer": "Pessoas sempre no celular",
+     "why": "\"People who are always on their phones.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u15",
+   "level": "B2",
+   "unlock": "b2-u15",
+   "title": "Lendas e boatos",
+   "intro": "A Ana e o Tom contam lendas urbanas e boatos famosos.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the podcast. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: legends and rumours.",
+     "pt": "E eu sou o Tom. Hoje: lendas e boatos."
+    },
+    {
+     "who": "ana",
+     "en": "In my grandmother's town, there is a house that is said to be haunted.",
+     "pt": "Na cidade da minha avó, tem uma casa que dizem ser mal-assombrada."
+    },
+    {
+     "who": "tom",
+     "en": "Did you ever go inside?",
+     "pt": "Você já entrou lá?"
+    },
+    {
+     "who": "ana",
+     "en": "Never! It is believed that a sad old man still lives there.",
+     "pt": "Nunca! Acredita-se que um velho triste ainda mora lá."
+    },
+    {
+     "who": "tom",
+     "en": "In London, it is said that if the birds leave the Tower, the kingdom will fall.",
+     "pt": "Em Londres, dizem que se os pássaros (corvos) saírem da Torre, o reino vai cair."
+    },
+    {
+     "who": "ana",
+     "en": "So the birds are supposed to stay there forever? That's a lot of pressure!",
+     "pt": "Então era para os pássaros ficarem lá para sempre? É muita pressão!"
+    },
+    {
+     "who": "tom",
+     "en": "Ha! That's all for today. Bye!",
+     "pt": "Rá! Por hoje é só. Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que dizem da casa na cidade da avó da Ana?",
+     "options": [
+      "Que é mal-assombrada",
+      "Que é muito antiga",
+      "Que vai ser vendida"
+     ],
+     "answer": "Que é mal-assombrada",
+     "why": "\"Is said to be haunted.\""
+    },
+    {
+     "q": "O que acredita-se que vive na casa?",
+     "options": [
+      "Um velho triste",
+      "Um gato preto",
+      "Ninguém"
+     ],
+     "answer": "Um velho triste",
+     "why": "\"A sad old man still lives there.\""
+    },
+    {
+     "q": "Qual é a lenda de Londres?",
+     "options": [
+      "Se os corvos saírem da Torre, o reino cai",
+      "A Torre é mal-assombrada",
+      "O rei mora na Torre"
+     ],
+     "answer": "Se os corvos saírem da Torre, o reino cai",
+     "why": "\"If the birds leave the Tower, the kingdom will fall.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-b2u16",
+   "level": "B2",
+   "unlock": "b2-u16",
+   "title": "O último episódio",
+   "intro": "No episódio final do curso, a Ana e o Tom se despedem e deixam conselhos para continuar.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Hi everyone! Welcome to the very last episode. I'm Ana.",
+     "pt": "Oi, pessoal! Bem-vindos ao último episódio. Eu sou a Ana."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Well, this is a special day.",
+     "pt": "E eu sou o Tom. Bom, hoje é um dia especial."
+    },
+    {
+     "who": "ana",
+     "en": "To be honest, I'm a bit emotional. We started with 'Hello, my name is Ana'!",
+     "pt": "Para ser sincera, estou um pouco emocionada. A gente começou com \"Hello, my name is Ana\"!"
+    },
+    {
+     "who": "tom",
+     "en": "And now you can understand a whole podcast in English. That's amazing.",
+     "pt": "E agora vocês entendem um podcast inteiro em inglês. Isso é incrível."
+    },
+    {
+     "who": "ana",
+     "en": "Our advice? Watch series, read, talk to people. And never be afraid of mistakes.",
+     "pt": "Nosso conselho? Vejam séries, leiam, conversem com as pessoas. E nunca tenham medo de errar."
+    },
+    {
+     "who": "tom",
+     "en": "By the way, this isn't the end. It's the beginning of your English life!",
+     "pt": "Aliás, isto não é o fim. É o começo da vida de vocês em inglês!"
+    },
+    {
+     "who": "ana",
+     "en": "Anyway, thank you for listening all this time. We're so proud of you!",
+     "pt": "Enfim, obrigada por ouvirem todo esse tempo. Temos muito orgulho de vocês!"
+    },
+    {
+     "who": "tom",
+     "en": "Goodbye, and good luck!",
+     "pt": "Tchau, e boa sorte!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Com que frase o curso começou, segundo a Ana?",
+     "options": [
+      "Hello, my name is Ana",
+      "Good morning",
+      "How are you?"
+     ],
+     "answer": "Hello, my name is Ana",
+     "why": "\"We started with Hello, my name is Ana!\""
+    },
+    {
+     "q": "Qual é o conselho deles?",
+     "options": [
+      "Ver séries, ler, conversar e não ter medo de errar",
+      "Parar de estudar",
+      "Só fazer provas"
+     ],
+     "answer": "Ver séries, ler, conversar e não ter medo de errar",
+     "why": "\"Watch series, read, talk to people. And never be afraid of mistakes.\""
+    },
+    {
+     "q": "O que o Tom diz sobre o fim do curso?",
+     "options": [
+      "É o começo da vida em inglês",
+      "É o fim do inglês",
+      "Precisa recomeçar"
+     ],
+     "answer": "É o começo da vida em inglês",
+     "why": "\"It's the beginning of your English life!\""
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,166 @@
+// Etapa 3 do B2 completo: unidade nova 15 — Dizem que… (passiva de relato: it is said that, be said to, be supposed to).
+// Gera src/content/b2/unit-15.json. Todas as lições levam "added".
+// Uso: node scripts/content-add/b2-u15.mjs  (pode rodar de novo: reescreve a unidade)
+import { writeUnit, addPodcast, addScene } from './lib.mjs';
+
+const L = (n, title, items, story) => ({ id: `b2-u15-l${n}`, title, ...(story ? { story } : {}), items });
+const I = (n, k, o) => ({ id: `b2u15l${n}-${k}`, ...o });
+
+writeUnit('b2/unit-15.json', {
+  id: 'b2-u15', level: 'B2', order: 15,
+  title: 'Dizem que…',
+  subtitle: 'It is said that, be said to e be supposed to: falar do que se diz por aí.',
+  can_do: {
+    text: 'Consigo entender e repassar notícias, lendas e boatos sem dizer quem falou, como em jornais e reportagens.',
+    source: 'CEFR (Conselho da Europa) — Compreensão de leitura: notícias e reportagens; produção: relatar informações, nível B2',
+  },
+  core_inventory: ['Grammar: impersonal passive (It is said / believed / thought that...)', 'Grammar: personal passive (He is said to be... / to have...)', 'Grammar: be supposed to (expectation and rumour)', 'Vocabulary: news and legends'],
+  words: [
+    ['it is said that', 'dizem que'],
+    ['is believed to', 'acredita-se que'],
+    ['is thought to', 'acha-se que, pensa-se que'],
+    ['be supposed to', 'era para, deveria; dizem que'],
+    ['legend', 'lenda'],
+    ['rumour', 'boato'],
+    ['report', 'relatar, noticiar; reportagem'],
+    ['according to', 'segundo, de acordo com'],
+    ['claim', 'afirmar, alegar'],
+    ['expect', 'esperar (que aconteça)'],
+  ],
+  guide: {
+    title: 'Dizem que… sem dizer quem',
+    intro: 'Jornais e reportagens adoram falar do que "dizem" sem apontar quem disse. Em inglês, isso vira uma passiva especial, bem comum no nível B2.',
+    points: [
+      { en: 'It is said that the house is haunted.', pt: 'Dizem que a casa é mal-assombrada.', note: 'It is said / believed / thought + that + frase.' },
+      { en: 'The house is said to be haunted.', pt: 'Dizem que a casa é mal-assombrada.', note: 'Outra forma: sujeito + is said to + verbo.' },
+      { en: 'He is thought to have left the country.', pt: 'Acredita-se que ele tenha saído do país.', note: 'Para o passado: to have + particípio.' },
+      { en: 'It is believed that the castle was built in 1200.', pt: 'Acredita-se que o castelo foi construído em 1200.', note: '"Believed" = acredita-se.' },
+      { en: 'This restaurant is supposed to be very good.', pt: 'Dizem que este restaurante é muito bom.', note: '"Be supposed to" = dizem que (fama).' },
+      { en: "You're supposed to be at work now!", pt: 'Era para você estar no trabalho agora!', note: '"Be supposed to" também = era para, deveria (obrigação ou plano).' },
+    ],
+    tips: ['Na forma pessoal, o verbo vai com "to": She is said to BE rich; He is said to HAVE won.', '"Be supposed to" é muito comum na fala: "What am I supposed to do?" = o que eu devo fazer?'],
+  },
+  extra_vocab: [{ word: 'haunted', reason: 'mal-assombrado (lendas); aparece com tradução' }, { word: 'according', reason: '"according to" (segundo) é essencial para relatar' }],
+  lessons: [
+    L(1, 'It is said that…', [
+      I(1, 1, { type: 'choice', prompt: 'Complete:', en: 'It is ___ that the lake has no bottom.', pt: 'Dizem que o lago não tem fundo.', options: ['said', 'say', 'saying'], answer: 'said', why: 'It is said that = dizem que (passiva).', wrong: { say: 'Precisa do particípio: said.', saying: 'Não forma a passiva.' } }),
+      I(1, 2, { type: 'choice', prompt: 'Complete:', en: 'It is ___ that the castle was built 800 years ago.', pt: 'Acredita-se que o castelo foi construído há 800 anos.', options: ['believed', 'believe', 'belief'], answer: 'believed', why: 'It is believed that = acredita-se que.', wrong: { believe: 'Precisa do particípio.', belief: '"Belief" é substantivo (crença).' } }),
+      I(1, 3, { type: 'meaning', en: 'It is thought that the fire started in the kitchen.', options: ['Acredita-se que o incêndio começou na cozinha.', 'O fogo começou no quarto.', 'Alguém começou um fogo na cozinha.'], answer: 'Acredita-se que o incêndio começou na cozinha.', why: '"It is thought that" = pensa-se que, acredita-se que.' }),
+      I(1, 4, { type: 'build', pt: 'Dizem que ele é muito rico.', answer: 'It is said that he is very rich', extra: ['says', 'say'], display: 'It is said that he is very rich.', why: 'It is said that + frase.' }),
+      I(1, 5, { type: 'listen', en: 'It is reported that two people were hurt.', options: ['Há relatos de que duas pessoas se feriram.', 'Ninguém se machucou.', 'Duas pessoas fizeram uma reportagem.'], answer: 'Há relatos de que duas pessoas se feriram.', why: '"It is reported that" = há relatos de que, noticia-se que.' }),
+      I(1, 6, { type: 'match', pairs: [['legend', 'lenda'], ['rumour', 'boato'], ['report', 'noticiar'], ['claim', 'afirmar']], why: '"Rumour" é a grafia britânica; nos EUA, "rumor".' }),
+    ]),
+    L(2, 'Ele é dito ser… (forma pessoal)', [
+      I(2, 1, { type: 'choice', prompt: 'Complete:', en: 'The house is said ___ haunted.', pt: 'Dizem que a casa é mal-assombrada.', options: ['to be', 'be', 'being'], answer: 'to be', why: 'Sujeito + is said + to + verbo.', wrong: { be: 'Falta o "to".', being: 'Não funciona aqui.' } }),
+      I(2, 2, { type: 'choice', prompt: 'Complete:', en: 'He is believed ___ the country last week.', pt: 'Acredita-se que ele tenha saído do país semana passada.', options: ['to have left', 'to leave', 'leaving'], answer: 'to have left', why: 'Para o passado: to have + particípio.', wrong: { 'to leave': 'Seria presente ou futuro; a ação foi semana passada.', leaving: 'Não funciona aqui.' } }),
+      I(2, 3, { type: 'meaning', en: 'She is thought to be the best chef in the city.', options: ['Ela é considerada a melhor chef da cidade.', 'Ela quer ser chef.', 'Ela pensa que é a melhor.'], answer: 'Ela é considerada a melhor chef da cidade.', why: '"Is thought to be" = acredita-se que seja, é considerada.' }),
+      I(2, 4, { type: 'build', pt: 'Dizem que o ladrão escapou pela janela.', answer: 'The thief is said to have escaped through the window', extra: ['escape', 'says'], display: 'The thief is said to have escaped through the window.', why: 'Passado: is said to have + particípio.' }),
+      I(2, 5, { type: 'listen', en: 'The painting is believed to be worth millions.', options: ['Acredita-se que o quadro valha milhões.', 'O quadro foi vendido por milhões.', 'O quadro não vale nada.'], answer: 'Acredita-se que o quadro valha milhões.', why: '"Be worth" = valer.' }),
+      I(2, 6, { type: 'speak', en: 'This place is said to be haunted.', pt: 'Dizem que este lugar é mal-assombrado.', why: '"Haunted" soa como "RÓN-tid".' }),
+    ]),
+    L(3, 'Be supposed to', [
+      I(3, 1, { type: 'choice', prompt: 'Complete:', en: 'This new film is supposed ___ amazing.', pt: 'Dizem que este filme novo é incrível.', options: ['to be', 'be', 'being'], answer: 'to be', why: '"Be supposed to" + verbo = dizem que, tem fama de.', wrong: { be: 'Falta o "to".', being: 'Não funciona aqui.' } }),
+      I(3, 2, { type: 'choice', prompt: 'Complete:', en: "You're supposed to ___ your shoes off inside.", pt: 'Era para você tirar os sapatos dentro de casa.', options: ['take', 'taking', 'took'], answer: 'take', why: '"Supposed to" + verbo normal = era para, deveria (regra).', wrong: { taking: 'Sem -ing.', took: 'Sem passado.' } }),
+      I(3, 3, { type: 'meaning', en: 'The train was supposed to arrive at six, but it was late.', options: ['Era para o trem chegar às seis, mas atrasou.', 'O trem chegou às seis.', 'O trem saiu às seis.'], answer: 'Era para o trem chegar às seis, mas atrasou.', why: '"Was supposed to" = era para (mas não aconteceu).' }),
+      I(3, 4, { type: 'build', pt: 'O que eu devo fazer agora?', answer: 'What am I supposed to do now', extra: ['suppose', 'doing'], display: 'What am I supposed to do now?', why: '"What am I supposed to do?" = o que eu devo fazer?' }),
+      I(3, 5, { type: 'listen', en: "You're not supposed to park here.", options: ['Não era para você estacionar aqui.', 'Você pode estacionar aqui.', 'Estacione aqui, por favor.'], answer: 'Não era para você estacionar aqui.', why: '"Not supposed to" = não deveria, não é permitido.' }),
+      I(3, 6, { type: 'match', pairs: [['be supposed to', 'era para'], ['expect', 'esperar'], ['according to', 'segundo'], ['is thought to', 'pensa-se que']], why: '"Be supposed to" tem dois sentidos: "dizem que" e "era para".' }),
+      I(3, 7, { type: 'dialogue', lines: [['A', "Where's Ben? He was supposed to be here at eight."], ['B', '___']], options: ["I don't know. He's supposed to be very punctual.", "I don't know. He supposed to be punctual.", "I don't know. He's suppose be punctual."], answer: "I don't know. He's supposed to be very punctual.", pt: 'Não sei. Dizem que ele é muito pontual.', why: '"He\'s supposed to be" = dizem que ele é (fama).', wrong: { "I don't know. He supposed to be punctual.": 'Falta o "is".', "I don't know. He's suppose be punctual.": 'É "supposed to be".' } }),
+    ]),
+    L(4, 'Prática: notícias e lendas', [
+      I(4, 1, { type: 'choice', prompt: 'Complete:', en: 'According ___ the police, the man was driving too fast.', pt: 'Segundo a polícia, o homem estava dirigindo rápido demais.', options: ['to', 'with', 'of'], answer: 'to', why: '"According to" = segundo.', wrong: { with: 'Não se usa "according with".', of: 'Não se usa "according of".' } }),
+      I(4, 2, { type: 'choice', prompt: 'Complete:', en: 'The singer is reported ___ married last week.', pt: 'Noticia-se que a cantora se casou semana passada.', options: ['to have got', 'to get', 'got'], answer: 'to have got', why: 'Passado: to have + particípio.', wrong: { 'to get': 'Seria futuro ou geral.', got: 'Falta o "to have".' } }),
+      I(4, 3, { type: 'meaning', en: 'Legend says that a princess lived in this tower.', options: ['Diz a lenda que uma princesa morou nesta torre.', 'Uma princesa mora aqui hoje.', 'A torre é nova.'], answer: 'Diz a lenda que uma princesa morou nesta torre.', why: '"Legend says that" = diz a lenda que.' }),
+      I(4, 4, { type: 'build', pt: 'Acredita-se que a ponte tenha 300 anos.', answer: 'The bridge is believed to be 300 years old', extra: ['believes', 'have'], display: 'The bridge is believed to be 300 years old.', why: 'Sujeito + is believed + to be.' }),
+      I(4, 5, { type: 'dialogue', lines: [['A', 'Is that new restaurant any good?'], ['B', '___']], options: ["It's supposed to be excellent. Let's try it!", "It supposed to excellent.", "Is supposing be good."], answer: "It's supposed to be excellent. Let's try it!", pt: 'Dizem que é excelente. Vamos experimentar!', why: '"Supposed to be" = tem fama de.', wrong: { "It supposed to excellent.": 'Faltam "is" e "be".', 'Is supposing be good.': 'Estrutura errada.' } }),
+      I(4, 6, { type: 'listen', en: 'It is expected that prices will rise next year.', options: ['Espera-se que os preços subam ano que vem.', 'Os preços caíram este ano.', 'Os preços não mudam.'], answer: 'Espera-se que os preços subam ano que vem.', why: '"It is expected that" = espera-se que.' }),
+      I(4, 7, { type: 'choice', prompt: 'Qual frase quer dizer "Dizem que ela fala cinco línguas"?', en: '___', pt: 'Dizem que ela fala cinco línguas.', options: ['She is said to speak five languages.', 'She says to speak five languages.', 'She is saying five languages.'], answer: 'She is said to speak five languages.', why: 'Forma pessoal: She is said to + verbo.', wrong: { 'She says to speak five languages.': 'Isso seria "ela diz para falar".', 'She is saying five languages.': 'Não faz sentido.' } }),
+    ]),
+    L(5, 'Escrevendo', [
+      I(5, 1, { type: 'type', pt: 'Dizem que a casa é mal-assombrada.', answer: 'The house is said to be haunted.', accept: ['It is said that the house is haunted.'], why: 'As duas formas valem.' }),
+      I(5, 2, { type: 'type', pt: 'Era para você estar aqui às oito.', answer: 'You were supposed to be here at eight.', accept: ['You were supposed to be here at 8.'], why: '"Was/were supposed to" = era para.' }),
+      I(5, 3, { type: 'dictation', en: 'It is believed that he is innocent.', why: '"It is believed that" = acredita-se que.' }),
+      I(5, 4, { type: 'type', pt: 'Segundo o jornal, vai chover.', answer: 'According to the newspaper, it will rain.', accept: ["According to the newspaper, it's going to rain.", 'According to the news, it will rain.'], why: '"According to" = segundo.' }),
+      I(5, 5, { type: 'dictation', en: 'He is thought to be very rich.', why: 'Is thought to be = acredita-se que seja.' }),
+      I(5, 6, { type: 'type', pt: 'O que eu devo fazer?', answer: 'What am I supposed to do?', why: '"Supposed to" = devo, era para.' }),
+    ]),
+    L(6, 'Ouvindo', [
+      I(6, 1, { type: 'listen', en: 'The castle is said to have a secret room.', options: ['Dizem que o castelo tem uma sala secreta.', 'O castelo não tem segredos.', 'Encontraram uma sala no castelo.'], answer: 'Dizem que o castelo tem uma sala secreta.', why: 'Is said to have = dizem que tem.' }),
+      I(6, 2, { type: 'dictation', en: 'There is a rumour that she is leaving.', why: '"Rumour" = boato.' }),
+      I(6, 3, { type: 'listen', en: 'The suspect is believed to have escaped to Spain.', options: ['Acredita-se que o suspeito tenha fugido para a Espanha.', 'O suspeito foi preso na Espanha.', 'O suspeito mora na Espanha.'], answer: 'Acredita-se que o suspeito tenha fugido para a Espanha.', why: 'To have escaped = ter fugido.' }),
+      I(6, 4, { type: 'dictation', en: 'We were supposed to meet at noon.', why: '"At noon" = ao meio-dia.' }),
+      I(6, 5, { type: 'listen', en: 'It is claimed that the drink makes you younger.', options: ['Afirmam que a bebida te deixa mais jovem.', 'A bebida faz mal.', 'A bebida é para jovens.'], answer: 'Afirmam que a bebida te deixa mais jovem.', why: '"It is claimed" = afirmam, alega-se.' }),
+      I(6, 6, { type: 'dictation', en: 'According to legend, a king lived here.', why: '"According to legend" = segundo a lenda.' }),
+      I(6, 7, { type: 'speak', en: 'It is supposed to rain tomorrow.', pt: 'Dizem que vai chover amanhã.', why: '"Supposed to" soa como "sa-PÔUZ-tu".' }),
+    ]),
+    L(7, 'Conversa de verdade', [
+      I(7, 1, { type: 'dialogue', lines: [['A', 'Have you heard about the old hotel on the hill?'], ['B', '___']], options: ["Yes! It's said to be haunted.", 'Yes! It says haunted.', 'Yes! It is saying to be haunted.'], answer: "Yes! It's said to be haunted.", pt: 'Já! Dizem que é mal-assombrado.', why: 'Is said to be = dizem que é.', wrong: { 'Yes! It says haunted.': 'Isso seria "está escrito mal-assombrado".', 'Yes! It is saying to be haunted.': 'Estrutura errada.' } }),
+      I(7, 2, { type: 'dialogue', lines: [['A', "Why aren't you at the gym?"], ['B', '___']], options: ["I was supposed to go, but I'm too tired.", "I supposed to go, but tired.", "I'm suppose going."], answer: "I was supposed to go, but I'm too tired.", pt: 'Era para eu ir, mas estou cansado demais.', why: '"Was supposed to" = era para (mas não aconteceu).', wrong: { 'I supposed to go, but tired.': 'Faltam "was" e "I\'m".', "I'm suppose going.": 'Estrutura errada.' } }),
+      I(7, 3, { type: 'dialogue', lines: [['A', 'Is the new phone really that good?'], ['B', '___']], options: ['According to the reviews, it is the best on the market.', 'According the reviews, best.', 'The reviews according, it best.'], answer: 'According to the reviews, it is the best on the market.', pt: 'Segundo as avaliações, é o melhor do mercado.', why: '"According to" = segundo.', wrong: { 'According the reviews, best.': 'Falta o "to" e o verbo.', 'The reviews according, it best.': 'É "according" e falta o verbo.' } }),
+      I(7, 4, { type: 'dialogue', lines: [['A', "Is it true that our boss is leaving?"], ['B', '___']], options: ["I don't know. It's just a rumour.", "I don't know. It just rumour.", "I don't know. Is rumour."], answer: "I don't know. It's just a rumour.", pt: 'Não sei. É só um boato.', why: '"Just a rumour" = só um boato.', wrong: { "I don't know. It just rumour.": 'Faltam "is" e "a".', "I don't know. Is rumour.": 'Faltam "it" e "a".' } }),
+      I(7, 5, { type: 'speak', en: 'What am I supposed to do?', pt: 'O que eu devo fazer?', why: 'Pergunta muito usada no dia a dia.' }),
+      I(7, 6, { type: 'speak', en: "It's said to be the best in town.", pt: 'Dizem que é o melhor da cidade.', why: '"It\'s said to be" soa quase junto: "its-SÉD-tu-bi".' }),
+    ]),
+    L(8, 'Lendo: a lenda do lago', [
+      I(8, 1, { type: 'story', why: 'Uma reportagem conta uma lenda de uma cidade pequena. Repare na passiva de relato.' }),
+      I(8, 2, { type: 'quiz', q: 'O que dizem sobre o lago?', options: ['Que não tem fundo', 'Que tem ouro', 'Que é perigoso nadar'], answer: 'Que não tem fundo', why: '"It is said that the lake has no bottom."' }),
+      I(8, 3, { type: 'quiz', q: 'O que acredita-se que exista no lago?', options: ['Um animal gigante', 'Uma cidade antiga', 'Um tesouro'], answer: 'Um animal gigante', why: '"A giant animal is believed to live in the water."' }),
+      I(8, 4, { type: 'quiz', q: 'O que os cientistas descobriram?', options: ['Que o lago tem 40 metros e só peixes comuns', 'Um animal gigante', 'Que o lago secou'], answer: 'Que o lago tem 40 metros e só peixes comuns', why: '"The lake is 40 metres deep, and only normal fish live there."' }),
+    ], {
+      title: 'A lenda do lago',
+      lines: [
+        { who: 'Laura', en: 'In a small village in the south, there is a dark, quiet lake.', pt: 'Numa vilazinha no sul, existe um lago escuro e silencioso.' },
+        { who: 'Laura', en: 'It is said that the lake has no bottom, and nobody swims there.', pt: 'Dizem que o lago não tem fundo, e ninguém nada ali.' },
+        { ask: 'Por que ninguém nada no lago?', options: ['Dizem que não tem fundo', 'É proibido', 'A água é fria'], answer: 'Dizem que não tem fundo', why: '"It is said that the lake has no bottom."' },
+        { who: 'Laura', en: 'A giant animal is believed ___ live in the water. Some people claim they have seen it.', pt: 'Acredita-se que um animal gigante viva na água. Algumas pessoas afirmam que já o viram.', gap: { answer: 'to', options: ['to', 'that', 'for'] } },
+        { who: 'Laura', en: 'Last year, a team of scientists studied the lake for a month.', pt: 'No ano passado, uma equipe de cientistas estudou o lago por um mês.' },
+        { who: 'Laura', en: 'According to their report, the lake is 40 metres deep, and only normal fish live there. But the villagers are not convinced!', pt: 'Segundo o relatório deles, o lago tem 40 metros de profundidade, e só vivem ali peixes comuns. Mas os moradores não estão convencidos!' },
+      ],
+    }),
+    L(9, 'Desafio da unidade', [
+      I(9, 1, { type: 'choice', prompt: 'Complete:', en: 'The museum is said ___ the oldest in the country.', pt: 'Dizem que o museu é o mais antigo do país.', options: ['to be', 'that is', 'being'], answer: 'to be', why: 'Is said + to be.', wrong: { 'that is': 'Com sujeito no começo, use "to be".', being: 'Não funciona aqui.' } }),
+      I(9, 2, { type: 'type', pt: 'Acredita-se que ele seja inocente.', answer: 'He is believed to be innocent.', accept: ['It is believed that he is innocent.'], why: 'As duas formas valem.' }),
+      I(9, 3, { type: 'meaning', en: "We're supposed to finish this by Friday.", options: ['Era para a gente terminar isto até sexta.', 'Terminamos na sexta.', 'Não precisamos terminar.'], answer: 'Era para a gente terminar isto até sexta.', why: '"Supposed to" = era para, deveríamos.' }),
+      I(9, 4, { type: 'dictation', en: 'It is reported that the road is closed.', why: '"It is reported" = noticia-se.' }),
+      I(9, 5, { type: 'listen', en: 'The actor is thought to have earned millions from the film.', options: ['Acredita-se que o ator tenha ganhado milhões com o filme.', 'O ator perdeu dinheiro.', 'O filme não foi lançado.'], answer: 'Acredita-se que o ator tenha ganhado milhões com o filme.', why: 'To have earned = ter ganhado.' }),
+      I(9, 6, { type: 'build', pt: 'Dizem que o restaurante é muito caro.', answer: 'The restaurant is supposed to be very expensive', extra: ['suppose', 'being'], display: 'The restaurant is supposed to be very expensive.', why: '"Is supposed to be" = dizem que é, tem fama de.' }),
+    ]),
+    L(10, 'História: o boato da escola', [
+      I(10, 1, { type: 'story', why: 'Dois alunos ouvem um boato sobre um professor novo. Ouça cada fala e responda às perguntas no caminho.' }),
+      I(10, 2, { type: 'quiz', q: 'O que dizem sobre o professor novo?', options: ['Que foi um cantor famoso', 'Que é muito bravo', 'Que vai embora'], answer: 'Que foi um cantor famoso', why: '"He\'s said to have been a famous singer."' }),
+      I(10, 3, { type: 'quiz', q: 'O que a Nina acha?', options: ['Que é só um boato', 'Que é verdade', 'Que ele vai cantar na aula'], answer: 'Que é só um boato', why: '"It\'s probably just a rumour."' }),
+      I(10, 4, { type: 'quiz', q: 'O que acontece no fim?', options: ['O professor confirma e canta', 'O professor nega tudo', 'Ninguém descobre'], answer: 'O professor confirma e canta', why: '"Yes, I did sing in a band..."' }),
+    ], {
+      title: 'O boato da escola',
+      lines: [
+        { who: 'Leo', en: "Have you heard about the new music teacher? He's said to have been a famous singer!", pt: 'Você soube do professor novo de música? Dizem que ele foi um cantor famoso!' },
+        { who: 'Nina', en: "Really? It's probably just a rumour. Who told you?", pt: 'Sério? Deve ser só um boato. Quem te contou?' },
+        { who: 'Leo', en: 'Everybody is talking about it. He is believed ___ have sung on TV in the nineties.', pt: 'Todo mundo está falando disso. Acredita-se que ele tenha cantado na TV nos anos noventa.', gap: { answer: 'to', options: ['to', 'that', 'for'] } },
+        { ask: 'Quando ele teria cantado na TV?', options: ['Nos anos noventa', 'Ano passado', 'Nunca'], answer: 'Nos anos noventa', why: '"In the nineties" = nos anos noventa.' },
+        { who: 'Nina', en: "Look, he's coming. We're supposed to be in class now!", pt: 'Olha, ele está vindo. Era para a gente estar na aula agora!' },
+        { who: 'Tom', en: "Good morning! And yes, I did sing in a band. Shall we start with a song?", pt: 'Bom dia! E sim, eu cantei numa banda, sim. Vamos começar com uma música?' },
+      ],
+    }),
+  ],
+});
+
+addPodcast({
+  id: 'pod-b2u15', level: 'B2', unlock: 'b2-u15', title: 'Lendas e boatos',
+  intro: 'A Ana e o Tom contam lendas urbanas e boatos famosos.',
+  lines: [
+    { who: 'ana', en: "Hi everyone! Welcome to the podcast. I'm Ana.", pt: 'Oi, pessoal! Bem-vindos ao podcast. Eu sou a Ana.' },
+    { who: 'tom', en: "And I'm Tom. Today: legends and rumours.", pt: 'E eu sou o Tom. Hoje: lendas e boatos.' },
+    { who: 'ana', en: "In my grandmother's town, there is a house that is said to be haunted.", pt: 'Na cidade da minha avó, tem uma casa que dizem ser mal-assombrada.' },
+    { who: 'tom', en: 'Did you ever go inside?', pt: 'Você já entrou lá?' },
+    { who: 'ana', en: 'Never! It is believed that a sad old man still lives there.', pt: 'Nunca! Acredita-se que um velho triste ainda mora lá.' },
+    { who: 'tom', en: 'In London, it is said that if the birds leave the Tower, the kingdom will fall.', pt: 'Em Londres, dizem que se os pássaros (corvos) saírem da Torre, o reino vai cair.' },
+    { who: 'ana', en: "So the birds are supposed to stay there forever? That's a lot of pressure!", pt: 'Então era para os pássaros ficarem lá para sempre? É muita pressão!' },
+    { who: 'tom', en: "Ha! That's all for today. Bye!", pt: 'Rá! Por hoje é só. Tchau!' },
+  ],
+  questions: [
+    { q: 'O que dizem da casa na cidade da avó da Ana?', options: ['Que é mal-assombrada', 'Que é muito antiga', 'Que vai ser vendida'], answer: 'Que é mal-assombrada', why: '"Is said to be haunted."' },
+    { q: 'O que acredita-se que vive na casa?', options: ['Um velho triste', 'Um gato preto', 'Ninguém'], answer: 'Um velho triste', why: '"A sad old man still lives there."' },
+    { q: 'Qual é a lenda de Londres?', options: ['Se os corvos saírem da Torre, o reino cai', 'A Torre é mal-assombrada', 'O rei mora na Torre'], answer: 'Se os corvos saírem da Torre, o reino cai', why: '"If the birds leave the Tower, the kingdom will fall."' },
+  ],
+}, 'pod-b2u14');
+addScene('b2-u15', 'standing-8', 'news');

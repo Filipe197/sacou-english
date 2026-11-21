@@ -1,0 +1,1069 @@
+{
+ "id": "b2-u16",
+ "level": "B2",
+ "order": 16,
+ "title": "Falando como nativo",
+ "subtitle": "Marcadores de conversa: well, actually, anyway, by the way, to be honest.",
+ "can_do": {
+  "text": "Consigo conversar com naturalidade: ganhar tempo para pensar, mudar de assunto, voltar ao assunto e dar opinião com sinceridade.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: fluência e gestão da conversa, nível B2"
+ },
+ "core_inventory": [
+  "Discourse markers: well, actually, anyway, by the way",
+  "Discourse markers: to be honest, I mean, you know",
+  "Functions: changing the subject and coming back to it",
+  "Functions: softening opinions"
+ ],
+ "words": [
+  [
+   "well",
+   "bom, bem (para pensar)"
+  ],
+  [
+   "actually",
+   "na verdade"
+  ],
+  [
+   "anyway",
+   "enfim, de qualquer forma"
+  ],
+  [
+   "by the way",
+   "por falar nisso, aliás"
+  ],
+  [
+   "to be honest",
+   "para ser sincero"
+  ],
+  [
+   "I mean",
+   "quer dizer"
+  ],
+  [
+   "you know",
+   "sabe, tipo"
+  ],
+  [
+   "as I was saying",
+   "como eu estava dizendo"
+  ],
+  [
+   "speaking of",
+   "falando em"
+  ],
+  [
+   "basically",
+   "basicamente"
+  ]
+ ],
+ "guide": {
+  "title": "As palavrinhas que deixam a conversa natural",
+  "intro": "Nativos não falam como livro. Eles usam pequenas palavras para pensar, corrigir, mudar de assunto e suavizar opiniões. Dominar isso é o que faz o seu inglês soar natural.",
+  "points": [
+   {
+    "en": "Well, I'm not sure. Let me think.",
+    "pt": "Bom, não tenho certeza. Deixa eu pensar.",
+    "note": "\"Well\" ganha tempo antes de responder."
+   },
+   {
+    "en": "Actually, I'm from Salvador, not Rio.",
+    "pt": "Na verdade, sou de Salvador, não do Rio.",
+    "note": "\"Actually\" corrige com educação."
+   },
+   {
+    "en": "Anyway, as I was saying...",
+    "pt": "Enfim, como eu estava dizendo...",
+    "note": "\"Anyway\" volta ao assunto principal."
+   },
+   {
+    "en": "By the way, did you call your mother?",
+    "pt": "Aliás, você ligou para a sua mãe?",
+    "note": "\"By the way\" muda de assunto de repente."
+   },
+   {
+    "en": "To be honest, I didn't like the film.",
+    "pt": "Para ser sincero, não gostei do filme.",
+    "note": "\"To be honest\" suaviza uma opinião negativa."
+   },
+   {
+    "en": "It was cheap. I mean, not really cheap, but OK.",
+    "pt": "Foi barato. Quer dizer, não tão barato, mas OK.",
+    "note": "\"I mean\" corrige ou explica o que você acabou de dizer."
+   }
+  ],
+  "tips": [
+   "Não exagere: \"you know\" e \"like\" demais soam pouco profissionais.",
+   "\"Speaking of food, are you hungry?\" = falando em comida... Ótimo para emendar assuntos."
+  ]
+ },
+ "extra_vocab": [],
+ "lessons": [
+  {
+   "id": "b2-u16-l1",
+   "title": "Well, actually…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l1-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, I'm not sure. Can I tell you tomorrow?",
+     "pt": "Bom, não tenho certeza. Posso te falar amanhã?",
+     "options": [
+      "Well",
+      "By the way",
+      "Anyway"
+     ],
+     "answer": "Well",
+     "why": "\"Well\" ganha tempo para pensar.",
+     "wrong": {
+      "By the way": "\"By the way\" muda de assunto.",
+      "Anyway": "\"Anyway\" volta ao assunto."
+     }
+    },
+    {
+     "id": "b2u16l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, it's not Tuesday. Today is Wednesday.",
+     "pt": "Na verdade, não é terça. Hoje é quarta.",
+     "options": [
+      "Actually",
+      "Basically",
+      "Anyway"
+     ],
+     "answer": "Actually",
+     "why": "\"Actually\" corrige uma informação.",
+     "wrong": {
+      "Basically": "\"Basically\" resume.",
+      "Anyway": "\"Anyway\" volta ao assunto."
+     }
+    },
+    {
+     "id": "b2u16l1-3",
+     "type": "meaning",
+     "en": "Well, to be honest, I prefer the blue one.",
+     "options": [
+      "Bom, para ser sincero, prefiro o azul.",
+      "Eu gosto dos dois.",
+      "O azul é horrível."
+     ],
+     "answer": "Bom, para ser sincero, prefiro o azul.",
+     "why": "\"Well\" + \"to be honest\" deixam a opinião mais suave."
+    },
+    {
+     "id": "b2u16l1-4",
+     "type": "build",
+     "pt": "Na verdade, eu moro aqui há dez anos.",
+     "answer": "Actually I've lived here for ten years",
+     "extra": [
+      "Currently",
+      "since"
+     ],
+     "display": "Actually, I've lived here for ten years.",
+     "why": "\"Actually\" = na verdade (e não \"atualmente\")."
+    },
+    {
+     "id": "b2u16l1-5",
+     "type": "listen",
+     "en": "Well, it depends.",
+     "options": [
+      "Bom, depende.",
+      "Tudo bem.",
+      "Muito bem!"
+     ],
+     "answer": "Bom, depende.",
+     "why": "\"Well, it depends\" é uma resposta muito comum."
+    },
+    {
+     "id": "b2u16l1-6",
+     "type": "match",
+     "pairs": [
+      [
+       "well",
+       "bom (pensando)"
+      ],
+      [
+       "actually",
+       "na verdade"
+      ],
+      [
+       "anyway",
+       "enfim"
+      ],
+      [
+       "by the way",
+       "aliás"
+      ]
+     ],
+     "why": "Cada marcador tem uma função na conversa."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l2",
+   "title": "Mudar de assunto e voltar",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, did you see the game last night?",
+     "pt": "Aliás, você viu o jogo ontem à noite?",
+     "options": [
+      "By the way",
+      "Actually",
+      "Well"
+     ],
+     "answer": "By the way",
+     "why": "\"By the way\" introduz um assunto novo.",
+     "wrong": {
+      "Actually": "\"Actually\" corrige.",
+      "Well": "\"Well\" ganha tempo."
+     }
+    },
+    {
+     "id": "b2u16l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Sorry, I got distracted. ___, as I was saying, the meeting is at three.",
+     "pt": "Desculpa, me distraí. Enfim, como eu estava dizendo, a reunião é às três.",
+     "options": [
+      "Anyway",
+      "By the way",
+      "Actually"
+     ],
+     "answer": "Anyway",
+     "why": "\"Anyway\" volta ao assunto principal.",
+     "wrong": {
+      "By the way": "Mudaria de assunto de novo.",
+      "Actually": "Não é uma correção."
+     }
+    },
+    {
+     "id": "b2u16l2-3",
+     "type": "meaning",
+     "en": "Speaking of holidays, where are you going this year?",
+     "options": [
+      "Falando em férias, para onde você vai este ano?",
+      "Não vou tirar férias este ano.",
+      "As férias foram ótimas."
+     ],
+     "answer": "Falando em férias, para onde você vai este ano?",
+     "why": "\"Speaking of\" = falando em."
+    },
+    {
+     "id": "b2u16l2-4",
+     "type": "build",
+     "pt": "Enfim, como eu estava dizendo, precisamos de mais tempo.",
+     "answer": "Anyway as I was saying we need more time",
+     "extra": [
+      "By the way",
+      "said"
+     ],
+     "display": "Anyway, as I was saying, we need more time.",
+     "why": "\"Anyway\" + \"as I was saying\" = voltar ao assunto."
+    },
+    {
+     "id": "b2u16l2-5",
+     "type": "listen",
+     "en": "By the way, your sister called.",
+     "options": [
+      "Aliás, sua irmã ligou.",
+      "Sua irmã está aqui.",
+      "Liga para a sua irmã."
+     ],
+     "answer": "Aliás, sua irmã ligou.",
+     "why": "\"By the way\" = aliás, por falar nisso."
+    },
+    {
+     "id": "b2u16l2-6",
+     "type": "speak",
+     "en": "Anyway, as I was saying...",
+     "pt": "Enfim, como eu estava dizendo...",
+     "why": "\"Anyway\" soa como \"É-ni-uei\"."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l3",
+   "title": "Sendo sincero, quer dizer…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, I didn't enjoy the party very much.",
+     "pt": "Para ser sincero, não curti muito a festa.",
+     "options": [
+      "To be honest",
+      "By the way",
+      "Speaking of"
+     ],
+     "answer": "To be honest",
+     "why": "\"To be honest\" suaviza uma opinião negativa.",
+     "wrong": {
+      "By the way": "Mudaria de assunto.",
+      "Speaking of": "Precisa de algo depois: speaking of parties..."
+     }
+    },
+    {
+     "id": "b2u16l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "She's a bit difficult. ___, she's nice, but she complains a lot.",
+     "pt": "Ela é meio difícil. Quer dizer, ela é legal, mas reclama muito.",
+     "options": [
+      "I mean",
+      "Anyway",
+      "Well"
+     ],
+     "answer": "I mean",
+     "why": "\"I mean\" explica ou corrige o que você disse.",
+     "wrong": {
+      "Anyway": "\"Anyway\" volta ao assunto.",
+      "Well": "\"Well\" ganha tempo antes."
+     }
+    },
+    {
+     "id": "b2u16l3-3",
+     "type": "meaning",
+     "en": "Basically, we need to start again.",
+     "options": [
+      "Basicamente, precisamos começar de novo.",
+      "Já terminamos.",
+      "Não vamos fazer mais nada."
+     ],
+     "answer": "Basicamente, precisamos começar de novo.",
+     "why": "\"Basically\" resume a ideia."
+    },
+    {
+     "id": "b2u16l3-4",
+     "type": "build",
+     "pt": "Para ser sincero, prefiro ficar em casa.",
+     "answer": "To be honest I'd rather stay at home",
+     "extra": [
+      "Honest",
+      "staying"
+     ],
+     "display": "To be honest, I'd rather stay at home.",
+     "why": "\"To be honest\" + opinião."
+    },
+    {
+     "id": "b2u16l3-5",
+     "type": "listen",
+     "en": "It was, you know, a bit strange.",
+     "options": [
+      "Foi, sabe, meio estranho.",
+      "Você sabe que foi estranho.",
+      "Não foi estranho."
+     ],
+     "answer": "Foi, sabe, meio estranho.",
+     "why": "\"You know\" é só um apoio na fala."
+    },
+    {
+     "id": "b2u16l3-6",
+     "type": "match",
+     "pairs": [
+      [
+       "to be honest",
+       "para ser sincero"
+      ],
+      [
+       "I mean",
+       "quer dizer"
+      ],
+      [
+       "you know",
+       "sabe"
+      ],
+      [
+       "basically",
+       "basicamente"
+      ]
+     ],
+     "why": "Marcadores para suavizar e explicar."
+    },
+    {
+     "id": "b2u16l3-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Did you like my cake?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Well, to be honest, it was a bit too sweet for me.",
+      "Honest, too sweet.",
+      "Is too sweet, to be honest me."
+     ],
+     "answer": "Well, to be honest, it was a bit too sweet for me.",
+     "pt": "Bom, para ser sincero, estava um pouco doce demais para mim.",
+     "why": "Opinião negativa suavizada: well + to be honest + a bit.",
+     "wrong": {
+      "Honest, too sweet.": "Direto demais e incompleto.",
+      "Is too sweet, to be honest me.": "Estrutura errada."
+     }
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l4",
+   "title": "Prática: conversa natural",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l4-1",
+     "type": "choice",
+     "prompt": "Qual responde melhor a \"Is your name Ana?\" (seu nome é Ana Paula)",
+     "en": "___",
+     "pt": "Na verdade, é Ana Paula.",
+     "options": [
+      "Actually, it's Ana Paula.",
+      "Currently, it's Ana Paula.",
+      "Anyway, it's Ana Paula."
+     ],
+     "answer": "Actually, it's Ana Paula.",
+     "why": "Corrigir com educação: actually.",
+     "wrong": {
+      "Currently, it's Ana Paula.": "\"Currently\" = atualmente.",
+      "Anyway, it's Ana Paula.": "\"Anyway\" volta ao assunto, não corrige."
+     }
+    },
+    {
+     "id": "b2u16l4-2",
+     "type": "meaning",
+     "en": "Speaking of food, I'm starving. Shall we eat?",
+     "options": [
+      "Falando em comida, estou morrendo de fome. Vamos comer?",
+      "Não estou com fome.",
+      "A comida acabou."
+     ],
+     "answer": "Falando em comida, estou morrendo de fome. Vamos comer?",
+     "why": "\"Starving\" = morrendo de fome."
+    },
+    {
+     "id": "b2u16l4-3",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The trip was great. ___, we got lost twice, but it was fun.",
+     "pt": "A viagem foi ótima. Quer dizer, nos perdemos duas vezes, mas foi divertido.",
+     "options": [
+      "I mean",
+      "By the way",
+      "Speaking of"
+     ],
+     "answer": "I mean",
+     "why": "\"I mean\" acrescenta um detalhe que corrige a ideia.",
+     "wrong": {
+      "By the way": "Mudaria de assunto.",
+      "Speaking of": "Precisa de algo depois."
+     }
+    },
+    {
+     "id": "b2u16l4-4",
+     "type": "build",
+     "pt": "Aliás, você está livre no sábado?",
+     "answer": "By the way are you free on Saturday",
+     "extra": [
+      "Anyway",
+      "in"
+     ],
+     "display": "By the way, are you free on Saturday?",
+     "why": "\"By the way\" + pergunta nova."
+    },
+    {
+     "id": "b2u16l4-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "And then the dog ran away! Oh, sorry, where was I?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "You were telling me about your new job.",
+      "By the way, the dog.",
+      "Actually, where?"
+     ],
+     "answer": "You were telling me about your new job.",
+     "pt": "Você estava me contando do seu emprego novo.",
+     "why": "Ajudar a pessoa a voltar ao assunto.",
+     "wrong": {
+      "By the way, the dog.": "Não ajuda a voltar ao assunto.",
+      "Actually, where?": "Não responde."
+     }
+    },
+    {
+     "id": "b2u16l4-6",
+     "type": "listen",
+     "en": "Anyway, it doesn't matter now.",
+     "options": [
+      "Enfim, isso não importa mais.",
+      "Isso importa muito.",
+      "Vamos falar disso depois."
+     ],
+     "answer": "Enfim, isso não importa mais.",
+     "why": "\"Anyway\" encerra um assunto."
+    },
+    {
+     "id": "b2u16l4-7",
+     "type": "match",
+     "pairs": [
+      [
+       "as I was saying",
+       "como eu estava dizendo"
+      ],
+      [
+       "speaking of",
+       "falando em"
+      ],
+      [
+       "well",
+       "bom"
+      ],
+      [
+       "I mean",
+       "quer dizer"
+      ]
+     ],
+     "why": "Conectores para organizar a conversa."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l5-1",
+     "type": "type",
+     "pt": "Na verdade, eu não gosto de café.",
+     "answer": "Actually, I don't like coffee.",
+     "accept": [
+      "Actually, I do not like coffee."
+     ],
+     "why": "\"Actually\" = na verdade."
+    },
+    {
+     "id": "b2u16l5-2",
+     "type": "type",
+     "pt": "Aliás, você viu minhas chaves?",
+     "answer": "By the way, have you seen my keys?",
+     "accept": [
+      "By the way, did you see my keys?"
+     ],
+     "why": "\"By the way\" = aliás."
+    },
+    {
+     "id": "b2u16l5-3",
+     "type": "dictation",
+     "en": "To be honest, I was a bit nervous.",
+     "why": "\"To be honest\" = para ser sincero."
+    },
+    {
+     "id": "b2u16l5-4",
+     "type": "type",
+     "pt": "Enfim, vamos continuar.",
+     "answer": "Anyway, let's continue.",
+     "accept": [
+      "Anyway, let's carry on.",
+      "Anyway, let us continue."
+     ],
+     "why": "\"Anyway\" = enfim."
+    },
+    {
+     "id": "b2u16l5-5",
+     "type": "dictation",
+     "en": "Well, it depends on the weather.",
+     "why": "\"It depends on\" = depende de."
+    },
+    {
+     "id": "b2u16l5-6",
+     "type": "type",
+     "pt": "Quer dizer, não foi tão ruim.",
+     "answer": "I mean, it wasn't that bad.",
+     "accept": [
+      "I mean, it was not that bad.",
+      "I mean, it wasn't so bad."
+     ],
+     "why": "\"I mean\" corrige ou suaviza."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l6-1",
+     "type": "listen",
+     "en": "Well, actually, I've changed my mind.",
+     "options": [
+      "Bom, na verdade, mudei de ideia.",
+      "Eu sempre mudo de ideia.",
+      "Não mudei de ideia."
+     ],
+     "answer": "Bom, na verdade, mudei de ideia.",
+     "why": "\"Change my mind\" = mudar de ideia."
+    },
+    {
+     "id": "b2u16l6-2",
+     "type": "dictation",
+     "en": "By the way, happy birthday!",
+     "why": "\"By the way\" = aliás."
+    },
+    {
+     "id": "b2u16l6-3",
+     "type": "listen",
+     "en": "Basically, it was a disaster.",
+     "options": [
+      "Basicamente, foi um desastre.",
+      "Foi um sucesso.",
+      "Não aconteceu nada."
+     ],
+     "answer": "Basicamente, foi um desastre.",
+     "why": "\"Basically\" resume."
+    },
+    {
+     "id": "b2u16l6-4",
+     "type": "dictation",
+     "en": "Speaking of music, I bought a guitar.",
+     "why": "\"Speaking of\" = falando em."
+    },
+    {
+     "id": "b2u16l6-5",
+     "type": "listen",
+     "en": "To be honest, I don't remember his name.",
+     "options": [
+      "Para ser sincero, não lembro o nome dele.",
+      "Lembro bem o nome dele.",
+      "Ele não tem nome."
+     ],
+     "answer": "Para ser sincero, não lembro o nome dele.",
+     "why": "\"To be honest\" = para ser sincero."
+    },
+    {
+     "id": "b2u16l6-6",
+     "type": "dictation",
+     "en": "Anyway, as I was saying, it was late.",
+     "why": "\"As I was saying\" = como eu estava dizendo."
+    },
+    {
+     "id": "b2u16l6-7",
+     "type": "speak",
+     "en": "To be honest, I loved it!",
+     "pt": "Para ser sincero, eu adorei!",
+     "why": "\"Honest\" soa como \"Ó-nest\": o \"h\" é mudo."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "So, how was your first week at the new job?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Well, it was busy. I mean, really busy, but I liked it.",
+      "Well busy. Mean busy.",
+      "Actually, by the way, busy."
+     ],
+     "answer": "Well, it was busy. I mean, really busy, but I liked it.",
+     "pt": "Bom, foi corrida. Quer dizer, muito corrida, mas gostei.",
+     "why": "Well (pensar) + I mean (reforçar) = resposta natural.",
+     "wrong": {
+      "Well busy. Mean busy.": "Frases incompletas.",
+      "Actually, by the way, busy.": "Marcadores sem sentido aqui."
+     }
+    },
+    {
+     "id": "b2u16l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is your boss nice?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "To be honest, she's a bit strict. But she's fair.",
+      "Honest, strict boss.",
+      "To be honesty, she strict."
+     ],
+     "answer": "To be honest, she's a bit strict. But she's fair.",
+     "pt": "Para ser sincero, ela é meio rígida. Mas é justa.",
+     "why": "Opinião suavizada com \"to be honest\" e \"a bit\".",
+     "wrong": {
+      "Honest, strict boss.": "Incompleto.",
+      "To be honesty, she strict.": "É \"to be honest\" e falta o verbo."
+     }
+    },
+    {
+     "id": "b2u16l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Oh! By the way, are you coming to the barbecue?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Of course! Speaking of food, what should I bring?",
+      "Of course! Speaking food, what bring?",
+      "Of course! Anyway food."
+     ],
+     "answer": "Of course! Speaking of food, what should I bring?",
+     "pt": "Claro! Falando em comida, o que eu levo?",
+     "why": "\"Speaking of\" emenda um assunto no outro.",
+     "wrong": {
+      "Of course! Speaking food, what bring?": "Faltam \"of\" e \"should I\".",
+      "Of course! Anyway food.": "Incompleto."
+     }
+    },
+    {
+     "id": "b2u16l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Just some drinks. Anyway, I have to go. See you!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "OK! See you on Saturday!",
+      "OK! By the way, see you!",
+      "OK! Actually see you!"
+     ],
+     "answer": "OK! See you on Saturday!",
+     "pt": "Certo! Até sábado!",
+     "why": "\"Anyway, I have to go\" encerra a conversa; responda com uma despedida.",
+     "wrong": {
+      "OK! By the way, see you!": "\"By the way\" não serve para se despedir.",
+      "OK! Actually see you!": "\"Actually\" não faz sentido aqui."
+     }
+    },
+    {
+     "id": "b2u16l7-5",
+     "type": "speak",
+     "en": "By the way, how was your weekend?",
+     "pt": "Aliás, como foi o seu fim de semana?",
+     "why": "Ótimo jeito de puxar conversa."
+    },
+    {
+     "id": "b2u16l7-6",
+     "type": "speak",
+     "en": "Well, I'm not really sure.",
+     "pt": "Bom, não tenho muita certeza.",
+     "why": "Dá tempo para pensar sem travar."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l8",
+   "title": "Lendo: o diário de quem chegou lá",
+   "added": "2026-11",
+   "story": {
+    "title": "Do zero à conversa",
+    "lines": [
+     {
+      "who": "Julia",
+      "en": "Two years ago, I couldn't say a word in English. To be honest, I was afraid to speak.",
+      "pt": "Há dois anos, eu não conseguia dizer uma palavra em inglês. Para ser sincera, tinha medo de falar."
+     },
+     {
+      "who": "Julia",
+      "en": "What helped me most was practising a little every day, even when I was tired.",
+      "pt": "O que mais me ajudou foi praticar um pouco todo dia, mesmo cansada."
+     },
+     {
+      "ask": "Há quanto tempo a Julia começou?",
+      "options": [
+       "Dois anos",
+       "Dois meses",
+       "Dez anos"
+      ],
+      "answer": "Dois anos",
+      "why": "\"Two years ago.\""
+     },
+     {
+      "who": "Julia",
+      "en": "Last month, I had a meeting with a client from London. ___, I was nervous, but I did it!",
+      "pt": "Mês passado, tive uma reunião com um cliente de Londres. Para ser sincera, fiquei nervosa, mas consegui!",
+      "gap": {
+       "answer": "Honestly",
+       "options": [
+        "Honestly",
+        "Anyway",
+        "By the way"
+       ]
+      }
+     },
+     {
+      "who": "Julia",
+      "en": "I still make mistakes, of course. I mean, everybody does. Even native speakers!",
+      "pt": "Ainda erro, claro. Quer dizer, todo mundo erra. Até os nativos!"
+     },
+     {
+      "who": "Julia",
+      "en": "Anyway, my advice is simple: don't be afraid of making mistakes. Just keep talking.",
+      "pt": "Enfim, meu conselho é simples: não tenha medo de errar. Só continue falando."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u16l8-1",
+     "type": "story",
+     "why": "A Julia escreve sobre como foi aprender inglês do zero até conseguir conversar. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "b2u16l8-2",
+     "type": "quiz",
+     "q": "Como era a Julia no começo?",
+     "options": [
+      "Tinha medo de falar",
+      "Já falava bem",
+      "Não gostava de inglês"
+     ],
+     "answer": "Tinha medo de falar",
+     "why": "\"I was afraid to speak.\""
+    },
+    {
+     "id": "b2u16l8-3",
+     "type": "quiz",
+     "q": "O que mais ajudou a Julia?",
+     "options": [
+      "Praticar um pouco todo dia",
+      "Estudar só antes da prova",
+      "Decorar listas"
+     ],
+     "answer": "Praticar um pouco todo dia",
+     "why": "\"What helped me most was practising a little every day.\""
+    },
+    {
+     "id": "b2u16l8-4",
+     "type": "quiz",
+     "q": "Qual é o conselho final dela?",
+     "options": [
+      "Não ter medo de errar",
+      "Estudar à noite",
+      "Falar rápido"
+     ],
+     "answer": "Não ter medo de errar",
+     "why": "\"Don't be afraid of making mistakes.\""
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "b2u16l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Sorry for the interruption. ___, where was I?",
+     "pt": "Desculpa a interrupção. Enfim, onde eu estava?",
+     "options": [
+      "Anyway",
+      "Actually",
+      "Basically"
+     ],
+     "answer": "Anyway",
+     "why": "\"Anyway\" volta à conversa depois de uma interrupção.",
+     "wrong": {
+      "Actually": "\"Actually\" corrige.",
+      "Basically": "\"Basically\" resume."
+     }
+    },
+    {
+     "id": "b2u16l9-2",
+     "type": "type",
+     "pt": "Para ser sincero, estou cansado.",
+     "answer": "To be honest, I'm tired.",
+     "accept": [
+      "To be honest, I am tired."
+     ],
+     "why": "\"To be honest\" + opinião."
+    },
+    {
+     "id": "b2u16l9-3",
+     "type": "meaning",
+     "en": "He's not rude. I mean, he's just very direct.",
+     "options": [
+      "Ele não é grosso. Quer dizer, só é muito direto.",
+      "Ele é muito grosso.",
+      "Ele nunca fala nada."
+     ],
+     "answer": "Ele não é grosso. Quer dizer, só é muito direto.",
+     "why": "\"I mean\" explica melhor."
+    },
+    {
+     "id": "b2u16l9-4",
+     "type": "dictation",
+     "en": "Actually, I have a better idea.",
+     "why": "\"Actually\" = na verdade."
+    },
+    {
+     "id": "b2u16l9-5",
+     "type": "listen",
+     "en": "Speaking of the weekend, are you doing anything?",
+     "options": [
+      "Falando no fim de semana, você vai fazer alguma coisa?",
+      "O fim de semana foi bom.",
+      "Não tenho fim de semana."
+     ],
+     "answer": "Falando no fim de semana, você vai fazer alguma coisa?",
+     "why": "\"Speaking of\" emenda assuntos."
+    },
+    {
+     "id": "b2u16l9-6",
+     "type": "build",
+     "pt": "Bom, na verdade, eu prefiro o outro.",
+     "answer": "Well actually I prefer the other one",
+     "extra": [
+      "currently",
+      "anyway"
+     ],
+     "display": "Well, actually, I prefer the other one.",
+     "why": "\"Well, actually\" = bom, na verdade."
+    }
+   ]
+  },
+  {
+   "id": "b2-u16-l10",
+   "title": "História: a festa de formatura do curso",
+   "added": "2026-11",
+   "story": {
+    "title": "A festa de formatura do curso",
+    "lines": [
+     {
+      "who": "Sarah",
+      "en": "Well, everybody, we did it! This is our last day together.",
+      "pt": "Bom, pessoal, conseguimos! Este é o nosso último dia juntos."
+     },
+     {
+      "who": "Pedro",
+      "en": "To be honest, when I started, I thought I would never be able to do it.",
+      "pt": "Para ser sincero, quando comecei, achei que nunca ia conseguir."
+     },
+     {
+      "who": "Sofia",
+      "en": "Me too! ___ the way, I have news. I'm moving to Canada for a new job!",
+      "pt": "Eu também! Aliás, tenho uma novidade. Vou me mudar para o Canadá por um emprego novo!",
+      "gap": {
+       "answer": "By",
+       "options": [
+        "By",
+        "In",
+        "On"
+       ]
+      }
+     },
+     {
+      "ask": "Qual é a novidade da Sofia?",
+      "options": [
+       "Vai trabalhar no Canadá",
+       "Vai se casar",
+       "Vai fazer outro curso"
+      ],
+      "answer": "Vai trabalhar no Canadá",
+      "why": "\"I'm moving to Canada for a new job!\""
+     },
+     {
+      "who": "Pedro",
+      "en": "That's amazing! I mean, we'll miss you, but it's amazing.",
+      "pt": "Que incrível! Quer dizer, vamos sentir sua falta, mas é incrível."
+     },
+     {
+      "who": "Sarah",
+      "en": "Anyway, I'm so proud of you all. Promise me you'll keep practising. You speak English now!",
+      "pt": "Enfim, tenho muito orgulho de todos vocês. Me prometam que vão continuar praticando. Vocês falam inglês agora!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "b2u16l10-1",
+     "type": "story",
+     "why": "A turma comemora o fim do curso de inglês. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "b2u16l10-2",
+     "type": "quiz",
+     "q": "O que o Pedro achava no começo do curso?",
+     "options": [
+      "Que nunca ia conseguir",
+      "Que era fácil",
+      "Que já sabia tudo"
+     ],
+     "answer": "Que nunca ia conseguir",
+     "why": "\"I thought I would never be able to do it.\""
+    },
+    {
+     "id": "b2u16l10-3",
+     "type": "quiz",
+     "q": "Qual é o plano da Sofia?",
+     "options": [
+      "Trabalhar no Canadá",
+      "Começar o curso de novo",
+      "Dar aulas de inglês"
+     ],
+     "answer": "Trabalhar no Canadá",
+     "why": "\"I'm moving to Canada for a new job.\""
+    },
+    {
+     "id": "b2u16l10-4",
+     "type": "quiz",
+     "q": "O que a professora pede no fim?",
+     "options": [
+      "Que continuem praticando",
+      "Que façam outra prova",
+      "Que parem de estudar"
+     ],
+     "answer": "Que continuem praticando",
+     "why": "\"Promise me you'll keep practising.\""
+    }
+   ]
+  }
+ ]
+}
