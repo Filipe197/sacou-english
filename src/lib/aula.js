@@ -1,6 +1,6 @@
 // Aula falada com o Professor Juvenal. Usado no site (tela /aula) e na função do
 // servidor (api/aula.js): o navegador manda só o id do tema e o nível, nunca o texto do papel.
-export const AULA_LEVELS = ['A1', 'A2', 'B1', 'B2'];
+export const AULA_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
 export const TOPICS = [
   { id: 'surpresa', title: 'Surpresa', en: "any everyday topic you like (the heat, your noisy neighbour, coffee, the student's day)" },
@@ -21,7 +21,7 @@ export const MAX_STEPS = 16;   // vezes que o professor pede algo novo
 export const MAX_CHARS = 280;  // tamanho máximo de cada resposta do aluno
 export const MAX_TRIES = 3;    // tentativas de repetir antes de seguir em frente
 
-// O comentário do professor sai em português no A1 e A2 e em inglês no B1 e B2.
+// O comentário do professor sai em português no A1 e A2 e em inglês do B1 em diante.
 export const commentInPt = (level) => level === 'A1' || level === 'A2';
 
 // Apresentação do professor (botão "Ouvir o Juvenal"). [pt, en]

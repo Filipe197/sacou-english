@@ -7,21 +7,24 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseCsvLine, tokens, IRREG } from './cefr.mjs';
+import { parseCsvLine, tokens, IRREG, OCTANOVE_CSV } from './cefr.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const LEVELS = ['A1', 'A2', 'B1', 'B2'];
+const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
 // lista oficial: { A1: [{ w, pos }], ... } (entradas com variantes "a/b" viram uma só, com as formas)
-const csv = fs.readFileSync(path.join(root, 'content/sources/cefrj-vocabulary-profile-1.5.csv'), 'utf8').split(/\r?\n/).filter(Boolean);
-const head = parseCsvLine(csv[0]);
-const iW = head.indexOf('headword'), iP = head.indexOf('pos'), iL = head.indexOf('CEFR');
+// A1 a B2 da CEFR-J; C1 da Octanove Vocabulary Profile C1/C2
 const OFFICIAL = Object.fromEntries(LEVELS.map(l => [l, []]));
-for (const line of csv.slice(1)) {
-  const c = parseCsvLine(line);
-  if (!OFFICIAL[c[iL]]) continue;
-  const forms = c[iW].split('/').map(s => s.trim().toLowerCase().replace(/\.$/, '')).filter(Boolean);
-  if (forms.length) OFFICIAL[c[iL]].push({ w: c[iW], pos: c[iP], forms });
+for (const file of ['content/sources/cefrj-vocabulary-profile-1.5.csv', OCTANOVE_CSV]) {
+  const csv = fs.readFileSync(path.join(root, file), 'utf8').split(/\r?\n/).filter(Boolean);
+  const head = parseCsvLine(csv[0]);
+  const iW = head.indexOf('headword'), iP = head.indexOf('pos'), iL = head.indexOf('CEFR');
+  for (const line of csv.slice(1)) {
+    const c = parseCsvLine(line);
+    if (!OFFICIAL[c[iL]]) continue;
+    const forms = c[iW].split('/').map(s => s.trim().toLowerCase().replace(/\.$/, '')).filter(Boolean);
+    if (forms.length) OFFICIAL[c[iL]].push({ w: c[iW], pos: c[iP], forms });
+  }
 }
 
 // textos em inglês de um nível

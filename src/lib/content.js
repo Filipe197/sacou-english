@@ -18,6 +18,9 @@ const rank = (u) => LEVEL_ORDER.indexOf(u.level) * 100 + u.order;
 export const UNITS = Object.values(modules).sort((a, b) => rank(a) - rank(b));
 export const LEVELS = LEVEL_ORDER.filter(l => UNITS.some(u => u.level === l)); // níveis com conteúdo
 export const NEXT_LEVEL = LEVEL_ORDER[LEVELS.length] || null; // próximo nível em preparação
+export const UNITS_PER_LEVEL = 16;
+// último nível ainda recebendo unidades (publicado em etapas)
+export const GROWING_LEVEL = (() => { const l = LEVELS[LEVELS.length - 1]; return UNITS.filter(u => u.level === l).length < UNITS_PER_LEVEL ? l : null; })();
 export const unitsOf = (level) => UNITS.filter(u => u.level === level);
 
 export const LESSONS = UNITS.flatMap(u => u.lessons.map((l, i) => Object.assign(l, { unit: u, index: i })));

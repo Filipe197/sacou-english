@@ -1,0 +1,1070 @@
+{
+ "id": "c1-u4",
+ "level": "C1",
+ "order": 4,
+ "title": "Pelo que parece…",
+ "subtitle": "Linguagem cautelosa: it seems that, tend to, to some extent, as far as I know, arguably.",
+ "can_do": {
+  "text": "Consigo dar opiniões e informações com cuidado, sem soar absoluto nem grosseiro, como se faz em reuniões, artigos e debates.",
+  "source": "CEFR (Conselho da Europa) — Produção oral e escrita: suavizar afirmações e expressar graus de certeza, nível C1"
+ },
+ "core_inventory": [
+  "Functions: hedging (it seems that, it appears that)",
+  "Vocabulary: tend to, to some extent, as far as I know, arguably",
+  "Grammar: modal softening (may, might, could)",
+  "Functions: expressing degrees of certainty"
+ ],
+ "words": [
+  [
+   "it seems that",
+   "parece que"
+  ],
+  [
+   "it appears that",
+   "ao que parece"
+  ],
+  [
+   "tend to",
+   "costumar, tender a"
+  ],
+  [
+   "to some extent",
+   "até certo ponto"
+  ],
+  [
+   "as far as I know",
+   "até onde eu sei"
+  ],
+  [
+   "arguably",
+   "possivelmente, pode-se dizer"
+  ],
+  [
+   "apparently",
+   "aparentemente, pelo visto"
+  ],
+  [
+   "in a way",
+   "de certa forma"
+  ],
+  [
+   "more or less",
+   "mais ou menos"
+  ],
+  [
+   "presumably",
+   "presumivelmente, imagino que"
+  ]
+ ],
+ "guide": {
+  "title": "Como opinar sem parecer dono da verdade",
+  "intro": "Em inglês avançado, quase ninguém diz \"isso está errado\" ou \"todo mundo acha\". As pessoas suavizam: parece que, tende a, até certo ponto. Isso soa educado, inteligente e profissional.",
+  "points": [
+   {
+    "en": "It seems that the project is behind schedule.",
+    "pt": "Parece que o projeto está atrasado.",
+    "note": "Mais suave do que \"The project is late\"."
+   },
+   {
+    "en": "People tend to spend more in December.",
+    "pt": "As pessoas costumam gastar mais em dezembro.",
+    "note": "\"Tend to\" = ter a tendência de."
+   },
+   {
+    "en": "I agree with you to some extent.",
+    "pt": "Concordo com você até certo ponto.",
+    "note": "Concorda, mas não totalmente."
+   },
+   {
+    "en": "As far as I know, the shop is still open.",
+    "pt": "Até onde eu sei, a loja ainda está aberta.",
+    "note": "Mostra que você pode estar errado."
+   },
+   {
+    "en": "It is arguably the best film of the year.",
+    "pt": "Pode-se dizer que é o melhor filme do ano.",
+    "note": "\"Arguably\" = dá para defender que…"
+   },
+   {
+    "en": "This might not be the best option.",
+    "pt": "Talvez esta não seja a melhor opção.",
+    "note": "Modais (may, might, could) suavizam críticas."
+   }
+  ],
+  "tips": [
+   "Em vez de \"You are wrong\", tente \"I'm not sure that's entirely right\".",
+   "\"Apparently\" também serve para fofoca: \"Apparently, they broke up!\" = pelo visto, eles terminaram!"
+  ]
+ },
+ "extra_vocab": [
+  {
+   "word": "arguably",
+   "reason": "pode-se dizer que: marcador de opinião essencial no C1; aparece com tradução"
+  },
+  {
+   "word": "according",
+   "reason": "\"according to\" (segundo) é essencial para citar fontes"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "c1-u4-l1",
+   "title": "Parece que…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l1-1",
+     "type": "choice",
+     "prompt": "Qual frase é mais suave?",
+     "en": "___",
+     "pt": "Parece que houve um erro.",
+     "options": [
+      "It seems that there was a mistake.",
+      "You made a mistake.",
+      "This is wrong."
+     ],
+     "answer": "It seems that there was a mistake.",
+     "why": "\"It seems that\" suaviza e não acusa ninguém.",
+     "wrong": {
+      "You made a mistake.": "Direto e acusador.",
+      "This is wrong.": "Absoluto demais."
+     }
+    },
+    {
+     "id": "c1u4l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, the meeting was cancelled.",
+     "pt": "Pelo visto, a reunião foi cancelada.",
+     "options": [
+      "Apparently",
+      "Arguably",
+      "Actually"
+     ],
+     "answer": "Apparently",
+     "why": "\"Apparently\" = pelo visto (informação que você ouviu).",
+     "wrong": {
+      "Arguably": "\"Arguably\" é para opinião defendível.",
+      "Actually": "\"Actually\" = na verdade."
+     }
+    },
+    {
+     "id": "c1u4l1-3",
+     "type": "meaning",
+     "en": "It appears that the prices will go up again.",
+     "options": [
+      "Ao que parece, os preços vão subir de novo.",
+      "Os preços vão cair.",
+      "Com certeza os preços vão subir."
+     ],
+     "answer": "Ao que parece, os preços vão subir de novo.",
+     "why": "\"It appears that\" = ao que parece."
+    },
+    {
+     "id": "c1u4l1-4",
+     "type": "build",
+     "pt": "Parece que ninguém leu o e-mail.",
+     "answer": "It seems that nobody read the email",
+     "extra": [
+      "seem",
+      "anybody"
+     ],
+     "display": "It seems that nobody read the email.",
+     "why": "\"It seems that\" + frase."
+    },
+    {
+     "id": "c1u4l1-5",
+     "type": "listen",
+     "en": "Apparently, they are getting married.",
+     "options": [
+      "Pelo visto, eles vão se casar.",
+      "Eles se separaram.",
+      "Eles já são casados há anos."
+     ],
+     "answer": "Pelo visto, eles vão se casar.",
+     "why": "\"Apparently\" = pelo visto."
+    },
+    {
+     "id": "c1u4l1-6",
+     "type": "match",
+     "pairs": [
+      [
+       "it seems that",
+       "parece que"
+      ],
+      [
+       "apparently",
+       "pelo visto"
+      ],
+      [
+       "it appears that",
+       "ao que parece"
+      ],
+      [
+       "presumably",
+       "imagino que"
+      ]
+     ],
+     "why": "Jeitos de dizer algo sem afirmar 100%."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l2",
+   "title": "Tende a…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "People in Brazil ___ be very friendly with strangers.",
+     "pt": "As pessoas no Brasil costumam ser muito simpáticas com estranhos.",
+     "options": [
+      "tend to",
+      "tend",
+      "are tend to"
+     ],
+     "answer": "tend to",
+     "why": "\"Tend to\" + verbo = ter a tendência de.",
+     "wrong": {
+      "tend": "Falta \"to\".",
+      "are tend to": "\"Tend\" já é verbo: sem \"are\"."
+     }
+    },
+    {
+     "id": "c1u4l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I ___ to agree with you, but I'm not completely sure.",
+     "pt": "Tendo a concordar com você, mas não tenho certeza total.",
+     "options": [
+      "tend",
+      "tends",
+      "am tending"
+     ],
+     "answer": "tend",
+     "why": "\"I tend to agree\" = tendo a concordar.",
+     "wrong": {
+      "tends": "Com \"I\" não tem -s.",
+      "am tending": "Não se usa no contínuo assim."
+     }
+    },
+    {
+     "id": "c1u4l2-3",
+     "type": "meaning",
+     "en": "Young people tend not to watch TV anymore.",
+     "options": [
+      "Os jovens costumam não assistir mais TV.",
+      "Os jovens assistem muita TV.",
+      "Os jovens trabalham na TV."
+     ],
+     "answer": "Os jovens costumam não assistir mais TV.",
+     "why": "\"Tend not to\" = costumar não."
+    },
+    {
+     "id": "c1u4l2-4",
+     "type": "build",
+     "pt": "Ele costuma chegar atrasado às segundas.",
+     "answer": "He tends to arrive late on Mondays",
+     "extra": [
+      "tend",
+      "in"
+     ],
+     "display": "He tends to arrive late on Mondays.",
+     "why": "Com \"he\": tends to."
+    },
+    {
+     "id": "c1u4l2-5",
+     "type": "listen",
+     "en": "Prices tend to go up in summer.",
+     "options": [
+      "Os preços costumam subir no verão.",
+      "Os preços caem no verão.",
+      "Os preços nunca mudam."
+     ],
+     "answer": "Os preços costumam subir no verão.",
+     "why": "\"Tend to\" = costumar."
+    },
+    {
+     "id": "c1u4l2-6",
+     "type": "speak",
+     "en": "I tend to agree with you.",
+     "pt": "Tendo a concordar com você.",
+     "why": "Jeito suave de concordar."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l3",
+   "title": "Até certo ponto",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I agree with you ___, but there are other problems.",
+     "pt": "Concordo com você até certo ponto, mas há outros problemas.",
+     "options": [
+      "to some extent",
+      "at all",
+      "for sure"
+     ],
+     "answer": "to some extent",
+     "why": "\"To some extent\" = até certo ponto.",
+     "wrong": {
+      "at all": "\"At all\" se usa em negativas: not at all.",
+      "for sure": "\"For sure\" = com certeza, o contrário."
+     }
+    },
+    {
+     "id": "c1u4l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, the shop closes at ten, but you should check.",
+     "pt": "Até onde eu sei, a loja fecha às dez, mas é bom confirmar.",
+     "options": [
+      "As far as I know",
+      "As soon as I know",
+      "As long as I know"
+     ],
+     "answer": "As far as I know",
+     "why": "\"As far as I know\" = até onde eu sei.",
+     "wrong": {
+      "As soon as I know": "= assim que eu souber.",
+      "As long as I know": "Não se usa assim."
+     }
+    },
+    {
+     "id": "c1u4l3-3",
+     "type": "meaning",
+     "en": "In a way, I understand why she left.",
+     "options": [
+      "De certa forma, entendo por que ela foi embora.",
+      "Não entendo por que ela foi embora.",
+      "Ela foi embora sem explicar."
+     ],
+     "answer": "De certa forma, entendo por que ela foi embora.",
+     "why": "\"In a way\" = de certa forma."
+    },
+    {
+     "id": "c1u4l3-4",
+     "type": "build",
+     "pt": "É, possivelmente, o melhor restaurante da cidade.",
+     "answer": "It is arguably the best restaurant in the city",
+     "extra": [
+      "of",
+      "argue"
+     ],
+     "display": "It is arguably the best restaurant in the city.",
+     "why": "\"Arguably\" = dá para dizer que."
+    },
+    {
+     "id": "c1u4l3-5",
+     "type": "listen",
+     "en": "The plan was more or less a success.",
+     "options": [
+      "O plano foi mais ou menos um sucesso.",
+      "O plano foi um desastre.",
+      "O plano foi perfeito."
+     ],
+     "answer": "O plano foi mais ou menos um sucesso.",
+     "why": "\"More or less\" = mais ou menos."
+    },
+    {
+     "id": "c1u4l3-6",
+     "type": "match",
+     "pairs": [
+      [
+       "to some extent",
+       "até certo ponto"
+      ],
+      [
+       "as far as I know",
+       "até onde eu sei"
+      ],
+      [
+       "in a way",
+       "de certa forma"
+      ],
+      [
+       "arguably",
+       "pode-se dizer"
+      ]
+     ],
+     "why": "Expressões para mostrar cautela."
+    },
+    {
+     "id": "c1u4l3-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Is the new manager good?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "To some extent. She's organised, but she tends to ignore our ideas.",
+      "To some extend. She organised, but ignore ideas.",
+      "At some extent, yes but no."
+     ],
+     "answer": "To some extent. She's organised, but she tends to ignore our ideas.",
+     "pt": "Até certo ponto. Ela é organizada, mas costuma ignorar as nossas ideias.",
+     "why": "Opinião equilibrada com \"to some extent\" e \"tends to\".",
+     "wrong": {
+      "To some extend. She organised, but ignore ideas.": "É \"extent\", e faltam verbos.",
+      "At some extent, yes but no.": "É \"to some extent\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l4",
+   "title": "Prática: criticar com educação",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l4-1",
+     "type": "choice",
+     "prompt": "Qual crítica é mais educada?",
+     "en": "___",
+     "pt": "Talvez esta não seja a melhor ideia.",
+     "options": [
+      "This might not be the best idea.",
+      "This idea is terrible.",
+      "Your idea is bad."
+     ],
+     "answer": "This might not be the best idea.",
+     "why": "\"Might not\" suaviza a crítica.",
+     "wrong": {
+      "This idea is terrible.": "Muito direto.",
+      "Your idea is bad.": "Direto e pessoal."
+     }
+    },
+    {
+     "id": "c1u4l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'm not sure that's ___ right.",
+     "pt": "Não tenho certeza de que isso esteja totalmente certo.",
+     "options": [
+      "entirely",
+      "never",
+      "anyway"
+     ],
+     "answer": "entirely",
+     "why": "\"Not entirely right\" = não totalmente certo. Educado.",
+     "wrong": {
+      "never": "Não combina.",
+      "anyway": "\"Anyway\" = enfim."
+     }
+    },
+    {
+     "id": "c1u4l4-3",
+     "type": "meaning",
+     "en": "Presumably, he forgot about the meeting.",
+     "options": [
+      "Imagino que ele esqueceu da reunião.",
+      "Ele foi à reunião.",
+      "Ele organizou a reunião."
+     ],
+     "answer": "Imagino que ele esqueceu da reunião.",
+     "why": "\"Presumably\" = imagino que, ao que tudo indica."
+    },
+    {
+     "id": "c1u4l4-4",
+     "type": "build",
+     "pt": "Talvez a gente precise de mais tempo.",
+     "answer": "We might need more time",
+     "extra": [
+      "must",
+      "needs"
+     ],
+     "display": "We might need more time.",
+     "why": "\"Might\" = talvez."
+    },
+    {
+     "id": "c1u4l4-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What do you think of my presentation?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "It's good. It could be a bit shorter, perhaps.",
+      "It's too long and boring.",
+      "Bad. Shorter."
+     ],
+     "answer": "It's good. It could be a bit shorter, perhaps.",
+     "pt": "Está boa. Poderia ser um pouco mais curta, talvez.",
+     "why": "Elogio + crítica suave com \"could\" e \"perhaps\".",
+     "wrong": {
+      "It's too long and boring.": "Direto demais.",
+      "Bad. Shorter.": "Grosseiro."
+     }
+    },
+    {
+     "id": "c1u4l4-6",
+     "type": "listen",
+     "en": "It seems to me that we need a new plan.",
+     "options": [
+      "Me parece que precisamos de um plano novo.",
+      "O plano está perfeito.",
+      "Já temos um plano novo."
+     ],
+     "answer": "Me parece que precisamos de um plano novo.",
+     "why": "\"It seems to me\" = me parece."
+    },
+    {
+     "id": "c1u4l4-7",
+     "type": "speak",
+     "en": "I'm not sure that's entirely right.",
+     "pt": "Não tenho certeza de que isso esteja totalmente certo.",
+     "why": "A forma educada de discordar."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l5-1",
+     "type": "type",
+     "pt": "Parece que vai chover.",
+     "answer": "It seems that it's going to rain.",
+     "accept": [
+      "It seems that it is going to rain.",
+      "It seems it's going to rain.",
+      "It seems like it is going to rain.",
+      "It seems like it's going to rain."
+     ],
+     "why": "\"It seems that\" = parece que."
+    },
+    {
+     "id": "c1u4l5-2",
+     "type": "type",
+     "pt": "Até onde eu sei, ele mora em Lisboa.",
+     "answer": "As far as I know, he lives in Lisbon.",
+     "accept": [
+      "As far as I know he lives in Lisbon."
+     ],
+     "why": "\"As far as I know\" = até onde eu sei."
+    },
+    {
+     "id": "c1u4l5-3",
+     "type": "dictation",
+     "en": "People tend to forget names.",
+     "why": "\"Tend to\" = costumar."
+    },
+    {
+     "id": "c1u4l5-4",
+     "type": "type",
+     "pt": "Concordo até certo ponto.",
+     "answer": "I agree to some extent.",
+     "accept": [
+      "To some extent, I agree."
+     ],
+     "why": "\"To some extent\" = até certo ponto."
+    },
+    {
+     "id": "c1u4l5-5",
+     "type": "dictation",
+     "en": "Apparently, the shop is closed today.",
+     "why": "\"Apparently\" = pelo visto."
+    },
+    {
+     "id": "c1u4l5-6",
+     "type": "type",
+     "pt": "Talvez não seja uma boa ideia.",
+     "answer": "It might not be a good idea.",
+     "accept": [
+      "It may not be a good idea.",
+      "Perhaps it's not a good idea.",
+      "Maybe it is not a good idea."
+     ],
+     "why": "\"Might not\" suaviza."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l6-1",
+     "type": "listen",
+     "en": "It appears that someone took my lunch.",
+     "options": [
+      "Ao que parece, alguém pegou o meu almoço.",
+      "Esqueci o meu almoço.",
+      "Comi o almoço de alguém."
+     ],
+     "answer": "Ao que parece, alguém pegou o meu almoço.",
+     "why": "\"It appears that\" = ao que parece."
+    },
+    {
+     "id": "c1u4l6-2",
+     "type": "dictation",
+     "en": "I tend to work better at night.",
+     "why": "\"Tend to\" = costumar."
+    },
+    {
+     "id": "c1u4l6-3",
+     "type": "listen",
+     "en": "As far as I know, nothing has changed.",
+     "options": [
+      "Até onde eu sei, nada mudou.",
+      "Tudo mudou.",
+      "Não sei de nada."
+     ],
+     "answer": "Até onde eu sei, nada mudou.",
+     "why": "\"As far as I know\" = até onde eu sei."
+    },
+    {
+     "id": "c1u4l6-4",
+     "type": "dictation",
+     "en": "In a way, it was a good thing.",
+     "why": "\"In a way\" = de certa forma."
+    },
+    {
+     "id": "c1u4l6-5",
+     "type": "listen",
+     "en": "She is arguably the best player in the team.",
+     "options": [
+      "Pode-se dizer que ela é a melhor jogadora do time.",
+      "Ela é a pior jogadora do time.",
+      "Ela saiu do time."
+     ],
+     "answer": "Pode-se dizer que ela é a melhor jogadora do time.",
+     "why": "\"Arguably\" = pode-se dizer que."
+    },
+    {
+     "id": "c1u4l6-6",
+     "type": "dictation",
+     "en": "Presumably, they are on their way.",
+     "why": "\"Presumably\" = imagino que."
+    },
+    {
+     "id": "c1u4l6-7",
+     "type": "speak",
+     "en": "It seems to me that you are right.",
+     "pt": "Me parece que você tem razão.",
+     "why": "\"It seems to me\" = me parece."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you think working from home is better?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "To some extent. People tend to be more productive, but they may feel lonely.",
+      "Yes, it is better. Always. For everybody.",
+      "To some extent, but people tends lonely."
+     ],
+     "answer": "To some extent. People tend to be more productive, but they may feel lonely.",
+     "pt": "Até certo ponto. As pessoas costumam ser mais produtivas, mas podem se sentir sozinhas.",
+     "why": "Resposta equilibrada e cautelosa.",
+     "wrong": {
+      "Yes, it is better. Always. For everybody.": "Absoluto demais.",
+      "To some extent, but people tends lonely.": "\"People\" pede \"tend\", e falta verbo."
+     }
+    },
+    {
+     "id": "c1u4l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "But companies say people work less at home."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Apparently, some studies say the opposite. It seems to depend on the job.",
+      "Companies are wrong. Totally.",
+      "Apparently, opposite, depend."
+     ],
+     "answer": "Apparently, some studies say the opposite. It seems to depend on the job.",
+     "pt": "Pelo visto, alguns estudos dizem o contrário. Parece depender do trabalho.",
+     "why": "\"Apparently\" + \"it seems to depend\" = cautela.",
+     "wrong": {
+      "Companies are wrong. Totally.": "Absoluto e grosseiro.",
+      "Apparently, opposite, depend.": "Incompleto."
+     }
+    },
+    {
+     "id": "c1u4l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What about your company?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "As far as I know, we'll keep working from home two days a week.",
+      "As far I know, we keep home.",
+      "As long as I know, home."
+     ],
+     "answer": "As far as I know, we'll keep working from home two days a week.",
+     "pt": "Até onde eu sei, vamos continuar trabalhando de casa dois dias por semana.",
+     "why": "\"As far as I know\" mostra que pode mudar.",
+     "wrong": {
+      "As far I know, we keep home.": "Falta \"as\" e o verbo certo.",
+      "As long as I know, home.": "Expressão errada."
+     }
+    },
+    {
+     "id": "c1u4l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "That sounds like the best of both worlds."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "In a way, yes. It's arguably the fairest solution.",
+      "In a way, yes. It's argue the fair.",
+      "On a way, the best."
+     ],
+     "answer": "In a way, yes. It's arguably the fairest solution.",
+     "pt": "De certa forma, sim. Pode-se dizer que é a solução mais justa.",
+     "why": "\"In a way\" + \"arguably\".",
+     "wrong": {
+      "In a way, yes. It's argue the fair.": "É \"arguably the fairest\".",
+      "On a way, the best.": "É \"in a way\"."
+     }
+    },
+    {
+     "id": "c1u4l7-5",
+     "type": "speak",
+     "en": "As far as I know, it is free.",
+     "pt": "Até onde eu sei, é de graça.",
+     "why": "Responde sem prometer."
+    },
+    {
+     "id": "c1u4l7-6",
+     "type": "speak",
+     "en": "I agree with you to some extent.",
+     "pt": "Concordo com você até certo ponto.",
+     "why": "Concorda, mas deixa espaço para discordar."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l8",
+   "title": "Lendo: o artigo sobre sono",
+   "added": "2026-11",
+   "story": {
+    "title": "Estamos dormindo pouco?",
+    "lines": [
+     {
+      "who": "Texto",
+      "en": "It seems that we are sleeping less than ever before.",
+      "pt": "Parece que estamos dormindo menos do que nunca."
+     },
+     {
+      "who": "Texto",
+      "en": "According to a recent study, most adults tend to sleep less than seven hours a night.",
+      "pt": "Segundo um estudo recente, a maioria dos adultos costuma dormir menos de sete horas por noite."
+     },
+     {
+      "ask": "O que o estudo diz?",
+      "options": [
+       "A maioria dorme menos de sete horas",
+       "Todos dormem bem",
+       "Ninguém dorme à noite"
+      ],
+      "answer": "A maioria dorme menos de sete horas",
+      "why": "\"Most adults tend to sleep less than seven hours.\""
+     },
+     {
+      "who": "Texto",
+      "en": "Phones ___ be part of the problem, as many people use them in bed.",
+      "pt": "Os celulares podem ser parte do problema, já que muita gente usa na cama.",
+      "gap": {
+       "answer": "might",
+       "options": [
+        "might",
+        "must",
+        "will"
+       ]
+      }
+     },
+     {
+      "who": "Texto",
+      "en": "To some extent, stress is also responsible.",
+      "pt": "Até certo ponto, o estresse também é responsável."
+     },
+     {
+      "who": "Texto",
+      "en": "Sleep is arguably the most forgotten part of a healthy life.",
+      "pt": "Pode-se dizer que o sono é a parte mais esquecida de uma vida saudável."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "c1u4l8-1",
+     "type": "story",
+     "why": "Um artigo de revista fala sobre o sono dos brasileiros, usando linguagem cautelosa. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "c1u4l8-2",
+     "type": "quiz",
+     "q": "Quantas horas as pessoas costumam dormir, segundo o artigo?",
+     "options": [
+      "Menos de sete",
+      "Mais de nove",
+      "Exatamente oito"
+     ],
+     "answer": "Menos de sete",
+     "why": "\"Most adults tend to sleep less than seven hours.\""
+    },
+    {
+     "id": "c1u4l8-3",
+     "type": "quiz",
+     "q": "Qual pode ser uma causa, segundo o artigo?",
+     "options": [
+      "O celular antes de dormir",
+      "O café da manhã",
+      "O exercício"
+     ],
+     "answer": "O celular antes de dormir",
+     "why": "\"Phones might be part of the problem.\""
+    },
+    {
+     "id": "c1u4l8-4",
+     "type": "quiz",
+     "q": "Como o artigo apresenta as conclusões?",
+     "options": [
+      "Com cautela",
+      "Com certeza absoluta",
+      "Sem dados"
+     ],
+     "answer": "Com cautela",
+     "why": "\"It seems\", \"might\", \"to some extent\"."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u4l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___, he's moving to Canada, but I'm not sure.",
+     "pt": "Pelo visto, ele vai se mudar para o Canadá, mas não tenho certeza.",
+     "options": [
+      "Apparently",
+      "Definitely",
+      "Obviously"
+     ],
+     "answer": "Apparently",
+     "why": "\"Apparently\" combina com \"não tenho certeza\".",
+     "wrong": {
+      "Definitely": "\"Definitely\" = com certeza.",
+      "Obviously": "\"Obviously\" = obviamente."
+     }
+    },
+    {
+     "id": "c1u4l9-2",
+     "type": "type",
+     "pt": "As pessoas costumam comer demais nas festas.",
+     "answer": "People tend to eat too much at parties.",
+     "accept": [
+      "People tend to eat too much at parties"
+     ],
+     "why": "\"Tend to\" + verbo."
+    },
+    {
+     "id": "c1u4l9-3",
+     "type": "meaning",
+     "en": "I'm not sure that's entirely true.",
+     "options": [
+      "Não tenho certeza de que isso seja totalmente verdade.",
+      "Isso é mentira.",
+      "Isso é verdade."
+     ],
+     "answer": "Não tenho certeza de que isso seja totalmente verdade.",
+     "why": "Jeito educado de discordar."
+    },
+    {
+     "id": "c1u4l9-4",
+     "type": "dictation",
+     "en": "It seems that we have a problem.",
+     "why": "\"It seems that\" = parece que."
+    },
+    {
+     "id": "c1u4l9-5",
+     "type": "listen",
+     "en": "More or less. It depends on the day.",
+     "options": [
+      "Mais ou menos. Depende do dia.",
+      "Sempre. Todo dia.",
+      "Nunca."
+     ],
+     "answer": "Mais ou menos. Depende do dia.",
+     "why": "\"More or less\" = mais ou menos."
+    },
+    {
+     "id": "c1u4l9-6",
+     "type": "build",
+     "pt": "Até onde eu sei, a reunião ainda está de pé.",
+     "answer": "As far as I know the meeting is still on",
+     "extra": [
+      "long",
+      "yet"
+     ],
+     "display": "As far as I know, the meeting is still on.",
+     "why": "\"Be on\" = estar de pé, confirmado."
+    }
+   ]
+  },
+  {
+   "id": "c1-u4-l10",
+   "title": "História: a fofoca do escritório",
+   "added": "2026-11",
+   "story": {
+    "title": "A fofoca do escritório",
+    "lines": [
+     {
+      "who": "Rosa",
+      "en": "Did you hear? Apparently, the boss is leaving the company.",
+      "pt": "Você ficou sabendo? Pelo visto, o chefe vai sair da empresa."
+     },
+     {
+      "who": "Tania",
+      "en": "Really? As far as I know, it's just a rumour.",
+      "pt": "Sério? Até onde eu sei, é só um boato."
+     },
+     {
+      "who": "Rosa",
+      "en": "Well, it seems that he cleaned his desk yesterday.",
+      "pt": "Bom, parece que ele limpou a mesa ontem."
+     },
+     {
+      "ask": "O que o chefe fez ontem?",
+      "options": [
+       "Limpou a mesa",
+       "Fez uma festa",
+       "Chegou atrasado"
+      ],
+      "answer": "Limpou a mesa",
+      "why": "\"He cleaned his desk yesterday.\""
+     },
+     {
+      "who": "Tania",
+      "en": "To some ___, that is strange. But people tend to exaggerate.",
+      "pt": "Até certo ponto, isso é estranho. Mas as pessoas costumam exagerar.",
+      "gap": {
+       "answer": "extent",
+       "options": [
+        "extent",
+        "way",
+        "far"
+       ]
+      }
+     },
+     {
+      "who": "Rosa",
+      "en": "Oh! Look, an email from him.",
+      "pt": "Ah! Olha, um e-mail dele."
+     },
+     {
+      "who": "Tania",
+      "en": "Ha! He was just going on holiday for two weeks!",
+      "pt": "Rá! Ele só ia sair de férias por duas semanas!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "c1u4l10-1",
+     "type": "story",
+     "why": "Duas colegas comentam um boato no escritório, sempre com cuidado para não afirmar nada. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "c1u4l10-2",
+     "type": "quiz",
+     "q": "Qual é o boato?",
+     "options": [
+      "O chefe vai sair da empresa",
+      "Vão demitir todo mundo",
+      "A empresa vai mudar de cidade"
+     ],
+     "answer": "O chefe vai sair da empresa",
+     "why": "\"Apparently, the boss is leaving.\""
+    },
+    {
+     "id": "c1u4l10-3",
+     "type": "quiz",
+     "q": "Como a Tânia reage ao boato?",
+     "options": [
+      "Com cautela",
+      "Acredita na hora",
+      "Fica furiosa"
+     ],
+     "answer": "Com cautela",
+     "why": "\"As far as I know, it's just a rumour.\""
+    },
+    {
+     "id": "c1u4l10-4",
+     "type": "quiz",
+     "q": "Como termina a história?",
+     "options": [
+      "O chefe estava só de férias",
+      "O chefe foi demitido",
+      "O chefe virou diretor"
+     ],
+     "answer": "O chefe estava só de férias",
+     "why": "\"He was just going on holiday!\""
+    }
+   ]
+  }
+ ]
+}

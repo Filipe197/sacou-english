@@ -93,7 +93,7 @@ function Setup({ onStart }) {
             ))}
           </div>
           <p className="muted" style={{ fontSize: 14, margin: '6px 0 0' }}>
-            {commentInPt(lvl) ? 'No A1 e no A2, ele reclama em português e ensina em inglês.' : 'No B1 e no B2, ele reclama em inglês (com tradução, se precisar).'}
+            {commentInPt(lvl) ? 'No A1 e no A2, ele reclama em português e ensina em inglês.' : 'Do B1 em diante, ele reclama em inglês (com tradução, se precisar).'}
           </p>
           <h2>Assunto</h2>
           <div className="aula-chips" role="radiogroup" aria-label="Assunto da aula">

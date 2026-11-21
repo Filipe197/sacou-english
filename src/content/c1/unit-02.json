@@ -1,0 +1,1057 @@
+{
+ "id": "c1-u2",
+ "level": "C1",
+ "order": 2,
+ "title": "Se eu tivesse… hoje eu…",
+ "subtitle": "Condicionais mistas, \"had I known\", \"but for\" e \"otherwise\".",
+ "can_do": {
+  "text": "Consigo falar de como uma escolha do passado mudou o meu presente, e de como o meu jeito de ser mudaria o que aconteceu.",
+  "source": "CEFR (Conselho da Europa) — Produção oral: especular sobre causas, consequências e situações hipotéticas, nível C1"
+ },
+ "core_inventory": [
+  "Grammar: mixed conditional (past → present): If I had…, I would be…",
+  "Grammar: mixed conditional (present → past): If I were…, I would have…",
+  "Grammar: inverted conditionals: Had I known…, Were I…, Should you…",
+  "Grammar: but for / otherwise / supposing"
+ ],
+ "words": [
+  [
+   "if I had known",
+   "se eu soubesse (antes)"
+  ],
+  [
+   "had I known",
+   "se eu soubesse (formal)"
+  ],
+  [
+   "were I you",
+   "se eu fosse você (formal)"
+  ],
+  [
+   "should you need",
+   "caso você precise"
+  ],
+  [
+   "but for",
+   "se não fosse por"
+  ],
+  [
+   "otherwise",
+   "senão, caso contrário"
+  ],
+  [
+   "supposing",
+   "supondo que"
+  ],
+  [
+   "regret",
+   "arrepender-se"
+  ],
+  [
+   "turn out",
+   "acabar sendo, revelar-se"
+  ],
+  [
+   "by now",
+   "a esta altura"
+  ]
+ ],
+ "guide": {
+  "title": "Quando o passado mexe com o presente",
+  "intro": "Nas condicionais mistas, a condição e o resultado estão em tempos diferentes. Uma decisão de ontem muda o hoje, ou o seu jeito de ser hoje teria mudado o que aconteceu.",
+  "points": [
+   {
+    "en": "If I had studied medicine, I would be a doctor now.",
+    "pt": "Se eu tivesse estudado medicina, hoje eu seria médico.",
+    "note": "Passado (had studied) → presente (would be)."
+   },
+   {
+    "en": "If I weren't so shy, I would have talked to her.",
+    "pt": "Se eu não fosse tão tímido, teria falado com ela.",
+    "note": "Presente (weren't) → passado (would have talked)."
+   },
+   {
+    "en": "Had I known, I wouldn't have come.",
+    "pt": "Se eu soubesse, não teria vindo.",
+    "note": "Had + sujeito = If + sujeito + had. Mais formal."
+   },
+   {
+    "en": "Should you need anything, just call me.",
+    "pt": "Caso você precise de alguma coisa, é só me ligar.",
+    "note": "Should + sujeito = if + sujeito. Muito comum em e-mails."
+   },
+   {
+    "en": "But for your help, I would have failed.",
+    "pt": "Se não fosse a sua ajuda, eu teria fracassado.",
+    "note": "\"But for\" + substantivo = se não fosse por."
+   },
+   {
+    "en": "Take an umbrella. Otherwise, you'll get wet.",
+    "pt": "Leve um guarda-chuva. Senão, você vai se molhar.",
+    "note": "\"Otherwise\" = senão, caso contrário."
+   }
+  ],
+  "tips": [
+   "\"Were I you\" é bem formal; no dia a dia, diga \"If I were you\".",
+   "\"By now\" combina muito com as mistas: If we had left earlier, we would be there by now."
+  ]
+ },
+ "extra_vocab": [],
+ "lessons": [
+  {
+   "id": "c1-u2-l1",
+   "title": "Ontem mudou o hoje",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l1-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If I had taken that job, I ___ in London now.",
+     "pt": "Se eu tivesse aceitado aquele emprego, hoje eu estaria morando em Londres.",
+     "options": [
+      "would be living",
+      "would have lived",
+      "will live"
+     ],
+     "answer": "would be living",
+     "why": "Condição no passado, resultado agora: would be (living).",
+     "wrong": {
+      "would have lived": "Esse resultado fala do passado; aqui é \"now\".",
+      "will live": "Não é uma condição real."
+     }
+    },
+    {
+     "id": "c1u2l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If she ___ the train, she would be here by now.",
+     "pt": "Se ela não tivesse perdido o trem, já estaria aqui a esta altura.",
+     "options": [
+      "hadn't missed",
+      "didn't miss",
+      "wouldn't miss"
+     ],
+     "answer": "hadn't missed",
+     "why": "A condição é no passado: past perfect (hadn't missed).",
+     "wrong": {
+      "didn't miss": "Seria uma condição sobre o presente.",
+      "wouldn't miss": "\"Would\" não vai na parte do \"if\"."
+     }
+    },
+    {
+     "id": "c1u2l1-3",
+     "type": "meaning",
+     "en": "If we had saved more money, we wouldn't be so worried now.",
+     "options": [
+      "Se tivéssemos economizado mais, não estaríamos tão preocupados agora.",
+      "Economizamos muito e estamos tranquilos.",
+      "Vamos economizar mais no futuro."
+     ],
+     "answer": "Se tivéssemos economizado mais, não estaríamos tão preocupados agora.",
+     "why": "Passado → presente."
+    },
+    {
+     "id": "c1u2l1-4",
+     "type": "build",
+     "pt": "Se eu tivesse dormido mais, não estaria tão cansado agora.",
+     "answer": "If I had slept more I wouldn't be so tired now",
+     "extra": [
+      "would have",
+      "sleep"
+     ],
+     "display": "If I had slept more, I wouldn't be so tired now.",
+     "why": "If + had + particípio, would + verbo (agora)."
+    },
+    {
+     "id": "c1u2l1-5",
+     "type": "listen",
+     "en": "If I had learned English as a child, I would be fluent now.",
+     "options": [
+      "Se eu tivesse aprendido inglês criança, hoje seria fluente.",
+      "Aprendi inglês quando era criança.",
+      "Vou aprender inglês com meus filhos."
+     ],
+     "answer": "Se eu tivesse aprendido inglês criança, hoje seria fluente.",
+     "why": "Passado → presente."
+    },
+    {
+     "id": "c1u2l1-6",
+     "type": "match",
+     "pairs": [
+      [
+       "if I had known",
+       "se eu soubesse"
+      ],
+      [
+       "by now",
+       "a esta altura"
+      ],
+      [
+       "regret",
+       "arrepender-se"
+      ],
+      [
+       "turn out",
+       "acabar sendo"
+      ]
+     ],
+     "why": "\"It turned out well\" = acabou dando certo."
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l2",
+   "title": "O meu jeito mudou o passado",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If I ___ so lazy, I would have finished the project.",
+     "pt": "Se eu não fosse tão preguiçoso, teria terminado o projeto.",
+     "options": [
+      "weren't",
+      "hadn't been",
+      "wouldn't be"
+     ],
+     "answer": "weren't",
+     "why": "Condição no presente (o jeito de ser): weren't.",
+     "wrong": {
+      "hadn't been": "Funcionaria só para algo que já passou.",
+      "wouldn't be": "\"Would\" não vai na parte do \"if\"."
+     }
+    },
+    {
+     "id": "c1u2l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If he were more careful, he ___ the accident.",
+     "pt": "Se ele fosse mais cuidadoso, não teria sofrido o acidente.",
+     "options": [
+      "wouldn't have had",
+      "wouldn't have",
+      "won't have"
+     ],
+     "answer": "wouldn't have had",
+     "why": "Resultado no passado: would (not) have + particípio.",
+     "wrong": {
+      "wouldn't have": "Falta o particípio: had.",
+      "won't have": "Não é condição real."
+     }
+    },
+    {
+     "id": "c1u2l2-3",
+     "type": "meaning",
+     "en": "If I spoke French, I would have understood the film.",
+     "options": [
+      "Se eu falasse francês, teria entendido o filme.",
+      "Entendi o filme porque falo francês.",
+      "Vou aprender francês para ver o filme."
+     ],
+     "answer": "Se eu falasse francês, teria entendido o filme.",
+     "why": "Presente → passado."
+    },
+    {
+     "id": "c1u2l2-4",
+     "type": "build",
+     "pt": "Se ela não fosse tão teimosa, teria pedido ajuda.",
+     "answer": "If she weren't so stubborn she would have asked for help",
+     "extra": [
+      "hadn't",
+      "asks"
+     ],
+     "display": "If she weren't so stubborn, she would have asked for help.",
+     "why": "Presente (weren't) → passado (would have asked)."
+    },
+    {
+     "id": "c1u2l2-5",
+     "type": "listen",
+     "en": "If you weren't so busy, you would have come to the party.",
+     "options": [
+      "Se você não fosse tão ocupado, teria vindo à festa.",
+      "Você veio à festa mesmo ocupado.",
+      "Você vai à festa amanhã."
+     ],
+     "answer": "Se você não fosse tão ocupado, teria vindo à festa.",
+     "why": "Presente → passado."
+    },
+    {
+     "id": "c1u2l2-6",
+     "type": "speak",
+     "en": "If I were braver, I would have said yes.",
+     "pt": "Se eu fosse mais corajoso, teria dito sim.",
+     "why": "Treine o ritmo: \"I would have\" soa \"I'd-of\"."
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l3",
+   "title": "Had I known…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ about the traffic, I would have left earlier.",
+     "pt": "Se eu soubesse do trânsito, teria saído mais cedo.",
+     "options": [
+      "Had I known",
+      "If I knew",
+      "Did I know"
+     ],
+     "answer": "Had I known",
+     "why": "\"Had I known\" = If I had known (formal).",
+     "wrong": {
+      "If I knew": "Seria sobre o presente.",
+      "Did I know": "Não forma condicional."
+     }
+    },
+    {
+     "id": "c1u2l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ any questions, please contact us.",
+     "pt": "Caso tenha alguma dúvida, entre em contato.",
+     "options": [
+      "Should you have",
+      "If you should",
+      "Had you"
+     ],
+     "answer": "Should you have",
+     "why": "\"Should you have\" = caso você tenha. Típico de e-mails formais.",
+     "wrong": {
+      "If you should": "Ficaria incompleto.",
+      "Had you": "Fala do passado."
+     }
+    },
+    {
+     "id": "c1u2l3-3",
+     "type": "meaning",
+     "en": "Were I in your position, I would accept the offer.",
+     "options": [
+      "Se eu estivesse no seu lugar, aceitaria a proposta.",
+      "Eu já aceitei a proposta.",
+      "Você não deveria aceitar a proposta."
+     ],
+     "answer": "Se eu estivesse no seu lugar, aceitaria a proposta.",
+     "why": "\"Were I\" = If I were (formal)."
+    },
+    {
+     "id": "c1u2l3-4",
+     "type": "build",
+     "pt": "Se eu soubesse que você vinha, teria feito um bolo.",
+     "answer": "Had I known you were coming I would have made a cake",
+     "extra": [
+      "If had",
+      "did"
+     ],
+     "display": "Had I known you were coming, I would have made a cake.",
+     "why": "Had + I + known, would have + particípio."
+    },
+    {
+     "id": "c1u2l3-5",
+     "type": "listen",
+     "en": "Should you need help, call this number.",
+     "options": [
+      "Caso precise de ajuda, ligue para este número.",
+      "Você deveria ligar agora.",
+      "Não ligue para este número."
+     ],
+     "answer": "Caso precise de ajuda, ligue para este número.",
+     "why": "\"Should you need\" = caso você precise."
+    },
+    {
+     "id": "c1u2l3-6",
+     "type": "match",
+     "pairs": [
+      [
+       "had I known",
+       "se eu soubesse"
+      ],
+      [
+       "were I you",
+       "se eu fosse você"
+      ],
+      [
+       "should you need",
+       "caso precise"
+      ],
+      [
+       "supposing",
+       "supondo que"
+      ]
+     ],
+     "why": "Inversão no \"if\": mais formal, mesmo sentido."
+    },
+    {
+     "id": "c1u2l3-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "The meeting was moved to Monday. Didn't you know?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No! Had I known, I wouldn't have come today.",
+      "No! If I knew, I didn't come today.",
+      "No! Had I know, I won't come."
+     ],
+     "answer": "No! Had I known, I wouldn't have come today.",
+     "pt": "Não! Se eu soubesse, não teria vindo hoje.",
+     "why": "Had I known + would (not) have + particípio.",
+     "wrong": {
+      "No! If I knew, I didn't come today.": "Tempos errados para algo que já passou.",
+      "No! Had I know, I won't come.": "É \"known\", e precisa de \"wouldn't have\"."
+     }
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l4",
+   "title": "Prática: senão…",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l4-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "___ your support, I would never have finished my degree.",
+     "pt": "Se não fosse o seu apoio, eu nunca teria terminado a faculdade.",
+     "options": [
+      "But for",
+      "Unless",
+      "Otherwise"
+     ],
+     "answer": "But for",
+     "why": "\"But for\" + substantivo = se não fosse por.",
+     "wrong": {
+      "Unless": "\"Unless\" precisa de um verbo depois.",
+      "Otherwise": "\"Otherwise\" = senão, vem depois da ideia."
+     }
+    },
+    {
+     "id": "c1u2l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Write it down. ___, you'll forget.",
+     "pt": "Anota. Senão, você vai esquecer.",
+     "options": [
+      "Otherwise",
+      "But for",
+      "Supposing"
+     ],
+     "answer": "Otherwise",
+     "why": "\"Otherwise\" = senão, caso contrário.",
+     "wrong": {
+      "But for": "Precisa de um substantivo depois.",
+      "Supposing": "\"Supposing\" abre uma hipótese."
+     }
+    },
+    {
+     "id": "c1u2l4-3",
+     "type": "meaning",
+     "en": "Supposing you won the lottery, what would you do?",
+     "options": [
+      "Supondo que você ganhasse na loteria, o que faria?",
+      "Você ganhou na loteria?",
+      "Você nunca vai ganhar na loteria."
+     ],
+     "answer": "Supondo que você ganhasse na loteria, o que faria?",
+     "why": "\"Supposing\" = supondo que."
+    },
+    {
+     "id": "c1u2l4-4",
+     "type": "build",
+     "pt": "Ainda bem que você ligou. Senão, eu teria esquecido.",
+     "answer": "Good thing you called Otherwise I would have forgotten",
+     "extra": [
+      "But for",
+      "forgot"
+     ],
+     "display": "Good thing you called. Otherwise, I would have forgotten.",
+     "why": "\"Otherwise\" + would have = senão, eu teria…"
+    },
+    {
+     "id": "c1u2l4-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you regret not going to university?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Sometimes. If I had gone, I would probably have a better job now.",
+      "Sometimes. If I went, I had a better job now.",
+      "Sometimes. If I would go, better job."
+     ],
+     "answer": "Sometimes. If I had gone, I would probably have a better job now.",
+     "pt": "Às vezes. Se eu tivesse ido, provavelmente teria um emprego melhor hoje.",
+     "why": "Condicional mista: passado → presente.",
+     "wrong": {
+      "Sometimes. If I went, I had a better job now.": "Tempos errados.",
+      "Sometimes. If I would go, better job.": "\"Would\" não vai depois de \"if\", e falta o verbo."
+     }
+    },
+    {
+     "id": "c1u2l4-6",
+     "type": "listen",
+     "en": "It turned out to be the best decision of my life.",
+     "options": [
+      "Acabou sendo a melhor decisão da minha vida.",
+      "Foi a pior decisão da minha vida.",
+      "Ainda não decidi."
+     ],
+     "answer": "Acabou sendo a melhor decisão da minha vida.",
+     "why": "\"Turn out to be\" = acabar sendo."
+    },
+    {
+     "id": "c1u2l4-7",
+     "type": "speak",
+     "en": "Had I known, I would have helped.",
+     "pt": "Se eu soubesse, teria ajudado.",
+     "why": "Frase curta e muito útil."
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l5-1",
+     "type": "type",
+     "pt": "Se eu tivesse estudado mais, hoje teria um emprego melhor.",
+     "answer": "If I had studied more, I would have a better job now.",
+     "accept": [
+      "If I had studied more, I would have a better job today.",
+      "If I'd studied more, I'd have a better job now."
+     ],
+     "why": "Passado → presente."
+    },
+    {
+     "id": "c1u2l5-2",
+     "type": "type",
+     "pt": "Caso você precise de algo, me avise.",
+     "answer": "Should you need anything, let me know.",
+     "accept": [
+      "If you need anything, let me know."
+     ],
+     "why": "\"Should you need\" = caso você precise."
+    },
+    {
+     "id": "c1u2l5-3",
+     "type": "dictation",
+     "en": "Had I known, I would have called you.",
+     "why": "Had I known = If I had known."
+    },
+    {
+     "id": "c1u2l5-4",
+     "type": "type",
+     "pt": "Se não fosse a chuva, teríamos ido à praia.",
+     "answer": "But for the rain, we would have gone to the beach.",
+     "accept": [
+      "If it had not been for the rain, we would have gone to the beach.",
+      "If it hadn't been for the rain, we would have gone to the beach."
+     ],
+     "why": "\"But for\" + substantivo."
+    },
+    {
+     "id": "c1u2l5-5",
+     "type": "dictation",
+     "en": "Hurry up. Otherwise, we'll miss the bus.",
+     "why": "\"Otherwise\" = senão."
+    },
+    {
+     "id": "c1u2l5-6",
+     "type": "type",
+     "pt": "Se eu fosse você, eu aceitaria.",
+     "answer": "If I were you, I would accept.",
+     "accept": [
+      "If I were you, I'd accept.",
+      "Were I you, I would accept.",
+      "If I were you, I would accept it."
+     ],
+     "why": "\"If I were you\" = se eu fosse você."
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l6-1",
+     "type": "listen",
+     "en": "If I hadn't met her, I wouldn't be here today.",
+     "options": [
+      "Se eu não a tivesse conhecido, não estaria aqui hoje.",
+      "Eu a conheci aqui hoje.",
+      "Vou conhecê-la hoje."
+     ],
+     "answer": "Se eu não a tivesse conhecido, não estaria aqui hoje.",
+     "why": "Passado → presente."
+    },
+    {
+     "id": "c1u2l6-2",
+     "type": "dictation",
+     "en": "Were I you, I would wait.",
+     "why": "\"Were I you\" = se eu fosse você (formal)."
+    },
+    {
+     "id": "c1u2l6-3",
+     "type": "listen",
+     "en": "But for the map, we would have got lost.",
+     "options": [
+      "Se não fosse o mapa, teríamos nos perdido.",
+      "Nos perdemos mesmo com o mapa.",
+      "Não tínhamos mapa."
+     ],
+     "answer": "Se não fosse o mapa, teríamos nos perdido.",
+     "why": "\"But for\" = se não fosse por."
+    },
+    {
+     "id": "c1u2l6-4",
+     "type": "dictation",
+     "en": "Should you change your mind, call me.",
+     "why": "\"Should you\" = caso você."
+    },
+    {
+     "id": "c1u2l6-5",
+     "type": "listen",
+     "en": "If he were more organised, he wouldn't have lost the documents.",
+     "options": [
+      "Se ele fosse mais organizado, não teria perdido os documentos.",
+      "Ele é muito organizado.",
+      "Ele achou os documentos."
+     ],
+     "answer": "Se ele fosse mais organizado, não teria perdido os documentos.",
+     "why": "Presente → passado."
+    },
+    {
+     "id": "c1u2l6-6",
+     "type": "dictation",
+     "en": "Supposing it rains, what will we do?",
+     "why": "\"Supposing\" = supondo que."
+    },
+    {
+     "id": "c1u2l6-7",
+     "type": "speak",
+     "en": "If I'd left earlier, I'd be there now.",
+     "pt": "Se eu tivesse saído mais cedo, já estaria lá.",
+     "why": "\"I'd\" vale \"I had\" na primeira parte e \"I would\" na segunda."
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you ever think about what your life would be like if you had stayed in your hometown?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "All the time. If I had stayed, I'd probably be married with kids by now.",
+      "All the time. If I stayed, I was married by now.",
+      "All the time. If I would stay, married."
+     ],
+     "answer": "All the time. If I had stayed, I'd probably be married with kids by now.",
+     "pt": "O tempo todo. Se eu tivesse ficado, provavelmente já estaria casado e com filhos.",
+     "why": "Condicional mista + \"by now\".",
+     "wrong": {
+      "All the time. If I stayed, I was married by now.": "Tempos errados.",
+      "All the time. If I would stay, married.": "Estrutura errada."
+     }
+    },
+    {
+     "id": "c1u2l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Do you regret moving here?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Not at all. Had I not moved, I would never have met my best friends.",
+      "Not at all. Had I not move, I never meet my friends.",
+      "Not at all. If I not moved, never met."
+     ],
+     "answer": "Not at all. Had I not moved, I would never have met my best friends.",
+     "pt": "De jeito nenhum. Se eu não tivesse me mudado, nunca teria conhecido meus melhores amigos.",
+     "why": "\"Had I not moved\" = If I hadn't moved.",
+     "wrong": {
+      "Not at all. Had I not move, I never meet my friends.": "Precisa do particípio e de \"would have met\".",
+      "Not at all. If I not moved, never met.": "Estrutura errada."
+     }
+    },
+    {
+     "id": "c1u2l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "What would you tell your younger self?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Be braver. If I weren't so afraid, I would have travelled more.",
+      "Be braver. If I wasn't so afraid, I will travel more.",
+      "Be braver. If I would be less afraid, travel."
+     ],
+     "answer": "Be braver. If I weren't so afraid, I would have travelled more.",
+     "pt": "Seja mais corajoso. Se eu não fosse tão medroso, teria viajado mais.",
+     "why": "Presente (jeito de ser) → passado.",
+     "wrong": {
+      "Be braver. If I wasn't so afraid, I will travel more.": "\"Will\" não combina com uma hipótese.",
+      "Be braver. If I would be less afraid, travel.": "Estrutura errada."
+     }
+    },
+    {
+     "id": "c1u2l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Well, it's never too late. You could travel next year!"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "You're right. Otherwise, I'll regret it forever.",
+      "You're right. But for, I regret it.",
+      "You're right. Supposing regret."
+     ],
+     "answer": "You're right. Otherwise, I'll regret it forever.",
+     "pt": "Você tem razão. Senão, vou me arrepender para sempre.",
+     "why": "\"Otherwise\" = senão.",
+     "wrong": {
+      "You're right. But for, I regret it.": "\"But for\" precisa de um substantivo.",
+      "You're right. Supposing regret.": "Frase incompleta."
+     }
+    },
+    {
+     "id": "c1u2l7-5",
+     "type": "speak",
+     "en": "If I were you, I would go for it.",
+     "pt": "Se eu fosse você, eu tentaria.",
+     "why": "\"Go for it\" = vai fundo, tenta."
+    },
+    {
+     "id": "c1u2l7-6",
+     "type": "speak",
+     "en": "Otherwise, I'll regret it.",
+     "pt": "Senão, vou me arrepender.",
+     "why": "\"Regret\" soa como \"ri-GRÉT\"."
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l8",
+   "title": "Lendo: a carta para o meu eu do passado",
+   "added": "2026-11",
+   "story": {
+    "title": "Carta para o meu eu do passado",
+    "lines": [
+     {
+      "who": "Marcos",
+      "en": "Dear Marcos, I am writing to you from the future. I am forty now.",
+      "pt": "Querido Marcos, estou te escrevendo do futuro. Agora tenho quarenta anos."
+     },
+     {
+      "who": "Marcos",
+      "en": "If I had studied music, as you wanted, I would be a musician now.",
+      "pt": "Se eu tivesse estudado música, como você queria, hoje eu seria músico."
+     },
+     {
+      "ask": "Quantos anos o Marcos tem agora?",
+      "options": [
+       "Quarenta",
+       "Vinte",
+       "Trinta"
+      ],
+      "answer": "Quarenta",
+      "why": "\"I am forty now.\""
+     },
+     {
+      "who": "Marcos",
+      "en": "But I don't regret everything. ___ I not taken that job, I wouldn't have met your future wife.",
+      "pt": "Mas não me arrependo de tudo. Se eu não tivesse aceitado aquele emprego, não teria conhecido a sua futura esposa.",
+      "gap": {
+       "answer": "Had",
+       "options": [
+        "Had",
+        "If",
+        "Should"
+       ]
+      }
+     },
+     {
+      "who": "Marcos",
+      "en": "My problem is that, if I weren't so afraid of failing, I would have tried more things.",
+      "pt": "Meu problema é que, se eu não tivesse tanto medo de errar, teria tentado mais coisas."
+     },
+     {
+      "who": "Marcos",
+      "en": "So, take more risks. Otherwise, you will write a letter like this one day.",
+      "pt": "Então, arrisque mais. Senão, um dia você vai escrever uma carta como esta."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "c1u2l8-1",
+     "type": "story",
+     "why": "O Marcos, aos 40 anos, escreve uma carta para ele mesmo aos 20. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "c1u2l8-2",
+     "type": "quiz",
+     "q": "O que o Marcos queria ter feito diferente?",
+     "options": [
+      "Ter estudado música",
+      "Ter estudado direito",
+      "Ter se mudado antes"
+     ],
+     "answer": "Ter estudado música",
+     "why": "\"If I had studied music, I would be a musician now.\""
+    },
+    {
+     "id": "c1u2l8-3",
+     "type": "quiz",
+     "q": "Por que ele não arrisca mais?",
+     "options": [
+      "Porque tem medo de errar",
+      "Porque não tem tempo",
+      "Porque não gosta de mudanças"
+     ],
+     "answer": "Porque tem medo de errar",
+     "why": "\"If I weren't so afraid of failing…\""
+    },
+    {
+     "id": "c1u2l8-4",
+     "type": "quiz",
+     "q": "Qual é o conselho final dele?",
+     "options": [
+      "Arriscar mais",
+      "Trabalhar mais",
+      "Economizar mais"
+     ],
+     "answer": "Arriscar mais",
+     "why": "\"Take more risks.\""
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u2l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "If you had told me earlier, I ___ so upset now.",
+     "pt": "Se você tivesse me contado antes, eu não estaria tão chateado agora.",
+     "options": [
+      "wouldn't be",
+      "wouldn't have been",
+      "won't be"
+     ],
+     "answer": "wouldn't be",
+     "why": "Resultado no presente (now): would (not) be.",
+     "wrong": {
+      "wouldn't have been": "Seria resultado no passado.",
+      "won't be": "Não é condição real."
+     }
+    },
+    {
+     "id": "c1u2l9-2",
+     "type": "type",
+     "pt": "Se eu soubesse, teria vindo antes.",
+     "answer": "Had I known, I would have come earlier.",
+     "accept": [
+      "If I had known, I would have come earlier.",
+      "If I'd known, I'd have come earlier.",
+      "Had I known, I would have come sooner."
+     ],
+     "why": "Had I known + would have + particípio."
+    },
+    {
+     "id": "c1u2l9-3",
+     "type": "meaning",
+     "en": "If I weren't allergic to cats, I would have adopted one.",
+     "options": [
+      "Se eu não fosse alérgico a gatos, teria adotado um.",
+      "Adotei um gato mesmo sendo alérgico.",
+      "Não gosto de gatos."
+     ],
+     "answer": "Se eu não fosse alérgico a gatos, teria adotado um.",
+     "why": "Presente → passado."
+    },
+    {
+     "id": "c1u2l9-4",
+     "type": "dictation",
+     "en": "But for you, I would have given up.",
+     "why": "\"But for\" = se não fosse por."
+    },
+    {
+     "id": "c1u2l9-5",
+     "type": "listen",
+     "en": "Should you have any problems, let us know.",
+     "options": [
+      "Caso tenha algum problema, nos avise.",
+      "Você tem muitos problemas.",
+      "Não temos problemas."
+     ],
+     "answer": "Caso tenha algum problema, nos avise.",
+     "why": "\"Should you have\" = caso tenha."
+    },
+    {
+     "id": "c1u2l9-6",
+     "type": "build",
+     "pt": "Se tivéssemos saído antes, já estaríamos lá.",
+     "answer": "If we had left earlier we would be there by now",
+     "extra": [
+      "would have",
+      "leave"
+     ],
+     "display": "If we had left earlier, we would be there by now.",
+     "why": "Passado → presente + \"by now\"."
+    }
+   ]
+  },
+  {
+   "id": "c1-u2-l10",
+   "title": "História: e se…?",
+   "added": "2026-11",
+   "story": {
+    "title": "E se…?",
+    "lines": [
+     {
+      "who": "Bia",
+      "en": "You know, if I hadn't hurt my knee at eighteen, I would be a professional volleyball player now.",
+      "pt": "Sabe, se eu não tivesse machucado o joelho aos dezoito, hoje eu seria jogadora profissional de vôlei."
+     },
+     {
+      "who": "Leo",
+      "en": "Really? But then we would never have met. We met at the hospital, remember?",
+      "pt": "Sério? Mas aí a gente nunca teria se conhecido. A gente se conheceu no hospital, lembra?"
+     },
+     {
+      "ask": "Onde eles se conheceram?",
+      "options": [
+       "No hospital",
+       "Num jogo de vôlei",
+       "Na escola"
+      ],
+      "answer": "No hospital",
+      "why": "\"We met at the hospital.\""
+     },
+     {
+      "who": "Bia",
+      "en": "True! And if you weren't so talkative, you wouldn't have started that conversation.",
+      "pt": "Verdade! E se você não fosse tão falante, não teria puxado aquela conversa."
+     },
+     {
+      "who": "Leo",
+      "en": "Exactly. ___ for my big mouth, you'd be bored right now.",
+      "pt": "Exatamente. Se não fosse a minha boca grande, você estaria entediada agora.",
+      "gap": {
+       "answer": "But",
+       "options": [
+        "But",
+        "If",
+        "Had"
+       ]
+      }
+     },
+     {
+      "who": "Bia",
+      "en": "Ha! I guess some bad things turn out to be good.",
+      "pt": "Rá! Acho que algumas coisas ruins acabam sendo boas."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "c1u2l10-1",
+     "type": "story",
+     "why": "Dois amigos imaginam como a vida deles seria se tivessem feito outras escolhas. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "c1u2l10-2",
+     "type": "quiz",
+     "q": "O que a Bia teria sido se não tivesse se machucado?",
+     "options": [
+      "Jogadora de vôlei",
+      "Médica",
+      "Professora"
+     ],
+     "answer": "Jogadora de vôlei",
+     "why": "\"I would be a professional volleyball player now.\""
+    },
+    {
+     "id": "c1u2l10-3",
+     "type": "quiz",
+     "q": "Como o Leo conheceu a Bia?",
+     "options": [
+      "No hospital",
+      "Na faculdade",
+      "No trabalho"
+     ],
+     "answer": "No hospital",
+     "why": "\"We met at the hospital, remember?\""
+    },
+    {
+     "id": "c1u2l10-4",
+     "type": "quiz",
+     "q": "Qual é a conclusão dos dois?",
+     "options": [
+      "Algumas coisas ruins acabam sendo boas",
+      "Nunca se deve arriscar",
+      "Eles se arrependem de tudo"
+     ],
+     "answer": "Algumas coisas ruins acabam sendo boas",
+     "why": "\"Some bad things turn out to be good.\""
+    }
+   ]
+  }
+ ]
+}

@@ -6065,6 +6065,330 @@
      "why": "\"It's the beginning of your English life!\""
     }
    ]
+  },
+  {
+   "id": "pod-c1u1",
+   "level": "C1",
+   "unlock": "c1-u1",
+   "title": "Histórias com drama",
+   "intro": "A Ana e o Tom começam a temporada avançada falando de como contar uma boa história.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Welcome to a new season! I'm Ana, and this time we're going further.",
+     "pt": "Bem-vindos a uma nova temporada! Eu sou a Ana, e desta vez vamos mais longe."
+    },
+    {
+     "who": "tom",
+     "en": "And I'm Tom. Today: how to tell a story that people remember.",
+     "pt": "E eu sou o Tom. Hoje: como contar uma história de que as pessoas se lembrem."
+    },
+    {
+     "who": "ana",
+     "en": "One trick is changing the word order. Instead of \"I have never seen\", you say \"Never have I seen\".",
+     "pt": "Um truque é a inversão. Em vez de \"I have never seen\", você diz \"Never have I seen\"."
+    },
+    {
+     "who": "tom",
+     "en": "It sounds dramatic. Little did I know, when I was young, how useful it would be.",
+     "pt": "Soa dramático. Mal sabia eu, quando era novo, o quanto isso seria útil."
+    },
+    {
+     "who": "ana",
+     "en": "But be careful: not only is it formal, but it can also sound strange in a casual chat.",
+     "pt": "Mas cuidado: não só é formal, como também pode soar estranho num papo casual."
+    },
+    {
+     "who": "tom",
+     "en": "Right. Use it in speeches, stories and writing, not when ordering a coffee!",
+     "pt": "Isso. Use em discursos, histórias e textos, não na hora de pedir um café!"
+    },
+    {
+     "who": "tom",
+     "en": "And practise with your own stories. It works!",
+     "pt": "E pratiquem com as suas próprias histórias. Funciona!"
+    },
+    {
+     "who": "ana",
+     "en": "Exactly. See you next time, and never stop telling stories!",
+     "pt": "Exatamente. Até a próxima, e nunca parem de contar histórias!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual é o assunto do episódio?",
+     "options": [
+      "Como contar uma boa história",
+      "Como pedir um café",
+      "Como escrever um e-mail"
+     ],
+     "answer": "Como contar uma boa história",
+     "why": "\"How to tell a story that people remember.\""
+    },
+    {
+     "q": "Qual truque a Ana ensina?",
+     "options": [
+      "A inversão",
+      "Falar mais rápido",
+      "Usar gírias"
+     ],
+     "answer": "A inversão",
+     "why": "\"One trick is inversion.\""
+    },
+    {
+     "q": "Onde NÃO é bom usar a inversão, segundo o Tom?",
+     "options": [
+      "Ao pedir um café",
+      "Em discursos",
+      "Em textos"
+     ],
+     "answer": "Ao pedir um café",
+     "why": "\"Not when ordering a coffee!\""
+    }
+   ]
+  },
+  {
+   "id": "pod-c1u2",
+   "level": "C1",
+   "unlock": "c1-u2",
+   "title": "E se…?",
+   "intro": "A Ana e o Tom falam de escolhas que mudaram a vida deles.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Tom, if you had chosen a different career, what would you be doing now?",
+     "pt": "Tom, se você tivesse escolhido outra carreira, o que estaria fazendo agora?"
+    },
+    {
+     "who": "tom",
+     "en": "Good question. If I had listened to my father, I would be a lawyer.",
+     "pt": "Boa pergunta. Se eu tivesse ouvido o meu pai, seria advogado."
+    },
+    {
+     "who": "ana",
+     "en": "A lawyer? I can't imagine you in a suit every day!",
+     "pt": "Advogado? Não consigo te imaginar de terno todo dia!"
+    },
+    {
+     "who": "tom",
+     "en": "Me neither. And if I weren't so curious, I would never have started this podcast.",
+     "pt": "Nem eu. E se eu não fosse tão curioso, nunca teria começado este podcast."
+    },
+    {
+     "who": "ana",
+     "en": "For me, it was a trip. Had I not gone to London, I would not be teaching English today.",
+     "pt": "Para mim, foi uma viagem. Se eu não tivesse ido a Londres, não estaria ensinando inglês hoje."
+    },
+    {
+     "who": "tom",
+     "en": "So, should you ever have to make a big decision, think about this episode.",
+     "pt": "Então, caso vocês tenham que tomar uma grande decisão, pensem neste episódio."
+    },
+    {
+     "who": "ana",
+     "en": "And don't be too afraid. Otherwise, you may regret it.",
+     "pt": "E não tenham medo demais. Senão, podem se arrepender."
+    },
+    {
+     "who": "tom",
+     "en": "See you next week!",
+     "pt": "Até a semana que vem!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "O que o Tom seria se tivesse ouvido o pai?",
+     "options": [
+      "Advogado",
+      "Médico",
+      "Professor"
+     ],
+     "answer": "Advogado",
+     "why": "\"If I had listened to my father, I would be a lawyer.\""
+    },
+    {
+     "q": "Que viagem mudou a vida da Ana?",
+     "options": [
+      "Para Londres",
+      "Para Paris",
+      "Para Roma"
+     ],
+     "answer": "Para Londres",
+     "why": "\"Had I not gone to London…\""
+    },
+    {
+     "q": "Qual é o conselho final?",
+     "options": [
+      "Não ter medo demais",
+      "Nunca mudar de carreira",
+      "Sempre ouvir os pais"
+     ],
+     "answer": "Não ter medo demais",
+     "why": "\"Don't be too afraid. Otherwise, you may regret it.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-c1u3",
+   "level": "C1",
+   "unlock": "c1-u3",
+   "title": "Reunião sem drama",
+   "intro": "A Ana e o Tom ensinam a sobreviver a uma reunião em inglês.",
+   "lines": [
+    {
+     "who": "tom",
+     "en": "Today's topic: meetings. Love them or hate them, we all have them.",
+     "pt": "O tema de hoje: reuniões. Amando ou odiando, todo mundo tem."
+    },
+    {
+     "who": "ana",
+     "en": "And in English, they are full of phrasal verbs. Like \"bring up\".",
+     "pt": "E em inglês elas são cheias de phrasal verbs. Como \"bring up\"."
+    },
+    {
+     "who": "tom",
+     "en": "Right. \"Can I bring something up?\" is a polite way to ask to speak.",
+     "pt": "Isso. \"Can I bring something up?\" é um jeito educado de pedir a palavra."
+    },
+    {
+     "who": "ana",
+     "en": "If someone asks a hard question, you can say: \"I'll look into it and get back to you.\"",
+     "pt": "Se alguém fizer uma pergunta difícil, você pode dizer: \"Vou analisar e te dou retorno\"."
+    },
+    {
+     "who": "tom",
+     "en": "That one saved my life many times! And if you're too busy, try \"Could we put it off?\"",
+     "pt": "Essa já salvou a minha vida muitas vezes! E se você estiver ocupado demais, tente \"Podemos adiar?\"."
+    },
+    {
+     "who": "ana",
+     "en": "Just be careful not to put everything off, or you will run out of time later.",
+     "pt": "Só cuidado para não adiar tudo, senão vai faltar tempo depois."
+    },
+    {
+     "who": "tom",
+     "en": "Wise words. Anyway, we have run out of time for today!",
+     "pt": "Sábias palavras. Enfim, o nosso tempo de hoje acabou!"
+    },
+    {
+     "who": "ana",
+     "en": "We'll follow up next week. Bye!",
+     "pt": "A gente continua semana que vem. Tchau!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Para que serve \"Can I bring something up?\"",
+     "options": [
+      "Pedir a palavra com educação",
+      "Encerrar a reunião",
+      "Adiar uma tarefa"
+     ],
+     "answer": "Pedir a palavra com educação",
+     "why": "\"A polite way to ask to speak.\""
+    },
+    {
+     "q": "O que dizer diante de uma pergunta difícil?",
+     "options": [
+      "Vou analisar e te dou retorno",
+      "Não sei e não quero saber",
+      "Pergunte para outra pessoa"
+     ],
+     "answer": "Vou analisar e te dou retorno",
+     "why": "\"I'll look into it and get back to you.\""
+    },
+    {
+     "q": "Qual é o cuidado que a Ana sugere?",
+     "options": [
+      "Não adiar tudo",
+      "Não falar nas reuniões",
+      "Chegar cedo"
+     ],
+     "answer": "Não adiar tudo",
+     "why": "\"Be careful not to put everything off.\""
+    }
+   ]
+  },
+  {
+   "id": "pod-c1u4",
+   "level": "C1",
+   "unlock": "c1-u4",
+   "title": "Sem ser dono da verdade",
+   "intro": "A Ana e o Tom ensinam a dar opinião com cuidado, sem soar arrogante.",
+   "lines": [
+    {
+     "who": "ana",
+     "en": "Tom, I think one of the biggest differences between good and great English is caution.",
+     "pt": "Tom, acho que uma das maiores diferenças entre um inglês bom e um ótimo é a cautela."
+    },
+    {
+     "who": "tom",
+     "en": "Caution? You mean not sounding too sure about everything?",
+     "pt": "Cautela? Você quer dizer não soar seguro demais de tudo?"
+    },
+    {
+     "who": "ana",
+     "en": "Exactly. Instead of \"You are wrong\", we say \"I'm not sure that's entirely right\".",
+     "pt": "Exatamente. Em vez de \"Você está errado\", dizemos \"Não tenho certeza de que isso esteja totalmente certo\"."
+    },
+    {
+     "who": "tom",
+     "en": "And instead of \"Everybody does this\", we say \"People tend to do this\".",
+     "pt": "E em vez de \"Todo mundo faz isso\", dizemos \"As pessoas costumam fazer isso\"."
+    },
+    {
+     "who": "ana",
+     "en": "It seems like a small thing, but it changes how people see you.",
+     "pt": "Parece pouca coisa, mas muda o jeito como as pessoas te veem."
+    },
+    {
+     "who": "tom",
+     "en": "To some extent, it's about respect. You leave space for other opinions.",
+     "pt": "Até certo ponto, é uma questão de respeito. Você deixa espaço para outras opiniões."
+    },
+    {
+     "who": "ana",
+     "en": "As far as I know, nobody has ever lost a friend by being too polite!",
+     "pt": "Até onde eu sei, ninguém nunca perdeu um amigo por ser educado demais!"
+    },
+    {
+     "who": "tom",
+     "en": "That might be true. See you next week!",
+     "pt": "Pode ser verdade. Até a semana que vem!"
+    }
+   ],
+   "questions": [
+    {
+     "q": "Qual é a diferença entre um inglês bom e um ótimo, segundo a Ana?",
+     "options": [
+      "A cautela",
+      "O sotaque",
+      "A velocidade"
+     ],
+     "answer": "A cautela",
+     "why": "\"One of the biggest differences … is caution.\""
+    },
+    {
+     "q": "O que dizer em vez de \"Everybody does this\"?",
+     "options": [
+      "People tend to do this",
+      "Nobody does this",
+      "You do this"
+     ],
+     "answer": "People tend to do this",
+     "why": "\"We say: People tend to do this.\""
+    },
+    {
+     "q": "Segundo o Tom, a cautela é uma questão de quê?",
+     "options": [
+      "Respeito",
+      "Gramática",
+      "Velocidade"
+     ],
+     "answer": "Respeito",
+     "why": "\"It's about respect.\""
+    }
+   ]
   }
  ]
 }

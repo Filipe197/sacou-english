@@ -4,10 +4,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { tokens, known, loadVocab, allowedFor } from './cefr.mjs';
+import { tokens, known, loadVocab, allowedFor, OCTANOVE_CSV } from './cefr.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const VOCAB = loadVocab(fs.readFileSync(path.join(root, 'content/sources/cefrj-vocabulary-profile-1.5.csv'), 'utf8'));
+const VOCAB = loadVocab(fs.readFileSync(path.join(root, 'content/sources/cefrj-vocabulary-profile-1.5.csv'), 'utf8'), fs.readFileSync(path.join(root, OCTANOVE_CSV), 'utf8'));
 const D = (f) => JSON.parse(fs.readFileSync(path.join(root, 'src/games/data', f), 'utf8'));
 const cast = D('cast.json');
 const units = new Set(fs.readdirSync(path.join(root, 'src/content')).filter(d => /^[abc][12]$/.test(d))

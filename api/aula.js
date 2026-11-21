@@ -4,12 +4,13 @@
 import { guard, cors, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 import { AULA_LEVELS, topicById, MAX_STEPS, MAX_CHARS, commentInPt } from '../src/lib/aula.js';
 
-const LEN = { A1: '3 to 6 words', A2: 'up to 9 words', B1: 'up to 12 words', B2: 'up to 16 words' };
+const LEN = { A1: '3 to 6 words', A2: 'up to 9 words', B1: 'up to 12 words', B2: 'up to 16 words', C1: 'up to 20 words' };
 const GRAMMAR = {
   A1: 'only A1 English: present tense, very common words',
   A2: 'simple A2 English (simple past and "going to" are OK)',
   B1: 'clear B1 English',
   B2: 'natural B2 English',
+  C1: 'natural, idiomatic C1 English (phrasal verbs, nuance and register are welcome)',
 };
 
 // Regras de palavrão: o padrão é família; o modo sem filtro (18+, confirmado pelo aluno) libera geral.

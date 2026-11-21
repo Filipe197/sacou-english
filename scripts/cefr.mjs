@@ -79,22 +79,27 @@ export function known(w, extra, allowed) {
 
 export const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
-// Lê a CEFR-J Wordlist (texto do CSV) e devolve { A1: Set, A2: Set, ... }
-export function loadVocab(csvText) {
-  const lines = csvText.split(/\r?\n/).filter(Boolean);
-  const header = parseCsvLine(lines[0]);
-  const iHead = header.indexOf('headword'); const iLvl = header.indexOf('CEFR');
+// Lê a CEFR-J Wordlist (A1 a B2) e, se vier, a Octanove C1/C2 (textos dos CSVs) e devolve { A1: Set, ... C2: Set }
+export function loadVocab(...csvTexts) {
   const VOCAB = Object.fromEntries(LEVEL_ORDER.map(l => [l, new Set()]));
-  for (const l of lines.slice(1)) {
-    const c = parseCsvLine(l);
-    if (!VOCAB[c[iLvl]]) continue;
-    for (const h of c[iHead].split('/')) {
-      const w = h.trim().toLowerCase().replace(/\.$/, '');
-      if (w) VOCAB[c[iLvl]].add(w);
+  for (const csvText of csvTexts) {
+    const lines = csvText.split('\n').map(x => x.replace(/\r$/, '')).filter(Boolean);
+    const header = parseCsvLine(lines[0]);
+    const iHead = header.indexOf('headword'); const iLvl = header.indexOf('CEFR');
+    for (const l of lines.slice(1)) {
+      const c = parseCsvLine(l);
+      if (!VOCAB[c[iLvl]]) continue;
+      for (const h of c[iHead].split('/')) {
+        const w = h.trim().toLowerCase().replace(/\.$/, '');
+        if (w) VOCAB[c[iLvl]].add(w);
+      }
     }
   }
   return VOCAB;
 }
+
+// Lista C1/C2 (Octanove Vocabulary Profile 1.0, CC BY-SA 4.0)
+export const OCTANOVE_CSV = 'content/sources/octanove-vocabulary-profile-c1c2-1.0.csv';
 
 // Palavras permitidas num nível (o nível e os de baixo)
 export const allowedFor = (VOCAB, level) => new Set(LEVEL_ORDER.slice(0, LEVEL_ORDER.indexOf(level) + 1).flatMap(l => [...VOCAB[l]]));

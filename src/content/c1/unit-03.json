@@ -1,0 +1,1069 @@
+{
+ "id": "c1-u3",
+ "level": "C1",
+ "order": 3,
+ "title": "Inglês de trabalho",
+ "subtitle": "Phrasal verbs do escritório: bring up, come up with, figure out, follow up, put off.",
+ "can_do": {
+  "text": "Consigo participar de reuniões e conversas de trabalho com naturalidade, usando os phrasal verbs que os nativos usam no escritório.",
+  "source": "CEFR (Conselho da Europa) — Interação oral: reuniões e discussões formais, nível C1"
+ },
+ "core_inventory": [
+  "Vocabulary: work phrasal verbs (bring up, carry out, come up with, figure out)",
+  "Vocabulary: follow up, put off, look into, set up, take on",
+  "Grammar: separable and inseparable phrasal verbs",
+  "Functions: proposing, postponing and following up in meetings"
+ ],
+ "words": [
+  [
+   "bring up",
+   "levantar (um assunto)"
+  ],
+  [
+   "carry out",
+   "realizar, executar"
+  ],
+  [
+   "come up with",
+   "ter (uma ideia), bolar"
+  ],
+  [
+   "figure out",
+   "descobrir, entender"
+  ],
+  [
+   "follow up",
+   "dar retorno, acompanhar"
+  ],
+  [
+   "put off",
+   "adiar"
+  ],
+  [
+   "look into",
+   "investigar, analisar"
+  ],
+  [
+   "set up",
+   "montar, organizar"
+  ],
+  [
+   "take on",
+   "assumir (tarefa)"
+  ],
+  [
+   "run out of",
+   "ficar sem"
+  ]
+ ],
+ "guide": {
+  "title": "Os verbos que aparecem em toda reunião",
+  "intro": "No trabalho, os nativos quase não dizem \"postpone\" ou \"investigate\": eles usam phrasal verbs. Entender e usar esses verbos é o que separa o inglês de livro do inglês de escritório.",
+  "points": [
+   {
+    "en": "Can we put off the meeting until Friday?",
+    "pt": "Podemos adiar a reunião para sexta?",
+    "note": "\"Put off\" = adiar (= postpone)."
+   },
+   {
+    "en": "I'd like to bring up a problem with the budget.",
+    "pt": "Queria levantar um problema com o orçamento.",
+    "note": "\"Bring up\" = levantar um assunto."
+   },
+   {
+    "en": "We need to come up with a new plan.",
+    "pt": "Precisamos bolar um plano novo.",
+    "note": "\"Come up with\" = ter uma ideia, criar."
+   },
+   {
+    "en": "I'll look into it and get back to you.",
+    "pt": "Vou analisar isso e te dou retorno.",
+    "note": "\"Look into\" = investigar. \"Get back to\" = responder depois."
+   },
+   {
+    "en": "Let's set up a call for next week.",
+    "pt": "Vamos marcar uma ligação para semana que vem.",
+    "note": "\"Set up\" = organizar, montar, marcar."
+   },
+   {
+    "en": "We've run out of time, so let's stop here.",
+    "pt": "Ficamos sem tempo, então vamos parar por aqui.",
+    "note": "\"Run out of\" = ficar sem."
+   }
+  ],
+  "tips": [
+   "Alguns se separam: \"put the meeting off\" ou \"put off the meeting\". Com pronome, sempre no meio: \"put it off\".",
+   "Outros não se separam: \"look into it\" (nunca \"look it into\")."
+  ]
+ },
+ "extra_vocab": [
+  {
+   "word": "swamped",
+   "reason": "atolado de trabalho: gíria de escritório muito comum; aparece com tradução"
+  },
+  {
+   "word": "intern",
+   "reason": "estagiário: palavra essencial no trabalho; aparece com tradução"
+  }
+ ],
+ "lessons": [
+  {
+   "id": "c1-u3-l1",
+   "title": "Na reunião",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l1-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Sorry, can I ___ something before we finish?",
+     "pt": "Desculpa, posso levantar um assunto antes de terminarmos?",
+     "options": [
+      "bring up",
+      "put off",
+      "run out of"
+     ],
+     "answer": "bring up",
+     "why": "\"Bring up\" = levantar um assunto.",
+     "wrong": {
+      "put off": "\"Put off\" = adiar.",
+      "run out of": "\"Run out of\" = ficar sem."
+     }
+    },
+    {
+     "id": "c1u3l1-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "The client is busy, so we'll have to ___ the presentation.",
+     "pt": "O cliente está ocupado, então vamos ter que adiar a apresentação.",
+     "options": [
+      "put off",
+      "bring up",
+      "take on"
+     ],
+     "answer": "put off",
+     "why": "\"Put off\" = adiar.",
+     "wrong": {
+      "bring up": "\"Bring up\" = levantar um assunto.",
+      "take on": "\"Take on\" = assumir."
+     }
+    },
+    {
+     "id": "c1u3l1-3",
+     "type": "meaning",
+     "en": "We've run out of coffee in the kitchen.",
+     "options": [
+      "Acabou o café na cozinha.",
+      "Tem muito café na cozinha.",
+      "Fizeram café na cozinha."
+     ],
+     "answer": "Acabou o café na cozinha.",
+     "why": "\"Run out of\" = ficar sem."
+    },
+    {
+     "id": "c1u3l1-4",
+     "type": "build",
+     "pt": "Precisamos bolar uma ideia melhor.",
+     "answer": "We need to come up with a better idea",
+     "extra": [
+      "come with",
+      "good"
+     ],
+     "display": "We need to come up with a better idea.",
+     "why": "\"Come up with\" = ter, bolar (uma ideia)."
+    },
+    {
+     "id": "c1u3l1-5",
+     "type": "listen",
+     "en": "Let's put it off until next month.",
+     "options": [
+      "Vamos adiar para o mês que vem.",
+      "Vamos fazer hoje.",
+      "Vamos cancelar."
+     ],
+     "answer": "Vamos adiar para o mês que vem.",
+     "why": "Com pronome, ele vai no meio: put it off."
+    },
+    {
+     "id": "c1u3l1-6",
+     "type": "match",
+     "pairs": [
+      [
+       "bring up",
+       "levantar um assunto"
+      ],
+      [
+       "put off",
+       "adiar"
+      ],
+      [
+       "come up with",
+       "bolar"
+      ],
+      [
+       "run out of",
+       "ficar sem"
+      ]
+     ],
+     "why": "Phrasal verbs muito comuns em reuniões."
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l2",
+   "title": "Resolvendo problemas",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l2-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I can't ___ how to use this new software.",
+     "pt": "Não consigo descobrir como usar este programa novo.",
+     "options": [
+      "figure out",
+      "look into",
+      "set up"
+     ],
+     "answer": "figure out",
+     "why": "\"Figure out\" = descobrir, entender.",
+     "wrong": {
+      "look into": "\"Look into\" = investigar (com calma).",
+      "set up": "\"Set up\" = instalar, montar."
+     }
+    },
+    {
+     "id": "c1u3l2-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Thanks for letting us know. We'll ___ the problem.",
+     "pt": "Obrigado por avisar. Vamos analisar o problema.",
+     "options": [
+      "look into",
+      "look it into",
+      "figure"
+     ],
+     "answer": "look into",
+     "why": "\"Look into\" = investigar, analisar.",
+     "wrong": {
+      "look it into": "\"Look into\" não se separa.",
+      "figure": "Precisa de \"out\": figure out."
+     }
+    },
+    {
+     "id": "c1u3l2-3",
+     "type": "meaning",
+     "en": "The team carried out a survey with 500 customers.",
+     "options": [
+      "A equipe fez uma pesquisa com 500 clientes.",
+      "A equipe perdeu 500 clientes.",
+      "A equipe cancelou a pesquisa."
+     ],
+     "answer": "A equipe fez uma pesquisa com 500 clientes.",
+     "why": "\"Carry out\" = realizar, executar."
+    },
+    {
+     "id": "c1u3l2-4",
+     "type": "build",
+     "pt": "Ela montou uma empresa nova.",
+     "answer": "She set up a new company",
+     "extra": [
+      "setted",
+      "made up"
+     ],
+     "display": "She set up a new company.",
+     "why": "\"Set up\" = montar, abrir. O passado é igual: set."
+    },
+    {
+     "id": "c1u3l2-5",
+     "type": "listen",
+     "en": "Don't worry, we'll figure it out.",
+     "options": [
+      "Não se preocupe, a gente vai dar um jeito.",
+      "Não sabemos o que fazer.",
+      "Esqueça isso."
+     ],
+     "answer": "Não se preocupe, a gente vai dar um jeito.",
+     "why": "\"Figure it out\" = descobrir, dar um jeito."
+    },
+    {
+     "id": "c1u3l2-6",
+     "type": "speak",
+     "en": "I'll look into it and get back to you.",
+     "pt": "Vou analisar e te dou retorno.",
+     "why": "Frase de ouro para e-mails e reuniões."
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l3",
+   "title": "Assumindo tarefas",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l3-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I can't ___ any more projects this month.",
+     "pt": "Não consigo assumir mais nenhum projeto este mês.",
+     "options": [
+      "take on",
+      "take off",
+      "put on"
+     ],
+     "answer": "take on",
+     "why": "\"Take on\" = assumir (trabalho, responsabilidade).",
+     "wrong": {
+      "take off": "\"Take off\" = decolar, tirar (roupa).",
+      "put on": "\"Put on\" = vestir."
+     }
+    },
+    {
+     "id": "c1u3l3-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I'll ___ with the client tomorrow to see if they agree.",
+     "pt": "Vou falar de novo com o cliente amanhã para ver se ele concorda.",
+     "options": [
+      "follow up",
+      "bring up",
+      "run out"
+     ],
+     "answer": "follow up",
+     "why": "\"Follow up (with)\" = retomar o contato, dar sequência.",
+     "wrong": {
+      "bring up": "\"Bring up\" = levantar um assunto.",
+      "run out": "\"Run out\" = acabar."
+     }
+    },
+    {
+     "id": "c1u3l3-3",
+     "type": "meaning",
+     "en": "Can you deal with this email while I am away?",
+     "options": [
+      "Você pode cuidar deste e-mail enquanto eu estiver fora?",
+      "Você pode apagar este e-mail?",
+      "Você leu este e-mail?"
+     ],
+     "answer": "Você pode cuidar deste e-mail enquanto eu estiver fora?",
+     "why": "\"Deal with\" = lidar com, cuidar de."
+    },
+    {
+     "id": "c1u3l3-4",
+     "type": "build",
+     "pt": "Ele assumiu muita responsabilidade.",
+     "answer": "He took on a lot of responsibility",
+     "extra": [
+      "taked",
+      "many"
+     ],
+     "display": "He took on a lot of responsibility.",
+     "why": "\"Take on\" no passado: took on."
+    },
+    {
+     "id": "c1u3l3-5",
+     "type": "listen",
+     "en": "Just following up on my last email.",
+     "options": [
+      "Só retomando o meu último e-mail.",
+      "Não recebi o seu e-mail.",
+      "Vou mandar um e-mail novo."
+     ],
+     "answer": "Só retomando o meu último e-mail.",
+     "why": "Começo clássico de e-mail de cobrança educada."
+    },
+    {
+     "id": "c1u3l3-6",
+     "type": "match",
+     "pairs": [
+      [
+       "take on",
+       "assumir"
+      ],
+      [
+       "follow up",
+       "retomar o contato"
+      ],
+      [
+       "deal with",
+       "lidar com"
+      ],
+      [
+       "set up",
+       "montar"
+      ]
+     ],
+     "why": "Verbos para falar das suas tarefas."
+    },
+    {
+     "id": "c1u3l3-7",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Could you take on the new client account?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I'd love to, but I'm swamped. Could we put it off until next month?",
+      "I'd love to, but I'm swamped. Could we put off it?",
+      "I'd love, but swamped. Off put?"
+     ],
+     "answer": "I'd love to, but I'm swamped. Could we put it off until next month?",
+     "pt": "Eu adoraria, mas estou atolado. Podemos deixar para o mês que vem?",
+     "why": "\"Swamped\" = atolado. Com pronome: put it off.",
+     "wrong": {
+      "I'd love to, but I'm swamped. Could we put off it?": "O pronome vai no meio: put it off.",
+      "I'd love, but swamped. Off put?": "Estrutura errada."
+     }
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l4",
+   "title": "Prática: o dia a dia do escritório",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l4-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "Who ___ this idea? It is brilliant!",
+     "pt": "Quem teve essa ideia? É genial!",
+     "options": [
+      "came up with",
+      "came up",
+      "came with"
+     ],
+     "answer": "came up with",
+     "why": "\"Come up with\" tem três partes.",
+     "wrong": {
+      "came up": "\"Come up\" = surgir.",
+      "came with": "\"Come with\" = vir junto."
+     }
+    },
+    {
+     "id": "c1u3l4-2",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "We'll ___ the new system next week.",
+     "pt": "Vamos implantar o sistema novo na semana que vem.",
+     "options": [
+      "set up",
+      "run out of",
+      "bring up"
+     ],
+     "answer": "set up",
+     "why": "\"Set up a system\" = montar, implantar.",
+     "wrong": {
+      "run out of": "\"Run out of\" = ficar sem.",
+      "bring up": "\"Bring up\" = levantar um assunto."
+     }
+    },
+    {
+     "id": "c1u3l4-3",
+     "type": "meaning",
+     "en": "She brought up an interesting point.",
+     "options": [
+      "Ela levantou um ponto interessante.",
+      "Ela esqueceu um ponto importante.",
+      "Ela não concordou com nada."
+     ],
+     "answer": "Ela levantou um ponto interessante.",
+     "why": "\"Bring up\" no passado: brought up."
+    },
+    {
+     "id": "c1u3l4-4",
+     "type": "build",
+     "pt": "Ficamos sem tempo para as perguntas.",
+     "answer": "We ran out of time for the questions",
+     "extra": [
+      "runned",
+      "run"
+     ],
+     "display": "We ran out of time for the questions.",
+     "why": "\"Run\" no passado: ran."
+    },
+    {
+     "id": "c1u3l4-5",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "The numbers in this report look strange."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "You're right. I'll look into it this afternoon.",
+      "You're right. I'll look it into this afternoon.",
+      "You're right. I look into."
+     ],
+     "answer": "You're right. I'll look into it this afternoon.",
+     "pt": "Você tem razão. Vou analisar isso hoje à tarde.",
+     "why": "\"Look into it\" (não se separa).",
+     "wrong": {
+      "You're right. I'll look it into this afternoon.": "\"Look into\" não se separa.",
+      "You're right. I look into.": "Falta \"it\" e o futuro."
+     }
+    },
+    {
+     "id": "c1u3l4-6",
+     "type": "listen",
+     "en": "We need to carry out more tests.",
+     "options": [
+      "Precisamos fazer mais testes.",
+      "Os testes acabaram.",
+      "Não precisamos de testes."
+     ],
+     "answer": "Precisamos fazer mais testes.",
+     "why": "\"Carry out tests\" = realizar testes."
+    },
+    {
+     "id": "c1u3l4-7",
+     "type": "speak",
+     "en": "We've run out of time, so let's stop here.",
+     "pt": "Ficamos sem tempo, então vamos parar por aqui.",
+     "why": "Jeito educado de encerrar uma reunião."
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l5",
+   "title": "Escrevendo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l5-1",
+     "type": "type",
+     "pt": "Podemos adiar a reunião?",
+     "answer": "Can we put off the meeting?",
+     "accept": [
+      "Can we put the meeting off?",
+      "Could we put off the meeting?",
+      "Could we put the meeting off?"
+     ],
+     "why": "\"Put off\" = adiar."
+    },
+    {
+     "id": "c1u3l5-2",
+     "type": "type",
+     "pt": "Vou analisar isso.",
+     "answer": "I'll look into it.",
+     "accept": [
+      "I will look into it.",
+      "I'll look into this."
+     ],
+     "why": "\"Look into\" = analisar, investigar."
+    },
+    {
+     "id": "c1u3l5-3",
+     "type": "dictation",
+     "en": "Just following up on my last email.",
+     "why": "\"Follow up on\" = retomar (um assunto)."
+    },
+    {
+     "id": "c1u3l5-4",
+     "type": "type",
+     "pt": "Ela teve uma ideia ótima.",
+     "answer": "She came up with a great idea.",
+     "accept": [
+      "She came up with a brilliant idea."
+     ],
+     "why": "\"Come up with\" = ter uma ideia."
+    },
+    {
+     "id": "c1u3l5-5",
+     "type": "dictation",
+     "en": "I can't figure out the problem.",
+     "why": "\"Figure out\" = descobrir, entender."
+    },
+    {
+     "id": "c1u3l5-6",
+     "type": "type",
+     "pt": "Ficamos sem papel.",
+     "answer": "We've run out of paper.",
+     "accept": [
+      "We have run out of paper.",
+      "We ran out of paper."
+     ],
+     "why": "\"Run out of\" = ficar sem."
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l6",
+   "title": "Ouvindo",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l6-1",
+     "type": "listen",
+     "en": "Let's set up a meeting with the whole team.",
+     "options": [
+      "Vamos marcar uma reunião com a equipe toda.",
+      "Vamos cancelar a reunião.",
+      "A equipe não quer reunião."
+     ],
+     "answer": "Vamos marcar uma reunião com a equipe toda.",
+     "why": "\"Set up a meeting\" = marcar uma reunião."
+    },
+    {
+     "id": "c1u3l6-2",
+     "type": "dictation",
+     "en": "Who came up with this plan?",
+     "why": "\"Come up with\" no passado: came up with."
+    },
+    {
+     "id": "c1u3l6-3",
+     "type": "listen",
+     "en": "I don't want to take on too much.",
+     "options": [
+      "Não quero assumir coisa demais.",
+      "Quero mais trabalho.",
+      "Estou sem trabalho."
+     ],
+     "answer": "Não quero assumir coisa demais.",
+     "why": "\"Take on\" = assumir."
+    },
+    {
+     "id": "c1u3l6-4",
+     "type": "dictation",
+     "en": "They carried out the plan perfectly.",
+     "why": "\"Carry out\" = executar."
+    },
+    {
+     "id": "c1u3l6-5",
+     "type": "listen",
+     "en": "Please bring it up at the next meeting.",
+     "options": [
+      "Por favor, levante isso na próxima reunião.",
+      "Não fale disso na reunião.",
+      "A reunião foi cancelada."
+     ],
+     "answer": "Por favor, levante isso na próxima reunião.",
+     "why": "Com pronome: bring it up."
+    },
+    {
+     "id": "c1u3l6-6",
+     "type": "dictation",
+     "en": "Don't put it off any longer.",
+     "why": "\"Not … any longer\" = não … mais."
+    },
+    {
+     "id": "c1u3l6-7",
+     "type": "speak",
+     "en": "Can we put it off until Monday?",
+     "pt": "Podemos deixar para segunda?",
+     "why": "\"Put it off\" soa \"pú-di-ÓF\"."
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l7",
+   "title": "Conversa de verdade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l7-1",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "OK, let's start. Does anyone want to bring anything up?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "Yes. Sales went down last month, and I think we should look into it.",
+      "Yes. Sales went down, and we look it into.",
+      "Yes. Sales down, look."
+     ],
+     "answer": "Yes. Sales went down last month, and I think we should look into it.",
+     "pt": "Sim. As vendas caíram mês passado, e acho que devemos analisar isso.",
+     "why": "\"Look into it\" = analisar.",
+     "wrong": {
+      "Yes. Sales went down, and we look it into.": "\"Look into\" não se separa.",
+      "Yes. Sales down, look.": "Incompleto."
+     }
+    },
+    {
+     "id": "c1u3l7-2",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Good point. Any ideas?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "We could come up with a special offer for old customers.",
+      "We could come with a special offer.",
+      "We could up come with offer."
+     ],
+     "answer": "We could come up with a special offer for old customers.",
+     "pt": "A gente podia bolar uma oferta especial para clientes antigos.",
+     "why": "\"Come up with\" = bolar.",
+     "wrong": {
+      "We could come with a special offer.": "Falta \"up\".",
+      "We could up come with offer.": "Ordem errada."
+     }
+    },
+    {
+     "id": "c1u3l7-3",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "I like it. Who can take this on?"
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "I can take it on, but I'll need some help.",
+      "I can take on it, but help.",
+      "I take it, on help."
+     ],
+     "answer": "I can take it on, but I'll need some help.",
+     "pt": "Eu posso assumir, mas vou precisar de ajuda.",
+     "why": "Com pronome: take it on.",
+     "wrong": {
+      "I can take on it, but help.": "O pronome vai no meio.",
+      "I take it, on help.": "Estrutura errada."
+     }
+    },
+    {
+     "id": "c1u3l7-4",
+     "type": "dialogue",
+     "lines": [
+      [
+       "A",
+       "Great. We've almost run out of time."
+      ],
+      [
+       "B",
+       "___"
+      ]
+     ],
+     "options": [
+      "No problem. I'll set up a call for Friday to follow up.",
+      "No problem. I set a call up Friday follow.",
+      "No problem. Up set call."
+     ],
+     "answer": "No problem. I'll set up a call for Friday to follow up.",
+     "pt": "Sem problema. Vou marcar uma ligação na sexta para dar sequência.",
+     "why": "\"Set up a call\" e \"follow up\".",
+     "wrong": {
+      "No problem. I set a call up Friday follow.": "Frase quebrada.",
+      "No problem. Up set call.": "Ordem errada."
+     }
+    },
+    {
+     "id": "c1u3l7-5",
+     "type": "speak",
+     "en": "I'd like to bring something up.",
+     "pt": "Queria levantar uma questão.",
+     "why": "Jeito educado de pedir a palavra."
+    },
+    {
+     "id": "c1u3l7-6",
+     "type": "speak",
+     "en": "I'll follow up next week.",
+     "pt": "Te dou retorno semana que vem.",
+     "why": "Promessa clássica de reunião."
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l8",
+   "title": "Lendo: o e-mail da chefe",
+   "added": "2026-11",
+   "story": {
+    "title": "O e-mail da chefe",
+    "lines": [
+     {
+      "who": "Helen",
+      "en": "Hi team, thank you for your time today. Here is a quick summary.",
+      "pt": "Oi, pessoal, obrigada pelo tempo de vocês hoje. Aqui vai um resumo rápido."
+     },
+     {
+      "who": "Helen",
+      "en": "Unfortunately, we have run out of budget, so we will put off the launch until March.",
+      "pt": "Infelizmente, ficamos sem orçamento, então vamos adiar o lançamento para março."
+     },
+     {
+      "ask": "Para quando o lançamento foi adiado?",
+      "options": [
+       "Março",
+       "Maio",
+       "Dezembro"
+      ],
+      "answer": "Março",
+      "why": "\"Until March.\""
+     },
+     {
+      "who": "Helen",
+      "en": "Sofia will ___ into the costs and find where we can save.",
+      "pt": "A Sofia vai analisar os custos e descobrir onde podemos economizar.",
+      "gap": {
+       "answer": "look",
+       "options": [
+        "look",
+        "set",
+        "take"
+       ]
+      }
+     },
+     {
+      "who": "Helen",
+      "en": "Pedro, could you come up with two or three cheaper options?",
+      "pt": "Pedro, você poderia bolar duas ou três opções mais baratas?"
+     },
+     {
+      "who": "Helen",
+      "en": "I will set up a call for Thursday to follow up. Thanks, everyone!",
+      "pt": "Vou marcar uma ligação na quinta para dar sequência. Obrigada a todos!"
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "c1u3l8-1",
+     "type": "story",
+     "why": "A chefe da Sofia manda um e-mail depois de uma reunião difícil. Leia com calma e ouça cada frase."
+    },
+    {
+     "id": "c1u3l8-2",
+     "type": "quiz",
+     "q": "Por que o lançamento foi adiado?",
+     "options": [
+      "Ficaram sem orçamento",
+      "O cliente desistiu",
+      "A equipe estava de férias"
+     ],
+     "answer": "Ficaram sem orçamento",
+     "why": "\"We have run out of budget.\""
+    },
+    {
+     "id": "c1u3l8-3",
+     "type": "quiz",
+     "q": "O que a Sofia vai fazer?",
+     "options": [
+      "Analisar os custos",
+      "Contratar mais gente",
+      "Cancelar o projeto"
+     ],
+     "answer": "Analisar os custos",
+     "why": "\"Sofia will look into the costs.\""
+    },
+    {
+     "id": "c1u3l8-4",
+     "type": "quiz",
+     "q": "Quando será a próxima ligação?",
+     "options": [
+      "Na quinta",
+      "Na segunda",
+      "No mês que vem"
+     ],
+     "answer": "Na quinta",
+     "why": "\"I will set up a call for Thursday.\""
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l9",
+   "title": "Desafio da unidade",
+   "added": "2026-11",
+   "items": [
+    {
+     "id": "c1u3l9-1",
+     "type": "choice",
+     "prompt": "Complete:",
+     "en": "I don't know the answer, but I'll ___.",
+     "pt": "Não sei a resposta, mas vou descobrir.",
+     "options": [
+      "figure it out",
+      "figure out it",
+      "figure it"
+     ],
+     "answer": "figure it out",
+     "why": "Com pronome no meio: figure it out.",
+     "wrong": {
+      "figure out it": "O pronome vai no meio.",
+      "figure it": "Falta \"out\"."
+     }
+    },
+    {
+     "id": "c1u3l9-2",
+     "type": "type",
+     "pt": "Ele montou um negócio online.",
+     "answer": "He set up an online business.",
+     "accept": [
+      "He set up a business online."
+     ],
+     "why": "\"Set up\" = montar, abrir."
+    },
+    {
+     "id": "c1u3l9-3",
+     "type": "meaning",
+     "en": "Stop putting off your homework!",
+     "options": [
+      "Pare de adiar a sua lição de casa!",
+      "Termine logo a sua lição!",
+      "Esqueça a sua lição!"
+     ],
+     "answer": "Pare de adiar a sua lição de casa!",
+     "why": "\"Put off\" = adiar, enrolar."
+    },
+    {
+     "id": "c1u3l9-4",
+     "type": "dictation",
+     "en": "We've run out of ideas.",
+     "why": "\"Run out of\" = ficar sem."
+    },
+    {
+     "id": "c1u3l9-5",
+     "type": "listen",
+     "en": "I'll deal with it tomorrow.",
+     "options": [
+      "Vou resolver isso amanhã.",
+      "Resolvi isso ontem.",
+      "Não vou resolver isso."
+     ],
+     "answer": "Vou resolver isso amanhã.",
+     "why": "\"Deal with\" = lidar com, resolver."
+    },
+    {
+     "id": "c1u3l9-6",
+     "type": "build",
+     "pt": "Ela levantou o assunto na reunião.",
+     "answer": "She brought it up at the meeting",
+     "extra": [
+      "bringed",
+      "in"
+     ],
+     "display": "She brought it up at the meeting.",
+     "why": "\"Bring up\" no passado: brought up. \"At the meeting\" = na reunião."
+    }
+   ]
+  },
+  {
+   "id": "c1-u3-l10",
+   "title": "História: o primeiro dia de chefe",
+   "added": "2026-11",
+   "story": {
+    "title": "O primeiro dia de chefe",
+    "lines": [
+     {
+      "who": "Paula",
+      "en": "My first day as a manager was crazy. The system went down at nine.",
+      "pt": "Meu primeiro dia como gerente foi uma loucura. O sistema caiu às nove."
+     },
+     {
+      "who": "Andre",
+      "en": "Oh no! What did you do?",
+      "pt": "Ah, não! E o que você fez?"
+     },
+     {
+      "who": "Paula",
+      "en": "I tried to deal with it myself, but I could not figure out what was wrong.",
+      "pt": "Tentei resolver sozinha, mas não consegui descobrir o que estava errado."
+     },
+     {
+      "ask": "A Paula conseguiu resolver sozinha?",
+      "options": [
+       "Não",
+       "Sim",
+       "Ela nem tentou"
+      ],
+      "answer": "Não",
+      "why": "\"I could not figure out what was wrong.\""
+     },
+     {
+      "who": "Paula",
+      "en": "Then our intern came up with a simple solution. He ___ it out in ten minutes!",
+      "pt": "Aí o nosso estagiário bolou uma solução simples. Ele resolveu em dez minutos!",
+      "gap": {
+       "answer": "figured",
+       "options": [
+        "figured",
+        "brought",
+        "put"
+       ]
+      }
+     },
+     {
+      "who": "Andre",
+      "en": "So what did you learn?",
+      "pt": "E aí, o que você aprendeu?"
+     },
+     {
+      "who": "Paula",
+      "en": "That I don't have to take on everything myself. The team is there for a reason.",
+      "pt": "Que eu não preciso assumir tudo sozinha. A equipe existe por um motivo."
+     }
+    ]
+   },
+   "items": [
+    {
+     "id": "c1u3l10-1",
+     "type": "story",
+     "why": "A Paula acabou de ser promovida e conta ao amigo como foi o primeiro dia liderando a equipe. Ouça cada fala e responda às perguntas no caminho."
+    },
+    {
+     "id": "c1u3l10-2",
+     "type": "quiz",
+     "q": "O que deu errado logo cedo?",
+     "options": [
+      "O sistema caiu",
+      "Ela chegou atrasada",
+      "Um cliente reclamou"
+     ],
+     "answer": "O sistema caiu",
+     "why": "\"The system went down at nine.\""
+    },
+    {
+     "id": "c1u3l10-3",
+     "type": "quiz",
+     "q": "Quem resolveu o problema?",
+     "options": [
+      "O estagiário",
+      "A própria Paula",
+      "O diretor"
+     ],
+     "answer": "O estagiário",
+     "why": "\"The intern figured it out!\""
+    },
+    {
+     "id": "c1u3l10-4",
+     "type": "quiz",
+     "q": "O que a Paula aprendeu?",
+     "options": [
+      "Que não precisa fazer tudo sozinha",
+      "Que precisa trabalhar mais",
+      "Que não gosta de ser chefe"
+     ],
+     "answer": "Que não precisa fazer tudo sozinha",
+     "why": "\"I don't have to take on everything myself.\""
+    }
+   ]
+  }
+ ]
+}

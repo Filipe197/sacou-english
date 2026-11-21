@@ -5,7 +5,7 @@ import { useAuth } from '../lib/auth.jsx';
 import { CONTACT_EMAIL } from '../lib/legal.js';
 
 const METHOD = [
-  ['🧭', 'Níveis do padrão europeu', 'O curso segue os níveis do CEFR (A1, A2, B1, B2). Cada unidade diz o que você vai conseguir fazer em inglês no fim dela.'],
+  ['🧭', 'Níveis do padrão europeu', 'O curso segue os níveis do CEFR (A1, A2, B1, B2 e C1). Cada unidade diz o que você vai conseguir fazer em inglês no fim dela.'],
   ['💬', 'Explicado em português', 'A gramática é explicada do jeito que um brasileiro entende, com os erros que a gente mais comete e o porquê de cada resposta.'],
   ['📚', 'Vocabulário certo para o nível', 'Toda palavra em inglês dos exercícios é conferida contra uma lista de vocabulário por nível (CEFR-J). Nada de palavra difícil antes da hora.'],
   ['🔁', 'Revisão no momento certo', 'O app lembra de cada palavra e frase que você estudou e traz de volta pouco antes de você esquecer (revisão espaçada).'],

@@ -5,7 +5,7 @@
 import { guard, cors, readBody, str, askJSON, handle, obj, S, MOCK, HttpError } from './_lib.js';
 
 export const MAX_QUESTIONS = 10; // perguntas por conversa
-const LEVELS = ['A1', 'A2', 'B1', 'B2'];
+const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
 const SYSTEM = `Você é o professor do Sacou English, um curso de inglês para brasileiros (do A1 ao B2 do CEFR).
 Nesta tela o aluno tira dúvidas livres sobre a língua inglesa: gramática, vocabulário, pronúncia, diferenças entre palavras, expressões, como dizer algo em inglês.

@@ -42,8 +42,8 @@ export const ACHIEVEMENTS = [
   { id: 'historias-5', icon: '📖', title: 'Fã da Ana', desc: 'Complete 5 episódios de Ana em Londres.', check: n('stories', 5) },
   { id: 'detetive-3', icon: '🕵️', title: 'Detetive', desc: 'Resolva 3 casos.', check: n('cases', 3) },
   { id: 'cidade-4', icon: '🗺️', title: 'Viajante', desc: 'Complete as 4 missões na cidade.', check: n('city', 4) },
-  ...['A1', 'A2', 'B1', 'B2'].filter(l => LEVELS.includes(l)).map((l, i) => ({
-    id: `nivel-${l}`, icon: ['🥉', '🥈', '🥇', '🏆'][i], title: `Nível ${l} completo`, desc: `Conclua todas as lições do ${l}.`, check: lv(l),
+  ...['A1', 'A2', 'B1', 'B2', 'C1'].filter(l => LEVELS.includes(l)).map((l, i) => ({
+    id: `nivel-${l}`, icon: ['🥉', '🥈', '🥇', '🏆', '💎'][i], title: `Nível ${l} completo`, desc: `Conclua todas as lições do ${l}.`, check: lv(l),
   })),
 ];
 

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { UNITS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, NEXT_LEVEL, unitsOf, lessonStates, levelPercent, currentLevel, unitComplete } from '../lib/content.js';
+import { UNITS, LEVELS, LEVEL_ORDER, LEVEL_NAMES, NEXT_LEVEL, GROWING_LEVEL, UNITS_PER_LEVEL, unitsOf, lessonStates, levelPercent, currentLevel, unitComplete } from '../lib/content.js';
 import { useProgress, liveStreak, todayBR, dueLessonIds, shieldCovering } from '../lib/progress.js';
 import { useAuth } from '../lib/auth.jsx';
 import { Shell, Spinner, Icon, Fire, Bolt, Anim } from '../components/ui.jsx';
@@ -384,9 +384,9 @@ export default function Trail() {
         <div className="card" style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
           {allDone && <Anim name="trophy" size={90} />}
           <div>
-            <b style={{ display: 'block', fontSize: 17, marginBottom: 4 }}>{allDone ? `Você concluiu o nível ${LEVELS[LEVELS.length - 1]}!` : `Depois do ${LEVELS[LEVELS.length - 1]} vem o ${NEXT_LEVEL}`}</b>
+            <b style={{ display: 'block', fontSize: 17, marginBottom: 4 }}>{GROWING_LEVEL ? `O ${GROWING_LEVEL} está crescendo` : allDone ? `Você concluiu o nível ${LEVELS[LEVELS.length - 1]}!` : `Depois do ${LEVELS[LEVELS.length - 1]} vem o ${NEXT_LEVEL}`}</b>
             <p className="muted" style={{ margin: 0, fontSize: 15, lineHeight: 1.55 }}>
-              {`O nível ${NEXT_LEVEL} (${LEVEL_NAMES[NEXT_LEVEL]}) está sendo preparado e validado.`}{allDone && ' Enquanto isso, use a revisão e refaça lições para fixar.'}
+              {GROWING_LEVEL ? `Novas unidades do ${GROWING_LEVEL} (${LEVEL_NAMES[GROWING_LEVEL]}) chegam em breve, até completar ${UNITS_PER_LEVEL}.` : `O nível ${NEXT_LEVEL} (${LEVEL_NAMES[NEXT_LEVEL]}) está sendo preparado e validado.`}{allDone && ' Enquanto isso, use a revisão e refaça lições para fixar.'}
             </p>
           </div>
         </div>

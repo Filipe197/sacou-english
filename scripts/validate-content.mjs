@@ -19,9 +19,9 @@ const CSV = path.join(root, 'content/sources/cefrj-vocabulary-profile-1.5.csv');
 const CONTENT_DIR = path.join(root, 'src/content');
 const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 
-import { NAMES, tokens, known, loadVocab } from './cefr.mjs';
+import { NAMES, tokens, known, loadVocab, OCTANOVE_CSV } from './cefr.mjs';
 
-const VOCAB = loadVocab(fs.readFileSync(CSV, 'utf8'));
+const VOCAB = loadVocab(fs.readFileSync(CSV, 'utf8'), fs.readFileSync(path.join(root, OCTANOVE_CSV), 'utf8'));
 
 // ---------- validação ----------
 const errors = []; const warnings = [];

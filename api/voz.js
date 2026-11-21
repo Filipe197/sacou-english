@@ -13,7 +13,7 @@ import { guard, cors, readBody, str, send, HttpError, MOCK } from './_lib.js';
 export const MAX_CHARS = 400;
 // Inglês mais devagar para quem está começando (velocidade da ElevenLabs: 0,7 a 1,2).
 // O português (comentários do Juvenal no A1 e A2) fica no ritmo normal.
-export const SPEED = { A1: 0.8, A2: 0.87, B1: 0.94, B2: 1 };
+export const SPEED = { A1: 0.8, A2: 0.87, B1: 0.94, B2: 1, C1: 1 };
 // Voz "Professor Juvenal" criada no Voice Design da ElevenLabs (o ID não é segredo; a chave é)
 const JUVENAL_VOICE = 'FspPSevACC3LOIYjKdIQ';
 

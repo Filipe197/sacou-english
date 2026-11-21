@@ -26,7 +26,7 @@ const VOICES = {
   tom: 'iP95p4xoKVk53GoZ742B',   // Chris
   sam: 'cjVigY5qzO86Huf0OWal',   // Eric
 };
-const SPEED = { A1: 0.86, A2: 0.9, B1: 0.95, B2: 1 }; // mais devagar nos níveis iniciais
+const SPEED = { A1: 0.86, A2: 0.9, B1: 0.95, B2: 1, C1: 1 }; // mais devagar nos níveis iniciais
 const SR = 24000; // pcm_24000: 16 bits, mono
 
 const data = JSON.parse(fs.readFileSync(path.join(root, 'src/games/data/podcasts.json'), 'utf8'));
