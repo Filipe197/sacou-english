@@ -202,7 +202,7 @@ await test('lição: dica na 1ª vez e "corrija o erro de antes" só no que erro
   const tap = (sel, text) => page.evaluate((sel, text) => { const el = [...document.querySelectorAll(sel)].find(e => !e.disabled && e.textContent.replace(/\s+/g, ' ').trim().replace(/^\d+/, '') === text); el?.click(); return !!el; }, sel, text);
   for (const it of lesson.items) {
     if (['meaning', 'listen', 'choice'].includes(it.type)) await tap('.options .option', it.answer);
-    else if (it.type === 'build') for (const w of ['this', 'are', 'my', 'keys']) { await tap('.bank .tile:not(.used)', w); await wait(80); }
+    else if (it.type === 'build') for (const w of ['this', 'is', 'my', 'keys']) { await tap('.bank .tile:not(.used)', w); await wait(80); }
     else if (it.type === 'match') for (const [en, pt] of it.pairs) { await tap('.match-col:first-child .mbtn', en); await wait(80); await tap('.match-col:last-child .mbtn', pt); await wait(80); }
     await wait(150);
     if (it.type !== 'match') await page.click('.bar .cta');
@@ -211,8 +211,11 @@ await test('lição: dica na 1ª vez e "corrija o erro de antes" só no que erro
   }
   await expectText('Corrija o erro de antes');
   const slots = await page.evaluate(() => document.querySelectorAll('.fix-slot').length);
-  if (slots !== 1) throw new Error(`esperava 1 espaço para corrigir, veio ${slots}`);
-  await tap('.bank .tile:not(.used)', 'These'); await wait(100);
+  if (slots !== 2) throw new Error(`esperava 2 espaços para corrigir, veio ${slots}`);
+  // com 2 espaços, tocar a 1ª palavra deixa o 2º vazio: a tela não pode quebrar (erro real de 21/11/2026)
+  await tap('.bank .tile:not(.used)', 'These'); await wait(150);
+  if (await page.evaluate(() => /algo deu errado/i.test(document.body.innerText))) throw new Error('a tela quebrou ao preencher o 1º espaço');
+  await tap('.bank .tile:not(.used)', 'are'); await wait(100);
   await page.click('.bar .cta');
   await page.waitForSelector('.bar.ok', { timeout: 5000 }).catch(() => { throw new Error('a correção não foi aceita'); });
 });

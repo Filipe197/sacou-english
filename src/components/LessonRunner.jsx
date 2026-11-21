@@ -835,7 +835,8 @@ export default function LessonRunner({ entries, title, exitTo = '/aprender', ret
 
   const noteCtx = { lessonId: cur.lessonId, unitId: cur.unit?.id || null, itemId: item.id };
   const level = cur.unit?.level || (/^a2/i.test(cur.lessonId || item.id || '') ? 'A2' : 'A1');
-  const answerText = item.type === 'build' && Array.isArray(value) ? value.map(t => t.w).join(' ') : item.type === 'speak' ? heard : typeof value === 'string' ? value : '';
+  // no "Complete o que faltou" a resposta pode ter espaços ainda vazios (null)
+  const answerText = item.type === 'build' && Array.isArray(value) ? value.map(t => t?.w || '').filter(Boolean).join(' ') : item.type === 'speak' ? heard : typeof value === 'string' ? value : '';
   const canTutor = status === 'wrong' && !['match', 'story'].includes(item.type);
   const plan = cur.retry ? fixPlan(item, cur.retry.prev) : null;
   let tip = tipCache.current.get(idx);
