@@ -34,7 +34,6 @@ const P = {
   chart: <><path d="M4 20V10" /><path d="M10 20V4" /><path d="M16 20v-7" /><path d="M22 20H2" /></>,
   notebook: <><path d="M6 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6z" /><path d="M9 3v18" /><path d="M3 7h3" /><path d="M3 12h3" /><path d="M3 17h3" /><path d="M12 8h4" /></>,
   plus: <><path d="M12 5v14" /><path d="M5 12h14" /></>,
-  search: <><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></>,
   pin: <><path d="M9 4h6l-1 6 4 4H6l4-4z" /><path d="M12 14v7" /></>,
   trash: <><path d="M4 7h16" /><path d="M9 7V4h6v3" /><path d="M6 7l1 13h10l1-13" /></>,
   tag: <><path d="M3 12V4h8l10 10-8 8z" /><circle cx="7.5" cy="8.5" r="1.2" /></>,
