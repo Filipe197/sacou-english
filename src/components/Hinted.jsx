@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { hintPieces, ptKeyToEn } from '../lib/hints.js';
 import { speak } from '../lib/fx.js';
 import { useWordSaver } from './LessonNotes.jsx';
@@ -9,6 +9,18 @@ export default function Hinted({ text, lang = 'en', newKeys }) {
   const pieces = useMemo(() => hintPieces(text, lang), [text, lang]);
   const [open, setOpen] = useState(null);
   const saver = useWordSaver();
+  // o balão abre centralizado na palavra; perto da borda da tela, desliza para dentro (a setinha continua apontando a palavra)
+  const popRef = useRef(null);
+  useLayoutEffect(() => {
+    const el = popRef.current;
+    if (!el) return;
+    el.style.removeProperty('--hw-shift');
+    const r = el.getBoundingClientRect(); // posição centralizada, sem ajuste
+    const vw = document.documentElement.clientWidth || window.innerWidth;
+    const m = 8;
+    const shift = r.left < m ? m - r.left : r.right > vw - m ? vw - m - r.right : 0;
+    if (shift) el.style.setProperty('--hw-shift', `${Math.round(shift)}px`);
+  }, [open]);
   useEffect(() => {
     if (open === null) return;
     const close = () => setOpen(null);
@@ -27,7 +39,7 @@ export default function Hinted({ text, lang = 'en', newKeys }) {
             onClick={(e) => { e.stopPropagation(); setOpen(open === i ? null : i); if (lang === 'en') speak(p.text); }}
             onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); setOpen(open === i ? null : i); } }}>
             {p.text}
-            {open === i && <span className="hw-pop" role="tooltip" lang={lang === 'en' ? 'pt-BR' : 'en'}>{p.hint}
+            {open === i && <span ref={popRef} className="hw-pop" role="tooltip" lang={lang === 'en' ? 'pt-BR' : 'en'}>{p.hint}
               {saver && (() => {
                 const en = lang === 'en' ? p.text : p.hint.split(' / ')[0];
                 const pt = lang === 'en' ? p.hint : p.text;
